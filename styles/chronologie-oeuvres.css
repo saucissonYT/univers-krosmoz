@@ -1,0 +1,546 @@
+:root {
+  /* Palette partagee avec la chronologie principale; chaque ere garde sa couleur de lecture. */
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: #7a5e25;
+  --wakfu-teal: #2ecfb0;
+  --waven-blue: #4a9eff;
+  --primitif-violet: #9b7fd4;
+  --dofus-amber: #d4813a;
+  --dark-bg: #080810;
+  --card-bg: #0d0d1a;
+  --card-border: #1e1e3a;
+  --text-main: #e8e0d0;
+  --text-muted: #8a7f6e;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--dark-bg);
+  color: var(--text-main);
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+body::before {
+  /* Fond etoile discret, independant des fonds d'ere actives plus bas. */
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 8%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 55%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 18% 50%, rgba(201,168,76,0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 70% 10%, rgba(46,207,176,0.3) 0%, transparent 100%);
+}
+
+header {
+  position: relative;
+  z-index: 10;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+
+.site-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  background: rgba(7, 7, 12, 0.94);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: #f6f2e7;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 0.85rem;
+  border: 0;
+  background: transparent;
+  color: #f3efe4;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.nav-item:focus-within > .nav-link {
+  color: var(--gold-light);
+  background: rgba(201,168,76,0.08);
+}
+
+.nav-caret {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  min-width: 220px;
+  padding: 0.45rem;
+  border: 1px solid rgba(201,168,76,0.16);
+  background: rgba(12, 12, 18, 0.97);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.nav-dropdown:hover .nav-menu,
+.nav-dropdown:focus-within .nav-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-menu-item {
+  width: 100%;
+  display: block;
+  padding: 0.7rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-main);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu-item:hover,
+.nav-menu-item.active {
+  background: rgba(201,168,76,0.08);
+  color: var(--gold-light);
+}
+
+.era-nav {
+  /* Barre de filtres: les boutons ne naviguent pas, ils pilotent buildTimeline(filter). */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 1.2rem 1rem 0;
+}
+
+.era-btn {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 6px 14px;
+  border: 1px solid rgba(201,168,76,0.25);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.era-btn:hover,
+.era-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+
+.era-btn[data-filter="primitif"]:hover,
+.era-btn[data-filter="primitif"].active {
+  border-color: var(--primitif-violet);
+  color: var(--primitif-violet);
+  background: rgba(155,127,212,0.08);
+}
+
+.era-btn[data-filter="dofus"]:hover,
+.era-btn[data-filter="dofus"].active {
+  border-color: var(--dofus-amber);
+  color: var(--dofus-amber);
+  background: rgba(212,129,58,0.08);
+}
+
+.era-btn[data-filter="wakfu"]:hover,
+.era-btn[data-filter="wakfu"].active {
+  border-color: var(--wakfu-teal);
+  color: var(--wakfu-teal);
+  background: rgba(46,207,176,0.08);
+}
+
+.era-btn[data-filter="waven"]:hover,
+.era-btn[data-filter="waven"].active {
+  border-color: var(--waven-blue);
+  color: var(--waven-blue);
+  background: rgba(74,158,255,0.08);
+}
+
+main {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 6rem;
+}
+
+#bg-layer {
+  /* Pile de fonds pleine page. Le JS active .active selon l'ere visible ou filtree. */
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#bg-layer .bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+#bg-layer .bg-img.active {
+  opacity: 0.15;
+}
+
+#bg-layer .bg-primitif { background-image: url('../assets/oeuvres/bg_primitive.png'); }
+#bg-layer .bg-dofus { background-image: url('../assets/oeuvres/bg_dofus.png'); }
+#bg-layer .bg-wakfu { background-image: url('../assets/oeuvres/bg_wakfu.png'); }
+#bg-layer .bg-waven { background-image: url('../assets/oeuvres/bg_waven.png'); }
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Couleurs de la legende: sorties du HTML pour garder la page purement structurelle. */
+.legend-dot-primitif { background: var(--primitif-violet); }
+.legend-dot-dofus { background: var(--dofus-amber); }
+.legend-dot-wakfu { background: var(--wakfu-teal); }
+.legend-dot-waven { background: var(--waven-blue); }
+
+.timeline::before,
+.era-bg::after {
+  /* Ligne centrale continue: .timeline couvre tout, .era-bg renforce chaque bloc d'ere. */
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(201,168,76,0.4), rgba(201,168,76,0.2), rgba(201,168,76,0.4));
+  transform: translateX(-50%);
+}
+
+.era-bg {
+  position: relative;
+}
+
+.era-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.era-title-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0 0.5rem;
+}
+
+.era-title {
+  padding: 6px 20px;
+  border: 1px solid currentColor;
+  background: var(--dark-bg);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.era-title.primitif { color: var(--primitif-violet); border-color: rgba(155,127,212,0.5); }
+.era-title.dofus { color: var(--dofus-amber); border-color: rgba(212,129,58,0.5); }
+.era-title.wakfu { color: var(--wakfu-teal); border-color: rgba(46,207,176,0.5); }
+.era-title.waven { color: var(--waven-blue); border-color: rgba(74,158,255,0.5); }
+
+.event {
+  /* Grille a trois colonnes: contenu gauche, axe central, contenu droite. */
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  gap: 0;
+  align-items: start;
+  position: relative;
+  margin: 0;
+  padding: 1.05rem 0;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.4s forwards;
+}
+
+.event:nth-child(odd) .event-content { grid-column: 1; text-align: right; }
+.event:nth-child(odd) .event-dot-col { grid-column: 2; }
+.event:nth-child(odd) .event-empty { grid-column: 3; }
+.event:nth-child(even) .event-empty { grid-column: 1; }
+.event:nth-child(even) .event-dot-col { grid-column: 2; }
+.event:nth-child(even) .event-content { grid-column: 3; text-align: left; }
+
+.event-dot-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.event-dot {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--dark-bg);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.event-dot.primitif { background: var(--primitif-violet); box-shadow: 0 0 8px rgba(155,127,212,0.6); }
+.event-dot.dofus { background: var(--dofus-amber); box-shadow: 0 0 8px rgba(212,129,58,0.6); }
+.event-dot.wakfu { background: var(--wakfu-teal); box-shadow: 0 0 8px rgba(46,207,176,0.6); }
+.event-dot.waven { background: var(--waven-blue); box-shadow: 0 0 8px rgba(74,158,255,0.6); }
+.event-dot.major { width: 14px; height: 14px; }
+
+.event-content {
+  display: block;
+  padding: 0 16px;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.event-content.static-open {
+  cursor: default;
+}
+
+.event-content.direct-link:hover .event-title,
+.event-content.direct-link:focus-visible .event-title {
+  color: var(--gold-light);
+}
+
+.event-content.direct-link:focus-visible {
+  outline: 1px solid rgba(201,168,76,0.45);
+  outline-offset: 6px;
+}
+
+.event-date {
+  margin-bottom: 4px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  opacity: 0.78;
+  text-transform: uppercase;
+}
+
+.event-title {
+  margin-bottom: 6px;
+  color: var(--text-main);
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.work-meta {
+  /* Badges courts sous le titre: type d'oeuvre et cible de lien. */
+  display: flex;
+  justify-content: inherit;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+
+.event:nth-child(odd) .work-meta {
+  justify-content: flex-end;
+}
+
+.event:nth-child(even) .work-meta {
+  justify-content: flex-start;
+}
+
+.work-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(201,168,76,0.22);
+  background: rgba(201,168,76,0.06);
+  color: var(--text-main);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link-target {
+  color: var(--gold-light);
+  border-color: rgba(232,201,122,0.58);
+  background: rgba(201,168,76,0.12);
+}
+
+.link-target.webtoon {
+  border-color: rgba(46,207,176,0.24);
+  color: #9af1df;
+  background: rgba(46,207,176,0.07);
+}
+
+.no-link {
+  opacity: 0.58;
+}
+
+.primitif .event-date { color: var(--primitif-violet); }
+.dofus .event-date { color: var(--dofus-amber); }
+.wakfu .event-date { color: var(--wakfu-teal); }
+.waven .event-date { color: var(--waven-blue); }
+
+.timeline-tail {
+  height: 38vh;
+  min-height: 220px;
+  pointer-events: none;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .site-topbar {
+    align-items: flex-start;
+    padding: 0.9rem 1rem;
+  }
+
+  .top-nav {
+    width: 100%;
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.68rem;
+  }
+
+  .nav-menu {
+    min-width: 180px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .event {
+    grid-template-columns: 28px 1fr !important;
+  }
+
+  .event-dot-col {
+    grid-column: 1 !important;
+  }
+
+  .event-content {
+    grid-column: 2 !important;
+    padding-left: 12px;
+    text-align: left !important;
+  }
+
+  .event-empty {
+    display: none !important;
+  }
+
+  .event:nth-child(odd) .work-meta,
+  .event:nth-child(even) .work-meta {
+    justify-content: flex-start;
+  }
+}

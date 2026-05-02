@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carte interactive du Krosmoz</title>
+<link rel="icon" type="image/webp" href="assets/Krosmoz_1.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/carte-interactive.css?v=20260502-hd">
+</head>
+<body>
+<!-- Header partage avec les autres pages pour garder les liens de navigation au meme endroit. -->
+<header>
+  <div class="site-topbar">
+    <a class="brand" href="index.html" aria-label="Univers Krosmoz">
+      <img src="assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+    <nav class="top-nav" aria-label="Navigation principale">
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link" href="index.html">Chronologie <span class="nav-caret">▼</span></a>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="index.html?era=all">Toutes les ères</a>
+          <a class="nav-menu-item" href="index.html?era=primitif">Ère Primitive</a>
+          <a class="nav-menu-item" href="index.html?era=dofus">Âge des Dofus</a>
+          <a class="nav-menu-item" href="index.html?era=wakfu">Ère du Wakfu</a>
+          <a class="nav-menu-item" href="index.html?era=waven">Ère du Waven</a>
+        </div>
+      </div>
+      <a class="nav-link" href="chronologie-oeuvres.html">Œuvres</a>
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link active" href="carte-interactive.html?era=wakfu">Cartes interactives <span class="nav-caret">▼</span></a>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="carte-interactive.html?era=dofus" data-map-era="dofus">L'ère des Dofus</a>
+          <a class="nav-menu-item" href="carte-interactive.html?era=wakfu" data-map-era="wakfu">L'ère du Wakfu</a>
+        </div>
+      </div>
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link" href="tristepin.html">Personnages <span class="nav-caret">▼</span></a>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="tristepin.html">Tristepin de Percedal</a>
+        </div>
+      </div>
+      <button class="nav-link" type="button">Médias</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- La carte est rendue comme une image plein ecran. Le JS ajoute ensuite les boutons de zones par-dessus. -->
+  <section class="map-section">
+    <div class="map-stage">
+      <div class="map-viewport" id="map-viewport">
+        <div class="map-frame">
+          <div class="map-canvas" id="map-canvas">
+            <div class="map-artwork">
+              <img class="map-base" src="assets/carte interactive/wakfu_world_map.png" alt="Carte du Monde des Douze" loading="eager" draggable="false">
+              <!-- Couche vide remplie par scripts/carte-interactive.js avec les hotspots cliquables. -->
+              <div class="map-hotspots" id="map-hotspots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Boutons de zoom lies aux handlers JS; la molette et le pinch sont geres sur le viewport. -->
+      <div class="map-controls" aria-label="Contrôles de carte">
+        <button class="map-control" id="zoom-out" type="button" aria-label="Zoom arrière">−</button>
+        <button class="map-control" id="zoom-reset" type="button" aria-label="Réinitialiser la vue">⟳</button>
+        <button class="map-control" id="zoom-in" type="button" aria-label="Zoom avant">+</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Panneau de details reutilise par toutes les zones de la carte. Son contenu est injecte au clic. -->
+<aside class="slide-panel" id="slide-panel" aria-hidden="true">
+  <div class="slide-panel-inner">
+    <button class="slide-panel-close" id="slide-panel-close" aria-label="Fermer">✕</button>
+    <div class="slide-panel-img-wrap" id="slide-panel-img-wrap">
+      <img class="slide-panel-img" id="slide-panel-img" src="" alt="">
+    </div>
+    <div class="slide-panel-body">
+      <h2 class="slide-panel-title" id="slide-panel-title"></h2>
+      <p class="slide-panel-text" id="slide-panel-text"></p>
+    </div>
+  </div>
+</aside>
+
+<script src="scripts/carte-interactive.js?v=20260502-hd"></script>
+</body>
+</html>

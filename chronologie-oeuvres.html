@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronologie des oeuvres du Krosmoz</title>
+<link rel="icon" type="image/webp" href="assets/Krosmoz_1.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/chronologie-oeuvres.css">
+</head>
+<body>
+<!-- Fonds d'ere superposes. Le JS active une seule couche selon le filtre ou le scroll. -->
+<div id="bg-layer">
+  <div class="bg-img bg-primitif" id="bg-primitif"></div>
+  <div class="bg-img bg-dofus" id="bg-dofus"></div>
+  <div class="bg-img bg-wakfu" id="bg-wakfu"></div>
+  <div class="bg-img bg-waven" id="bg-waven"></div>
+</div>
+
+<header>
+  <!-- Navigation globale: liens entre chronologie, oeuvres et carte. -->
+  <div class="site-topbar">
+    <a class="brand" href="index.html" aria-label="Univers Krosmoz">
+      <img src="assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Navigation principale">
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link" href="index.html">Chronologie <span class="nav-caret">▼</span></a>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="index.html?era=all">Toutes les ères</a>
+          <a class="nav-menu-item" href="index.html?era=primitif">Ère Primitive</a>
+          <a class="nav-menu-item" href="index.html?era=dofus">Âge des Dofus</a>
+          <a class="nav-menu-item" href="index.html?era=wakfu">Ère du Wakfu</a>
+          <a class="nav-menu-item" href="index.html?era=waven">Ère du Waven</a>
+        </div>
+      </div>
+      <a class="nav-link active" href="chronologie-oeuvres.html">Œuvres</a>
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link" href="carte-interactive.html?era=wakfu">Cartes interactives <span class="nav-caret">▼</span></a>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="carte-interactive.html?era=dofus" data-map-era="dofus">L'ère des Dofus</a>
+          <a class="nav-menu-item" href="carte-interactive.html?era=wakfu" data-map-era="wakfu">L'ère du Wakfu</a>
+        </div>
+      </div>
+      <div class="nav-item nav-dropdown">
+        <a class="nav-link" href="tristepin.html">Personnages <span class="nav-caret">▼</span></a>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="tristepin.html">Tristepin de Percedal</a>
+        </div>
+      </div>
+      <button class="nav-link" type="button">Médias</button>
+    </nav>
+  </div>
+
+  <!-- Les boutons portent seulement data-filter; scripts/chronologie-oeuvres.js construit la liste. -->
+  <nav class="era-nav" aria-label="Filtrer les oeuvres par ere">
+    <button class="era-btn active" data-filter="all">Toutes les eres</button>
+    <button class="era-btn" data-filter="primitif">Ere Primitive</button>
+    <button class="era-btn" data-filter="dofus">Age des Dofus</button>
+    <button class="era-btn" data-filter="wakfu">Ere du Wakfu</button>
+    <button class="era-btn" data-filter="waven">Ere du Waven</button>
+  </nav>
+</header>
+
+<main>
+  <div class="legend" aria-label="Legende des liens">
+    <div class="legend-item"><div class="legend-dot legend-dot-primitif"></div> Ere Primitive</div>
+    <div class="legend-item"><div class="legend-dot legend-dot-dofus"></div> Age des Dofus</div>
+    <div class="legend-item"><div class="legend-dot legend-dot-wakfu"></div> Ere du Wakfu</div>
+    <div class="legend-item"><div class="legend-dot legend-dot-waven"></div> Ere du Waven</div>
+  </div>
+
+  <!-- Conteneur vide: les cartes d'oeuvres sont generees depuis le tableau works en JS. -->
+  <div class="timeline" id="works-timeline" aria-label="Chronologie interactive des oeuvres"></div>
+</main>
+
+<script src="scripts/chronologie-oeuvres.js"></script>
+</body>
+</html>
