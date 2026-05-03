@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Commentaire junior : le head garde les infos utiles pour le navigateur. -->
+<!-- Commentaire junior : le head contient les infos utiles pour le navigateur. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carte du Krosmoz</title>
@@ -11,15 +11,15 @@
 </head>
 <body>
 <!-- Header partage avec les autres pages pour garder les liens de navigation au meme endroit. -->
-<!-- Header commun : logo du site + liens principaux. -->
+<!-- Header commun : logo du site et navigation principale. -->
 <header>
   <div class="site-topbar">
     <a class="brand" href="index.html" aria-label="Univers Krosmoz">
       <img src="assets/logo_krosmoz.webp" alt="">
       <span>Univers Krosmoz</span>
     </a>
-    <!-- Navigation principale : memes entrees sur toutes les pages pour rester coherent. -->
-    <nav class="top-nav" aria-label="Navigation principale">
+        <!-- Navigation principale : memes liens sur les pages pour garder le site coherent. -->
+<nav class="top-nav" aria-label="Navigation principale">
       <a class="nav-link" href="personnages.html">Personnages</a>
       <a class="nav-link" href="chronologies.html">Chronologie</a>
       <a class="nav-link active" href="cartes.html">Cartes</a>
@@ -36,9 +36,8 @@
   </div>
 </header>
 
-<!-- Contenu principal : chaque page met sa partie importante ici. -->
+<!-- Contenu principal : la vraie partie de la page commence ici. -->
 <main>
-  <!-- Zone de carte : le JS place les points cliquables par-dessus l image. -->
   <!-- La carte est rendue comme une image plein ecran. Le JS ajoute ensuite les boutons de zones par-dessus. -->
   <section class="map-section">
     <div class="map-stage">
@@ -66,8 +65,6 @@
   </section>
 </main>
 
-<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet. -->
-
 <!-- Panneau de details reutilise par toutes les zones de la carte. Son contenu est injecte au clic. -->
 <aside class="slide-panel" id="slide-panel" aria-hidden="true">
   <div class="slide-panel-inner">
@@ -82,6 +79,8 @@
   </div>
 </aside>
 
+<!-- Script de page : petite logique chargee apres le HTML. -->
 <script src="scripts/carte-interactive.js?v=20260502-hd"></script>
+<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet. -->
 </body>
 </html>

@@ -3,7 +3,7 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
 /* Variables de style pour la chronologie des oeuvres. */
@@ -188,7 +188,7 @@ header {
   color: var(--gold-light);
 }
 
-/* Filtres d ere pour trier les oeuvres affichees. */
+/* Boutons de filtre pour afficher les oeuvres par ere. */
 .era-nav {
   /* Barre de filtres: les boutons ne naviguent pas, ils pilotent buildTimeline(filter). */
   display: flex;
@@ -254,7 +254,6 @@ main {
   padding: 2rem 1.5rem 6rem;
 }
 
-/* Images de fond qui changent selon l ere visible. */
 #bg-layer {
   /* Pile de fonds pleine page. Le JS active .active selon l'ere visible ou filtree. */
   position: fixed;
@@ -443,7 +442,7 @@ main {
   transition: color 0.2s;
 }
 
-/* Badges sous les titres pour afficher le type et le lien. */
+/* Badges affiches sous chaque oeuvre. */
 .work-meta {
   /* Badges courts sous le titre: type d'oeuvre et cible de lien. */
   display: flex;

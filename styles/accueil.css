@@ -3,10 +3,10 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
-/* Variables de base : je garde les couleurs principales ici pour les reutiliser partout. */
+/* Variables de base : couleurs et valeurs reutilisees dans la page. */
 :root {
   --gold: #c9a84c;
   --gold-light: #e8c97a;
@@ -16,7 +16,7 @@
   --text-muted: #a99d88;
 }
 
-/* Reset simple pour eviter les petits decalages par defaut du navigateur. */
+/* Reset simple pour eviter les marges par defaut du navigateur. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -46,7 +46,7 @@ body::before {
   z-index: 0;
 }
 
-/* En-tete de la page d accueil : logo + navigation. */
+/* Header de la page : logo et liens principaux. */
 header {
   position: relative;
   z-index: 10;
@@ -170,8 +170,9 @@ header {
   padding: 0 0 5.5rem;
 }
 
-/* Bandeau horizontal des personnages sur la page d accueil. */
+/* Rail des personnages sur l accueil. */
 .character-rail-section {
+  position: relative;
   width: 100%;
   margin-bottom: clamp(2.4rem, 6vw, 4.8rem);
   border-top: 1px solid rgba(201,168,76,0.14);
@@ -190,6 +191,71 @@ header {
   height: 2px;
   margin: 0 auto;
   background: linear-gradient(to right, transparent, rgba(201,168,76,0.92), transparent);
+}
+
+.character-rail-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, rgba(8,8,16,0.82), transparent 10%, transparent 90%, rgba(8,8,16,0.82)),
+    linear-gradient(to bottom, rgba(8,8,16,0.14), transparent 28%, rgba(8,8,16,0.18));
+}
+
+.character-rail-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+  width: clamp(3rem, 4.2vw, 3.7rem);
+  height: clamp(3rem, 4.2vw, 3.7rem);
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(232,201,122,0.5);
+  border-radius: 0;
+  background:
+    linear-gradient(135deg, rgba(232,201,122,0.18), rgba(8,8,16,0.9) 36%, rgba(8,8,16,0.92) 64%, rgba(46,207,176,0.12)),
+    rgba(8,8,16,0.9);
+  color: #fff7df;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+  line-height: 1;
+  cursor: pointer;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.48), 0 0 24px rgba(201,168,76,0.12);
+  transform: translateY(-50%);
+  transition: border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.character-rail-arrow::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(201,168,76,0.34);
+  clip-path: inherit;
+  pointer-events: none;
+}
+
+.character-rail-arrow-left { left: clamp(0.75rem, 2vw, 1.6rem); }
+.character-rail-arrow-right { right: clamp(0.75rem, 2vw, 1.6rem); }
+
+.character-rail-arrow:hover,
+.character-rail-arrow:focus-visible {
+  border-color: rgba(232,201,122,0.86);
+  color: var(--gold-light);
+  background:
+    linear-gradient(135deg, rgba(232,201,122,0.28), rgba(8,8,16,0.88) 34%, rgba(8,8,16,0.92) 64%, rgba(46,207,176,0.18)),
+    rgba(8,8,16,0.9);
+  outline: none;
+  box-shadow: 0 18px 42px rgba(0,0,0,0.5), 0 0 26px rgba(201,168,76,0.2);
+}
+
+.character-rail-arrow:disabled {
+  opacity: 0.28;
+  cursor: default;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
 }
 
 .character-rail {
@@ -230,10 +296,17 @@ header {
 }
 
 .rail-character[href="tristepin.html"] img { object-position: 53% center; }
+.rail-character[href="goultard.html"] img { object-position: 51% center; }
+.rail-character[href="flopin-de-percedal.html"] img { object-position: 58% center; }
+.rail-character[href="madagaskan.html"] img { object-position: 36% center; }
+.rail-character[href="cleophee.html"] img { object-position: 28% center; }
+.rail-character[href="elely-de-percedal.html"] img { object-position: 45% center; }
+.rail-character[href="pin-de-percedal.html"] img { object-position: 27% center; }
 .rail-character[href="yugo.html"] img { object-position: 34% center; }
 .rail-character[href="evangelyne.html"] img { object-position: 22% center; }
 .rail-character[href="amalia-sheran-sharm.html"] img { object-position: 34% center; }
 .rail-character[href="ruel-stroud.html"] img { object-position: 40% center; }
+.rail-character[href="adamai.html"] img { object-position: 66% center; }
 
 .rail-character::after {
   content: '';
@@ -342,7 +415,7 @@ header {
   font-size: 0.86rem;
 }
 
-/* Gros boutons visuels qui menent vers les sections du site. */
+/* Blocs cliquables qui envoient vers les grandes sections. */
 .home-feature {
   position: relative;
   display: grid;
@@ -425,7 +498,6 @@ header {
   transform: scale(1.06);
 }
 
-/* Ajustements mobile : les cartes deviennent plus faciles a scroller. */
 @media (max-width: 820px) {
   .site-topbar { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
   .rail-character {

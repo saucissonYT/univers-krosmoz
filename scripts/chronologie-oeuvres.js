@@ -3,18 +3,18 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
 // Cibles partagees par plusieurs oeuvres. Le tableau works stocke seulement linkType pour eviter les doublons.
-// Liens externes reutilises pour eviter de repeter les memes URL partout.
+// Liens externes reutilises par plusieurs oeuvres.
 const LINK_TARGETS = {
   launcher: 'https://www.ankama.com/fr/launcher',
   webtoon: 'https://www.allskreen.com/webtoon'
 };
 
 // Source unique de la chronologie des oeuvres: le DOM est regenere depuis ce tableau a chaque filtre.
-// Donnees des oeuvres : le JS transforme ce tableau en cartes de timeline.
+// Donnees des oeuvres affichees dans la frise.
 const works = [
   {
     era: 'primitif',
@@ -552,7 +552,7 @@ const works = [
 ];
 
 // Libelles et classes CSS utilises pour les titres de sections et les couleurs d'ere.
-// Libelles des eres utilises dans les titres de section.
+// Libelles des eres pour les titres de section.
 const eraLabels = {
   primitif: { label: 'Ere Primitive', cls: 'primitif' },
   dofus: { label: 'Age des Dofus', cls: 'dofus' },
@@ -572,7 +572,7 @@ let currentFilter = 'all';
 let allEraTitleAnchors = [];
 let scrollFramePending = false;
 
-// Renvoie l URL finale selon le type de lien de l oeuvre.
+// Recupere l URL finale selon le type de lien.
 function getWorkUrl(work) {
   if (!work.linkType) {
     return '';
@@ -593,7 +593,7 @@ function getLinkLabel(work) {
   return '';
 }
 
-// Construit les petits badges visibles sur chaque carte d oeuvre.
+// Prepare les badges visibles sur chaque carte.
 function renderMeta(work) {
   // Les badges restent visuels; le lien cliquable est porte par la carte entiere dans buildTimeline().
   const url = getWorkUrl(work);

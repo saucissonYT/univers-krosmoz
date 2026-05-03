@@ -3,7 +3,7 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
 /*
@@ -219,7 +219,7 @@ header {
   }
 
   /* Barre des filtres d'ère : elle pilote la timeline sans rechargement de page. */
-  /* Boutons de filtre pour afficher une seule ere ou toutes les eres. */
+  /* Filtres des eres pour trier la timeline. */
 .era-nav {
     display: flex;
     justify-content: center;
@@ -514,7 +514,7 @@ header {
   .era-bg { position: relative; }
   .era-bg > * { position: relative; z-index: 1; }
 
-  /* Fond global : les images d ere passent derriere toute la page. */
+  /* Fonds d ambiance qui changent selon l ere active. */
 #bg-layer {
     /* Fonds pleine page: le JS alterne .active pendant le scroll en mode "Toutes les eres". */
     position: fixed;

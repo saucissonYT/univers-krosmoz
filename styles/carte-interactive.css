@@ -3,10 +3,10 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
-/* Variables globales de la carte : couleurs, ombres et ambiance. */
+/* Variables de la carte : couleurs, ombres et ambiance generale. */
 :root {
   /* Reglages globaux de la page carte. Les deux variables map-* recalibrent l'image dans le viewport. */
   --gold: #c9a84c;
@@ -31,7 +31,7 @@
   --dofus-map-max-height: calc(100dvh - var(--topbar-min-height) - 5rem);
 }
 
-/* Base de page : on enleve les marges et on garde le plein ecran. */
+/* Reset de base pour controler le rendu de la page. */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -85,7 +85,7 @@ body::after {
   z-index: 0;
 }
 
-/* Barre du haut reutilisee pour garder la meme navigation. */
+/* Header commun avec la navigation du site. */
 header {
   position: relative;
   z-index: 10;
@@ -238,7 +238,7 @@ main {
   height: 100%;
 }
 
-/* Scene de la carte : c est le conteneur qui recoit image, zoom et hotspots. */
+/* Zone principale qui contient la carte et les controles. */
 .map-stage {
   /* Scene principale: le pseudo-element ::before affiche la carte floutee en fond d'ambiance. */
   position: relative;
@@ -249,7 +249,6 @@ main {
     rgba(9, 10, 16, 0.92);
 }
 
-/* Loader affiche pendant que la grosse image de carte se charge. */
 .map-loading {
   position: absolute;
   inset: 0;
@@ -641,7 +640,7 @@ main {
 }
 
 /* Slide panel: panneau lateral ouvert par openSlidePanel(zone). */
-/* Panneau lateral qui affiche les infos quand on clique sur une zone. */
+/* Panneau lateral ouvert quand on clique sur une zone. */
 .slide-panel {
   position: fixed;
   top: 0;

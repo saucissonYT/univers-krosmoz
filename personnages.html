@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Commentaire junior : le head garde les infos utiles pour le navigateur. -->
+<!-- Commentaire junior : le head contient les infos utiles pour le navigateur. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personnages | Univers Krosmoz</title>
@@ -10,16 +10,16 @@
 <link rel="stylesheet" href="styles/personnages.css">
 </head>
 <body class="characters-index-page">
-<!-- Header commun : logo du site + liens principaux. -->
+<!-- Header commun : logo du site et navigation principale. -->
 <header>
   <div class="site-topbar">
     <a class="brand" href="index.html" aria-label="Univers Krosmoz">
       <img src="assets/logo_krosmoz.webp" alt="">
       <span>Univers Krosmoz</span>
     </a>
-    <!-- Navigation principale : memes entrees sur toutes les pages pour rester coherent. -->
 
-    <nav class="top-nav" aria-label="Navigation principale">
+        <!-- Navigation principale : memes liens sur les pages pour garder le site coherent. -->
+<nav class="top-nav" aria-label="Navigation principale">
       <a class="nav-link active" href="personnages.html">Personnages</a>
       <a class="nav-link" href="chronologies.html">Chronologie</a>
       <a class="nav-link" href="cartes.html">Cartes</a>
@@ -36,7 +36,7 @@
   </div>
 </header>
 
-<!-- Contenu principal : chaque page met sa partie importante ici. -->
+<!-- Contenu principal : la vraie partie de la page commence ici. -->
 <main class="characters-index">
   <section class="characters-heading" aria-labelledby="characters-title">
     <h1 id="characters-title">Personnages</h1>
@@ -53,6 +53,54 @@
       <span class="character-card-shade"></span>
       <span class="character-card-copy">
         <strong>Tristepin de Percedal</strong>
+        <span>IOP</span>
+      </span>
+    </a>
+    <a class="character-card" href="goultard.html" data-character="goultard iop demi dieu dieu iop mentor tristepin dark vlad medoroziam cabotine">
+      <img src="assets/personnages/GOULTARD.jpg" alt="Goultard">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Goultard</strong>
+        <span>IOP</span>
+      </span>
+    </a>
+    <a class="character-card" href="flopin-de-percedal.html" data-character="flopin de percedal cra crâ archer fils tristepin evangelyne elely pin">
+      <img src="assets/personnages/FLOPIN.png" alt="Flopin de Percedal">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Flopin de Percedal</strong>
+        <span>CRÂ</span>
+      </span>
+    </a>
+    <a class="character-card" href="madagaskan.html" data-character="madagaskan cra crâ assassin aveugle pere evangelyne cleophee mentor flopin famille percedal">
+      <img src="assets/personnages/MADAGASKAN.png" alt="Madagaskan">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Madagaskan</strong>
+        <span>CRÂ</span>
+      </span>
+    </a>
+    <a class="character-card" href="cleophee.html" data-character="cleophee cléophée cra crâ soeur evangelyne fleche noire archer famille evangelyne">
+      <img src="assets/personnages/CLEOPHEE.png" alt="Cléophée">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Cléophée</strong>
+        <span>CRÂ</span>
+      </span>
+    </a>
+    <a class="character-card" href="elely-de-percedal.html" data-character="elely de percedal iop fille tristepin evangelyne flopin pin goultard">
+      <img src="assets/personnages/ELELY.png" alt="Elely de Percedal">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Elely de Percedal</strong>
+        <span>IOP</span>
+      </span>
+    </a>
+    <a class="character-card" href="pin-de-percedal.html" data-character="pin de percedal iop demi dieu rasha fils tristepin evangelyne flopin elely">
+      <img src="assets/personnages/PIN.png" alt="Pin de Percedal">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Pin de Percedal</strong>
         <span>IOP</span>
       </span>
     </a>
@@ -88,11 +136,17 @@
         <span>ELIATROPE</span>
       </span>
     </a>
+    <a class="character-card" href="adamai.html" data-character="adamai adamaï dragon eliatrope frere jumeau yugo dofus grougaloragran">
+      <img src="assets/personnages/ADAMAI.webp" alt="Adamaï">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Adamaï</strong>
+        <span>DRAGON ELIATROPE</span>
+      </span>
+    </a>
   </section>
 </main>
-
-<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet. -->
-<!-- Petit script maison pour filtrer les personnages avec la barre de recherche. -->
+<!-- Script de page : petite logique chargee apres le HTML. -->
 <script>
   const characterSearch = document.querySelector('#character-search');
   const characterCards = Array.from(document.querySelectorAll('.character-card'));
@@ -104,5 +158,6 @@
     });
   });
 </script>
+<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet. -->
 </body>
 </html>

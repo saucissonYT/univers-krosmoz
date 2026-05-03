@@ -3,7 +3,7 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
 /*
@@ -13,7 +13,7 @@
 */
 // Base de données locale de la chronologie.
 // Chaque entrée décrit une carte/événement affiché dans la timeline.
-// Tableau principal : ce sont les donnees que la frise va afficher.
+// Donnees principales utilisees pour construire la frise.
 const events = [
   // ─── ÈRE PRIMITIVE ───
   {
@@ -256,7 +256,7 @@ const events = [
   }
 ];
 
-// Libelles visibles pour les titres d eres et les filtres.
+// Libelles affiches pour les differentes eres.
 const eraLabels = {
   primitif: { label: "Ère Primitive", cls: "primitif" },
   dofus: { label: "Âge des Dofus", cls: "dofus" },
@@ -273,13 +273,13 @@ const eraBgClass = {
 };
 
 // Etat de rendu partage par les handlers: filtre actif, titres visibles et throttle requestAnimationFrame.
-// Etat simple pour savoir quel filtre est actif.
+// Etat simple pour savoir quel filtre est selectionne.
 let currentFilter = 'all';
 let allEraTitleAnchors = [];
 let scrollFramePending = false;
 
 // Active le bon fond visuel selon l'ère sélectionnée.
-// Change l image de fond selon l ere selectionnee.
+// Change le fond selon l ere en cours.
 function setActiveBackground(filter) {
   const bgMap = {
     primitif: document.getElementById('bg-primitif'),
@@ -341,7 +341,7 @@ function requestScrollBackgroundSync() {
 
 // Reconstruit entièrement la timeline selon le filtre courant.
 // On repart de zéro à chaque changement pour garder un DOM propre et prévisible.
-// Fonction principale : elle reconstruit toute la timeline dans le HTML.
+// Reconstruit la timeline a partir des donnees.
 function buildTimeline(filter) {
   currentFilter = filter;
   const tl = document.getElementById('timeline');
@@ -450,7 +450,7 @@ document.querySelectorAll('[data-nav-filter]').forEach(btn => {
 window.addEventListener('scroll', requestScrollBackgroundSync, { passive: true });
 window.addEventListener('resize', requestScrollBackgroundSync);
 
-// Au chargement, on regarde si l URL demande deja une ere precise.
+// Lecture du parametre d URL au chargement de la page.
 const initialFilter = (() => {
   const era = new URLSearchParams(window.location.search).get('era');
   return eraLabels[era] ? era : 'all';

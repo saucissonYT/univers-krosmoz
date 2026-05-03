@@ -1,13 +1,13 @@
-/* Page personnage : structure alignée sur la DA globale du site */
 /*
   Signature projet : site developpe par phomsay pour zaki.
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
-/* Variables communes pour les pages personnages et les pages index. */
+/* Page personnage : structure alignée sur la DA globale du site */
+/* Variables communes aux fiches personnages et aux index. */
 :root {
   --gold: #c9a84c;
   --gold-light: #e8c97a;
@@ -21,7 +21,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-/* Base generale : fond sombre et typo principale. */
+/* Base generale : fond, typo et comportement de page. */
 body {
   background: var(--dark-bg);
   color: var(--text-main);
@@ -57,7 +57,7 @@ body::after {
   pointer-events: none;
   z-index: 0;
 }
-/* Header commun a toutes les fiches personnages. */
+/* Header commun pour naviguer entre les sections. */
 header {
   position: relative;
   z-index: 20;
@@ -145,7 +145,7 @@ header {
   transition: background 0.2s ease, color 0.2s ease;
 }
 .nav-menu-item:hover, .nav-menu-item.active { background: rgba(201,168,76,0.08); color: var(--gold-light); }
-/* Hero de personnage : grande image + nom par-dessus. */
+/* Hero personnage : grande image et titre principal. */
 .character-hero {
   position: relative;
   z-index: 1;
@@ -180,6 +180,34 @@ body.character-amalia .character-hero-bg {
 body.character-yugo .character-hero-bg {
   background-image: url('../assets/personnages/YUGO.webp');
   background-position: 36% 42%;
+}
+body.character-adamai .character-hero-bg {
+  background-image: url('../assets/personnages/ADAMAI.webp');
+  background-position: 63% center;
+}
+body.character-flopin .character-hero-bg {
+  background-image: url('../assets/personnages/FLOPIN.png');
+  background-position: 58% center;
+}
+body.character-elely .character-hero-bg {
+  background-image: url('../assets/personnages/ELELY.png');
+  background-position: 45% center;
+}
+body.character-pin .character-hero-bg {
+  background-image: url('../assets/personnages/PIN.png');
+  background-position: center center;
+}
+body.character-goultard .character-hero-bg {
+  background-image: url('../assets/personnages/GOULTARD.jpg');
+  background-position: center 18%;
+}
+body.character-madagaskan .character-hero-bg {
+  background-image: url('../assets/personnages/MADAGASKAN.png');
+  background-position: 42% center;
+}
+body.character-cleophee .character-hero-bg {
+  background-image: url('../assets/personnages/CLEOPHEE.png');
+  background-position: 38% center;
 }
 body.character-tristepin .character-hero-bg {
   background-position: center 42%;
@@ -254,7 +282,6 @@ body.character-tristepin .character-hero-bg {
   padding: 0 0.8rem;
   font-size: 0.9rem;
 }
-/* Zone bio + panneau d informations du personnage. */
 .character-main {
   position: relative;
   z-index: 1;
@@ -411,10 +438,10 @@ body.character-tristepin .character-hero-bg {
   border-color: rgba(232,201,122,0.62);
   box-shadow: 0 18px 45px rgba(0,0,0,0.28), 0 0 18px rgba(201,168,76,0.11);
 }
-/* Grille utilisee par la page index des personnages. */
+/* Grille de cartes pour l index des personnages. */
 .characters-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
 }
 .chronologies-grid,
@@ -435,7 +462,7 @@ body.character-tristepin .character-hero-bg {
 .map-index-card img {
   object-position: center center;
 }
-/* Cartes reutilisees pour personnages, chronologies et cartes. */
+/* Carte reutilisee pour afficher personnages, chronologies et cartes. */
 .character-card {
   position: relative;
   display: block;
@@ -468,13 +495,27 @@ body.character-tristepin .character-hero-bg {
   transition: transform 0.34s ease, filter 0.34s ease;
 }
 .character-card[href="tristepin.html"] img { object-position: 52% center; }
+.character-card[href="goultard.html"] img { object-position: 51% center; }
+.character-card[href="flopin-de-percedal.html"] img { object-position: 58% center; }
+.character-card[href="madagaskan.html"] img { object-position: 36% center; }
+.character-card[href="cleophee.html"] img { object-position: 28% center; }
+.character-card[href="elely-de-percedal.html"] img {
+  object-position: 45% center;
+  transform: scale(1.04);
+}
+.character-card[href="pin-de-percedal.html"] img { object-position: 18% center; }
 .character-card[href="evangelyne.html"] img { object-position: 22% center; }
 .character-card[href="ruel-stroud.html"] img { object-position: 40% center; }
 .character-card[href="amalia-sheran-sharm.html"] img { object-position: 34% center; }
 .character-card[href="yugo.html"] img { object-position: 34% center; }
+.character-card[href="adamai.html"] img { object-position: 66% center; }
 .character-card:hover img,
 .character-card:focus-visible img {
   filter: saturate(1.08) contrast(1.07);
+  transform: scale(1.09);
+}
+.character-card[href="elely-de-percedal.html"]:hover img,
+.character-card[href="elely-de-percedal.html"]:focus-visible img {
   transform: scale(1.09);
 }
 .character-card-shade {

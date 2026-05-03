@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Commentaire junior : le head garde les infos utiles pour le navigateur. -->
+<!-- Commentaire junior : le head contient les infos utiles pour le navigateur. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accueil | Univers Krosmoz</title>
@@ -10,16 +10,16 @@
 <link rel="stylesheet" href="styles/accueil.css">
 </head>
 <body>
-<!-- Header commun : logo du site + liens principaux. -->
+<!-- Header commun : logo du site et navigation principale. -->
 <header>
   <div class="site-topbar">
     <a class="brand" href="index.html" aria-label="Univers Krosmoz">
       <img src="assets/logo_krosmoz.webp" alt="">
       <span>Univers Krosmoz</span>
     </a>
-    <!-- Navigation principale : memes entrees sur toutes les pages pour rester coherent. -->
 
-    <nav class="top-nav" aria-label="Navigation principale">
+        <!-- Navigation principale : memes liens sur les pages pour garder le site coherent. -->
+<nav class="top-nav" aria-label="Navigation principale">
       <a class="nav-link" href="personnages.html">Personnages</a>
       <a class="nav-link" href="chronologies.html">Chronologie</a>
       <a class="nav-link" href="cartes.html">Cartes</a>
@@ -36,18 +36,46 @@
   </div>
 </header>
 
-<!-- Contenu principal : chaque page met sa partie importante ici. -->
+<!-- Contenu principal : la vraie partie de la page commence ici. -->
 <main class="home-main">
-  <!-- Rail des heros : acces rapide aux fiches personnages. -->
   <section class="character-rail-section" aria-label="Personnages principaux">
-    <div class="character-rail">
+    <button class="character-rail-arrow character-rail-arrow-left" type="button" aria-label="Personnages précédents" data-rail-prev>‹</button>
+    <div class="character-rail" data-character-rail>
       <a class="rail-character" href="tristepin.html">
         <img src="assets/personnages/TRISTEPIN.png" alt="Tristepin de Percedal">
-        <span><strong>Tristepin</strong><small>Chevalier Iop</small></span>
+        <span><strong>Tristepin</strong><small>Dieu Iop</small></span>
+      </a>
+      <a class="rail-character" href="goultard.html">
+        <img src="assets/personnages/GOULTARD.jpg" alt="Goultard">
+        <span><strong>Goultard</strong><small>Demi-dieu Iop</small></span>
+      </a>
+      <a class="rail-character" href="flopin-de-percedal.html">
+        <img src="assets/personnages/FLOPIN.png" alt="Flopin de Percedal">
+        <span><strong>Flopin</strong><small>Demi-dieu Crâ</small></span>
+      </a>
+      <a class="rail-character" href="madagaskan.html">
+        <img src="assets/personnages/MADAGASKAN.png" alt="Madagaskan">
+        <span><strong>Madagaskan</strong><small>Assassin Crâ</small></span>
+      </a>
+      <a class="rail-character" href="cleophee.html">
+        <img src="assets/personnages/CLEOPHEE.png" alt="Cléophée">
+        <span><strong>Cléophée</strong><small>Flèche noire</small></span>
+      </a>
+      <a class="rail-character" href="elely-de-percedal.html">
+        <img src="assets/personnages/ELELY.png" alt="Elely de Percedal">
+        <span><strong>Elely</strong><small>Demi-déesse Iop</small></span>
+      </a>
+      <a class="rail-character" href="pin-de-percedal.html">
+        <img src="assets/personnages/PIN.png" alt="Pin de Percedal">
+        <span><strong>Pin</strong><small>Demi-dieu Iop</small></span>
       </a>
       <a class="rail-character" href="yugo.html">
         <img src="assets/personnages/YUGO.webp" alt="Yugo">
         <span><strong>Yugo</strong><small>Roi Eliatrope</small></span>
+      </a>
+      <a class="rail-character" href="adamai.html">
+        <img src="assets/personnages/ADAMAI.webp" alt="Adamaï">
+        <span><strong>Adamaï</strong><small>Dragon Eliatrope</small></span>
       </a>
       <a class="rail-character" href="evangelyne.html">
         <img src="assets/personnages/EVA.png" alt="Evangelyne">
@@ -62,9 +90,9 @@
         <span><strong>Ruel</strong><small>Enutrof</small></span>
       </a>
     </div>
+    <button class="character-rail-arrow character-rail-arrow-right" type="button" aria-label="Personnages suivants" data-rail-next>›</button>
   </section>
 
-  <!-- Bloc de mise en avant pour envoyer vers les chronologies. -->
   <section class="home-category" aria-labelledby="home-chronology-title">
     <div class="home-section-heading">
       <h1 id="home-chronology-title">Chronologie</h1>
@@ -91,7 +119,37 @@
     </a>
   </section>
 </main>
+<!-- Script de page : petite logique chargee apres le HTML. -->
+<script>
+  const characterRail = document.querySelector('[data-character-rail]');
+  const railPrev = document.querySelector('[data-rail-prev]');
+  const railNext = document.querySelector('[data-rail-next]');
 
-<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet. -->
+  if (characterRail && railPrev && railNext) {
+    const getRailStep = () => {
+      const firstCard = characterRail.querySelector('.rail-character');
+      return firstCard ? firstCard.getBoundingClientRect().width : characterRail.clientWidth * 0.8;
+    };
+
+    const updateRailControls = () => {
+      const maxScroll = characterRail.scrollWidth - characterRail.clientWidth;
+      railPrev.disabled = characterRail.scrollLeft <= 2;
+      railNext.disabled = characterRail.scrollLeft >= maxScroll - 2;
+    };
+
+    railPrev.addEventListener('click', () => {
+      characterRail.scrollBy({ left: -getRailStep(), behavior: 'smooth' });
+    });
+
+    railNext.addEventListener('click', () => {
+      characterRail.scrollBy({ left: getRailStep(), behavior: 'smooth' });
+    });
+
+    characterRail.addEventListener('scroll', updateRailControls, { passive: true });
+    window.addEventListener('resize', updateRailControls);
+    updateRailControls();
+  }
+</script>
+<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet. -->
 </body>
 </html>

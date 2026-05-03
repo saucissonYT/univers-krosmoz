@@ -3,13 +3,14 @@
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Travail de recherche et edition : Zaki & B.
-  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+  Ne pas supprimer cette signature pour les prochains devs qui travaillent sur le projet.
 */
 
-// Dossier commun pour toutes les images utilisees par la carte.
+// Dossier des images utilisees par la carte interactive.
 const mapAssetPath = "assets/carte interactive/";
 
 // Donnees de la carte Wakfu: px/py placent le centre du hotspot dans le repere natif de wakfu_world_map.png.
+// Liste des zones et points cliquables de la carte Wakfu.
 const wakfuMapZones = [
   { name: "Île Sberg", px: 857, py: 240, size: 32, image: "Sberg.png", description: "L'Île Sberg, redécouverte par Steven Bill Sberg, correspond à l'ancienne contrée de Frigost. Son environnement est dominé par un climat glacial et une banquise étendue. Quelques pirates et membres de la guilde des chasseurs y ont établi des camps. Au-delà de la Crevasse Perge se trouve un village enseveli sous une épaisse couche de neige. Plus loin s'élève le château du Comte Harebourg, dont les sbires poursuivent leurs activités malgré l'emprisonnement prolongé du comte sous l'effet du sort de Djaul." },
   { name: "Tour Minérale", px: 736, py: 312, size: 32, image: "Tour_minerale.webp", description: "La Tour Minérale est une structure mystérieuse apparue dans le Monde des Douze. Son origine demeure inconnue. Elle renfermerait de nombreux trésors, attirant aventuriers et convoitises. Cependant, des créatures hostiles ont émergé en son sein et menacent de se répandre à l'extérieur. Face à cette menace, la Fratrie appelle les combattants capables de contenir l'expansion des monstres et de sécuriser la tour." },
@@ -77,7 +78,7 @@ const dofusMapZones = [
 
 // Configuration des cartes disponibles dans le menu "Cartes interactives".
 // Ajouter une nouvelle carte revient a declarer son image, ses dimensions natives et sa liste de zones.
-// Chaque config explique quelle image charger et comment placer les points.
+// Config des cartes disponibles dans cette page.
 const mapConfigs = {
   wakfu: {
     label: "L'ere du Wakfu",
@@ -126,7 +127,7 @@ const slidePanelTitle = document.getElementById('slide-panel-title');
 const slidePanelText  = document.getElementById('slide-panel-text');
 
 // Map state
-// Petit etat global : il garde le zoom, le deplacement et la zone active.
+// Etat de la carte : zoom, drag et zone active.
 const mapState = {
   scale: 1, minScale: 1, maxScale: 2.75,
   x: 0, y: 0,
@@ -138,7 +139,7 @@ const mapState = {
 function getPointerDistance(a, b) { return Math.hypot(b.clientX - a.clientX, b.clientY - a.clientY); }
 function getPointerCenter(a, b) { return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; }
 
-// Ici on lit l URL pour savoir quelle carte ouvrir au chargement.
+// Change la carte affichee quand on arrive avec un parametre dans l URL.
 function getInitialMapKey() {
   // L'index Cartes ouvre cette page avec ?era=dofus ou ?era=wakfu.
   // Sans parametre, on garde Wakfu comme carte historique par defaut.
@@ -179,7 +180,6 @@ function waitForStableLayout() {
   });
 }
 
-// Cette fonction met a jour la carte quand on change d ere.
 async function applyMapConfig(mapKey) {
   // Change l'image principale, attend son chargement, puis recalcule le zoom et les zones.
   const loadTicket = ++mapLoadTicket;
@@ -322,7 +322,7 @@ function resetMapView() {
 }
 
 // Hotspots
-// On recree les boutons de zones apres chaque resize ou changement de carte.
+// Cree les boutons visibles par-dessus l image de carte.
 function renderHotspots() {
   // Recalcule les positions a chaque resize, car le "cover" change les offsets de l'image.
   const m = getRenderedImageMetrics();
