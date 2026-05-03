@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Commentaire junior : le head garde les infos utiles pour le navigateur. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chronologie historique du Krosmoz</title>
@@ -20,12 +21,14 @@
 </div>
 
 <!-- En-tête global : branding + navigation principale + filtre rapide des ères. -->
+<!-- Header commun : logo du site + liens principaux. -->
 <header>
   <div class="site-topbar">
     <a class="brand" href="index.html" aria-label="Univers Krosmoz">
       <img src="assets/logo_krosmoz.webp" alt="">
       <span>Univers Krosmoz</span>
     </a>
+    <!-- Navigation principale : memes entrees sur toutes les pages pour rester coherent. -->
 
     <nav class="top-nav" aria-label="Navigation principale">
       <a class="nav-link" href="personnages.html">Personnages</a>
@@ -53,6 +56,7 @@
 </header>
 
 <!-- Zone principale : légende des couleurs, fonds d'ambiance et timeline générée en JS. -->
+<!-- Contenu principal : chaque page met sa partie importante ici. -->
 <main>
   <div class="legend">
     <div class="legend-item"><div class="legend-dot legend-dot-primitif"></div> Ère Primitive</div>
@@ -63,6 +67,8 @@
 
   <div class="timeline" id="timeline"></div>
 </main>
+
+<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet. -->
 
 <script src="scripts/chronologie.js"></script>
 </body>

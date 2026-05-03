@@ -1,3 +1,12 @@
+/*
+  Signature projet : site developpe par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Travail de recherche et edition : Zaki & B.
+  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+*/
+
+/* Variables de style pour la chronologie des oeuvres. */
 :root {
   /* Palette partagee avec la chronologie principale; chaque ere garde sa couleur de lecture. */
   --gold: #c9a84c;
@@ -52,6 +61,7 @@ body::before {
     radial-gradient(2px 2px at 70% 10%, rgba(46,207,176,0.3) 0%, transparent 100%);
 }
 
+/* Navigation haute partagee avec les autres pages. */
 header {
   position: relative;
   z-index: 10;
@@ -178,6 +188,7 @@ header {
   color: var(--gold-light);
 }
 
+/* Filtres d ere pour trier les oeuvres affichees. */
 .era-nav {
   /* Barre de filtres: les boutons ne naviguent pas, ils pilotent buildTimeline(filter). */
   display: flex;
@@ -243,6 +254,7 @@ main {
   padding: 2rem 1.5rem 6rem;
 }
 
+/* Images de fond qui changent selon l ere visible. */
 #bg-layer {
   /* Pile de fonds pleine page. Le JS active .active selon l'ere visible ou filtree. */
   position: fixed;
@@ -431,6 +443,7 @@ main {
   transition: color 0.2s;
 }
 
+/* Badges sous les titres pour afficher le type et le lien. */
 .work-meta {
   /* Badges courts sous le titre: type d'oeuvre et cible de lien. */
   display: flex;

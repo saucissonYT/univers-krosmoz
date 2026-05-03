@@ -1,3 +1,12 @@
+/*
+  Signature projet : site developpe par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Travail de recherche et edition : Zaki & B.
+  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+*/
+
+/* Variables de base : je garde les couleurs principales ici pour les reutiliser partout. */
 :root {
   --gold: #c9a84c;
   --gold-light: #e8c97a;
@@ -7,6 +16,7 @@
   --text-muted: #a99d88;
 }
 
+/* Reset simple pour eviter les petits decalages par defaut du navigateur. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -36,6 +46,7 @@ body::before {
   z-index: 0;
 }
 
+/* En-tete de la page d accueil : logo + navigation. */
 header {
   position: relative;
   z-index: 10;
@@ -159,6 +170,7 @@ header {
   padding: 0 0 5.5rem;
 }
 
+/* Bandeau horizontal des personnages sur la page d accueil. */
 .character-rail-section {
   width: 100%;
   margin-bottom: clamp(2.4rem, 6vw, 4.8rem);
@@ -330,6 +342,7 @@ header {
   font-size: 0.86rem;
 }
 
+/* Gros boutons visuels qui menent vers les sections du site. */
 .home-feature {
   position: relative;
   display: grid;
@@ -412,6 +425,7 @@ header {
   transform: scale(1.06);
 }
 
+/* Ajustements mobile : les cartes deviennent plus faciles a scroller. */
 @media (max-width: 820px) {
   .site-topbar { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
   .rail-character {

@@ -1,10 +1,19 @@
 /*
+  Signature projet : site developpe par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Travail de recherche et edition : Zaki & B.
+  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+*/
+
+/*
   Styles de la chronologie principale.
   Ce fichier remplace l'ancien bloc <style> de index.html pour garder le HTML structurel.
   Les sections sont commentees par role: navigation, filtres, timeline, fonds d'ere, responsive.
 */
 /* Variables globales de la DA : couleurs, contrastes et identités des ères. */
-  :root {
+  /* Variables communes de la frise historique. */
+:root {
     --gold: #c9a84c;
     --gold-light: #e8c97a;
     --gold-dim: #7a5e25;
@@ -72,7 +81,8 @@
   }
 
   /* Barre de navigation principale partagée avec les autres pages du site. */
-  header {
+  /* Header commun avec le logo et les liens de navigation. */
+header {
     position: relative;
     z-index: 10;
     padding: 0 0 1.5rem;
@@ -209,7 +219,8 @@
   }
 
   /* Barre des filtres d'ère : elle pilote la timeline sans rechargement de page. */
-  .era-nav {
+  /* Boutons de filtre pour afficher une seule ere ou toutes les eres. */
+.era-nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -503,7 +514,8 @@
   .era-bg { position: relative; }
   .era-bg > * { position: relative; z-index: 1; }
 
-  #bg-layer {
+  /* Fond global : les images d ere passent derriere toute la page. */
+#bg-layer {
     /* Fonds pleine page: le JS alterne .active pendant le scroll en mode "Toutes les eres". */
     position: fixed;
     inset: 0;

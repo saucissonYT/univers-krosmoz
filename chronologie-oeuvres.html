@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Commentaire junior : le head garde les infos utiles pour le navigateur. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chronologie des oeuvres du Krosmoz</title>
@@ -17,6 +18,7 @@
   <div class="bg-img bg-waven" id="bg-waven"></div>
 </div>
 
+<!-- Header commun : logo du site + liens principaux. -->
 <header>
   <!-- Navigation globale: liens entre chronologie, oeuvres et carte. -->
   <div class="site-topbar">
@@ -24,6 +26,7 @@
       <img src="assets/logo_krosmoz.webp" alt="">
       <span>Univers Krosmoz</span>
     </a>
+    <!-- Navigation principale : memes entrees sur toutes les pages pour rester coherent. -->
 
     <nav class="top-nav" aria-label="Navigation principale">
       <a class="nav-link" href="personnages.html">Personnages</a>
@@ -51,6 +54,7 @@
   </nav>
 </header>
 
+<!-- Contenu principal : chaque page met sa partie importante ici. -->
 <main>
   <div class="legend" aria-label="Legende des liens">
     <div class="legend-item"><div class="legend-dot legend-dot-primitif"></div> Ere Primitive</div>
@@ -62,6 +66,8 @@
   <!-- Conteneur vide: les cartes d'oeuvres sont generees depuis le tableau works en JS. -->
   <div class="timeline" id="works-timeline" aria-label="Chronologie interactive des oeuvres"></div>
 </main>
+
+<!-- Signature projet : site developpe par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Travail de recherche et edition : Zaki & B. Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet. -->
 
 <script src="scripts/chronologie-oeuvres.js"></script>
 </body>

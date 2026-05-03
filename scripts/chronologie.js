@@ -1,10 +1,19 @@
 /*
+  Signature projet : site developpe par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Travail de recherche et edition : Zaki & B.
+  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+*/
+
+/*
   Chronologie principale du Krosmoz.
   Ce fichier remplace l'ancien script inline de index.html.
   Il contient les donnees des evenements, construit la timeline et synchronise les fonds d'ere.
 */
 // Base de données locale de la chronologie.
 // Chaque entrée décrit une carte/événement affiché dans la timeline.
+// Tableau principal : ce sont les donnees que la frise va afficher.
 const events = [
   // ─── ÈRE PRIMITIVE ───
   {
@@ -247,6 +256,7 @@ const events = [
   }
 ];
 
+// Libelles visibles pour les titres d eres et les filtres.
 const eraLabels = {
   primitif: { label: "Ère Primitive", cls: "primitif" },
   dofus: { label: "Âge des Dofus", cls: "dofus" },
@@ -263,11 +273,13 @@ const eraBgClass = {
 };
 
 // Etat de rendu partage par les handlers: filtre actif, titres visibles et throttle requestAnimationFrame.
+// Etat simple pour savoir quel filtre est actif.
 let currentFilter = 'all';
 let allEraTitleAnchors = [];
 let scrollFramePending = false;
 
 // Active le bon fond visuel selon l'ère sélectionnée.
+// Change l image de fond selon l ere selectionnee.
 function setActiveBackground(filter) {
   const bgMap = {
     primitif: document.getElementById('bg-primitif'),
@@ -329,6 +341,7 @@ function requestScrollBackgroundSync() {
 
 // Reconstruit entièrement la timeline selon le filtre courant.
 // On repart de zéro à chaque changement pour garder un DOM propre et prévisible.
+// Fonction principale : elle reconstruit toute la timeline dans le HTML.
 function buildTimeline(filter) {
   currentFilter = filter;
   const tl = document.getElementById('timeline');
@@ -437,6 +450,7 @@ document.querySelectorAll('[data-nav-filter]').forEach(btn => {
 window.addEventListener('scroll', requestScrollBackgroundSync, { passive: true });
 window.addEventListener('resize', requestScrollBackgroundSync);
 
+// Au chargement, on regarde si l URL demande deja une ere precise.
 const initialFilter = (() => {
   const era = new URLSearchParams(window.location.search).get('era');
   return eraLabels[era] ? era : 'all';

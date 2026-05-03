@@ -1,3 +1,12 @@
+/*
+  Signature projet : site developpe par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Travail de recherche et edition : Zaki & B.
+  Ne pas supprimer la signature pour les prochains devs qui travaillent sur le projet.
+*/
+
+// Dossier commun pour toutes les images utilisees par la carte.
 const mapAssetPath = "assets/carte interactive/";
 
 // Donnees de la carte Wakfu: px/py placent le centre du hotspot dans le repere natif de wakfu_world_map.png.
@@ -68,6 +77,7 @@ const dofusMapZones = [
 
 // Configuration des cartes disponibles dans le menu "Cartes interactives".
 // Ajouter une nouvelle carte revient a declarer son image, ses dimensions natives et sa liste de zones.
+// Chaque config explique quelle image charger et comment placer les points.
 const mapConfigs = {
   wakfu: {
     label: "L'ere du Wakfu",
@@ -116,6 +126,7 @@ const slidePanelTitle = document.getElementById('slide-panel-title');
 const slidePanelText  = document.getElementById('slide-panel-text');
 
 // Map state
+// Petit etat global : il garde le zoom, le deplacement et la zone active.
 const mapState = {
   scale: 1, minScale: 1, maxScale: 2.75,
   x: 0, y: 0,
@@ -127,6 +138,7 @@ const mapState = {
 function getPointerDistance(a, b) { return Math.hypot(b.clientX - a.clientX, b.clientY - a.clientY); }
 function getPointerCenter(a, b) { return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; }
 
+// Ici on lit l URL pour savoir quelle carte ouvrir au chargement.
 function getInitialMapKey() {
   // L'index Cartes ouvre cette page avec ?era=dofus ou ?era=wakfu.
   // Sans parametre, on garde Wakfu comme carte historique par defaut.
@@ -167,6 +179,7 @@ function waitForStableLayout() {
   });
 }
 
+// Cette fonction met a jour la carte quand on change d ere.
 async function applyMapConfig(mapKey) {
   // Change l'image principale, attend son chargement, puis recalcule le zoom et les zones.
   const loadTicket = ++mapLoadTicket;
@@ -309,6 +322,7 @@ function resetMapView() {
 }
 
 // Hotspots
+// On recree les boutons de zones apres chaque resize ou changement de carte.
 function renderHotspots() {
   // Recalcule les positions a chaque resize, car le "cover" change les offsets de l'image.
   const m = getRenderedImageMetrics();
