@@ -46,18 +46,18 @@ const wakfuMapZones = [
 // Les textes et images restent provisoires pendant que les fiches sont completees une par une.
 // pointOriginal garde le numero donne au depart pour retrouver facilement un point plus tard.
 const dofusMapZones = [
-  { pointOriginal: 1, name: "Île de Nowel", px: 4179, py: 594, size: 44, description: "" },
+  { pointOriginal: 1, name: "Île de Nowel", px: 4179, py: 594, size: 44, image: "Île de Nowel.png", description: "" },
   { pointOriginal: 3, name: "Archipel de Valonia", px: 9026, py: 924, size: 44, description: "" },
-  { pointOriginal: 4, name: "Château de Harebourg", px: 2217, py: 948, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 4, name: "Château de Harebourg", px: 2217, py: 948, size: 34, dotSize: 14, ringSize: 26, image: "chateau de harebourg.jpg", description: "" },
   { pointOriginal: 5, name: "Saharach", px: 7418, py: 1729, size: 44, description: "" },
-  { pointOriginal: 6, name: "Bonta", px: 4257, py: 2143, size: 44, description: "" },
+  { pointOriginal: 6, name: "Bonta", px: 4257, py: 2143, size: 44, image: "Bonta.png", description: "" },
   { pointOriginal: 7, name: "Atoll des Possédés", px: 9398, py: 2221, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 8, name: "Cimetière de Grobe", px: 9032, py: 2832, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 9, name: "La Bourgade", px: 1142, py: 2886, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 10, name: "Foire du Trool", px: 5781, py: 3012, size: 44, description: "" },
   { pointOriginal: 11, name: "Tainéla", px: 6549, py: 3396, size: 44, description: "" },
   { pointOriginal: 12, name: "Kolizéum", px: 5642, py: 3486, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { pointOriginal: 13, name: "Pandala", px: 7965, py: 3499, size: 44, description: "" },
+  { pointOriginal: 13, name: "Pandala", px: 7965, py: 3499, size: 44, image: "pandala.png", description: "" },
   { pointOriginal: 14, name: "Île de Rok", px: 9206, py: 3901, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 15, name: "Astrub", px: 6813, py: 4080, size: 44, description: "" },
   { pointOriginal: 16, name: "Île du Minotoror", px: 3608, py: 4099, size: 34, dotSize: 14, ringSize: 26, description: "" },
@@ -73,8 +73,8 @@ const dofusMapZones = [
   { pointOriginal: 28, name: "Sufokia", px: 7485, py: 6282, size: 44, description: "" },
   { pointOriginal: 29, name: "Village des Dragoeufs", px: 6236, py: 6360, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 30, name: "Nimotopia", px: 2001, py: 6457, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { pointOriginal: 31, name: "Brâkmar", px: 4736, py: 6720, size: 44, description: "" },
-  { pointOriginal: 32, name: "Archipel de Vulkania", px: 2985, py: 6973, size: 44, description: "" },
+  { pointOriginal: 31, name: "Brâkmar", px: 4736, py: 6720, size: 44, image: "Brakmar.png", description: "" },
+  { pointOriginal: 32, name: "Archipel de Vulkania", px: 2985, py: 6973, size: 44, image: "Archipel de Vulkania.png", description: "" },
   // Points ajoutes depuis t1.png. Ils utilisent le petit format comme l'Ile du Minotoror.
   { pointOriginal: 33, name: "Épaves Silencieuses", px: 3231, py: 888, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 34, name: "Roc des Salbatroces", px: 701, py: 2024, size: 34, dotSize: 14, ringSize: 26, description: "" },
@@ -86,8 +86,9 @@ const dofusMapZones = [
   { pointOriginal: 39, name: "Île de Frigost", px: 2013, py: 2252, size: 44, description: "" }
 ].map(zone => ({
   ...zone,
-  image: "a venir.jpg",
-  description: "..."
+  // Si un point a deja sa vraie image, on la garde. Sinon on affiche l'image d'attente.
+  image: zone.image || "a venir.jpg",
+  description: zone.description || "..."
 }));
 
 // Configuration des cartes disponibles dans le menu "Cartes interactives".
@@ -390,6 +391,8 @@ mapViewport.addEventListener('pointerdown', e => {
     mapState.pinchScale = mapState.scale;
     return;
   }
+  // Si on appuie sur un point, on laisse le bouton gerer son clic au lieu de lancer le deplacement de la carte.
+  if (e.target.closest('.map-zone')) return;
   if (e.pointerType === 'mouse' && e.button !== 0) return;
   if (!canPan()) return;
   e.preventDefault();
