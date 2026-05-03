@@ -48,12 +48,12 @@ const wakfuMapZones = [
 const dofusMapZones = [
   { pointOriginal: 1, name: "Île de Nowel", px: 4179, py: 594, size: 44, description: "" },
   { pointOriginal: 3, name: "Archipel de Valonia", px: 9026, py: 924, size: 44, description: "" },
-  { pointOriginal: 4, name: "Château de Harebourg", px: 2217, py: 948, size: 44, description: "" },
+  { pointOriginal: 4, name: "Château de Harebourg", px: 2217, py: 948, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 5, name: "Saharach", px: 7418, py: 1729, size: 44, description: "" },
   { pointOriginal: 6, name: "Bonta", px: 4257, py: 2143, size: 44, description: "" },
   { pointOriginal: 7, name: "Atoll des Possédés", px: 9398, py: 2221, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 8, name: "Cimetière de Grobe", px: 9032, py: 2832, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { pointOriginal: 9, name: "La Bourgade", px: 1142, py: 2886, size: 44, description: "" },
+  { pointOriginal: 9, name: "La Bourgade", px: 1142, py: 2886, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 10, name: "Foire du Trool", px: 5781, py: 3012, size: 44, description: "" },
   { pointOriginal: 11, name: "Tainéla", px: 6549, py: 3396, size: 44, description: "" },
   { pointOriginal: 12, name: "Kolizéum", px: 5642, py: 3486, size: 34, dotSize: 14, ringSize: 26, description: "" },
@@ -81,7 +81,9 @@ const dofusMapZones = [
   { pointOriginal: 35, name: "Village des Kanigs", px: 6503, py: 2254, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 36, name: "Sakaï", px: 2856, py: 2873, size: 34, dotSize: 14, ringSize: 26, description: "" },
   { pointOriginal: 37, name: "Île de Kartonpath", px: 8001, py: 5309, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { pointOriginal: 38, name: "Temple des Alliances", px: 7395, py: 6704, size: 34, dotSize: 14, ringSize: 26, description: "" }
+  { pointOriginal: 38, name: "Temple des Alliances", px: 7395, py: 6704, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  // Point ajoute depuis t2.png sur la zone de Frigost.
+  { pointOriginal: 39, name: "Île de Frigost", px: 2013, py: 2252, size: 44, description: "" }
 ].map(zone => ({
   ...zone,
   image: "a venir.jpg",
