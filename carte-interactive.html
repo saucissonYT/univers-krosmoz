@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carte interactive du Krosmoz</title>
+<title>Carte du Krosmoz</title>
 <link rel="icon" type="image/webp" href="assets/Krosmoz_1.webp">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/carte-interactive.css?v=20260502-hd">
@@ -17,34 +17,9 @@
       <span>Univers Krosmoz</span>
     </a>
     <nav class="top-nav" aria-label="Navigation principale">
-      <div class="nav-item nav-dropdown">
-        <a class="nav-link" href="index.html">Chronologie <span class="nav-caret">▼</span></a>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="index.html?era=all">Toutes les ères</a>
-          <a class="nav-menu-item" href="index.html?era=primitif">Ère Primitive</a>
-          <a class="nav-menu-item" href="index.html?era=dofus">Âge des Dofus</a>
-          <a class="nav-menu-item" href="index.html?era=wakfu">Ère du Wakfu</a>
-          <a class="nav-menu-item" href="index.html?era=waven">Ère du Waven</a>
-        </div>
-      </div>
-      <a class="nav-link" href="chronologie-oeuvres.html">Œuvres</a>
-      <div class="nav-item nav-dropdown">
-        <a class="nav-link active" href="carte-interactive.html?era=wakfu">Cartes interactives <span class="nav-caret">▼</span></a>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="carte-interactive.html?era=dofus" data-map-era="dofus">L'ère des Dofus</a>
-          <a class="nav-menu-item" href="carte-interactive.html?era=wakfu" data-map-era="wakfu">L'ère du Wakfu</a>
-        </div>
-      </div>
-      <div class="nav-item nav-dropdown">
-        <a class="nav-link" href="tristepin.html">Personnages <span class="nav-caret">▼</span></a>
-        <div class="nav-menu">
-          <a class="nav-menu-item" href="tristepin.html">Tristepin de Percedal</a>
-          <a class="nav-menu-item" href="evangelyne.html">Evangelyne</a>
-          <a class="nav-menu-item" href="ruel-stroud.html">Ruel Stroud</a>
-          <a class="nav-menu-item" href="amalia-sheran-sharm.html">Amalia Sheran Sharm</a>
-          <a class="nav-menu-item" href="yugo.html">Yugo</a>
-        </div>
-      </div>
+      <a class="nav-link" href="chronologies.html">Chronologie</a>
+      <a class="nav-link active" href="cartes.html">Cartes</a>
+      <a class="nav-link" href="personnages.html">Personnages</a>
       <button class="nav-link" type="button">Médias</button>
     </nav>
   </div>
@@ -54,6 +29,9 @@
   <!-- La carte est rendue comme une image plein ecran. Le JS ajoute ensuite les boutons de zones par-dessus. -->
   <section class="map-section">
     <div class="map-stage">
+      <div class="map-loading" id="map-loading" role="status" aria-live="polite">
+        <span>Chargement de la carte</span>
+      </div>
       <div class="map-viewport" id="map-viewport">
         <div class="map-frame">
           <div class="map-canvas" id="map-canvas">

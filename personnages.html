@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personnages | Univers Krosmoz</title>
+<link rel="icon" type="image/webp" href="assets/Krosmoz_1.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/personnages.css">
+</head>
+<body class="characters-index-page">
+<header>
+  <div class="site-topbar">
+    <a class="brand" href="index.html" aria-label="Univers Krosmoz">
+      <img src="assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a class="nav-link" href="chronologies.html">Chronologie</a>
+      <a class="nav-link" href="cartes.html">Cartes</a>
+      <a class="nav-link active" href="personnages.html">Personnages</a>
+      <button class="nav-link" type="button">Médias</button>
+    </nav>
+  </div>
+</header>
+
+<main class="characters-index">
+  <section class="characters-heading" aria-labelledby="characters-title">
+    <h1 id="characters-title">Personnages</h1>
+    <div class="characters-rule" aria-hidden="true"></div>
+    <label class="character-search" for="character-search">
+      <span>Rechercher</span>
+      <input id="character-search" type="search" placeholder="Nom ou classe" autocomplete="off">
+    </label>
+  </section>
+
+  <section class="characters-grid" aria-label="Liste des personnages">
+    <a class="character-card" href="tristepin.html" data-character="tristepin de percedal iop pinpin">
+      <img src="assets/personnages/TRISTEPIN.png" alt="Tristepin de Percedal">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Tristepin de Percedal</strong>
+        <span>IOP</span>
+      </span>
+    </a>
+    <a class="character-card" href="evangelyne.html" data-character="evangelyne eva cra crâ archere">
+      <img src="assets/personnages/EVA.png" alt="Evangelyne">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Evangelyne</strong>
+        <span>CRÂ</span>
+      </span>
+    </a>
+    <a class="character-card" href="ruel-stroud.html" data-character="ruel stroud enutrof phorzerker chasseur de tresor richissime">
+      <img src="assets/personnages/RUEL.png" alt="Ruel Stroud">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Ruel Stroud</strong>
+        <span>ENUTROF</span>
+      </span>
+    </a>
+    <a class="character-card" href="amalia-sheran-sharm.html" data-character="amalia sheran sharm sadida reine aventuriere royaume">
+      <img src="assets/personnages/AMALIA.png" alt="Amalia Sheran Sharm">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Amalia Sheran Sharm</strong>
+        <span>SADIDA</span>
+      </span>
+    </a>
+    <a class="character-card" href="yugo.html" data-character="yugo eliatrope eliAtrope roi dieu coeur confrerie">
+      <img src="assets/personnages/YUGO.webp" alt="Yugo">
+      <span class="character-card-shade"></span>
+      <span class="character-card-copy">
+        <strong>Yugo</strong>
+        <span>ELIATROPE</span>
+      </span>
+    </a>
+  </section>
+</main>
+<script>
+  const characterSearch = document.querySelector('#character-search');
+  const characterCards = Array.from(document.querySelectorAll('.character-card'));
+
+  characterSearch.addEventListener('input', () => {
+    const query = characterSearch.value.trim().toLowerCase();
+    characterCards.forEach((card) => {
+      card.hidden = query && !card.dataset.character.includes(query);
+    });
+  });
+</script>
+</body>
+</html>

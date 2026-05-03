@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chronologie historique du Krosmoz</title>
+<link rel="icon" type="image/webp" href="assets/Krosmoz_1.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/chronologie.css">
+</head>
+<body>
+
+<!-- Global era background layers -->
+<!-- Ces couches restent fixes; le script active le fond correspondant a l'ere visible. -->
+<div id="bg-layer">
+  <div class="bg-img bg-primitif" id="bg-primitif"></div>
+  <div class="bg-img bg-dofus"    id="bg-dofus"></div>
+  <div class="bg-img bg-wakfu"    id="bg-wakfu"></div>
+  <div class="bg-img bg-waven"    id="bg-waven"></div>
+</div>
+
+<!-- En-tête global : branding + navigation principale + filtre rapide des ères. -->
+<header>
+  <div class="site-topbar">
+    <a class="brand" href="index.html" aria-label="Univers Krosmoz">
+      <img src="assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a class="nav-link active" href="chronologies.html">Chronologie</a>
+      <a class="nav-link" href="cartes.html">Cartes</a>
+      <a class="nav-link" href="personnages.html">Personnages</a>
+      <button class="nav-link" type="button">Médias</button>
+    </nav>
+  </div>
+
+  <nav class="era-nav">
+    <button class="era-btn active" data-filter="all">Toutes les ères</button>
+    <button class="era-btn" data-filter="primitif">Ère Primitive</button>
+    <button class="era-btn" data-filter="dofus">Âge des Dofus</button>
+    <button class="era-btn" data-filter="wakfu">Ère du Wakfu</button>
+    <button class="era-btn" data-filter="waven">Ère du Waven</button>
+  </nav>
+</header>
+
+<!-- Zone principale : légende des couleurs, fonds d'ambiance et timeline générée en JS. -->
+<main>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot legend-dot-primitif"></div> Ère Primitive</div>
+    <div class="legend-item"><div class="legend-dot legend-dot-dofus"></div> Âge des Dofus</div>
+    <div class="legend-item"><div class="legend-dot legend-dot-wakfu"></div> Ère du Wakfu</div>
+    <div class="legend-item"><div class="legend-dot legend-dot-waven"></div> Ère du Waven</div>
+  </div>
+
+  <div class="timeline" id="timeline"></div>
+</main>
+
+<script src="scripts/chronologie.js"></script>
+</body>
+</html>

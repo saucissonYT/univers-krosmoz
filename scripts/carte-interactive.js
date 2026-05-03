@@ -95,10 +95,12 @@ const mapConfigs = {
 
 let currentMap = mapConfigs.wakfu;
 let mapZones = currentMap.zones;
+let mapLoadTicket = 0;
 
 // DOM refs
 const hotspotLayer    = document.getElementById('map-hotspots');
 const mapStage        = document.querySelector('.map-stage');
+const mapLoading      = document.getElementById('map-loading');
 const mapFrame        = document.querySelector('.map-frame');
 const mapViewport     = document.getElementById('map-viewport');
 const mapCanvas       = document.getElementById('map-canvas');
@@ -126,7 +128,7 @@ function getPointerDistance(a, b) { return Math.hypot(b.clientX - a.clientX, b.c
 function getPointerCenter(a, b) { return { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; }
 
 function getInitialMapKey() {
-  // Le menu recharge la meme page avec ?era=dofus ou ?era=wakfu.
+  // L'index Cartes ouvre cette page avec ?era=dofus ou ?era=wakfu.
   // Sans parametre, on garde Wakfu comme carte historique par defaut.
   const era = new URLSearchParams(window.location.search).get('era');
   return mapConfigs[era] ? era : 'wakfu';
@@ -139,19 +141,57 @@ function setActiveMapMenuItem(mapKey) {
   });
 }
 
-function applyMapConfig(mapKey) {
-  // Change l'image principale, le fond floute et les zones disponibles sans dupliquer la page HTML.
+function setMapLoading(isLoading) {
+  mapStage.classList.toggle('is-loading', isLoading);
+  if (mapLoading) mapLoading.hidden = !isLoading;
+}
+
+function waitForMapImage(image) {
+  if (image.complete && image.naturalWidth > 0) {
+    return image.decode ? image.decode().catch(() => {}) : Promise.resolve();
+  }
+  return new Promise(resolve => {
+    const done = () => {
+      image.removeEventListener('load', done);
+      image.removeEventListener('error', done);
+      resolve();
+    };
+    image.addEventListener('load', done, { once: true });
+    image.addEventListener('error', done, { once: true });
+  }).then(() => image.decode ? image.decode().catch(() => {}) : undefined);
+}
+
+function waitForStableLayout() {
+  return new Promise(resolve => {
+    requestAnimationFrame(() => requestAnimationFrame(resolve));
+  });
+}
+
+async function applyMapConfig(mapKey) {
+  // Change l'image principale, attend son chargement, puis recalcule le zoom et les zones.
+  const loadTicket = ++mapLoadTicket;
+  setMapLoading(true);
   currentMap = mapConfigs[mapKey] || mapConfigs.wakfu;
-  mapZones = currentMap.zones;
+  mapZones = [];
+  hotspotLayer.innerHTML = '';
   const imageUrl = mapAssetPath + currentMap.image + (currentMap.version ? `?${currentMap.version}` : '');
   mapBase.src = imageUrl;
   mapBase.alt = currentMap.alt;
   document.documentElement.dataset.mapEra = mapKey;
   document.documentElement.style.setProperty('--map-background-image', `url("${imageUrl}")`);
-  document.title = `Carte interactive - ${currentMap.label}`;
+  document.title = `Carte - ${currentMap.label}`;
   setActiveMapMenuItem(mapKey);
-  resetMapView();
-  refreshMapLayout();
+  try {
+    await waitForMapImage(mapBase);
+    if (loadTicket !== mapLoadTicket) return;
+    mapZones = currentMap.zones;
+    await waitForStableLayout();
+    if (loadTicket !== mapLoadTicket) return;
+    resetMapView();
+    refreshMapLayout();
+  } finally {
+    if (loadTicket === mapLoadTicket) setMapLoading(false);
+  }
 }
 
 function getRenderedImageMetrics() {

@@ -237,6 +237,33 @@ main {
     rgba(9, 10, 16, 0.92);
 }
 
+.map-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 12;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, rgba(46,207,176,0.12), transparent 34%),
+    rgba(8, 8, 16, 0.86);
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.map-loading[hidden] {
+  display: none;
+}
+
+.map-stage.is-loading .map-viewport,
+.map-stage.is-loading .map-controls {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .map-stage::before,
 .map-stage::after {
   content: '';
