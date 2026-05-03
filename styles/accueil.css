@@ -71,6 +71,10 @@ header {
 
 .top-nav { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
 
+.nav-item {
+  position: relative;
+}
+
 .nav-link {
   display: inline-flex;
   align-items: center;
@@ -90,9 +94,60 @@ header {
 }
 
 .nav-link:hover,
-.nav-link:focus-visible {
+.nav-link:focus-visible,
+.nav-item:focus-within > .nav-link {
   color: var(--gold-light);
   background: rgba(201,168,76,0.08);
+  outline: none;
+}
+
+.nav-caret {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  min-width: 240px;
+  padding: 0.45rem;
+  border: 1px solid rgba(201,168,76,0.16);
+  background: rgba(12, 12, 18, 0.97);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.nav-dropdown:hover .nav-menu,
+.nav-dropdown:focus-within .nav-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-menu-item {
+  width: 100%;
+  display: block;
+  padding: 0.7rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-main);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu-item:hover,
+.nav-menu-item:focus-visible {
+  background: rgba(201,168,76,0.08);
+  color: var(--gold-light);
   outline: none;
 }
 
@@ -180,18 +235,36 @@ header {
 
 .rail-character span {
   position: absolute;
-  left: 1.4rem;
-  right: 1.4rem;
-  bottom: 1.45rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1.35rem;
   z-index: 1;
-  color: var(--gold-light);
-  font-family: 'Cinzel', serif;
-  font-size: clamp(0.78rem, 1vw, 0.95rem);
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  display: grid;
+  gap: 0.22rem;
+  justify-items: center;
+  text-align: center;
   text-shadow: 0 8px 24px rgba(0,0,0,0.9);
   transform: skewX(3deg);
+}
+
+.rail-character strong,
+.rail-character small {
+  display: block;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+}
+
+.rail-character strong {
+  color: var(--gold-light);
+  font-size: clamp(0.95rem, 1.2vw, 1.18rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.rail-character small {
+  color: #f6f2e7;
+  font-size: clamp(0.62rem, 0.74vw, 0.76rem);
+  letter-spacing: 0.16em;
 }
 
 .rail-character:hover,
