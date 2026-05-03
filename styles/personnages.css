@@ -147,11 +147,27 @@ header {
 .character-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../assets/personnages/tristepin-de-percedal.png');
+  background-image: url('../assets/personnages/tristepin-presentation.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
   transform: scale(1.02);
   filter: saturate(0.98) contrast(1.04);
+}
+body.character-evangelyne .character-hero-bg {
+  background-image: url('../assets/personnages/evangelyne-presentation.png');
+  background-position: center center;
+}
+body.character-ruel .character-hero-bg {
+  background-image: url('../assets/personnages/ruel-stroud-presentation.png');
+  background-position: center center;
+}
+body.character-amalia .character-hero-bg {
+  background-image: url('../assets/personnages/amalia-sheran-sharm-presentation.png');
+  background-position: center center;
+}
+body.character-yugo .character-hero-bg {
+  background-image: url('../assets/personnages/yugo-presentation.jpg');
+  background-position: center center;
 }
 .character-hero::before {
   content: '';
@@ -169,7 +185,7 @@ header {
   width: min(1280px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 8rem 0 5rem;
-  transform: translateY(4rem);
+  transform: translateY(14rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +203,7 @@ header {
 }
 .hero-name {
   color: #fff7df;
-  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-family: 'Cinzel', serif;
   font-size: clamp(2.2rem, 5vw, 5.2rem);
   line-height: 1.02;
   letter-spacing: 0.08em;
@@ -313,8 +329,8 @@ header {
 @media (max-width: 720px) {
   .site-topbar { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
   .character-hero { min-height: 70vh; }
-  .character-hero-bg { background-position: center top; }
-  .character-hero-content { padding: 6rem 0 3.5rem; transform: translateY(2.5rem); }
+  .character-hero-bg { background-position: center bottom; }
+  .character-hero-content { padding: 6rem 0 3.5rem; transform: translateY(8rem); }
   .hero-subtitle { letter-spacing: 0.1em; }
   .bio-text p { text-align: left; }
 }
