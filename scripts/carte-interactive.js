@@ -41,40 +41,52 @@ const wakfuMapZones = [
 
 // Points releves depuis "map avec pts.png".
 // Ils ouvrent le meme panneau que les zones Wakfu, mais restent sans contenu pour l'instant.
+// Chaque point Dofus garde les coordonnees relevees sur la carte HD.
+// Les points 2, 20 et 27 ont ete retires car ils ne doivent plus apparaitre.
+// Les textes et images restent provisoires pendant que les fiches sont completees une par une.
+// pointOriginal garde le numero donne au depart pour retrouver facilement un point plus tard.
 const dofusMapZones = [
-  { name: "", px: 4179, py: 594, size: 44, description: "" },
-  { name: "", px: 8235, py: 793, size: 44, description: "" },
-  { name: "", px: 9026, py: 924, size: 44, description: "" },
-  { name: "", px: 2217, py: 948, size: 44, description: "" },
-  { name: "", px: 7418, py: 1729, size: 44, description: "" },
-  { name: "", px: 4257, py: 2143, size: 44, description: "" },
-  { name: "", px: 9398, py: 2221, size: 44, description: "" },
-  { name: "", px: 9032, py: 2832, size: 44, description: "" },
-  { name: "", px: 1142, py: 2886, size: 44, description: "" },
-  { name: "", px: 5781, py: 3012, size: 44, description: "" },
-  { name: "", px: 6549, py: 3396, size: 44, description: "" },
-  { name: "", px: 5642, py: 3486, size: 44, description: "" },
-  { name: "", px: 7965, py: 3499, size: 44, description: "" },
-  { name: "", px: 9206, py: 3901, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { name: "", px: 6813, py: 4080, size: 44, description: "" },
-  { name: "", px: 3608, py: 4099, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { name: "", px: 8192, py: 4596, size: 44, description: "" },
-  { name: "", px: 6801, py: 4669, size: 44, description: "" },
-  { name: "", px: 7178, py: 4849, size: 44, description: "" },
-  { name: "", px: 3489, py: 4969, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { name: "", px: 5355, py: 5071, size: 44, description: "" },
-  { name: "", px: 8673, py: 5365, size: 44, description: "" },
-  { name: "", px: 711, py: 5436, size: 44, description: "" },
-  { name: "", px: 2828, py: 5730, size: 44, description: "" },
-  { name: "", px: 6237, py: 5827, size: 44, description: "" },
-  { name: "", px: 5390, py: 5851, size: 44, description: "" },
-  { name: "", px: 5378, py: 6264, size: 44, description: "" },
-  { name: "", px: 7485, py: 6282, size: 44, description: "" },
-  { name: "", px: 6236, py: 6360, size: 44, description: "" },
-  { name: "", px: 2001, py: 6457, size: 34, dotSize: 14, ringSize: 26, description: "" },
-  { name: "", px: 4736, py: 6720, size: 44, description: "" },
-  { name: "", px: 2985, py: 6973, size: 44, description: "" }
-];
+  { pointOriginal: 1, name: "Île de Nowel", px: 4179, py: 594, size: 44, description: "" },
+  { pointOriginal: 3, name: "Archipel de Valonia", px: 9026, py: 924, size: 44, description: "" },
+  { pointOriginal: 4, name: "Château de Harebourg", px: 2217, py: 948, size: 44, description: "" },
+  { pointOriginal: 5, name: "Saharach", px: 7418, py: 1729, size: 44, description: "" },
+  { pointOriginal: 6, name: "Bonta", px: 4257, py: 2143, size: 44, description: "" },
+  { pointOriginal: 7, name: "Atoll des Possédés", px: 9398, py: 2221, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 8, name: "Cimetière de Grobe", px: 9032, py: 2832, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 9, name: "La Bourgade", px: 1142, py: 2886, size: 44, description: "" },
+  { pointOriginal: 10, name: "Foire du Trool", px: 5781, py: 3012, size: 44, description: "" },
+  { pointOriginal: 11, name: "Tainéla", px: 6549, py: 3396, size: 44, description: "" },
+  { pointOriginal: 12, name: "Kolizéum", px: 5642, py: 3486, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 13, name: "Pandala", px: 7965, py: 3499, size: 44, description: "" },
+  { pointOriginal: 14, name: "Île de Rok", px: 9206, py: 3901, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 15, name: "Astrub", px: 6813, py: 4080, size: 44, description: "" },
+  { pointOriginal: 16, name: "Île du Minotoror", px: 3608, py: 4099, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 17, name: "Île des Wabbits", px: 8192, py: 4596, size: 44, description: "" },
+  { pointOriginal: 18, name: "Château D'Amakna", px: 6801, py: 4669, size: 44, description: "" },
+  { pointOriginal: 19, name: "Port de Madrestam", px: 7178, py: 4849, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 21, name: "Village des Éleveurs", px: 5355, py: 5071, size: 44, description: "" },
+  { pointOriginal: 22, name: "Île de Moon", px: 8673, py: 5365, size: 44, description: "" },
+  { pointOriginal: 23, name: "Crocuzko", px: 711, py: 5436, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 24, name: "Île d'Otomaï", px: 2828, py: 5730, size: 44, description: "" },
+  { pointOriginal: 25, name: "Dédale du Dark Vlad", px: 6237, py: 5827, size: 44, description: "" },
+  { pointOriginal: 26, name: "Gisgoul", px: 5390, py: 5851, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 28, name: "Sufokia", px: 7485, py: 6282, size: 44, description: "" },
+  { pointOriginal: 29, name: "Village des Dragoeufs", px: 6236, py: 6360, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 30, name: "Nimotopia", px: 2001, py: 6457, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 31, name: "Brâkmar", px: 4736, py: 6720, size: 44, description: "" },
+  { pointOriginal: 32, name: "Archipel de Vulkania", px: 2985, py: 6973, size: 44, description: "" },
+  // Points ajoutes depuis t1.png. Ils utilisent le petit format comme l'Ile du Minotoror.
+  { pointOriginal: 33, name: "Épaves Silencieuses", px: 3231, py: 888, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 34, name: "Roc des Salbatroces", px: 701, py: 2024, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 35, name: "Village des Kanigs", px: 6503, py: 2254, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 36, name: "Sakaï", px: 2856, py: 2873, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 37, name: "Île de Kartonpath", px: 8001, py: 5309, size: 34, dotSize: 14, ringSize: 26, description: "" },
+  { pointOriginal: 38, name: "Temple des Alliances", px: 7395, py: 6704, size: 34, dotSize: 14, ringSize: 26, description: "" }
+].map(zone => ({
+  ...zone,
+  image: "a venir.jpg",
+  description: "..."
+}));
 
 // Configuration des cartes disponibles dans le menu "Cartes interactives".
 // Ajouter une nouvelle carte revient a declarer son image, ses dimensions natives et sa liste de zones.
@@ -83,6 +95,7 @@ const mapConfigs = {
   wakfu: {
     label: "L'ere du Wakfu",
     image: "wakfu_world_map.png",
+    zoneImageFolder: "wakfu/",
     fit: "cover",
     maxScale: 2.75,
     width: 1672,
@@ -93,6 +106,9 @@ const mapConfigs = {
   dofus: {
     label: "L'ere des Dofus",
     image: "map_complete_dofus_hd.jpg",
+    zoneImageFolder: "dofus/",
+    // Cette image reste a la racine du dossier carte interactive, contrairement aux futures images de zones.
+    placeholderImage: "a venir.jpg",
     version: "v=20260502-hd",
     fit: "contain",
     renderAtNativeSize: true,
@@ -257,7 +273,9 @@ function openSlidePanel(zone) {
   slidePanelTitle.textContent = zone.name || '';
   slidePanelText.textContent  = zone.description || '';
   if (zone.image) {
-    slidePanelImg.src = mapAssetPath + zone.image;
+    // Si c'est l'image d'attente, on la prend a la racine. Sinon on utilise le dossier de la carte courante.
+    const imageFolder = zone.image === currentMap.placeholderImage ? '' : (currentMap.zoneImageFolder || '');
+    slidePanelImg.src = mapAssetPath + imageFolder + zone.image;
     slidePanelImg.alt = zone.name;
     slidePanelImgWrap.style.display = 'block';
   } else {
