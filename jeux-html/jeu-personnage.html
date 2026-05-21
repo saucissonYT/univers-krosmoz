@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeu personnage | Univers Krosmoz</title>
+<!-- SEO univers-krosmoz:start -->
+<meta name="description" content="Choisissez vos réactions dans le Krosmoz et découvrez le personnage que vous incarnez le plus.">
+<link rel="canonical" href="https://univers-krosmoz.fr/jeux-html/jeu-personnage.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Univers Krosmoz">
+<meta property="og:title" content="Jeu personnage | Univers Krosmoz">
+<meta property="og:description" content="Découvrez le personnage du Krosmoz que vous incarnez le plus.">
+<meta property="og:url" content="https://univers-krosmoz.fr/jeux-html/jeu-personnage.html">
+<meta property="og:image" content="https://univers-krosmoz.fr/assets/logo_krosmoz.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jeu personnage | Univers Krosmoz">
+<meta name="twitter:description" content="Découvrez le personnage du Krosmoz que vous incarnez le plus.">
+<meta name="twitter:image" content="https://univers-krosmoz.fr/assets/logo_krosmoz.webp">
+<!-- SEO univers-krosmoz:end -->
+<link rel="icon" type="image/webp" href="../assets/logo_krosmoz.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../jeux-css/test-personnalite.css">
+<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"WebPage","name":"Jeu personnage | Univers Krosmoz","headline":"Jeu personnage | Univers Krosmoz","description":"Découvrez le personnage du Krosmoz que vous incarnez le plus.","url":"https://univers-krosmoz.fr/jeux-html/jeu-personnage.html","image":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENCHQ15LHS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ENCHQ15LHS');
+</script>
+</head>
+<body class="personality-page">
+<header>
+  <div class="site-topbar">
+    <a class="brand" href="../index.html" aria-label="Univers Krosmoz">
+      <img src="../assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+    <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Afficher le menu"><span>Menu</span><span class="mobile-nav-icon" aria-hidden="true"></span></button>
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a class="nav-link" href="../histoire-html/histoire-krosmoz.html">Histoire</a>
+      <a class="nav-link" href="../personnages-html/personnages.html">Personnages</a>
+      <div class="nav-item nav-dropdown">
+        <button class="nav-link" type="button">Chronologie <span class="nav-caret">▾</span></button>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="../chronologies-html/chronologie-historique.html">Histoire</a>
+          <a class="nav-menu-item" href="../chronologies-html/chronologie-oeuvres.html">Œuvre</a>
+        </div>
+      </div>
+      <a class="nav-link" href="../regions-html/regions.html">Régions</a>
+      <a class="nav-link" href="../lexique-html/lexique.html">Lexique</a>
+      <a class="nav-link active" href="jeux.html">Jeux</a>
+      <div class="nav-item nav-dropdown">
+        <button class="nav-link" type="button">Médias <span class="nav-caret">▾</span></button>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="../media-html/arbre-affinites.html">Arbre des affinités</a>
+          </div>
+      </div>
+      <a class="nav-link" href="../contact-html/contact.html">Contactez-nous</a>
+    </nav>
+  </div>
+</header>
+
+<main class="personality-main">
+  <section class="personality-hero" aria-labelledby="personality-title">
+    <p class="personality-kicker">Jeu du Krosmoz</p>
+    <h1 id="personality-title">Quel personnage incarnez-vous ?</h1>
+    <p>Répondez instinctivement. Le jeu observe vos choix, vos failles, votre rapport au pouvoir et votre manière d'affronter le chaos pour vous rapprocher d'un personnage du Krosmoz.</p>
+    <button class="personality-start" type="button" data-start-test>Commencer</button>
+  </section>
+
+  <section class="quiz-shell" data-quiz hidden aria-live="polite">
+    <div class="quiz-progress" aria-hidden="true">
+      <span data-progress-bar></span>
+    </div>
+    <div class="quiz-topline">
+      <p data-question-count>Question 1</p>
+      <div class="quiz-controls">
+        <button class="quiz-ghost" type="button" data-previous-question disabled>Retour</button>
+        <button class="quiz-ghost" type="button" data-reset-test>Recommencer</button>
+      </div>
+    </div>
+    <article class="question-card">
+      <p class="question-kicker" data-question-kicker></p>
+      <h2 data-question-title></h2>
+      <div class="answer-grid" data-answer-grid></div>
+    </article>
+  </section>
+
+  <section class="result-shell" data-result hidden>
+    <div class="result-card">
+      <div class="result-media">
+        <img data-result-image src="../assets/logo_krosmoz.webp" alt="">
+      </div>
+      <div class="result-copy">
+        <p class="personality-kicker">Votre reflet dans le Krosmoz</p>
+        <h2 data-result-name></h2>
+        <p class="result-archetype" data-result-archetype></p>
+        <p data-result-text></p>
+        <div class="result-traits" data-result-traits></div>
+        <section class="near-results" aria-label="Personnages proches">
+          <h3>Les personnages dont tu es le plus proche :</h3>
+          <div data-near-results></div>
+        </section>
+        <div class="result-actions">
+          <a data-result-link href="../personnages-html/personnages.html">Lire sa biographie</a>
+          <button type="button" data-reset-test>Refaire le test</button>
+        </div>
+      </div>
+    </div>
+    <aside class="share-window" aria-label="Carte de partage du résultat">
+      <div class="share-preview">
+        <div class="share-preview-copy">
+          <span>Mon reflet dans le Krosmoz</span>
+          <strong data-share-name></strong>
+          <em data-share-archetype></em>
+          <p>Et vous, quel personnage du Krosmoz êtes-vous ?</p>
+        </div>
+        <img data-share-image src="../assets/logo_krosmoz.webp" alt="">
+      </div>
+      <div class="share-tools">
+        <button class="share-button" type="button" data-open-share-modal>Partager mon résultat</button>
+        <button class="share-copy" type="button" data-copy-share-link>Copier le lien</button>
+        <p data-share-status aria-live="polite"></p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<div class="share-modal" data-share-modal hidden>
+  <div class="share-modal-backdrop" data-close-share-modal></div>
+  <section class="share-modal-panel" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+    <button class="share-modal-close" type="button" data-close-share-modal aria-label="Fermer">×</button>
+    <p class="personality-kicker">Fiche de résultat</p>
+    <h2 id="share-modal-title">Partager mon résultat</h2>
+    <div class="share-card-frame">
+      <img data-generated-share-image src="../assets/logo_krosmoz.webp" alt="Fiche de résultat générée">
+    </div>
+    <div class="share-modal-actions">
+      <button type="button" data-share-x>Partager sur X</button>
+      <button type="button" data-download-share-card>Télécharger l’image</button>
+    </div>
+    <p class="share-modal-note" data-share-modal-status aria-live="polite"></p>
+  </section>
+</div>
+
+<script src="../scripts/test-personnalite.js"></script>
+<script src="../scripts/legal-notice.js"></script>
+<!-- Site développé par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Recherche et édition : Zaki & B. -->
+</body>
+</html>

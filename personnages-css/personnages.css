@@ -1,0 +1,3755 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
+/* Page personnage : structure aligne sur la DA globale du site */
+/* Tokens partages entre fiches personnages, index et cartes de navigation. */
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: #7a5e25;
+  --wakfu-teal: #2ecfb0;
+  --dark-bg: #080810;
+  --card-bg: #0d0d1a;
+  --card-border: #1e1e3a;
+  --text-main: #e8e0d0;
+  --text-muted: #8a7f6e;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+/* Base de page: le fond fixe reste decoratif et le contenu garde le scroll normal. */
+body {
+  background: var(--dark-bg);
+  color: var(--text-main);
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 8%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 55%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(2px 2px at 18% 50%, rgba(201,168,76,0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 70% 10%, rgba(46,207,176,0.3) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: -20%;
+  left: -10%;
+  width: 70%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(46,207,176,0.045) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+/* En-tete partage avec les pages d'accueil, de cartes et de chronologie. */
+header {
+  position: relative;
+  z-index: 20;
+  padding: 0;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+.site-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  background: rgba(7, 7, 12, 0.94);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: #f6f2e7;
+  text-decoration: none;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.brand img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
+.brand span { line-height: 1; }
+.top-nav { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
+.nav-item { position: relative; }
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 0.85rem;
+  border: 0;
+  background: transparent;
+  color: #f3efe4;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.38rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f3d779 18%, #fff3bd 50%, #f3d779 82%, transparent);
+  box-shadow: 0 0 14px rgba(232,201,122,0.36);
+  opacity: 0;
+  transform: scaleX(0.24);
+  transform-origin: center;
+  transition: opacity 0.22s ease, transform 0.26s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-item:focus-within > .nav-link::after,
+.nav-link.active::after,
+.nav-link.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav-link.active,
+.nav-link.is-active {
+  text-shadow: 0 0 18px rgba(232,201,122,0.18);
+}
+.nav-link:visited, .nav-link:hover, .nav-link:focus-visible, .nav-link:active { text-decoration: none; }
+.nav-link:hover, .nav-item:focus-within > .nav-link, .nav-link.active { color: var(--gold-light); }
+.nav-caret { font-size: 0.8em; opacity: 0.8; }
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  min-width: 240px;
+  padding: 0.45rem;
+  border: 1px solid rgba(201,168,76,0.16);
+  background: rgba(12, 12, 18, 0.97);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+.nav-dropdown:hover .nav-menu, .nav-dropdown:focus-within .nav-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-menu-item {
+  width: 100%;
+  display: block;
+  padding: 0.7rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--text-main);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.nav-menu-item:hover, .nav-menu-item.active { color: var(--gold-light); }
+/* Hero personnage: image et titre restent separes pour garder un recadrage propre en mobile. */
+.character-hero {
+  position: relative;
+  z-index: 1;
+  min-height: 78vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(201,168,76,0.16);
+  background: #080810;
+}
+.character-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/personnages/TRISTEPIN.webp');
+  background-size: cover;
+  background-position: center bottom;
+  transform: scale(1.02);
+  filter: saturate(0.98) contrast(1.04);
+}
+body.character-evangelyne .character-hero-bg {
+  background-image: url('../assets/personnages/EVA.webp');
+  background-position: center center;
+}
+body.character-ruel .character-hero-bg {
+  background-image: url('../assets/personnages/RUEL.webp');
+  background-position: center center;
+}
+body.character-alibert .character-hero-bg {
+  background-image: url('../assets/personnages/ALIBERT.webp');
+  background-position: 58% 22%;
+}
+body.character-amalia .character-hero-bg {
+  background-image: url('../assets/personnages/AMALIA.webp');
+  background-position: center center;
+}
+body.character-roi-sheran-sharm .character-hero-bg {
+  background-image: url('../assets/personnages/ROI_SHERAN_SHARM.webp');
+  background-position: 58% center;
+}
+body.character-roi-osamodas .character-hero-bg {
+  background-image: url('../assets/personnages/ROI OSAMODAS.webp');
+  background-position: 38% center;
+}
+body.character-grande-deesse .character-hero-bg {
+  background-image: url('../assets/personnages/GRANDE DEESSE.webp');
+  background-position: 50% center;
+}
+body.character-armant .character-hero-bg {
+  background-image: url('../assets/personnages/ARMANT.webp');
+  background-position: center center;
+}
+body.character-yugo .character-hero-bg {
+  background-image: url('../assets/personnages/YUGO.webp');
+  background-position: 36% 42%;
+}
+body.character-adamai .character-hero-bg {
+  background-image: url('../assets/personnages/ADAMAI.webp');
+  background-position: 28% center;
+}
+body.character-grougaloragran .character-hero-bg {
+  background-image: url('../assets/personnages/GROUGALORAGRAN.webp');
+  background-position: 35% 26%;
+}
+body.character-chibi .character-hero-bg {
+  background-image: url('../assets/personnages/CHIBI.webp');
+  background-position: 52% center;
+}
+body.character-nox .character-hero-bg {
+  background-image: url('../assets/personnages/NOX.webp');
+  background-position: 52% center;
+}
+body.character-qilby .character-hero-bg {
+  background-image: url('../assets/personnages/QILBY.webp');
+  background-position: 50% center;
+}
+body.character-oropo .character-hero-bg {
+  background-image: url('../assets/personnages/OROPO.webp');
+  background-position: 36% center;
+  transform: scale(1);
+}
+body.character-agard .character-hero-bg {
+  background-image: url('../assets/personnages/AGARD.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-atone .character-hero-bg {
+  background-image: url('../assets/personnages/ATONE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-biste .character-hero-bg {
+  background-image: url('../assets/personnages/BISTE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-bouillon .character-hero-bg {
+  background-image: url('../assets/personnages/BOUILLON.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-cadence .character-hero-bg {
+  background-image: url('../assets/personnages/CADENCE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-chaille .character-hero-bg {
+  background-image: url('../assets/personnages/CHAILLE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-desperia .character-hero-bg {
+  background-image: url('../assets/personnages/DESPERIA.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-mouche .character-hero-bg {
+  background-image: url('../assets/personnages/MOUCHE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-ripulse .character-hero-bg {
+  background-image: url('../assets/personnages/RIPULSE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-sidaire .character-hero-bg {
+  background-image: url('../assets/personnages/SIDAIRE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-flopin .character-hero-bg {
+  background-image: url('../assets/personnages/FLOPIN.webp');
+  background-position: 58% center;
+  transform: scale(1);
+}
+body.character-elely .character-hero-bg {
+  background-image: url('../assets/personnages/ELELY.webp');
+  background-position: 45% center;
+}
+body.character-pin .character-hero-bg {
+  background-image: url('../assets/personnages/PIN.webp');
+  background-position: center center;
+}
+body.character-goultard .character-hero-bg {
+  background-image: url('../assets/personnages/GOULTARD.webp');
+  background-position: center 18%;
+}
+body.character-rubilax .character-hero-bg {
+  background-image: url('../assets/personnages/RUBILAX.webp');
+  background-position: 68% 18%;
+}
+body.character-rushu .character-hero-bg {
+  background-image: url('../assets/personnages/RUSHU.webp');
+  background-position: 58% center;
+}
+body.character-djaul .character-hero-bg {
+  background-image: url('../assets/personnages/DJAUL.webp');
+  background-position: 50% center;
+}
+body.character-madagaskan .character-hero-bg {
+  background-image: url('../assets/personnages/MADAGASKAN.webp');
+  background-position: 42% center;
+}
+body.character-deesse-cra .character-hero-bg {
+  background-image: url('../assets/personnages/DEESSE CRA BANNIERE.webp');
+  background-position: 40% center;
+}
+body.character-cleophee .character-hero-bg {
+  background-image: url('../assets/personnages/CLEOPHEE.webp');
+  background-position: 38% center;
+}
+body.character-tristepin .character-hero-bg {
+  background-position: center 42%;
+}
+body.character-dieu-iop .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU IOP BANNIERE.webp');
+  background-position: 50% center;
+}
+/* Fiches des dragons primordiaux: chaque classe body pilote son visuel hero. */
+body.character-ignemikhal .character-hero-bg {
+  background-image: url('../assets/personnages/IGNEMIKHAL.webp');
+  background-position: 25% center;
+}
+body.character-aguabrial .character-hero-bg {
+  background-image: url('../assets/personnages/AGUABRIAL.webp');
+  background-position: 75% center;
+}
+body.character-grougalorasalar .character-hero-bg {
+  background-image: url('../assets/personnages/GROUGALORASALAR.webp');
+  background-position: 16% center;
+}
+body.character-dardondakal .character-hero-bg {
+  background-image: url('../assets/personnages/DARDONDAKAL.webp');
+  background-position: 70% center;
+}
+body.character-dathura .character-hero-bg {
+  background-image: url('../assets/personnages/DATHURA.webp');
+  background-position: 70% center;
+}
+body.character-ogrest .character-hero-bg {
+  background-image: url('../assets/personnages/OGREST.webp');
+  background-position: center 28%;
+}
+body.character-otomai .character-hero-bg {
+  background-image: url('../assets/personnages/OTOMAI.webp');
+  background-position: 62% 68%;
+}
+body.character-toross .character-hero-bg {
+  background-image: url('../assets/personnages/TOROSS.webp');
+  background-position: 62% 24%;
+}
+body.character-terrakourial .character-hero-bg {
+  background-image: url('../assets/personnages/TERRAKOURIAL.webp');
+  background-position: 62% center;
+}
+body.character-aerafal .character-hero-bg {
+  background-image: url('../assets/personnages/AERAFAL.webp');
+  background-position: 12% center;
+}
+body.character-kerubim .character-hero-bg {
+  background-image: url('../assets/personnages/KERUBIM.webp');
+  background-position: 70% center;
+}
+body.character-comte-harebourg .character-hero-bg {
+  background-image: url('../assets/personnages/COMTE HAREBOURG.webp');
+  background-position: 56% center;
+}
+body.character-phaeris .character-hero-bg {
+  background-image: url('../assets/personnages/PHAERIS.webp');
+  background-position: 50% center;
+}
+body.character-mina .character-hero-bg {
+  background-image: url('../assets/personnages/MINA.webp');
+  background-position: 54% center;
+}
+body.character-bellaphone .character-hero-bg {
+  background-image: url('../assets/personnages/BELLAPHONE.webp');
+  background-position: 50% center;
+}
+body.character-glip .character-hero-bg {
+  background-image: url('../assets/personnages/GLIP.webp');
+  background-position: 50% center;
+}
+body.character-coqueline .character-hero-bg {
+  background-image: url('../assets/personnages/COQUELINE.webp');
+  background-position: 50% center;
+}
+body.character-kali .character-hero-bg {
+  background-image: url('../assets/personnages/KALI.webp');
+  background-position: 50% center;
+}
+body.character-shinonome .character-hero-bg {
+  background-image: url('../assets/personnages/SHINONOME.webp');
+  background-position: 50% center;
+}
+body.character-dark-vlad .character-hero-bg {
+  background-image: url('../assets/personnages/DARK VLAD.webp');
+  background-position: 50% center;
+}
+body.character-echo .character-hero-bg {
+  background-image: url('../assets/personnages/ECHO.webp');
+  background-position: 50% center;
+}
+body.character-bump .character-hero-bg {
+  background-image: url('../assets/personnages/BUMP.webp');
+  background-position: 50% top;
+}
+body.character-orgonax .character-hero-bg {
+  background-image: url('../assets/personnages/ORGONAX.webp');
+  background-position: 50% top;
+}
+body.character-sipho .character-hero-bg {
+  background-image: url('../assets/personnages/SIPHO.webp');
+  background-position: 50% center;
+}
+body.character-ush-galesh .character-hero-bg {
+  background-image: url('../assets/personnages/USH GALESH.webp');
+  background-position: 60% 42%;
+  background-size: 126% auto;
+  transform: scale(1);
+}
+body.character-maskemane .character-hero-bg {
+  background-image: url('../assets/personnages/MASKEMANE.webp');
+  background-position: 58% center;
+}
+body.character-balthazar .character-hero-bg {
+  background-image: url('../assets/personnages/BALTHAZAR.webp');
+  background-position: 50% center;
+}
+body.character-nimoda .character-hero-bg {
+  background-image: url('../assets/personnages/NIMODA.webp');
+  background-position: 50% center;
+}
+body.character-yrehn .character-hero-bg {
+  background-image: url('../assets/personnages/YREHN.webp');
+  background-position: 52% center;
+}
+body.character-karn .character-hero-bg {
+  background-image: url('../assets/personnages/KARN.webp');
+  background-position: 50% 68%;
+}
+body.character-elante .character-hero-bg {
+  background-image: url('../assets/personnages/ELANTE.webp');
+  background-position: 72% center;
+}
+body.character-reines-de-bonta .character-hero-bg {
+  background-image: url('../assets/personnages/REINES DE BONTA.webp');
+  background-position: 32% center;
+}
+body.character-rotalstrom .character-hero-bg {
+  background-image: url('../assets/personnages/ROTALSTROM.webp');
+  background-position: 50% center;
+}
+body.character-lokus .character-hero-bg {
+  background-image: url('../assets/personnages/LOKUS.webp');
+  background-position: 50% center;
+}
+body.character-bakara-jurgen .character-hero-bg {
+  background-image: url('../assets/personnages/BAKARA JURGEN.webp');
+  background-position: 50% center;
+}
+body.character-jahash-jurgen .character-hero-bg {
+  background-image: url('../assets/personnages/JAHASH JURGEN.webp');
+  background-position: 50% center;
+}
+body.character-julith-abigor .character-hero-bg {
+  background-image: url('../assets/personnages/JULITH ABIGOR.webp');
+  background-position: 48% center;
+}
+body.character-lilotte .character-hero-bg {
+  background-image: url('../assets/personnages/LILOTTE.webp');
+  background-position: 50% center;
+}
+body.character-khan-karkass .character-hero-bg {
+  background-image: url('../assets/personnages/KHAN KARKASS.webp');
+  background-position: 44% center;
+}
+body.character-luis .character-hero-bg {
+  background-image: url('../assets/personnages/LUIS.webp');
+  background-position: 50% center;
+}
+body.character-atcham .character-hero-bg {
+  background-image: url('../assets/personnages/ATCHAM.webp');
+  background-position: 34% center;
+}
+body.character-arpagone .character-hero-bg {
+  background-image: url('../assets/personnages/ARPAGONE.webp');
+  background-position: 28% center;
+}
+body.character-joris .character-hero-bg {
+  background-image: url('../assets/personnages/JORIS.webp');
+  background-position: 58% bottom;
+}
+body.character-gruffon .character-hero-bg {
+  background-image: url('../assets/personnages/GRUFFON.webp');
+  background-position: 60% center;
+  background-size: 92% auto;
+  background-repeat: no-repeat;
+  transform: scale(1);
+}
+body.character-chevalier-justice .character-hero-bg {
+  background-image: url('../assets/personnages/CHEVALIER JUSTICE.webp');
+  background-position: 34% center;
+}
+body.character-pandiego .character-hero-bg {
+  background-image: url('../assets/personnages/PANDIEGO DE LA VEGA.webp');
+  background-position: 48% 30%;
+}
+body.character-elaine-encre-noir .character-hero-bg {
+  background-image: url('../assets/personnages/ELAINE ENCRE NOIR.webp');
+  background-position: 44% center;
+  transform: scale(1);
+}
+body.character-belladone .character-hero-bg {
+  background-image: url('../assets/personnages/BELLADONE.webp');
+  background-position: 47% 34%;
+}
+body.character-lancedur .character-hero-bg {
+  background-image: url('../assets/personnages/LANCEDUR.webp');
+  background-position: 56% 34%;
+  transform: scale(1);
+}
+body.character-cire-momore .character-hero-bg {
+  background-image: url('../assets/personnages/CIRE MOMORE.webp');
+  background-position: 50% 34%;
+}
+body.character-percimol .character-hero-bg {
+  background-image: url('../assets/personnages/PERCIMOLE.webp');
+  background-position: 32% center;
+}
+body.character-nora .character-hero-bg {
+  background-image: url('../assets/personnages/NORA EFRIM.webp');
+  background-position: 66% center;
+}
+body.character-efrim .character-hero-bg {
+  background-image: url('../assets/personnages/NORA EFRIM.webp');
+  background-position: 25% center;
+}
+body.character-grand-dragon .character-hero-bg {
+  background-image: url('../assets/personnages/GRAND DRAGON.webp');
+  background-position: 78% center;
+}
+body.character-rasha .character-hero-bg {
+  background-image: url('../assets/personnages/RASHA.webp');
+  background-position: 50% center;
+}
+body.character-aurora .character-hero-bg {
+  background-image: url('../assets/personnages/AURORA.webp');
+  background-position: 50% center;
+}
+body.character-corbeau-noir .character-hero-bg {
+  background-image: url('../assets/personnages/CORBEAU NOIR.webp');
+  background-position: 50% center;
+}
+body.character-kabrok .character-hero-bg {
+  background-image: url('../assets/personnages/KABROK.webp');
+  background-position: 50% center;
+}
+body.character-miranda .character-hero-bg {
+  background-image: url('../assets/personnages/MIRANDA.webp');
+  background-position: 50% center;
+}
+body.character-kriss-la-krass .character-hero-bg {
+  background-image: url('../assets/personnages/kriss la krass.webp');
+  background-position: 50% 26%;
+}
+body.character-maude .character-hero-bg {
+  background-image: url('../assets/personnages/MAUDE.webp');
+  background-position: 50% center;
+}
+body.character-anathar .character-hero-bg {
+  background-image: url('../assets/personnages/ANATHAR.webp');
+  background-position: 50% 24%;
+  transform: scale(1);
+}
+body.character-ombrage .character-hero-bg {
+  background-image: url('../assets/personnages/OMBRAGE.webp');
+  background-position: 50% center;
+}
+body.character-vampyro .character-hero-bg {
+  background-image: url('../assets/personnages/VAMPYRO.webp');
+  background-position: 60% center;
+  transform: scale(1);
+}
+body.character-chene-mou .character-hero-bg {
+  background-image: url('../assets/personnages/CHENE MOU.webp');
+  background-position: 50% center;
+}
+body.character-prince-adale .character-hero-bg {
+  background-image: url('../assets/personnages/PRINCE ADALE.webp');
+  background-position: 58% center;
+  transform: scale(1);
+}
+body.character-les-miss-moches .character-hero-bg {
+  background-image: url('../assets/personnages/MISS MOCHE.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-xav-le-boulanger .character-hero-bg {
+  background-image: url('../assets/personnages/XAV LE BOULANGER.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-frida-mofette .character-hero-bg {
+  background-image: url('../assets/personnages/FRIDA MOFETTE.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-jiva .character-hero-bg {
+  background-image: url('../assets/personnages/JIVA.webp');
+  background-position: 50% center;
+}
+body.character-moon .character-hero-bg {
+  background-image: url('../assets/personnages/MOON.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-wa-wabbit .character-hero-bg {
+  background-image: url('../assets/personnages/WA WABBIT.webp');
+  background-position: 73% center;
+}
+body.character-igole .character-hero-bg {
+  background-image: url('../assets/personnages/IGOLE.webp');
+  background-position: 34% 62%;
+}
+body.character-remington-smisse .character-hero-bg {
+  background-image: url('../assets/personnages/REMINGTON GRANY SMISSE.webp');
+  background-position: 58% center;
+}
+body.character-grany-smisse .character-hero-bg {
+  background-image: url('../assets/personnages/REMINGTON GRANY SMISSE.webp');
+  background-position: 30% center;
+}
+body.character-dragon-cochon .character-hero-bg {
+  background-image: url('../assets/personnages/DRAGON COCHON.webp');
+  background-position: 34% center;
+  transform: scale(1);
+}
+body.character-moumoune .character-hero-bg {
+  background-image: url('../assets/personnages/MOUMOUNE.webp');
+  background-position: 50% center;
+}
+body.character-monsieur-m .character-hero-bg {
+  background-image: url('../assets/personnages/LE MMMMMMMMPORG.webp');
+  background-position: 50% center;
+}
+body.character-razortemps .character-hero-bg {
+  background-image: url('../assets/personnages/RAZORTEMPS.webp');
+  background-position: 58% center;
+  transform: scale(1);
+}
+body.character-dieu-xelor .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU XELOR.webp');
+  background-position: 50% 42%;
+}
+body.character-dieu-ecaflip .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU ECAFLIP.webp');
+  background-position: 50% 42%;
+}
+body.character-dieu-sadida .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU SADIDA.webp');
+  background-position: 50% center;
+}
+body.character-deesse-feca .character-hero-bg {
+  background-image: url('../assets/personnages/DEESSE FECA.webp');
+  background-position: 50% 42%;
+}
+body.character-dieu-sram .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU SRAM.webp');
+  background-position: 50% center;
+}
+body.character-deesse-sacrieur .character-hero-bg {
+  background-image: url('../assets/personnages/DEESSE SACRIEUR.webp');
+  background-position: 50% 34%;
+}
+body.character-dieu-enutrof .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU ENUTROF.webp');
+  background-position: 50% 42%;
+}
+body.character-deesse-panda .character-hero-bg {
+  background-image: url('../assets/personnages/DEESSE PANDA.webp');
+  background-position: 50% 34%;
+}
+body.character-deesse-eniripsa .character-hero-bg {
+  background-image: url('../assets/personnages/DEESSE ENIRIPSA.webp');
+  background-position: 50% center;
+}
+body.character-dieu-osamodas .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU OSAMODAS.webp');
+  background-position: 50% 34%;
+}
+.character-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(201,168,76,0.18), transparent 30%),
+    linear-gradient(to bottom, rgba(8,8,16,0.08) 0%, rgba(8,8,16,0.28) 42%, rgba(8,8,16,0.96) 100%),
+    linear-gradient(to right, rgba(8,8,16,0.86), transparent 28%, transparent 72%, rgba(8,8,16,0.86));
+  z-index: 1;
+}
+.character-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1280px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 8rem 0 5rem;
+  transform: translateY(14rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.character-hero-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 72px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--gold-light);
+  font-size: 0;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(232,201,122,0.3);
+  box-shadow: none;
+  transform: translateY(-50%);
+  transition: transform 0.22s ease, color 0.22s ease, text-shadow 0.22s ease, filter 0.22s ease;
+}
+.character-hero-nav:visited {
+  color: var(--gold-light);
+}
+.character-hero-nav-prev {
+  left: clamp(1rem, 3vw, 2rem);
+}
+.character-hero-nav-next {
+  right: clamp(1rem, 3vw, 2rem);
+}
+.character-hero-nav:hover,
+.character-hero-nav:focus-visible {
+  color: #fff7df;
+  text-shadow: 0 0 16px rgba(232,201,122,0.46), 0 0 26px rgba(46,207,176,0.16);
+  outline: none;
+}
+.character-hero-nav-prev:hover,
+.character-hero-nav-prev:focus-visible {
+  transform: translate(-4px, -50%) scale(1.1);
+}
+.character-hero-nav-next:hover,
+.character-hero-nav-next:focus-visible {
+  transform: translate(4px, -50%) scale(1.1);
+}
+.character-hero-nav span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: transparent;
+}
+.character-hero-nav::before,
+.character-hero-nav::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  border-right: 5px solid currentColor;
+  border-bottom: 5px solid currentColor;
+  border-radius: 2px;
+  background: transparent;
+  filter: drop-shadow(0 0 6px rgba(232,201,122,0.34));
+  pointer-events: none;
+  transition: filter 0.22s ease;
+}
+.character-hero-nav:hover::before,
+.character-hero-nav:hover::after,
+.character-hero-nav:focus-visible::before,
+.character-hero-nav:focus-visible::after {
+  filter: drop-shadow(0 0 8px rgba(255,247,223,0.46));
+}
+.character-hero-nav-prev::before {
+  left: 58%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.character-hero-nav-prev::after {
+  left: 36%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.character-hero-nav-next::before {
+  left: 42%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.character-hero-nav-next::after {
+  left: 64%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.eyebrow {
+  margin-bottom: 1rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+}
+.hero-name {
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(2.2rem, 5vw, 5.2rem);
+  line-height: 1.02;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.8), 0 0 18px rgba(201,168,76,0.16);
+}
+.hero-subtitle {
+  max-width: 980px;
+  margin-top: 1.2rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.78rem, 1.3vw, 0.98rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-shadow: 0 5px 20px rgba(0,0,0,0.9);
+}
+.hero-rule {
+  width: min(720px, 82%);
+  height: 1px;
+  margin: 1.6rem auto 0;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.84), transparent);
+  position: relative;
+}
+.hero-rule::after {
+  content: '✦';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gold-light);
+  background: rgba(8,8,16,0.82);
+  padding: 0 0.8rem;
+  font-size: 0.9rem;
+}
+body.character-adamai .hero-rule {
+  margin-top: 1.85rem;
+}
+body.character-adamai .hero-rule::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(42px, 4vw, 52px);
+  height: clamp(42px, 4vw, 52px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,207,176,0.42) 0%, rgba(46,207,176,0.18) 38%, transparent 72%);
+  filter: blur(4px);
+}
+body.character-adamai .hero-rule::after {
+  content: '';
+  width: clamp(34px, 3.2vw, 42px);
+  height: clamp(34px, 3.2vw, 42px);
+  padding: 0;
+  background: url('../assets/personnages/ELIACUBE.webp') center / contain no-repeat;
+  filter:
+    drop-shadow(0 0 10px rgba(46,207,176,0.62))
+    drop-shadow(0 0 18px rgba(46,207,176,0.26));
+}
+.hero-rule {
+  margin-top: 1.85rem;
+}
+.hero-rule::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(42px, 4vw, 52px);
+  height: clamp(42px, 4vw, 52px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,207,176,0.42) 0%, rgba(46,207,176,0.18) 38%, transparent 72%);
+  filter: blur(4px);
+}
+.hero-rule::after {
+  content: '';
+  width: clamp(34px, 3.2vw, 42px);
+  height: clamp(34px, 3.2vw, 42px);
+  padding: 0;
+  background: url('../assets/personnages/ELIACUBE.webp') center / contain no-repeat;
+  filter:
+    drop-shadow(0 0 10px rgba(46,207,176,0.62))
+    drop-shadow(0 0 18px rgba(46,207,176,0.26));
+}
+.character-main {
+  position: relative;
+  z-index: 1;
+  width: min(1320px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr) 285px;
+  gap: 2rem;
+}
+.info-panel, .related-panel {
+  border: 1px solid rgba(201,168,76,0.18);
+  background: linear-gradient(180deg, rgba(13,13,26,0.86), rgba(8,8,16,0.72));
+  box-shadow: 0 24px 60px rgba(0,0,0,0.32);
+  backdrop-filter: blur(6px);
+}
+.bio-panel {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: start;
+  padding: 0;
+}
+.section-kicker {
+  margin-bottom: 1.4rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.bio-text p {
+  margin-bottom: 1.25rem;
+  color: #d7ccba;
+  text-align: justify;
+}
+.bio-text a {
+  color: #ded2bf;
+  text-decoration: underline;
+  text-decoration-color: rgba(232,201,122,0.24);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+}
+.bio-text a:visited {
+  color: #ded2bf;
+}
+.bio-text a:hover,
+.bio-text a:focus-visible {
+  color: #f2dfad;
+  text-decoration-color: rgba(232,201,122,0.62);
+}
+.bio-text p:first-child::first-letter {
+  float: left;
+  margin: 0.15rem 0.65rem 0 0;
+  color: var(--gold);
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 4.2rem;
+  line-height: 0.82;
+}
+.back-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.back-link:hover { color: #fff7df; }
+
+body.character-overview-page .bio-text {
+  display: none;
+}
+
+body.character-overview-page .bio-panel > .back-link {
+  display: none;
+}
+
+body.character-overview-page .character-main {
+  width: min(1400px, calc(100% - clamp(2rem, 5vw, 5rem)));
+  grid-template-columns: minmax(260px, 310px) minmax(0, 780px) minmax(260px, 310px);
+  gap: 0;
+  align-items: start;
+  justify-content: center;
+}
+
+body.character-overview-page .bio-panel {
+  position: relative;
+  z-index: 4;
+  min-width: 0;
+  min-height: clamp(470px, 42vw, 560px);
+  padding: clamp(2.1rem, 3vw, 3rem) clamp(2rem, 3vw, 3.25rem) clamp(1.8rem, 2.8vw, 2.8rem);
+  border: 1px solid rgba(201,168,76,0.16);
+  background:
+    radial-gradient(circle at 50% 22%, rgba(232,201,122,0.07), transparent 34%),
+    linear-gradient(180deg, rgba(8,8,16,0.72), rgba(6,6,13,0.5));
+  box-shadow:
+    0 28px 70px rgba(0,0,0,0.28),
+    inset 0 0 0 1px rgba(255,247,223,0.025);
+  clip-path: polygon(1.25rem 0, calc(100% - 1.25rem) 0, 100% 1.25rem, 100% calc(100% - 1.25rem), calc(100% - 1.25rem) 100%, 1.25rem 100%, 0 calc(100% - 1.25rem), 0 1.25rem);
+}
+
+body.character-overview-page .bio-panel::before,
+body.character-overview-page .bio-panel::after {
+  display: none;
+}
+
+.character-overview-summary {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: clamp(0.8rem, 1.6vw, 1.4rem) 0 clamp(0.4rem, 1vw, 0.8rem);
+  text-align: center;
+}
+
+body.character-overview-page .character-overview-summary::before {
+  display: none;
+}
+
+.character-overview-kicker {
+  margin: 0 0 0.85rem;
+  color: rgba(232, 201, 122, 0.84);
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.character-overview-summary h2 {
+  margin: 0;
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.75rem, 3.8vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.72);
+}
+
+.character-overview-role {
+  margin: 1rem 0 0;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.8rem, 1.2vw, 0.98rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.character-overview-copy {
+  max-width: 720px;
+  margin: 1.6rem auto 0;
+  color: #d7ccba;
+  font-size: clamp(1.05rem, 1.45vw, 1.24rem);
+  line-height: 1.75;
+}
+
+.character-biography-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 1.9rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(232, 201, 122, 0.58);
+  color: #fff4d6;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background:
+    linear-gradient(90deg, rgba(201, 168, 76, 0.12), rgba(46, 207, 176, 0.08)),
+    rgba(8, 8, 16, 0.54);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.26);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.character-biography-link:hover,
+.character-biography-link:focus-visible {
+  border-color: rgba(255, 239, 178, 0.92);
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(201, 168, 76, 0.2), rgba(46, 207, 176, 0.12)),
+    rgba(8, 8, 16, 0.72);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+body.character-biography-page .character-hero {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  border-bottom: 0;
+}
+
+body.character-biography-page .character-hero-bg {
+  opacity: var(--character-bio-image-opacity, 1);
+}
+
+body.character-biography-page .character-hero-nav {
+  display: none;
+}
+
+body.character-biography-page .character-hero-content {
+  opacity: var(--character-bio-content-opacity, 1);
+  transform: translateY(clamp(5.5rem, 15vh, 8.5rem));
+}
+
+body.character-biography-page .hero-rule::before {
+  z-index: 2;
+}
+
+body.character-biography-page .hero-rule::after {
+  z-index: 3;
+}
+
+body.character-biography-page .hero-rule .bio-scroll-indicator {
+  position: absolute;
+  left: 50%;
+  top: clamp(2.8rem, 7vh, 4.6rem);
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+  color: rgba(232, 201, 122, 0.78);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.9);
+  transform: translateX(-50%);
+}
+
+body.character-biography-page .hero-rule .bio-scroll-indicator::after {
+  content: '⌄\A⌄';
+  white-space: pre;
+  color: rgba(232, 201, 122, 0.72);
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 0.45;
+  letter-spacing: 0;
+  text-shadow: 0 0 12px rgba(232, 201, 122, 0.18);
+}
+
+body.character-biography-page .character-hero::before {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(201, 168, 76, 0.16), transparent 28%),
+    linear-gradient(180deg, rgba(8, 8, 16, 0.08) 0%, rgba(8, 8, 16, 0.18) 42%, rgba(8, 8, 16, 0.54) 70%, rgba(8, 8, 16, 0.96) 94%, #080810 100%),
+    linear-gradient(90deg, rgba(8, 8, 16, 0.9), transparent 30%, transparent 70%, rgba(8, 8, 16, 0.9));
+}
+
+body.character-biography-page .character-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: var(--character-bio-fade, 0);
+  background:
+    linear-gradient(180deg, rgba(8, 8, 16, 0.82), #080810 58%, #080810 100%),
+    #080810;
+}
+
+body.character-biography-page::before,
+body.character-biography-page::after {
+  background: #080810;
+}
+
+body.character-biography-page .character-main {
+  position: relative;
+  z-index: 4;
+  display: block;
+  width: min(1180px, calc(100% - clamp(2rem, 8vw, 7rem)));
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: clamp(13rem, 31vh, 20rem) 0 6rem;
+  background: #080810;
+}
+
+body.character-biography-page .bio-panel {
+  position: relative;
+  z-index: 1;
+  width: min(1040px, 100%);
+  margin: 0 auto;
+}
+
+body.character-biography-page .character-main::before {
+  content: '';
+  position: absolute;
+  top: clamp(3rem, 7vh, 5rem);
+  left: 50%;
+  width: 1px;
+  height: clamp(9rem, 22vh, 15rem);
+  background: linear-gradient(180deg, transparent, rgba(232, 201, 122, 0.48), rgba(46, 207, 176, 0.22), transparent);
+  box-shadow: 0 0 22px rgba(46, 207, 176, 0.18);
+  transform: translateX(-50%);
+}
+
+body.character-biography-page .character-overview-summary,
+body.character-biography-page .info-panel,
+body.character-biography-page .character-affinity-summary {
+  display: none;
+}
+
+body.character-biography-page .bio-text {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+body.character-biography-page .bio-text p {
+  max-width: 1040px;
+  margin: 0 auto clamp(1.45rem, 2.4vw, 2rem);
+  color: #e3d8c7;
+  font-size: clamp(1.08rem, 1.35vw, 1.34rem);
+  line-height: 1.82;
+  text-align: center;
+}
+
+body.character-biography-page .bio-text p:first-child::first-letter {
+  float: none;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+}
+
+body.character-biography-page .bio-panel > .back-link {
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+
+body.character-biography-page .related-panel {
+  --related-avatar-size: clamp(124px, 13vw, 158px);
+  --related-hover-size: calc(var(--related-avatar-size) + clamp(24px, 3vw, 38px));
+  position: relative;
+  left: 50%;
+  width: min(1280px, calc(100vw - clamp(2rem, 7vw, 6rem)));
+  margin: clamp(4.5rem, 7vw, 6rem) 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  transform: translateX(-50%);
+}
+
+body.character-biography-page .related-title {
+  display: none;
+}
+
+body.character-biography-page .related-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: clamp(1.6rem, 4vw, 4rem);
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+body.character-biography-page .related-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1.35rem;
+  width: max(var(--related-hover-size), clamp(164px, 15vw, 190px));
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #f6f2e7;
+  text-align: center;
+  text-decoration: none;
+  transition: filter 0.24s ease;
+}
+
+body.character-biography-page .related-card:hover,
+body.character-biography-page .related-card:focus-visible {
+  border-color: transparent;
+  background: transparent;
+  outline: none;
+  filter: brightness(1.08);
+}
+
+body.character-biography-page .related-card::before,
+body.character-biography-page .related-card::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+body.character-biography-page .related-card::before {
+  content: '';
+  top: calc((var(--related-avatar-size) - var(--related-hover-size)) / 2);
+  z-index: 2;
+  width: var(--related-hover-size);
+  height: var(--related-hover-size);
+  border: 1px solid rgba(201,168,76,0.56);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0,0,0,0.18), rgba(0,0,0,0.62) 64%, rgba(0,0,0,0.82) 100%);
+  box-shadow:
+    inset 0 0 0 clamp(10px, 1.2vw, 16px) rgba(8,8,16,0.52),
+    0 0 28px rgba(0,0,0,0.36);
+  transform: translateX(-50%) scale(0.9);
+}
+
+body.character-biography-page .related-card::after {
+  content: 'Explorer';
+  top: calc(var(--related-avatar-size) / 2);
+  z-index: 3;
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.92);
+  transform: translate(-50%, -50%) scale(0.94);
+}
+
+body.character-biography-page .related-card:hover::before,
+body.character-biography-page .related-card:focus-visible::before {
+  opacity: 1;
+  transform: translate(-50%, -4px) scale(1);
+}
+
+body.character-biography-page .related-card:hover::after,
+body.character-biography-page .related-card:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, calc(-50% - 4px)) scale(1);
+}
+
+body.character-biography-page .related-card img {
+  position: relative;
+  z-index: 1;
+  width: var(--related-avatar-size);
+  height: var(--related-avatar-size);
+  overflow: hidden;
+  border: 1px solid rgba(232,201,122,0.18);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  background: #05070b;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,0.42),
+    inset 0 0 0 4px rgba(8,8,16,0.78);
+  transition: border-color 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease, transform 0.24s ease;
+}
+
+body.character-biography-page .related-card:hover img,
+body.character-biography-page .related-card:focus-visible img {
+  border-color: rgba(232,201,122,0.56);
+  filter: grayscale(1) brightness(0.36) contrast(1.08);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.5),
+    0 0 28px rgba(232,201,122,0.12),
+    inset 0 0 0 4px rgba(8,8,16,0.68);
+}
+
+body.character-biography-page .related-card-copy {
+  display: grid;
+  justify-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+  padding: 0;
+}
+
+body.character-biography-page .related-card-copy strong {
+  max-width: 100%;
+  color: var(--gold);
+  font-size: clamp(0.88rem, 1.15vw, 1.06rem);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+body.character-biography-page .related-card-copy span {
+  color: rgba(255,247,223,0.82);
+  font-size: clamp(0.66rem, 0.85vw, 0.76rem);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+body.character-biography-page .related-card:nth-child(n+5) {
+  display: none;
+}
+.character-affinity-summary {
+  margin: 1.4rem 0 0;
+  padding: 1.2rem;
+  border: 1px solid rgba(201,168,76,0.26);
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at top, rgba(201,168,76,0.12), transparent 48%),
+    linear-gradient(180deg, rgba(9,9,18,0.76), rgba(5,5,10,0.58));
+  box-shadow: inset 0 0 0 1px rgba(255,247,223,0.04);
+  overflow: hidden;
+}
+.character-affinity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+}
+.character-affinity-title-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+.character-affinity-tree-icon {
+  display: inline-grid;
+  place-items: center;
+  width: clamp(64px, 7vw, 86px);
+  height: clamp(64px, 7vw, 86px);
+  flex: 0 0 auto;
+}
+.character-affinity-tree-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 10px rgba(232,201,122,0.28))
+    drop-shadow(0 7px 14px rgba(0,0,0,0.36));
+}
+.character-affinity-header h2 {
+  margin: 0;
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.25rem, 2.1vw, 1.65rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.character-affinity-tree-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 1rem auto 0;
+  min-height: 36px;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(232,201,122,0.44);
+  border-radius: 6px;
+  color: #fff4d6;
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.character-affinity-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 38px;
+  padding: 0.48rem 0.82rem;
+  border: 1px solid rgba(232,201,122,0.46);
+  border-radius: 6px;
+  background:
+    linear-gradient(180deg, rgba(232,201,122,0.14), rgba(8,8,16,0.62));
+  color: #fff4d6;
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.26), inset 0 0 0 1px rgba(255,247,223,0.05);
+  transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+.character-affinity-toggle:hover,
+.character-affinity-toggle:focus-visible {
+  color: #fff7df;
+  border-color: rgba(232,201,122,0.78);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.32), 0 0 20px rgba(232,201,122,0.12);
+  outline: none;
+}
+.character-affinity-toggle i {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.22s ease;
+}
+.character-affinity-summary.is-open .character-affinity-toggle i {
+  transform: translateY(2px) rotate(225deg);
+}
+.character-affinity-teaser {
+  margin: 0;
+  color: rgba(246,242,231,0.7);
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+}
+.character-affinity-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.35rem);
+  transition: max-height 0.42s ease, opacity 0.24s ease, transform 0.24s ease, margin-top 0.24s ease;
+}
+.character-affinity-summary.is-open .character-affinity-content {
+  max-height: 52rem;
+  margin-top: 1rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+.character-affinity-summary.is-open .character-affinity-teaser {
+  color: rgba(246,242,231,0.5);
+}
+.character-affinity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+.character-affinity-group {
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid rgba(255,247,223,0.1);
+  background: rgba(0,0,0,0.16);
+}
+.character-affinity-group h3 {
+  margin: 0 0 0.65rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.character-affinity-entry + .character-affinity-entry {
+  margin-top: 0.75rem;
+}
+.character-affinity-label,
+.character-affinity-empty {
+  margin: 0 0 0.45rem;
+  color: rgba(255,247,223,0.72);
+  font-family: 'Cinzel', serif;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.character-affinity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.character-affinity-token {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid rgba(232,201,122,0.58);
+  border-radius: 50%;
+  background: #05070b;
+  box-shadow: inset 0 0 0 3px rgba(5,5,10,0.86), 0 0 12px rgba(201,168,76,0.18);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.character-affinity-token img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.character-affinity-token:hover,
+.character-affinity-token:focus-visible {
+  transform: translateY(-2px) scale(1.05);
+  border-color: rgba(255,239,178,0.92);
+  box-shadow: inset 0 0 0 3px rgba(5,5,10,0.72), 0 0 18px rgba(232,201,122,0.34);
+  outline: none;
+}
+.related-panel {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  position: sticky;
+  top: 5.8rem;
+  padding: 1.05rem;
+}
+.related-title {
+  margin-bottom: 1rem;
+  color: #fff7df;
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.related-list {
+  display: grid;
+  gap: 0.65rem;
+}
+.related-card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 68px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(255,255,255,0.035);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.related-card:hover,
+.related-card:focus-visible {
+  border-color: rgba(232,201,122,0.48);
+  background: rgba(201,168,76,0.09);
+  outline: none;
+  transform: translateY(-2px);
+}
+.related-card img {
+  width: 54px;
+  height: 68px;
+  object-fit: cover;
+  object-position: center center;
+}
+.related-card-copy {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+  padding-right: 0.55rem;
+}
+.related-card-copy strong,
+.related-card-copy span,
+.related-more {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+}
+.related-card-copy strong {
+  overflow-wrap: anywhere;
+  color: var(--gold-light);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+}
+.related-card-copy span {
+  color: #f6f2e7;
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  line-height: 1.25;
+}
+.related-more {
+  display: inline-flex;
+  margin-top: 0.95rem;
+  color: var(--gold-light);
+  font-size: 0.62rem;
+  letter-spacing: 0.13em;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.related-more:hover { color: #fff7df; }
+.info-panel {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  position: sticky;
+  top: 5.8rem;
+  padding: 1.4rem;
+}
+.info-title {
+  margin-bottom: 1.2rem;
+  color: #fff7df;
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.info-block {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(201,168,76,0.14);
+}
+.info-label {
+  margin-bottom: 0.25rem;
+  color: var(--text-muted);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.info-value {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.characters-index {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(2.4rem, 6vw, 4.8rem) 0 6rem;
+}
+.characters-heading {
+  position: relative;
+  z-index: 20;
+  max-width: 760px;
+  margin: 0 auto clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+.characters-heading h1 {
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.9rem, 4vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 10px 32px rgba(0,0,0,0.75), 0 0 18px rgba(201,168,76,0.18);
+}
+.characters-rule {
+  width: min(520px, 76%);
+  height: 1px;
+  margin: 1.25rem auto 0;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.84), transparent);
+  position: relative;
+}
+.characters-rule::before,
+.characters-rule::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.characters-rule::before {
+  width: clamp(42px, 5vw, 58px);
+  height: clamp(34px, 4vw, 48px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46,207,176,0.34), rgba(46,207,176,0.1) 42%, transparent 72%);
+  filter: blur(1px);
+}
+.characters-rule::after {
+  width: clamp(26px, 3vw, 36px);
+  height: clamp(26px, 3vw, 36px);
+  background: url('../assets/personnages/ELIACUBE.webp') center / contain no-repeat;
+  filter:
+    drop-shadow(0 0 8px rgba(46,207,176,0.62))
+    drop-shadow(0 0 14px rgba(46,207,176,0.24));
+}
+.character-search {
+  width: 100%;
+  display: grid;
+  gap: 0.55rem;
+}
+.character-tools {
+  width: min(860px, 100%);
+  margin: 1.75rem auto 0;
+  padding: clamp(0.85rem, 2vw, 1.1rem);
+  border: 1px solid rgba(201,168,76,0.2);
+  background:
+    linear-gradient(135deg, rgba(201,168,76,0.08), transparent 34%),
+    rgba(7,7,13,0.72);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.32), inset 0 0 0 1px rgba(255,255,255,0.025);
+  backdrop-filter: blur(10px);
+}
+.character-search span,
+.character-filter span {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.character-search input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(201,168,76,0.24);
+  background: rgba(9,9,17,0.76);
+  color: #fff7df;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.24);
+}
+.character-search input::placeholder {
+  color: rgba(232,224,208,0.38);
+}
+.character-search input:focus,
+.character-filter-toggle:focus-visible {
+  border-color: rgba(232,201,122,0.62);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.28), 0 0 18px rgba(201,168,76,0.11);
+}
+.character-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.75rem;
+}
+.character-filter {
+  position: relative;
+  min-width: 0;
+}
+.character-filter-toggle {
+  width: 100%;
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.2rem 0.55rem;
+  padding: 0.62rem 0.78rem;
+  border: 1px solid rgba(201,168,76,0.24);
+  background: rgba(9,9,17,0.76);
+  color: #f3efe4;
+  font-family: 'Cinzel', serif;
+  text-align: left;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.24);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.character-filter-toggle span:first-child {
+  grid-column: 1 / -1;
+}
+.character-filter-toggle strong {
+  min-width: 0;
+  overflow: hidden;
+  color: #f6f2e7;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.character-filter-toggle .nav-caret {
+  justify-self: end;
+  color: var(--gold-light);
+  letter-spacing: 0;
+}
+.character-filter:hover .character-filter-toggle,
+.character-filter:focus-within .character-filter-toggle,
+.character-filter.is-open .character-filter-toggle {
+  border-color: rgba(232,201,122,0.56);
+  color: var(--gold-light);
+}
+.character-filter-menu {
+  position: absolute;
+  z-index: 200;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  right: 0;
+  max-height: min(360px, 52vh);
+  overflow-y: auto;
+  padding: 0.45rem;
+  border: 1px solid rgba(201,168,76,0.16);
+  background: rgba(12, 12, 18, 0.97);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(122,94,37,0.95) rgba(6,6,11,0.88);
+}
+.character-filter-menu::-webkit-scrollbar {
+  width: 10px;
+}
+.character-filter-menu::-webkit-scrollbar-track {
+  background: rgba(6,6,11,0.88);
+  border-left: 1px solid rgba(201,168,76,0.08);
+}
+.character-filter-menu::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(122,94,37,0.95), rgba(66,51,24,0.95));
+  border: 2px solid rgba(6,6,11,0.88);
+}
+.character-filter-menu::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(201,168,76,0.78), rgba(122,94,37,0.95));
+}
+.character-filter:hover .character-filter-menu,
+.character-filter:focus-within .character-filter-menu,
+.character-filter.is-open .character-filter-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.character-filter-item {
+  font-size: 0.68rem;
+}
+.characters-empty {
+  margin: 1.2rem 0 0;
+  color: rgba(246,242,231,0.72);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Grille d'index: auto-fit garde des cartes lisibles sans breakpoint supplementaire. */
+.characters-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+.chronologies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.85rem, 2vw, 1.2rem);
+}
+.chronologies-index {
+  width: min(1180px, calc(100% - 2rem));
+}
+.chronology-card {
+  min-height: clamp(420px, 44vw, 560px);
+}
+.chronology-card img {
+  object-position: center center;
+}
+/* Carte réutilisée: meme structure pour personnages, chronologies. */
+.character-card {
+  position: relative;
+  display: block;
+  min-height: clamp(360px, 37vw, 520px);
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.2);
+  background: #080810;
+  color: var(--text-main);
+  text-decoration: none;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.34);
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+.character-card[hidden] { display: none; }
+.character-card:hover,
+.character-card:focus-visible {
+  border-color: rgba(232,201,122,0.58);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.42), 0 0 24px rgba(201,168,76,0.12);
+  transform: translateY(-6px);
+  outline: none;
+}
+.character-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(0.95) contrast(1.04);
+  transform: scale(1.04);
+  transition: transform 0.34s ease, filter 0.34s ease;
+}
+.character-card[href="grand-dragon.html"] img { object-position: 78% center; }
+.character-card[href="rasha.html"] img { object-position: 50% center; }
+.character-card[href="aurora.html"] img { object-position: 50% center; }
+.character-card[href="corbeau-noir.html"] img { object-position: 50% center; }
+.character-card[href="miranda.html"] img { object-position: 50% center; }
+.character-card[href="kriss-la-krass.html"] img { object-position: center center; }
+.character-card[href="maude.html"] img { object-position: center center; }
+.character-card[href="anathar.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="ombrage.html"] img { object-position: 50% center; }
+.character-card[href="vampyro.html"] img { object-position: 60% center; transform: scale(1); }
+.character-card[href="chene-mou.html"] img { object-position: 50% center; }
+.character-card[href="prince-adale.html"] img { object-position: 58% center; transform: scale(1); }
+.character-card[href="les-miss-moches.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="xav-le-boulanger.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="jiva.html"] img { object-position: 50% center; }
+.character-card[href="moon.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="wa-wabbit.html"] img { object-position: center center; }
+.character-card[href="igole.html"] img { object-position: center center; }
+.character-card[href="remington-smisse.html"] img { object-position: 58% center; }
+.character-card[href="grany-smisse.html"] img { object-position: 30% center; }
+.character-card[href="dragon-cochon.html"] img { object-position: 34% center; transform: scale(1); }
+.character-card[href="moumoune-stroud.html"] img { object-position: 50% center; }
+.character-card[href="monsieur-m.html"] img { object-position: center center; }
+.character-card[href="razortemps.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="tristepin.html"] img { object-position: 52% center; }
+.character-card[href="dieu-iop.html"] img { object-position: 30% center; }
+.character-card[href="rubilax.html"] img { object-position: center center; }
+.character-card[href="djaul.html"] img { object-position: 47% center; transform: scale(1); }
+.character-card[href="rushu.html"] img { object-position: center center; }
+.character-card[href="goultard.html"] img { object-position: 51% center; }
+.character-card[href="deesse-cra.html"] img { object-position: 24% center; }
+.character-card[href="flopin-de-percedal.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="frida-mofette.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="madagaskan.html"] img { object-position: center center; }
+.character-card[href="cleophee.html"] img { object-position: center center; }
+.character-card[href="elely-de-percedal.html"] img {
+  object-position: 45% center;
+  transform: scale(1.04);
+}
+.character-card[href="pin-de-percedal.html"] img { object-position: 18% center; }
+.character-card[href="evangelyne.html"] img { object-position: 22% center; }
+.character-card[href="ruel-stroud.html"] img { object-position: 40% center; }
+.character-card[href="alibert.html"] img { object-position: 58% center; }
+.character-card[href="efrim.html"] img { object-position: 78% center; }
+.character-card[href="amalia-sheran-sharm.html"] img { object-position: 34% center; }
+.character-card[href="armant-sheran-sharm.html"] img { object-position: center center; }
+.character-card[href="arpagone.html"] img { object-position: 28% center; }
+.character-card[href="comte-harebourg.html"] img { object-position: 50% center; }
+.character-card[href="phaeris.html"] img { object-position: 50% center; }
+.character-card[href="bellaphone.html"] img { object-position: 50% center; }
+.character-card[href="glip.html"] img { object-position: 50% center; }
+.character-card[href="coqueline.html"] img { object-position: 50% center; }
+.character-card[href="kali.html"] img { object-position: 50% center; }
+.character-card[href="shinonome.html"] img { object-position: 50% center; }
+.character-card[href="dark-vlad.html"] img { object-position: 36% center; }
+.character-card[href="echo.html"] img { object-position: 50% center; }
+.character-card[href="bump.html"] img { object-position: 50% center; }
+.character-card[href="orgonax.html"] img { object-position: 50% center; }
+.character-card[href="sipho.html"] img { object-position: 50% center; }
+.character-card[href="ush-galesh.html"] img { object-position: 50% 18%; transform: scale(1); }
+.character-card[href="maskemane.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="balthazar.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="nimoda.html"] img { object-position: 50% center; }
+.character-card[href="yrehn.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="karn.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="elante.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="reines-de-bonta.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="prince-de-brakmar.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="rotalstrom.html"] img { object-position: 50% center; }
+.character-card[href="lokus.html"] img { object-position: 50% center; }
+.character-card[href="bakara-jurgen.html"] img { object-position: 50% center; }
+.character-card[href="jahash-jurgen.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="julith-abigor.html"] img { object-position: 50% center; transform: scale(1.02); }
+.character-card[href="lilotte.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="khan-karkass.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="bolgrot.html"] img {
+  object-position: 18% 35%;
+  transform: scale(1.78);
+  transform-origin: 18% 35%;
+}
+.character-card[href="luis.html"] img { object-position: 50% center; }
+.character-card[href="atcham-crepin.html"] img { object-position: 23% center; }
+.character-card[href="belladone.html"] img { object-position: 47% 34%; }
+.character-card[href="chevalier-justice.html"] img { object-position: 34% center; }
+.character-card[href="roi-osamodas.html"] img { object-position: 42% center; }
+.character-card[href="roi-sheran-sharm.html"] img { object-position: center center; }
+.character-card[href="grande-deesse-eliatrope.html"] img { object-position: 50% center; }
+.character-card[href="yugo.html"] img { object-position: center center; }
+.character-card[href="adamai.html"] img { object-position: 50% 24%; transform: scale(1); }
+.character-card[href="grougaloragran.html"] img { object-position: 34% center; }
+.character-card[href="gruffon.html"] img { object-position: 60% center; transform: scale(0.96); }
+.character-card[href="ignemikhal.html"] img { object-position: center center; }
+.character-card[href="pandiego-de-la-vega.html"] img { object-position: 48% center; }
+.character-card[href="aguabrial.html"] img { object-position: 75% center; }
+.character-card[href="grougalorasalar.html"] img { object-position: 16% center; }
+.character-card[href="dardondakal.html"] img { object-position: 70% center; }
+.character-card[href="dathura.html"] img { object-position: 70% center; }
+.character-card[href="ogrest.html"] img { object-position: center 16%; transform: scale(1); }
+.character-card[href="toross-mordal.html"] img { object-position: 62% center; }
+.character-card[href="terrakourial.html"] img { object-position: 62% center; }
+.character-card[href="aerafal.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="joris-jurgen.html"] img { object-position: 58% 32%; }
+.character-card[href="kerubim-crepin.html"] img { object-position: center center; }
+.character-card[href="lancedur.html"] img { object-position: 56% 34%; transform: scale(1); }
+.character-card[href="chibi.html"] img { object-position: 56% center; }
+.character-card[href="cire-momore.html"] img { object-position: 50% 34%; }
+.character-card[href="nox.html"] img {
+  object-position: center center;
+  transform: translateY(-4%) scale(1.04);
+}
+.character-card[href="nora.html"] img { object-position: 66% center; }
+.character-card[href="qilby.html"] img { object-position: 48% center; }
+.character-card[href="oropo.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="agard.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="atone.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="biste.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="bouillon.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="cadence.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="chaille.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="desperia.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="mouche.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="ripulse.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="sidaire.html"] img { object-position: center center; transform: scale(1); }
+.character-card[href="elaine-encre-noir.html"] img { object-position: 23% center; transform: scale(1); }
+.character-card[href="percimol.html"] img { object-position: center center; }
+.character-card[href="grougaloragran.html"] .character-card-copy strong {
+  font-size: clamp(0.68rem, 0.86vw, 0.84rem);
+  letter-spacing: 0.08em;
+}
+.character-card[href="chevalier-justice.html"] .character-card-copy strong,
+.character-card[href="pandiego-de-la-vega.html"] .character-card-copy strong,
+.character-card[href="elaine-encre-noir.html"] .character-card-copy strong {
+  font-size: clamp(0.66rem, 0.84vw, 0.82rem);
+  letter-spacing: 0.07em;
+}
+.character-card[href="efrim.html"] .character-card-copy span {
+  letter-spacing: 0.1em;
+}
+.character-card[href="monsieur-m.html"] .character-card-copy span {
+  letter-spacing: 0.1em;
+}
+.character-card[href="grande-deesse-eliatrope.html"] .character-card-copy strong {
+  font-size: clamp(0.68rem, 0.86vw, 0.84rem);
+  letter-spacing: 0.08em;
+}
+.character-card[href="grougalorasalar.html"] .character-card-copy strong {
+  font-size: clamp(0.66rem, 0.84vw, 0.82rem);
+  letter-spacing: 0.07em;
+}
+.character-card[href="indie-delagrandaventure.html"] .character-card-copy strong {
+  font-size: clamp(0.56rem, 0.74vw, 0.72rem);
+  letter-spacing: 0.05em;
+}
+.character-card:hover img,
+.character-card:focus-visible img {
+  filter: saturate(1.08) contrast(1.07);
+  transform: scale(1.09);
+}
+.character-card[href="elely-de-percedal.html"]:hover img,
+.character-card[href="elely-de-percedal.html"]:focus-visible img {
+  transform: scale(1.09);
+}
+.character-card[href="nox.html"]:hover img,
+.character-card[href="nox.html"]:focus-visible img {
+  transform: translateY(-4%) scale(1.09);
+}
+.character-card[href="bolgrot.html"]:hover img,
+.character-card[href="bolgrot.html"]:focus-visible img {
+  transform: scale(1.88);
+}
+.character-card-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(8,8,16,0.02) 0%, rgba(8,8,16,0.1) 44%, rgba(8,8,16,0.86) 100%),
+    linear-gradient(to right, rgba(8,8,16,0.32), transparent 35%, rgba(8,8,16,0.24));
+}
+.character-card-copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  gap: 0.3rem;
+  min-height: 96px;
+  padding: 1.1rem 0.9rem 1.2rem;
+  border-top: 1px solid rgba(201,168,76,0.28);
+  background: rgba(6,6,11,0.72);
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+.character-card-copy strong,
+.character-card-copy span {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  text-transform: uppercase;
+}
+.character-card-copy strong {
+  color: var(--gold-light);
+  font-size: clamp(0.78rem, 1.05vw, 1rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.14em;
+}
+.character-card-copy span {
+  color: #f6f2e7;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+}
+.character-mention-link,
+.character-filter-link {
+  color: var(--gold-light);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232,201,122,0.45);
+  transition: color 0.18s ease, border-color 0.18s ease, text-shadow 0.18s ease;
+}
+.character-mention-link:hover,
+.character-mention-link:focus-visible,
+.character-filter-link:hover,
+.character-filter-link:focus-visible {
+  color: #fff7df;
+  border-color: rgba(46,207,176,0.78);
+  text-shadow: 0 0 14px rgba(46,207,176,0.24);
+  outline: none;
+}
+.back-to-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 64px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--gold-light);
+  font-size: 0;
+  line-height: 1;
+  box-shadow: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.22s ease, transform 0.22s ease, color 0.22s ease, text-shadow 0.22s ease;
+  cursor: pointer;
+}
+.back-to-top span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: transparent;
+}
+.back-to-top::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 1 !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-right: 5px solid currentColor !important;
+  border-bottom: 5px solid currentColor !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  transform: translate(-50%, -82%) rotate(-135deg) !important;
+  filter: drop-shadow(0 0 6px rgba(232,201,122,0.34)) !important;
+}
+.back-to-top::after {
+  content: '' !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 1 !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-right: 5px solid currentColor !important;
+  border-bottom: 5px solid currentColor !important;
+  border-radius: 2px !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  transform: translate(-50%, -26%) rotate(-135deg) !important;
+  filter: drop-shadow(0 0 6px rgba(232,201,122,0.34)) !important;
+  transition: color 0.22s ease, filter 0.22s ease !important;
+  pointer-events: none !important;
+}
+.back-to-top:hover::after,
+.back-to-top:focus-visible::after {
+  border-color: currentColor !important;
+  opacity: 1 !important;
+  transform: translate(-50%, -26%) rotate(-135deg) !important;
+  filter: drop-shadow(0 0 8px rgba(255,247,223,0.46)) !important;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  color: #fff7df;
+  text-shadow: 0 0 16px rgba(232,201,122,0.46), 0 0 26px rgba(46,207,176,0.16);
+  transform: translateY(0) scale(1.1);
+  outline: none;
+}
+@media (max-width: 980px) {
+  .character-main { grid-template-columns: 1fr; }
+  .bio-panel,
+  .info-panel,
+  .related-panel { grid-column: auto; }
+  .bio-panel, .info-panel, .related-panel { grid-row: auto; }
+  .info-panel, .related-panel { position: static; }
+  .related-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.character-biography-page .related-card:nth-child(-n+3) { display: grid; }
+  body.character-biography-page .related-card:nth-child(n+4) { display: none; }
+  .hero-name { font-size: clamp(2rem, 8vw, 4.2rem); white-space: normal; }
+  .character-filters { grid-template-columns: 1fr; }
+  .characters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chronologies-grid { grid-template-columns: 1fr; }
+  .character-card { min-height: 430px; }
+}
+@media (max-width: 720px) {
+  .site-topbar { align-items: flex-start; flex-direction: column; gap: 0.65rem; }
+  .character-hero { min-height: 70vh; }
+  .character-hero-bg { background-position: center bottom; }
+  .related-list { grid-template-columns: 1fr; }
+  body.character-biography-page .related-card:nth-child(-n+2) { display: grid; }
+  body.character-biography-page .related-card:nth-child(n+3) { display: none; }
+  .character-hero-nav {
+    top: auto;
+    bottom: 1.2rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+    transform: none;
+  }
+  .character-hero-nav-prev:hover,
+  .character-hero-nav-prev:focus-visible {
+    transform: translateX(-3px) scale(1.08);
+  }
+  .character-hero-nav-next:hover,
+  .character-hero-nav-next:focus-visible {
+    transform: translateX(3px) scale(1.08);
+  }
+  .character-hero-content { padding: 6rem 0 3.5rem; transform: translateY(8rem); }
+  .hero-subtitle { letter-spacing: 0.1em; }
+  .bio-text p { text-align: left; }
+  .characters-index { width: min(100% - 1rem, 560px); padding-top: 2.4rem; }
+  .character-tools { padding: 0.75rem; }
+  .character-search input,
+  .character-filter-toggle strong { font-size: 0.74rem; }
+  .characters-grid { grid-template-columns: 1fr; }
+  .character-card { min-height: 390px; }
+}
+
+@media (min-width: 1680px) {
+  body.character-biography-page .related-card:nth-child(-n+5) {
+    display: grid;
+  }
+
+  body.character-biography-page .related-card:nth-child(n+6) {
+    display: none;
+  }
+}
+
+@media (min-width: 2200px) {
+  body.character-biography-page .related-card:nth-child(-n+6) {
+    display: grid;
+  }
+
+  body.character-biography-page .related-card:nth-child(n+7) {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  body.character-biography-page .related-card:nth-child(-n+1) {
+    display: grid;
+  }
+
+  body.character-biography-page .related-card:nth-child(n+2) {
+    display: none;
+  }
+}
+
+.character-main > .related-panel {
+  --related-avatar-size: clamp(118px, 12vw, 158px);
+  --related-hover-size: calc(var(--related-avatar-size) + clamp(24px, 3vw, 38px));
+  position: relative;
+  left: 50%;
+  grid-column: 1 / -1;
+  grid-row: auto;
+  width: min(1680px, calc(100vw - 2rem));
+  margin: clamp(5rem, 8vw, 7rem) 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  transform: translateX(-50%);
+}
+
+.character-main > .related-panel .related-title {
+  display: none;
+}
+
+.character-main > .related-panel .related-list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+  gap: clamp(1.6rem, 4vw, 4rem);
+  width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.character-main > .related-panel .related-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 1.35rem;
+  width: max(var(--related-hover-size), clamp(154px, 15vw, 190px));
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #f6f2e7;
+  text-align: center;
+  text-decoration: none;
+  transition: filter 0.24s ease;
+}
+
+.character-main > .related-panel .related-card:hover,
+.character-main > .related-panel .related-card:focus-visible {
+  border-color: transparent;
+  background: transparent;
+  outline: none;
+  filter: brightness(1.08);
+  transform: none;
+}
+
+.character-main > .related-panel .related-card::before,
+.character-main > .related-panel .related-card::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.character-main > .related-panel .related-card::before {
+  content: '';
+  top: calc((var(--related-avatar-size) - var(--related-hover-size)) / 2);
+  z-index: 2;
+  width: var(--related-hover-size);
+  height: var(--related-hover-size);
+  border: 1px solid rgba(201,168,76,0.56);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0,0,0,0.18), rgba(0,0,0,0.62) 64%, rgba(0,0,0,0.82) 100%);
+  box-shadow:
+    inset 0 0 0 clamp(10px, 1.2vw, 16px) rgba(8,8,16,0.52),
+    0 0 28px rgba(0,0,0,0.36);
+  transform: translateX(-50%) scale(0.9);
+}
+
+.character-main > .related-panel .related-card::after {
+  content: 'Explorer';
+  top: calc(var(--related-avatar-size) / 2);
+  z-index: 3;
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.92);
+  transform: translate(-50%, -50%) scale(0.94);
+}
+
+.character-main > .related-panel .related-card:hover::before,
+.character-main > .related-panel .related-card:focus-visible::before {
+  opacity: 1;
+  transform: translate(-50%, -4px) scale(1);
+}
+
+.character-main > .related-panel .related-card:hover::after,
+.character-main > .related-panel .related-card:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, calc(-50% - 4px)) scale(1);
+}
+
+.character-main > .related-panel .related-card img {
+  position: relative;
+  z-index: 1;
+  width: var(--related-avatar-size);
+  height: var(--related-avatar-size);
+  overflow: hidden;
+  border: 1px solid rgba(232,201,122,0.18);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  background: #05070b;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,0.42),
+    inset 0 0 0 4px rgba(8,8,16,0.78);
+  transition: border-color 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease, transform 0.24s ease;
+}
+
+.character-main > .related-panel .related-card:hover img,
+.character-main > .related-panel .related-card:focus-visible img {
+  border-color: rgba(232,201,122,0.56);
+  filter: grayscale(1) brightness(0.36) contrast(1.08);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.5),
+    0 0 28px rgba(232,201,122,0.12),
+    inset 0 0 0 4px rgba(8,8,16,0.68);
+}
+
+.character-main > .related-panel .related-card-copy {
+  display: grid;
+  justify-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+  padding: 0;
+}
+
+.character-main > .related-panel .related-card-copy strong {
+  max-width: 100%;
+  color: var(--gold);
+  font-size: clamp(0.88rem, 1.15vw, 1.06rem);
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.character-main > .related-panel .related-card-copy span {
+  color: rgba(255,247,223,0.82);
+  font-size: clamp(0.66rem, 0.85vw, 0.76rem);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.character-main > .related-panel .related-card:nth-child(n+5) {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  .character-main > .related-panel .related-card:nth-child(-n+3) {
+    display: grid;
+  }
+
+  .character-main > .related-panel .related-card:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media (min-width: 1680px) {
+  .character-main > .related-panel .related-card:nth-child(-n+5) {
+    display: grid;
+  }
+
+  .character-main > .related-panel .related-card:nth-child(n+6) {
+    display: none;
+  }
+}
+
+body.character-overview-page .character-main > .related-panel {
+  --related-avatar-size: clamp(84px, 6.4vw, 108px);
+  --related-hover-size: calc(var(--related-avatar-size) + clamp(18px, 1.8vw, 28px));
+  position: relative;
+  top: auto;
+  left: auto;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: stretch;
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  margin: 0 -1px 0 0;
+  padding: clamp(1.25rem, 1.9vw, 1.6rem) clamp(1rem, 1.6vw, 1.25rem) 1.35rem;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px 0 0 8px;
+  background:
+    linear-gradient(90deg, rgba(255,247,223,0.035), transparent 28%),
+    radial-gradient(circle at 50% 0%, rgba(232,201,122,0.08), transparent 48%),
+    linear-gradient(180deg, rgba(13,13,26,0.88), rgba(8,8,16,0.74));
+  box-shadow:
+    14px 0 30px rgba(8,8,16,0.46),
+    0 24px 60px rgba(0,0,0,0.32),
+    inset 0 0 0 1px rgba(255,247,223,0.035);
+  backdrop-filter: blur(6px);
+  clip-path: polygon(0 0, calc(100% - 1.4rem) 0, 100% 1.4rem, calc(100% - 1.4rem) 2.8rem, calc(100% - 1.4rem) calc(100% - 2.8rem), 100% calc(100% - 1.4rem), calc(100% - 1.4rem) 100%, 0 100%);
+  transform: none;
+}
+
+body.character-overview-page .character-main > .related-panel::before,
+body.character-overview-page .character-main > .related-panel::after,
+body.character-overview-page .info-panel::before,
+body.character-overview-page .info-panel::after {
+  display: none;
+}
+
+body.character-overview-page .character-main > .related-panel .related-title {
+  display: block;
+  margin: 0 0 clamp(1.1rem, 2vw, 1.45rem);
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 12px 30px rgba(0,0,0,0.54);
+}
+
+body.character-overview-page .character-main > .related-panel .related-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.35rem, 2.1vw, 1.75rem);
+  justify-items: center;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #f6f2e7;
+  text-align: center;
+  text-decoration: none;
+  transform: none;
+  transition: filter 0.24s ease;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card::before,
+body.character-overview-page .character-main > .related-panel .related-card::after {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card::before {
+  content: '';
+  top: calc((var(--related-avatar-size) - var(--related-hover-size)) / 2);
+  z-index: 2;
+  display: block;
+  width: var(--related-hover-size);
+  height: var(--related-hover-size);
+  border: 1px solid rgba(201,168,76,0.56);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0,0,0,0.18), rgba(0,0,0,0.62) 64%, rgba(0,0,0,0.82) 100%);
+  box-shadow:
+    inset 0 0 0 clamp(9px, 1vw, 14px) rgba(8,8,16,0.52),
+    0 0 28px rgba(0,0,0,0.36);
+  transform: translateX(-50%) scale(0.9);
+}
+
+body.character-overview-page .character-main > .related-panel .related-card::after {
+  content: 'Explorer';
+  top: calc(var(--related-avatar-size) / 2);
+  z-index: 3;
+  display: block;
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(0.7rem, 0.82vw, 0.88rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.92);
+  transform: translate(-50%, -50%) scale(0.94);
+}
+
+body.character-overview-page .character-main > .related-panel .related-card:hover,
+body.character-overview-page .character-main > .related-panel .related-card:focus-visible {
+  border-color: transparent;
+  background: transparent;
+  filter: brightness(1.08);
+  outline: none;
+  transform: none;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card:hover::before,
+body.character-overview-page .character-main > .related-panel .related-card:focus-visible::before {
+  opacity: 1;
+  transform: translate(-50%, -4px) scale(1);
+}
+
+body.character-overview-page .character-main > .related-panel .related-card:hover::after,
+body.character-overview-page .character-main > .related-panel .related-card:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, calc(-50% - 4px)) scale(1);
+}
+
+body.character-overview-page .character-main > .related-panel .related-card img {
+  position: relative;
+  z-index: 1;
+  width: var(--related-avatar-size);
+  height: var(--related-avatar-size);
+  overflow: hidden;
+  border: 1px solid rgba(232,201,122,0.18);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+  background: #05070b;
+  box-shadow:
+    0 18px 42px rgba(0,0,0,0.42),
+    inset 0 0 0 4px rgba(8,8,16,0.78);
+  transition: border-color 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease, transform 0.24s ease;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card:hover img,
+body.character-overview-page .character-main > .related-panel .related-card:focus-visible img {
+  border-color: rgba(232,201,122,0.56);
+  filter: grayscale(1) brightness(0.36) contrast(1.08);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.5),
+    0 0 28px rgba(232,201,122,0.12),
+    inset 0 0 0 4px rgba(8,8,16,0.68);
+}
+
+body.character-overview-page .character-main > .related-panel .related-card-copy {
+  display: grid;
+  justify-items: center;
+  gap: 0.36rem;
+  min-width: 0;
+  padding: 0;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card-copy strong {
+  max-width: 100%;
+  color: var(--gold);
+  font-size: clamp(0.7rem, 0.9vw, 0.84rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card-copy span {
+  color: rgba(255,247,223,0.82);
+  font-size: clamp(0.56rem, 0.68vw, 0.64rem);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card:nth-child(-n+5) {
+  display: grid;
+}
+
+body.character-overview-page .character-main > .related-panel .related-card:nth-child(n+4) {
+  display: none;
+}
+
+body.character-overview-page .info-panel {
+  position: relative;
+  top: auto;
+  z-index: 2;
+  align-self: stretch;
+  min-height: 0;
+  height: auto;
+  margin-left: -1px;
+  padding: clamp(1.55rem, 2vw, 2rem) clamp(1.25rem, 1.8vw, 1.65rem) clamp(1.4rem, 2vw, 1.8rem) clamp(1.7rem, 2.2vw, 2.05rem);
+  border-color: rgba(201,168,76,0.18);
+  border-radius: 0 8px 8px 0;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(232,201,122,0.08), transparent 46%),
+    linear-gradient(270deg, rgba(255,247,223,0.035), transparent 32%),
+    linear-gradient(180deg, rgba(13,13,26,0.9), rgba(8,8,16,0.72));
+  box-shadow:
+    -14px 0 30px rgba(8,8,16,0.46),
+    0 24px 60px rgba(0,0,0,0.32),
+    inset 0 0 0 1px rgba(255,247,223,0.035);
+  clip-path: polygon(1.4rem 0, 100% 0, 100% 100%, 1.4rem 100%, 0 calc(100% - 1.4rem), 1.4rem calc(100% - 2.8rem), 1.4rem 2.8rem, 0 1.4rem);
+}
+
+body.character-overview-page .info-title {
+  margin: 0 0 clamp(1.35rem, 2vw, 1.75rem);
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  text-shadow: 0 12px 30px rgba(0,0,0,0.54);
+}
+
+body.character-overview-page .info-block {
+  position: relative;
+  padding: clamp(0.95rem, 1.5vw, 1.18rem) 0;
+  border-top: 0;
+}
+
+body.character-overview-page .info-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: min(100%, 240px);
+  height: 1px;
+  background:
+    linear-gradient(90deg, rgba(201,168,76,0.38), rgba(201,168,76,0.08) 62%, transparent);
+}
+
+body.character-overview-page .info-label {
+  margin-bottom: 0.48rem;
+  color: rgba(246,242,231,0.48);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+}
+
+body.character-overview-page .info-value {
+  display: inline;
+  color: var(--gold-light);
+  font-size: clamp(0.72rem, 0.88vw, 0.82rem);
+  letter-spacing: 0.07em;
+  line-height: 1.45;
+  text-decoration: underline;
+  text-decoration-color: rgba(201,168,76,0.34);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+}
+
+body.character-overview-page .info-value a {
+  color: inherit;
+  text-decoration: inherit;
+  text-decoration-color: inherit;
+  text-underline-offset: inherit;
+}
+
+body.character-overview-page .character-cross-group-panel {
+  grid-column: 1 / -1;
+  width: min(1120px, 100%);
+  margin: clamp(4.8rem, 8vw, 7rem) auto 0;
+  text-align: center;
+}
+
+body.character-overview-page .character-cross-group-title {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.2rem);
+  margin: 0 0 clamp(1.8rem, 3.5vw, 2.7rem);
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(0.9rem, 1.15vw, 1.12rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+body.character-overview-page .character-cross-group-title::before,
+body.character-overview-page .character-cross-group-title::after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.52), transparent);
+  box-shadow: 0 0 14px rgba(201,168,76,0.14);
+}
+
+body.character-overview-page .character-cross-group-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+body.character-overview-page .character-cross-group-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.18);
+  background: #05070b;
+  color: #f6f2e7;
+  text-decoration: none;
+  box-shadow: 0 26px 70px rgba(0,0,0,0.34);
+  transform: translateY(0) scale(1);
+  transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+}
+
+body.character-overview-page .character-cross-group-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(0.9) brightness(0.74);
+  transform: scale(1.01);
+  transition: filter 0.28s ease, transform 0.28s ease;
+}
+
+body.character-overview-page .character-cross-group-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, transparent 46%, rgba(0,0,0,0.74) 78%, rgba(0,0,0,0.92)),
+    radial-gradient(circle at 50% 50%, transparent 36%, rgba(0,0,0,0.28));
+  pointer-events: none;
+  transition: background 0.24s ease;
+}
+
+body.character-overview-page .character-cross-group-card::after {
+  content: 'Explorer';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.92);
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+body.character-overview-page .character-cross-group-copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 0.38rem;
+  padding: 1.05rem 1rem 1.2rem;
+  border-top: 1px solid rgba(201,168,76,0.26);
+  background: linear-gradient(180deg, rgba(5,5,10,0.28), rgba(5,5,10,0.78));
+  transition: opacity 0.2s ease, transform 0.22s ease;
+}
+
+body.character-overview-page .character-cross-group-copy strong {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+body.character-overview-page .character-cross-group-copy span {
+  color: rgba(255,247,223,0.82);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.62rem, 0.8vw, 0.74rem);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+body.character-overview-page .character-cross-group-card:hover,
+body.character-overview-page .character-cross-group-card:focus-visible {
+  border-color: rgba(255,226,150,0.86);
+  box-shadow:
+    0 34px 86px rgba(0,0,0,0.48),
+    0 0 0 1px rgba(255,226,150,0.34),
+    0 0 34px rgba(201,168,76,0.18);
+  outline: none;
+  transform: translateY(-8px) scale(1.035);
+}
+
+body.character-overview-page .character-cross-group-card:hover img,
+body.character-overview-page .character-cross-group-card:focus-visible img {
+  filter: saturate(1.08) contrast(1.07);
+  transform: scale(1.09);
+}
+
+body.character-overview-page .character-cross-group-card:hover::before,
+body.character-overview-page .character-cross-group-card:focus-visible::before {
+  background: rgba(0,0,0,0.58);
+}
+
+body.character-overview-page .character-cross-group-card:hover::after,
+body.character-overview-page .character-cross-group-card:focus-visible::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.character-overview-page .character-cross-group-card:hover .character-cross-group-copy,
+body.character-overview-page .character-cross-group-card:focus-visible .character-cross-group-copy {
+  opacity: 0.28;
+  transform: translateY(0.35rem);
+}
+
+body.character-overview-page .character-affinity-summary {
+  position: relative;
+  z-index: 5;
+  margin: clamp(1.6rem, 2.6vw, 2.2rem) clamp(0.2rem, 1vw, 0.8rem) 0;
+  border-radius: 5px;
+  box-shadow:
+    0 -18px 34px rgba(8,8,16,0.34),
+    inset 0 0 0 1px rgba(255,247,223,0.04);
+  clip-path: polygon(0 0, calc(50% - 1.4rem) 0, 50% 1rem, calc(50% + 1.4rem) 0, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 1rem 100%, 0 calc(100% - 1rem));
+}
+
+body.character-overview-page .character-affinity-summary::before {
+  display: none;
+}
+
+body.character-overview-page .character-affinity-summary::after {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  body.character-overview-page .character-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: min(760px, calc(100% - 2rem));
+    gap: 1.35rem;
+  }
+
+  body.character-overview-page .bio-panel {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    padding: 0;
+  }
+
+  body.character-overview-page .bio-panel::before,
+  body.character-overview-page .bio-panel::after,
+  body.character-overview-page .character-main > .related-panel::before,
+  body.character-overview-page .character-main > .related-panel::after,
+  body.character-overview-page .info-panel::before,
+  body.character-overview-page .info-panel::after {
+    display: none;
+  }
+
+  body.character-overview-page .character-main > .related-panel,
+  body.character-overview-page .info-panel {
+    grid-column: 1;
+    width: 100%;
+    margin: 0;
+    clip-path: none;
+    border-radius: 8px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.32), inset 0 0 0 1px rgba(255,247,223,0.035);
+  }
+
+  body.character-overview-page .character-main > .related-panel {
+    grid-row: 2;
+    padding: 1.2rem;
+  }
+
+  body.character-overview-page .character-main > .related-panel .related-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  body.character-overview-page .info-panel {
+    grid-row: 3;
+    padding: 1.35rem;
+  }
+
+  body.character-overview-page .character-cross-group-panel {
+    grid-column: 1;
+    width: 100%;
+    margin-top: clamp(3.5rem, 7vw, 5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  body.character-overview-page .character-main > .related-panel .related-list {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  body.character-overview-page .character-cross-group-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Place le lien Contactez-nous a droite de la navigation principale. */
+.top-nav { flex: 1; }
+.top-nav > a[href$="contact.html"],
+.top-nav > a[href$="contact-html/contact.html"] { margin-left: auto; }
+/* Fiches WIP ajoutes le 2026-05-10. */
+body.character-cornu-mollu .character-hero-bg {
+  background-image: url('../assets/personnages/CORNU MOLLU.webp');
+  background-position: 50% center;
+}
+body.character-indie-delagrandaventure .character-hero-bg {
+  background-image: url('../assets/personnages/INDIE DELAGRANDAVENTURE.webp');
+  background-position: 50% 18%;
+}
+body.character-toxine .character-hero-bg {
+  background-image: url('../assets/personnages/TOXINE.webp');
+  background-position: 50% center;
+}
+body.character-poo .character-hero-bg {
+  background-image: url('../assets/personnages/POO.webp');
+  background-position: 50% 22%;
+}
+body.character-lou .character-hero-bg {
+  background-image: url('../assets/personnages/LOU.webp');
+  background-position: 50% center;
+}
+body.character-simone .character-hero-bg {
+  background-image: url('../assets/personnages/SIMONE.webp');
+  background-position: 50% center;
+}
+body.character-pandora .character-hero-bg {
+  background-image: url('../assets/personnages/PANDORA.webp');
+  background-position: 50% center;
+}
+
+body.character-uk-not-allag .character-hero-bg {
+  background-image: url('../assets/personnages/UK NOT ALLAG.webp');
+  background-size: 125% auto;
+  background-position: 72% top;
+}
+.character-card[href="uk-not-allag.html"] img { object-position: 50% center; transform: scale(1); }
+
+body.character-katar .character-hero-bg {
+  background-image: url('../assets/personnages/KATAR.webp');
+  background-position: 50% center;
+}
+
+body.character-medoroziam .character-hero-bg {
+  background-image: url('../assets/personnages/MEDOROZIAM.webp');
+  background-position: 50% center;
+}
+
+/* Corrections ciblees des cartes apres ajout des nouveaux personnages. */
+.character-card[href="katar.html"] img {
+  object-position: 72% 18% !important;
+  transform-origin: 72% 18% !important;
+  transform: scale(1.04) !important;
+}
+
+.character-card[href="medoroziam.html"] img {
+  object-position: 22% 22% !important;
+  transform-origin: 22% 22% !important;
+  transform: scale(1.42) !important;
+}
+
+/* mobile-nav:start */
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .site-topbar {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center !important;
+    gap: 0.55rem !important;
+    padding: 0.55rem 0.85rem !important;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.46rem;
+    min-height: 36px;
+    padding: 0.46rem 0.68rem;
+    border: 1px solid rgba(201, 168, 76, 0.34);
+    border-radius: 3px;
+    background: rgba(12, 10, 8, 0.72);
+    color: #f3df9b;
+    font: inherit;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 0 1px rgba(255, 247, 223, 0.05), 0 8px 22px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+  }
+
+  .mobile-nav-icon,
+  .mobile-nav-icon::before,
+  .mobile-nav-icon::after {
+    display: block;
+    width: 16px;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .mobile-nav-icon {
+    position: relative;
+  }
+
+  .mobile-nav-icon::before,
+  .mobile-nav-icon::after {
+    position: absolute;
+    left: 0;
+  }
+
+  .mobile-nav-icon::before {
+    top: -5px;
+  }
+
+  .mobile-nav-icon::after {
+    top: 5px;
+  }
+
+  .site-topbar.is-mobile-nav-open .mobile-nav-icon {
+    background: transparent;
+  }
+
+  .site-topbar.is-mobile-nav-open .mobile-nav-icon::before {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .site-topbar.is-mobile-nav-open .mobile-nav-icon::after {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  .top-nav {
+    grid-column: 1 / -1;
+    width: 100% !important;
+    max-height: 0;
+    display: grid !important;
+    gap: 0.26rem !important;
+    flex: unset !important;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.24s ease, opacity 0.2s ease, padding-top 0.2s ease;
+  }
+
+  .site-topbar.is-mobile-nav-open .top-nav {
+    max-height: 72vh;
+    padding-top: 0.34rem;
+    opacity: 1;
+  }
+
+  .top-nav .nav-link {
+  position: relative;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.62rem 0.72rem;
+    font-size: 0.68rem;
+  }
+
+  .top-nav .nav-link::after {
+    left: 0.72rem;
+    right: 0.72rem;
+    bottom: 0.3rem;
+  }
+
+  .top-nav > a[href$="contact.html"],
+  .top-nav > a[href$="contact-html/contact.html"] {
+    margin-left: 0 !important;
+  }
+
+  .nav-item,
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-menu {
+    position: static !important;
+    display: none;
+    width: 100%;
+    min-width: 0 !important;
+    margin: 0.2rem 0 0;
+    padding: 0.25rem;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none;
+  }
+
+  .nav-dropdown:focus-within .nav-menu,
+  .nav-dropdown:hover .nav-menu {
+    display: grid;
+  }
+
+  .site-topbar > .krosmoz-top-social-links,
+  .site-topbar > .krosmoz-header-contact {
+    display: none !important;
+    grid-column: 1 / -1;
+  }
+
+  .site-topbar.is-mobile-nav-open > .krosmoz-top-social-links {
+    display: inline-flex !important;
+    justify-self: end;
+    margin-left: 0;
+    padding-top: 0.15rem;
+  }
+
+  .site-topbar.is-mobile-nav-open > .krosmoz-header-contact {
+    display: inline-flex !important;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0 !important;
+  }
+}
+/* mobile-nav:end */
+
+
+/* mobile-menu-icon:start */
+@media (max-width: 720px) {
+  .mobile-nav-icon,
+  .mobile-nav-icon::before,
+  .mobile-nav-icon::after {
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transform: none !important;
+    opacity: 1;
+  }
+
+  .mobile-nav-icon::before {
+    top: -6px;
+  }
+
+  .mobile-nav-icon::after {
+    top: 6px;
+  }
+
+  .site-topbar.is-mobile-nav-open .mobile-nav-icon {
+    background: currentColor;
+  }
+}
+/* mobile-menu-icon:end */
+
+/* mobile-character-index:start */
+@media (max-width: 720px) {
+  body.characters-index-page .characters-index {
+    width: 100%;
+    padding: 1.8rem 0 0;
+  }
+
+  body.characters-index-page .characters-heading {
+    width: min(100% - 1.4rem, 560px);
+    margin: 0 auto;
+  }
+
+  body.characters-index-page .characters-heading h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    letter-spacing: 0.16em;
+  }
+
+  body.characters-index-page .character-tools {
+    margin-top: 1.15rem;
+    border-radius: 0;
+  }
+
+  body.characters-index-page .characters-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+    margin-top: 1.4rem;
+  }
+
+  body.characters-index-page .character-card {
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr) auto;
+    align-items: center;
+    min-height: 116px;
+    border-width: 1px 0 0;
+    border-color: rgba(201, 168, 76, 0.12);
+    background:
+      linear-gradient(90deg, rgba(12, 12, 18, 0.96), rgba(8, 8, 14, 0.98) 55%, rgba(12, 10, 12, 0.96));
+    box-shadow: none;
+    transform: none;
+  }
+
+  body.characters-index-page .character-card:last-child {
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  }
+
+  body.characters-index-page .character-card:hover,
+  body.characters-index-page .character-card:focus-visible {
+    border-color: rgba(232, 201, 122, 0.34);
+    background:
+      linear-gradient(90deg, rgba(20, 18, 24, 0.98), rgba(10, 10, 16, 0.99) 52%, rgba(22, 17, 14, 0.98));
+    box-shadow: inset 0 0 0 1px rgba(232, 201, 122, 0.08);
+    transform: none;
+  }
+
+  body.characters-index-page .character-card img {
+    position: relative;
+    inset: auto;
+    grid-column: 1;
+    width: 116px;
+    height: 116px;
+    min-height: 0;
+    object-fit: cover;
+    filter: saturate(0.98) contrast(1.04) brightness(0.9);
+    transform: none !important;
+  }
+
+  body.characters-index-page .character-card:hover img,
+  body.characters-index-page .character-card:focus-visible img {
+    filter: saturate(1.08) contrast(1.07) brightness(1);
+    transform: none !important;
+  }
+
+  body.characters-index-page .character-card-shade {
+    display: none;
+  }
+
+  body.characters-index-page .character-card-copy {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    grid-column: 2;
+    min-height: 0;
+    gap: 0.28rem;
+    padding: 0.9rem 0.65rem 0.9rem 1.05rem;
+    border-top: 0;
+    background: transparent;
+    text-align: left;
+    backdrop-filter: none;
+  }
+
+  body.characters-index-page .character-card-copy strong {
+    color: #d7ad64;
+    font-size: clamp(0.88rem, 4.7vw, 1.14rem);
+    line-height: 1.15;
+    letter-spacing: 0.16em;
+    overflow-wrap: anywhere;
+  }
+
+  body.characters-index-page .character-card-copy span {
+    color: rgba(246, 242, 231, 0.88);
+    font-size: 0.74rem;
+    line-height: 1.18;
+    letter-spacing: 0.08em;
+  }
+
+  body.characters-index-page .character-card::after {
+    content: 'Explorer';
+    grid-column: 3;
+    padding: 0 0.9rem 0 0.45rem;
+    color: rgba(215, 173, 100, 0.92);
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  body.characters-index-page .character-card[href="indie-delagrandaventure.html"] .character-card-copy strong,
+  body.characters-index-page .character-card[href="grougalorasalar.html"] .character-card-copy strong,
+  body.characters-index-page .character-card[href="grande-deesse-eliatrope.html"] .character-card-copy strong {
+    font-size: clamp(0.72rem, 3.9vw, 0.92rem);
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 430px) {
+  body.characters-index-page .character-card {
+    grid-template-columns: 104px minmax(0, 1fr) auto;
+    min-height: 104px;
+  }
+
+  body.characters-index-page .character-card img {
+    width: 104px;
+    height: 104px;
+  }
+
+  body.characters-index-page .character-card-copy {
+    padding-left: 0.82rem;
+    padding-right: 0.45rem;
+  }
+
+  body.characters-index-page .character-card::after { display: none; }
+}
+/* mobile-character-index:end */
+
+
+/* character-hero-new:start */
+body.character-hyrkul .character-hero-bg {
+  background-image: url('../assets/personnages/HYRKUL.webp');
+  background-position: 50% 12%;
+}
+body.character-dieu-ouginak .character-hero-bg {
+  background-image: url('../assets/personnages/DIEU OUGINAK.webp');
+  background-position: 50% 12%;
+}
+body.character-arty .character-hero-bg {
+  background-image: url('../assets/personnages/ARTY.webp');
+  background-position: 50% 12%;
+}
+body.character-bordegann .character-hero-bg {
+  background-image: url('../assets/personnages/BORDEGANN.webp');
+  background-position: 50% 12%;
+}
+body.character-bolgrot .character-hero-bg {
+  background-image: url('../assets/personnages/BOLGROT.webp');
+  background-position: 50% 44%;
+}
+body.character-prince-de-brakmar .character-hero-bg {
+  background-image: url('../assets/personnages/PRINCE DE BRAKMAR.webp');
+  background-position: 50% center;
+}
+/* character-hero-new:end */
+
+.nav-menu-item,
+.nav-menu-item:hover,
+.nav-menu-item:focus-visible,
+.nav-menu-item:active {
+  text-decoration: none !important;
+  background: transparent !important;
+}
+
+.brand {
+  transform-origin: left center;
+  transition: color 0.22s ease, text-shadow 0.22s ease, transform 0.22s ease, filter 0.22s ease;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: #fff7df;
+  filter: brightness(1.12);
+  text-shadow:
+    0 0 12px rgba(232,201,122,0.38),
+    0 0 24px rgba(46,207,176,0.18);
+  transform: scale(1.035);
+  outline: none;
+}
+
+body[class^="character-"]::before,
+body[class^="character-"]::after {
+  display: none;
+}
+
+body.character-overview-page .bio-panel,
+body.character-overview-page .character-main > .related-panel,
+body.character-overview-page .info-panel,
+body.character-overview-page .character-affinity-summary {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  clip-path: none !important;
+  backdrop-filter: none !important;
+}
+
+body.character-overview-page .bio-panel::before,
+body.character-overview-page .bio-panel::after,
+body.character-overview-page .character-main > .related-panel::before,
+body.character-overview-page .character-main > .related-panel::after,
+body.character-overview-page .info-panel::before,
+body.character-overview-page .info-panel::after,
+body.character-overview-page .character-affinity-summary::before,
+body.character-overview-page .character-affinity-summary::after {
+  display: none !important;
+}
+
+body.character-overview-page .character-cross-group-title::before,
+body.character-overview-page .character-cross-group-title::after {
+  display: block !important;
+}
+
+body.character-overview-page .character-cross-group-card {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.character-overview-page .character-cross-group-copy {
+  border-top: 0 !important;
+}
+
+body.character-overview-page .info-block,
+body.character-overview-page .info-value,
+body.character-overview-page .info-value a {
+  border: 0 !important;
+  text-decoration: none !important;
+}
+
+body.character-overview-page .info-block + .info-block {
+  border-top: 1px solid rgba(201,168,76,0.22) !important;
+}
+
+body.character-overview-page .info-panel .info-block:not(:last-of-type) {
+  border-bottom: 1px solid rgba(201,168,76,0.38) !important;
+}
+
+body.character-overview-page .info-block::before,
+body.character-overview-page .info-block::after {
+  display: none !important;
+}
+
+body.character-overview-page .back-link,
+body.character-overview-page .character-affinity-toggle {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+body.character-overview-page .krosmoz-contribution-link::before,
+body.character-overview-page .krosmoz-contribution-link::after {
+  text-shadow: none !important;
+}
+
+body.character-overview-page .character-affinity-header h2,
+body.character-overview-page .character-affinity-teaser,
+body.character-overview-page .character-overview-summary,
+body.character-overview-page .character-overview-summary *,
+body.character-overview-page .info-title,
+body.character-overview-page .related-title,
+body.character-overview-page .krosmoz-share-status {
+  text-shadow: none !important;
+}
+
+body.character-overview-page .bio-panel,
+body.character-overview-page .character-main > .related-panel,
+body.character-overview-page .info-panel,
+body.character-overview-page .character-affinity-summary {
+  border: 1px solid rgba(201,168,76,0.22) !important;
+}
+
+body.character-overview-page .bio-panel {
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+}
+
+body.character-overview-page .character-main > .related-panel {
+  border-right-color: rgba(201,168,76,0.14) !important;
+}
+
+body.character-overview-page .info-panel {
+  border-left-color: rgba(201,168,76,0.14) !important;
+}
+
+body.character-overview-page .bio-panel,
+body.character-overview-page .character-main > .related-panel,
+body.character-overview-page .info-panel {
+  position: relative;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.character-overview-page .bio-panel::before,
+body.character-overview-page .character-main > .related-panel::before,
+body.character-overview-page .info-panel::before {
+  content: '' !important;
+  position: absolute;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  display: block !important;
+  width: 1px;
+  border: 0;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.44) 16%, rgba(201,168,76,0.18) 84%, transparent);
+  pointer-events: none;
+}
+
+body.character-overview-page .bio-panel::after,
+body.character-overview-page .character-main > .related-panel::after,
+body.character-overview-page .info-panel::after {
+  content: '' !important;
+  position: absolute;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  display: block !important;
+  width: 1px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.24) 18%, rgba(201,168,76,0.1) 82%, transparent);
+}
+
+body.character-overview-page .bio-panel::before {
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: -2.6rem !important;
+  width: min(64%, 520px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.42), transparent);
+  transform: translateX(-50%);
+}
+
+body.character-overview-page .bio-panel::after {
+  display: none !important;
+}
+
+body.character-overview-page .info-panel {
+  padding-left: clamp(1.9rem, 2.6vw, 2.5rem);
+}
+
+body.character-overview-page .character-main > .related-panel {
+  padding-right: clamp(1.25rem, 2vw, 1.8rem);
+}
+
+body.character-overview-page .character-main > .related-panel::before {
+  opacity: 0.72;
+}
+
+body.character-overview-page .character-main > .related-panel::after,
+body.character-overview-page .info-panel::before {
+  display: block !important;
+  opacity: 0.9;
+}

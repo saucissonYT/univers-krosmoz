@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz ultime d'Écaflip | Univers Krosmoz</title>
+<meta name="description" content="Lancez un quiz aléatoire sur les personnages, les époques, les lieux, les objets, les peuples et les forces du Krosmoz.">
+<link rel="canonical" href="https://univers-krosmoz.fr/jeux-html/quiz-krosmoz.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Univers Krosmoz">
+<meta property="og:title" content="Quiz ultime d'Écaflip | Univers Krosmoz">
+<meta property="og:description" content="Un quiz aléatoire pour tester vos connaissances sur le Krosmoz.">
+<meta property="og:url" content="https://univers-krosmoz.fr/jeux-html/quiz-krosmoz.html">
+<meta property="og:image" content="https://univers-krosmoz.fr/assets/logo_krosmoz.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quiz ultime d'Écaflip | Univers Krosmoz">
+<meta name="twitter:description" content="Un quiz aléatoire pour tester vos connaissances sur le Krosmoz.">
+<meta name="twitter:image" content="https://univers-krosmoz.fr/assets/logo_krosmoz.webp">
+<link rel="icon" type="image/webp" href="../assets/logo_krosmoz.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../jeux-css/quiz-krosmoz.css">
+<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"WebPage","name":"Quiz ultime d'Écaflip | Univers Krosmoz","headline":"Quiz ultime d'Écaflip | Univers Krosmoz","description":"Lancez un quiz aléatoire sur le Krosmoz.","url":"https://univers-krosmoz.fr/jeux-html/quiz-krosmoz.html","image":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"}}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENCHQ15LHS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ENCHQ15LHS');
+</script>
+</head>
+<body class="krosmoz-quiz-page">
+<header>
+  <div class="site-topbar">
+    <a class="brand" href="../index.html" aria-label="Univers Krosmoz">
+      <img src="../assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+    <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Afficher le menu"><span>Menu</span><span class="mobile-nav-icon" aria-hidden="true"></span></button>
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a class="nav-link" href="../histoire-html/histoire-krosmoz.html">Histoire</a>
+      <a class="nav-link" href="../personnages-html/personnages.html">Personnages</a>
+      <div class="nav-item nav-dropdown">
+        <button class="nav-link" type="button">Chronologie <span class="nav-caret">▾</span></button>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="../chronologies-html/chronologie-historique.html">Histoire</a>
+          <a class="nav-menu-item" href="../chronologies-html/chronologie-oeuvres.html">Œuvre</a>
+        </div>
+      </div>
+      <a class="nav-link" href="../regions-html/regions.html">Régions</a>
+      <a class="nav-link" href="../lexique-html/lexique.html">Lexique</a>
+      <a class="nav-link active" href="jeux.html">Jeux</a>
+      <div class="nav-item nav-dropdown">
+        <button class="nav-link" type="button">Médias <span class="nav-caret">▾</span></button>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="../media-html/arbre-affinites.html">Arbre des affinités</a>
+          </div>
+      </div>
+      <a class="nav-link" href="../contact-html/contact.html">Contactez-nous</a>
+    </nav>
+  </div>
+</header>
+
+<main class="quiz-main">
+  <a class="back-link" href="jeux.html">Retour aux jeux</a>
+
+  <section class="quiz-setup" data-quiz-setup aria-labelledby="quiz-title">
+    <div class="quiz-setup-copy">
+      <p class="quiz-kicker" id="quiz-title">Quiz ultime d'Écaflip</p>
+      <div class="quiz-selection-summary" data-selection-summary aria-live="polite"></div>
+    </div>
+
+    <form class="quiz-options" data-quiz-form>
+      <fieldset>
+        <legend>Nombre de questions</legend>
+        <div class="segmented-control">
+          <label><input type="radio" name="questionCount" value="10" checked><span>10</span></label>
+          <label><input type="radio" name="questionCount" value="20"><span>20</span></label>
+          <label><input type="radio" name="questionCount" value="30"><span>30</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Difficulté</legend>
+        <div class="segmented-control">
+          <label><input type="radio" name="difficulty" value="all" checked><span>Mélange</span></label>
+          <label><input type="radio" name="difficulty" value="facile"><span>Facile</span></label>
+          <label><input type="radio" name="difficulty" value="moyen"><span>Moyen</span></label>
+          <label><input type="radio" name="difficulty" value="difficile"><span>Difficile</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Thèmes</legend>
+        <div class="category-grid" data-category-options></div>
+      </fieldset>
+
+      <p class="quiz-count" data-bank-count></p>
+      <button class="primary-action" type="submit">Lancer le quiz</button>
+    </form>
+  </section>
+
+  <section class="quiz-play" data-quiz-play hidden aria-live="polite">
+    <div class="quiz-status">
+      <div>
+        <p class="quiz-kicker" data-question-meta></p>
+        <h2 data-question-title></h2>
+      </div>
+      <div class="score-pill" data-score-pill>0 / 0</div>
+    </div>
+    <div class="progress-track" aria-hidden="true"><span data-progress-bar></span></div>
+    <div class="answer-list" data-answer-list></div>
+    <div class="feedback-box" data-feedback hidden>
+      <strong data-feedback-title></strong>
+      <p data-feedback-text></p>
+    </div>
+    <div class="quiz-actions">
+      <button class="secondary-action" type="button" data-stop-quiz>Quitter</button>
+      <button class="primary-action" type="button" data-next-question disabled>Question suivante</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="quiz-result-modal" data-quiz-result hidden>
+  <div class="quiz-result-backdrop" data-close-quiz-result></div>
+  <section class="quiz-result quiz-result-panel" role="dialog" aria-modal="true" aria-labelledby="quiz-result-title">
+    <button class="quiz-result-close" type="button" data-close-quiz-result aria-label="Fermer le résultat">×</button>
+    <p class="quiz-kicker">Résultat</p>
+    <h2 id="quiz-result-title" data-result-title></h2>
+    <p data-result-copy></p>
+    <div class="result-score" data-result-score></div>
+    <div class="result-breakdown" data-result-breakdown></div>
+    <div class="quiz-actions">
+      <button class="secondary-action" type="button" data-return-quiz-setup>Retour au choix du quiz</button>
+      <button class="primary-action" type="button" data-replay-quiz>Rejouer</button>
+      <button class="primary-action" type="button" data-open-result-card>Partager le résultat</button>
+    </div>
+  </section>
+</div>
+
+<div class="quiz-share-modal" data-result-modal hidden>
+  <div class="quiz-share-backdrop" data-close-result-card></div>
+  <section class="quiz-share-panel" role="dialog" aria-modal="true" aria-labelledby="quiz-share-title">
+    <button class="quiz-share-close" type="button" data-close-result-card aria-label="Fermer">x</button>
+    <p class="quiz-kicker">Fiche de résultat</p>
+    <h2 id="quiz-share-title">Partager mon score</h2>
+    <div class="quiz-share-card" data-result-card>
+      <span>Quiz ultime d'Écaflip</span>
+      <strong data-card-title></strong>
+      <em data-card-score></em>
+      <p data-card-copy></p>
+    </div>
+    <div class="quiz-share-actions">
+      <button type="button" data-copy-result>Copier le résultat</button>
+      <button type="button" data-download-result>Télécharger l'image</button>
+    </div>
+    <p class="quiz-share-note" data-card-status aria-live="polite"></p>
+  </section>
+</div>
+
+<script src="../jeux-data/krosmoz-quiz.js?v=family-hints-2"></script>
+<script src="../scripts/quiz-krosmoz.js"></script>
+<script src="../scripts/legal-notice.js"></script>
+<!-- Site développé par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Recherche et édition : Zaki & B. -->
+</body>
+</html>

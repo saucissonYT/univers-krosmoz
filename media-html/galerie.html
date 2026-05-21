@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie | Univers Krosmoz</title>
+<meta name="description" content="Retrouvez les bannières de personnages utilisées sur Univers Krosmoz et téléchargez les images de la galerie.">
+<link rel="canonical" href="https://univers-krosmoz.fr/media-html/galerie.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Univers Krosmoz">
+<meta property="og:title" content="Galerie | Univers Krosmoz">
+<meta property="og:description" content="Toutes les bannières de personnages utilisées sur Univers Krosmoz, réunies dans une galerie téléchargeable.">
+<meta property="og:url" content="https://univers-krosmoz.fr/media-html/galerie.html">
+<meta property="og:image" content="https://univers-krosmoz.fr/assets/logo_krosmoz.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Galerie | Univers Krosmoz">
+<meta name="twitter:description" content="Toutes les bannières de personnages utilisées sur Univers Krosmoz, réunies dans une galerie téléchargeable.">
+<meta name="twitter:image" content="https://univers-krosmoz.fr/assets/logo_krosmoz.webp">
+<link rel="icon" type="image/webp" href="../assets/logo_krosmoz.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../personnages-css/personnages.css">
+<link rel="stylesheet" href="../media-css/galerie.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ENCHQ15LHS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ENCHQ15LHS');
+</script>
+</head>
+<body class="gallery-page">
+<header>
+  <div class="site-topbar">
+    <a class="brand" href="../index.html" aria-label="Univers Krosmoz">
+      <img src="../assets/logo_krosmoz.webp" alt="">
+      <span>Univers Krosmoz</span>
+    </a>
+    <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Afficher le menu"><span>Menu</span><span class="mobile-nav-icon" aria-hidden="true"></span></button>
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a class="nav-link" href="../histoire-html/histoire-krosmoz.html">Histoire</a>
+      <a class="nav-link" href="../personnages-html/personnages.html">Personnages</a>
+      <div class="nav-item nav-dropdown">
+        <button class="nav-link" type="button">Chronologie <span class="nav-caret">▾</span></button>
+        <div class="nav-menu">
+          <a class="nav-menu-item" href="../chronologies-html/chronologie-historique.html">Histoire</a>
+          <a class="nav-menu-item" href="../chronologies-html/chronologie-oeuvres.html">Œuvre</a>
+        </div>
+      </div>
+      <a class="nav-link" href="../regions-html/regions.html">Régions</a>
+      <a class="nav-link" href="../lexique-html/lexique.html">Lexique</a>
+      <a class="nav-link" href="../jeux-html/jeux.html">Jeux</a>
+      <div class="nav-item nav-dropdown">
+        <button class="nav-link active" type="button">Médias <span class="nav-caret">▾</span></button>
+        <div class="nav-menu">
+          <a class="nav-menu-item active" href="galerie.html">Galerie</a>
+          <a class="nav-menu-item" href="arbre-affinites.html">Arbre des affinités</a>
+          </div>
+      </div>
+      <a class="nav-link" href="../contact-html/contact.html">Contactez-nous</a>
+    </nav>
+  </div>
+</header>
+
+<main class="gallery-main">
+  <section class="gallery-hero" aria-labelledby="gallery-title">
+    <div class="gallery-hero-copy">
+      <p class="gallery-kicker">Médias</p>
+      <h1 id="gallery-title">Galerie</h1>
+      <p>Les bannières de personnages utilisées sur le site, réunies au même endroit et disponibles au téléchargement.</p>
+    </div>
+    <div class="gallery-tools" role="search">
+      <label class="gallery-search-label" for="gallery-search">Rechercher une image</label>
+      <input id="gallery-search" class="gallery-search" type="search" placeholder="Nom du personnage" autocomplete="off">
+      <p class="gallery-count" aria-live="polite"><span data-gallery-count>0</span> images</p>
+    </div>
+  </section>
+
+  <section class="gallery-section" aria-label="Bannieres de personnages">
+    <div class="gallery-grid" data-gallery-grid></div>
+    <p class="gallery-empty" data-gallery-empty hidden>Aucune image ne correspond à cette recherche.</p>
+  </section>
+</main>
+
+<div class="gallery-modal" data-gallery-modal hidden>
+  <div class="gallery-modal-backdrop" data-gallery-close></div>
+  <section class="gallery-modal-panel" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+    <button class="gallery-modal-close" type="button" data-gallery-close aria-label="Fermer l'image">
+      <span aria-hidden="true">×</span>
+    </button>
+    <div class="gallery-modal-media">
+      <img data-gallery-modal-image alt="">
+    </div>
+    <div class="gallery-modal-content">
+      <a id="gallery-modal-title" class="gallery-modal-title" data-gallery-modal-title data-gallery-modal-profile href="#">Image</a>
+    </div>
+  </section>
+</div>
+
+<button class="back-to-top" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut">
+  <span aria-hidden="true">↑</span>
+</button>
+
+<script src="../scripts/legal-notice.js"></script>
+<script src="../media-data/galerie-bannieres.js"></script>
+<script src="../scripts/galerie.js"></script>
+<!-- Site développé par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Recherche et édition : Zaki & B. -->
+</body>
+</html>

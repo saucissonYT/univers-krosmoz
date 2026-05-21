@@ -1,0 +1,25 @@
+.gitdata/
+output/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.old
+*.orig
+
+# Local dependency/build folders
+node_modules/
+dist/
+build/
+.cache/
+.vite/
