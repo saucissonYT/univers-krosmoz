@@ -1,11 +1,5 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
 
-/* Tokens de page: modifier ces valeurs propage les couleurs et les contrastes. */
+
 :root {
   --gold: #c9a84c;
   --gold-light: #e8c97a;
@@ -15,7 +9,6 @@
   --text-muted: #a99d88;
 }
 
-/* Reset court: on neutralise les marges et le modele de boite avant les composants. */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -43,152 +36,6 @@ body::before {
     radial-gradient(2px 2px at 70% 10%, rgba(46,207,176,0.3) 0%, transparent 100%);
   pointer-events: none;
   z-index: 0;
-}
-
-/* En-tete partage: ces selecteurs suivent la structure brand + nav du HTML commun. */
-header {
-  position: relative;
-  z-index: 10;
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-}
-
-.site-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  padding: 0.9rem 1.5rem;
-  background: rgba(7, 7, 12, 0.94);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.85rem;
-  color: #f6f2e7;
-  text-decoration: none;
-  font-family: 'Cinzel Decorative', 'Cinzel', serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.brand img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
-.brand span { line-height: 1; }
-
-.top-nav { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.7rem 0.85rem;
-  border: 0;
-  background: transparent;
-  color: #f3efe4;
-  font-family: 'Cinzel Decorative', 'Cinzel', serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0.85rem;
-  right: 0.85rem;
-  bottom: 0.38rem;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #f3d779 18%, #fff3bd 50%, #f3d779 82%, transparent);
-  box-shadow: 0 0 14px rgba(232,201,122,0.36);
-  opacity: 0;
-  transform: scaleX(0.24);
-  transform-origin: center;
-  transition: opacity 0.22s ease, transform 0.26s ease;
-}
-
-.nav-link:hover,
-.nav-link:focus-visible,
-.nav-item:focus-within > .nav-link,
-.nav-link.active,
-.nav-link.is-active {
-  color: var(--gold-light);
-  outline: none;
-}
-
-.nav-link:hover::after,
-.nav-link:focus-visible::after,
-.nav-item:focus-within > .nav-link::after,
-.nav-link.active::after,
-.nav-link.is-active::after {
-  opacity: 1;
-  transform: scaleX(1);
-}
-
-.nav-link.active,
-.nav-link.is-active {
-  text-shadow: 0 0 18px rgba(232,201,122,0.18);
-}
-
-.nav-caret {
-  font-size: 0.8em;
-  opacity: 0.8;
-}
-
-.nav-menu {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  left: 0;
-  min-width: 240px;
-  padding: 0.45rem;
-  border: 1px solid rgba(201,168,76,0.16);
-  background: rgba(12, 12, 18, 0.97);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4px);
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
-}
-
-.nav-dropdown:hover .nav-menu,
-.nav-dropdown:focus-within .nav-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.nav-menu-item {
-  width: 100%;
-  display: block;
-  padding: 0.7rem 0.8rem;
-  border: 0;
-  background: transparent;
-  color: var(--text-main);
-  font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-align: left;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.nav-menu-item:hover,
-.nav-menu-item:focus-visible {
-  color: var(--gold-light);
-  outline: none;
 }
 
 .home-main {
@@ -912,7 +759,6 @@ body.reveal-ready .home-category-band.is-visible .home-band-meta span:nth-child(
     0 0 26px color-mix(in srgb, var(--band-accent) 28%, transparent);
 }
 
-
 .back-to-top {
   position: fixed;
   right: clamp(1rem, 3vw, 2rem);
@@ -1094,7 +940,6 @@ body.reveal-ready .home-category-band.is-visible .home-band-meta span:nth-child(
   }
 }
 
-/* Place le lien Contactez-nous a droite de la navigation principale. */
 .top-nav { flex: 1; }
 .top-nav > a[href$="contact.html"],
 .top-nav > a[href$="contact-html/contact.html"] { margin-left: auto; }

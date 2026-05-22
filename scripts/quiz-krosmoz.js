@@ -1,9 +1,4 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
+
 
 (function () {
   const forbiddenQuestionText = /\b(site|page|navigation|menu|section|support|allskreen|launcher|france\.tv)\b/i;
@@ -300,7 +295,6 @@
     feedback.hidden = false;
     feedbackTitle.textContent = isCorrect ? "Bonne réponse" : "Pas cette fois";
     feedbackText.textContent = question.explanation;
-
 
     nextButton.disabled = false;
   };

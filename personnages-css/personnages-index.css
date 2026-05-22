@@ -1,9 +1,4 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
+
 
 body.characters-index-page::before {
   background: url('../assets/personnages/backgrounds/bg-personnages.webp') center / cover no-repeat;
@@ -54,10 +49,10 @@ body.characters-index-page .character-filter-band {
 }
 
 body.characters-index-page .character-tools {
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1220px, calc(100% - 2rem));
   min-height: 76px;
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) repeat(3, minmax(150px, 190px));
+  grid-template-columns: minmax(220px, 1fr) minmax(120px, 160px) minmax(230px, 270px) minmax(130px, 180px);
   align-items: center;
   gap: clamp(0.65rem, 1.4vw, 1.1rem);
   margin: 0 auto;

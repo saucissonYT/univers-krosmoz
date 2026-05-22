@@ -1,14 +1,9 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
+
 
 (function () {
   const sharedScript = document.currentScript;
   const globalSearchUrl = sharedScript ? new URL("global-search.js", sharedScript.src).href : "";
-  const searchDataUrl = sharedScript ? new URL("search-data.js", sharedScript.src).href : "";
+  const searchDataUrl = sharedScript ? new URL("../data/search/search-data.js", sharedScript.src).href : "";
   const mobileMapLockQuery = "(max-width: 1024px), (pointer: coarse) and (max-width: 1180px)";
 
   const isMobileMapLocked = () => window.matchMedia(mobileMapLockQuery).matches;
@@ -636,9 +631,7 @@
   };
 
   const mountNotice = () => {
-    if (document.querySelector(".krosmoz-legal-notice")) {
-      return;
-    }
+    const existingNotice = document.querySelector(".krosmoz-legal-notice");
 
     const style = document.createElement("style");
     style.textContent = `
@@ -907,6 +900,10 @@
       .region-detail-main > .krosmoz-legal-notice,
       .history-detail-main > .krosmoz-legal-notice {
         grid-column: 1 / -1;
+      }
+
+      body.krosmoz-character-detail-page .character-main > .krosmoz-legal-notice {
+        margin-bottom: -4.5rem;
       }
 
       .krosmoz-top-social-links {
@@ -1515,9 +1512,11 @@
       }
     `;
 
-    const notice = document.createElement("div");
-    notice.className = "krosmoz-legal-notice";
-    notice.setAttribute("aria-label", noticeLines.join(" "));
+    const notice = existingNotice || document.createElement("div");
+    if (!existingNotice) {
+      notice.className = "krosmoz-legal-notice";
+      notice.setAttribute("aria-label", noticeLines.join(" "));
+    }
 
     if (document.querySelector(".map-section")) {
       document.body.classList.add("krosmoz-map-page");
@@ -1589,13 +1588,18 @@
     updateMobileMapLock();
     loadGlobalSearch();
 
-    notice.append(text);
+    if (!existingNotice) {
+      notice.append(text);
 
-    const noticeTarget = document.querySelector(".history-detail-main, .region-detail-main, .character-main");
-    if (noticeTarget) {
-      noticeTarget.append(notice);
-    } else {
-      document.body.append(notice);
+      const historyDetailMain = document.querySelector(".history-detail-main");
+      const noticeTarget = document.querySelector(".region-detail-main, .character-main");
+      if (historyDetailMain) {
+        historyDetailMain.after(notice);
+      } else if (noticeTarget) {
+        noticeTarget.append(notice);
+      } else {
+        document.body.append(notice);
+      }
     }
   };
 

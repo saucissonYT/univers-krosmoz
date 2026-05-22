@@ -1,9 +1,4 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
+
 
 (function () {
   const grid = document.querySelector("[data-gallery-grid]");
@@ -23,7 +18,6 @@
   }
 
   const sourceUrl = "../scripts/character-page-links.js";
-  const bannerBase = "../assets/personnages/responsive/ultrawide/";
   const characterBase = "../personnages-html/";
   const unique = new Map();
 
@@ -97,8 +91,8 @@
       const item = {
         name,
         href: characterBase + href,
-        image: bannerBase + slug + "-1200.webp",
-        download: slug + "-banniere.webp",
+        image: "../assets/personnages/" + image,
+        download: image,
         search: normalize(name + " " + slug)
       };
 
@@ -114,8 +108,8 @@
     .map((item) => ({
       name: item.name,
       href: characterBase + item.href,
-      image: bannerBase + item.slug + "-1200.webp",
-      download: item.slug + "-banniere.webp",
+      image: "../assets/personnages/" + item.image,
+      download: item.image,
       search: normalize(item.name + " " + item.slug)
     }));
 

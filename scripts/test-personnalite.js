@@ -1,9 +1,4 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
+
 
 const axes = ['coeur', 'action', 'sagesse', 'ambition', 'ombre', 'mystere', 'liberte', 'devoir', 'chaos', 'lien'];
 

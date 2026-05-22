@@ -1,9 +1,4 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
+
 
 @font-face {
   font-family: "Cinzel Decorative";
@@ -599,7 +594,6 @@ body.affinities-page::before {
   height: auto;
   overflow: visible;
 }
-
 
 .affinities-svg-host svg .affinity-family-title {
   font-family: "Cinzel Decorative", "Cinzel", serif !important;
@@ -1238,7 +1232,6 @@ body.affinity-editor-active .affinity-editor-svg .is-editor-selected {
   .affinities-svg-host svg .affinity-family-title {
     visibility: visible !important;
   }
-
 
   .affinity-mobile-family {
     display: grid;

@@ -4,13 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "generate:carousel-images": "node scripts/generate-carousel-images.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=18"
-  },
-  "devDependencies": {
-    "sharp": "^0.34.5"
   }
 }

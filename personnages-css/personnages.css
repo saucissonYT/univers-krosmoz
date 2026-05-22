@@ -1,12 +1,5 @@
-/*
-  Site développé par phomsay pour zaki.
-  Contact Discord : @phomsay671.
-  Dev web : phomsay. Admin : sauci.
-  Recherche et édition : Zaki & B.
-*/
 
-/* Page personnage : structure aligne sur la DA globale du site */
-/* Tokens partages entre fiches personnages, index et cartes de navigation. */
+
 :root {
   --gold: #c9a84c;
   --gold-light: #e8c97a;
@@ -20,7 +13,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-/* Base de page: le fond fixe reste decoratif et le contenu garde le scroll normal. */
+
 body {
   background: var(--dark-bg);
   color: var(--text-main);
@@ -56,124 +49,7 @@ body::after {
   pointer-events: none;
   z-index: 0;
 }
-/* En-tete partage avec les pages d'accueil, de cartes et de chronologie. */
-header {
-  position: relative;
-  z-index: 20;
-  padding: 0;
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-}
-.site-topbar {
-  position: sticky;
-  top: 0;
-  z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  padding: 0.9rem 1.5rem;
-  background: rgba(7, 7, 12, 0.94);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.85rem;
-  color: #f6f2e7;
-  text-decoration: none;
-  font-family: 'Cinzel Decorative', 'Cinzel', serif;
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.brand img { width: 28px; height: 28px; object-fit: contain; flex-shrink: 0; }
-.brand span { line-height: 1; }
-.top-nav { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; }
-.nav-item { position: relative; }
-.nav-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.7rem 0.85rem;
-  border: 0;
-  background: transparent;
-  color: #f3efe4;
-  font-family: 'Cinzel Decorative', 'Cinzel', serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0.85rem;
-  right: 0.85rem;
-  bottom: 0.38rem;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #f3d779 18%, #fff3bd 50%, #f3d779 82%, transparent);
-  box-shadow: 0 0 14px rgba(232,201,122,0.36);
-  opacity: 0;
-  transform: scaleX(0.24);
-  transform-origin: center;
-  transition: opacity 0.22s ease, transform 0.26s ease;
-}
 
-.nav-link:hover::after,
-.nav-link:focus-visible::after,
-.nav-item:focus-within > .nav-link::after,
-.nav-link.active::after,
-.nav-link.is-active::after {
-  opacity: 1;
-  transform: scaleX(1);
-}
-
-.nav-link.active,
-.nav-link.is-active {
-  text-shadow: 0 0 18px rgba(232,201,122,0.18);
-}
-.nav-link:visited, .nav-link:hover, .nav-link:focus-visible, .nav-link:active { text-decoration: none; }
-.nav-link:hover, .nav-item:focus-within > .nav-link, .nav-link.active { color: var(--gold-light); }
-.nav-caret { font-size: 0.8em; opacity: 0.8; }
-.nav-menu {
-  position: absolute;
-  top: calc(100% + 0.4rem);
-  left: 0;
-  min-width: 240px;
-  padding: 0.45rem;
-  border: 1px solid rgba(201,168,76,0.16);
-  background: rgba(12, 12, 18, 0.97);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.35);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4px);
-  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
-}
-.nav-dropdown:hover .nav-menu, .nav-dropdown:focus-within .nav-menu { opacity: 1; visibility: visible; transform: translateY(0); }
-.nav-menu-item {
-  width: 100%;
-  display: block;
-  padding: 0.7rem 0.8rem;
-  border: 0;
-  background: transparent;
-  color: var(--text-main);
-  font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
-  text-align: left;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-.nav-menu-item:hover, .nav-menu-item.active { color: var(--gold-light); }
-/* Hero personnage: image et titre restent separes pour garder un recadrage propre en mobile. */
 .character-hero {
   position: relative;
   z-index: 1;
@@ -2862,7 +2738,7 @@ body.character-overview-page .info-value a {
 body.character-overview-page .character-cross-group-panel {
   grid-column: 1 / -1;
   width: min(1120px, 100%);
-  margin: clamp(4.8rem, 8vw, 7rem) auto 0;
+  margin: clamp(2.4rem, 4vw, 3.4rem) auto 0;
   text-align: center;
 }
 
@@ -3093,7 +2969,7 @@ body.character-overview-page .character-affinity-summary::after {
   body.character-overview-page .character-cross-group-panel {
     grid-column: 1;
     width: 100%;
-    margin-top: clamp(3.5rem, 7vw, 5rem);
+    margin-top: clamp(2.2rem, 5vw, 3.4rem);
   }
 }
 
@@ -3108,7 +2984,6 @@ body.character-overview-page .character-affinity-summary::after {
   }
 }
 
-/* Place le lien Contactez-nous a droite de la navigation principale. */
 .top-nav { flex: 1; }
 .top-nav > a[href$="contact.html"],
 .top-nav > a[href$="contact-html/contact.html"] { margin-left: auto; }
@@ -3346,7 +3221,6 @@ body.character-medoroziam .character-hero-bg {
 }
 /* mobile-nav:end */
 
-
 /* mobile-menu-icon:start */
 @media (max-width: 720px) {
   .mobile-nav-icon,
@@ -3522,7 +3396,6 @@ body.character-medoroziam .character-hero-bg {
   body.characters-index-page .character-card::after { display: none; }
 }
 /* mobile-character-index:end */
-
 
 /* character-hero-new:start */
 body.character-hyrkul .character-hero-bg {
