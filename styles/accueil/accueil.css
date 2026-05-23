@@ -1069,7 +1069,8 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 }
 
 .home-band-history .home-band-media::before {
-  content: none;
+  background-image: url('../../assets/accueil/histoire-background-poster.webp');
+  background-position: center 28%;
 }
 
 .home-band-personnages-full .home-band-media::before {
