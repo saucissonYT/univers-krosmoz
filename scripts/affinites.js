@@ -556,7 +556,7 @@ function normalizeExtractedPortraitPaths(svg) {
       return;
     }
 
-    const pageRelativeSource = `../assets/affinites/${source}`;
+    const pageRelativeSource = `../../assets/affinites/${source}`;
     image.setAttribute("href", pageRelativeSource);
     image.setAttributeNS("http://www.w3.org/1999/xlink", "href", pageRelativeSource);
   });
@@ -1181,7 +1181,7 @@ function getAffinityIconForName(name, preferredIcon = "") {
     "DÉESSE PANDAWA": "deesse-panda.webp"
   };
   const fileName = specialIcons[cleanLabel(name).toUpperCase()] || `${slugify(name)}.webp`;
-  return `../assets/personnages/cartes/${fileName}`;
+  return `../../assets/personnages/cartes/${fileName}`;
 }
 
 function renderAffinityDetails(panel, name, linkedNames) {

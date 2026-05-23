@@ -12,16 +12,27 @@ const resendApiKey = process.env.RESEND_API_KEY || "";
 const contactTo = process.env.CONTACT_TO || "universkrosmoz@gmail.com";
 const resendFrom = process.env.RESEND_FROM || "Univers Krosmoz <onboarding@resend.dev>";
 const rateLimit = new Map();
-const legacyHtmlDirectories = [
-  "chronologies-html",
-  "contact-html",
-  "histoire-html",
-  "jeux-html",
-  "lexique-html",
-  "media-html",
-  "personnages-html",
-  "regions-html"
+const pageDirectories = [
+  "pages/chronologies",
+  "pages/contact",
+  "pages/histoire",
+  "pages/jeux",
+  "pages/lexique",
+  "pages/media",
+  "pages/personnages",
+  "pages/regions"
 ];
+
+const legacyDirectoryRedirects = new Map([
+  ["chronologies-html", "pages/chronologies"],
+  ["contact-html", "pages/contact"],
+  ["histoire-html", "pages/histoire"],
+  ["jeux-html", "pages/jeux"],
+  ["lexique-html", "pages/lexique"],
+  ["media-html", "pages/media"],
+  ["personnages-html", "pages/personnages"],
+  ["regions-html", "pages/regions"]
+]);
 
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
@@ -121,12 +132,25 @@ function isRateLimited(ip) {
 }
 
 function findLegacyRedirect(pathname) {
+  const legacyDirectoryMatch = pathname.match(/^\/([^/]+-html)\/(.+\.html)$/i);
+  if (legacyDirectoryMatch) {
+    const [, legacyDirectory, page] = legacyDirectoryMatch;
+    const directory = legacyDirectoryRedirects.get(legacyDirectory);
+    if (directory) {
+      const targetPath = `/${directory}/${page}`;
+      const filePath = normalize(join(root, targetPath));
+      if (isInsideRoot(filePath) && existsSync(filePath) && statSync(filePath).isFile()) {
+        return targetPath;
+      }
+    }
+  }
+
   if (!/^\/[^/]+\.html$/i.test(pathname) || pathname === "/index.html") {
     return "";
   }
 
   const page = pathname.slice(1);
-  for (const directory of legacyHtmlDirectories) {
+  for (const directory of pageDirectories) {
     const targetPath = `/${directory}/${page}`;
     const filePath = normalize(join(root, targetPath));
     if (isInsideRoot(filePath) && existsSync(filePath) && statSync(filePath).isFile()) {
@@ -226,7 +250,7 @@ async function serveStatic(request, response) {
 
   const requested = pathname === "/" ? "/index.html" : pathname;
   const routePath = pathname.startsWith("/result:") || pathname.startsWith("/result/")
-    ? "/jeux-html/jeu-personnage.html"
+    ? "/pages/jeux/jeu-personnage.html"
     : requested;
   const filePath = normalize(join(root, routePath));
 

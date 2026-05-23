@@ -106,10 +106,18 @@ const events = [
   },
   {
     era: "dofus",
+    date: "An 644",
+    title: "Portails vers Enutrosor",
+    preview: "Les voyageurs dimensionnels ouvrent des portails vers Enutrosor.",
+    details: ["Les voyageurs dimensionnels ouvrent des portails vers Enutrosor."],
+    major: false
+  },
+  {
+    era: "dofus",
     date: "An 650 – 711",
     title: "Frigost & Fratrie des Oubliés",
     preview: "Ogrest s'empare du Dofus des Glaces. Les Steamers découvrent la Stasis.",
-    details: ["Nouveaux Forgelances face aux premiers signes de l'Éliocalypse.", "Lupa, Kali et Ogrest traquent Dathura.", "Ogrest s'empare du Dofus des Glaces et reste piégé 123 ans avec Dathura et Harebourg.", "Les Steamers découvrent la Stasis.", "Oropo scelle la Tour Minérale hors du temps."],
+    details: ["Nouveaux Forgelances face aux premiers signes de l'Éliocalypse.", "Lupa, Kali et Ogrest traquent Dathura.", "An 655 : Découverte d'Osavora par les voyageurs dimensionnels.", "Ogrest s'empare du Dofus des Glaces et reste piégé 123 ans avec Dathura et Harebourg.", "Les Steamers découvrent la Stasis.", "Oropo scelle la Tour Minérale hors du temps."],
     major: false
   },
   {
@@ -341,56 +349,56 @@ function normalizeText(value) {
 const historyCards = [
   {
     match: title => title.includes('krosmoz'),
-    href: '../histoire-html/histoire-origines.html',
-    image: '../assets/histoire/illustrations/age-primitif-illu.webp',
+    href: '../histoire/histoire-origines.html',
+    image: '../../assets/histoire/illustrations/age-primitif-illu.webp',
     alt: "Illustration de l'Age primitif"
   },
   {
     match: title => title.includes('necromonde'),
-    href: '../histoire-html/histoire-necromonde.html',
-    image: '../assets/histoire/illustrations/necromonde.webp',
+    href: '../histoire/histoire-necromonde.html',
+    image: '../../assets/histoire/illustrations/necromonde.webp',
     alt: 'Paysage du Necromonde'
   },
   {
     match: title => title.includes('horloge divine'),
-    href: '../histoire-html/histoire-age-des-dofus.html',
-    image: '../assets/histoire/illustrations/dofus-illu.webp',
+    href: '../histoire/histoire-age-des-dofus.html',
+    image: '../../assets/histoire/illustrations/dofus-illu.webp',
     alt: "Illustration de l'Age des Dofus"
   },
   {
     match: title => title.includes('djaul'),
-    href: '../histoire-html/histoire-aurore-pourpre.html',
-    image: '../assets/histoire/illustrations/aurore-pourpre.webp',
+    href: '../histoire/histoire-aurore-pourpre.html',
+    image: '../../assets/histoire/illustrations/aurore-pourpre.webp',
     alt: "Affrontement de l'Aurore Pourpre"
   },
   {
     match: title => title.includes("chaos d'ogrest"),
-    href: '../histoire-html/histoire-chaos-ogrest.html',
-    image: '../assets/histoire/illustrations/mont-zinit.webp',
+    href: '../histoire/histoire-chaos-ogrest.html',
+    image: '../../assets/histoire/illustrations/mont-zinit.webp',
     alt: "Le Mont Zinit, lieu du Chaos d'Ogrest"
   },
   {
     match: title => title.includes("debut de l'ere du wakfu"),
-    href: '../histoire-html/histoire-ere-du-wakfu.html',
-    image: '../assets/histoire/illustrations/wakfu-illu.webp',
+    href: '../histoire/histoire-ere-du-wakfu.html',
+    image: '../../assets/histoire/illustrations/wakfu-illu.webp',
     alt: "Illustration de l'Ere du Wakfu"
   },
   {
     match: title => title.includes('grande vague'),
-    href: '../histoire-html/histoire-la-source.html',
-    image: '../assets/histoire/illustrations/la-source.webp',
+    href: '../histoire/histoire-la-source.html',
+    image: '../../assets/histoire/illustrations/la-source.webp',
     alt: 'La Source'
   },
   {
     match: title => title.includes('waven') && title.includes('mmo'),
-    href: '../histoire-html/histoire-ere-du-waven.html',
-    image: '../assets/histoire/illustrations/waven-illu.webp',
+    href: '../histoire/histoire-ere-du-waven.html',
+    image: '../../assets/histoire/illustrations/waven-illu.webp',
     alt: "Illustration de l'Ere du Waven"
   },
   {
     match: title => title.includes('piraterie'),
-    href: '../histoire-html/histoire-ere-piraterie.html',
-    image: '../assets/histoire/illustrations/ere-piraterie.webp',
+    href: '../histoire/histoire-ere-piraterie.html',
+    image: '../../assets/histoire/illustrations/ere-piraterie.webp',
     alt: "Illustration de l'Ere de la Piraterie"
   }
 ];

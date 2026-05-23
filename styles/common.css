@@ -176,7 +176,7 @@ header {
 }
 
 .top-nav > a[href$="contact.html"],
-.top-nav > a[href$="contact-html/contact.html"] {
+.top-nav > a[href$="pages/contact/contact.html"] {
   margin-left: auto;
 }
 
@@ -353,7 +353,7 @@ header {
   }
 
   .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="contact-html/contact.html"] {
+  .top-nav > a[href$="pages/contact/contact.html"] {
     margin-left: 0;
   }
 

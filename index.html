@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="home-page">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
 <link rel="icon" type="image/webp" href="assets/logo_krosmoz.webp">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/common.css">
-<link rel="stylesheet" href="accueil-css/accueil.css">
+<link rel="stylesheet" href="styles/accueil/accueil.css">
 
 <script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"WebSite","name":"Accueil | Univers Krosmoz","headline":"Accueil | Univers Krosmoz","description":"Explorez l\u0027Univers Krosmoz : histoire, personnages, chronologies et cartes autour de Dofus, Wakfu et Waven.","url":"https://univers-krosmoz.fr/","image":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp"}}}</script>
 <script src="scripts/site-common.js" defer></script>
@@ -32,93 +32,78 @@
 <main class="home-main">
   <section class="character-rail-section" aria-label="Personnages principaux">
     <div class="character-rail" data-character-rail></div>
+    <span class="home-scroll-indicator home-scroll-indicator-below" aria-hidden="true">SCROLL</span>
   </section>
 
   <section class="home-category-band home-band-history" aria-labelledby="home-history-title">
-    <a class="home-band-link" href="histoire-html/histoire-krosmoz.html" aria-label="Explorer le fil d'histoire du Krosmoz">
-      <span class="home-band-media" aria-hidden="true"></span>
-      <span class="home-band-content">
-        <span class="home-band-kicker" id="home-history-title">Histoire</span>
-        <strong>Le fil du Krosmoz</strong>
-        <span class="home-band-copy">Promenez-vous le long des grands âges du Krosmoz, de la naissance du Monde des Douze aux bouleversements qui mènent vers Waven.</span>
-        <span class="home-band-meta" aria-hidden="true">
-          <span>Âge primitif</span>
-          <span>Dofus</span>
-          <span>Wakfu</span>
-          <span>Waven</span>
-        </span>
+    <a class="home-band-link" href="pages/histoire/histoire-krosmoz.html" aria-label="Explorer le fil d'histoire du Krosmoz">
+      <span class="home-band-media" aria-hidden="true">
+        <video class="home-band-video" autoplay muted loop playsinline preload="metadata">
+          <source src="assets/accueil/histoire-background.mp4" type="video/mp4">
+        </video>
       </span>
-      <span class="home-band-action">Explorer</span>
+      <span class="home-band-content">
+        <strong id="home-history-title">L'HISTOIRE DU KROSMOZ</strong>
+        <span class="home-band-copy">D&eacute;couvrez les &eacute;v&eacute;nements importants qui ont boulevers&eacute; le monde.</span>
+      </span>
+      <span class="home-scroll-indicator" aria-hidden="true">SCROLL</span>
     </a>
   </section>
 
-  <section class="home-category-band home-band-chronology home-band-reverse" aria-labelledby="home-chronology-title">
-    <a class="home-band-link" href="chronologies-html/chronologie-historique.html">
+  <section class="home-category-band home-band-personnages-full" aria-labelledby="home-personnages-feature-title">
+    <a class="home-band-link" href="pages/personnages/personnages.html" aria-label="Explorer les personnages du Krosmoz">
       <span class="home-band-media" aria-hidden="true"></span>
       <span class="home-band-content">
-        <span class="home-band-kicker" id="home-chronology-title">Chronologie</span>
-        <strong>Les grandes dates</strong>
-        <span class="home-band-copy">Suivez l'ordre des événements, des époques fondatrices aux récits modernes, avec les repères majeurs de chaque œuvre Ankama.</span>
-        <span class="home-band-meta" aria-hidden="true">
-          <span>Ères</span>
-          <span>Œuvres</span>
-          <span>Repères</span>
-        </span>
+        <strong id="home-personnages-feature-title">LES PERSONNAGES</strong>
+        <span class="home-band-copy">Retrouvez les h&eacute;ros, compagnons et figures majeures qui traversent les aventures du Krosmoz.</span>
       </span>
-      <span class="home-band-action">Consulter</span>
+      <span class="home-scroll-indicator" aria-hidden="true">SCROLL</span>
     </a>
   </section>
 
-  <section class="home-category-band home-band-regions" aria-labelledby="home-regions-title">
-    <a class="home-band-link" href="regions-html/regions.html">
+  <section class="home-category-band home-band-chronology-full" aria-labelledby="home-chronology-feature-title">
+    <a class="home-band-link" href="pages/chronologies/chronologie-historique.html" aria-label="Explorer la frise chronologique du Krosmoz">
       <span class="home-band-media" aria-hidden="true"></span>
       <span class="home-band-content">
-        <span class="home-band-kicker" id="home-regions-title">Régions</span>
-        <strong>Le Monde des Douze</strong>
-        <span class="home-band-copy">Parcourez les cités, îles et territoires majeurs du Krosmoz, de Frigost à Pandala en passant par Bonta, Brakmar et Sufokia.</span>
-        <span class="home-band-meta" aria-hidden="true">
-          <span>Cités</span>
-          <span>Îles</span>
-          <span>Territoires</span>
-        </span>
+        <strong id="home-chronology-feature-title">LA CHRONOLOGIE</strong>
+        <span class="home-band-copy">Remontez les grandes &egrave;res du Krosmoz, des origines aux fractures du monde.</span>
       </span>
-      <span class="home-band-action">Parcourir</span>
+      <span class="home-scroll-indicator" aria-hidden="true">SCROLL</span>
     </a>
   </section>
 
-  <section class="home-category-band home-band-lexicon home-band-reverse" aria-labelledby="home-lexicon-title">
-    <a class="home-band-link" href="lexique-html/lexique.html">
+  <section class="home-category-band home-band-regions-full" aria-labelledby="home-regions-feature-title">
+    <a class="home-band-link" href="pages/regions/regions.html" aria-label="Explorer les r&eacute;gions du Krosmoz">
       <span class="home-band-media" aria-hidden="true"></span>
       <span class="home-band-content">
-        <span class="home-band-kicker" id="home-lexicon-title">Lexique</span>
-        <strong>Les mots du Krosmoz</strong>
-        <span class="home-band-copy">Retrouvez les notions, peuples, forces et termes importants pour mieux comprendre l'univers.</span>
-        <span class="home-band-meta" aria-hidden="true">
-          <span>Notions</span>
-          <span>Peuples</span>
-          <span>Magies</span>
-        </span>
+        <strong id="home-regions-feature-title">LES R&Eacute;GIONS</strong>
+        <span class="home-band-copy">Traversez les cit&eacute;s, les &icirc;les et les territoires qui composent le Monde des Douze.</span>
       </span>
-      <span class="home-band-action">Consulter</span>
+      <span class="home-scroll-indicator" aria-hidden="true">SCROLL</span>
     </a>
   </section>
 
-  <section class="home-category-band home-band-personality" aria-labelledby="home-personality-title">
-    <a class="home-band-link" href="jeux-html/jeux.html">
+  <section class="home-category-band home-band-lexique-full" aria-labelledby="home-lexique-feature-title">
+    <a class="home-band-link" href="pages/lexique/lexique.html" aria-label="Explorer le lexique du Krosmoz">
       <span class="home-band-media" aria-hidden="true"></span>
       <span class="home-band-content">
-        <span class="home-band-kicker" id="home-personality-title">Jeux</span>
-        <strong>Défis du Krosmoz</strong>
-        <span class="home-band-copy">Lancez le test de personnalité ou tentez le grand quiz aléatoire pour mesurer vos repères sur l'univers.</span>
-        <span class="home-band-meta" aria-hidden="true">
-          <span>Personnalité</span>
-          <span>Quiz</span>
-          <span>Score</span>
-        </span>
+        <strong id="home-lexique-feature-title">LE LEXIQUE</strong>
+        <span class="home-band-copy">D&eacute;chiffrez les noms, les peuples et les notions qui traversent les r&eacute;cits du Krosmoz.</span>
       </span>
-      <span class="home-band-action">Jouer</span>
+      <span class="home-scroll-indicator" aria-hidden="true">SCROLL</span>
     </a>
   </section>
+
+  <section class="home-category-band home-band-jeux-full" aria-labelledby="home-jeux-feature-title">
+    <a class="home-band-link" href="pages/jeux/jeux.html" aria-label="Explorer les jeux du Krosmoz">
+      <span class="home-band-media" aria-hidden="true"></span>
+      <span class="home-band-content">
+        <strong id="home-jeux-feature-title">LES JEUX</strong>
+        <span class="home-band-copy">Lancez les d&eacute;fis, quiz et exp&eacute;riences ludiques pour tester vos rep&egrave;res dans le Krosmoz.</span>
+      </span>
+    </a>
+  </section>
+
 </main>
 <button class="back-to-top" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut">
   <span aria-hidden="true">↑</span>
@@ -132,147 +117,147 @@
   const categoryBands = document.querySelectorAll('.home-category-band');
   const navLinks = document.querySelectorAll('.top-nav a.nav-link[href]');
   const railCharacters = [
-    { href: 'personnages-html/adamai.html', image: 'assets/personnages/ADAMAI.webp', alt: 'Adamaï', name: 'Adamaï', role: 'DRAGON ELIATROPE' },
-    { href: 'personnages-html/aerafal.html', image: 'assets/personnages/AERAFAL.webp', alt: 'Aerafal', name: 'Aerafal', role: 'DRAGON' },
-    { href: 'personnages-html/agard.html', image: 'assets/personnages/AGARD.webp', alt: 'Agard', name: 'Agard', role: 'Forgelance' },
-    { href: 'personnages-html/aguabrial.html', image: 'assets/personnages/AGUABRIAL.webp', alt: 'Aguabrial', name: 'Aguabrial', role: 'DRAGON' },
-    { href: 'personnages-html/alibert.html', image: 'assets/personnages/ALIBERT.webp', alt: 'Alibert', name: 'Alibert', role: 'ENUTROF' },
-    { href: 'personnages-html/amalia-sheran-sharm.html', image: 'assets/personnages/AMALIA.webp', alt: 'Amalia Sheran Sharm', name: 'Amalia Sheran Sharm', role: 'SADIDA' },
-    { href: 'personnages-html/anathar.html', image: 'assets/personnages/ANATHAR.webp', alt: 'Anathar', name: 'Anathar', role: 'Shushu' },
-    { href: 'personnages-html/armant-sheran-sharm.html', image: 'assets/personnages/ARMANT.webp', alt: 'Armant Sheran Sharm', name: 'Armant Sheran Sharm', role: 'SADIDA' },
-    { href: 'personnages-html/arpagone.html', image: 'assets/personnages/ARPAGONE.webp', alt: 'Arpagone', name: 'Arpagone', role: 'ENUTROF' },
-    { href: 'personnages-html/arty.html', image: 'assets/personnages/ARTY.webp', alt: 'Arty', name: 'Arty', role: 'Féca' },
-    { href: 'personnages-html/atcham-crepin.html', image: 'assets/personnages/ATCHAM.webp', alt: 'Atcham Crépin', name: 'Atcham Crépin', role: 'ÉCAFLIP' },
-    { href: 'personnages-html/atone.html', image: 'assets/personnages/ATONE.webp', alt: 'Atone', name: 'Atone', role: 'Eliotrope' },
-    { href: 'personnages-html/aurora.html', image: 'assets/personnages/AURORA.webp', alt: 'Aurora', name: 'Aurora', role: 'OSAMODAS' },
-    { href: 'personnages-html/bakara-jurgen.html', image: 'assets/personnages/BAKARA JURGEN.webp', alt: 'Bakara Jurgen', name: 'Bakara Jurgen', role: 'Huppermage' },
-    { href: 'personnages-html/balthazar.html', image: 'assets/personnages/cartes/balthazar.webp', alt: 'Baltazar', name: 'Baltazar', role: 'DRAGON ELIATROPE' },
-    { href: 'personnages-html/belladone.html', image: 'assets/personnages/BELLADONE.webp', alt: 'Belladone', name: 'Belladone', role: 'Eniripsa' },
-    { href: 'personnages-html/bellaphone.html', image: 'assets/personnages/BELLAPHONE.webp', alt: 'Bellaphone', name: 'Bellaphone', role: 'Monstre' },
-    { href: 'personnages-html/biste.html', image: 'assets/personnages/BISTE.webp', alt: 'Biste', name: 'Biste', role: 'Iop' },
-    { href: 'personnages-html/bolgrot.html', image: 'assets/personnages/BOLGROT.webp', alt: 'Bolgrot', name: 'Bolgrot', role: 'Dragon' },
-    { href: 'personnages-html/bordegann.html', image: 'assets/personnages/BORDEGANN.webp', alt: 'Bordegann', name: 'Bordegann', role: 'Forgelance' },
-    { href: 'personnages-html/bouillon.html', image: 'assets/personnages/BOUILLON.webp', alt: 'Bouillon', name: 'Bouillon', role: 'Eliotrope' },
-    { href: 'personnages-html/bump.html', image: 'assets/personnages/BUMP.webp', alt: 'Bump', name: 'Bump', role: 'FÉCA' },
-    { href: 'personnages-html/cadence.html', image: 'assets/personnages/CADENCE.webp', alt: 'Cadence', name: 'Cadence', role: 'Xélor' },
-    { href: 'personnages-html/chaille.html', image: 'assets/personnages/CHAILLE.webp', alt: 'Chaille', name: 'Chaille', role: 'Ouginak' },
-    { href: 'personnages-html/chene-mou.html', image: 'assets/personnages/CHENE MOU.webp', alt: 'Chêne Mou', name: 'Chêne Mou', role: 'Monstre' },
-    { href: 'personnages-html/chevalier-justice.html', image: 'assets/personnages/CHEVALIER JUSTICE.webp', alt: 'Chevalier Justice', name: 'Chevalier Justice', role: 'Iop' },
-    { href: 'personnages-html/chibi.html', image: 'assets/personnages/CHIBI.webp', alt: 'Chibi', name: 'Chibi', role: 'ELIATROPE' },
-    { href: 'personnages-html/cire-momore.html', image: 'assets/personnages/CIRE MOMORE.webp', alt: 'Cire Momore', name: 'Cire Momore', role: 'Maudit' },
-    { href: 'personnages-html/cleophee.html', image: 'assets/personnages/CLEOPHEE.webp', alt: 'Cléophée', name: 'Cléophée', role: 'CRA' },
-    { href: 'personnages-html/comte-harebourg.html', image: 'assets/personnages/COMTE HAREBOURG.webp', alt: 'Comte Harebourg', name: 'Comte Harebourg', role: 'XELOR' },
-    { href: 'personnages-html/coqueline.html', image: 'assets/personnages/COQUELINE.webp', alt: 'Coqueline', name: 'Coqueline', role: 'OSAMODAS' },
-    { href: 'personnages-html/corbeau-noir.html', image: 'assets/personnages/CORBEAU NOIR.webp', alt: 'Corbeau Noir', name: 'Corbeau Noir', role: 'Osamodas' },
-    { href: 'personnages-html/cornu-mollu.html', image: 'assets/personnages/CORNU MOLLU.webp', alt: 'Cornu Mollu', name: 'Cornu Mollu', role: 'Sadida/Iop' },
-    { href: 'personnages-html/echo.html', image: 'assets/personnages/cartes/echo.webp', alt: 'Dame Echo', name: 'Dame Echo', role: 'ENIRIPSA' },
-    { href: 'personnages-html/dardondakal.html', image: 'assets/personnages/DARDONDAKAL.webp', alt: 'Dardondakal', name: 'Dardondakal', role: 'DRAGON' },
-    { href: 'personnages-html/dark-vlad.html', image: 'assets/personnages/DARK VLAD.webp', alt: 'Dark Vlad', name: 'Dark Vlad', role: 'Iop' },
-    { href: 'personnages-html/dathura.html', image: 'assets/personnages/DATHURA.webp', alt: 'Dathura', name: 'Dathura', role: 'SADIDA' },
-    { href: 'personnages-html/deesse-cra.html', image: 'assets/personnages/DEESSE CRA.webp', alt: 'Déesse Cra', name: 'Déesse Cra', role: 'CRA' },
-    { href: 'personnages-html/deesse-eniripsa.html', image: 'assets/personnages/DEESSE ENIRIPSA.webp', alt: 'Déesse Eniripsa', name: 'Déesse Eniripsa', role: 'ENIRIPSA' },
-    { href: 'personnages-html/deesse-feca.html', image: 'assets/personnages/DEESSE FECA.webp', alt: 'Déesse Féca', name: 'Déesse Féca', role: 'FÉCA' },
-    { href: 'personnages-html/deesse-panda.html', image: 'assets/personnages/DEESSE PANDA.webp', alt: 'Déesse Panda', name: 'Déesse Panda', role: 'PANDAWA' },
-    { href: 'personnages-html/deesse-sacrieur.html', image: 'assets/personnages/DEESSE SACRIEUR.webp', alt: 'Déesse Sacrieur', name: 'Déesse Sacrieur', role: 'SACRIEUR' },
-    { href: 'personnages-html/desperia.html', image: 'assets/personnages/DESPERIA.webp', alt: 'Desperia', name: 'Desperia', role: 'Eliotrope' },
-    { href: 'personnages-html/dieu-ecaflip.html', image: 'assets/personnages/DIEU ECAFLIP.webp', alt: 'Dieu Écaflip', name: 'Dieu Écaflip', role: 'ÉCAFLIP' },
-    { href: 'personnages-html/dieu-enutrof.html', image: 'assets/personnages/DIEU ENUTROF.webp', alt: 'Dieu Enutrof', name: 'Dieu Enutrof', role: 'ENUTROF' },
-    { href: 'personnages-html/dieu-iop.html', image: 'assets/personnages/DIEU IOP.webp', alt: 'Dieu Iop', name: 'Dieu Iop', role: 'IOP' },
-    { href: 'personnages-html/dieu-osamodas.html', image: 'assets/personnages/DIEU OSAMODAS.webp', alt: 'Dieu Osamodas', name: 'Dieu Osamodas', role: 'OSAMODAS' },
-    { href: 'personnages-html/dieu-ouginak.html', image: 'assets/personnages/DIEU OUGINAK.webp', alt: 'Dieu Ouginak', name: 'Dieu Ouginak', role: 'Ouginak' },
-    { href: 'personnages-html/dieu-sadida.html', image: 'assets/personnages/DIEU SADIDA.webp', alt: 'Dieu Sadida', name: 'Dieu Sadida', role: 'SADIDA' },
-    { href: 'personnages-html/dieu-sram.html', image: 'assets/personnages/DIEU SRAM.webp', alt: 'Dieu Sram', name: 'Dieu Sram', role: 'SRAM' },
-    { href: 'personnages-html/dieu-xelor.html', image: 'assets/personnages/DIEU XELOR.webp', alt: 'Dieu Xélor', name: 'Dieu Xélor', role: 'XÉLOR' },
-    { href: 'personnages-html/djaul.html', image: 'assets/personnages/DJAUL.webp', alt: 'Djaul', name: 'Djaul', role: 'Shushu' },
-    { href: 'personnages-html/dragon-cochon.html', image: 'assets/personnages/DRAGON COCHON.webp', alt: 'Dragon Cochon', name: 'Dragon Cochon', role: 'Monstre' },
-    { href: 'personnages-html/efrim.html', image: 'assets/personnages/NORA EFRIM.webp', alt: 'Efrim', name: 'Efrim', role: 'Dragon eliatrope' },
-    { href: 'personnages-html/elaine-encre-noir.html', image: 'assets/personnages/ELAINE ENCRE NOIR.webp', alt: 'Elaine & Encre noir', name: 'Elaine & Encre noir', role: 'Roublard' },
-    { href: 'personnages-html/elante.html', image: 'assets/personnages/ELANTE.webp', alt: 'Élante', name: 'Élante', role: 'MONSTRE' },
-    { href: 'personnages-html/elely-de-percedal.html', image: 'assets/personnages/ELELY.webp', alt: 'Elely de Percedal', name: 'Elely de Percedal', role: 'IOP' },
-    { href: 'personnages-html/evangelyne.html', image: 'assets/personnages/EVA.webp', alt: 'Évangelyne', name: 'Évangelyne', role: 'CRA' },
-    { href: 'personnages-html/flopin-de-percedal.html', image: 'assets/personnages/FLOPIN.webp', alt: 'Flopin de Percedal', name: 'Flopin de Percedal', role: 'CRA' },
-    { href: 'personnages-html/frida-mofette.html', image: 'assets/personnages/FRIDA MOFETTE.webp', alt: 'Frida Mofette', name: 'Frida Mofette', role: 'Steamer' },
-    { href: 'personnages-html/glip.html', image: 'assets/personnages/GLIP.webp', alt: 'Glip', name: 'Glip', role: 'ELIATROPE' },
-    { href: 'personnages-html/goultard.html', image: 'assets/personnages/GOULTARD.webp', alt: 'Goultard', name: 'Goultard', role: 'IOP' },
-    { href: 'personnages-html/grand-dragon.html', image: 'assets/personnages/GRAND DRAGON.webp', alt: 'Grand Dragon', name: 'Grand Dragon', role: 'DRAGON' },
-    { href: 'personnages-html/grany-smisse.html', image: 'assets/personnages/REMINGTON GRANY SMISSE.webp', alt: 'Grany Smisse', name: 'Grany Smisse', role: 'Roublard' },
-    { href: 'personnages-html/grougaloragran.html', image: 'assets/personnages/GROUGALORAGRAN.webp', alt: 'Grougaloragran', name: 'Grougaloragran', role: 'DRAGON ELIATROPE' },
-    { href: 'personnages-html/grougalorasalar.html', image: 'assets/personnages/GROUGALORASALAR.webp', alt: 'Grougalorasalar', name: 'Grougalorasalar', role: 'DRAGON' },
-    { href: 'personnages-html/gruffon.html', image: 'assets/personnages/GRUFFON.webp', alt: 'Grufon', name: 'Grufon', role: 'SHUSHU' },
-    { href: 'personnages-html/hyrkul.html', image: 'assets/personnages/HYRKUL.webp', alt: 'Hyrkul', name: 'Hyrkul', role: 'Féca' },
-    { href: 'personnages-html/ignemikhal.html', image: 'assets/personnages/IGNEMIKHAL.webp', alt: 'Ignemikhal', name: 'Ignemikhal', role: 'DRAGON' },
-    { href: 'personnages-html/igole.html', image: 'assets/personnages/IGOLE.webp', alt: 'Igole', name: 'Igole', role: 'Monstre' },
-    { href: 'personnages-html/indie-delagrandaventure.html', image: 'assets/personnages/INDIE DELAGRANDAVENTURE.webp', alt: 'Indie Delagrandaventure', name: 'Indie Delagrandaventure', role: 'Ouginak' },
-    { href: 'personnages-html/jahash-jurgen.html', image: 'assets/personnages/JAHASH JURGEN.webp', alt: 'Jahash Jurgen', name: 'Jahash Jurgen', role: 'Huppermage' },
-    { href: 'personnages-html/jiva.html', image: 'assets/personnages/JIVA.webp', alt: 'Jiva', name: 'Jiva', role: 'Divinité' },
-    { href: 'personnages-html/joris-jurgen.html', image: 'assets/personnages/JORIS.webp', alt: 'Joris Jurgen', name: 'Joris Jurgen', role: 'INCONNUE' },
-    { href: 'personnages-html/julith-abigor.html', image: 'assets/personnages/JULITH ABIGOR.webp', alt: 'Julith Abigor', name: 'Julith Abigor', role: 'Huppermage' },
-    { href: 'personnages-html/kali.html', image: 'assets/personnages/KALI.webp', alt: 'Kali', name: 'Kali', role: 'Sacrieur' },
-    { href: 'personnages-html/karn.html', image: 'assets/personnages/KARN.webp', alt: 'Karn', name: 'Karn', role: 'IOP' },
-    { href: 'personnages-html/katar.html', image: 'assets/personnages/KATAR.webp', alt: 'Katar', name: 'Katar', role: 'Sacrieur' },
-    { href: 'personnages-html/kerubim-crepin.html', image: 'assets/personnages/KERUBIM.webp', alt: 'Kérubim Crépin', name: 'Kérubim Crépin', role: 'ÉCAFLIP' },
-    { href: 'personnages-html/khan-karkass.html', image: 'assets/personnages/KHAN KARKASS.webp', alt: 'Khan Karkass', name: 'Khan Karkass', role: 'Iop' },
-    { href: 'personnages-html/kriss-la-krass.html', image: 'assets/personnages/kriss la krass.webp', alt: 'Kriss la Krass', name: 'Kriss la Krass', role: 'Sacrieur' },
-    { href: 'personnages-html/grande-deesse-eliatrope.html', image: 'assets/personnages/GRANDE DEESSE.webp', alt: 'La Déesse Éliatrope', name: 'La Déesse Éliatrope', role: 'ELIATROPE' },
-    { href: 'personnages-html/lancedur.html', image: 'assets/personnages/LANCEDUR.webp', alt: 'Lance Dur', name: 'Lance Dur', role: 'FORGELANCE' },
-    { href: 'personnages-html/les-miss-moches.html', image: 'assets/personnages/MISS MOCHE.webp', alt: 'Les Miss Moches', name: 'Les Miss Moches', role: 'Inconnue' },
-    { href: 'personnages-html/lilotte.html', image: 'assets/personnages/LILOTTE.webp', alt: 'Lilotte', name: 'Lilotte', role: 'Ouginak' },
-    { href: 'personnages-html/lokus.html', image: 'assets/personnages/LOKUS.webp', alt: 'Lokus', name: 'Lokus', role: 'Mechasme' },
-    { href: 'personnages-html/lou.html', image: 'assets/personnages/LOU.webp', alt: 'Lou', name: 'Lou', role: 'Ouginak' },
-    { href: 'personnages-html/luis.html', image: 'assets/personnages/LUIS.webp', alt: 'Luis', name: 'Luis', role: 'Shushu' },
-    { href: 'personnages-html/madagaskan.html', image: 'assets/personnages/MADAGASKAN.webp', alt: 'Madagaskan', name: 'Madagaskan', role: 'CRA' },
-    { href: 'personnages-html/maskemane.html', image: 'assets/personnages/MASKEMANE.webp', alt: 'Maskemane', name: 'Maskemane', role: 'Zobal' },
-    { href: 'personnages-html/maude.html', image: 'assets/personnages/MAUDE.webp', alt: 'Maude', name: 'Maude', role: 'Sram' },
-    { href: 'personnages-html/medoroziam.html', image: 'assets/personnages/MEDOROZIAM.webp', alt: 'Médoroziam', name: 'Médoroziam', role: 'Démon' },
-    { href: 'personnages-html/mina.html', image: 'assets/personnages/MINA.webp', alt: 'Mina', name: 'Mina', role: 'Éliatrope' },
-    { href: 'personnages-html/miranda.html', image: 'assets/personnages/MIRANDA.webp', alt: 'Miranda', name: 'Miranda', role: 'Ecaflip' },
-    { href: 'personnages-html/monsieur-m.html', image: 'assets/personnages/cartes/monsieur-m.webp', alt: 'Monsieur M', name: 'Monsieur M', role: 'Inconnue' },
-    { href: 'personnages-html/moon.html', image: 'assets/personnages/MOON.webp', alt: 'Moon', name: 'Moon', role: 'Monstre' },
-    { href: 'personnages-html/mouche.html', image: 'assets/personnages/MOUCHE.webp', alt: 'Mouche', name: 'Mouche', role: 'Crâ' },
-    { href: 'personnages-html/moumoune-stroud.html', image: 'assets/personnages/cartes/moumoune-stroud.webp', alt: 'Moumoune Stroud', name: 'Moumoune Stroud', role: 'Enutrof' },
-    { href: 'personnages-html/nimoda.html', image: 'assets/personnages/NIMODA.webp', alt: 'Nimoda', name: 'Nimoda', role: 'OSAMODAS' },
-    { href: 'personnages-html/nora.html', image: 'assets/personnages/NORA EFRIM.webp', alt: 'Nora', name: 'Nora', role: 'Eliatrope' },
-    { href: 'personnages-html/nox.html', image: 'assets/personnages/NOX.webp', alt: 'Nox', name: 'Nox', role: 'XELOR' },
-    { href: 'personnages-html/ogrest.html', image: 'assets/personnages/OGREST.webp', alt: 'Ogrest', name: 'Ogrest', role: 'OGRE' },
-    { href: 'personnages-html/otomai.html', image: 'assets/personnages/OTOMAI.webp', alt: 'Otomaï', name: 'Otomaï', role: 'Féca' },
-    { href: 'personnages-html/ombrage.html', image: 'assets/personnages/OMBRAGE.webp', alt: 'Ombrage', name: 'Ombrage', role: 'Shushu' },
-    { href: 'personnages-html/orgonax.html', image: 'assets/personnages/ORGONAX.webp', alt: 'Orgonax', name: 'Orgonax', role: 'Mechasme' },
-    { href: 'personnages-html/oropo.html', image: 'assets/personnages/OROPO.webp', alt: 'Oropo', name: 'Oropo', role: 'ELIOTROPE' },
-    { href: 'personnages-html/pandiego-de-la-vega.html', image: 'assets/personnages/PANDIEGO DE LA VEGA.webp', alt: 'Pandiego de la Vega', name: 'Pandiego de la Vega', role: 'Pandawa' },
-    { href: 'personnages-html/pandora.html', image: 'assets/personnages/PANDORA.webp', alt: 'Pandora', name: 'Pandora', role: 'Voyageur temporel' },
-    { href: 'personnages-html/percimol.html', image: 'assets/personnages/cartes/percimol.webp', alt: 'Percimol', name: 'Percimol', role: 'Monstre' },
-    { href: 'personnages-html/phaeris.html', image: 'assets/personnages/cartes/phaeris.webp', alt: 'Phaeris le puissant', name: 'Phaeris le puissant', role: 'Dragon eliatrope' },
-    { href: 'personnages-html/pin-de-percedal.html', image: 'assets/personnages/PIN.webp', alt: 'Pin de Percedal', name: 'Pin de Percedal', role: 'IOP' },
-    { href: 'personnages-html/poo.html', image: 'assets/personnages/POO.webp', alt: 'Poo', name: 'Poo', role: 'PANDAWA' },
-    { href: 'personnages-html/prince-adale.html', image: 'assets/personnages/PRINCE ADALE.webp', alt: 'Prince Adale', name: 'Prince Adale', role: 'Steamer' },
-    { href: 'personnages-html/prince-de-brakmar.html', image: 'assets/personnages/PRINCE DE BRAKMAR.webp', alt: 'Prince de Brakmar', name: 'Prince de Brakmar', role: 'Sram' },
-    { href: 'personnages-html/qilby.html', image: 'assets/personnages/QILBY.webp', alt: 'Qilby', name: 'Qilby', role: 'ELIATROPE' },
-    { href: 'personnages-html/rasha.html', image: 'assets/personnages/RASHA.webp', alt: 'Rasha', name: 'Rasha', role: 'Démon' },
-    { href: 'personnages-html/razortemps.html', image: 'assets/personnages/RAZORTEMPS.webp', alt: 'Razortemps', name: 'Razortemps', role: 'Machine de Nox' },
-    { href: 'personnages-html/reines-de-bonta.html', image: 'assets/personnages/REINES DE BONTA.webp', alt: 'Reines de Bonta', name: 'Reines de Bonta', role: 'Inconnue' },
-    { href: 'personnages-html/remington-smisse.html', image: 'assets/personnages/REMINGTON GRANY SMISSE.webp', alt: 'Remington Smisse', name: 'Remington Smisse', role: 'Roublard' },
-    { href: 'personnages-html/ripulse.html', image: 'assets/personnages/RIPULSE.webp', alt: 'Ripulse', name: 'Ripulse', role: 'Eliotrope' },
-    { href: 'personnages-html/roi-osamodas.html', image: 'assets/personnages/ROI OSAMODAS.webp', alt: 'Roi Osamodas', name: 'Roi Osamodas', role: 'OSAMODAS' },
-    { href: 'personnages-html/roi-sheran-sharm.html', image: 'assets/personnages/ROI_SHERAN_SHARM.webp', alt: 'Roi Sheran Sharm', name: 'Roi Sheran Sharm', role: 'SADIDA' },
-    { href: 'personnages-html/rotalstrom.html', image: 'assets/personnages/ROTALSTROM.webp', alt: 'Rotalstrom', name: 'Rotalstrom', role: 'Dragon' },
-    { href: 'personnages-html/rubilax.html', image: 'assets/personnages/RUBILAX.webp', alt: 'Rubilax', name: 'Rubilax', role: 'SHUSHU' },
-    { href: 'personnages-html/ruel-stroud.html', image: 'assets/personnages/RUEL.webp', alt: 'Ruel Stroud', name: 'Ruel Stroud', role: 'ENUTROF' },
-    { href: 'personnages-html/rushu.html', image: 'assets/personnages/RUSHU.webp', alt: 'Rushu', name: 'Rushu', role: 'DÉMON' },
-    { href: 'personnages-html/shinonome.html', image: 'assets/personnages/SHINONOME.webp', alt: 'Shinonomé', name: 'Shinonomé', role: 'Dragon eliatrope' },
-    { href: 'personnages-html/sidaire.html', image: 'assets/personnages/SIDAIRE.webp', alt: 'Sidaire', name: 'Sidaire', role: 'Eliotrope' },
-    { href: 'personnages-html/simone.html', image: 'assets/personnages/SIMONE.webp', alt: 'Simone', name: 'Simone', role: 'Osamodas' },
-    { href: 'personnages-html/sipho.html', image: 'assets/personnages/SIPHO.webp', alt: 'Sipho', name: 'Sipho', role: 'DRAGON' },
-    { href: 'personnages-html/terrakourial.html', image: 'assets/personnages/TERRAKOURIAL.webp', alt: 'Terrakourial', name: 'Terrakourial', role: 'DRAGON' },
-    { href: 'personnages-html/toross-mordal.html', image: 'assets/personnages/TOROSS.webp', alt: 'Toross Mordal', name: 'Toross Mordal', role: 'IOP' },
-    { href: 'personnages-html/toxine.html', image: 'assets/personnages/TOXINE.webp', alt: 'Toxine', name: 'Toxine', role: 'Sram' },
-    { href: 'personnages-html/tristepin.html', image: 'assets/personnages/TRISTEPIN.webp', alt: 'Tristepin de Percedal', name: 'Tristepin de Percedal', role: 'IOP' },
-    { href: 'personnages-html/uk-not-allag.html', image: 'assets/personnages/UK NOT ALLAG.webp', alt: 'Uk’Not’Allag', name: 'Uk’Not’Allag', role: 'SHUSHU' },
-    { href: 'personnages-html/ush-galesh.html', image: 'assets/personnages/USH GALESH.webp', alt: 'Ush Galesh', name: 'Ush Galesh', role: 'ÉCAFLIP' },
-    { href: 'personnages-html/vampyro.html', image: 'assets/personnages/VAMPYRO.webp', alt: 'Vampyro', name: 'Vampyro', role: 'Iop' },
-    { href: 'personnages-html/wa-wabbit.html', image: 'assets/personnages/WA WABBIT.webp', alt: 'Wa Wabbit', name: 'Wa Wabbit', role: 'Monstre' },
-    { href: 'personnages-html/xav-le-boulanger.html', image: 'assets/personnages/XAV LE BOULANGER.webp', alt: 'Xav le Boulanger', name: 'Xav le Boulanger', role: 'Inconnue' },
-    { href: 'personnages-html/yrehn.html', image: 'assets/personnages/YREHN.webp', alt: 'Yrehn', name: 'Yrehn', role: 'OSAMODAS' },
-    { href: 'personnages-html/yugo.html', image: 'assets/personnages/YUGO.webp', alt: 'Yugo', name: 'Yugo', role: 'ELIATROPE' }
+    { href: 'pages/personnages/adamai.html', image: 'assets/personnages/ADAMAI.webp', alt: 'Adamaï', name: 'Adamaï', role: 'DRAGON ELIATROPE' },
+    { href: 'pages/personnages/aerafal.html', image: 'assets/personnages/AERAFAL.webp', alt: 'Aerafal', name: 'Aerafal', role: 'DRAGON' },
+    { href: 'pages/personnages/agard.html', image: 'assets/personnages/AGARD.webp', alt: 'Agard', name: 'Agard', role: 'Forgelance' },
+    { href: 'pages/personnages/aguabrial.html', image: 'assets/personnages/AGUABRIAL.webp', alt: 'Aguabrial', name: 'Aguabrial', role: 'DRAGON' },
+    { href: 'pages/personnages/alibert.html', image: 'assets/personnages/ALIBERT.webp', alt: 'Alibert', name: 'Alibert', role: 'ENUTROF' },
+    { href: 'pages/personnages/amalia-sheran-sharm.html', image: 'assets/personnages/AMALIA.webp', alt: 'Amalia Sheran Sharm', name: 'Amalia Sheran Sharm', role: 'SADIDA' },
+    { href: 'pages/personnages/anathar.html', image: 'assets/personnages/ANATHAR.webp', alt: 'Anathar', name: 'Anathar', role: 'Shushu' },
+    { href: 'pages/personnages/armant-sheran-sharm.html', image: 'assets/personnages/ARMANT.webp', alt: 'Armant Sheran Sharm', name: 'Armant Sheran Sharm', role: 'SADIDA' },
+    { href: 'pages/personnages/arpagone.html', image: 'assets/personnages/ARPAGONE.webp', alt: 'Arpagone', name: 'Arpagone', role: 'ENUTROF' },
+    { href: 'pages/personnages/arty.html', image: 'assets/personnages/ARTY.webp', alt: 'Arty', name: 'Arty', role: 'Féca' },
+    { href: 'pages/personnages/atcham-crepin.html', image: 'assets/personnages/ATCHAM.webp', alt: 'Atcham Crépin', name: 'Atcham Crépin', role: 'ÉCAFLIP' },
+    { href: 'pages/personnages/atone.html', image: 'assets/personnages/ATONE.webp', alt: 'Atone', name: 'Atone', role: 'Eliotrope' },
+    { href: 'pages/personnages/aurora.html', image: 'assets/personnages/AURORA.webp', alt: 'Aurora', name: 'Aurora', role: 'OSAMODAS' },
+    { href: 'pages/personnages/bakara-jurgen.html', image: 'assets/personnages/BAKARA JURGEN.webp', alt: 'Bakara Jurgen', name: 'Bakara Jurgen', role: 'Huppermage' },
+    { href: 'pages/personnages/balthazar.html', image: 'assets/personnages/cartes/balthazar.webp', alt: 'Baltazar', name: 'Baltazar', role: 'DRAGON ELIATROPE' },
+    { href: 'pages/personnages/belladone.html', image: 'assets/personnages/BELLADONE.webp', alt: 'Belladone', name: 'Belladone', role: 'Eniripsa' },
+    { href: 'pages/personnages/bellaphone.html', image: 'assets/personnages/BELLAPHONE.webp', alt: 'Bellaphone', name: 'Bellaphone', role: 'Monstre' },
+    { href: 'pages/personnages/biste.html', image: 'assets/personnages/BISTE.webp', alt: 'Biste', name: 'Biste', role: 'Iop' },
+    { href: 'pages/personnages/bolgrot.html', image: 'assets/personnages/BOLGROT.webp', alt: 'Bolgrot', name: 'Bolgrot', role: 'Dragon' },
+    { href: 'pages/personnages/bordegann.html', image: 'assets/personnages/BORDEGANN.webp', alt: 'Bordegann', name: 'Bordegann', role: 'Forgelance' },
+    { href: 'pages/personnages/bouillon.html', image: 'assets/personnages/BOUILLON.webp', alt: 'Bouillon', name: 'Bouillon', role: 'Eliotrope' },
+    { href: 'pages/personnages/bump.html', image: 'assets/personnages/BUMP.webp', alt: 'Bump', name: 'Bump', role: 'FÉCA' },
+    { href: 'pages/personnages/cadence.html', image: 'assets/personnages/CADENCE.webp', alt: 'Cadence', name: 'Cadence', role: 'Xélor' },
+    { href: 'pages/personnages/chaille.html', image: 'assets/personnages/CHAILLE.webp', alt: 'Chaille', name: 'Chaille', role: 'Ouginak' },
+    { href: 'pages/personnages/chene-mou.html', image: 'assets/personnages/CHENE MOU.webp', alt: 'Chêne Mou', name: 'Chêne Mou', role: 'Monstre' },
+    { href: 'pages/personnages/chevalier-justice.html', image: 'assets/personnages/CHEVALIER JUSTICE.webp', alt: 'Chevalier Justice', name: 'Chevalier Justice', role: 'Iop' },
+    { href: 'pages/personnages/chibi.html', image: 'assets/personnages/CHIBI.webp', alt: 'Chibi', name: 'Chibi', role: 'ELIATROPE' },
+    { href: 'pages/personnages/cire-momore.html', image: 'assets/personnages/CIRE MOMORE.webp', alt: 'Cire Momore', name: 'Cire Momore', role: 'Maudit' },
+    { href: 'pages/personnages/cleophee.html', image: 'assets/personnages/CLEOPHEE.webp', alt: 'Cléophée', name: 'Cléophée', role: 'CRA' },
+    { href: 'pages/personnages/comte-harebourg.html', image: 'assets/personnages/COMTE HAREBOURG.webp', alt: 'Comte Harebourg', name: 'Comte Harebourg', role: 'XELOR' },
+    { href: 'pages/personnages/coqueline.html', image: 'assets/personnages/COQUELINE.webp', alt: 'Coqueline', name: 'Coqueline', role: 'OSAMODAS' },
+    { href: 'pages/personnages/corbeau-noir.html', image: 'assets/personnages/CORBEAU NOIR.webp', alt: 'Corbeau Noir', name: 'Corbeau Noir', role: 'Osamodas' },
+    { href: 'pages/personnages/cornu-mollu.html', image: 'assets/personnages/CORNU MOLLU.webp', alt: 'Cornu Mollu', name: 'Cornu Mollu', role: 'Sadida/Iop' },
+    { href: 'pages/personnages/echo.html', image: 'assets/personnages/cartes/echo.webp', alt: 'Dame Echo', name: 'Dame Echo', role: 'ENIRIPSA' },
+    { href: 'pages/personnages/dardondakal.html', image: 'assets/personnages/DARDONDAKAL.webp', alt: 'Dardondakal', name: 'Dardondakal', role: 'DRAGON' },
+    { href: 'pages/personnages/dark-vlad.html', image: 'assets/personnages/DARK VLAD.webp', alt: 'Dark Vlad', name: 'Dark Vlad', role: 'Iop' },
+    { href: 'pages/personnages/dathura.html', image: 'assets/personnages/DATHURA.webp', alt: 'Dathura', name: 'Dathura', role: 'SADIDA' },
+    { href: 'pages/personnages/deesse-cra.html', image: 'assets/personnages/DEESSE CRA.webp', alt: 'Déesse Cra', name: 'Déesse Cra', role: 'CRA' },
+    { href: 'pages/personnages/deesse-eniripsa.html', image: 'assets/personnages/DEESSE ENIRIPSA.webp', alt: 'Déesse Eniripsa', name: 'Déesse Eniripsa', role: 'ENIRIPSA' },
+    { href: 'pages/personnages/deesse-feca.html', image: 'assets/personnages/DEESSE FECA.webp', alt: 'Déesse Féca', name: 'Déesse Féca', role: 'FÉCA' },
+    { href: 'pages/personnages/deesse-panda.html', image: 'assets/personnages/DEESSE PANDA.webp', alt: 'Déesse Panda', name: 'Déesse Panda', role: 'PANDAWA' },
+    { href: 'pages/personnages/deesse-sacrieur.html', image: 'assets/personnages/DEESSE SACRIEUR.webp', alt: 'Déesse Sacrieur', name: 'Déesse Sacrieur', role: 'SACRIEUR' },
+    { href: 'pages/personnages/desperia.html', image: 'assets/personnages/DESPERIA.webp', alt: 'Desperia', name: 'Desperia', role: 'Eliotrope' },
+    { href: 'pages/personnages/dieu-ecaflip.html', image: 'assets/personnages/DIEU ECAFLIP.webp', alt: 'Dieu Écaflip', name: 'Dieu Écaflip', role: 'ÉCAFLIP' },
+    { href: 'pages/personnages/dieu-enutrof.html', image: 'assets/personnages/DIEU ENUTROF.webp', alt: 'Dieu Enutrof', name: 'Dieu Enutrof', role: 'ENUTROF' },
+    { href: 'pages/personnages/dieu-iop.html', image: 'assets/personnages/DIEU IOP.webp', alt: 'Dieu Iop', name: 'Dieu Iop', role: 'IOP' },
+    { href: 'pages/personnages/dieu-osamodas.html', image: 'assets/personnages/DIEU OSAMODAS.webp', alt: 'Dieu Osamodas', name: 'Dieu Osamodas', role: 'OSAMODAS' },
+    { href: 'pages/personnages/dieu-ouginak.html', image: 'assets/personnages/DIEU OUGINAK.webp', alt: 'Dieu Ouginak', name: 'Dieu Ouginak', role: 'Ouginak' },
+    { href: 'pages/personnages/dieu-sadida.html', image: 'assets/personnages/DIEU SADIDA.webp', alt: 'Dieu Sadida', name: 'Dieu Sadida', role: 'SADIDA' },
+    { href: 'pages/personnages/dieu-sram.html', image: 'assets/personnages/DIEU SRAM.webp', alt: 'Dieu Sram', name: 'Dieu Sram', role: 'SRAM' },
+    { href: 'pages/personnages/dieu-xelor.html', image: 'assets/personnages/DIEU XELOR.webp', alt: 'Dieu Xélor', name: 'Dieu Xélor', role: 'XÉLOR' },
+    { href: 'pages/personnages/djaul.html', image: 'assets/personnages/DJAUL.webp', alt: 'Djaul', name: 'Djaul', role: 'Shushu' },
+    { href: 'pages/personnages/dragon-cochon.html', image: 'assets/personnages/DRAGON COCHON.webp', alt: 'Dragon Cochon', name: 'Dragon Cochon', role: 'Monstre' },
+    { href: 'pages/personnages/efrim.html', image: 'assets/personnages/NORA EFRIM.webp', alt: 'Efrim', name: 'Efrim', role: 'Dragon eliatrope' },
+    { href: 'pages/personnages/elaine-encre-noir.html', image: 'assets/personnages/ELAINE ENCRE NOIR.webp', alt: 'Elaine & Encre noir', name: 'Elaine & Encre noir', role: 'Roublard' },
+    { href: 'pages/personnages/elante.html', image: 'assets/personnages/ELANTE.webp', alt: 'Élante', name: 'Élante', role: 'MONSTRE' },
+    { href: 'pages/personnages/elely-de-percedal.html', image: 'assets/personnages/ELELY.webp', alt: 'Elely de Percedal', name: 'Elely de Percedal', role: 'IOP' },
+    { href: 'pages/personnages/evangelyne.html', image: 'assets/personnages/EVA.webp', alt: 'Évangelyne', name: 'Évangelyne', role: 'CRA' },
+    { href: 'pages/personnages/flopin-de-percedal.html', image: 'assets/personnages/FLOPIN.webp', alt: 'Flopin de Percedal', name: 'Flopin de Percedal', role: 'CRA' },
+    { href: 'pages/personnages/frida-mofette.html', image: 'assets/personnages/FRIDA MOFETTE.webp', alt: 'Frida Mofette', name: 'Frida Mofette', role: 'Steamer' },
+    { href: 'pages/personnages/glip.html', image: 'assets/personnages/GLIP.webp', alt: 'Glip', name: 'Glip', role: 'ELIATROPE' },
+    { href: 'pages/personnages/goultard.html', image: 'assets/personnages/GOULTARD.webp', alt: 'Goultard', name: 'Goultard', role: 'IOP' },
+    { href: 'pages/personnages/grand-dragon.html', image: 'assets/personnages/GRAND DRAGON.webp', alt: 'Grand Dragon', name: 'Grand Dragon', role: 'DRAGON' },
+    { href: 'pages/personnages/grany-smisse.html', image: 'assets/personnages/REMINGTON GRANY SMISSE.webp', alt: 'Grany Smisse', name: 'Grany Smisse', role: 'Roublard' },
+    { href: 'pages/personnages/grougaloragran.html', image: 'assets/personnages/GROUGALORAGRAN.webp', alt: 'Grougaloragran', name: 'Grougaloragran', role: 'DRAGON ELIATROPE' },
+    { href: 'pages/personnages/grougalorasalar.html', image: 'assets/personnages/GROUGALORASALAR.webp', alt: 'Grougalorasalar', name: 'Grougalorasalar', role: 'DRAGON' },
+    { href: 'pages/personnages/gruffon.html', image: 'assets/personnages/GRUFFON.webp', alt: 'Grufon', name: 'Grufon', role: 'SHUSHU' },
+    { href: 'pages/personnages/hyrkul.html', image: 'assets/personnages/HYRKUL.webp', alt: 'Hyrkul', name: 'Hyrkul', role: 'Féca' },
+    { href: 'pages/personnages/ignemikhal.html', image: 'assets/personnages/IGNEMIKHAL.webp', alt: 'Ignemikhal', name: 'Ignemikhal', role: 'DRAGON' },
+    { href: 'pages/personnages/igole.html', image: 'assets/personnages/IGOLE.webp', alt: 'Igole', name: 'Igole', role: 'Monstre' },
+    { href: 'pages/personnages/indie-delagrandaventure.html', image: 'assets/personnages/INDIE DELAGRANDAVENTURE.webp', alt: 'Indie Delagrandaventure', name: 'Indie Delagrandaventure', role: 'Ouginak' },
+    { href: 'pages/personnages/jahash-jurgen.html', image: 'assets/personnages/JAHASH JURGEN.webp', alt: 'Jahash Jurgen', name: 'Jahash Jurgen', role: 'Huppermage' },
+    { href: 'pages/personnages/jiva.html', image: 'assets/personnages/JIVA.webp', alt: 'Jiva', name: 'Jiva', role: 'Divinité' },
+    { href: 'pages/personnages/joris-jurgen.html', image: 'assets/personnages/JORIS.webp', alt: 'Joris Jurgen', name: 'Joris Jurgen', role: 'INCONNUE' },
+    { href: 'pages/personnages/julith-abigor.html', image: 'assets/personnages/JULITH ABIGOR.webp', alt: 'Julith Abigor', name: 'Julith Abigor', role: 'Huppermage' },
+    { href: 'pages/personnages/kali.html', image: 'assets/personnages/KALI.webp', alt: 'Kali', name: 'Kali', role: 'Sacrieur' },
+    { href: 'pages/personnages/karn.html', image: 'assets/personnages/KARN.webp', alt: 'Karn', name: 'Karn', role: 'IOP' },
+    { href: 'pages/personnages/katar.html', image: 'assets/personnages/KATAR.webp', alt: 'Katar', name: 'Katar', role: 'Sacrieur' },
+    { href: 'pages/personnages/kerubim-crepin.html', image: 'assets/personnages/KERUBIM.webp', alt: 'Kérubim Crépin', name: 'Kérubim Crépin', role: 'ÉCAFLIP' },
+    { href: 'pages/personnages/khan-karkass.html', image: 'assets/personnages/KHAN KARKASS.webp', alt: 'Khan Karkass', name: 'Khan Karkass', role: 'Iop' },
+    { href: 'pages/personnages/kriss-la-krass.html', image: 'assets/personnages/kriss la krass.webp', alt: 'Kriss la Krass', name: 'Kriss la Krass', role: 'Sacrieur' },
+    { href: 'pages/personnages/grande-deesse-eliatrope.html', image: 'assets/personnages/GRANDE DEESSE.webp', alt: 'La Déesse Éliatrope', name: 'La Déesse Éliatrope', role: 'ELIATROPE' },
+    { href: 'pages/personnages/lancedur.html', image: 'assets/personnages/LANCEDUR.webp', alt: 'Lance Dur', name: 'Lance Dur', role: 'FORGELANCE' },
+    { href: 'pages/personnages/les-miss-moches.html', image: 'assets/personnages/MISS MOCHE.webp', alt: 'Les Miss Moches', name: 'Les Miss Moches', role: 'Inconnue' },
+    { href: 'pages/personnages/lilotte.html', image: 'assets/personnages/LILOTTE.webp', alt: 'Lilotte', name: 'Lilotte', role: 'Ouginak' },
+    { href: 'pages/personnages/lokus.html', image: 'assets/personnages/LOKUS.webp', alt: 'Lokus', name: 'Lokus', role: 'Mechasme' },
+    { href: 'pages/personnages/lou.html', image: 'assets/personnages/LOU.webp', alt: 'Lou', name: 'Lou', role: 'Ouginak' },
+    { href: 'pages/personnages/luis.html', image: 'assets/personnages/LUIS.webp', alt: 'Luis', name: 'Luis', role: 'Shushu' },
+    { href: 'pages/personnages/madagaskan.html', image: 'assets/personnages/MADAGASKAN.webp', alt: 'Madagaskan', name: 'Madagaskan', role: 'CRA' },
+    { href: 'pages/personnages/maskemane.html', image: 'assets/personnages/MASKEMANE.webp', alt: 'Maskemane', name: 'Maskemane', role: 'Zobal' },
+    { href: 'pages/personnages/maude.html', image: 'assets/personnages/MAUDE.webp', alt: 'Maude', name: 'Maude', role: 'Sram' },
+    { href: 'pages/personnages/medoroziam.html', image: 'assets/personnages/MEDOROZIAM.webp', alt: 'Médoroziam', name: 'Médoroziam', role: 'Démon' },
+    { href: 'pages/personnages/mina.html', image: 'assets/personnages/MINA.webp', alt: 'Mina', name: 'Mina', role: 'Éliatrope' },
+    { href: 'pages/personnages/miranda.html', image: 'assets/personnages/MIRANDA.webp', alt: 'Miranda', name: 'Miranda', role: 'Ecaflip' },
+    { href: 'pages/personnages/monsieur-m.html', image: 'assets/personnages/cartes/monsieur-m.webp', alt: 'Monsieur M', name: 'Monsieur M', role: 'Inconnue' },
+    { href: 'pages/personnages/moon.html', image: 'assets/personnages/MOON.webp', alt: 'Moon', name: 'Moon', role: 'Monstre' },
+    { href: 'pages/personnages/mouche.html', image: 'assets/personnages/MOUCHE.webp', alt: 'Mouche', name: 'Mouche', role: 'Crâ' },
+    { href: 'pages/personnages/moumoune-stroud.html', image: 'assets/personnages/cartes/moumoune-stroud.webp', alt: 'Moumoune Stroud', name: 'Moumoune Stroud', role: 'Enutrof' },
+    { href: 'pages/personnages/nimoda.html', image: 'assets/personnages/NIMODA.webp', alt: 'Nimoda', name: 'Nimoda', role: 'OSAMODAS' },
+    { href: 'pages/personnages/nora.html', image: 'assets/personnages/NORA EFRIM.webp', alt: 'Nora', name: 'Nora', role: 'Eliatrope' },
+    { href: 'pages/personnages/nox.html', image: 'assets/personnages/NOX.webp', alt: 'Nox', name: 'Nox', role: 'XELOR' },
+    { href: 'pages/personnages/ogrest.html', image: 'assets/personnages/OGREST.webp', alt: 'Ogrest', name: 'Ogrest', role: 'OGRE' },
+    { href: 'pages/personnages/otomai.html', image: 'assets/personnages/OTOMAI.webp', alt: 'Otomaï', name: 'Otomaï', role: 'Féca' },
+    { href: 'pages/personnages/ombrage.html', image: 'assets/personnages/OMBRAGE.webp', alt: 'Ombrage', name: 'Ombrage', role: 'Shushu' },
+    { href: 'pages/personnages/orgonax.html', image: 'assets/personnages/ORGONAX.webp', alt: 'Orgonax', name: 'Orgonax', role: 'Mechasme' },
+    { href: 'pages/personnages/oropo.html', image: 'assets/personnages/OROPO.webp', alt: 'Oropo', name: 'Oropo', role: 'ELIOTROPE' },
+    { href: 'pages/personnages/pandiego-de-la-vega.html', image: 'assets/personnages/PANDIEGO DE LA VEGA.webp', alt: 'Pandiego de la Vega', name: 'Pandiego de la Vega', role: 'Pandawa' },
+    { href: 'pages/personnages/pandora.html', image: 'assets/personnages/PANDORA.webp', alt: 'Pandora', name: 'Pandora', role: 'Voyageur temporel' },
+    { href: 'pages/personnages/percimol.html', image: 'assets/personnages/cartes/percimol.webp', alt: 'Percimol', name: 'Percimol', role: 'Monstre' },
+    { href: 'pages/personnages/phaeris.html', image: 'assets/personnages/cartes/phaeris.webp', alt: 'Phaeris le puissant', name: 'Phaeris le puissant', role: 'Dragon eliatrope' },
+    { href: 'pages/personnages/pin-de-percedal.html', image: 'assets/personnages/PIN.webp', alt: 'Pin de Percedal', name: 'Pin de Percedal', role: 'IOP' },
+    { href: 'pages/personnages/poo.html', image: 'assets/personnages/POO.webp', alt: 'Poo', name: 'Poo', role: 'PANDAWA' },
+    { href: 'pages/personnages/prince-adale.html', image: 'assets/personnages/PRINCE ADALE.webp', alt: 'Prince Adale', name: 'Prince Adale', role: 'Steamer' },
+    { href: 'pages/personnages/prince-de-brakmar.html', image: 'assets/personnages/PRINCE DE BRAKMAR.webp', alt: 'Prince de Brakmar', name: 'Prince de Brakmar', role: 'Sram' },
+    { href: 'pages/personnages/qilby.html', image: 'assets/personnages/QILBY.webp', alt: 'Qilby', name: 'Qilby', role: 'ELIATROPE' },
+    { href: 'pages/personnages/rasha.html', image: 'assets/personnages/RASHA.webp', alt: 'Rasha', name: 'Rasha', role: 'Démon' },
+    { href: 'pages/personnages/razortemps.html', image: 'assets/personnages/RAZORTEMPS.webp', alt: 'Razortemps', name: 'Razortemps', role: 'Machine de Nox' },
+    { href: 'pages/personnages/reines-de-bonta.html', image: 'assets/personnages/REINES DE BONTA.webp', alt: 'Reines de Bonta', name: 'Reines de Bonta', role: 'Inconnue' },
+    { href: 'pages/personnages/remington-smisse.html', image: 'assets/personnages/REMINGTON GRANY SMISSE.webp', alt: 'Remington Smisse', name: 'Remington Smisse', role: 'Roublard' },
+    { href: 'pages/personnages/ripulse.html', image: 'assets/personnages/RIPULSE.webp', alt: 'Ripulse', name: 'Ripulse', role: 'Eliotrope' },
+    { href: 'pages/personnages/roi-osamodas.html', image: 'assets/personnages/ROI OSAMODAS.webp', alt: 'Roi Osamodas', name: 'Roi Osamodas', role: 'OSAMODAS' },
+    { href: 'pages/personnages/roi-sheran-sharm.html', image: 'assets/personnages/ROI_SHERAN_SHARM.webp', alt: 'Roi Sheran Sharm', name: 'Roi Sheran Sharm', role: 'SADIDA' },
+    { href: 'pages/personnages/rotalstrom.html', image: 'assets/personnages/ROTALSTROM.webp', alt: 'Rotalstrom', name: 'Rotalstrom', role: 'Dragon' },
+    { href: 'pages/personnages/rubilax.html', image: 'assets/personnages/RUBILAX.webp', alt: 'Rubilax', name: 'Rubilax', role: 'SHUSHU' },
+    { href: 'pages/personnages/ruel-stroud.html', image: 'assets/personnages/RUEL.webp', alt: 'Ruel Stroud', name: 'Ruel Stroud', role: 'ENUTROF' },
+    { href: 'pages/personnages/rushu.html', image: 'assets/personnages/RUSHU.webp', alt: 'Rushu', name: 'Rushu', role: 'DÉMON' },
+    { href: 'pages/personnages/shinonome.html', image: 'assets/personnages/SHINONOME.webp', alt: 'Shinonomé', name: 'Shinonomé', role: 'Dragon eliatrope' },
+    { href: 'pages/personnages/sidaire.html', image: 'assets/personnages/SIDAIRE.webp', alt: 'Sidaire', name: 'Sidaire', role: 'Eliotrope' },
+    { href: 'pages/personnages/simone.html', image: 'assets/personnages/SIMONE.webp', alt: 'Simone', name: 'Simone', role: 'Osamodas' },
+    { href: 'pages/personnages/sipho.html', image: 'assets/personnages/SIPHO.webp', alt: 'Sipho', name: 'Sipho', role: 'DRAGON' },
+    { href: 'pages/personnages/terrakourial.html', image: 'assets/personnages/TERRAKOURIAL.webp', alt: 'Terrakourial', name: 'Terrakourial', role: 'DRAGON' },
+    { href: 'pages/personnages/toross-mordal.html', image: 'assets/personnages/TOROSS.webp', alt: 'Toross Mordal', name: 'Toross Mordal', role: 'IOP' },
+    { href: 'pages/personnages/toxine.html', image: 'assets/personnages/TOXINE.webp', alt: 'Toxine', name: 'Toxine', role: 'Sram' },
+    { href: 'pages/personnages/tristepin.html', image: 'assets/personnages/TRISTEPIN.webp', alt: 'Tristepin de Percedal', name: 'Tristepin de Percedal', role: 'IOP' },
+    { href: 'pages/personnages/uk-not-allag.html', image: 'assets/personnages/UK NOT ALLAG.webp', alt: 'Uk’Not’Allag', name: 'Uk’Not’Allag', role: 'SHUSHU' },
+    { href: 'pages/personnages/ush-galesh.html', image: 'assets/personnages/USH GALESH.webp', alt: 'Ush Galesh', name: 'Ush Galesh', role: 'ÉCAFLIP' },
+    { href: 'pages/personnages/vampyro.html', image: 'assets/personnages/VAMPYRO.webp', alt: 'Vampyro', name: 'Vampyro', role: 'Iop' },
+    { href: 'pages/personnages/wa-wabbit.html', image: 'assets/personnages/WA WABBIT.webp', alt: 'Wa Wabbit', name: 'Wa Wabbit', role: 'Monstre' },
+    { href: 'pages/personnages/xav-le-boulanger.html', image: 'assets/personnages/XAV LE BOULANGER.webp', alt: 'Xav le Boulanger', name: 'Xav le Boulanger', role: 'Inconnue' },
+    { href: 'pages/personnages/yrehn.html', image: 'assets/personnages/YREHN.webp', alt: 'Yrehn', name: 'Yrehn', role: 'OSAMODAS' },
+    { href: 'pages/personnages/yugo.html', image: 'assets/personnages/YUGO.webp', alt: 'Yugo', name: 'Yugo', role: 'ELIATROPE' }
   ];
 
   const shuffleCharacters = (characters) => {
@@ -326,7 +311,7 @@
 
   const mobileRailQuery = window.matchMedia('(max-width: 1024px)');
   const randomizedRailCharacters = shuffleCharacters(railCharacters);
-  const getRailCharacterLimit = () => mobileRailQuery.matches ? 3 : 5;
+  const getRailCharacterLimit = () => mobileRailQuery.matches ? 1 : 5;
   const renderCharacterRail = () => {
     if (!characterRail) return;
     const fragment = document.createDocumentFragment();
@@ -392,10 +377,16 @@
 
     if (!('IntersectionObserver' in window) || motionQuery.matches) {
       categoryBands.forEach((band) => band.classList.add('is-visible'));
+      document.querySelector('.home-band-history')?.classList.add('is-history-text-visible');
+      document.querySelector('.home-band-personnages-full')?.classList.add('is-personnages-text-visible');
+      document.querySelector('.home-band-chronology-full')?.classList.add('is-chronology-text-visible');
+      document.querySelector('.home-band-regions-full')?.classList.add('is-regions-text-visible');
+      document.querySelector('.home-band-lexique-full')?.classList.add('is-lexique-text-visible');
+      document.querySelector('.home-band-jeux-full')?.classList.add('is-jeux-text-visible');
     } else {
       document.body.classList.add('reveal-ready');
 
-      const revealObserver = new IntersectionObserver((entries, observer) => {
+      const revealBand = (entries, observer) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
             return;
@@ -404,13 +395,357 @@
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         });
-      }, {
+      };
+
+      const revealObserver = new IntersectionObserver(revealBand, {
         root: null,
         rootMargin: '0px 0px -18% 0px',
         threshold: 0.18
       });
 
-      categoryBands.forEach((band) => revealObserver.observe(band));
+      categoryBands.forEach((band) => {
+        revealObserver.observe(band);
+      });
+
+      const setupFullscreenBand = (band, expandClass, textClass) => {
+        if (!band) {
+          return;
+        }
+
+        let isTicking = false;
+
+        const updateBandState = () => {
+          const rect = band.getBoundingClientRect();
+          const bandCenter = rect.top + rect.height / 2;
+          const viewportCenter = window.innerHeight / 2;
+          const revealDistance = Math.min(230, rect.height * 0.32);
+          const shouldExpand = rect.top < window.innerHeight * 0.18 && rect.bottom > window.innerHeight * 0.5;
+
+          if (shouldExpand) {
+            band.classList.add(expandClass);
+          }
+
+          if (!band.classList.contains(textClass) && Math.abs(bandCenter - viewportCenter) <= revealDistance) {
+            band.classList.add(textClass);
+          }
+        };
+
+        const requestBandUpdate = () => {
+          if (isTicking) {
+            return;
+          }
+
+          isTicking = true;
+          window.requestAnimationFrame(() => {
+            updateBandState();
+            isTicking = false;
+          });
+        };
+
+        window.addEventListener('scroll', requestBandUpdate, { passive: true });
+        window.addEventListener('resize', updateBandState);
+        updateBandState();
+      };
+
+      setupFullscreenBand(document.querySelector('.home-band-history'), 'is-history-expanded', 'is-history-text-visible');
+      setupFullscreenBand(document.querySelector('.home-band-personnages-full'), 'is-personnages-expanded', 'is-personnages-text-visible');
+      setupFullscreenBand(document.querySelector('.home-band-chronology-full'), 'is-chronology-expanded', 'is-chronology-text-visible');
+      setupFullscreenBand(document.querySelector('.home-band-regions-full'), 'is-regions-expanded', 'is-regions-text-visible');
+      setupFullscreenBand(document.querySelector('.home-band-lexique-full'), 'is-lexique-expanded', 'is-lexique-text-visible');
+      setupFullscreenBand(document.querySelector('.home-band-jeux-full'), 'is-jeux-expanded', 'is-jeux-text-visible');
+
+      const isSnapTargetVisible = (target) => target && window.getComputedStyle(target).display !== 'none' && target.offsetHeight > 0;
+
+      const snapTargets = [
+        document.querySelector('.character-rail-section'),
+        document.querySelector('.home-band-history'),
+        document.querySelector('.home-band-personnages-full'),
+        document.querySelector('.home-band-chronology-full'),
+        document.querySelector('.home-band-regions-full'),
+        document.querySelector('.home-band-lexique-full'),
+        document.querySelector('.home-band-jeux-full')
+      ].filter(isSnapTargetVisible);
+
+      let snapLocked = false;
+      let wheelDelta = 0;
+      let wheelResetTimer = 0;
+      let settleTimer = 0;
+      let lastScrollY = window.scrollY;
+      let lastScrollDirection = 1;
+      let lastInputDirection = 1;
+      let lastInputAt = 0;
+      let touchStartY = 0;
+      let settleSuppressedUntil = 0;
+      let snapCooldownUntil = 0;
+      const snapLockDuration = 760;
+      const snapCooldownDuration = 420;
+      const wheelSnapThreshold = 105;
+      const touchSnapThreshold = 58;
+
+      const getSnapTop = (target) => {
+        const main = document.querySelector('.home-main');
+        const mainTop = main ? main.getBoundingClientRect().top + window.scrollY : 0;
+        return mainTop + target.offsetTop;
+      };
+
+      const finishSnap = (target) => {
+        const previousScrollBehavior = document.documentElement.style.scrollBehavior;
+        document.documentElement.style.scrollBehavior = 'auto';
+        window.scrollTo(0, getSnapTop(target));
+        document.documentElement.style.scrollBehavior = previousScrollBehavior;
+        target.classList.remove('is-snap-arriving');
+        snapLocked = false;
+        wheelDelta = 0;
+        touchStartY = 0;
+        snapCooldownUntil = Date.now() + snapCooldownDuration;
+        suppressSettle(snapCooldownDuration);
+        lastScrollY = window.scrollY;
+      };
+
+      const getCurrentSnapIndex = () => {
+        const scrollAnchor = window.scrollY + 12;
+        let currentIndex = 0;
+
+        snapTargets.forEach((target, index) => {
+          if (getSnapTop(target) <= scrollAnchor) {
+            currentIndex = index;
+          }
+        });
+
+        return currentIndex;
+      };
+
+      const markScrollIntent = (direction) => {
+        if (!direction) {
+          return;
+        }
+
+        lastInputDirection = direction;
+        lastInputAt = Date.now();
+        lastScrollDirection = direction;
+      };
+
+      const suppressSettle = (duration = 520) => {
+        window.clearTimeout(settleTimer);
+        settleSuppressedUntil = Math.max(settleSuppressedUntil, Date.now() + duration);
+      };
+
+      const isLeavingSnapArea = (direction, currentIndex = getCurrentSnapIndex()) => (
+        (direction > 0 && currentIndex === snapTargets.length - 1) ||
+        (direction < 0 && currentIndex === 0)
+      );
+
+      const isInsideSnapArea = () => {
+        const pageBottom = window.scrollY + window.innerHeight;
+        const snapStart = getSnapTop(snapTargets[0]);
+        const lastSnapTarget = snapTargets[snapTargets.length - 1];
+        const snapEnd = getSnapTop(lastSnapTarget) + lastSnapTarget.offsetHeight;
+        return pageBottom > snapStart && window.scrollY < snapEnd;
+      };
+
+      const snapToTarget = (target) => {
+        snapLocked = true;
+        wheelDelta = 0;
+        primeFullscreenTarget(target);
+        window.requestAnimationFrame(() => {
+          window.scrollTo({ top: getSnapTop(target), behavior: 'smooth' });
+        });
+        window.setTimeout(() => {
+          finishSnap(target);
+        }, snapLockDuration);
+      };
+
+      const primeFullscreenTarget = (target) => {
+        target.classList.add('is-snap-arriving');
+
+        if (target.classList.contains('home-band-history')) {
+          target.classList.add('is-history-expanded', 'is-history-text-visible');
+        }
+
+        if (target.classList.contains('home-band-personnages-full')) {
+          target.classList.add('is-personnages-expanded', 'is-personnages-text-visible');
+        }
+
+        if (target.classList.contains('home-band-chronology-full')) {
+          target.classList.add('is-chronology-expanded', 'is-chronology-text-visible');
+        }
+
+        if (target.classList.contains('home-band-regions-full')) {
+          target.classList.add('is-regions-expanded', 'is-regions-text-visible');
+        }
+
+        if (target.classList.contains('home-band-lexique-full')) {
+          target.classList.add('is-lexique-expanded', 'is-lexique-text-visible');
+        }
+
+        if (target.classList.contains('home-band-jeux-full')) {
+          target.classList.add('is-jeux-expanded', 'is-jeux-text-visible');
+        }
+      };
+
+      const snapToHomeSection = (event) => {
+        window.clearTimeout(settleTimer);
+
+        if (snapLocked) {
+          event.preventDefault();
+          return;
+        }
+
+        if (Date.now() < snapCooldownUntil) {
+          event.preventDefault();
+          return;
+        }
+
+        if (Math.abs(event.deltaY) < 10 || snapTargets.length < 2) {
+          return;
+        }
+
+        const rawDirection = event.deltaY > 0 ? 1 : -1;
+        markScrollIntent(rawDirection);
+
+        if (!isInsideSnapArea()) {
+          return;
+        }
+
+        const currentIndex = getCurrentSnapIndex();
+
+        if (isLeavingSnapArea(rawDirection, currentIndex)) {
+          wheelDelta = 0;
+          suppressSettle();
+          return;
+        }
+
+        event.preventDefault();
+        window.clearTimeout(wheelResetTimer);
+        wheelDelta += event.deltaY;
+        wheelResetTimer = window.setTimeout(() => {
+          wheelDelta = 0;
+        }, 220);
+
+        if (Math.abs(wheelDelta) < wheelSnapThreshold) {
+          return;
+        }
+
+        const direction = wheelDelta > 0 ? 1 : -1;
+        markScrollIntent(direction);
+
+        if (isLeavingSnapArea(direction, currentIndex)) {
+          wheelDelta = 0;
+          suppressSettle();
+          return;
+        }
+
+        const targetIndex = Math.max(0, Math.min(snapTargets.length - 1, currentIndex + direction));
+        const target = snapTargets[targetIndex];
+
+        if (!target || target === snapTargets[currentIndex]) {
+          return;
+        }
+
+        snapToTarget(target);
+      };
+
+      window.addEventListener('wheel', snapToHomeSection, { passive: false });
+
+      window.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0]?.clientY || 0;
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (event) => {
+        if (snapLocked) {
+          event.preventDefault();
+          return;
+        }
+
+        if (Date.now() < snapCooldownUntil) {
+          event.preventDefault();
+          return;
+        }
+
+        if (!touchStartY || snapTargets.length < 2) {
+          return;
+        }
+
+        const currentY = event.touches[0]?.clientY || touchStartY;
+        const touchDelta = touchStartY - currentY;
+
+        if (!isInsideSnapArea()) {
+          return;
+        }
+
+        if (Math.abs(touchDelta) < 8) {
+          event.preventDefault();
+          return;
+        }
+
+        const direction = touchDelta > 0 ? 1 : -1;
+        markScrollIntent(direction);
+
+        if (isLeavingSnapArea(direction)) {
+          wheelDelta = 0;
+          suppressSettle(620);
+          return;
+        }
+
+        event.preventDefault();
+
+        if (Math.abs(touchDelta) < touchSnapThreshold) {
+          return;
+        }
+
+        const currentIndex = getCurrentSnapIndex();
+        const targetIndex = Math.max(0, Math.min(snapTargets.length - 1, currentIndex + direction));
+        const target = snapTargets[targetIndex];
+
+        if (!target || target === snapTargets[currentIndex]) {
+          return;
+        }
+
+        touchStartY = 0;
+        snapToTarget(target);
+      }, { passive: false });
+
+      const settleHomeScroll = () => {
+        if (snapLocked || snapTargets.length < 2 || Date.now() < settleSuppressedUntil || Date.now() < snapCooldownUntil) {
+          return;
+        }
+
+        const direction = Date.now() - lastInputAt < 900 ? lastInputDirection : lastScrollDirection;
+        const currentIndex = getCurrentSnapIndex();
+
+        if (isLeavingSnapArea(direction, currentIndex)) {
+          return;
+        }
+
+        const currentTop = window.scrollY;
+        const target = snapTargets[currentIndex + direction];
+
+        if (!target) {
+          return;
+        }
+
+        const distance = Math.abs(getSnapTop(target) - currentTop);
+
+        if (distance > window.innerHeight * 0.78) {
+          return;
+        }
+
+        snapToTarget(target);
+      };
+
+      window.addEventListener('scroll', () => {
+        if (snapLocked) {
+          return;
+        }
+
+        window.clearTimeout(settleTimer);
+        const scrollDelta = window.scrollY - lastScrollY;
+        if (Math.abs(scrollDelta) > 1) {
+          lastScrollDirection = scrollDelta > 0 ? 1 : -1;
+        }
+        settleTimer = window.setTimeout(settleHomeScroll, 120);
+        lastScrollY = window.scrollY;
+      }, { passive: true });
     }
   }
 </script>

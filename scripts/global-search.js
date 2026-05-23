@@ -15,98 +15,105 @@
     {
       title: "Personnages",
       type: "Page",
-      href: "personnages-html/personnages.html",
+      href: "pages/personnages/personnages.html",
       summary: "Index des personnages majeurs du Krosmoz avec filtres par classe, groupe et univers.",
       keywords: "yugo adamai tristepin evangelyne ruel nox qilby oropo personnages"
     },
     {
       title: "Histoire du Krosmoz",
       type: "Histoire",
-      href: "histoire-html/histoire-krosmoz.html",
+      href: "pages/histoire/histoire-krosmoz.html",
       summary: "Fil conducteur des grandes ères du Krosmoz, depuis les origines jusqu'à l’ère du Waven.",
       keywords: "origines âge primitif dofus wakfu waven chaos ogrest histoire"
     },
     {
       title: "Origines",
       type: "Histoire",
-      href: "histoire-html/histoire-origines.html",
+      href: "pages/histoire/histoire-origines.html",
       summary: "Naissance du Krosmoz, forces primordiales et premiers fondements du monde.",
       keywords: "origines krosmoz grand dragon grande deesse éliatrope stasis wakfu"
     },
     {
       title: "Âge des Dofus",
       type: "Histoire",
-      href: "histoire-html/histoire-age-des-dofus.html",
+      href: "pages/histoire/histoire-age-des-dofus.html",
       summary: "Epoque du Monde des Douze, des Dofus primordiaux et des grandes nations.",
       keywords: "dofus monde des douze bonta brakmar amakna sufokia"
     },
     {
       title: "Chaos d'Ogrest",
       type: "Histoire",
-      href: "histoire-html/histoire-chaos-ogrest.html",
+      href: "pages/histoire/histoire-chaos-ogrest.html",
       summary: "Cataclysme provoque par Ogrest et bouleversements majeurs du Monde des Douze.",
       keywords: "ogrest chaos dathura mont zinit dofus"
     },
     {
       title: "Ère du Wakfu",
       type: "Histoire",
-      href: "histoire-html/histoire-ere-du-wakfu.html",
+      href: "pages/histoire/histoire-ere-du-wakfu.html",
       summary: "Periode de la Confrerie du Tofu et des aventures de Yugo.",
       keywords: "wakfu yugo confrerie tofu éliatrope nox qilby"
     },
     {
       title: "Ère du Waven",
       type: "Histoire",
-      href: "histoire-html/histoire-ere-du-waven.html",
+      href: "pages/histoire/histoire-ere-du-waven.html",
       summary: "Le monde englouti et les suites des grands bouleversements du Krosmoz.",
       keywords: "waven monde englouti krosmoz"
     },
     {
       title: "Chronologie historique",
       type: "Chronologie",
-      href: "chronologies-html/chronologie-historique.html",
+      href: "pages/chronologies/chronologie-historique.html",
       summary: "Frise des grands événements du Krosmoz.",
       keywords: "événements timeline âge dofus wakfu waven ogrest"
     },
     {
       title: "Chronologie des œuvres",
       type: "Chronologie",
-      href: "chronologies-html/chronologie-oeuvres.html",
+      href: "pages/chronologies/chronologie-oeuvres.html",
       summary: "Parcours des séries, jeux, mangas, webtoons et autres œuvres liées au Krosmoz.",
       keywords: "œuvres ankama wakfu dofus waven manga serie webtoon"
     },
     {
       title: "Lexique",
       type: "Lexique",
-      href: "lexique-html/lexique.html",
+      href: "pages/lexique/lexique.html",
       summary: "Definitions des lieux, peuples, energies, objets, entites et monstres du Krosmoz.",
       keywords: "lexique definitions wakfu stasis dofus shushu"
     },
     {
+      title: "Régions",
+      type: "Région",
+      href: "pages/regions/regions.html",
+      summary: "Index des régions majeures du Krosmoz, des plans divins aux terres du Monde des Douze.",
+      keywords: "régions lieux monde des douze amakna astrub bonta brakmar frigost sufokia pandala"
+    },
+    {
       title: "Jeux",
       type: "Page",
-      href: "jeux-html/jeux.html",
+      href: "pages/jeux/jeux.html",
       summary: "Index des jeux du site : test de personnage et grand quiz aleatoire du Krosmoz.",
       keywords: "jeux quiz jeu personnage krosmoz questions score"
     },
     {
       title: "Grand quiz du Krosmoz",
       type: "Jeu",
-      href: "jeux-html/quiz-krosmoz.html",
+      href: "pages/jeux/quiz-krosmoz.html",
       summary: "Quiz aleatoire avec questions sur les personnages, l'histoire, les lieux, les objets, les peuples et le lexique.",
       keywords: "quiz krosmoz questions aleatoire personnages histoire lieux dofus wakfu waven"
     },
     {
       title: "Jeu personnage",
       type: "Jeu",
-      href: "jeux-html/jeu-personnage.html",
+      href: "pages/jeux/jeu-personnage.html",
       summary: "Test pour decouvrir quel personnage du Krosmoz vous ressemble le plus.",
       keywords: "jeu personnage personnage resultat yugo nox amalia tristepin"
     },
     {
       title: "Contactez-nous",
       type: "Page",
-      href: "contact-html/contact.html",
+      href: "pages/contact/contact.html",
       summary: "Formulaire de contact pour signaler une erreur, proposer une correction ou envoyer un message.",
       keywords: "contact message formulaire correction suggestion univers krosmoz"
     }
@@ -175,7 +182,7 @@
   };
 
   const buildCharacterEntries = async () => {
-    const doc = await readDocument("personnages-html/personnages.html");
+    const doc = await readDocument("pages/personnages/personnages.html");
     return Array.from(doc.querySelectorAll(".character-card")).map((card) => {
       const title = card.querySelector("strong")?.textContent || card.querySelector("img")?.alt || "Personnage";
       const rôle = card.querySelector(".character-card-copy span")?.textContent || card.dataset.classLabel || "";
@@ -187,7 +194,7 @@
       return {
         title,
         type: "Personnage",
-        href: absoluteHref(`personnages-html/${card.getAttribute("href")}`),
+        href: absoluteHref(`pages/personnages/${card.getAttribute("href")}`),
         summary,
         searchText: normalize(`${title} ${rôle} ${groups} ${universes} ${card.dataset.character || ""}`)
       };
@@ -195,7 +202,7 @@
   };
 
   const buildLexiconEntries = async () => {
-    const doc = await readDocument("lexique-html/lexique.html");
+    const doc = await readDocument("pages/lexique/lexique.html");
     return Array.from(doc.querySelectorAll(".lexicon-entry")).map((entry) => {
       const title = entry.querySelector("h2")?.textContent || "Entree du lexique";
       const category = entry.querySelector(".lexicon-entry-type")?.textContent || "Lexique";
@@ -204,7 +211,7 @@
       return {
         title,
         type: `Lexique - ${category}`,
-        href: absoluteHref(`lexique-html/lexique.html?q=${encodeURIComponent(title)}#${slugify(title)}`),
+        href: absoluteHref(`pages/lexique/lexique.html?q=${encodeURIComponent(title)}#${slugify(title)}`),
         summary,
         searchText: normalize(`${title} ${category} ${entry.dataset.search || ""} ${summary}`)
       };
@@ -257,18 +264,20 @@
         height: 38px;
         display: inline-grid;
         place-items: center;
-        border: 1px solid rgba(201,168,76,0.24);
-        background: rgba(255,255,255,0.03);
+        border: 1px solid transparent;
+        background: transparent;
         color: #f6f2e7;
         cursor: pointer;
-        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+        box-shadow: none;
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, filter 0.2s ease, transform 0.2s ease;
       }
 
       .krosmoz-search-toggle:hover,
       .krosmoz-search-toggle:focus-visible {
         color: var(--gold-light, #e8c97a);
-        border-color: rgba(232,201,122,0.58);
-        background: rgba(201,168,76,0.09);
+        border-color: rgba(232,201,122,0.38);
+        background: rgba(255,247,223,0.035);
+        filter: brightness(1.16);
         transform: translateY(-1px);
         outline: none;
       }
@@ -431,6 +440,7 @@
     const priorityByType = {
       Personnage: 24,
       Lexique: 22,
+      Région: 18,
       Page: 4,
       Histoire: 3,
       Carte: 2,

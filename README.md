@@ -5,13 +5,13 @@ Site non officiel autour de l'univers du Krosmoz, avec des pages dédiées à l'
 ## Structure
 
 - `index.html` : page d'accueil.
-- `histoire-html/` : pages d'histoire et récits.
-- `personnages-html/` : fiches personnages.
-- `regions-html/` : pages des régions.
-- `chronologies-html/` : chronologies du Krosmoz.
-- `jeux-html/` : quiz et jeux du site.
-- `media-html/` : galerie et contenus médias.
-- `*-css/` : styles propres à chaque section.
+- `pages/histoire/` : pages d'histoire et récits.
+- `pages/personnages/` : fiches personnages.
+- `pages/regions/` : pages des régions.
+- `pages/chronologies/` : chronologies du Krosmoz.
+- `pages/jeux/` : quiz et jeux du site.
+- `pages/media/` : galerie et contenus médias.
+- `styles/` : styles communs et styles propres à chaque section.
 - `scripts/` : scripts partagés et interactions.
 - `assets/` : images, logos et visuels.
 - `data/` : données utilisées par certaines pages.

@@ -17,8 +17,8 @@
     return;
   }
 
-  const sourceUrl = "../scripts/character-page-links.js";
-  const characterBase = "../personnages-html/";
+  const sourceUrl = "../../scripts/character-page-links.js";
+  const characterBase = "../personnages/";
   const unique = new Map();
 
   const normalize = (value) => String(value || "")
@@ -91,7 +91,7 @@
       const item = {
         name,
         href: characterBase + href,
-        image: "../assets/personnages/" + image,
+        image: "../../assets/personnages/" + image,
         download: image,
         search: normalize(name + " " + slug)
       };
@@ -108,7 +108,7 @@
     .map((item) => ({
       name: item.name,
       href: characterBase + item.href,
-      image: "../assets/personnages/" + item.image,
+      image: "../../assets/personnages/" + item.image,
       download: item.image,
       search: normalize(item.name + " " + item.slug)
     }));

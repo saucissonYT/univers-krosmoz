@@ -417,7 +417,7 @@
       link.download = "quiz-krosmoz-resultat.png";
       link.click();
     };
-    image.src = "../assets/jeux/quizz.webp";
+    image.src = "../../assets/jeux/quizz.webp";
   };
 
   if (!questions.length) {

@@ -13,7 +13,7 @@
                       ],
                       0,
                       "Yugo est le héros éliatrope lié à l'ère du Wakfu.",
-                      "../personnages-html/yugo.html"
+                      "../personnages/yugo.html"
             ],
             [
                       "q002",
@@ -28,7 +28,7 @@
                       ],
                       0,
                       "Adamaï est le dragon jumeau associé à Yugo.",
-                      "../personnages-html/adamai.html"
+                      "../personnages/adamai.html"
             ],
             [
                       "q003",
@@ -43,7 +43,7 @@
                       ],
                       0,
                       "Evangelyne est la tireuse d'élite Crâ de la Confrérie.",
-                      "../personnages-html/evangelyne.html"
+                      "../personnages/evangelyne.html"
             ],
             [
                       "q004",
@@ -58,7 +58,7 @@
                       ],
                       0,
                       "Amalia appartient à la famille royale Sadida.",
-                      "../personnages-html/amalia-sheran-sharm.html"
+                      "../personnages/amalia-sheran-sharm.html"
             ],
             [
                       "q005",
@@ -73,7 +73,7 @@
                       ],
                       0,
                       "Tristepin est le gardien du Shushu Rubilax.",
-                      "../personnages-html/tristepin.html"
+                      "../personnages/tristepin.html"
             ],
             [
                       "q006",
@@ -88,7 +88,7 @@
                       ],
                       0,
                       "Ruel est l'Enutrof de la Confrérie du Tofu.",
-                      "../personnages-html/ruel-stroud.html"
+                      "../personnages/ruel-stroud.html"
             ],
             [
                       "q007",
@@ -103,7 +103,7 @@
                       ],
                       0,
                       "Nox accumule le Wakfu pour tenter de réparer son passé.",
-                      "../personnages-html/nox.html"
+                      "../personnages/nox.html"
             ],
             [
                       "q008",
@@ -118,7 +118,7 @@
                       ],
                       0,
                       "Qilby est un Éliatrope majeur dont les choix menacent les siens.",
-                      "../personnages-html/qilby.html"
+                      "../personnages/qilby.html"
             ],
             [
                       "q009",
@@ -133,7 +133,7 @@
                       ],
                       0,
                       "Rushu domine le monde démoniaque des Shushus.",
-                      "../personnages-html/rushu.html"
+                      "../personnages/rushu.html"
             ],
             [
                       "q010",
@@ -148,7 +148,7 @@
                       ],
                       0,
                       "Ogrest est l'ogre au cœur du Chaos qui porte son nom.",
-                      "../personnages-html/ogrest.html"
+                      "../personnages/ogrest.html"
             ],
             [
                       "q011",
@@ -163,7 +163,7 @@
                       ],
                       0,
                       "Le Comte Harebourg est associé à Frigost et aux mécaniques temporelles.",
-                      "../personnages-html/comte-harebourg.html"
+                      "../personnages/comte-harebourg.html"
             ],
             [
                       "q012",
@@ -178,7 +178,7 @@
                       ],
                       0,
                       "Bakara Jurgen appartient à la lignée Jurgen et manie la magie huppermage.",
-                      "../personnages-html/bakara-jurgen.html"
+                      "../personnages/bakara-jurgen.html"
             ],
             [
                       "q013",
@@ -193,7 +193,7 @@
                       ],
                       0,
                       "Joris Jurgen est une figure centrale liée aux récits de Dofus.",
-                      "../personnages-html/joris-jurgen.html"
+                      "../personnages/joris-jurgen.html"
             ],
             [
                       "q014",
@@ -208,7 +208,7 @@
                       ],
                       0,
                       "Oropo fait partie des Éliotropes nés du paradoxe de Yugo.",
-                      "../personnages-html/oropo.html"
+                      "../personnages/oropo.html"
             ],
             [
                       "q015",
@@ -223,7 +223,7 @@
                       ],
                       0,
                       "Le Dieu Iop incarne la classe Iop.",
-                      "../personnages-html/dieu-iop.html"
+                      "../personnages/dieu-iop.html"
             ],
             [
                       "q016",
@@ -238,7 +238,7 @@
                       ],
                       0,
                       "Aguabrial est associé à l'élément eau.",
-                      "../personnages-html/aguabrial.html"
+                      "../personnages/aguabrial.html"
             ],
             [
                       "q017",
@@ -253,7 +253,7 @@
                       ],
                       0,
                       "Terrakourial est le dragon primordial de la terre.",
-                      "../personnages-html/terrakourial.html"
+                      "../personnages/terrakourial.html"
             ],
             [
                       "q018",
@@ -268,7 +268,7 @@
                       ],
                       0,
                       "Le Chevalier Justice incarne un idéal de droiture dans le Monde des Douze.",
-                      "../personnages-html/chevalier-justice.html"
+                      "../personnages/chevalier-justice.html"
             ],
             [
                       "q019",
@@ -283,7 +283,7 @@
                       ],
                       0,
                       "Efrim est le dragon associé à Nora dans la logique des duos éliatropes.",
-                      "../personnages-html/efrim.html"
+                      "../personnages/efrim.html"
             ],
             [
                       "q020",
@@ -298,7 +298,7 @@
                       ],
                       0,
                       "Atcham Crépin appartient à cette lignée familiale liée à Kérubim.",
-                      "../personnages-html/atcham-crepin.html"
+                      "../personnages/atcham-crepin.html"
             ],
             [
                       "q021",
@@ -313,7 +313,7 @@
                       ],
                       0,
                       "Wakfu et Stasis forment deux forces essentielles et opposées.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q022",
@@ -328,7 +328,7 @@
                       ],
                       0,
                       "Le Chaos d'Ogrest bouleverse profondément le monde.",
-                      "../histoire-html/histoire-chaos-ogrest.html"
+                      "../histoire/histoire-chaos-ogrest.html"
             ],
             [
                       "q023",
@@ -343,7 +343,7 @@
                       ],
                       0,
                       "L'ère du Wakfu suit les grands bouleversements liés aux Dofus et au Chaos d'Ogrest.",
-                      "../histoire-html/histoire-ere-du-wakfu.html"
+                      "../histoire/histoire-ere-du-wakfu.html"
             ],
             [
                       "q024",
@@ -358,7 +358,7 @@
                       ],
                       0,
                       "Waven représente une période plus tardive, après les grands bouleversements de Wakfu.",
-                      "../histoire-html/histoire-ere-du-waven.html"
+                      "../histoire/histoire-ere-du-waven.html"
             ],
             [
                       "q025",
@@ -373,7 +373,7 @@
                       ],
                       0,
                       "L'Inglorium est le domaine des divinités.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q026",
@@ -388,7 +388,7 @@
                       ],
                       0,
                       "Le Shukrute est le monde démoniaque lié aux Shushus.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q027",
@@ -403,7 +403,7 @@
                       ],
                       0,
                       "Incarnam est associé au passage des âmes vers l'incarnation.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q028",
@@ -418,7 +418,7 @@
                       ],
                       0,
                       "Externam renvoie au devenir des âmes après la mort.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q029",
@@ -433,7 +433,7 @@
                       ],
                       0,
                       "L'Éliacube est au centre des récits autour d'Orgonax et des Éliatropes.",
-                      "../personnages-html/orgonax.html"
+                      "../personnages/orgonax.html"
             ],
             [
                       "q030",
@@ -448,7 +448,7 @@
                       ],
                       0,
                       "Le Wakfu et la Stasis forment une tension cosmologique fondamentale.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q031",
@@ -463,7 +463,7 @@
                       ],
                       0,
                       "Dofus est l'entrée majeure liée à l'âge des Dofus.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q032",
@@ -478,7 +478,7 @@
                       ],
                       0,
                       "Wakfu suit Yugo et ses compagnons.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q034",
@@ -493,7 +493,7 @@
                       ],
                       0,
                       "L'histoire du Krosmoz avance des origines vers les temps de Waven.",
-                      "../histoire-html/histoire-krosmoz.html"
+                      "../histoire/histoire-krosmoz.html"
             ],
             [
                       "q036",
@@ -508,7 +508,7 @@
                       ],
                       0,
                       "Ogrest, la légende se place dans la transition entre l'Âge des Dofus et l'Ère du Wakfu.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q037",
@@ -523,7 +523,7 @@
                       ],
                       0,
                       "Bonta et Brakmar forment deux pôles opposés majeurs.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q038",
@@ -538,7 +538,7 @@
                       ],
                       0,
                       "Astrub est un lieu central et accessible du Monde des Douze.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q039",
@@ -553,7 +553,7 @@
                       ],
                       0,
                       "Sufokia est associée à la mer, aux profondeurs et à la technologie.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q040",
@@ -568,7 +568,7 @@
                       ],
                       0,
                       "Le royaume Sadida est le territoire d'Amalia et de sa famille.",
-                      "../personnages-html/amalia-sheran-sharm.html"
+                      "../personnages/amalia-sheran-sharm.html"
             ],
             [
                       "q041",
@@ -583,7 +583,7 @@
                       ],
                       0,
                       "Frigost et Harebourg sont étroitement associés.",
-                      "../personnages-html/comte-harebourg.html"
+                      "../personnages/comte-harebourg.html"
             ],
             [
                       "q042",
@@ -613,7 +613,7 @@
                       ],
                       0,
                       "Kelba est associé aux marchands, aux vents et à une ambiance aérienne.",
-                      "../regions-html/amakna.html"
+                      "../regions/amakna.html"
             ],
             [
                       "q046",
@@ -628,7 +628,7 @@
                       ],
                       0,
                       "Moon est à la fois une figure divine et une destination insulaire connue.",
-                      "../personnages-html/moon.html"
+                      "../personnages/moon.html"
             ],
             [
                       "q047",
@@ -643,7 +643,7 @@
                       ],
                       0,
                       "Les Dofus sont des œufs de dragon d'une puissance exceptionnelle.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q048",
@@ -658,7 +658,7 @@
                       ],
                       0,
                       "Les Shushus sont des entités démoniaques souvent liées à des objets.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q049",
@@ -673,7 +673,7 @@
                       ],
                       0,
                       "Le Wakfu est associé au vivant, au mouvement et à la création.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q050",
@@ -688,7 +688,7 @@
                       ],
                       0,
                       "La Stasis fait face au Wakfu dans la cosmologie du Krosmoz.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q051",
@@ -703,7 +703,7 @@
                       ],
                       0,
                       "L'Almanax est une notion calendaire importante dans l'univers.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q052",
@@ -718,7 +718,7 @@
                       ],
                       0,
                       "Les Crâ sont associés à l'archerie et à la précision.",
-                      "../personnages-html/deesse-cra.html"
+                      "../personnages/deesse-cra.html"
             ],
             [
                       "q053",
@@ -733,7 +733,7 @@
                       ],
                       0,
                       "Les Xélors manipulent le temps et ses mécanismes.",
-                      "../personnages-html/dieu-xelor.html"
+                      "../personnages/dieu-xelor.html"
             ],
             [
                       "q054",
@@ -748,7 +748,7 @@
                       ],
                       0,
                       "Les Écaflips sont liés au hasard, aux jeux et à la chance.",
-                      "../personnages-html/dieu-ecaflip.html"
+                      "../personnages/dieu-ecaflip.html"
             ],
             [
                       "q055",
@@ -763,7 +763,7 @@
                       ],
                       0,
                       "Les Éliatropes sont liés à des jumeaux dragons dans leur mythologie.",
-                      "../personnages-html/grande-deesse-eliatrope.html"
+                      "../personnages/grande-deesse-eliatrope.html"
             ],
             [
                       "q056",
@@ -778,7 +778,7 @@
                       ],
                       0,
                       "Les Éliotropes sont distincts des Éliatropes et liés à Oropo.",
-                      "../personnages-html/oropo.html"
+                      "../personnages/oropo.html"
             ],
             [
                       "q057",
@@ -793,7 +793,7 @@
                       ],
                       0,
                       "Rubilax est un Shushu utilisé comme arme.",
-                      "../personnages-html/rubilax.html"
+                      "../personnages/rubilax.html"
             ],
             [
                       "q058",
@@ -808,7 +808,7 @@
                       ],
                       0,
                       "L'Éliacube est central dans le plan de Nox.",
-                      "../personnages-html/nox.html"
+                      "../personnages/nox.html"
             ],
             [
                       "q062",
@@ -823,7 +823,7 @@
                       ],
                       0,
                       "Ogrest réunit les Dofus primordiaux dans son histoire.",
-                      "../personnages-html/ogrest.html"
+                      "../personnages/ogrest.html"
             ],
             [
                       "q063",
@@ -838,7 +838,7 @@
                       ],
                       0,
                       "Les Sadidas sont liés à la nature et au royaume Sadida.",
-                      "../personnages-html/dieu-sadida.html"
+                      "../personnages/dieu-sadida.html"
             ],
             [
                       "q064",
@@ -853,7 +853,7 @@
                       ],
                       0,
                       "Les Enutrofs sont associés aux trésors et à la recherche de richesses.",
-                      "../personnages-html/dieu-enutrof.html"
+                      "../personnages/dieu-enutrof.html"
             ],
             [
                       "q065",
@@ -868,7 +868,7 @@
                       ],
                       0,
                       "Les Srams sont liés aux ombres, aux pièges et au secret.",
-                      "../personnages-html/dieu-sram.html"
+                      "../personnages/dieu-sram.html"
             ],
             [
                       "q066",
@@ -883,7 +883,7 @@
                       ],
                       0,
                       "Les Eniripsas sont liés aux soins et à la parole magique.",
-                      "../personnages-html/deesse-eniripsa.html"
+                      "../personnages/deesse-eniripsa.html"
             ],
             [
                       "q067",
@@ -898,7 +898,7 @@
                       ],
                       0,
                       "Les Osamodas entretiennent un lien fort avec les créatures.",
-                      "../personnages-html/dieu-osamodas.html"
+                      "../personnages/dieu-osamodas.html"
             ],
             [
                       "q069",
@@ -913,7 +913,7 @@
                       ],
                       0,
                       "Les Sacrieurs tirent leur identité du sacrifice et de la souffrance.",
-                      "../personnages-html/deesse-sacrieur.html"
+                      "../personnages/deesse-sacrieur.html"
             ],
             [
                       "q070",
@@ -928,7 +928,7 @@
                       ],
                       0,
                       "Les Pandawas ont une identité liée à Pandala et à l'art du combat déséquilibrant.",
-                      "../personnages-html/deesse-panda.html"
+                      "../personnages/deesse-panda.html"
             ],
             [
                       "q081",
@@ -943,7 +943,7 @@
                       ],
                       0,
                       "Elely appartient à la famille Percedal.",
-                      "../personnages-html/elely-de-percedal.html"
+                      "../personnages/elely-de-percedal.html"
             ],
             [
                       "q082",
@@ -958,7 +958,7 @@
                       ],
                       0,
                       "Flopin est l'un des enfants du couple Percedal.",
-                      "../personnages-html/flopin-de-percedal.html"
+                      "../personnages/flopin-de-percedal.html"
             ],
             [
                       "q083",
@@ -973,7 +973,7 @@
                       ],
                       0,
                       "Kriss la Krass est une figure du Boufbowl.",
-                      "../personnages-html/kriss-la-krass.html"
+                      "../personnages/kriss-la-krass.html"
             ],
             [
                       "q084",
@@ -988,7 +988,7 @@
                       ],
                       0,
                       "Dathura est liée à Ogrest et à la tragédie de son récit.",
-                      "../personnages-html/dathura.html"
+                      "../personnages/dathura.html"
             ],
             [
                       "q085",
@@ -1003,7 +1003,7 @@
                       ],
                       0,
                       "Djaul est une figure démoniaque importante et protecteur de Descendre.",
-                      "../personnages-html/djaul.html"
+                      "../personnages/djaul.html"
             ],
             [
                       "q086",
@@ -1018,7 +1018,7 @@
                       ],
                       0,
                       "Goultard et Dark Vlad sont liés dans les récits autour du Iop.",
-                      "../personnages-html/goultard.html"
+                      "../personnages/goultard.html"
             ],
             [
                       "q087",
@@ -1033,7 +1033,7 @@
                       ],
                       0,
                       "Le Krosmoz est le cadre global qui relie les œuvres.",
-                      "../histoire-html/histoire-krosmoz.html"
+                      "../histoire/histoire-krosmoz.html"
             ],
             [
                       "q088",
@@ -1048,7 +1048,7 @@
                       ],
                       0,
                       "La Grande Déesse Éliatrope et le Grand Dragon sont des figures fondatrices.",
-                      "../personnages-html/grande-deesse-eliatrope.html"
+                      "../personnages/grande-deesse-eliatrope.html"
             ],
             [
                       "q089",
@@ -1063,7 +1063,7 @@
                       ],
                       0,
                       "Le Kama est la monnaie emblématique de l'univers Ankama.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q090",
@@ -1078,7 +1078,7 @@
                       ],
                       0,
                       "Les Zaaps servent de moyens de déplacement rapides.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q091",
@@ -1093,7 +1093,7 @@
                       ],
                       0,
                       "Amakna est l'une des grandes nations du Monde des Douze.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q092",
@@ -1108,7 +1108,7 @@
                       ],
                       0,
                       "Brakmar représente le pôle sombre face à Bonta.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q093",
@@ -1123,7 +1123,7 @@
                       ],
                       0,
                       "L'âge des Dofus tourne autour de ces œufs de dragons.",
-                      "../histoire-html/histoire-age-des-dofus.html"
+                      "../histoire/histoire-age-des-dofus.html"
             ],
             [
                       "q095",
@@ -1138,7 +1138,7 @@
                       ],
                       0,
                       "Les Iops sont associés à la bravoure et au combat direct.",
-                      "../personnages-html/dieu-iop.html"
+                      "../personnages/dieu-iop.html"
             ],
             [
                       "q096",
@@ -1153,7 +1153,7 @@
                       ],
                       0,
                       "La protection est au cœur de l'identité Féca.",
-                      "../personnages-html/deesse-feca.html"
+                      "../personnages/deesse-feca.html"
             ],
             [
                       "q099",
@@ -1168,7 +1168,7 @@
                       ],
                       0,
                       "Une chronologie historique permet de remettre les grands événements internes du Krosmoz dans l'ordre.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q102",
@@ -1183,7 +1183,7 @@
                       ],
                       0,
                       "L'âge des Dofus précède les grands bouleversements qui mènent ensuite à l'ère du Wakfu.",
-                      "../histoire-html/histoire-age-des-dofus.html"
+                      "../histoire/histoire-age-des-dofus.html"
             ],
             [
                       "q104",
@@ -1198,7 +1198,7 @@
                       ],
                       0,
                       "Aerafal est l'un des dragons primordiaux liés aux grands Dofus.",
-                      "../personnages-html/aerafal.html"
+                      "../personnages/aerafal.html"
             ],
             [
                       "q105",
@@ -1213,7 +1213,7 @@
                       ],
                       0,
                       "Ignemikhal est rattaché à l'élément du feu dans les grands récits draconiques.",
-                      "../personnages-html/ignemikhal.html"
+                      "../personnages/ignemikhal.html"
             ],
             [
                       "q115",
@@ -1228,7 +1228,7 @@
                       ],
                       0,
                       "L'Inglorium est associé aux divinités et à leur place dans l'ordre cosmique.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q116",
@@ -1243,7 +1243,7 @@
                       ],
                       0,
                       "Le Shukrute renvoie au monde démoniaque et aux forces liées aux Shushus.",
-                      "../lexique-html/lexique.html"
+                      "../lexique/lexique.html"
             ],
             [
                       "q120",
@@ -1258,7 +1258,7 @@
                       ],
                       0,
                       "À l'Âge 0, Xélor crée l'Horloge Divine et ouvre l'Âge des Dofus.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q122",
@@ -1273,7 +1273,7 @@
                       ],
                       0,
                       "L'An 789 marque le début de l'Ère du Wakfu après le cataclysme d'Ogrest.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q123",
@@ -1288,7 +1288,7 @@
                       ],
                       0,
                       "La période An 965 – 969 couvre le retour de Yugo et Adamaï ainsi que les débuts liés au MMO Wakfu.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q124",
@@ -1303,7 +1303,7 @@
                       ],
                       0,
                       "La chronologie place cet épisode dans l'OAV Wakfu, en An 988.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q125",
@@ -1318,7 +1318,7 @@
                       ],
                       0,
                       "L'An 1005 correspond aux événements du MMO Waven dans la chronologie.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q126",
@@ -1333,7 +1333,7 @@
                       ],
                       0,
                       "Lancedur est placé en An 1023 dans les repères historiques du Krosmoz.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q127",
@@ -1348,7 +1348,7 @@
                       ],
                       0,
                       "Cette séquence appartient à la période de naissance et de déclin des Éliatropes.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q128",
@@ -1363,7 +1363,7 @@
                       ],
                       0,
                       "La frise rattache ces désastres et royaumes à la période An 500 – 567.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q129",
@@ -1378,7 +1378,7 @@
                       ],
                       0,
                       "Après l'An 789, la reconstruction du monde s'étend sur la période An 790 - 832.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q130",
@@ -1393,7 +1393,7 @@
                       ],
                       0,
                       "Le Nécromonde est situé dans l'ère primitive, bien avant l'Âge des Dofus et l'Ère du Wakfu.",
-                      "../chronologies-html/chronologie-historique.html"
+                      "../chronologies/chronologie-historique.html"
             ],
             [
                       "q131",
@@ -1408,7 +1408,7 @@
                       ],
                       0,
                       "Le titre garde le nom de l'ère : cette œuvre est classée dans l'Âge des Dofus.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q132",
@@ -1423,7 +1423,7 @@
                       ],
                       0,
                       "Wakfu - Saison 1 est placée dans l'Ère du Wakfu.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q133",
@@ -1438,7 +1438,7 @@
                       ],
                       0,
                       "Le MMO Waven ouvre le début de l'ère Waven dans la chronologie des œuvres.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q134",
@@ -1453,7 +1453,7 @@
                       ],
                       0,
                       "Island of Wakfu est placé aux Origines, ce qui en fait une question piégeuse.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q135",
@@ -1468,7 +1468,7 @@
                       ],
                       0,
                       "One More Gate: A Wakfu Legend est placé dans la transition vers le Wakfu.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q136",
@@ -1483,7 +1483,7 @@
                       ],
                       0,
                       "Les épisodes 25 à 35 sont encore dans la transition vers le Wakfu, avant les épisodes 36 à 43.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q137",
@@ -1498,7 +1498,7 @@
                       ],
                       0,
                       "Kérubim fait partie des premiers récits Dofus dans la chronologie des œuvres.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q139",
@@ -1513,7 +1513,7 @@
                       ],
                       0,
                       "Bestiale est située après Lancedur dans l'Ère du Waven.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q140",
@@ -1528,7 +1528,7 @@
                       ],
                       0,
                       "La frise place les saisons 1 et 2 avant les OAV, puis la saison 3 dans la fin de l'ère Wakfu.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q141",
@@ -1543,7 +1543,7 @@
                       ],
                       0,
                       "Goultard le Barbare est listé parmi les œuvres des Origines.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q142",
@@ -1558,7 +1558,7 @@
                       ],
                       0,
                       "Le titre garde le nom de l'ère et la frise place la saison 4 dans la fin de l'ère Wakfu.",
-                      "../chronologies-html/chronologie-oeuvres.html"
+                      "../chronologies/chronologie-oeuvres.html"
             ],
             [
                       "q143",
@@ -1573,7 +1573,7 @@
                       ],
                       0,
                       "La biographie d'Anathar situe cette première invasion des Shushus en l'an 24.",
-                      "../personnages-html/anathar.html"
+                      "../personnages/anathar.html"
             ],
             [
                       "q145",
@@ -1588,7 +1588,7 @@
                       ],
                       0,
                       "Simone arrive à Astrub en l'an 397 pour travailler chez Kérubim.",
-                      "../personnages-html/simone.html"
+                      "../personnages/simone.html"
             ],
             [
                       "q146",
@@ -1603,7 +1603,7 @@
                       ],
                       0,
                       "En l'an 400, Julith revient récupérer le Dofus Ébène et le passé de Kérubim le rattrape.",
-                      "../personnages-html/kerubim-crepin.html"
+                      "../personnages/kerubim-crepin.html"
             ],
             [
                       "q147",
@@ -1618,7 +1618,7 @@
                       ],
                       0,
                       "Uk'Not'Allag quitte la Shukrute à la tête d'une armée démoniaque en l'an 505.",
-                      "../personnages-html/uk-not-allag.html"
+                      "../personnages/uk-not-allag.html"
             ],
             [
                       "q148",
@@ -1633,7 +1633,7 @@
                       ],
                       0,
                       "La bio nomme l'an 636 comme celui de L'Évasion d'Uk'Not'Allag.",
-                      "../personnages-html/uk-not-allag.html"
+                      "../personnages/uk-not-allag.html"
             ],
             [
                       "q149",
@@ -1648,7 +1648,7 @@
                       ],
                       0,
                       "En 551, Djaul se venge et enferme Frigost dans un hiver perpétuel.",
-                      "../personnages-html/comte-harebourg.html"
+                      "../personnages/comte-harebourg.html"
             ],
             [
                       "q150",
@@ -1663,7 +1663,7 @@
                       ],
                       0,
                       "Sipho participe au tournoi de la Fratrie sur Frigost en l'an 666.",
-                      "../personnages-html/sipho.html"
+                      "../personnages/sipho.html"
             ],
             [
                       "q151",
@@ -1678,7 +1678,7 @@
                       ],
                       0,
                       "Yugo naît une nouvelle fois en 969 sur l'île d'Oma.",
-                      "../personnages-html/yugo.html"
+                      "../personnages/yugo.html"
             ],
             [
                       "q152",
@@ -1693,7 +1693,7 @@
                       ],
                       0,
                       "La Confrérie arrive à Katrepat en l'an 981 et découvre la cité dominée par Vampyro.",
-                      "../personnages-html/vampyro.html"
+                      "../personnages/vampyro.html"
             ],
             [
                       "q153",
@@ -1708,7 +1708,7 @@
                       ],
                       0,
                       "En l'an 982, Katrepat devient Rubilaxia sous l'emprise de Rubilax.",
-                      "../personnages-html/vampyro.html"
+                      "../personnages/vampyro.html"
             ],
             [
                       "q154",
@@ -1723,7 +1723,7 @@
                       ],
                       0,
                       "En 983, Jiva attaque les héros et réclame les six Dofus Éliatropes.",
-                      "../personnages-html/jiva.html"
+                      "../personnages/jiva.html"
             ],
             [
                       "q155",
@@ -1738,7 +1738,7 @@
                       ],
                       0,
                       "Yugo est confié par Grougaloragran à Alibert afin de grandir parmi les humains.",
-                      "../personnages-html/yugo.html"
+                      "../personnages/yugo.html"
             ],
             [
                       "q156",
@@ -1753,7 +1753,7 @@
                       ],
                       0,
                       "La menace des Nécromes altère le corps de Yugo et accélère sa croissance.",
-                      "../personnages-html/yugo.html"
+                      "../personnages/yugo.html"
             ],
             [
                       "q157",
@@ -1768,7 +1768,7 @@
                       ],
                       0,
                       "Qilby utilise l'Éliasphère pour arracher Yugo à Toross Mordal, au prix de sa vie.",
-                      "../personnages-html/yugo.html"
+                      "../personnages/yugo.html"
             ],
             [
                       "q158",
@@ -1783,7 +1783,7 @@
                       ],
                       0,
                       "Après la guerre, Yugo épouse Amalia et assume un rôle de souverain auprès des Éliatropes.",
-                      "../personnages-html/yugo.html"
+                      "../personnages/yugo.html"
             ],
             [
                       "q159",
@@ -1798,7 +1798,7 @@
                       ],
                       0,
                       "Ogrest naît d'une expérience d'Otomaï réalisée à partir d'un gland et d'une ogrine.",
-                      "../personnages-html/ogrest.html"
+                      "../personnages/ogrest.html"
             ],
             [
                       "q160",
@@ -1813,7 +1813,7 @@
                       ],
                       0,
                       "Les larmes d'Ogrest réparent le cœur en ogrine de Dathura et la raniment.",
-                      "../personnages-html/ogrest.html"
+                      "../personnages/ogrest.html"
             ],
             [
                       "q161",
@@ -1828,7 +1828,7 @@
                       ],
                       0,
                       "Après l'épisode de Frigost, Ogrest demeure prisonnier de la glace avec Dathura pendant plus d'un siècle.",
-                      "../personnages-html/ogrest.html"
+                      "../personnages/ogrest.html"
             ],
             [
                       "q162",
@@ -1843,7 +1843,7 @@
                       ],
                       0,
                       "Otomaï parvient à retirer les Dofus Primordiaux du corps de son fils adoptif.",
-                      "../personnages-html/ogrest.html"
+                      "../personnages/ogrest.html"
             ],
             [
                       "q163",
@@ -1858,7 +1858,7 @@
                       ],
                       0,
                       "Igôle découvre l'Éliacube, l'artefact qui nourrit l'obsession de Noximilien.",
-                      "../personnages-html/nox.html"
+                      "../personnages/nox.html"
             ],
             [
                       "q164",
@@ -1873,7 +1873,7 @@
                       ],
                       0,
                       "Nox devient fou après la mort de sa famille pendant le Chaos d'Ogrest.",
-                      "../personnages-html/nox.html"
+                      "../personnages/nox.html"
             ],
             [
                       "q165",
@@ -1888,7 +1888,7 @@
                       ],
                       0,
                       "Nox s'en prend à l'Arbre de Vie pour accumuler assez de Wakfu.",
-                      "../personnages-html/nox.html"
+                      "../personnages/nox.html"
             ],
             [
                       "q166",
@@ -1903,7 +1903,7 @@
                       ],
                       0,
                       "Toute l'énergie accumulée par Nox ne lui permet de remonter le temps que de vingt minutes.",
-                      "../personnages-html/nox.html"
+                      "../personnages/nox.html"
             ],
             [
                       "q167",
@@ -1918,7 +1918,7 @@
                       ],
                       0,
                       "Contrairement aux autres Éliatropes, Qilby conserve la mémoire parfaite de ses vies.",
-                      "../personnages-html/qilby.html"
+                      "../personnages/qilby.html"
             ],
             [
                       "q168",
@@ -1933,7 +1933,7 @@
                       ],
                       0,
                       "La biographie de Qilby rattache l'Éliacube au cœur d'Orgonax et à la guerre contre les Méchasmes.",
-                      "../personnages-html/qilby.html"
+                      "../personnages/qilby.html"
             ],
             [
                       "q169",
@@ -1948,7 +1948,7 @@
                       ],
                       0,
                       "Qilby veut utiliser le Wakfu du monde pour relancer le Zinit et repartir vers les étoiles.",
-                      "../personnages-html/qilby.html"
+                      "../personnages/qilby.html"
             ],
             [
                       "q170",
@@ -1963,7 +1963,7 @@
                       ],
                       0,
                       "Après sa défaite, Qilby est renvoyé dans la Dimension Blanche.",
-                      "../personnages-html/qilby.html"
+                      "../personnages/qilby.html"
             ],
             [
                       "q171",
@@ -1978,7 +1978,7 @@
                       ],
                       0,
                       "Écaflip est séduit par l'audace de Kérubim lorsqu'il tente de bluffer avec un faux œuf.",
-                      "../personnages-html/kerubim-crepin.html"
+                      "../personnages/kerubim-crepin.html"
             ],
             [
                       "q172",
@@ -1993,7 +1993,7 @@
                       ],
                       0,
                       "Après ce vol, Kérubim est poursuivi par l'armure vivante de Cire Momore.",
-                      "../personnages-html/kerubim-crepin.html"
+                      "../personnages/kerubim-crepin.html"
             ],
             [
                       "q173",
@@ -2008,7 +2008,7 @@
                       ],
                       0,
                       "Le Baron, en réalité Écaflip, pousse Kérubim à perdre tout ce qu'il avait misé.",
-                      "../personnages-html/kerubim-crepin.html"
+                      "../personnages/kerubim-crepin.html"
             ],
             [
                       "q174",
@@ -2023,7 +2023,7 @@
                       ],
                       0,
                       "Jahash neutralise le Dofus Ébène avec le Dofus Ivoire au prix de sa vie.",
-                      "../personnages-html/joris-jurgen.html"
+                      "../personnages/joris-jurgen.html"
             ],
             [
                       "q175",
@@ -2038,7 +2038,7 @@
                       ],
                       0,
                       "L'âme de Grougalorasalar se réfugie dans Joris après la fissure du Dofus Ébène.",
-                      "../personnages-html/joris-jurgen.html"
+                      "../personnages/joris-jurgen.html"
             ],
             [
                       "q176",
@@ -2053,7 +2053,7 @@
                       ],
                       0,
                       "Joris accepte de cacher les six Dofus Éliatropes après leur récupération.",
-                      "../personnages-html/joris-jurgen.html"
+                      "../personnages/joris-jurgen.html"
             ],
             [
                       "q177",
@@ -2068,7 +2068,7 @@
                       ],
                       0,
                       "Dark Vlad émerge lorsque Goultard sombre dans la rage après la mort d'Algathe.",
-                      "../personnages-html/dark-vlad.html"
+                      "../personnages/dark-vlad.html"
             ],
             [
                       "q178",
@@ -2083,7 +2083,7 @@
                       ],
                       0,
                       "Dark Vlad libère le Feu Noir sur Grobe, transformant l'île en terre hantée.",
-                      "../personnages-html/dark-vlad.html"
+                      "../personnages/dark-vlad.html"
             ],
             [
                       "q179",
@@ -2098,7 +2098,7 @@
                       ],
                       0,
                       "Tristepin vainc Dark Vlad et permet à Goultard de reprendre le contrôle.",
-                      "../personnages-html/dark-vlad.html"
+                      "../personnages/dark-vlad.html"
             ],
             [
                       "q180",
@@ -2113,7 +2113,7 @@
                       ],
                       0,
                       "Adamaï considère l'usage des Dofus Éliatropes comme trop dangereux, ce qui crée une fracture avec Yugo.",
-                      "../personnages-html/adamai.html"
+                      "../personnages/adamai.html"
             ],
             [
                       "q181",
@@ -2128,7 +2128,7 @@
                       ],
                       0,
                       "Après sa rupture avec Yugo, Adamaï trouve un nouveau sens auprès d'Oropo et de la Fratrie.",
-                      "../personnages-html/adamai.html"
+                      "../personnages/adamai.html"
             ],
             [
                       "q182",
@@ -2143,7 +2143,7 @@
                       ],
                       0,
                       "Grougaloragran choisit de confier Yugo à Alibert tout en élevant Adamaï.",
-                      "../personnages-html/grougaloragran.html"
+                      "../personnages/grougaloragran.html"
             ],
             [
                       "q183",
@@ -2158,7 +2158,7 @@
                       ],
                       0,
                       "Grougaloragran protège les enfants et leurs alliés avant de combattre Nox seul.",
-                      "../personnages-html/grougaloragran.html"
+                      "../personnages/grougaloragran.html"
             ],
             [
                       "q184",
@@ -2173,7 +2173,7 @@
                       ],
                       0,
                       "Face au massacre de son peuple, Nora appelle sa mère, provoquant une explosion de Wakfu.",
-                      "../personnages-html/nora.html"
+                      "../personnages/nora.html"
             ],
             [
                       "q185",
@@ -2188,7 +2188,7 @@
                       ],
                       0,
                       "Nora libère sa mère, mais Efrim reste prisonnier du Nécromonde.",
-                      "../personnages-html/nora.html"
+                      "../personnages/nora.html"
             ],
             [
                       "q186",
@@ -2203,7 +2203,7 @@
                       ],
                       0,
                       "Nora est libérée par Joris, Goultard et Yugo pendant la bataille finale.",
-                      "../personnages-html/nora.html"
+                      "../personnages/nora.html"
             ],
             [
                       "q187",
@@ -2218,7 +2218,7 @@
                       ],
                       0,
                       "Phaéris accepte la mort afin de protéger ceux qu'il a défendus durant des siècles.",
-                      "../personnages-html/phaeris.html"
+                      "../personnages/phaeris.html"
             ],
             [
                       "q188",
@@ -2233,7 +2233,7 @@
                       ],
                       0,
                       "Amalia accepte d'abord le mariage par devoir, puis s'oppose au plan caché de Harebourg.",
-                      "../personnages-html/amalia-sheran-sharm.html"
+                      "../personnages/amalia-sheran-sharm.html"
             ],
             [
                       "q189",
@@ -2248,7 +2248,7 @@
                       ],
                       0,
                       "Devenue reine, Amalia unit Sadidas et Éliatropes face aux Nécromes.",
-                      "../personnages-html/amalia-sheran-sharm.html"
+                      "../personnages/amalia-sheran-sharm.html"
             ],
             [
                       "q190",
@@ -2263,7 +2263,7 @@
                       ],
                       0,
                       "Évangelyne refuse d'abandonner Tristepin et force Rubilax à rendre son corps.",
-                      "../personnages-html/evangelyne.html"
+                      "../personnages/evangelyne.html"
             ],
             [
                       "q191",
@@ -2278,7 +2278,7 @@
                       ],
                       0,
                       "La découverte de l'héritage de Madagaskan force Évangelyne à rejeter une lignée violente.",
-                      "../personnages-html/evangelyne.html"
+                      "../personnages/evangelyne.html"
             ],
             [
                       "q192",
@@ -2293,7 +2293,7 @@
                       ],
                       0,
                       "L'affrontement avec Dark Vlad aide Tristepin à assumer pleinement sa nature divine.",
-                      "../personnages-html/tristepin.html"
+                      "../personnages/tristepin.html"
             ],
             [
                       "q193",
@@ -2308,7 +2308,7 @@
                       ],
                       0,
                       "Ruel finit par choisir la vie de ses amis plutôt qu'une richesse infinie.",
-                      "../personnages-html/ruel-stroud.html"
+                      "../personnages/ruel-stroud.html"
             ],
             [
                       "q194",
@@ -2323,7 +2323,7 @@
                       ],
                       0,
                       "Quand Écho dévoile ses mensonges, Oropo comprend trop tard qu'il a sacrifié ceux qui l'aimaient vraiment.",
-                      "../personnages-html/oropo.html"
+                      "../personnages/oropo.html"
             ]
   ].map(([id, category, difficulty, question, answers, correct, explanation, source]) => ({
     id,

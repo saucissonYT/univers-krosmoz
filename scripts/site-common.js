@@ -7,27 +7,27 @@
   const rootUrl = new URL(document.currentScript ? "../" : "./", document.currentScript ? document.currentScript.src : window.location.href);
 
   const links = [
-    { label: "Histoire", href: "histoire-html/histoire-krosmoz.html", match: "/histoire-html/" },
-    { label: "Personnages", href: "personnages-html/personnages.html", match: "/personnages-html/" },
+    { label: "Histoire", href: "pages/histoire/histoire-krosmoz.html", match: "/pages/histoire/" },
+    { label: "Personnages", href: "pages/personnages/personnages.html", match: "/pages/personnages/" },
     {
       label: "Chronologie",
       items: [
-        { label: "Histoire", href: "chronologies-html/chronologie-historique.html" },
-        { label: "Œuvre", href: "chronologies-html/chronologie-oeuvres.html" }
+        { label: "Histoire", href: "pages/chronologies/chronologie-historique.html" },
+        { label: "Œuvre", href: "pages/chronologies/chronologie-oeuvres.html" }
       ],
-      match: "/chronologies-html/"
+      match: "/pages/chronologies/"
     },
-    { label: "Régions", href: "regions-html/regions.html", match: "/regions-html/" },
-    { label: "Lexique", href: "lexique-html/lexique.html", match: "/lexique-html/" },
-    { label: "Jeux", href: "jeux-html/jeux.html", match: "/jeux-html/" },
+    { label: "Régions", href: "pages/regions/regions.html", match: "/pages/regions/" },
+    { label: "Lexique", href: "pages/lexique/lexique.html", match: "/pages/lexique/" },
+    { label: "Jeux", href: "pages/jeux/jeux.html", match: "/pages/jeux/" },
     {
       label: "Médias",
       items: [
-        { label: "Arbre des affinités", href: "media-html/arbre-affinites.html" }
+        { label: "Arbre des affinités", href: "pages/media/arbre-affinites.html" }
       ],
-      match: "/media-html/"
+      match: "/pages/media/"
     },
-    { label: "Contactez-nous", href: "contact-html/contact.html", match: "/contact-html/" }
+    { label: "Contactez-nous", href: "pages/contact/contact.html", match: "/pages/contact/" }
   ];
 
   const socialLinks = [

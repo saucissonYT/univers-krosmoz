@@ -7,8 +7,8 @@ const characters = [
     id: 'yugo',
     name: 'Yugo',
     archetype: 'Le cœur qui relie les mondes',
-    href: '../personnages-html/yugo.html',
-    image: '../assets/personnages/cartes/yugo.webp',
+    href: '../personnages/yugo.html',
+    image: '../../assets/personnages/cartes/yugo.webp',
     traits: ['Éliatrope', 'Espoir', 'Responsabilité'],
     vector: { coeur: 5, action: 3, sagesse: 3, ambition: 1, ombre: 0, mystere: 3, liberte: 3, devoir: 4, chaos: 1, lien: 5 },
     text: "Vous avancez avec le cœur avant la couronne. Comme Yugo, vous cherchez à protéger les autres sans perdre votre part d'innocence, même lorsque vos choix pèsent sur plus grand que vous."
@@ -17,8 +17,8 @@ const characters = [
     id: 'adamai',
     name: 'Adamaï',
     archetype: 'Le double lucide',
-    href: '../personnages-html/adamai.html',
-    image: '../assets/personnages/cartes/adamai.webp',
+    href: '../personnages/adamai.html',
+    image: '../../assets/personnages/cartes/adamai.webp',
     traits: ['Dragon Éliatrope', 'Mesure', 'Fracture'],
     vector: { coeur: 3, action: 2, sagesse: 4, ambition: 2, ombre: 2, mystere: 4, liberte: 2, devoir: 4, chaos: 2, lien: 4 },
     text: "Vous êtes fait de loyauté et de recul. Comme Adamaï, vous pouvez aimer profondément sans suivre aveuglément, quitte à devenir la voix difficile que personne ne veut entendre."
@@ -27,8 +27,8 @@ const characters = [
     id: 'amalia',
     name: 'Amalia Sheran Sharm',
     archetype: 'La souveraine sensible',
-    href: '../personnages-html/amalia-sheran-sharm.html',
-    image: '../assets/personnages/cartes/amalia-sheran-sharm.webp',
+    href: '../personnages/amalia-sheran-sharm.html',
+    image: '../../assets/personnages/cartes/amalia-sheran-sharm.webp',
     traits: ['Sadida', 'Nature', 'Royauté'],
     vector: { coeur: 5, action: 2, sagesse: 3, ambition: 2, ombre: 0, mystere: 1, liberte: 2, devoir: 5, chaos: 0, lien: 5 },
     text: "Vous avez besoin d'aimer ce que vous protégez. Comme Amalia, votre force vient d'une sensibilité assumée, mais aussi d'un sens du devoir qui finit toujours par vous rattraper."
@@ -37,8 +37,8 @@ const characters = [
     id: 'tristepin',
     name: 'Tristepin de Percedal',
     archetype: "L'élan du héros",
-    href: '../personnages-html/tristepin.html',
-    image: '../assets/personnages/cartes/tristepin.webp',
+    href: '../personnages/tristepin.html',
+    image: '../../assets/personnages/cartes/tristepin.webp',
     traits: ['Iop', 'Courage', 'Famille'],
     vector: { coeur: 4, action: 5, sagesse: 1, ambition: 1, ombre: 1, mystere: 0, liberte: 4, devoir: 3, chaos: 2, lien: 4 },
     text: "Vous répondez au danger par le mouvement. Comme Tristepin, vous pouvez être impulsif, mais votre courage devient précieux lorsqu'il s'agit de défendre ceux que vous aimez."
@@ -47,8 +47,8 @@ const characters = [
     id: 'evangelyne',
     name: 'Évangelyne',
     archetype: 'La précision protectrice',
-    href: '../personnages-html/evangelyne.html',
-    image: '../assets/personnages/cartes/evangelyne.webp',
+    href: '../personnages/evangelyne.html',
+    image: '../../assets/personnages/cartes/evangelyne.webp',
     traits: ['Cra', 'Lucidité', 'Protection'],
     vector: { coeur: 4, action: 3, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 4 },
     text: "Vous ne confondez pas force et agitation. Comme Évangelyne, vous préférez viser juste, protéger sans bruit et garder la tête froide quand tout le monde s'emballe."
@@ -57,8 +57,8 @@ const characters = [
     id: 'ruel',
     name: 'Ruel Stroud',
     archetype: 'Le survivant au cœur tendre',
-    href: '../personnages-html/ruel-stroud.html',
-    image: '../assets/personnages/cartes/ruel-stroud.webp',
+    href: '../personnages/ruel-stroud.html',
+    image: '../../assets/personnages/cartes/ruel-stroud.webp',
     traits: ['Enutrof', 'Instinct', 'Attachement'],
     vector: { coeur: 3, action: 2, sagesse: 3, ambition: 3, ombre: 1, mystere: 0, liberte: 4, devoir: 2, chaos: 1, lien: 3 },
     text: "Vous avez le sens du réel, parfois rude, souvent drôle malgré vous. Comme Ruel, vous savez survivre, négocier, râler, puis rester quand cela compte vraiment."
@@ -67,8 +67,8 @@ const characters = [
     id: 'nox',
     name: 'Nox',
     archetype: "L'obsession du temps perdu",
-    href: '../personnages-html/nox.html',
-    image: '../assets/personnages/cartes/nox.webp',
+    href: '../personnages/nox.html',
+    image: '../../assets/personnages/cartes/nox.webp',
     traits: ['Xélor', 'Temps', 'Obsession'],
     vector: { coeur: 2, action: 2, sagesse: 4, ambition: 5, ombre: 4, mystere: 4, liberte: 1, devoir: 2, chaos: 4, lien: 2 },
     text: "Vous pourriez traverser le monde pour réparer une perte. Comme Nox, votre intelligence est immense, mais elle devient dangereuse lorsqu'une blessure décide à votre place."
@@ -77,8 +77,8 @@ const characters = [
     id: 'qilby',
     name: 'Qilby',
     archetype: 'La mémoire qui refuse les murs',
-    href: '../personnages-html/qilby.html',
-    image: '../assets/personnages/cartes/qilby.webp',
+    href: '../personnages/qilby.html',
+    image: '../../assets/personnages/cartes/qilby.webp',
     traits: ['Éliatrope', 'Savoir', 'Errance'],
     vector: { coeur: 1, action: 2, sagesse: 5, ambition: 4, ombre: 3, mystere: 5, liberte: 5, devoir: 1, chaos: 3, lien: 1 },
     text: "Vous êtes attiré par ce qui dépasse les frontières. Comme Qilby, vous avez soif de comprendre, de partir, de voir encore, même si cette liberté peut devenir une solitude."
@@ -87,8 +87,8 @@ const characters = [
     id: 'oropo',
     name: 'Oropo',
     archetype: 'Le messie fissuré',
-    href: '../personnages-html/oropo.html',
-    image: '../assets/personnages/cartes/oropo.webp',
+    href: '../personnages/oropo.html',
+    image: '../../assets/personnages/cartes/oropo.webp',
     traits: ['Éliotrope', 'Idéal', 'Manipulation'],
     vector: { coeur: 2, action: 3, sagesse: 3, ambition: 5, ombre: 4, mystere: 4, liberte: 2, devoir: 4, chaos: 4, lien: 2 },
     text: "Vous voulez changer l'ordre des choses, même si cela vous consume. Comme Oropo, vous portez une idée trop grande pour rester sage, entre idéal sincère et vertige du contrôle."
@@ -97,8 +97,8 @@ const characters = [
     id: 'goultard',
     name: 'Goultard',
     archetype: 'La force devenue sagesse',
-    href: '../personnages-html/goultard.html',
-    image: '../assets/personnages/cartes/goultard.webp',
+    href: '../personnages/goultard.html',
+    image: '../../assets/personnages/cartes/goultard.webp',
     traits: ['Iop', 'Puissance', 'Maîtrise'],
     vector: { coeur: 3, action: 5, sagesse: 4, ambition: 1, ombre: 2, mystere: 2, liberte: 3, devoir: 4, chaos: 3, lien: 2 },
     text: "Vous connaissez la violence, mais vous ne lui appartenez pas. Comme Goultard, votre puissance devient intéressante lorsqu'elle apprend à se retenir."
@@ -107,8 +107,8 @@ const characters = [
     id: 'rubilax',
     name: 'Rubilax',
     archetype: 'La tentation attachante',
-    href: '../personnages-html/rubilax.html',
-    image: '../assets/personnages/cartes/rubilax.webp',
+    href: '../personnages/rubilax.html',
+    image: '../../assets/personnages/cartes/rubilax.webp',
     traits: ['Shushu', 'Provocation', 'Lien'],
     vector: { coeur: 2, action: 4, sagesse: 1, ambition: 3, ombre: 5, mystere: 2, liberte: 4, devoir: 1, chaos: 5, lien: 3 },
     text: "Vous aimez provoquer, tester, piquer là où ça réagit. Comme Rubilax, vous portez une part de chaos, mais elle peut s'attacher plus fort qu'elle ne l'admet."
@@ -117,8 +117,8 @@ const characters = [
     id: 'kerubim',
     name: 'Kérubim Crépin',
     archetype: 'Le conteur aux mille vies',
-    href: '../personnages-html/kerubim-crepin.html',
-    image: '../assets/personnages/cartes/kerubim-crepin.webp',
+    href: '../personnages/kerubim-crepin.html',
+    image: '../../assets/personnages/cartes/kerubim-crepin.webp',
     traits: ['Écaflip', 'Panache', 'Mémoire'],
     vector: { coeur: 4, action: 3, sagesse: 4, ambition: 2, ombre: 1, mystere: 3, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
     text: "Vous transformez l'expérience en récit. Comme Kérubim, vous avez le goût du risque, du souvenir et des détours qui donnent à la vie son relief."
@@ -127,8 +127,8 @@ const characters = [
     id: 'ush',
     name: 'Ush Galesh',
     archetype: "Le joueur qui s'ennuie",
-    href: '../personnages-html/ush-galesh.html',
-    image: '../assets/personnages/cartes/ush-galesh.webp',
+    href: '../personnages/ush-galesh.html',
+    image: '../../assets/personnages/cartes/ush-galesh.webp',
     traits: ['Écaflip', 'Jeu', 'Cruauté élégante'],
     vector: { coeur: 1, action: 2, sagesse: 3, ambition: 4, ombre: 5, mystere: 3, liberte: 4, devoir: 0, chaos: 4, lien: 1 },
     text: "Vous aimez les règles surtout quand vous pouvez les tordre. Comme Ush, vous cherchez l'intensité, le défi, la partie rare qui rend l'ennui supportable."
@@ -137,8 +137,8 @@ const characters = [
     id: 'joris',
     name: 'Joris Jurgen',
     archetype: 'Le secret sous le chapeau',
-    href: '../personnages-html/joris-jurgen.html',
-    image: '../assets/personnages/cartes/joris-jurgen.webp',
+    href: '../personnages/joris-jurgen.html',
+    image: '../../assets/personnages/cartes/joris-jurgen.webp',
     traits: ['Mystère', 'Calme', 'Devoir'],
     vector: { coeur: 3, action: 3, sagesse: 5, ambition: 1, ombre: 1, mystere: 5, liberte: 2, devoir: 5, chaos: 0, lien: 3 },
     text: "Vous n'avez pas besoin de tout dire pour exister. Comme Joris, votre force vient du silence, de la fidélité et d'une maîtrise qui laisse peu de prise aux autres."
@@ -147,8 +147,8 @@ const characters = [
     id: 'bakara',
     name: 'Bakara Jurgen',
     archetype: "L'intelligence lumineuse",
-    href: '../personnages-html/bakara-jurgen.html',
-    image: '../assets/personnages/cartes/bakara-jurgen.webp',
+    href: '../personnages/bakara-jurgen.html',
+    image: '../../assets/personnages/cartes/bakara-jurgen.webp',
     traits: ['Huppermage', 'Génie', 'Audace'],
     vector: { coeur: 4, action: 3, sagesse: 5, ambition: 2, ombre: 0, mystere: 3, liberte: 3, devoir: 3, chaos: 1, lien: 4 },
     text: "Vous cherchez la solution brillante, celle qui sauve sans renoncer à l'élégance. Comme Bakara, votre esprit est une arme, mais aussi une chaleur."
@@ -157,8 +157,8 @@ const characters = [
     id: 'ogrest',
     name: 'Ogrest',
     archetype: 'Le chagrin démesuré',
-    href: '../personnages-html/ogrest.html',
-    image: '../assets/personnages/cartes/ogrest.webp',
+    href: '../personnages/ogrest.html',
+    image: '../../assets/personnages/cartes/ogrest.webp',
     traits: ['Ogre', 'Dofus', 'Débordement'],
     vector: { coeur: 5, action: 4, sagesse: 0, ambition: 3, ombre: 3, mystere: 2, liberte: 2, devoir: 0, chaos: 5, lien: 5 },
     text: "Vous ressentez trop fort pour rester intact. Comme Ogrest, votre amour peut déplacer des montagnes, mais votre douleur peut devenir une marée."
@@ -167,8 +167,8 @@ const characters = [
     id: 'dathura',
     name: 'Dathura',
     archetype: 'La muse impossible',
-    href: '../personnages-html/dathura.html',
-    image: '../assets/personnages/cartes/dathura.webp',
+    href: '../personnages/dathura.html',
+    image: '../../assets/personnages/cartes/dathura.webp',
     traits: ['Sadida', 'Désir', 'Distance'],
     vector: { coeur: 2, action: 1, sagesse: 3, ambition: 4, ombre: 3, mystere: 4, liberte: 4, devoir: 1, chaos: 3, lien: 2 },
     text: "Vous attirez les projections, mais vous refusez d'être possédé. Comme Dathura, vous incarnez une beauté qui dérange parce qu'elle ne se laisse pas réduire."
@@ -177,8 +177,8 @@ const characters = [
     id: 'rushu',
     name: 'Rushu',
     archetype: 'La domination brute',
-    href: '../personnages-html/rushu.html',
-    image: '../assets/personnages/cartes/rushu.webp',
+    href: '../personnages/rushu.html',
+    image: '../../assets/personnages/cartes/rushu.webp',
     traits: ['Démon', 'Pouvoir', 'Destruction'],
     vector: { coeur: 0, action: 5, sagesse: 2, ambition: 5, ombre: 5, mystere: 2, liberte: 3, devoir: 0, chaos: 5, lien: 0 },
     text: "Vous détestez subir. Comme Rushu, votre énergie cherche l'ascendant, la prise, la victoire nette. Reste à savoir si vous commandez votre ombre ou si elle commande pour vous."
@@ -187,8 +187,8 @@ const characters = [
     id: 'comte-harebourg',
     name: 'Comte Harebourg',
     archetype: 'Le calcul glacé',
-    href: '../personnages-html/comte-harebourg.html',
-    image: '../assets/personnages/cartes/comte-harebourg.webp',
+    href: '../personnages/comte-harebourg.html',
+    image: '../../assets/personnages/cartes/comte-harebourg.webp',
     traits: ['Xélor', 'Frigost', 'Contrôle'],
     vector: { coeur: 1, action: 2, sagesse: 5, ambition: 5, ombre: 4, mystere: 4, liberte: 1, devoir: 3, chaos: 2, lien: 1 },
     text: "Vous aimez comprendre avant d'agir, contrôler avant de risquer. Comme Harebourg, votre précision peut bâtir des merveilles ou enfermer un monde dans votre hiver."
@@ -197,8 +197,8 @@ const characters = [
     id: 'toxine',
     name: 'Toxine',
     archetype: 'La lame sans remords',
-    href: '../personnages-html/toxine.html',
-    image: '../assets/personnages/cartes/toxine.webp',
+    href: '../personnages/toxine.html',
+    image: '../../assets/personnages/cartes/toxine.webp',
     traits: ['Sram', 'Poison', 'Froideur'],
     vector: { coeur: 0, action: 4, sagesse: 3, ambition: 4, ombre: 5, mystere: 4, liberte: 4, devoir: 0, chaos: 4, lien: 0 },
     text: "Vous savez où viser. Comme Toxine, vous êtes difficile à lire, précis, dangereux quand on vous sous-estime, et peu sensible aux morales toutes faites."
@@ -207,8 +207,8 @@ const characters = [
     id: 'lilotte',
     name: 'Lilotte',
     archetype: 'La petite survivante',
-    href: '../personnages-html/lilotte.html',
-    image: '../assets/personnages/cartes/lilotte.webp',
+    href: '../personnages/lilotte.html',
+    image: '../../assets/personnages/cartes/lilotte.webp',
     traits: ['Ouginak', 'Vif', 'Instinct'],
     vector: { coeur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 1, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
     text: "Vous avancez à l'instinct, avec une énergie vive et une loyauté qui ne demande pas de grands discours. Comme Lilotte, vous survivez en restant mobile."
@@ -217,8 +217,8 @@ const characters = [
     id: 'lokus',
     name: 'Lokus',
     archetype: 'La machine ancienne',
-    href: '../personnages-html/lokus.html',
-    image: '../assets/personnages/cartes/lokus.webp',
+    href: '../personnages/lokus.html',
+    image: '../../assets/personnages/cartes/lokus.webp',
     traits: ['Méchasme', 'Stasis', 'Étrangeté'],
     vector: { coeur: 0, action: 3, sagesse: 5, ambition: 2, ombre: 3, mystere: 5, liberte: 1, devoir: 4, chaos: 2, lien: 0 },
     text: "Vous semblez venir d'un autre rythme. Comme Lokus, vous incarnez la distance, la logique ancienne, une présence difficile à comprendre depuis les émotions ordinaires."
@@ -227,8 +227,8 @@ const characters = [
     id: 'grougaloragran',
     name: 'Grougaloragran',
     archetype: 'Le gardien ancestral',
-    href: '../personnages-html/grougaloragran.html',
-    image: '../assets/personnages/cartes/grougaloragran.webp',
+    href: '../personnages/grougaloragran.html',
+    image: '../../assets/personnages/cartes/grougaloragran.webp',
     traits: ['Dragon Éliatrope', 'Gardien', 'Mémoire'],
     vector: { coeur: 4, action: 3, sagesse: 5, ambition: 0, ombre: 1, mystere: 4, liberte: 1, devoir: 5, chaos: 1, lien: 4 },
     text: "Vous protégez sur le temps long. Comme Grougaloragran, vous portez la mémoire, la patience et cette forme d'amour qui accepte de rester dans l'ombre."
@@ -237,8 +237,8 @@ const characters = [
     id: 'remington',
     name: 'Remington Smisse',
     archetype: 'Le panache du voleur',
-    href: '../personnages-html/remington-smisse.html',
-    image: '../assets/personnages/cartes/remington-smisse.webp',
+    href: '../personnages/remington-smisse.html',
+    image: '../../assets/personnages/cartes/remington-smisse.webp',
     traits: ['Roublard', 'Style', 'Liberté'],
     vector: { coeur: 2, action: 4, sagesse: 2, ambition: 4, ombre: 3, mystere: 2, liberte: 5, devoir: 0, chaos: 4, lien: 2 },
     text: "Vous préférez une sortie spectaculaire à une victoire bien rangée. Comme Remington, vous avez le goût du risque, du style et des chemins qui sentent la poudre."
@@ -375,8 +375,8 @@ characters.push(
     id: 'aerafal',
     name: 'Aerafal',
     archetype: 'La puissance qui choisit son heure',
-    href: '../personnages-html/aerafal.html',
-    image: '../assets/personnages/cartes/aerafal.webp',
+    href: '../personnages/aerafal.html',
+    image: '../../assets/personnages/cartes/aerafal.webp',
     traits: ['Dragon', 'Patience', 'Sagesse'],
     vector: { coeur: 2, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 5, liberte: 2, devoir: 5, chaos: 1, lien: 3 },
     text: "Vous préférez la force tenue à la force jetée. Comme Aerafal, vous avancez avec une ancienneté calme, une mémoire profonde et une présence qui n'a pas besoin de bruit pour peser."
@@ -385,8 +385,8 @@ characters.push(
     id: 'aguabrial',
     name: 'Aguabrial',
     archetype: "L'onde ancienne",
-    href: '../personnages-html/aguabrial.html',
-    image: '../assets/personnages/cartes/aguabrial.webp',
+    href: '../personnages/aguabrial.html',
+    image: '../../assets/personnages/cartes/aguabrial.webp',
     traits: ['Dragon', 'Eau', 'Mystère'],
     vector: { coeur: 3, action: 2, sagesse: 5, ambition: 1, ombre: 1, mystere: 5, liberte: 3, devoir: 4, chaos: 1, lien: 3 },
     text: "Vous traversez les conflits comme une eau profonde. Comme Aguabrial, vous cachez votre intensité sous une surface posée, avec une intuition ancienne des courants du monde."
@@ -395,8 +395,8 @@ characters.push(
     id: 'alibert',
     name: 'Alibert',
     archetype: 'Le foyer qui tient bon',
-    href: '../personnages-html/alibert.html',
-    image: '../assets/personnages/cartes/alibert.webp',
+    href: '../personnages/alibert.html',
+    image: '../../assets/personnages/cartes/alibert.webp',
     traits: ['Enutrof', 'Tendresse', 'Accueil'],
     vector: { coeur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 0, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous êtes de ceux qui rendent le monde habitable. Comme Alibert, votre grandeur se voit dans les gestes simples, la fidélité et cette chaleur qui donne aux autres un endroit où revenir."
@@ -405,8 +405,8 @@ characters.push(
     id: 'arpagone',
     name: 'Arpagone',
     archetype: "L'amour devenu manque",
-    href: '../personnages-html/arpagone.html',
-    image: '../assets/personnages/cartes/arpagone.webp',
+    href: '../personnages/arpagone.html',
+    image: '../../assets/personnages/cartes/arpagone.webp',
     traits: ['Enutrof', 'Blessure', 'Attachement'],
     vector: { coeur: 4, action: 2, sagesse: 3, ambition: 4, ombre: 3, mystere: 2, liberte: 1, devoir: 2, chaos: 3, lien: 4 },
     text: "Vous aimez fort, parfois au point de garder les cicatrices ouvertes. Comme Arpagone, vous pouvez transformer une perte en moteur, quitte à marcher longtemps avec elle."
@@ -415,8 +415,8 @@ characters.push(
     id: 'atcham-crepin',
     name: 'Atcham Crépin',
     archetype: 'La griffe élégante',
-    href: '../personnages-html/atcham-crepin.html',
-    image: '../assets/personnages/cartes/atcham-crepin.webp',
+    href: '../personnages/atcham-crepin.html',
+    image: '../../assets/personnages/cartes/atcham-crepin.webp',
     traits: ['Écaflip', 'Adresse', 'Défi'],
     vector: { coeur: 2, action: 4, sagesse: 3, ambition: 3, ombre: 3, mystere: 2, liberte: 5, devoir: 1, chaos: 3, lien: 2 },
     text: "Vous aimez gagner avec style. Comme Atcham, vous avez le goût du défi, de la précision et des coups qui paraissent légers seulement à ceux qui n'ont pas vu les griffes."
@@ -425,8 +425,8 @@ characters.push(
     id: 'balthazar',
     name: 'Balthazar',
     archetype: 'Le vieux gardien du savoir',
-    href: '../personnages-html/balthazar.html',
-    image: '../assets/personnages/cartes/balthazar.webp',
+    href: '../personnages/balthazar.html',
+    image: '../../assets/personnages/cartes/balthazar.webp',
     traits: ['Dragon Éliatrope', 'Mémoire', 'Transmission'],
     vector: { coeur: 4, action: 1, sagesse: 5, ambition: 0, ombre: 0, mystere: 4, liberte: 1, devoir: 5, chaos: 0, lien: 4 },
     text: "Vous protégez mieux en transmettant qu'en possédant. Comme Balthazar, votre force vient de la patience, du savoir et d'une fidélité qui pense au futur des autres."
@@ -435,8 +435,8 @@ characters.push(
     id: 'chibi',
     name: 'Chibi',
     archetype: "L'esprit d'invention",
-    href: '../personnages-html/chibi.html',
-    image: '../assets/personnages/cartes/chibi.webp',
+    href: '../personnages/chibi.html',
+    image: '../../assets/personnages/cartes/chibi.webp',
     traits: ['Éliatrope', 'Création', 'Curiosité'],
     vector: { coeur: 3, action: 3, sagesse: 5, ambition: 3, ombre: 1, mystere: 4, liberte: 4, devoir: 3, chaos: 1, lien: 3 },
     text: "Vous cherchez la solution qui n'existe pas encore. Comme Chibi, vous reliez l'intelligence, l'audace et la curiosité pour ouvrir des chemins que personne n'avait envisagés."
@@ -445,8 +445,8 @@ characters.push(
     id: 'cleophee',
     name: 'Cléophée',
     archetype: 'La flèche indocile',
-    href: '../personnages-html/cleophee.html',
-    image: '../assets/personnages/cartes/cleophee.webp',
+    href: '../personnages/cleophee.html',
+    image: '../../assets/personnages/cartes/cleophee.webp',
     traits: ['Cra', 'Impulsion', 'Famille'],
     vector: { coeur: 4, action: 5, sagesse: 2, ambition: 2, ombre: 1, mystere: 1, liberte: 5, devoir: 2, chaos: 3, lien: 4 },
     text: "Vous avez besoin d'air, de mouvement et de réponses franches. Comme Cléophée, vous pouvez foncer trop vite, mais rarement sans cœur."
@@ -455,8 +455,8 @@ characters.push(
     id: 'dark-vlad',
     name: 'Dark Vlad',
     archetype: "L'ombre du guerrier",
-    href: '../personnages-html/dark-vlad.html',
-    image: '../assets/personnages/cartes/dark-vlad.webp',
+    href: '../personnages/dark-vlad.html',
+    image: '../../assets/personnages/cartes/dark-vlad.webp',
     traits: ['Iop', 'Colère', 'Malédiction'],
     vector: { coeur: 1, action: 5, sagesse: 1, ambition: 4, ombre: 5, mystere: 3, liberte: 2, devoir: 1, chaos: 5, lien: 1 },
     text: "Vous portez une intensité qui peut devenir brûlante. Comme Dark Vlad, votre défi est de ne pas laisser la blessure choisir la forme de votre puissance."
@@ -465,8 +465,8 @@ characters.push(
     id: 'echo',
     name: 'Dame Echo',
     archetype: 'La foi qui complote',
-    href: '../personnages-html/echo.html',
-    image: '../assets/personnages/cartes/echo.webp',
+    href: '../personnages/echo.html',
+    image: '../../assets/personnages/cartes/echo.webp',
     traits: ['Eniripsa', 'Secret', 'Idéal'],
     vector: { coeur: 3, action: 2, sagesse: 4, ambition: 5, ombre: 4, mystere: 5, liberte: 2, devoir: 4, chaos: 3, lien: 3 },
     text: "Vous savez attendre, soigner, convaincre et dissimuler. Comme Echo, vous pouvez servir une cause avec douceur en surface et une stratégie redoutable en dessous."
@@ -475,8 +475,8 @@ characters.push(
     id: 'elely-de-percedal',
     name: 'Élely de Percedal',
     archetype: 'Le courage qui déborde',
-    href: '../personnages-html/elely-de-percedal.html',
-    image: '../assets/personnages/cartes/elely-de-percedal.webp',
+    href: '../personnages/elely-de-percedal.html',
+    image: '../../assets/personnages/cartes/elely-de-percedal.webp',
     traits: ['Iop', 'Énergie', 'Famille'],
     vector: { coeur: 4, action: 5, sagesse: 1, ambition: 2, ombre: 1, mystere: 0, liberte: 5, devoir: 3, chaos: 3, lien: 5 },
     text: "Vous transformez l'amour en élan. Comme Élely, vous n'attendez pas que le monde soit prêt pour agir, surtout si quelqu'un que vous aimez est en danger."
@@ -485,8 +485,8 @@ characters.push(
     id: 'flopin-de-percedal',
     name: 'Flopin de Percedal',
     archetype: 'La justesse discrète',
-    href: '../personnages-html/flopin-de-percedal.html',
-    image: '../assets/personnages/cartes/flopin-de-percedal.webp',
+    href: '../personnages/flopin-de-percedal.html',
+    image: '../../assets/personnages/cartes/flopin-de-percedal.webp',
     traits: ['Cra', 'Calme', 'Famille'],
     vector: { coeur: 4, action: 3, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 4 },
     text: "Vous préférez viser juste plutôt que parler fort. Comme Flopin, vous observez, vous comprenez, puis vous agissez au bon moment."
@@ -495,8 +495,8 @@ characters.push(
     id: 'grany-smisse',
     name: 'Grany Smisse',
     archetype: 'La loyauté sous la poudre',
-    href: '../personnages-html/grany-smisse.html',
-    image: '../assets/personnages/cartes/grany-smisse.webp',
+    href: '../personnages/grany-smisse.html',
+    image: '../../assets/personnages/cartes/grany-smisse.webp',
     traits: ['Roublard', 'Famille', 'Risques'],
     vector: { coeur: 4, action: 4, sagesse: 2, ambition: 3, ombre: 3, mystere: 1, liberte: 4, devoir: 2, chaos: 4, lien: 4 },
     text: "Vous pouvez vivre dans le désordre sans perdre vos attaches. Comme Grany, votre fidélité n'est pas toujours sage, mais elle est réelle."
@@ -505,8 +505,8 @@ characters.push(
     id: 'jiva',
     name: 'Jiva',
     archetype: 'Le devoir lumineux',
-    href: '../personnages-html/jiva.html',
-    image: '../assets/personnages/cartes/jiva.webp',
+    href: '../personnages/jiva.html',
+    image: '../../assets/personnages/cartes/jiva.webp',
     traits: ['Protectrice', 'Ordre', 'Sacrifice'],
     vector: { coeur: 3, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 3, liberte: 1, devoir: 5, chaos: 0, lien: 3 },
     text: "Vous tenez une ligne même quand elle coûte cher. Comme Jiva, vous pouvez paraître froide parce que votre priorité reste ce qui doit être préservé."
@@ -515,8 +515,8 @@ characters.push(
     id: 'kriss-la-krass',
     name: 'Kriss la Krass',
     archetype: 'Le panache de l’arène',
-    href: '../personnages-html/kriss-la-krass.html',
-    image: '../assets/personnages/cartes/kriss-la-krass.webp',
+    href: '../personnages/kriss-la-krass.html',
+    image: '../../assets/personnages/cartes/kriss-la-krass.webp',
     traits: ['Sacrieur', 'Spectacle', 'Courage'],
     vector: { coeur: 3, action: 5, sagesse: 2, ambition: 4, ombre: 2, mystere: 0, liberte: 5, devoir: 1, chaos: 4, lien: 3 },
     text: "Vous aimez que la vie ait du rythme et du répondant. Comme Kriss, vous avez besoin de sentir l'intensité du moment et de jouer votre chance en pleine lumière."
@@ -525,8 +525,8 @@ characters.push(
     id: 'lancedur',
     name: 'Lancedur',
     archetype: 'La droiture armée',
-    href: '../personnages-html/lancedur.html',
-    image: '../assets/personnages/cartes/lancedur.webp',
+    href: '../personnages/lancedur.html',
+    image: '../../assets/personnages/cartes/lancedur.webp',
     traits: ['Forgelance', 'Honneur', 'Action'],
     vector: { coeur: 3, action: 5, sagesse: 3, ambition: 2, ombre: 1, mystere: 1, liberte: 2, devoir: 5, chaos: 1, lien: 3 },
     text: "Vous avancez avec une idée nette de ce qui se fait et ne se fait pas. Comme Lancedur, votre courage cherche une forme droite, lisible, tenue."
@@ -535,8 +535,8 @@ characters.push(
     id: 'moon',
     name: 'Moon',
     archetype: 'Le sauvage sacré',
-    href: '../personnages-html/moon.html',
-    image: '../assets/personnages/cartes/moon.webp',
+    href: '../personnages/moon.html',
+    image: '../../assets/personnages/cartes/moon.webp',
     traits: ['Instinct', 'Île', 'Puissance'],
     vector: { coeur: 1, action: 5, sagesse: 2, ambition: 2, ombre: 3, mystere: 4, liberte: 5, devoir: 0, chaos: 5, lien: 1 },
     text: "Vous êtes plus proche de l'instinct que du règlement. Comme Moon, vous incarnez une force libre, difficile à ranger, presque impossible à apprivoiser."
@@ -545,8 +545,8 @@ characters.push(
     id: 'nora',
     name: 'Nora',
     archetype: 'La flamme liée',
-    href: '../personnages-html/nora.html',
-    image: '../assets/personnages/cartes/nora.webp',
+    href: '../personnages/nora.html',
+    image: '../../assets/personnages/cartes/nora.webp',
     traits: ['Éliatrope', 'Lien', 'Courage'],
     vector: { coeur: 5, action: 4, sagesse: 3, ambition: 1, ombre: 1, mystere: 4, liberte: 3, devoir: 4, chaos: 2, lien: 5 },
     text: "Vous puisez votre courage dans les liens qui vous fondent. Comme Nora, vous êtes capable d'une grande douceur, puis d'une détermination totale quand tout bascule."
@@ -555,8 +555,8 @@ characters.push(
     id: 'phaeris',
     name: 'Phaéris',
     archetype: 'Le dragon qui veille',
-    href: '../personnages-html/phaeris.html',
-    image: '../assets/personnages/cartes/phaeris.webp',
+    href: '../personnages/phaeris.html',
+    image: '../../assets/personnages/cartes/phaeris.webp',
     traits: ['Dragon', 'Vigilance', 'Devoir'],
     vector: { coeur: 3, action: 4, sagesse: 5, ambition: 1, ombre: 1, mystere: 4, liberte: 1, devoir: 5, chaos: 1, lien: 3 },
     text: "Vous savez que protéger demande parfois de tenir seul. Comme Phaéris, vous avez une vigilance grave, patiente, entièrement tournée vers ce qui ne doit pas tomber."
@@ -565,8 +565,8 @@ characters.push(
     id: 'pandora',
     name: 'Pandora',
     archetype: 'La chercheuse des portes',
-    href: '../personnages-html/pandora.html',
-    image: '../assets/personnages/cartes/pandora.webp',
+    href: '../personnages/pandora.html',
+    image: '../../assets/personnages/cartes/pandora.webp',
     traits: ['Curiosité', 'Savoir', 'Passage'],
     vector: { coeur: 3, action: 2, sagesse: 5, ambition: 3, ombre: 1, mystere: 5, liberte: 4, devoir: 2, chaos: 1, lien: 3 },
     text: "Vous avez besoin de comprendre ce qui se cache derrière la prochaine porte. Comme Pandora, votre curiosité peut devenir une boussole, même lorsqu'elle vous mène trop loin."
@@ -575,8 +575,8 @@ characters.push(
     id: 'shinonome',
     name: 'Shinonome',
     archetype: 'La mémoire jumelle',
-    href: '../personnages-html/shinonome.html',
-    image: '../assets/personnages/cartes/shinonome.webp',
+    href: '../personnages/shinonome.html',
+    image: '../../assets/personnages/cartes/shinonome.webp',
     traits: ['Dragon Éliatrope', 'Lien', 'Secret'],
     vector: { coeur: 4, action: 2, sagesse: 5, ambition: 2, ombre: 2, mystere: 5, liberte: 3, devoir: 4, chaos: 1, lien: 5 },
     text: "Vous vivez les liens comme des vérités profondes. Comme Shinonome, votre présence parle de mémoire, de fidélité et de choses que l'on comprend rarement au premier regard."
@@ -585,8 +585,8 @@ characters.push(
     id: 'toross-mordal',
     name: 'Toross Mordal',
     archetype: 'Le roi de la faim',
-    href: '../personnages-html/toross-mordal.html',
-    image: '../assets/personnages/cartes/toross-mordal.webp',
+    href: '../personnages/toross-mordal.html',
+    image: '../../assets/personnages/cartes/toross-mordal.webp',
     traits: ['Pouvoir', 'Manque', 'Ombre'],
     vector: { coeur: 0, action: 5, sagesse: 3, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 5, lien: 0 },
     text: "Vous refusez d'être petit devant le monde. Comme Toross, votre énergie cherche la prise et la souveraineté, avec le risque de confondre besoin et domination."
@@ -595,8 +595,8 @@ characters.push(
     id: 'vampyro',
     name: 'Vampyro',
     archetype: 'La théâtralité mordante',
-    href: '../personnages-html/vampyro.html',
-    image: '../assets/personnages/cartes/vampyro.webp',
+    href: '../personnages/vampyro.html',
+    image: '../../assets/personnages/cartes/vampyro.webp',
     traits: ['Ombre', 'Style', 'Excès'],
     vector: { coeur: 1, action: 3, sagesse: 2, ambition: 4, ombre: 5, mystere: 4, liberte: 3, devoir: 0, chaos: 4, lien: 1 },
     text: "Vous aimez l'effet, le mystère et la scène. Comme Vampyro, vous pouvez transformer une faiblesse en personnage, puis un personnage en arme."
@@ -605,8 +605,8 @@ characters.push(
     id: 'wa-wabbit',
     name: 'Wa Wabbit',
     archetype: 'La couronne capricieuse',
-    href: '../personnages-html/wa-wabbit.html',
-    image: '../assets/personnages/cartes/wa-wabbit.webp',
+    href: '../personnages/wa-wabbit.html',
+    image: '../../assets/personnages/cartes/wa-wabbit.webp',
     traits: ['Roi', 'Caprice', 'Territoire'],
     vector: { coeur: 1, action: 2, sagesse: 1, ambition: 5, ombre: 3, mystere: 1, liberte: 2, devoir: 2, chaos: 4, lien: 1 },
     text: "Vous aimez que les choses reconnaissent votre place. Comme le Wa Wabbit, vous avez une énergie de territoire, de caprice et de pouvoir assumé."
@@ -615,8 +615,8 @@ characters.push(
     id: 'djaul',
     name: 'Djaul',
     archetype: 'Le froid qui mord',
-    href: '../personnages-html/djaul.html',
-    image: '../assets/personnages/cartes/djaul.webp',
+    href: '../personnages/djaul.html',
+    image: '../../assets/personnages/cartes/djaul.webp',
     traits: ['Démon', 'Hiver', 'Ruse'],
     vector: { coeur: 0, action: 4, sagesse: 4, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 4, lien: 0 },
     text: "Vous avez l'art de frapper là où cela laisse une trace. Comme Djaul, votre intelligence peut devenir glaciale quand vous décidez de ne plus ménager personne."
@@ -625,8 +625,8 @@ characters.push(
     id: 'dardondakal',
     name: 'Dardondakal',
     archetype: 'La braise du dragon',
-    href: '../personnages-html/dardondakal.html',
-    image: '../assets/personnages/cartes/dardondakal.webp',
+    href: '../personnages/dardondakal.html',
+    image: '../../assets/personnages/cartes/dardondakal.webp',
     traits: ['Dragon', 'Feu', 'Majesté'],
     vector: { coeur: 2, action: 5, sagesse: 4, ambition: 3, ombre: 2, mystere: 4, liberte: 3, devoir: 4, chaos: 3, lien: 2 },
     text: "Vous avez une chaleur de puissance, fière et difficile à ignorer. Comme Dardondakal, vous mêlez instinct, autorité et mémoire ancienne."
@@ -635,8 +635,8 @@ characters.push(
     id: 'grand-dragon',
     name: 'Grand Dragon',
     archetype: 'La stasis primordiale',
-    href: '../personnages-html/grand-dragon.html',
-    image: '../assets/personnages/cartes/grand-dragon.webp',
+    href: '../personnages/grand-dragon.html',
+    image: '../../assets/personnages/cartes/grand-dragon.webp',
     traits: ['Primordial', 'Stasis', 'Absolu'],
     vector: { coeur: 0, action: 4, sagesse: 5, ambition: 4, ombre: 5, mystere: 5, liberte: 1, devoir: 3, chaos: 5, lien: 0 },
     text: "Vous êtes attiré par les forces premières, celles qui ne demandent pas la permission d'exister. Comme le Grand Dragon, vous portez une gravité rare, presque cosmique."
@@ -645,8 +645,8 @@ characters.push(
     id: 'grande-deesse-eliatrope',
     name: 'Grande Déesse Éliatrope',
     archetype: 'Le souffle qui relie',
-    href: '../personnages-html/grande-deesse-eliatrope.html',
-    image: '../assets/personnages/cartes/grande-deesse-eliatrope.webp',
+    href: '../personnages/grande-deesse-eliatrope.html',
+    image: '../../assets/personnages/cartes/grande-deesse-eliatrope.webp',
     traits: ['Primordiale', 'Wakfu', 'Lien'],
     vector: { coeur: 5, action: 2, sagesse: 5, ambition: 1, ombre: 0, mystere: 5, liberte: 3, devoir: 5, chaos: 0, lien: 5 },
     text: "Vous cherchez à unir, nourrir et ouvrir. Comme la Grande Déesse Éliatrope, votre force se manifeste dans le lien, la création et l'élan vital."
@@ -655,8 +655,8 @@ characters.push(
     id: 'efrim',
     name: 'Efrim',
     archetype: 'Le lien fragile',
-    href: '../personnages-html/efrim.html',
-    image: '../assets/personnages/cartes/efrim.webp',
+    href: '../personnages/efrim.html',
+    image: '../../assets/personnages/cartes/efrim.webp',
     traits: ['Éliatrope', 'Sensibilité', 'Attache'],
     vector: { coeur: 5, action: 2, sagesse: 3, ambition: 1, ombre: 1, mystere: 4, liberte: 2, devoir: 3, chaos: 1, lien: 5 },
     text: "Vous ressentez les séparations comme des secousses profondes. Comme Efrim, vous avez une manière intense d'aimer, de rester lié et de chercher votre place."
@@ -665,8 +665,8 @@ characters.push(
     id: 'mina',
     name: 'Mina',
     archetype: 'La douceur ancienne',
-    href: '../personnages-html/mina.html',
-    image: '../assets/personnages/cartes/mina.webp',
+    href: '../personnages/mina.html',
+    image: '../../assets/personnages/cartes/mina.webp',
     traits: ['Éliatrope', 'Tendresse', 'Mémoire'],
     vector: { coeur: 5, action: 1, sagesse: 4, ambition: 0, ombre: 0, mystere: 4, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous avez une tendresse qui n'est pas faiblesse. Comme Mina, vous portez le lien avec délicatesse, mais aussi avec une mémoire que le temps n'efface pas."
@@ -675,8 +675,8 @@ characters.push(
     id: 'lou',
     name: 'Lou',
     archetype: 'La présence vive',
-    href: '../personnages-html/lou.html',
-    image: '../assets/personnages/cartes/lou.webp',
+    href: '../personnages/lou.html',
+    image: '../../assets/personnages/cartes/lou.webp',
     traits: ['Énergie', 'Lien', 'Élan'],
     vector: { coeur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 1, liberte: 4, devoir: 2, chaos: 2, lien: 4 },
     text: "Vous avancez avec une vivacité qui réchauffe les autres. Comme Lou, vous pouvez sembler léger, mais vos attaches vous donnent une vraie force."
@@ -685,8 +685,8 @@ characters.push(
     id: 'poo',
     name: 'Poo',
     archetype: 'Le réflexe débrouillard',
-    href: '../personnages-html/poo.html',
-    image: '../assets/personnages/cartes/poo.webp',
+    href: '../personnages/poo.html',
+    image: '../../assets/personnages/cartes/poo.webp',
     traits: ['Instinct', 'Survie', 'Mouvement'],
     vector: { coeur: 3, action: 4, sagesse: 2, ambition: 2, ombre: 2, mystere: 1, liberte: 5, devoir: 1, chaos: 3, lien: 3 },
     text: "Vous trouvez souvent une sortie avant que les autres aient fini de paniquer. Comme Poo, vous avez un instinct de terrain, mobile et très difficile à coincer."
@@ -695,8 +695,8 @@ characters.push(
     id: 'simone',
     name: 'Simone',
     archetype: 'La douceur décidée',
-    href: '../personnages-html/simone.html',
-    image: '../assets/personnages/cartes/simone.webp',
+    href: '../personnages/simone.html',
+    image: '../../assets/personnages/cartes/simone.webp',
     traits: ['Cœur', 'Calme', 'Volonté'],
     vector: { coeur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous n'avez pas besoin de brutalité pour tenir bon. Comme Simone, vous pouvez être doux, clair et beaucoup plus solide qu'on ne le croit."
@@ -1134,7 +1134,7 @@ function getTestUrl() {
     return new URL('jeu-personnage.html', window.location.href).href;
   }
 
-  return new URL('/jeux-html/jeu-personnage.html', window.location.origin).href;
+  return new URL('/pages/jeux/jeu-personnage.html', window.location.origin).href;
 }
 
 function getResultUrl(character) {
@@ -1516,7 +1516,7 @@ async function createShareCard(character, closeCharacters = []) {
   canvas.width = 1200;
   canvas.height = 630;
   const context = canvas.getContext('2d');
-  const logoImage = await loadShareImage('../assets/logo_krosmoz.webp').catch(() => null);
+  const logoImage = await loadShareImage('../../assets/logo_krosmoz.webp').catch(() => null);
   const image = await loadShareImage(character.image).catch(() => logoImage);
   const closeImages = await Promise.all(closeCharacters.slice(0, 3).map((closeCharacter) => {
     return loadShareImage(closeCharacter.image).catch(() => null);

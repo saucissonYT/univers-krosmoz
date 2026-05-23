@@ -592,7 +592,7 @@
     {
       "name": "Adamaï",
       "href": "adamai.html",
-      "image": "../assets/personnages/cartes/adamai.webp",
+      "image": "../../assets/personnages/cartes/adamai.webp",
       "classLabel": "DRAGON ELIATROPE",
       "groups": [
         "Confrérie du Tofu",
@@ -602,7 +602,7 @@
     {
       "name": "Aerafal",
       "href": "aerafal.html",
-      "image": "../assets/personnages/cartes/aerafal.webp",
+      "image": "../../assets/personnages/cartes/aerafal.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
@@ -611,7 +611,7 @@
     {
       "name": "Agard",
       "href": "agard.html",
-      "image": "../assets/personnages/cartes/agard.webp",
+      "image": "../../assets/personnages/cartes/agard.webp",
       "classLabel": "Forgelance",
       "groups": [
         "Héros"
@@ -620,7 +620,7 @@
     {
       "name": "Aguabrial",
       "href": "aguabrial.html",
-      "image": "../assets/personnages/cartes/aguabrial.webp",
+      "image": "../../assets/personnages/cartes/aguabrial.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
@@ -629,7 +629,7 @@
     {
       "name": "Alibert",
       "href": "alibert.html",
-      "image": "../assets/personnages/cartes/alibert.webp",
+      "image": "../../assets/personnages/cartes/alibert.webp",
       "classLabel": "ENUTROF",
       "groups": [
         "Héros"
@@ -638,7 +638,7 @@
     {
       "name": "Amalia Sheran Sharm",
       "href": "amalia-sheran-sharm.html",
-      "image": "../assets/personnages/cartes/amalia-sheran-sharm.webp",
+      "image": "../../assets/personnages/cartes/amalia-sheran-sharm.webp",
       "classLabel": "SADIDA",
       "groups": [
         "Confrérie du Tofu",
@@ -648,7 +648,7 @@
     {
       "name": "Anathar",
       "href": "anathar.html",
-      "image": "../assets/personnages/cartes/anathar.webp",
+      "image": "../../assets/personnages/cartes/anathar.webp",
       "classLabel": "Shushu",
       "groups": [
         "Ennemis",
@@ -658,7 +658,7 @@
     {
       "name": "Armant Sheran Sharm",
       "href": "armant-sheran-sharm.html",
-      "image": "../assets/personnages/cartes/armant-sheran-sharm.webp",
+      "image": "../../assets/personnages/cartes/armant-sheran-sharm.webp",
       "classLabel": "SADIDA",
       "groups": [
         "Famille Sheran Sharm"
@@ -667,7 +667,7 @@
     {
       "name": "Arpagone",
       "href": "arpagone.html",
-      "image": "../assets/personnages/cartes/arpagone.webp",
+      "image": "../../assets/personnages/cartes/arpagone.webp",
       "classLabel": "ENUTROF",
       "groups": [
         "Demi-dieu",
@@ -677,7 +677,7 @@
     {
       "name": "Arty",
       "href": "arty.html",
-      "image": "../assets/personnages/cartes/arty.webp",
+      "image": "../../assets/personnages/cartes/arty.webp",
       "classLabel": "Féca",
       "groups": [
         "Dragon primordial"
@@ -686,7 +686,7 @@
     {
       "name": "Atcham Crépin",
       "href": "atcham-crepin.html",
-      "image": "../assets/personnages/cartes/atcham-crepin.webp",
+      "image": "../../assets/personnages/cartes/atcham-crepin.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
         "Crépin"
@@ -695,7 +695,7 @@
     {
       "name": "Atone",
       "href": "atone.html",
-      "image": "../assets/personnages/cartes/atone.webp",
+      "image": "../../assets/personnages/cartes/atone.webp",
       "classLabel": "Eliotrope",
       "groups": [
         "Ennemis",
@@ -706,7 +706,7 @@
     {
       "name": "Aurora",
       "href": "aurora.html",
-      "image": "../assets/personnages/cartes/aurora.webp",
+      "image": "../../assets/personnages/cartes/aurora.webp",
       "classLabel": "Osamodas",
       "groups": [
         "Ennemis"
@@ -715,7 +715,7 @@
     {
       "name": "Bakara Jurgen",
       "href": "bakara-jurgen.html",
-      "image": "../assets/personnages/cartes/bakara-jurgen.webp",
+      "image": "../../assets/personnages/cartes/bakara-jurgen.webp",
       "classLabel": "Huppermage",
       "groups": [
         "Héros"
@@ -724,7 +724,7 @@
     {
       "name": "Baltazar",
       "href": "balthazar.html",
-      "image": "../assets/personnages/cartes/balthazar.webp",
+      "image": "../../assets/personnages/cartes/balthazar.webp",
       "classLabel": "DRAGON ELIATROPE",
       "groups": [
         "Éliatrope primordial"
@@ -733,7 +733,7 @@
     {
       "name": "Belladone",
       "href": "belladone.html",
-      "image": "../assets/personnages/cartes/belladone.webp",
+      "image": "../../assets/personnages/cartes/belladone.webp",
       "classLabel": "Eniripsa",
       "groups": [
         "Mythe & légende",
@@ -743,7 +743,7 @@
     {
       "name": "Bellaphone",
       "href": "bellaphone.html",
-      "image": "../assets/personnages/cartes/bellaphone.webp",
+      "image": "../../assets/personnages/cartes/bellaphone.webp",
       "classLabel": "Monstre",
       "groups": [
         "Mythe & légende"
@@ -752,7 +752,7 @@
     {
       "name": "Biste",
       "href": "biste.html",
-      "image": "../assets/personnages/cartes/biste.webp",
+      "image": "../../assets/personnages/cartes/biste.webp",
       "classLabel": "Iop",
       "groups": [
         "Héros"
@@ -761,7 +761,7 @@
     {
       "name": "Bolgrot",
       "href": "bolgrot.html",
-      "image": "../assets/personnages/cartes/bolgrot.webp",
+      "image": "../../assets/personnages/cartes/bolgrot.webp",
       "classLabel": "Dragon",
       "groups": [
         "Héros",
@@ -771,7 +771,7 @@
     {
       "name": "Bordegann",
       "href": "bordegann.html",
-      "image": "../assets/personnages/cartes/bordegann.webp",
+      "image": "../../assets/personnages/cartes/bordegann.webp",
       "classLabel": "Forgelance",
       "groups": [
         "Héros"
@@ -780,7 +780,7 @@
     {
       "name": "Bouillon",
       "href": "bouillon.html",
-      "image": "../assets/personnages/cartes/bouillon.webp",
+      "image": "../../assets/personnages/cartes/bouillon.webp",
       "classLabel": "Eliotrope",
       "groups": [
         "Ennemis",
@@ -791,7 +791,7 @@
     {
       "name": "Bump",
       "href": "bump.html",
-      "image": "../assets/personnages/cartes/bump.webp",
+      "image": "../../assets/personnages/cartes/bump.webp",
       "classLabel": "FÉCA",
       "groups": [
         "Fratrie",
@@ -801,7 +801,7 @@
     {
       "name": "Cadence",
       "href": "cadence.html",
-      "image": "../assets/personnages/cartes/cadence.webp",
+      "image": "../../assets/personnages/cartes/cadence.webp",
       "classLabel": "Xélor",
       "groups": [
         "Héros"
@@ -810,7 +810,7 @@
     {
       "name": "Chaille",
       "href": "chaille.html",
-      "image": "../assets/personnages/cartes/chaille.webp",
+      "image": "../../assets/personnages/cartes/chaille.webp",
       "classLabel": "Ouginak",
       "groups": [
         "Héros"
@@ -819,7 +819,7 @@
     {
       "name": "Chêne Mou",
       "href": "chene-mou.html",
-      "image": "../assets/personnages/cartes/chene-mou.webp",
+      "image": "../../assets/personnages/cartes/chene-mou.webp",
       "classLabel": "Monstre",
       "groups": [
         "Ennemis"
@@ -828,7 +828,7 @@
     {
       "name": "Chevalier Justice",
       "href": "chevalier-justice.html",
-      "image": "../assets/personnages/cartes/chevalier-justice.webp",
+      "image": "../../assets/personnages/cartes/chevalier-justice.webp",
       "classLabel": "Iop",
       "groups": [
         "Héros"
@@ -837,7 +837,7 @@
     {
       "name": "Chibi",
       "href": "chibi.html",
-      "image": "../assets/personnages/cartes/chibi.webp",
+      "image": "../../assets/personnages/cartes/chibi.webp",
       "classLabel": "ELIATROPE",
       "groups": [
         "Éliatrope primordial"
@@ -846,7 +846,7 @@
     {
       "name": "Cire Momore",
       "href": "cire-momore.html",
-      "image": "../assets/personnages/cartes/cire-momore.webp",
+      "image": "../../assets/personnages/cartes/cire-momore.webp",
       "classLabel": "Maudit",
       "groups": [
         "Mythe & légende",
@@ -856,7 +856,7 @@
     {
       "name": "Cléophée",
       "href": "cleophee.html",
-      "image": "../assets/personnages/cartes/cleophee.webp",
+      "image": "../../assets/personnages/cartes/cleophee.webp",
       "classLabel": "CRA",
       "groups": [
         "Famille d'Évangelyne"
@@ -865,7 +865,7 @@
     {
       "name": "Comte Harebourg",
       "href": "comte-harebourg.html",
-      "image": "../assets/personnages/cartes/comte-harebourg.webp",
+      "image": "../../assets/personnages/cartes/comte-harebourg.webp",
       "classLabel": "XELOR",
       "groups": [
         "Demi-dieu",
@@ -875,7 +875,7 @@
     {
       "name": "Coqueline",
       "href": "coqueline.html",
-      "image": "../assets/personnages/cartes/coqueline.webp",
+      "image": "../../assets/personnages/cartes/coqueline.webp",
       "classLabel": "OSAMODAS",
       "groups": [
         "Demi-dieu",
@@ -885,7 +885,7 @@
     {
       "name": "Corbeau Noir",
       "href": "corbeau-noir.html",
-      "image": "../assets/personnages/cartes/corbeau-noir.webp",
+      "image": "../../assets/personnages/cartes/corbeau-noir.webp",
       "classLabel": "Osamodas",
       "groups": [
         "Ennemis"
@@ -894,7 +894,7 @@
     {
       "name": "Cornu Mollu",
       "href": "cornu-mollu.html",
-      "image": "../assets/personnages/cartes/cornu-mollu.webp",
+      "image": "../../assets/personnages/cartes/cornu-mollu.webp",
       "classLabel": "Sadida/Iop",
       "groups": [
         "Demi-dieu",
@@ -904,7 +904,7 @@
     {
       "name": "Dame Echo",
       "href": "echo.html",
-      "image": "../assets/personnages/cartes/echo.webp",
+      "image": "../../assets/personnages/cartes/echo.webp",
       "classLabel": "ENIRIPSA",
       "groups": [
         "Demi-dieu",
@@ -915,7 +915,7 @@
     {
       "name": "Dardondakal",
       "href": "dardondakal.html",
-      "image": "../assets/personnages/cartes/dardondakal.webp",
+      "image": "../../assets/personnages/cartes/dardondakal.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
@@ -924,7 +924,7 @@
     {
       "name": "Dark Vlad",
       "href": "dark-vlad.html",
-      "image": "../assets/personnages/cartes/dark-vlad.webp",
+      "image": "../../assets/personnages/cartes/dark-vlad.webp",
       "classLabel": "Iop",
       "groups": [
         "Fratrie",
@@ -934,7 +934,7 @@
     {
       "name": "Dathura",
       "href": "dathura.html",
-      "image": "../assets/personnages/cartes/dathura.webp",
+      "image": "../../assets/personnages/cartes/dathura.webp",
       "classLabel": "SADIDA",
       "groups": [
         "Demi-dieu",
@@ -944,7 +944,7 @@
     {
       "name": "Déesse Cra",
       "href": "deesse-cra.html",
-      "image": "../assets/personnages/cartes/deesse-cra.webp",
+      "image": "../../assets/personnages/cartes/deesse-cra.webp",
       "classLabel": "CRA",
       "groups": [
         "Dieu"
@@ -953,7 +953,7 @@
     {
       "name": "Déesse Eniripsa",
       "href": "deesse-eniripsa.html",
-      "image": "../assets/personnages/cartes/deesse-eniripsa.webp",
+      "image": "../../assets/personnages/cartes/deesse-eniripsa.webp",
       "classLabel": "ENIRIPSA",
       "groups": [
         "Dieu"
@@ -962,7 +962,7 @@
     {
       "name": "Déesse Féca",
       "href": "deesse-feca.html",
-      "image": "../assets/personnages/cartes/deesse-feca.webp",
+      "image": "../../assets/personnages/cartes/deesse-feca.webp",
       "classLabel": "FÉCA",
       "groups": [
         "Dieu"
@@ -971,7 +971,7 @@
     {
       "name": "Déesse Panda",
       "href": "deesse-panda.html",
-      "image": "../assets/personnages/cartes/deesse-panda.webp",
+      "image": "../../assets/personnages/cartes/deesse-panda.webp",
       "classLabel": "PANDAWA",
       "groups": [
         "Dieu"
@@ -980,7 +980,7 @@
     {
       "name": "Déesse Sacrieur",
       "href": "deesse-sacrieur.html",
-      "image": "../assets/personnages/cartes/deesse-sacrieur.webp",
+      "image": "../../assets/personnages/cartes/deesse-sacrieur.webp",
       "classLabel": "SACRIEUR",
       "groups": [
         "Dieu"
@@ -989,7 +989,7 @@
     {
       "name": "Desperia",
       "href": "desperia.html",
-      "image": "../assets/personnages/cartes/desperia.webp",
+      "image": "../../assets/personnages/cartes/desperia.webp",
       "classLabel": "Eliotrope",
       "groups": [
         "Ennemis",
@@ -1000,7 +1000,7 @@
     {
       "name": "Dieu Écaflip",
       "href": "dieu-ecaflip.html",
-      "image": "../assets/personnages/cartes/dieu-ecaflip.webp",
+      "image": "../../assets/personnages/cartes/dieu-ecaflip.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
         "Dieu"
@@ -1009,7 +1009,7 @@
     {
       "name": "Dieu Enutrof",
       "href": "dieu-enutrof.html",
-      "image": "../assets/personnages/cartes/dieu-enutrof.webp",
+      "image": "../../assets/personnages/cartes/dieu-enutrof.webp",
       "classLabel": "ENUTROF",
       "groups": [
         "Dieu"
@@ -1018,7 +1018,7 @@
     {
       "name": "Dieu Iop",
       "href": "dieu-iop.html",
-      "image": "../assets/personnages/cartes/dieu-iop.webp",
+      "image": "../../assets/personnages/cartes/dieu-iop.webp",
       "classLabel": "IOP",
       "groups": [
         "Dieu"
@@ -1027,7 +1027,7 @@
     {
       "name": "Dieu Osamodas",
       "href": "dieu-osamodas.html",
-      "image": "../assets/personnages/cartes/dieu-osamodas.webp",
+      "image": "../../assets/personnages/cartes/dieu-osamodas.webp",
       "classLabel": "OSAMODAS",
       "groups": [
         "Dieu"
@@ -1036,7 +1036,7 @@
     {
       "name": "Dieu Ouginak",
       "href": "dieu-ouginak.html",
-      "image": "../assets/personnages/cartes/dieu-ouginak.webp",
+      "image": "../../assets/personnages/cartes/dieu-ouginak.webp",
       "classLabel": "Ouginak",
       "groups": [
         "Dieu"
@@ -1045,7 +1045,7 @@
     {
       "name": "Dieu Sadida",
       "href": "dieu-sadida.html",
-      "image": "../assets/personnages/cartes/dieu-sadida.webp",
+      "image": "../../assets/personnages/cartes/dieu-sadida.webp",
       "classLabel": "SADIDA",
       "groups": [
         "Dieu"
@@ -1054,7 +1054,7 @@
     {
       "name": "Dieu Sram",
       "href": "dieu-sram.html",
-      "image": "../assets/personnages/cartes/dieu-sram.webp",
+      "image": "../../assets/personnages/cartes/dieu-sram.webp",
       "classLabel": "SRAM",
       "groups": [
         "Dieu"
@@ -1063,7 +1063,7 @@
     {
       "name": "Dieu Xélor",
       "href": "dieu-xelor.html",
-      "image": "../assets/personnages/cartes/dieu-xelor.webp",
+      "image": "../../assets/personnages/cartes/dieu-xelor.webp",
       "classLabel": "XÉLOR",
       "groups": [
         "Dieu"
@@ -1072,7 +1072,7 @@
     {
       "name": "Djaul",
       "href": "djaul.html",
-      "image": "../assets/personnages/cartes/djaul.webp",
+      "image": "../../assets/personnages/cartes/djaul.webp",
       "classLabel": "Shushu",
       "groups": [
         "Shushu"
@@ -1081,7 +1081,7 @@
     {
       "name": "Dragon Cochon",
       "href": "dragon-cochon.html",
-      "image": "../assets/personnages/cartes/dragon-cochon.webp",
+      "image": "../../assets/personnages/cartes/dragon-cochon.webp",
       "classLabel": "Monstre",
       "groups": [
         "Ennemis",
@@ -1091,7 +1091,7 @@
     {
       "name": "Efrim",
       "href": "efrim.html",
-      "image": "../assets/personnages/cartes/efrim.webp",
+      "image": "../../assets/personnages/cartes/efrim.webp",
       "classLabel": "Dragon eliatrope",
       "groups": [
         "Eliatrope primordial",
@@ -1101,7 +1101,7 @@
     {
       "name": "Elaine & Encre noir",
       "href": "elaine-encre-noir.html",
-      "image": "../assets/personnages/cartes/elaine-encre-noir.webp",
+      "image": "../../assets/personnages/cartes/elaine-encre-noir.webp",
       "classLabel": "Roublard",
       "groups": [
         "Figurants"
@@ -1110,7 +1110,7 @@
     {
       "name": "Élante",
       "href": "elante.html",
-      "image": "../assets/personnages/cartes/elante.webp",
+      "image": "../../assets/personnages/cartes/elante.webp",
       "classLabel": "MONSTRE",
       "groups": [
         "Mythe & légende"
@@ -1119,7 +1119,7 @@
     {
       "name": "Elely de Percedal",
       "href": "elely-de-percedal.html",
-      "image": "../assets/personnages/cartes/elely-de-percedal.webp",
+      "image": "../../assets/personnages/cartes/elely-de-percedal.webp",
       "classLabel": "IOP",
       "groups": [
         "Famille Percedal"
@@ -1128,7 +1128,7 @@
     {
       "name": "Évangelyne",
       "href": "evangelyne.html",
-      "image": "../assets/personnages/cartes/evangelyne.webp",
+      "image": "../../assets/personnages/cartes/evangelyne.webp",
       "classLabel": "CRA",
       "groups": [
         "Confrérie du Tofu",
@@ -1139,7 +1139,7 @@
     {
       "name": "Flopin de Percedal",
       "href": "flopin-de-percedal.html",
-      "image": "../assets/personnages/cartes/flopin-de-percedal.webp",
+      "image": "../../assets/personnages/cartes/flopin-de-percedal.webp",
       "classLabel": "CRA",
       "groups": [
         "Famille Percedal"
@@ -1148,7 +1148,7 @@
     {
       "name": "Frida Mofette",
       "href": "frida-mofette.html",
-      "image": "../assets/personnages/cartes/frida-mofette.webp",
+      "image": "../../assets/personnages/cartes/frida-mofette.webp",
       "classLabel": "Steamer",
       "groups": [
         "Figurants"
@@ -1157,7 +1157,7 @@
     {
       "name": "Glip",
       "href": "glip.html",
-      "image": "../assets/personnages/cartes/glip.webp",
+      "image": "../../assets/personnages/cartes/glip.webp",
       "classLabel": "ELIATROPE",
       "groups": [
         "Éliatrope primordial"
@@ -1166,7 +1166,7 @@
     {
       "name": "Goultard",
       "href": "goultard.html",
-      "image": "../assets/personnages/cartes/goultard.webp",
+      "image": "../../assets/personnages/cartes/goultard.webp",
       "classLabel": "IOP",
       "groups": [
         "Famille Percedal"
@@ -1175,7 +1175,7 @@
     {
       "name": "Grand Dragon",
       "href": "grand-dragon.html",
-      "image": "../assets/personnages/cartes/grand-dragon.webp",
+      "image": "../../assets/personnages/cartes/grand-dragon.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dieu"
@@ -1184,7 +1184,7 @@
     {
       "name": "Grany Smisse",
       "href": "grany-smisse.html",
-      "image": "../assets/personnages/cartes/grany-smisse.webp",
+      "image": "../../assets/personnages/cartes/grany-smisse.webp",
       "classLabel": "Roublard",
       "groups": [
         "Ennemis"
@@ -1193,7 +1193,7 @@
     {
       "name": "Grougaloragran",
       "href": "grougaloragran.html",
-      "image": "../assets/personnages/cartes/grougaloragran.webp",
+      "image": "../../assets/personnages/cartes/grougaloragran.webp",
       "classLabel": "DRAGON ELIATROPE",
       "groups": [
         "Éliatrope primordial"
@@ -1202,7 +1202,7 @@
     {
       "name": "Grougalorasalar",
       "href": "grougalorasalar.html",
-      "image": "../assets/personnages/cartes/grougalorasalar.webp",
+      "image": "../../assets/personnages/cartes/grougalorasalar.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
@@ -1211,7 +1211,7 @@
     {
       "name": "Grufon",
       "href": "gruffon.html",
-      "image": "../assets/personnages/cartes/gruffon.webp",
+      "image": "../../assets/personnages/cartes/gruffon.webp",
       "classLabel": "SHUSHU",
       "groups": [
         "Shushu"
@@ -1220,7 +1220,7 @@
     {
       "name": "Hyrkul",
       "href": "hyrkul.html",
-      "image": "../assets/personnages/cartes/hyrkul.webp",
+      "image": "../../assets/personnages/cartes/hyrkul.webp",
       "classLabel": "Féca",
       "groups": [
         "Héros",
@@ -1230,7 +1230,7 @@
     {
       "name": "Ignemikhal",
       "href": "ignemikhal.html",
-      "image": "../assets/personnages/cartes/ignemikhal.webp",
+      "image": "../../assets/personnages/cartes/ignemikhal.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
@@ -1239,7 +1239,7 @@
     {
       "name": "Igole",
       "href": "igole.html",
-      "image": "../assets/personnages/cartes/igole.webp",
+      "image": "../../assets/personnages/cartes/igole.webp",
       "classLabel": "Monstre",
       "groups": [
         "Ennemis"
@@ -1248,7 +1248,7 @@
     {
       "name": "Indie Delagrandaventure",
       "href": "indie-delagrandaventure.html",
-      "image": "../assets/personnages/cartes/indie-delagrandaventure.webp",
+      "image": "../../assets/personnages/cartes/indie-delagrandaventure.webp",
       "classLabel": "Ouginak",
       "groups": [
         "Héros"
@@ -1257,7 +1257,7 @@
     {
       "name": "Jahash Jurgen",
       "href": "jahash-jurgen.html",
-      "image": "../assets/personnages/cartes/jahash-jurgen.webp",
+      "image": "../../assets/personnages/cartes/jahash-jurgen.webp",
       "classLabel": "Huppermage",
       "groups": [
         "Héros",
@@ -1267,7 +1267,7 @@
     {
       "name": "Jiva",
       "href": "jiva.html",
-      "image": "../assets/personnages/cartes/jiva.webp",
+      "image": "../../assets/personnages/cartes/jiva.webp",
       "classLabel": "Divinité",
       "groups": [
         "Mythe & légende",
@@ -1277,7 +1277,7 @@
     {
       "name": "Joris Jurgen",
       "href": "joris-jurgen.html",
-      "image": "../assets/personnages/cartes/joris-jurgen.webp",
+      "image": "../../assets/personnages/cartes/joris-jurgen.webp",
       "classLabel": "INCONNUE",
       "groups": [
         "Héros",
@@ -1287,7 +1287,7 @@
     {
       "name": "Julith Abigor",
       "href": "julith-abigor.html",
-      "image": "../assets/personnages/cartes/julith-abigor.webp",
+      "image": "../../assets/personnages/cartes/julith-abigor.webp",
       "classLabel": "Huppermage",
       "groups": [
         "Ennemis"
@@ -1296,7 +1296,7 @@
     {
       "name": "Kali",
       "href": "kali.html",
-      "image": "../assets/personnages/cartes/kali.webp",
+      "image": "../../assets/personnages/cartes/kali.webp",
       "classLabel": "Sacrieur",
       "groups": [
         "Fratrie",
@@ -1306,7 +1306,7 @@
     {
       "name": "Karn",
       "href": "karn.html",
-      "image": "../assets/personnages/cartes/karn.webp",
+      "image": "../../assets/personnages/cartes/karn.webp",
       "classLabel": "IOP",
       "groups": [
         "Ennemis",
@@ -1316,7 +1316,7 @@
     {
       "name": "Kabrok",
       "href": "kabrok.html",
-      "image": "../assets/personnages/cartes/kabrok.webp",
+      "image": "../../assets/personnages/cartes/kabrok.webp",
       "classLabel": "Osamodas",
       "groups": [
         "Figurants"
@@ -1325,7 +1325,7 @@
     {
       "name": "Katar",
       "href": "katar.html",
-      "image": "../assets/personnages/cartes/katar.webp",
+      "image": "../../assets/personnages/cartes/katar.webp",
       "classLabel": "Sacrieur",
       "groups": [
         "Ennemis"
@@ -1334,7 +1334,7 @@
     {
       "name": "Kérubim Crépin",
       "href": "kerubim-crepin.html",
-      "image": "../assets/personnages/cartes/kerubim-crepin.webp",
+      "image": "../../assets/personnages/cartes/kerubim-crepin.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
         "Demi-dieu",
@@ -1345,7 +1345,7 @@
     {
       "name": "Khan Karkass",
       "href": "khan-karkass.html",
-      "image": "../assets/personnages/cartes/khan-karkass.webp",
+      "image": "../../assets/personnages/cartes/khan-karkass.webp",
       "classLabel": "Iop",
       "groups": [
         "Héros"
@@ -1354,7 +1354,7 @@
     {
       "name": "Kriss la Krass",
       "href": "kriss-la-krass.html",
-      "image": "../assets/personnages/cartes/kriss-la-krass.webp",
+      "image": "../../assets/personnages/cartes/kriss-la-krass.webp",
       "classLabel": "Sacrieur",
       "groups": [
         "Héros"
@@ -1363,7 +1363,7 @@
     {
       "name": "La Déesse Éliatrope",
       "href": "grande-deesse-eliatrope.html",
-      "image": "../assets/personnages/cartes/grande-deesse-eliatrope.webp",
+      "image": "../../assets/personnages/cartes/grande-deesse-eliatrope.webp",
       "classLabel": "ELIATROPE",
       "groups": [
         "Dieu"
@@ -1372,7 +1372,7 @@
     {
       "name": "Lance Dur",
       "href": "lancedur.html",
-      "image": "../assets/personnages/cartes/lancedur.webp",
+      "image": "../../assets/personnages/cartes/lancedur.webp",
       "classLabel": "FORGELANCE",
       "groups": [
         "Héros"
@@ -1381,7 +1381,7 @@
     {
       "name": "Les Miss Moches",
       "href": "les-miss-moches.html",
-      "image": "../assets/personnages/cartes/les-miss-moches.webp",
+      "image": "../../assets/personnages/cartes/les-miss-moches.webp",
       "classLabel": "Inconnue",
       "groups": [
         "Ennemis"
@@ -1390,7 +1390,7 @@
     {
       "name": "Lilotte",
       "href": "lilotte.html",
-      "image": "../assets/personnages/cartes/lilotte.webp",
+      "image": "../../assets/personnages/cartes/lilotte.webp",
       "classLabel": "Ouginak",
       "groups": [
         "Héros"
@@ -1399,7 +1399,7 @@
     {
       "name": "Lokus",
       "href": "lokus.html",
-      "image": "../assets/personnages/cartes/lokus.webp",
+      "image": "../../assets/personnages/cartes/lokus.webp",
       "classLabel": "Mechasme",
       "groups": [
         "Mechasme"
@@ -1408,7 +1408,7 @@
     {
       "name": "Lou",
       "href": "lou.html",
-      "image": "../assets/personnages/cartes/lou.webp",
+      "image": "../../assets/personnages/cartes/lou.webp",
       "classLabel": "Ouginak",
       "groups": [
         "Héros"
@@ -1417,7 +1417,7 @@
     {
       "name": "Luis",
       "href": "luis.html",
-      "image": "../assets/personnages/cartes/luis.webp",
+      "image": "../../assets/personnages/cartes/luis.webp",
       "classLabel": "Shushu",
       "groups": [
         "Héros",
@@ -1427,7 +1427,7 @@
     {
       "name": "Madagaskan",
       "href": "madagaskan.html",
-      "image": "../assets/personnages/cartes/madagaskan.webp",
+      "image": "../../assets/personnages/cartes/madagaskan.webp",
       "classLabel": "CRA",
       "groups": [
         "Famille d'Évangelyne"
@@ -1436,7 +1436,7 @@
     {
       "name": "Maskemane",
       "href": "maskemane.html",
-      "image": "../assets/personnages/cartes/maskemane.webp",
+      "image": "../../assets/personnages/cartes/maskemane.webp",
       "classLabel": "Zobal",
       "groups": [
         "Mythe & légende",
@@ -1446,7 +1446,7 @@
     {
       "name": "Maude",
       "href": "maude.html",
-      "image": "../assets/personnages/cartes/maude.webp",
+      "image": "../../assets/personnages/cartes/maude.webp",
       "classLabel": "Sram",
       "groups": [
         "Figurants"
@@ -1455,7 +1455,7 @@
     {
       "name": "Médoroziam",
       "href": "medoroziam.html",
-      "image": "../assets/personnages/cartes/medoroziam.webp",
+      "image": "../../assets/personnages/cartes/medoroziam.webp",
       "classLabel": "Démon",
       "groups": [
         "Démon"
@@ -1464,7 +1464,7 @@
     {
       "name": "Mina",
       "href": "mina.html",
-      "image": "../assets/personnages/cartes/mina.webp",
+      "image": "../../assets/personnages/cartes/mina.webp",
       "classLabel": "Éliatrope",
       "groups": [
         "Éliatrope primordial"
@@ -1473,7 +1473,7 @@
     {
       "name": "Miranda",
       "href": "miranda.html",
-      "image": "../assets/personnages/cartes/miranda.webp",
+      "image": "../../assets/personnages/cartes/miranda.webp",
       "classLabel": "Ecaflip",
       "groups": [
         "Figurants"
@@ -1482,7 +1482,7 @@
     {
       "name": "Monsieur M",
       "href": "monsieur-m.html",
-      "image": "../assets/personnages/cartes/monsieur-m.webp",
+      "image": "../../assets/personnages/cartes/monsieur-m.webp",
       "classLabel": "Inconnue",
       "groups": [
         "Ennemis"
@@ -1491,7 +1491,7 @@
     {
       "name": "Moon",
       "href": "moon.html",
-      "image": "../assets/personnages/cartes/moon.webp",
+      "image": "../../assets/personnages/cartes/moon.webp",
       "classLabel": "Monstre",
       "groups": [
         "Dieu",
@@ -1501,7 +1501,7 @@
     {
       "name": "Mouche",
       "href": "mouche.html",
-      "image": "../assets/personnages/cartes/mouche.webp",
+      "image": "../../assets/personnages/cartes/mouche.webp",
       "classLabel": "Crâ",
       "groups": [
         "Héros"
@@ -1510,7 +1510,7 @@
     {
       "name": "Moumoune Stroud",
       "href": "moumoune-stroud.html",
-      "image": "../assets/personnages/cartes/moumoune-stroud.webp",
+      "image": "../../assets/personnages/cartes/moumoune-stroud.webp",
       "classLabel": "Enutrof",
       "groups": [
         "Figurants"
@@ -1519,7 +1519,7 @@
     {
       "name": "Nimoda",
       "href": "nimoda.html",
-      "image": "../assets/personnages/cartes/nimoda.webp",
+      "image": "../../assets/personnages/cartes/nimoda.webp",
       "classLabel": "OSAMODAS",
       "groups": [
         "Héros"
@@ -1528,7 +1528,7 @@
     {
       "name": "Nora",
       "href": "nora.html",
-      "image": "../assets/personnages/cartes/nora.webp",
+      "image": "../../assets/personnages/cartes/nora.webp",
       "classLabel": "Eliatrope",
       "groups": [
         "Eliatrope primordial"
@@ -1537,7 +1537,7 @@
     {
       "name": "Nox",
       "href": "nox.html",
-      "image": "../assets/personnages/cartes/nox.webp",
+      "image": "../../assets/personnages/cartes/nox.webp",
       "classLabel": "XELOR",
       "groups": [
         "Ennemis"
@@ -1546,7 +1546,7 @@
     {
       "name": "Ogrest",
       "href": "ogrest.html",
-      "image": "../assets/personnages/cartes/ogrest.webp",
+      "image": "../../assets/personnages/cartes/ogrest.webp",
       "classLabel": "OGRE",
       "groups": [
         "Ennemis"
@@ -1555,7 +1555,7 @@
     {
       "name": "Otomaï",
       "href": "otomai.html",
-      "image": "../assets/personnages/cartes/otomai.webp",
+      "image": "../../assets/personnages/cartes/otomai.webp",
       "classLabel": "Féca",
       "groups": [
         "Héros",
@@ -1565,7 +1565,7 @@
     {
       "name": "Ombrage",
       "href": "ombrage.html",
-      "image": "../assets/personnages/cartes/ombrage.webp",
+      "image": "../../assets/personnages/cartes/ombrage.webp",
       "classLabel": "Shushu",
       "groups": [
         "Shushu",
@@ -1575,7 +1575,7 @@
     {
       "name": "Orgonax",
       "href": "orgonax.html",
-      "image": "../assets/personnages/cartes/orgonax.webp",
+      "image": "../../assets/personnages/cartes/orgonax.webp",
       "classLabel": "Mechasme",
       "groups": [
         "Mechasme"
@@ -1584,7 +1584,7 @@
     {
       "name": "Oropo",
       "href": "oropo.html",
-      "image": "../assets/personnages/cartes/oropo.webp",
+      "image": "../../assets/personnages/cartes/oropo.webp",
       "classLabel": "ELIOTROPE",
       "groups": [
         "Ennemis",
@@ -1595,7 +1595,7 @@
     {
       "name": "Pandiego de la Vega",
       "href": "pandiego-de-la-vega.html",
-      "image": "../assets/personnages/cartes/pandiego-de-la-vega.webp",
+      "image": "../../assets/personnages/cartes/pandiego-de-la-vega.webp",
       "classLabel": "Pandawa",
       "groups": [
         "Figurants"
@@ -1604,7 +1604,7 @@
     {
       "name": "Pandora",
       "href": "pandora.html",
-      "image": "../assets/personnages/cartes/pandora.webp",
+      "image": "../../assets/personnages/cartes/pandora.webp",
       "classLabel": "Voyageur temporel",
       "groups": [
         "Héros"
@@ -1613,7 +1613,7 @@
     {
       "name": "Percimol",
       "href": "percimol.html",
-      "image": "../assets/personnages/cartes/percimol.webp",
+      "image": "../../assets/personnages/cartes/percimol.webp",
       "classLabel": "Monstre",
       "groups": [
         "Mythe & légende",
@@ -1623,7 +1623,7 @@
     {
       "name": "Phaeris le puissant",
       "href": "phaeris.html",
-      "image": "../assets/personnages/cartes/phaeris.webp",
+      "image": "../../assets/personnages/cartes/phaeris.webp",
       "classLabel": "Dragon eliatrope",
       "groups": [
         "Eliatrope primordial"
@@ -1632,7 +1632,7 @@
     {
       "name": "Pin de Percedal",
       "href": "pin-de-percedal.html",
-      "image": "../assets/personnages/cartes/pin-de-percedal.webp",
+      "image": "../../assets/personnages/cartes/pin-de-percedal.webp",
       "classLabel": "IOP",
       "groups": [
         "Famille Percedal"
@@ -1641,7 +1641,7 @@
     {
       "name": "Poo",
       "href": "poo.html",
-      "image": "../assets/personnages/cartes/poo.webp",
+      "image": "../../assets/personnages/cartes/poo.webp",
       "classLabel": "PANDAWA",
       "groups": [
         "Demi-dieu",
@@ -1651,7 +1651,7 @@
     {
       "name": "Prince Adale",
       "href": "prince-adale.html",
-      "image": "../assets/personnages/cartes/prince-adale.webp",
+      "image": "../../assets/personnages/cartes/prince-adale.webp",
       "classLabel": "Steamer",
       "groups": [
         "Figurants"
@@ -1660,7 +1660,7 @@
     {
       "name": "Prince de Brakmar",
       "href": "prince-de-brakmar.html",
-      "image": "../assets/personnages/cartes/prince-de-brakmar.webp",
+      "image": "../../assets/personnages/cartes/prince-de-brakmar.webp",
       "classLabel": "Sram",
       "groups": [
         "Figurants"
@@ -1669,7 +1669,7 @@
     {
       "name": "Qilby",
       "href": "qilby.html",
-      "image": "../assets/personnages/cartes/qilby.webp",
+      "image": "../../assets/personnages/cartes/qilby.webp",
       "classLabel": "ELIATROPE",
       "groups": [
         "Ennemis",
@@ -1679,7 +1679,7 @@
     {
       "name": "Rasha",
       "href": "rasha.html",
-      "image": "../assets/personnages/cartes/rasha.webp",
+      "image": "../../assets/personnages/cartes/rasha.webp",
       "classLabel": "Démon",
       "groups": [
         "Démon"
@@ -1688,7 +1688,7 @@
     {
       "name": "Razortemps",
       "href": "razortemps.html",
-      "image": "../assets/personnages/cartes/razortemps.webp",
+      "image": "../../assets/personnages/cartes/razortemps.webp",
       "classLabel": "INCONNUE",
       "groups": [
         "WIP"
@@ -1697,7 +1697,7 @@
     {
       "name": "Reines de Bonta",
       "href": "reines-de-bonta.html",
-      "image": "../assets/personnages/cartes/reines-de-bonta.webp",
+      "image": "../../assets/personnages/cartes/reines-de-bonta.webp",
       "classLabel": "Inconnue",
       "groups": [
         "Figurants"
@@ -1706,7 +1706,7 @@
     {
       "name": "Remington Smisse",
       "href": "remington-smisse.html",
-      "image": "../assets/personnages/cartes/remington-smisse.webp",
+      "image": "../../assets/personnages/cartes/remington-smisse.webp",
       "classLabel": "Roublard",
       "groups": [
         "Ennemis"
@@ -1715,7 +1715,7 @@
     {
       "name": "Ripulse",
       "href": "ripulse.html",
-      "image": "../assets/personnages/cartes/ripulse.webp",
+      "image": "../../assets/personnages/cartes/ripulse.webp",
       "classLabel": "Eliotrope",
       "groups": [
         "Ennemis",
@@ -1726,7 +1726,7 @@
     {
       "name": "Roi Osamodas",
       "href": "roi-osamodas.html",
-      "image": "../assets/personnages/cartes/roi-osamodas.webp",
+      "image": "../../assets/personnages/cartes/roi-osamodas.webp",
       "classLabel": "Osamodas",
       "groups": [
         "Ennemis"
@@ -1735,7 +1735,7 @@
     {
       "name": "Roi Sheran Sharm",
       "href": "roi-sheran-sharm.html",
-      "image": "../assets/personnages/cartes/roi-sheran-sharm.webp",
+      "image": "../../assets/personnages/cartes/roi-sheran-sharm.webp",
       "classLabel": "SADIDA",
       "groups": [
         "Famille Sheran Sharm"
@@ -1744,7 +1744,7 @@
     {
       "name": "Rotalstrom",
       "href": "rotalstrom.html",
-      "image": "../assets/personnages/cartes/rotalstrom.webp",
+      "image": "../../assets/personnages/cartes/rotalstrom.webp",
       "classLabel": "Dragon",
       "groups": [
         "Nécromes",
@@ -1754,7 +1754,7 @@
     {
       "name": "Rubilax",
       "href": "rubilax.html",
-      "image": "../assets/personnages/cartes/rubilax.webp",
+      "image": "../../assets/personnages/cartes/rubilax.webp",
       "classLabel": "SHUSHU",
       "groups": [
         "Shushu"
@@ -1763,7 +1763,7 @@
     {
       "name": "Ruel Stroud",
       "href": "ruel-stroud.html",
-      "image": "../assets/personnages/cartes/ruel-stroud.webp",
+      "image": "../../assets/personnages/cartes/ruel-stroud.webp",
       "classLabel": "ENUTROF",
       "groups": [
         "Confrérie du Tofu"
@@ -1772,7 +1772,7 @@
     {
       "name": "Rushu",
       "href": "rushu.html",
-      "image": "../assets/personnages/cartes/rushu.webp",
+      "image": "../../assets/personnages/cartes/rushu.webp",
       "classLabel": "DÉMON",
       "groups": [
         "Démon",
@@ -1782,7 +1782,7 @@
     {
       "name": "Shinonomé",
       "href": "shinonome.html",
-      "image": "../assets/personnages/cartes/shinonome.webp",
+      "image": "../../assets/personnages/cartes/shinonome.webp",
       "classLabel": "Dragon eliatrope",
       "groups": [
         "Eliatrope primordial"
@@ -1791,7 +1791,7 @@
     {
       "name": "Sidaire",
       "href": "sidaire.html",
-      "image": "../assets/personnages/cartes/sidaire.webp",
+      "image": "../../assets/personnages/cartes/sidaire.webp",
       "classLabel": "Eliotrope",
       "groups": [
         "Ennemis",
@@ -1802,7 +1802,7 @@
     {
       "name": "Simone",
       "href": "simone.html",
-      "image": "../assets/personnages/cartes/simone.webp",
+      "image": "../../assets/personnages/cartes/simone.webp",
       "classLabel": "Osamodas",
       "groups": [
         "Figurants"
@@ -1811,7 +1811,7 @@
     {
       "name": "Sipho",
       "href": "sipho.html",
-      "image": "../assets/personnages/cartes/sipho.webp",
+      "image": "../../assets/personnages/cartes/sipho.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Fratrie",
@@ -1821,7 +1821,7 @@
     {
       "name": "Terrakourial",
       "href": "terrakourial.html",
-      "image": "../assets/personnages/cartes/terrakourial.webp",
+      "image": "../../assets/personnages/cartes/terrakourial.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
@@ -1830,7 +1830,7 @@
     {
       "name": "Toross Mordal",
       "href": "toross-mordal.html",
-      "image": "../assets/personnages/cartes/toross-mordal.webp",
+      "image": "../../assets/personnages/cartes/toross-mordal.webp",
       "classLabel": "IOP",
       "groups": [
         "Nécromes"
@@ -1839,7 +1839,7 @@
     {
       "name": "Toxine",
       "href": "toxine.html",
-      "image": "../assets/personnages/cartes/toxine.webp",
+      "image": "../../assets/personnages/cartes/toxine.webp",
       "classLabel": "Sram",
       "groups": [
         "Fratrie",
@@ -1849,7 +1849,7 @@
     {
       "name": "Tristepin de Percedal",
       "href": "tristepin.html",
-      "image": "../assets/personnages/cartes/tristepin.webp",
+      "image": "../../assets/personnages/cartes/tristepin.webp",
       "classLabel": "IOP",
       "groups": [
         "Confrérie du Tofu",
@@ -1859,7 +1859,7 @@
     {
       "name": "Uk’Not’Allag",
       "href": "uk-not-allag.html",
-      "image": "../assets/personnages/cartes/uk-not-allag.webp",
+      "image": "../../assets/personnages/cartes/uk-not-allag.webp",
       "classLabel": "SHUSHU",
       "groups": [
         "Shushu",
@@ -1869,7 +1869,7 @@
     {
       "name": "Ush Galesh",
       "href": "ush-galesh.html",
-      "image": "../assets/personnages/cartes/ush-galesh.webp",
+      "image": "../../assets/personnages/cartes/ush-galesh.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
         "Fratrie",
@@ -1879,7 +1879,7 @@
     {
       "name": "Vampyro",
       "href": "vampyro.html",
-      "image": "../assets/personnages/cartes/vampyro.webp",
+      "image": "../../assets/personnages/cartes/vampyro.webp",
       "classLabel": "Iop",
       "groups": [
         "Ennemis"
@@ -1888,7 +1888,7 @@
     {
       "name": "Wa Wabbit",
       "href": "wa-wabbit.html",
-      "image": "../assets/personnages/cartes/wa-wabbit.webp",
+      "image": "../../assets/personnages/cartes/wa-wabbit.webp",
       "classLabel": "Monstre",
       "groups": [
         "Ennemis",
@@ -1898,7 +1898,7 @@
     {
       "name": "Xav le Boulanger",
       "href": "xav-le-boulanger.html",
-      "image": "../assets/personnages/cartes/xav-le-boulanger.webp",
+      "image": "../../assets/personnages/cartes/xav-le-boulanger.webp",
       "classLabel": "Inconnue",
       "groups": [
         "Figurants"
@@ -1907,7 +1907,7 @@
     {
       "name": "Yrehn",
       "href": "yrehn.html",
-      "image": "../assets/personnages/cartes/yrehn.webp",
+      "image": "../../assets/personnages/cartes/yrehn.webp",
       "classLabel": "OSAMODAS",
       "groups": [
         "Héros"
@@ -1916,7 +1916,7 @@
     {
       "name": "Yugo",
       "href": "yugo.html",
-      "image": "../assets/personnages/cartes/yugo.webp",
+      "image": "../../assets/personnages/cartes/yugo.webp",
       "classLabel": "ELIATROPE",
       "groups": [
         "Confrérie du Tofu",

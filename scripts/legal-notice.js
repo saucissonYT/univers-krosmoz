@@ -310,7 +310,7 @@
     const path = window.location.pathname.toLowerCase();
     const page = path.split("/").pop() || "";
 
-    if (path.includes("/personnages-html/")) {
+    if (path.includes("/pages/personnages/")) {
       return page !== "personnages.html";
     }
 
@@ -322,8 +322,8 @@
     }
 
     return (
-      path.includes("/chronologies-html/") ||
-      path.includes("/histoire-html/") ||
+      path.includes("/pages/chronologies/") ||
+      path.includes("/pages/histoire/") ||
       path.includes("/__section-cartes-supprimee__/")
     );
   };
@@ -331,21 +331,24 @@
   const getContactHref = () => {
     const path = window.location.pathname.toLowerCase();
 
-    if (path.includes("/contact-html/")) {
+    if (path.includes("/pages/contact/")) {
       return "contact.html";
     }
 
     if (
-      path.includes("/personnages-html/") ||
-      path.includes("/histoire-html/") ||
-      path.includes("/chronologies-html/") ||
-      path.includes("/lexique-html/") ||
+      path.includes("/pages/personnages/") ||
+      path.includes("/pages/histoire/") ||
+      path.includes("/pages/chronologies/") ||
+      path.includes("/pages/regions/") ||
+      path.includes("/pages/lexique/") ||
+      path.includes("/pages/media/") ||
+      path.includes("/pages/jeux/") ||
       path.includes("/__section-cartes-supprimee__/")
     ) {
-      return "../contact-html/contact.html";
+      return "../contact/contact.html";
     }
 
-    return "contact-html/contact.html";
+    return "pages/contact/contact.html";
   };
 
   const createContributionLink = () => {
@@ -461,7 +464,7 @@
     const page = path.split("/").pop() || "";
     const link = createContributionLink();
 
-    if (path.includes("/personnages-html/") && page !== "personnages.html") {
+    if (path.includes("/pages/personnages/") && page !== "personnages.html") {
       const isFullBiography = new URLSearchParams(window.location.search).get("bio") === "complete";
       if (!isFullBiography) {
         const infoPanel = document.querySelector(".info-panel");
@@ -478,7 +481,7 @@
       return;
     }
 
-    if (path.includes("/histoire-html/")) {
+    if (path.includes("/pages/histoire/")) {
       if (page === "histoire-krosmoz.html") {
         return;
       }
@@ -505,15 +508,15 @@
       return;
     }
 
-    if (path.includes("/chronologies-html/")) {
+    if (path.includes("/pages/chronologies/")) {
       const main = document.querySelector("main");
       if (main) {
-        main.prepend(link);
+        main.append(link);
       }
       return;
     }
 
-    if (path.includes("/lexique-html/")) {
+    if (path.includes("/pages/lexique/")) {
       const lexiconMain = document.querySelector(".lexicon-main");
       if (lexiconMain) {
         lexiconMain.prepend(link);
@@ -613,7 +616,7 @@
       return;
     }
 
-    if (path.includes("/histoire-html/")) {
+    if (path.includes("/pages/histoire/")) {
       const detailMain = document.querySelector(".history-detail-main");
       if (detailMain) {
         detailMain.append(share);
@@ -804,6 +807,13 @@
         margin: 1rem auto 1.4rem;
       }
 
+      body.krosmoz-chronology-page main > .krosmoz-page-actions {
+        width: 100%;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
       .krosmoz-share-button {
         display: inline-flex;
         align-items: center;
@@ -879,6 +889,11 @@
         max-width: 760px;
       }
 
+      .site-topbar .nav-link,
+      .site-topbar .nav-menu-item {
+        font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif !important;
+      }
+
       body.character-page .krosmoz-legal-notice,
       body.character-biography-page .krosmoz-legal-notice,
       body.krosmoz-character-detail-page .krosmoz-legal-notice,
@@ -933,7 +948,10 @@
         justify-content: center;
         width: 18px;
         height: 18px;
+        border: 0;
+        background: transparent;
         color: rgba(246, 242, 231, 0.92);
+        box-shadow: none;
         text-decoration: none;
         transition: color 0.2s ease, transform 0.2s ease;
       }
@@ -972,7 +990,7 @@
         justify-content: center;
         width: 34px;
         height: 34px;
-        border: 1px solid transparent;
+        border: 0;
         border-radius: 3px;
         background: transparent;
         color: rgba(246, 242, 231, 0.9);
@@ -985,9 +1003,8 @@
       .krosmoz-language-toggle:focus-visible,
       .krosmoz-language.is-open .krosmoz-language-toggle {
         color: #ffffff;
-        background: rgba(24, 20, 14, 0.88);
-        border-color: rgba(232, 201, 122, 0.58);
-        box-shadow: inset 0 0 0 1px rgba(255, 247, 223, 0.04), 0 10px 26px rgba(0, 0, 0, 0.22);
+        background: transparent;
+        box-shadow: none;
         transform: translateY(-1px);
         outline: none;
       }
@@ -1253,6 +1270,29 @@
           overflow: visible;
         }
 
+        header.krosmoz-mobile-nav-shell {
+          min-height: var(--krosmoz-mobile-topbar-height, 54px);
+        }
+
+        .site-topbar.is-mobile-scroll-ready {
+          position: fixed !important;
+          top: 0 !important;
+          right: 0 !important;
+          left: 0 !important;
+          transform: translateY(0);
+          transition: transform 0.24s ease, opacity 0.2s ease;
+          will-change: transform;
+        }
+
+        .site-topbar.is-mobile-scroll-hidden:not(.is-mobile-nav-open) {
+          transform: translateY(calc(-100% - 2px));
+        }
+
+        .site-topbar.is-mobile-scroll-visible,
+        .site-topbar.is-mobile-nav-open {
+          transform: translateY(0);
+        }
+
         .site-topbar > .brand {
           min-width: 0;
           overflow: hidden;
@@ -1281,7 +1321,7 @@
           border-radius: 3px !important;
           background: rgba(12,10,8,0.72) !important;
           color: #f3df9b !important;
-          font-family: 'Cinzel', Georgia, serif !important;
+          font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif !important;
           font-size: 0.68rem !important;
           font-weight: 700 !important;
           letter-spacing: 0.12em !important;
@@ -1370,7 +1410,7 @@
 
         .site-topbar .top-nav {
           position: fixed !important;
-          top: 54px !important;
+          top: var(--krosmoz-mobile-topbar-height, 54px) !important;
           right: 0 !important;
           bottom: auto !important;
           left: auto !important;
@@ -1439,7 +1479,7 @@
           justify-content: flex-end !important;
           padding: 0.86rem 1.05rem !important;
           color: #f6f2e7;
-          font-family: 'Cinzel', Georgia, serif !important;
+          font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif !important;
           font-size: 0.72rem !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
@@ -1482,7 +1522,7 @@
           justify-content: flex-end;
           padding: 0.62rem 1.25rem !important;
           color: rgba(246,242,231,0.74);
-          font-family: 'Cinzel', Georgia, serif !important;
+          font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif !important;
           font-size: 0.72rem !important;
           font-weight: 700 !important;
           letter-spacing: 0.14em !important;
@@ -1495,16 +1535,16 @@
         }
       }
 
-      @media (min-width: 721px) and (max-width: 1024px) {
-        .site-topbar > .brand span {
-          max-width: clamp(12rem, 34vw, 18rem);
-        }
+        @media (min-width: 721px) and (max-width: 1024px) {
+          .site-topbar > .brand span {
+            max-width: clamp(12rem, 34vw, 18rem);
+          }
 
-        .site-topbar .top-nav {
-          top: 62px !important;
-          width: min(44vw, 360px) !important;
-          max-height: calc(100dvh - 70px) !important;
-        }
+          .site-topbar .top-nav {
+            top: var(--krosmoz-mobile-topbar-height, 62px) !important;
+            width: min(44vw, 360px) !important;
+            max-height: calc(100dvh - 70px) !important;
+          }
 
         .site-topbar.is-mobile-nav-open .top-nav {
           max-height: calc(100dvh - 70px) !important;
@@ -1534,6 +1574,10 @@
       document.body.classList.add("krosmoz-history-detail-page");
     }
 
+    if (window.location.pathname.toLowerCase().includes("/pages/chronologies/")) {
+      document.body.classList.add("krosmoz-chronology-page");
+    }
+
     const text = document.createElement("div");
     text.className = "krosmoz-legal-text";
 
@@ -1552,10 +1596,11 @@
     }) : null;
     const mediaMenuList = mediaMenu ? mediaMenu.querySelector(".nav-menu") : null;
     if (mediaMenuList && !mediaMenuList.querySelector('a[href*="galerie.html"]')) {
-      const isRootPage = !window.location.pathname.includes("-html/");
+      const pagePath = window.location.pathname.toLowerCase();
+      const isRootPage = !pagePath.includes("/pages/");
       const galleryLink = document.createElement("a");
       galleryLink.className = "nav-menu-item";
-      galleryLink.href = isRootPage ? "media-html/galerie.html" : "../media-html/galerie.html";
+      galleryLink.href = isRootPage ? "pages/media/galerie.html" : (pagePath.includes("/pages/media/") ? "galerie.html" : "../media/galerie.html");
       galleryLink.textContent = "Galerie";
       mediaMenuList.prepend(galleryLink);
     }
@@ -1563,7 +1608,7 @@
       topbar.append(createSocialLinks("krosmoz-top-social-links"));
     }
     if (topbar && !topbar.querySelector(":scope > .krosmoz-header-contact")) {
-      const contactLink = topbar.querySelector('.top-nav a[href$="contact.html"], .top-nav a[href*="contact-html/contact.html"]');
+      const contactLink = topbar.querySelector('.top-nav a[href$="contact.html"], .top-nav a[href*="pages/contact/contact.html"]');
       const socials = topbar.querySelector(".krosmoz-top-social-links");
       const language = createLanguageSelector();
       if (contactLink) {
@@ -1636,12 +1681,74 @@
 
       toggle.dataset.mobileNavReady = "true";
 
+      const mobileQuery = window.matchMedia("(max-width: 1024px)");
+      const header = topbar.closest("header");
+      let lastScrollY = window.scrollY || 0;
+      let scrollFrame = 0;
+
+      const syncTopbarHeight = () => {
+        if (!mobileQuery.matches) {
+          header?.classList.remove("krosmoz-mobile-nav-shell");
+          topbar.classList.remove("is-mobile-scroll-ready", "is-mobile-scroll-hidden", "is-mobile-scroll-visible");
+          topbar.style.removeProperty("--krosmoz-mobile-topbar-height");
+          return;
+        }
+
+        const height = Math.ceil(topbar.getBoundingClientRect().height);
+        header?.classList.add("krosmoz-mobile-nav-shell");
+        topbar.style.setProperty("--krosmoz-mobile-topbar-height", `${height}px`);
+        topbar.classList.add("is-mobile-scroll-ready");
+      };
+
+      const setScrollVisibility = () => {
+        if (!mobileQuery.matches) {
+          syncTopbarHeight();
+          lastScrollY = window.scrollY || 0;
+          return;
+        }
+
+        const currentScrollY = Math.max(0, window.scrollY || document.documentElement.scrollTop || 0);
+        const isMenuOpen = topbar.classList.contains("is-mobile-nav-open");
+        const isScrollingUp = currentScrollY < lastScrollY - 6;
+        const isScrollingDown = currentScrollY > lastScrollY + 6;
+        const shouldShow = isMenuOpen || currentScrollY < 12 || isScrollingUp;
+        const shouldHide = !isMenuOpen && isScrollingDown && currentScrollY > (topbar.offsetHeight + 24);
+
+        if (shouldShow) {
+          topbar.classList.add("is-mobile-scroll-visible");
+          topbar.classList.remove("is-mobile-scroll-hidden");
+        } else if (shouldHide) {
+          topbar.classList.add("is-mobile-scroll-hidden");
+          topbar.classList.remove("is-mobile-scroll-visible");
+        }
+
+        lastScrollY = currentScrollY;
+      };
+
+      const requestScrollVisibility = () => {
+        if (scrollFrame) {
+          return;
+        }
+
+        scrollFrame = window.requestAnimationFrame(() => {
+          scrollFrame = 0;
+          setScrollVisibility();
+        });
+      };
+
       const setOpen = (isOpen) => {
         topbar.classList.toggle("is-mobile-nav-open", isOpen);
         toggle.setAttribute("aria-expanded", String(isOpen));
         toggle.setAttribute("aria-label", isOpen ? "Masquer le menu" : "Afficher le menu");
+        if (isOpen) {
+          topbar.classList.add("is-mobile-scroll-visible");
+          topbar.classList.remove("is-mobile-scroll-hidden");
+        }
+        window.requestAnimationFrame(syncTopbarHeight);
       };
 
+      syncTopbarHeight();
+      setScrollVisibility();
       setOpen(false);
 
       toggle.addEventListener("click", () => {
@@ -1664,6 +1771,18 @@
         if (event.key === "Escape") {
           setOpen(false);
         }
+      });
+
+      window.addEventListener("scroll", requestScrollVisibility, { passive: true });
+      window.addEventListener("resize", () => {
+        syncTopbarHeight();
+        setScrollVisibility();
+      });
+      window.addEventListener("orientationchange", () => {
+        window.setTimeout(() => {
+          syncTopbarHeight();
+          setScrollVisibility();
+        }, 160);
       });
     });
   };

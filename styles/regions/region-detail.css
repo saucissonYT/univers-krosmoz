@@ -1,0 +1,1173 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
+
+
+body.region-detail-page {
+  min-height: 100vh;
+  background: var(--dark-bg);
+}
+
+body.region-overview-page {
+  background: #05050b;
+}
+
+body.region-overview-page::before,
+body.region-overview-page::after,
+body.region-biography-page::after {
+  display: none !important;
+}
+
+body.region-detail-page::before {
+  background: url('../../assets/regions/bg-regions.webp') center / cover no-repeat;
+  opacity: 0.08;
+}
+
+body.region-overview-page::before {
+  opacity: 0.035;
+}
+
+body.region-biography-page {
+  background: #080810;
+}
+
+body.region-biography-page::before {
+  display: none;
+}
+
+.region-hero {
+  position: relative;
+  z-index: 1;
+  min-height: clamp(360px, 48vh, 540px);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.18);
+  background: #080810;
+}
+
+.region-hero::before,
+.region-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.region-hero::before {
+  z-index: 0;
+  background-image: var(--region-hero-image);
+  background-position: var(--region-hero-position, center);
+  background-size: cover;
+  filter: saturate(0.95) contrast(1.08);
+  transform: scale(1.03);
+}
+
+body.region-biography-page .region-hero {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  border-bottom: 0;
+}
+
+body.region-biography-page .region-hero::before {
+  opacity: var(--region-bio-image-opacity, 1);
+  will-change: opacity;
+  transition: opacity 0.08s linear;
+}
+
+.region-hero::after {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 16, 0.1), rgba(8, 8, 16, 0.52) 48%, rgba(8, 8, 16, 0.98)),
+    linear-gradient(90deg, rgba(8, 8, 16, 0.94), rgba(8, 8, 16, 0.36) 48%, rgba(8, 8, 16, 0.86));
+}
+
+body.region-biography-page .region-hero::after {
+  opacity: calc(0.24 + (var(--region-bio-fade, 0) * 0.76));
+  background: #080810;
+  will-change: opacity;
+  transition: opacity 0.08s linear;
+}
+
+.region-hero-effects {
+  display: none;
+}
+
+.region-hero-content {
+  position: relative;
+  z-index: 3;
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) 0 clamp(2.1rem, 5vw, 4rem);
+  text-align: center;
+  transform: translateY(var(--region-hero-content-shift, clamp(4.5rem, 10vh, 6.8rem)));
+}
+
+body.region-biography-page .region-hero-content {
+  opacity: var(--region-bio-content-opacity, 1);
+  transform: translateY(clamp(5.5rem, 15vh, 8.5rem));
+  will-change: opacity;
+  transition: opacity 0.08s linear;
+}
+
+.region-eyebrow {
+  margin-top: 0.85rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.region-hero h1 {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-shadow: 0 16px 46px rgba(0, 0, 0, 0.9), 0 0 28px rgba(201, 168, 76, 0.2);
+}
+
+.region-hero .region-hero-name {
+  max-width: none;
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(2.2rem, 5vw, 5.2rem);
+  line-height: 1.02;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 18px rgba(201, 168, 76, 0.16);
+}
+
+.region-hero .region-hero-subtitle {
+  max-width: 980px;
+  margin: 1.2rem auto 0;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.78rem, 1.3vw, 0.98rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+}
+
+.region-hero .region-hero-rule {
+  position: relative;
+  width: min(720px, 82%);
+  height: 1px;
+  margin: 1.85rem auto 0;
+  background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.84), transparent);
+}
+
+.region-hero .region-hero-rule::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(42px, 4vw, 52px);
+  height: clamp(42px, 4vw, 52px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46, 207, 176, 0.42) 0%, rgba(46, 207, 176, 0.18) 38%, transparent 72%);
+  filter: blur(4px);
+  transform: translate(-50%, -50%);
+}
+
+.region-hero .region-hero-rule::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(34px, 3.2vw, 42px);
+  height: clamp(34px, 3.2vw, 42px);
+  padding: 0;
+  background: url('../../assets/personnages/ELIACUBE.webp') center / contain no-repeat;
+  filter:
+    drop-shadow(0 0 10px rgba(46, 207, 176, 0.62))
+    drop-shadow(0 0 18px rgba(46, 207, 176, 0.26));
+  transform: translate(-50%, -50%);
+}
+
+body.region-biography-page .region-hero-rule::before {
+  z-index: 2;
+}
+
+body.region-biography-page .region-hero-rule::after {
+  z-index: 3;
+}
+
+body.region-biography-page .region-hero-rule .region-scroll-indicator {
+  position: absolute;
+  left: 50%;
+  top: clamp(2.8rem, 7vh, 4.6rem);
+  display: grid;
+  justify-items: center;
+  gap: 0.45rem;
+  color: rgba(232, 201, 122, 0.78);
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.9);
+  transform: translateX(-50%);
+}
+
+body.region-biography-page .region-hero-rule .region-scroll-indicator::after {
+  content: '⌄\A⌄';
+  white-space: pre;
+  color: rgba(232, 201, 122, 0.72);
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 0.45;
+  letter-spacing: 0;
+  text-shadow: 0 0 12px rgba(232, 201, 122, 0.18);
+}
+
+.region-lead {
+  width: min(780px, 100%);
+  margin-top: 1rem;
+  color: #f3ead8;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: clamp(0.94rem, 1.35vw, 1.1rem);
+  font-style: italic;
+  line-height: 1.7;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.88);
+}
+
+.region-detail-main {
+  position: relative;
+  z-index: 1;
+  width: min(720px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(4rem, 7vw, 6rem);
+}
+
+.region-detail-panel {
+  padding: 0;
+}
+
+.region-detail-panel p {
+  margin-bottom: 1.2rem;
+  color: #d7ccba;
+  text-align: center;
+}
+
+.region-illustration {
+  margin: 2.2rem 0 2.4rem;
+  border: 1px solid rgba(232, 201, 122, 0.28);
+  background: rgba(5, 6, 14, 0.82);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+}
+
+.region-illustration img {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+}
+
+.region-illustration figcaption {
+  padding: 0.75rem 1rem 0.85rem;
+  border-top: 1px solid rgba(232, 201, 122, 0.18);
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.region-back-link {
+  display: inline-flex;
+  margin-top: 2.5rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.region-back-link:hover,
+.region-back-link:focus-visible {
+  color: #fff7df;
+  outline: none;
+}
+
+.region-characters-section {
+  width: min(1280px, calc(100vw - 2rem));
+  margin-top: clamp(3rem, 6vw, 4.8rem);
+  margin-left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.region-section-ornament {
+  position: relative;
+  width: min(620px, 100%);
+  height: 2.8rem;
+  margin: 0 auto 1rem;
+}
+
+.region-section-ornament::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(197, 160, 72, 0.6) 18%,
+    rgba(197, 160, 72, 0.85) 50%,
+    rgba(197, 160, 72, 0.6) 82%,
+    transparent
+  );
+}
+
+.region-section-ornament::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1px solid rgba(232, 201, 122, 0.85);
+  background: rgba(8, 8, 14, 0.95);
+  box-shadow: 0 0 0 0.32rem rgba(8, 8, 14, 0.95);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.region-characters-section h2 {
+  margin: 0;
+  color: var(--cream);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.region-characters-grid {
+  --region-character-gap: clamp(0.85rem, 1.5vw, 1.25rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--region-character-gap);
+  width: 100%;
+  margin: clamp(1.7rem, 3vw, 2.5rem) auto 0;
+}
+
+.region-character-card {
+  flex: 0 1 calc((100% - (4 * var(--region-character-gap))) / 5);
+  min-width: 170px;
+  max-width: calc((100% - (4 * var(--region-character-gap))) / 5);
+}
+
+.region-visions-section {
+  width: min(1120px, calc(100vw - 2rem));
+  margin-top: clamp(3rem, 6vw, 4.8rem);
+  margin-left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.region-characters-section h2,
+.region-visions-section h2,
+.region-vision-title {
+  margin: 0;
+  color: var(--cream);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.15rem, 2.2vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.region-visions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.7rem, 1.3vw, 1rem);
+  margin-top: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.region-vision-card {
+  position: relative;
+  display: block;
+  min-height: clamp(210px, 21vw, 300px);
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: #080810;
+  color: var(--cream);
+  text-decoration: none;
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.34);
+}
+
+.region-vision-card:nth-child(1),
+.region-vision-card:nth-child(4) {
+  grid-column: span 2;
+}
+
+.region-vision-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) brightness(0.82);
+  transform: scale(1.01);
+  transition: transform 0.28s ease, filter 0.28s ease;
+}
+
+.region-vision-card span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  border: 1px solid rgba(201, 168, 76, 0);
+  background: rgba(6, 7, 12, 0.08);
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.24s ease, border-color 0.24s ease, background 0.24s ease;
+}
+
+.region-vision-card:hover img,
+.region-vision-card:focus-visible img {
+  filter: grayscale(0.7) brightness(0.46);
+  transform: scale(1.05);
+}
+
+.region-vision-card:hover span,
+.region-vision-card:focus-visible span {
+  border-color: rgba(201, 168, 76, 0.72);
+  background: rgba(6, 7, 12, 0.48);
+  opacity: 1;
+}
+
+.region-vision-card:focus-visible {
+  outline: 2px solid rgba(232, 201, 122, 0.85);
+  outline-offset: 3px;
+}
+
+body.region-overview-page .region-detail-main {
+  width: min(1760px, calc(100% - clamp(2rem, 5vw, 5rem)));
+  display: grid;
+  grid-template-columns: minmax(300px, 390px) minmax(0, 920px) minmax(300px, 390px);
+  gap: 0;
+  align-items: start;
+  justify-content: center;
+  padding-top: clamp(3.2rem, 5vw, 5rem);
+}
+
+body.region-overview-page .region-detail-panel {
+  display: contents;
+}
+
+body.region-overview-page .region-detail-panel > p,
+body.region-overview-page .region-detail-panel > .region-back-link {
+  display: none;
+}
+
+body.region-overview-page .region-overview-summary {
+  position: relative;
+  z-index: 4;
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  min-height: clamp(520px, 42vw, 650px);
+  padding: clamp(3.2rem, 5vw, 5.2rem) clamp(2.2rem, 4vw, 4.2rem);
+  border-left: 1px solid rgba(201,168,76,0.16);
+  border-right: 1px solid rgba(201,168,76,0.16);
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  text-align: center;
+}
+
+body.region-overview-page .region-overview-summary h2 {
+  margin: 0;
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(3rem, 5.2vw, 5.7rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.72);
+}
+
+body.region-overview-page .region-overview-copy {
+  max-width: 720px;
+  margin: 1.6rem auto 0;
+  text-align: center;
+}
+
+body.region-overview-page .region-overview-copy p {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #f5ead6;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: clamp(1.4rem, 1.8vw, 1.8rem);
+  line-height: 1.65;
+  text-align: center;
+}
+
+body.region-biography-page .region-detail-panel {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+body.region-biography-page .region-detail-main {
+  position: relative;
+  z-index: 4;
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: clamp(8.5rem, 20vh, 13rem) clamp(1rem, 4vw, 3.5rem) 1.1rem;
+  background: #080810;
+}
+
+body.region-biography-page .region-detail-main::before {
+  content: '';
+  position: absolute;
+  top: clamp(2rem, 5vh, 3.5rem);
+  left: 50%;
+  display: block;
+  width: 1px;
+  height: clamp(5.5rem, 13vh, 9rem);
+  background: linear-gradient(180deg, transparent, rgba(232, 201, 122, 0.48), rgba(46, 207, 176, 0.22), transparent);
+  box-shadow: 0 0 22px rgba(46, 207, 176, 0.18);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+body.region-biography-page .region-biography-text {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+body.region-biography-page .region-biography-text p {
+  max-width: 1040px;
+  margin: 0 auto clamp(1.45rem, 2.4vw, 2rem);
+  text-align: center;
+}
+
+body.region-biography-page .region-biography-text p:first-child::first-letter {
+  float: none;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body.region-overview-page .region-biography-link {
+  margin-top: 1.6rem;
+}
+
+body.region-overview-page .region-characters-section,
+body.region-overview-page .region-visions-section {
+  position: relative;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  border: 0 !important;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  text-align: center;
+  transform: none;
+}
+
+body.region-overview-page .region-characters-section {
+  grid-column: 1;
+  grid-row: 1;
+  padding: clamp(1.4rem, 2vw, 2rem) clamp(1.4rem, 2.2vw, 2.2rem);
+}
+
+body.region-overview-page .region-visions-section {
+  grid-column: 3;
+  grid-row: 1;
+  width: auto;
+  margin: 0;
+  padding: clamp(1.4rem, 2vw, 2rem) clamp(1.4rem, 2.2vw, 2.2rem);
+}
+
+body.region-overview-page .region-overview-summary {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.region-overview-page .region-characters-section::before,
+body.region-overview-page .region-characters-section::after,
+body.region-overview-page .region-visions-section::before,
+body.region-overview-page .region-visions-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 1px;
+  border: 0;
+  pointer-events: none;
+}
+
+body.region-overview-page .region-characters-section::before,
+body.region-overview-page .region-visions-section::before {
+  left: 0;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.44) 16%, rgba(201,168,76,0.18) 84%, transparent);
+}
+
+body.region-overview-page .region-characters-section::after,
+body.region-overview-page .region-visions-section::after {
+  right: 0;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.24) 18%, rgba(201,168,76,0.1) 82%, transparent);
+}
+
+body.region-overview-page .region-overview-summary::before {
+  display: none;
+}
+
+body.region-overview-page .region-overview-summary::after {
+  display: none;
+}
+
+body.region-overview-page .region-section-ornament {
+  display: none;
+}
+
+body.region-overview-page .region-characters-section h2,
+body.region-overview-page .region-visions-section h2 {
+  margin: 0 0 clamp(1.6rem, 3vw, 2.4rem);
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.3rem, 1.7vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.05;
+}
+
+body.region-overview-page .region-characters-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.85rem, 3.4vw, 3rem);
+  margin: 0;
+}
+
+body.region-overview-page .region-character-card {
+  display: grid;
+  justify-items: center;
+  min-width: 0;
+  max-width: none;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  text-align: center;
+}
+
+body.region-overview-page .region-character-card[hidden] {
+  display: none !important;
+}
+
+body.region-overview-page .region-character-card img {
+  position: relative;
+  width: clamp(96px, 7.8vw, 128px);
+  height: clamp(96px, 7.8vw, 128px);
+  inset: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.22);
+  filter: saturate(0.94) brightness(0.82);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.32);
+  transform: none !important;
+}
+
+body.region-overview-page .region-character-card .character-card-shade {
+  display: none;
+}
+
+body.region-overview-page .region-character-card .character-card-copy {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  min-height: 0;
+  gap: 0.35rem;
+  padding: 0.75rem 0 0;
+  border-top: 0;
+  background: transparent;
+  text-align: center;
+  backdrop-filter: none;
+}
+
+body.region-overview-page .region-character-card .character-card-copy strong {
+  color: #d8b16a;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
+}
+
+body.region-overview-page .region-character-card .character-card-copy span {
+  color: #bfffe9;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  letter-spacing: 0.06em;
+}
+
+body.region-overview-page .region-visions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+body.region-overview-page .region-vision-card,
+body.region-overview-page .region-vision-card:nth-child(1),
+body.region-overview-page .region-vision-card:nth-child(4) {
+  grid-column: auto;
+}
+
+body.region-overview-page .region-vision-card {
+  min-height: 150px;
+  box-shadow: none;
+}
+
+body.region-overview-page .region-vision-card span {
+  opacity: 1;
+  background: rgba(6, 7, 12, 0.4);
+  font-size: clamp(0.68rem, 0.9vw, 0.82rem);
+}
+
+body.region-overview-page .region-suggestions-section {
+  grid-column: 1 / -1;
+  width: min(1120px, 100%);
+  margin: clamp(2.4rem, 4vw, 3.4rem) auto 0;
+  padding-top: 0;
+  border-top: 0;
+  text-align: center;
+}
+
+body.region-overview-page .region-suggestions-section h2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.2rem);
+  width: auto;
+  margin: 0 0 clamp(1.8rem, 3.5vw, 2.7rem);
+  color: #fff7df;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(0.9rem, 1.15vw, 1.12rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+body.region-overview-page .region-suggestions-section h2::before,
+body.region-overview-page .region-suggestions-section h2::after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.52), transparent);
+  box-shadow: 0 0 14px rgba(201,168,76,0.14);
+}
+
+body.region-overview-page .region-suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+body.region-overview-page .region-suggestion-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.18);
+  color: #f6f2e7;
+  text-decoration: none;
+  background: #05070b;
+  box-shadow: 0 26px 70px rgba(0,0,0,0.34);
+  transform: translateY(0) scale(1);
+  transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
+}
+
+body.region-overview-page .region-suggestion-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(0.9) brightness(0.74);
+  transform: scale(1.01);
+  transition: filter 0.28s ease, transform 0.28s ease;
+}
+
+body.region-overview-page .region-suggestion-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, transparent 46%, rgba(0,0,0,0.74) 78%, rgba(0,0,0,0.92)),
+    radial-gradient(circle at 50% 50%, transparent 36%, rgba(0,0,0,0.28));
+  pointer-events: none;
+  transition: background 0.24s ease;
+}
+
+body.region-overview-page .region-suggestion-card::after {
+  content: 'Explorer';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  color: var(--gold-light);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1rem, 1.45vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.92);
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
+}
+
+body.region-overview-page .region-suggestion-card .character-cross-group-copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 0.38rem;
+  padding: 1.05rem 1rem 1.2rem;
+  border-top: 1px solid rgba(201,168,76,0.26);
+  background: linear-gradient(180deg, rgba(5,5,10,0.28), rgba(5,5,10,0.78));
+  transition: opacity 0.2s ease, transform 0.22s ease;
+}
+
+body.region-overview-page .region-suggestion-card .character-cross-group-copy strong {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.82rem, 1vw, 1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+body.region-overview-page .region-suggestion-card:hover,
+body.region-overview-page .region-suggestion-card:focus-visible {
+  border-color: rgba(255,226,150,0.86);
+  box-shadow:
+    0 34px 86px rgba(0,0,0,0.48),
+    0 0 0 1px rgba(255,226,150,0.34),
+    0 0 34px rgba(201,168,76,0.18);
+  outline: none;
+  transform: translateY(-8px) scale(1.035);
+}
+
+body.region-overview-page .region-suggestion-card:hover img,
+body.region-overview-page .region-suggestion-card:focus-visible img {
+  filter: saturate(1.08) contrast(1.07);
+  transform: scale(1.09);
+}
+
+body.region-overview-page .region-suggestion-card:hover::before,
+body.region-overview-page .region-suggestion-card:focus-visible::before {
+  background: rgba(0,0,0,0.58);
+}
+
+body.region-overview-page .region-suggestion-card:hover::after,
+body.region-overview-page .region-suggestion-card:focus-visible::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.region-overview-page .region-suggestion-card:hover .character-cross-group-copy,
+body.region-overview-page .region-suggestion-card:focus-visible .character-cross-group-copy {
+  opacity: 0.28;
+  transform: translateY(0.35rem);
+}
+
+body.region-overview-page .region-detail-main {
+  padding-bottom: 1.1rem;
+}
+
+body.region-overview-page .region-detail-main > .krosmoz-legal-notice,
+body.region-biography-page .region-detail-main > .krosmoz-legal-notice {
+  grid-column: 1 / -1;
+  width: min(92vw, 980px) !important;
+  margin: clamp(1rem, 2vw, 1.4rem) auto 0 !important;
+}
+
+body.region-biography-page .region-detail-main > .krosmoz-legal-notice {
+  margin-top: clamp(0.7rem, 1.4vw, 1rem) !important;
+}
+
+.region-vision-page .region-detail-main {
+  width: min(960px, calc(100% - 2rem));
+}
+
+.region-vision-page .region-detail-main > .region-vision-copy:first-child {
+  margin-top: 0;
+}
+
+.region-vision-page .region-vision-viewer {
+  margin-top: clamp(1.5rem, 3vw, 2.4rem);
+}
+
+.region-vision-viewer {
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  background: rgba(8, 8, 14, 0.68);
+  box-shadow: 0 26px 76px rgba(0, 0, 0, 0.35);
+}
+
+.region-vision-viewer img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: min(620px, 64vh);
+  object-fit: cover;
+  opacity: 0;
+  animation: regionVisionFadeIn 0.72s ease forwards;
+  transition: opacity 0.48s ease;
+}
+
+.region-vision-viewer.is-fading img {
+  opacity: 0;
+  animation: none;
+}
+
+body.region-detail-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.78s ease;
+}
+
+body.region-detail-page:not(.region-vision-page)::before {
+  display: none;
+}
+
+body.region-vision-page.is-entering::before,
+body.region-vision-page.is-leaving::before,
+body.region-detail-page.is-vision-card-leaving::before {
+  opacity: 1;
+}
+
+body.region-vision-page.is-ready::before,
+body.region-detail-page.is-vision-card-ready::before {
+  opacity: 0;
+}
+
+body.region-detail-page.has-vision-card-transition::before {
+  display: block;
+}
+
+.region-vision-controls {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr 4.6rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.22);
+}
+
+.region-vision-nav {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.region-vision-nav:hover,
+.region-vision-nav:focus-visible {
+  color: #fff7df;
+  outline: none;
+}
+
+.region-vision-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.region-vision-dot {
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 999px;
+  background: rgba(201, 168, 76, 0.52);
+}
+
+.region-vision-dot.active {
+  background: var(--gold-light);
+  box-shadow: 0 0 0 0.22rem rgba(201, 168, 76, 0.16);
+}
+
+.region-vision-copy {
+  width: min(720px, 100%);
+  margin: clamp(2.4rem, 5vw, 4rem) auto 0;
+  text-align: center;
+}
+
+.region-vision-copy p {
+  margin: 1.15rem 0 0;
+  color: #d7ccba;
+  text-align: center;
+}
+
+.region-vision-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.region-vision-backlinks .region-back-link {
+  margin-top: 0;
+}
+
+@keyframes regionVisionFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 860px) {
+  .region-visions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .region-vision-card:nth-child(1),
+  .region-vision-card:nth-child(4) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .region-visions-section {
+    width: min(100%, 520px);
+    margin-left: auto;
+    transform: none;
+  }
+
+  .region-visions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .region-vision-controls {
+    grid-template-columns: 3.5rem 1fr 3.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .region-hero {
+    min-height: 46vh;
+  }
+
+  .region-hero-content {
+    padding-bottom: 2.4rem;
+  }
+
+  .region-detail-main {
+    width: min(100% - 1.2rem, 680px);
+    padding-top: 1.4rem;
+  }
+
+  .region-characters-section {
+    width: min(100%, 520px);
+    margin-left: auto;
+    transform: none;
+  }
+
+  .region-character-card {
+    flex-basis: min(100%, 230px);
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 980px) {
+  body.region-overview-page .region-detail-main {
+    width: min(100% - 1.2rem, 760px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1.4rem;
+  }
+
+  body.region-overview-page .region-overview-summary,
+  body.region-overview-page .region-characters-section,
+  body.region-overview-page .region-visions-section {
+    grid-column: 1;
+    width: 100%;
+  }
+
+  body.region-overview-page .region-overview-summary {
+    grid-row: 1;
+    min-height: 0;
+  }
+
+  body.region-overview-page .region-characters-section {
+    grid-row: 2;
+  }
+
+  body.region-overview-page .region-visions-section {
+    grid-row: 3;
+  }
+
+  body.region-overview-page .region-characters-grid,
+  body.region-overview-page .region-visions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  body.region-overview-page .region-characters-grid,
+  body.region-overview-page .region-visions-grid {
+    grid-template-columns: 1fr;
+  }
+}
