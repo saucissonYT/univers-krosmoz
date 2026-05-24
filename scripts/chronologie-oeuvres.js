@@ -572,6 +572,18 @@ const works = [
   {
     era: 'waven',
     date: 'Ère du Waven',
+    title: 'Savara',
+    type: 'Game',
+    href: '../histoire/savara.html',
+    image: '../../assets/oeuvres/savara-showcase.png',
+    linkLabel: 'Fiche',
+    preview: "Jeu rogue-lite d'arènes orchestré par le Dieu Iop dans les profondeurs d'Iopabagar.",
+    details: ['Fiche dédiée à Savara.'],
+    major: true
+  },
+  {
+    era: 'waven',
+    date: 'Ère du Waven',
     title: 'Lancedur',
     type: 'Série / film',
     href: '../histoire/lancedur.html',
@@ -606,6 +618,8 @@ const works = [
     major: true
   }
 ];
+
+window.KROSMOZ_WORKS = works;
 
 // Libellés et classes CSS utilisés pour les titres de sections et les couleurs d'ère.
 // Libellés d'ère affichés dans les sections générées.
@@ -838,14 +852,18 @@ function setActiveEraButton(filter) {
   });
 }
 
-document.querySelectorAll('.era-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    setActiveEraButton(button.dataset.filter);
-    buildTimeline(button.dataset.filter);
+const worksTimeline = document.getElementById('works-timeline');
+
+if (worksTimeline) {
+  document.querySelectorAll('.era-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      setActiveEraButton(button.dataset.filter);
+      buildTimeline(button.dataset.filter);
+    });
   });
-});
 
-window.addEventListener('scroll', requestScrollBackgroundSync, { passive: true });
-window.addEventListener('resize', requestScrollBackgroundSync);
+  window.addEventListener('scroll', requestScrollBackgroundSync, { passive: true });
+  window.addEventListener('resize', requestScrollBackgroundSync);
 
-buildTimeline('all');
+  buildTimeline('all');
+}

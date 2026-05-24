@@ -884,9 +884,77 @@
         display: none;
       }
 
-      .krosmoz-legal-text {
+      .krosmoz-legal-text,
+      .story-legal-notice p {
         margin: 0 auto;
         max-width: 760px;
+        text-transform: none !important;
+      }
+
+      .krosmoz-legal-links {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        margin-top: 0.75rem;
+        text-transform: none !important;
+      }
+
+      .krosmoz-about-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.42rem;
+        color: rgba(246, 242, 231, 0.7);
+        font-family: 'Cinzel', Georgia, serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        text-transform: none !important;
+        transition: color 0.18s ease, text-shadow 0.18s ease;
+      }
+
+      .krosmoz-about-link:hover,
+      .krosmoz-about-link:focus-visible {
+        color: #e8c97a;
+        text-shadow: 0 0 14px rgba(232, 201, 122, 0.24);
+        outline: none;
+      }
+
+      .krosmoz-about-icon {
+        position: relative;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 1px solid rgba(232, 201, 122, 0.62);
+        border-radius: 50%;
+        color: #e8c97a;
+        flex: 0 0 auto;
+        box-shadow: 0 0 12px rgba(232, 201, 122, 0.1);
+      }
+
+      .krosmoz-about-icon::before {
+        content: 'i';
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-family: Georgia, serif;
+        font-size: 0.78rem;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .krosmoz-about-icon::after {
+        content: '';
+        position: absolute;
+        width: 0.48rem;
+        height: 1px;
+        right: -0.36rem;
+        bottom: -0.14rem;
+        background: currentColor;
+        transform: rotate(45deg);
       }
 
       .site-topbar .nav-link,
@@ -1580,13 +1648,40 @@
 
     const text = document.createElement("div");
     text.className = "krosmoz-legal-text";
+    text.setAttribute("translate", "no");
+    text.style.setProperty("text-transform", "none", "important");
+    text.style.setProperty("font-family", '"Crimson Text", Georgia, serif', "important");
+    text.style.setProperty("font-style", "normal", "important");
+    text.style.setProperty("font-variant", "normal", "important");
+    text.style.setProperty("letter-spacing", "0", "important");
 
     noticeLines.forEach((line, index) => {
       if (index > 0) {
         text.append(document.createElement("br"));
       }
-      text.append(document.createTextNode(line));
+      const lineText = document.createElement("span");
+      lineText.style.setProperty("text-transform", "none", "important");
+      lineText.style.setProperty("font-family", '"Crimson Text", Georgia, serif', "important");
+      lineText.style.setProperty("font-style", "normal", "important");
+      lineText.style.setProperty("font-variant", "normal", "important");
+      lineText.style.setProperty("letter-spacing", "0", "important");
+      lineText.textContent = line;
+      text.append(lineText);
     });
+
+    const aboutLinks = document.createElement("div");
+    aboutLinks.className = "krosmoz-legal-links";
+    aboutLinks.style.setProperty("text-transform", "none", "important");
+
+    const pagePath = window.location.pathname.toLowerCase();
+    const isRootPage = !pagePath.includes("/pages/");
+    const aboutLink = document.createElement("a");
+    aboutLink.className = "krosmoz-about-link";
+    aboutLink.href = isRootPage ? "pages/about/a-propos.html" : (pagePath.includes("/pages/about/") ? "a-propos.html" : "../about/a-propos.html");
+    aboutLink.setAttribute("aria-label", "À propos du site et sources");
+    aboutLink.style.setProperty("text-transform", "none", "important");
+    aboutLink.innerHTML = '<span class="krosmoz-about-icon" aria-hidden="true"></span><span>À propos</span>';
+    aboutLinks.append(aboutLink);
 
     document.head.append(style);
     const topbar = document.querySelector(".site-topbar");
@@ -1596,8 +1691,6 @@
     }) : null;
     const mediaMenuList = mediaMenu ? mediaMenu.querySelector(".nav-menu") : null;
     if (mediaMenuList && !mediaMenuList.querySelector('a[href*="galerie.html"]')) {
-      const pagePath = window.location.pathname.toLowerCase();
-      const isRootPage = !pagePath.includes("/pages/");
       const galleryLink = document.createElement("a");
       galleryLink.className = "nav-menu-item";
       galleryLink.href = isRootPage ? "pages/media/galerie.html" : (pagePath.includes("/pages/media/") ? "galerie.html" : "../media/galerie.html");
@@ -1634,7 +1727,7 @@
     loadGlobalSearch();
 
     if (!existingNotice) {
-      notice.append(text);
+      notice.append(text, aboutLinks);
 
       const historyDetailMain = document.querySelector(".history-detail-main");
       const noticeTarget = document.querySelector(".region-detail-main, .character-main");
@@ -1645,6 +1738,8 @@
       } else {
         document.body.append(notice);
       }
+    } else if (!notice.querySelector(".krosmoz-about-link")) {
+      notice.append(aboutLinks);
     }
   };
 

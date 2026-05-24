@@ -1,0 +1,275 @@
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --wakfu-teal: #2ecfb0;
+  --dark-bg: #080810;
+  --panel-bg: rgba(9, 9, 17, 0.82);
+  --text-main: #e8e0d0;
+  --text-muted: #a99d88;
+}
+
+body.about-page {
+  background:
+    linear-gradient(180deg, rgba(8,8,16,0.96), rgba(8,8,16,0.9)),
+    radial-gradient(circle at 16% 10%, rgba(46,207,176,0.12), transparent 34%),
+    radial-gradient(circle at 82% 16%, rgba(201,168,76,0.1), transparent 30%),
+    var(--dark-bg);
+}
+
+.about-main {
+  position: relative;
+  z-index: 1;
+  width: min(1220px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 6rem) 0 5.5rem;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  min-height: min(620px, calc(100vh - 96px));
+}
+
+.about-kicker,
+.about-section-heading p {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.about-hero h1,
+.about-section-heading h2 {
+  margin: 0.55rem 0 0;
+  color: #fff8e8;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 18px rgba(232,201,122,0.18),
+    0 4px 28px rgba(0,0,0,0.74);
+}
+
+.about-hero h1 {
+  max-width: 780px;
+  font-size: clamp(2.9rem, 8vw, 6.6rem);
+}
+
+.about-hero-copy > p:last-child {
+  max-width: 760px;
+  margin: 1.25rem 0 0;
+  color: rgba(255,247,223,0.86);
+  font-size: clamp(1.12rem, 1.5vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.about-zaki-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), transparent),
+    rgba(7,8,15,0.88);
+  border: 1px solid rgba(232,201,122,0.22);
+  box-shadow: 0 28px 70px rgba(0,0,0,0.42);
+}
+
+.about-zaki-card::before {
+  content: '';
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(232,201,122,0.14);
+  pointer-events: none;
+}
+
+.about-zaki-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: clamp(1rem, 4vw, 2rem);
+  background: radial-gradient(circle at 50% 36%, rgba(46,207,176,0.14), transparent 58%);
+}
+
+.about-zaki-card figcaption {
+  padding: 1.1rem 1.2rem 1.25rem;
+  border-top: 1px solid rgba(232,201,122,0.18);
+  background: rgba(5,5,10,0.78);
+}
+
+.about-zaki-card strong {
+  display: block;
+  color: #fff8e8;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.about-zaki-card span {
+  display: block;
+  margin-top: 0.7rem;
+  color: rgba(255,247,223,0.78);
+  line-height: 1.45;
+}
+
+.about-section {
+  margin-top: clamp(3.4rem, 8vw, 6.2rem);
+}
+
+.about-section-heading {
+  max-width: 820px;
+  margin: 0 auto clamp(1.5rem, 4vw, 2.4rem);
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  font-size: clamp(2.1rem, 5.5vw, 4.3rem);
+}
+
+.about-section-heading p {
+  max-width: 680px;
+  margin: 0.9rem auto 0;
+  color: rgba(232,201,122,0.84);
+  line-height: 1.45;
+}
+
+.about-columns,
+.source-grid {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.about-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-columns article,
+.source-card,
+.about-method-grid {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.035), transparent),
+    var(--panel-bg);
+  border: 1px solid rgba(232,201,122,0.16);
+}
+
+.about-columns article {
+  padding: clamp(1.15rem, 2.2vw, 1.6rem);
+}
+
+.about-columns h3,
+.source-card h3 {
+  margin: 0 0 0.75rem;
+  color: #fff8e8;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.18rem, 2vw, 1.7rem);
+  font-style: normal;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.about-columns p,
+.about-method-grid p,
+.source-card li {
+  margin: 0;
+  color: rgba(255,247,223,0.82);
+  line-height: 1.58;
+}
+
+.about-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-method-grid p {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: rgba(7,8,15,0.42);
+}
+
+.source-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.source-card {
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.source-card ul {
+  display: grid;
+  gap: 0.72rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.source-card li {
+  position: relative;
+  padding-left: 1.05rem;
+}
+
+.source-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.38rem;
+  height: 0.38rem;
+  background: var(--gold-light);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px rgba(232,201,122,0.34);
+}
+
+.source-card a {
+  color: #fff3c8;
+  font-weight: 600;
+  text-decoration-color: rgba(232,201,122,0.46);
+  text-underline-offset: 0.2em;
+}
+
+.source-card a:hover,
+.source-card a:focus-visible {
+  color: var(--gold-light);
+}
+
+@media (max-width: 900px) {
+  .about-hero,
+  .about-columns,
+  .about-method-grid,
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    min-height: 0;
+  }
+
+  .about-zaki-card {
+    width: min(360px, 100%);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-main {
+    width: min(100% - 1rem, 1220px);
+    padding-top: 2.2rem;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.35rem, 16vw, 3.8rem);
+  }
+
+  .about-section-heading h2 {
+    font-size: clamp(1.85rem, 12vw, 3rem);
+  }
+}

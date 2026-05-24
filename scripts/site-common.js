@@ -7,7 +7,8 @@
   const rootUrl = new URL(document.currentScript ? "../" : "./", document.currentScript ? document.currentScript.src : window.location.href);
 
   const links = [
-    { label: "Histoire", href: "pages/histoire/histoire-krosmoz.html", match: "/pages/histoire/" },
+    { label: "L'Univers", href: "pages/histoire/histoire-krosmoz.html", match: "/pages/histoire/" },
+    { label: "À découvrir", href: "pages/chronologies/oeuvres.html", match: "/pages/chronologies/oeuvres.html" },
     { label: "Personnages", href: "pages/personnages/personnages.html", match: "/pages/personnages/" },
     {
       label: "Chronologie",
@@ -15,7 +16,10 @@
         { label: "Histoire", href: "pages/chronologies/chronologie-historique.html" },
         { label: "Œuvre", href: "pages/chronologies/chronologie-oeuvres.html" }
       ],
-      match: "/pages/chronologies/"
+      match: [
+        "/pages/chronologies/chronologie-historique.html",
+        "/pages/chronologies/chronologie-oeuvres.html"
+      ]
     },
     { label: "Régions", href: "pages/regions/regions.html", match: "/pages/regions/" },
     { label: "Lexique", href: "pages/lexique/lexique.html", match: "/pages/lexique/" },
@@ -55,7 +59,10 @@
       : target.pathname;
   };
 
-  const isActive = (entry) => currentPath.includes(entry.match);
+  const isActive = (entry) => {
+    const matches = Array.isArray(entry.match) ? entry.match : [entry.match];
+    return matches.some((match) => currentPath.includes(match));
+  };
 
   const renderNavItem = (entry) => {
     if (entry.items) {

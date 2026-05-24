@@ -1,5 +1,19 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+
+24/05/2026 :
+
+- Ajout de la page "à propos" : informations sur la création du site et notre façon  de fonctionner. 
+- Refonte de la chronologie des oeuvres > ajout de la page "oeuvre" qui retrace mieux les oeuvres liées au krosmoz et à son univers.
+- Ajout de la page histoire : Savara
+- Ajout des régions et leurs biographies : 
+
+incarnam
+necromonde
+osavora
+enutrosor
+
+
 23/05/2026 : 
 
 - Création d'un README et d'un CHANGELOG pour être plus transparents sur ce qu'on fait ou non.

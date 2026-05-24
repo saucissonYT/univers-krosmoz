@@ -1,5 +1,6 @@
 /carte-interactive.html /cartes-html/carte-interactive.html 301
 /cartes.html /cartes-html/cartes.html 301
+/about-html/* /pages/about/:splat 301
 /chronologies-html/* /pages/chronologies/:splat 301
 /contact-html/* /pages/contact/:splat 301
 /histoire-html/* /pages/histoire/:splat 301
@@ -10,8 +11,10 @@
 /regions-html/* /pages/regions/:splat 301
 /chronologie-historique.html /pages/chronologies/chronologie-historique.html 301
 /chronologie-oeuvres.html /pages/chronologies/chronologie-oeuvres.html 301
+/oeuvres.html /pages/chronologies/oeuvres.html 301
 /chronologies.html /pages/chronologies/chronologie-historique.html 301
 /contact.html /pages/contact/contact.html 301
+/a-propos.html /pages/about/a-propos.html 301
 /histoire-age-des-dofus.html /pages/histoire/histoire-age-des-dofus.html 301
 /histoire-aurore-pourpre.html /pages/histoire/histoire-aurore-pourpre.html 301
 /aurore-pourpre.html /pages/histoire/histoire-aurore-pourpre.html 301
@@ -27,11 +30,15 @@
 /histoire-necromonde.html /pages/histoire/histoire-necromonde.html 301
 /necromonde.html /pages/histoire/histoire-necromonde.html 301
 /histoire-origines.html /pages/histoire/histoire-origines.html 301
+/savara.html /pages/histoire/savara.html 301
 /lexique.html /pages/lexique/lexique.html 301
 /regions.html /pages/regions/regions.html 301
 /krosmoz.html /pages/regions/krosmoz.html 301
 /inglorium.html /pages/regions/inglorium.html 301
 /monde-des-douze.html /pages/regions/monde-des-douze.html 301
+/incarnam.html /pages/regions/incarnam.html 301
+/enutrosor.html /pages/regions/enutrosor.html 301
+/osavora.html /pages/regions/osavora.html 301
 /xelorium.html /pages/regions/xelorium.html 301
 /hormonde.html /pages/regions/hormonde.html 301
 /ecaflipus.html /pages/regions/ecaflipus.html 301

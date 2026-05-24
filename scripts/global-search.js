@@ -87,7 +87,35 @@
       type: "Région",
       href: "pages/regions/regions.html",
       summary: "Index des régions majeures du Krosmoz, des plans divins aux terres du Monde des Douze.",
-      keywords: "régions lieux monde des douze amakna astrub bonta brakmar frigost sufokia pandala"
+      keywords: "régions lieux monde des douze incarnam necromonde amakna astrub bonta brakmar frigost sufokia pandala osavora enutrosor"
+    },
+    {
+      title: "Incarnam",
+      type: "Région",
+      href: "pages/regions/incarnam.html",
+      summary: "Plan spirituel suspendu au-dessus du Monde des Douze, où les âmes viennent s'incarner ou se réincarner avant de rejoindre le monde matériel.",
+      keywords: "incarnam prysmaradoth ames incarnation reincarnation astrub kardorim hargnok milimulou ternette nhin kerubims kerubim crepin"
+    },
+    {
+      title: "Nécromonde",
+      type: "Région",
+      href: "pages/regions/necromonde.html",
+      summary: "Planète mourante vidée de son Wakfu, royaume de Toross Mordal et prison de la Grande Déesse Éliatrope.",
+      keywords: "necromonde toross mordal necromes wakfu grande deesse eliatrope nora efrim dofus planete mourante"
+    },
+    {
+      title: "Osavora",
+      type: "Région",
+      href: "pages/regions/osavora.html",
+      summary: "Dimension sauvage liée au Dieu Osamodas, située sur le dos de Gargandyas et dominée par la loi de la prédation.",
+      keywords: "osavora osamodas gargandyas osavane rhoarims zarbivores kabombz osamandyas reprouve"
+    },
+    {
+      title: "Enutrosor",
+      type: "Région",
+      href: "pages/regions/enutrosor.html",
+      summary: "Royaume du Dieu Enutrof, coffre-fort céleste rempli d'or, de kamas, de mines et de confréries vouées à la richesse.",
+      keywords: "enutrosor enutrof kamas or tresor quatrieme dimension koffrefors phorreurs phossile roi nidas reine des voleurs"
     },
     {
       title: "Jeux",
@@ -109,6 +137,13 @@
       href: "pages/jeux/jeu-personnage.html",
       summary: "Test pour decouvrir quel personnage du Krosmoz vous ressemble le plus.",
       keywords: "jeu personnage personnage resultat yugo nox amalia tristepin"
+    },
+    {
+      title: "À propos",
+      type: "Page",
+      href: "pages/about/a-propos.html",
+      summary: "Présentation du site Univers Krosmoz, de Zaki et des sources utilisées pour documenter les articles.",
+      keywords: "a propos zaki sources ankama allskreen wiki role play dofus krosmoz otakia"
     },
     {
       title: "Contactez-nous",

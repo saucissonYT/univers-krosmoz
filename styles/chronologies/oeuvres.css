@@ -1,0 +1,1186 @@
+:root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --wakfu-teal: #2ecfb0;
+  --dofus-amber: #d4813a;
+  --waven-blue: #4a9eff;
+  --primitif-violet: #9b7fd4;
+  --dark-bg: #080810;
+  --panel: rgba(10, 11, 20, 0.78);
+  --line: rgba(232, 201, 122, 0.18);
+  --text-main: #f4ead6;
+  --text-muted: #b7aa93;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.works-showcase-page {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    linear-gradient(180deg, rgba(8, 8, 16, 0.18), var(--dark-bg) 72%),
+    var(--dark-bg);
+  color: var(--text-main);
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.works-showcase-main *,
+.back-to-top,
+.back-to-top * {
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+body.works-showcase-page .krosmoz-legal-notice,
+body.works-showcase-page .krosmoz-legal-notice * {
+  font-family: 'Crimson Text', Georgia, serif !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+body.works-showcase-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,0.62), transparent),
+    radial-gradient(1px 1px at 28% 46%, rgba(255,255,255,0.38), transparent),
+    radial-gradient(2px 2px at 78% 22%, rgba(232,201,122,0.32), transparent),
+    radial-gradient(1px 1px at 88% 66%, rgba(46,207,176,0.42), transparent);
+}
+
+.works-showcase-main {
+  position: relative;
+  z-index: 1;
+}
+
+.works-hero {
+  position: relative;
+  min-height: min(760px, calc(100svh - 56px));
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  padding: clamp(7rem, 16vh, 11rem) clamp(1.1rem, 5vw, 5.5rem) clamp(4rem, 10vh, 7rem);
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.works-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8,8,16,0.16), rgba(8,8,16,0.18) 43%, rgba(8,8,16,0.72) 68%, rgba(8,8,16,0.94)),
+    linear-gradient(180deg, rgba(8,8,16,0.12), rgba(8,8,16,0.28) 44%, var(--dark-bg));
+}
+
+.works-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.works-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(1.06) contrast(1.05) brightness(0.82);
+  transform: scale(1.01);
+}
+
+.works-hero-content {
+  width: min(780px, 100%);
+  justify-self: end;
+  text-align: right;
+}
+
+.works-kicker {
+  margin: 0 0 0.7rem;
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.works-hero h1,
+.works-section-heading h2,
+.works-buy-band h2 {
+  margin: 0;
+  color: #fff8e8;
+  font-family: 'Cinzel', Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.works-hero h1 {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  font-style: normal !important;
+  margin-left: auto;
+  max-width: 10ch;
+  font-size: clamp(3rem, 9vw, 7.4rem);
+  text-shadow:
+    0 4px 18px rgba(0,0,0,0.82),
+    0 0 18px rgba(255,248,232,0.28),
+    0 0 34px rgba(232,201,122,0.16);
+}
+
+.works-hero p:not(.works-kicker),
+.works-buy-band p {
+  max-width: 680px;
+  margin: 1.15rem 0 0;
+  color: rgba(255,247,223,0.86);
+  font-size: clamp(1.08rem, 2vw, 1.38rem);
+  line-height: 1.55;
+}
+
+.works-hero p:not(.works-kicker) {
+  margin-left: auto;
+}
+
+.works-hero-actions,
+.works-buy-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.45rem;
+}
+
+.works-hero-actions {
+  justify-content: flex-end;
+}
+
+.works-hero-actions a,
+.works-buy-actions a,
+.work-card-link,
+.work-pill-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.78rem 1rem;
+  border: 1px solid rgba(232,201,122,0.34);
+  background: rgba(8,8,16,0.58);
+  color: #fff4cf;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.works-hero-actions a:hover,
+.works-hero-actions a:focus-visible,
+.works-buy-actions a:hover,
+.works-buy-actions a:focus-visible,
+.work-card-link:hover,
+.work-card-link:focus-visible,
+.work-pill-link:hover,
+.work-pill-link:focus-visible {
+  border-color: rgba(255,239,178,0.86);
+  background: rgba(16,16,28,0.82);
+  color: #fff;
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.works-path {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 0;
+  border-bottom: 0;
+  background: rgba(8,8,16,0.7);
+}
+
+.works-path::before,
+.works-path::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  z-index: 4;
+  width: 100vw;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.92), rgba(255,239,178,0.72), rgba(201,168,76,0.92), transparent);
+  box-shadow: 0 0 16px rgba(232,201,122,0.22);
+  transform: translateX(-50%);
+}
+
+.works-path::before {
+  top: 0;
+}
+
+.works-path::after {
+  bottom: 0;
+}
+
+.works-path-item {
+  position: relative;
+  min-height: 154px;
+  display: grid;
+  place-items: center;
+  gap: 0.55rem;
+  padding: clamp(1.1rem, 2.4vw, 2rem);
+  border-right: 1px solid var(--line);
+  color: var(--text-main);
+  text-decoration: none;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #0b0b14;
+  background-position: center;
+  background-size: cover;
+  transform: skewX(-3deg);
+  transition: color 0.2s ease, box-shadow 0.28s ease, transform 0.34s ease, filter 0.34s ease;
+}
+
+.works-path-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: inherit;
+  background-position: inherit;
+  background-size: inherit;
+  filter: saturate(0.74) contrast(1.06) brightness(0.56);
+  transform: skewX(3deg) scale(1.05);
+  transition: transform 0.34s ease, filter 0.34s ease;
+}
+
+.works-path-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to bottom, rgba(8,8,16,0.06), rgba(8,8,16,0.18) 42%, rgba(8,8,16,0.9)),
+    linear-gradient(to right, rgba(8,8,16,0.54), transparent 45%, rgba(8,8,16,0.38));
+  transform: skewX(3deg);
+}
+
+.works-path-series {
+  background-image: url('../../assets/accueil/chronologie-background.jpg');
+  background-position: center 58%;
+}
+
+.works-path-games {
+  background-image: url('../../assets/oeuvres/waven-jeu.webp');
+  background-position: center 28%;
+}
+
+.works-path-webtoons {
+  background-image: url('../../assets/oeuvres/kerubim.webp');
+  background-position: center 68%;
+}
+
+.works-path-item:last-child {
+  border-right: 0;
+}
+
+.works-path-item span {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.works-path-item strong {
+  max-width: 100%;
+  color: rgba(255,248,232,0.96);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  font-style: normal;
+  font-size: clamp(1.45rem, 2.8vw, 2.75rem);
+  line-height: 1;
+  text-align: center;
+  overflow-wrap: anywhere;
+  transform: skewX(3deg);
+  text-shadow:
+    0 4px 18px rgba(0,0,0,0.82),
+    0 0 14px rgba(255,248,232,0.28),
+    0 0 30px rgba(232,201,122,0.14);
+  transition: color 0.2s ease, letter-spacing 0.2s ease, text-shadow 0.2s ease;
+}
+
+.works-path-item:hover,
+.works-path-item:focus-visible {
+  z-index: 3;
+  color: #fff8e8;
+  outline: none;
+  transform: skewX(-3deg) scale(1.015);
+  box-shadow: 0 26px 64px rgba(0,0,0,0.42), 0 0 22px rgba(232,201,122,0.12);
+}
+
+.works-path-item:hover::before,
+.works-path-item:focus-visible::before {
+  filter: grayscale(1) saturate(0) contrast(1.12) brightness(0.7);
+  transform: skewX(3deg) scale(1.11);
+}
+
+.works-path-item:hover strong,
+.works-path-item:focus-visible strong {
+  color: #fffdf4;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 8px 24px rgba(0,0,0,0.9),
+    0 0 18px rgba(255,248,232,0.34),
+    0 0 34px rgba(232,201,122,0.2);
+}
+
+.works-section,
+.works-buy-band {
+  padding: clamp(3.2rem, 7vw, 6rem) clamp(1rem, 4vw, 4.5rem);
+}
+
+:root {
+  --works-heading-space: clamp(2.8rem, 5.7vw, 4.9rem);
+}
+
+.works-section-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.15rem, 2.4vw, 2.25rem);
+  margin-inline: auto;
+  margin: var(--works-heading-space) auto;
+  text-align: center;
+}
+
+.works-section-heading::before,
+.works-section-heading::after {
+  content: '';
+  flex: 1 1 0;
+  min-width: clamp(5rem, 18vw, 26rem);
+  height: 1px;
+  background: linear-gradient(to var(--works-heading-line-direction), transparent, rgba(201,168,76,0.72));
+  box-shadow: 0 0 12px rgba(232,201,122,0.14);
+}
+
+.works-section-heading::before {
+  --works-heading-line-direction: right;
+}
+
+.works-section-heading::after {
+  --works-heading-line-direction: left;
+}
+
+.works-section-heading .works-kicker {
+  display: none;
+}
+
+.works-section-heading h2,
+.works-buy-band h2 {
+  font-size: clamp(2rem, 4.5vw, 4.25rem);
+}
+
+#works-featured {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#works-featured .works-section-heading {
+  margin-top: clamp(2.35rem, 4.5vw, 4rem);
+}
+
+#works-animated,
+#works-games {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#works-games,
+#works-webtoons {
+  padding-top: 0;
+}
+
+#works-games .works-section-heading,
+#works-webtoons .works-section-heading {
+  margin: var(--works-heading-space) auto;
+}
+
+#works-featured-title,
+#works-animated-title,
+#works-games-title,
+#works-webtoons-title {
+  flex: 0 0 auto;
+  max-width: min(100%, 760px);
+  padding-inline: clamp(3rem, 5.8vw, 5.6rem);
+  background:
+    url('../../assets/personnages/ELIACUBE.webp') left center / clamp(30px, 2.8vw, 46px) clamp(30px, 2.8vw, 46px) no-repeat,
+    url('../../assets/personnages/ELIACUBE.webp') right center / clamp(30px, 2.8vw, 46px) clamp(30px, 2.8vw, 46px) no-repeat;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  font-style: normal !important;
+  text-align: center;
+  text-shadow:
+    0 0 16px rgba(216,177,106,0.2),
+    0 10px 28px rgba(0,0,0,0.9);
+}
+
+#works-featured-title {
+  position: relative;
+  padding-inline: clamp(3rem, 5.8vw, 5.6rem);
+  background: none;
+}
+
+#works-featured-title::before,
+#works-featured-title::after {
+  content: '\2764';
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin: 0;
+  color: #d9283f;
+  font-family: Georgia, serif;
+  font-size: clamp(1.9rem, 2.7vw, 2.7rem);
+  font-style: normal;
+  line-height: 1;
+  text-shadow:
+    0 0 10px rgba(255,65,96,0.42),
+    0 0 24px rgba(178,18,42,0.28),
+    0 5px 16px rgba(0,0,0,0.72);
+  transform: translateY(-50%);
+}
+
+#works-featured-title::before {
+  left: 0;
+}
+
+#works-featured-title::after {
+  right: 0;
+}
+.works-featured-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(360px, 34vw);
+  gap: 0;
+  background: rgba(8,8,16,0.86);
+  border: 0;
+}
+
+.work-card {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  align-content: center;
+  overflow: hidden;
+  padding: 0;
+  color: #fff8e8;
+  text-decoration: none;
+  isolation: isolate;
+  background: rgba(12,12,22,0.92);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.works-featured-grid .era-primitif,
+.works-featured-grid .era-dofus,
+.works-featured-grid .era-wakfu,
+.works-featured-grid .era-waven {
+  border-top: 0;
+}
+
+.work-card:first-child {
+  grid-row: auto;
+}
+
+.work-card:nth-child(2),
+.work-card:nth-child(3) {
+  box-shadow: none;
+}
+
+.work-card::after {
+  content: 'VOIR LA FICHE';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  z-index: 2;
+  min-height: 94px;
+  padding-bottom: 12px;
+  display: grid;
+  place-items: center;
+  border-top: 1px solid rgba(232,201,122,0.34);
+  color: var(--gold-light);
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-size: 0.74rem;
+  font-style: normal !important;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(7,8,15,0.96);
+  box-shadow: 0 -18px 42px rgba(0,0,0,0.48);
+  transform: translateY(0);
+  transition: opacity 0.24s ease;
+}
+
+.work-card img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.02) contrast(1.06) brightness(0.78);
+  transform: scale(1.02);
+  transition: transform 0.34s ease, filter 0.34s ease;
+}
+
+.work-card:hover img,
+.work-card:focus-visible img {
+  filter: grayscale(1) saturate(0) contrast(1.12) brightness(0.88);
+  transform: scale(1.07);
+}
+
+.work-card:focus,
+.work-card:focus-visible {
+  outline: 2px solid rgba(232,201,122,0.86);
+  outline-offset: -2px;
+}
+
+.work-era,
+.work-type {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.work-card h3,
+.work-mini h3,
+.work-library-item h3 {
+  margin: 0.4rem 0 0;
+  font-family: 'Cinzel', Georgia, serif;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  line-height: 1.08;
+}
+
+.work-card h3 {
+  max-width: 13ch;
+  font-size: clamp(1.65rem, 3vw, 3.2rem);
+}
+
+.work-card p,
+.work-mini p {
+  max-width: 560px;
+  margin: 0.72rem 0 0;
+  color: rgba(255,247,223,0.86);
+  line-height: 1.48;
+}
+
+.work-card .work-era,
+.work-card h3,
+.work-card p {
+  display: none;
+}
+
+.work-card:hover::after,
+.work-card:focus-visible::after {
+  opacity: 1;
+}
+
+.works-buy-band {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 2rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(8,8,16,0.92), rgba(8,8,16,0.76) 42%, rgba(8,8,16,0.46)),
+    linear-gradient(180deg, rgba(8,8,16,0.48), rgba(8,8,16,0.88)),
+    url('../../assets/oeuvres/allskreen-band-bg.png') center 46% / cover no-repeat,
+    rgba(8,8,16,0.74);
+}
+
+.works-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.works-rail-compact {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.work-mini {
+  min-height: 420px;
+  display: grid;
+  grid-template-rows: minmax(180px, 1fr) auto;
+  background: rgba(12,12,22,0.9);
+}
+
+.work-mini-media {
+  position: relative;
+  min-height: 210px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(232,201,122,0.12), rgba(46,207,176,0.08)),
+    #10101d;
+}
+
+.work-mini-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.98) contrast(1.04) brightness(0.84);
+  transition: filter 0.28s ease, transform 0.28s ease;
+}
+
+.work-mini:hover .work-mini-media img,
+.work-mini:focus-visible .work-mini-media img {
+  filter: grayscale(1) saturate(0) contrast(1.12) brightness(0.84);
+  transform: scale(1.05);
+}
+
+.work-mini-body {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+  padding: 1.15rem;
+}
+
+.work-mini h3 {
+  color: #fff8e8;
+  font-size: 1.28rem;
+}
+
+#works-animated .work-mini {
+  position: relative;
+  grid-template-rows: 1fr;
+  min-height: 360px;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+#works-animated .work-mini-media {
+  min-height: 360px;
+  height: 100%;
+}
+
+#works-animated .works-rail {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(360px, 34vw);
+  gap: 0;
+  border: 0;
+  background: transparent;
+}
+
+#works-animated .era-primitif,
+#works-animated .era-dofus,
+#works-animated .era-wakfu,
+#works-animated .era-waven {
+  border-top: 0;
+}
+
+#works-games .work-mini {
+  position: relative;
+  grid-template-rows: 1fr;
+  min-height: 360px;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+#works-games .work-mini-media {
+  min-height: 360px;
+  height: 100%;
+}
+
+#works-games .work-mini[data-work-title="Wakfu"][data-work-type="Game"] .work-mini-media img {
+  transform: scale(1.34);
+}
+
+#works-games .work-mini[data-work-title="Wakfu"][data-work-type="Game"]:hover .work-mini-media img,
+#works-games .work-mini[data-work-title="Wakfu"][data-work-type="Game"]:focus-visible .work-mini-media img {
+  transform: scale(1.42);
+}
+
+#works-games .works-rail {
+  gap: 0;
+  border: 0;
+  background: transparent;
+}
+
+#works-games .era-primitif,
+#works-games .era-dofus,
+#works-games .era-wakfu,
+#works-games .era-waven {
+  border-top: 0;
+}
+
+#works-animated .work-mini::after,
+#works-games .work-mini::after {
+  content: 'VOIR LA FICHE';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  z-index: 2;
+  min-height: 94px;
+  padding-bottom: 12px;
+  display: grid;
+  place-items: center;
+  border-top: 1px solid rgba(232,201,122,0.34);
+  color: var(--gold-light);
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-size: 0.74rem;
+  font-style: normal !important;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(7,8,15,0.96);
+  box-shadow: 0 -18px 42px rgba(0,0,0,0.48);
+  transform: translateY(0);
+  transition: opacity 0.24s ease;
+}
+
+#works-animated .work-mini-body,
+#works-games .work-mini-body {
+  display: none;
+}
+
+#works-animated .work-mini:hover::after,
+#works-animated .work-mini:focus-visible::after,
+#works-games .work-mini:hover::after,
+#works-games .work-mini:focus-visible::after {
+  opacity: 1;
+}
+
+.work-card-link {
+  width: fit-content;
+  min-height: 38px;
+  margin-top: 0.15rem;
+  padding: 0.66rem 0.8rem;
+  font-size: 0.64rem;
+}
+
+.works-library {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: clamp(190px, 19vw, 330px);
+  gap: clamp(0.45rem, 0.9vw, 0.8rem);
+  background:
+    linear-gradient(135deg, rgba(255,247,223,0.08), transparent 18%),
+    linear-gradient(315deg, rgba(46,207,176,0.08), transparent 22%),
+    rgba(8,8,16,0.72);
+  border: 0;
+  padding: clamp(0.55rem, 1vw, 0.85rem);
+}
+
+.work-library-item {
+  position: relative;
+  display: grid;
+  align-items: end;
+  min-height: 0;
+  overflow: hidden;
+  color: #fff8e8;
+  text-decoration: none;
+  isolation: isolate;
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 9px),
+    radial-gradient(circle at 50% 42%, rgba(46,207,176,0.22), transparent 46%),
+    #10101d;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+  transform: translateZ(0);
+  transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+
+.works-library .era-primitif,
+.works-library .era-dofus,
+.works-library .era-wakfu,
+.works-library .era-waven {
+  border-top: 0;
+}
+
+.work-library-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.work-library-item:nth-child(2),
+.work-library-item:nth-child(5) {
+  grid-column: span 2;
+}
+
+.work-library-item:nth-child(3),
+.work-library-item:nth-child(4) {
+  grid-column: span 2;
+}
+
+.work-library-item:nth-child(6),
+.work-library-item:nth-child(7) {
+  grid-column: span 3;
+}
+
+.work-library-item:hover,
+.work-library-item:focus-visible {
+  z-index: 3;
+  outline: none;
+  box-shadow:
+    0 28px 68px rgba(0,0,0,0.42),
+    0 0 28px rgba(232,201,122,0.08);
+  transform: translateY(-4px);
+}
+
+.work-library-media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.work-library-media::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background:
+    linear-gradient(180deg, rgba(8,8,16,0.02), rgba(8,8,16,0.24) 42%, rgba(8,8,16,0.96)),
+    radial-gradient(circle at 50% 42%, transparent, rgba(8,8,16,0.44));
+}
+
+.work-library-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) saturate(0) contrast(1.18) brightness(0.74);
+  transform: scale(1.04);
+  transition: filter 0.3s ease, transform 0.34s ease;
+}
+
+#works-webtoons .work-library-item[data-work-title="Wakfu - La Grande Vague"] .work-library-media img {
+  object-position: center 22%;
+  transform: scale(1.08);
+}
+
+#works-webtoons .work-library-item[data-work-title="Wakfu - La Grande Vague"] .work-library-media::after {
+  background:
+    linear-gradient(180deg, rgba(8,8,16,0.02), rgba(8,8,16,0.18) 44%, rgba(8,8,16,0.96)),
+    radial-gradient(circle at 50% 42%, transparent, rgba(8,8,16,0.38));
+}
+
+#works-webtoons .work-library-item[data-work-title="Wakfu - La Grande Vague"] .work-library-copy {
+  background:
+    linear-gradient(180deg, transparent, rgba(7,8,15,0.78) 28%, rgba(7,8,15,0.97));
+}
+
+.work-library-media span {
+  display: none;
+}
+
+.work-library-item:hover .work-library-media img,
+.work-library-item:focus-visible .work-library-media img {
+  filter: grayscale(0.18) saturate(0.95) contrast(1.08) brightness(0.84);
+  transform: scale(1.1);
+}
+
+#works-webtoons .work-library-item[data-work-title="Wakfu - La Grande Vague"]:hover .work-library-media img,
+#works-webtoons .work-library-item[data-work-title="Wakfu - La Grande Vague"]:focus-visible .work-library-media img {
+  transform: scale(1.14);
+}
+
+.work-library-copy {
+  display: grid;
+  align-content: end;
+  min-height: 58%;
+  padding: clamp(1rem, 2vw, 1.45rem);
+  background:
+    linear-gradient(180deg, transparent, rgba(7,8,15,0.82) 26%, rgba(7,8,15,0.97));
+}
+
+.work-library-item h3 {
+  max-width: 15ch;
+  color: #fff8e8;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  font-size: clamp(1.15rem, 2vw, 2rem);
+  font-style: normal !important;
+  line-height: 1.06;
+  text-shadow:
+    0 3px 16px rgba(0,0,0,0.9),
+    0 0 16px rgba(232,201,122,0.14);
+}
+
+.work-library-item p {
+  display: -webkit-box;
+  max-width: 38ch;
+  margin: 0.62rem 0 0;
+  overflow: hidden;
+  color: rgba(255,247,223,0.78);
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  line-height: 1.38;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.work-pill-link {
+  min-height: 36px;
+  width: fit-content;
+  margin-top: 0.9rem;
+  white-space: nowrap;
+  padding: 0.58rem 0.74rem;
+  font-size: 0.62rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.22s ease, transform 0.26s ease;
+}
+
+.work-library-item:hover .work-pill-link,
+.work-library-item:focus-visible .work-pill-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.era-primitif { border-top: 3px solid var(--primitif-violet); }
+.era-dofus { border-top: 3px solid var(--dofus-amber); }
+.era-wakfu { border-top: 3px solid var(--wakfu-teal); }
+.era-waven { border-top: 3px solid var(--waven-blue); }
+
+#works-webtoons .work-library-item,
+#works-webtoons .era-primitif,
+#works-webtoons .era-dofus,
+#works-webtoons .era-wakfu,
+#works-webtoons .era-waven {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#works-webtoons .works-library {
+  gap: 0;
+  padding: 0;
+  background: transparent;
+}
+
+#works-webtoons .work-library-item {
+  background: transparent;
+  clip-path: inset(0);
+  transform: none;
+}
+
+#works-webtoons .work-library-item::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: -1px;
+  z-index: 4;
+  height: 5px;
+  background: #07080f;
+  pointer-events: none;
+}
+
+#works-webtoons .work-library-media {
+  inset: -8px;
+}
+
+#works-webtoons .work-library-media::after,
+#works-webtoons .work-library-item[data-work-title="Wakfu - La Grande Vague"] .work-library-media::after {
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7,8,15,0) 0%, rgba(7,8,15,0.06) 42%, rgba(7,8,15,0.68) 100%),
+    radial-gradient(circle at 50% 42%, transparent, rgba(7,8,15,0.18));
+}
+
+#works-webtoons .work-library-copy {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  min-height: 64%;
+  padding: clamp(1rem, 2vw, 1.45rem);
+  background:
+    linear-gradient(180deg, rgba(7,8,15,0), rgba(7,8,15,0.58) 34%, rgba(7,8,15,0.9) 100%);
+  transform: translateZ(0);
+}
+
+#works-webtoons .work-pill-link {
+  transform: none;
+  transition: opacity 0.22s ease;
+}
+
+#works-webtoons .work-library-item:hover,
+#works-webtoons .work-library-item:focus-visible {
+  box-shadow: none !important;
+  transform: none;
+}
+
+.back-to-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 50;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background: rgba(8,8,16,0.9);
+  color: var(--gold-light);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.back-to-top span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: transparent;
+}
+
+.back-to-top::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  width: 17px;
+  height: 17px;
+  border-top: 5px solid currentColor;
+  border-left: 5px solid currentColor;
+  color: currentColor;
+  transform: translateX(-50%) rotate(45deg);
+  filter: drop-shadow(0 0 8px rgba(232,201,122,0.34));
+}
+
+.back-to-top::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  width: 17px;
+  height: 17px;
+  border-top: 5px solid currentColor;
+  border-left: 5px solid currentColor;
+  transform: translateX(-50%) rotate(45deg);
+  filter: drop-shadow(0 0 8px rgba(232,201,122,0.34));
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (max-width: 980px) {
+  .works-path,
+  .works-buy-band,
+  .works-featured-grid,
+  .works-rail,
+  .works-rail-compact,
+  .works-library {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card:first-child {
+    grid-row: auto;
+  }
+
+  .works-featured-grid {
+    grid-auto-rows: auto;
+  }
+
+  .works-buy-band {
+    align-items: start;
+  }
+
+  .work-library-item {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  #works-animated .works-rail {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  #works-animated .work-mini,
+  #works-animated .work-mini-media {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 640px) {
+  .works-hero {
+    min-height: calc(100svh - 54px);
+    padding: 6rem 1rem 3.4rem;
+  }
+
+  .works-hero::after {
+    background:
+      linear-gradient(180deg, rgba(8,8,16,0.14), rgba(8,8,16,0.52) 44%, var(--dark-bg)),
+      linear-gradient(90deg, rgba(8,8,16,0.2), rgba(8,8,16,0.82));
+  }
+
+  .works-hero-media img {
+    object-position: 42% center;
+  }
+
+  .works-hero-content {
+    text-align: left;
+  }
+
+  .works-hero h1,
+  .works-hero p:not(.works-kicker) {
+    margin-left: 0;
+  }
+
+  .works-hero-actions {
+    justify-content: flex-start;
+  }
+
+  .works-hero h1 {
+    font-size: clamp(2.55rem, 16vw, 4rem);
+  }
+
+  .works-path-item {
+    min-height: 116px;
+  }
+
+  .works-section,
+  .works-buy-band {
+    padding: 3rem 1rem;
+  }
+
+  .work-card,
+  .work-mini {
+    min-height: 340px;
+  }
+}
