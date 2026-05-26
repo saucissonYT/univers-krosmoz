@@ -727,7 +727,6 @@
     }
 
     const results = entries
-      .filter((entry) => !isMobileMapLocked() || !isMapHref(entry.href))
       .map((entry) => ({ entry, score: scoreEntry(entry, terms) }))
       .filter((result) => result.score > 0 && terms.every((term) => result.entry.searchText.includes(term) || normalize(result.entry.title).includes(term)))
       .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title, "fr"))
