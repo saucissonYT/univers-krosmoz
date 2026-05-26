@@ -36,6 +36,7 @@ const legacyDirectoryRedirects = new Map([
 
 const mimeTypes = {
   "": "text/html; charset=utf-8",
+  ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
@@ -67,7 +68,7 @@ function getStaticCacheHeaders(extension) {
     };
   }
 
-  if (extension === "") {
+  if (extension === "" || extension === ".html") {
     return {
       "cache-control": "no-cache"
     };
@@ -140,12 +141,12 @@ function findLegacyRedirect(pathname) {
       const targetPath = `/${directory}/${page}`;
       const filePath = normalize(join(root, targetPath));
       if (isInsideRoot(filePath) && existsSync(filePath) && statSync(filePath).isFile()) {
-        return targetPath;
+        return targetPath.replace(/\.html$/i, "");
       }
     }
   }
 
-  if (!/^\/[^/]+\.html$/i.test(pathname) || pathname === "/index") {
+  if (!/^\/[^/]+\.html$/i.test(pathname) || pathname === "/index.html") {
     return "";
   }
 
@@ -154,7 +155,22 @@ function findLegacyRedirect(pathname) {
     const targetPath = `/${directory}/${page}`;
     const filePath = normalize(join(root, targetPath));
     if (isInsideRoot(filePath) && existsSync(filePath) && statSync(filePath).isFile()) {
-      return targetPath;
+      return targetPath.replace(/\.html$/i, "");
+    }
+  }
+
+  return "";
+}
+
+function findPrettyRedirect(pathname) {
+  if (pathname === "/index.html") {
+    return "/";
+  }
+
+  if (pathname.endsWith(".html")) {
+    const filePath = normalize(join(root, pathname));
+    if (isInsideRoot(filePath) && existsSync(filePath) && statSync(filePath).isFile()) {
+      return pathname.replace(/\.html$/i, "");
     }
   }
 
@@ -248,11 +264,21 @@ async function serveStatic(request, response) {
     return;
   }
 
-  const requested = pathname === "/" ? "/index" : pathname;
+  const prettyRedirect = findPrettyRedirect(pathname);
+  if (prettyRedirect) {
+    redirectPermanent(request, response, `${prettyRedirect}${url.search}`);
+    return;
+  }
+
+  const requested = pathname === "/" ? "/index.html" : pathname;
   const routePath = pathname.startsWith("/result:") || pathname.startsWith("/result/")
-    ? "/pages/jeux/jeu-personnage"
+    ? "/pages/jeux/jeu-personnage.html"
     : requested;
-  const filePath = normalize(join(root, routePath));
+  const directFilePath = normalize(join(root, routePath));
+  const htmlFilePath = extname(routePath)
+    ? directFilePath
+    : normalize(join(root, `${routePath}.html`));
+  const filePath = existsSync(directFilePath) ? directFilePath : htmlFilePath;
 
   if (!isInsideRoot(filePath) || !existsSync(filePath) || !statSync(filePath).isFile()) {
     response.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
