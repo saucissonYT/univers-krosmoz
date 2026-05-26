@@ -1,246 +1,246 @@
 
 
-const axes = ['coeur', 'action', 'sagesse', 'ambition', 'ombre', 'mystere', 'liberte', 'devoir', 'chaos', 'lien'];
+const axes = ['cœur', 'action', 'sagesse', 'ambition', 'ombre', 'mystere', 'liberte', 'devoir', 'chaos', 'lien'];
 
 const characters = [
   {
     id: 'yugo',
     name: 'Yugo',
     archetype: 'Le cœur qui relie les mondes',
-    href: '../personnages/yugo.html',
+    href: '../personnages/yugo',
     image: '../../assets/personnages/cartes/yugo.webp',
     traits: ['Éliatrope', 'Espoir', 'Responsabilité'],
-    vector: { coeur: 5, action: 3, sagesse: 3, ambition: 1, ombre: 0, mystere: 3, liberte: 3, devoir: 4, chaos: 1, lien: 5 },
+    vector: { cœur: 5, action: 3, sagesse: 3, ambition: 1, ombre: 0, mystere: 3, liberte: 3, devoir: 4, chaos: 1, lien: 5 },
     text: "Vous avancez avec le cœur avant la couronne. Comme Yugo, vous cherchez à protéger les autres sans perdre votre part d'innocence, même lorsque vos choix pèsent sur plus grand que vous."
   },
   {
     id: 'adamai',
     name: 'Adamaï',
     archetype: 'Le double lucide',
-    href: '../personnages/adamai.html',
+    href: '../personnages/adamai',
     image: '../../assets/personnages/cartes/adamai.webp',
     traits: ['Dragon Éliatrope', 'Mesure', 'Fracture'],
-    vector: { coeur: 3, action: 2, sagesse: 4, ambition: 2, ombre: 2, mystere: 4, liberte: 2, devoir: 4, chaos: 2, lien: 4 },
+    vector: { cœur: 3, action: 2, sagesse: 4, ambition: 2, ombre: 2, mystere: 4, liberte: 2, devoir: 4, chaos: 2, lien: 4 },
     text: "Vous êtes fait de loyauté et de recul. Comme Adamaï, vous pouvez aimer profondément sans suivre aveuglément, quitte à devenir la voix difficile que personne ne veut entendre."
   },
   {
     id: 'amalia',
     name: 'Amalia Sheran Sharm',
     archetype: 'La souveraine sensible',
-    href: '../personnages/amalia-sheran-sharm.html',
+    href: '../personnages/amalia-sheran-sharm',
     image: '../../assets/personnages/cartes/amalia-sheran-sharm.webp',
     traits: ['Sadida', 'Nature', 'Royauté'],
-    vector: { coeur: 5, action: 2, sagesse: 3, ambition: 2, ombre: 0, mystere: 1, liberte: 2, devoir: 5, chaos: 0, lien: 5 },
+    vector: { cœur: 5, action: 2, sagesse: 3, ambition: 2, ombre: 0, mystere: 1, liberte: 2, devoir: 5, chaos: 0, lien: 5 },
     text: "Vous avez besoin d'aimer ce que vous protégez. Comme Amalia, votre force vient d'une sensibilité assumée, mais aussi d'un sens du devoir qui finit toujours par vous rattraper."
   },
   {
     id: 'tristepin',
     name: 'Tristepin de Percedal',
     archetype: "L'élan du héros",
-    href: '../personnages/tristepin.html',
+    href: '../personnages/tristepin',
     image: '../../assets/personnages/cartes/tristepin.webp',
     traits: ['Iop', 'Courage', 'Famille'],
-    vector: { coeur: 4, action: 5, sagesse: 1, ambition: 1, ombre: 1, mystere: 0, liberte: 4, devoir: 3, chaos: 2, lien: 4 },
+    vector: { cœur: 4, action: 5, sagesse: 1, ambition: 1, ombre: 1, mystere: 0, liberte: 4, devoir: 3, chaos: 2, lien: 4 },
     text: "Vous répondez au danger par le mouvement. Comme Tristepin, vous pouvez être impulsif, mais votre courage devient précieux lorsqu'il s'agit de défendre ceux que vous aimez."
   },
   {
     id: 'evangelyne',
     name: 'Évangelyne',
     archetype: 'La précision protectrice',
-    href: '../personnages/evangelyne.html',
+    href: '../personnages/evangelyne',
     image: '../../assets/personnages/cartes/evangelyne.webp',
     traits: ['Cra', 'Lucidité', 'Protection'],
-    vector: { coeur: 4, action: 3, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 4 },
+    vector: { cœur: 4, action: 3, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 4 },
     text: "Vous ne confondez pas force et agitation. Comme Évangelyne, vous préférez viser juste, protéger sans bruit et garder la tête froide quand tout le monde s'emballe."
   },
   {
     id: 'ruel',
     name: 'Ruel Stroud',
     archetype: 'Le survivant au cœur tendre',
-    href: '../personnages/ruel-stroud.html',
+    href: '../personnages/ruel-stroud',
     image: '../../assets/personnages/cartes/ruel-stroud.webp',
     traits: ['Enutrof', 'Instinct', 'Attachement'],
-    vector: { coeur: 3, action: 2, sagesse: 3, ambition: 3, ombre: 1, mystere: 0, liberte: 4, devoir: 2, chaos: 1, lien: 3 },
+    vector: { cœur: 3, action: 2, sagesse: 3, ambition: 3, ombre: 1, mystere: 0, liberte: 4, devoir: 2, chaos: 1, lien: 3 },
     text: "Vous avez le sens du réel, parfois rude, souvent drôle malgré vous. Comme Ruel, vous savez survivre, négocier, râler, puis rester quand cela compte vraiment."
   },
   {
     id: 'nox',
     name: 'Nox',
     archetype: "L'obsession du temps perdu",
-    href: '../personnages/nox.html',
+    href: '../personnages/nox',
     image: '../../assets/personnages/cartes/nox.webp',
     traits: ['Xélor', 'Temps', 'Obsession'],
-    vector: { coeur: 2, action: 2, sagesse: 4, ambition: 5, ombre: 4, mystere: 4, liberte: 1, devoir: 2, chaos: 4, lien: 2 },
+    vector: { cœur: 2, action: 2, sagesse: 4, ambition: 5, ombre: 4, mystere: 4, liberte: 1, devoir: 2, chaos: 4, lien: 2 },
     text: "Vous pourriez traverser le monde pour réparer une perte. Comme Nox, votre intelligence est immense, mais elle devient dangereuse lorsqu'une blessure décide à votre place."
   },
   {
     id: 'qilby',
     name: 'Qilby',
     archetype: 'La mémoire qui refuse les murs',
-    href: '../personnages/qilby.html',
+    href: '../personnages/qilby',
     image: '../../assets/personnages/cartes/qilby.webp',
     traits: ['Éliatrope', 'Savoir', 'Errance'],
-    vector: { coeur: 1, action: 2, sagesse: 5, ambition: 4, ombre: 3, mystere: 5, liberte: 5, devoir: 1, chaos: 3, lien: 1 },
+    vector: { cœur: 1, action: 2, sagesse: 5, ambition: 4, ombre: 3, mystere: 5, liberte: 5, devoir: 1, chaos: 3, lien: 1 },
     text: "Vous êtes attiré par ce qui dépasse les frontières. Comme Qilby, vous avez soif de comprendre, de partir, de voir encore, même si cette liberté peut devenir une solitude."
   },
   {
     id: 'oropo',
     name: 'Oropo',
     archetype: 'Le messie fissuré',
-    href: '../personnages/oropo.html',
+    href: '../personnages/oropo',
     image: '../../assets/personnages/cartes/oropo.webp',
     traits: ['Éliotrope', 'Idéal', 'Manipulation'],
-    vector: { coeur: 2, action: 3, sagesse: 3, ambition: 5, ombre: 4, mystere: 4, liberte: 2, devoir: 4, chaos: 4, lien: 2 },
+    vector: { cœur: 2, action: 3, sagesse: 3, ambition: 5, ombre: 4, mystere: 4, liberte: 2, devoir: 4, chaos: 4, lien: 2 },
     text: "Vous voulez changer l'ordre des choses, même si cela vous consume. Comme Oropo, vous portez une idée trop grande pour rester sage, entre idéal sincère et vertige du contrôle."
   },
   {
     id: 'goultard',
     name: 'Goultard',
     archetype: 'La force devenue sagesse',
-    href: '../personnages/goultard.html',
+    href: '../personnages/goultard',
     image: '../../assets/personnages/cartes/goultard.webp',
     traits: ['Iop', 'Puissance', 'Maîtrise'],
-    vector: { coeur: 3, action: 5, sagesse: 4, ambition: 1, ombre: 2, mystere: 2, liberte: 3, devoir: 4, chaos: 3, lien: 2 },
+    vector: { cœur: 3, action: 5, sagesse: 4, ambition: 1, ombre: 2, mystere: 2, liberte: 3, devoir: 4, chaos: 3, lien: 2 },
     text: "Vous connaissez la violence, mais vous ne lui appartenez pas. Comme Goultard, votre puissance devient intéressante lorsqu'elle apprend à se retenir."
   },
   {
     id: 'rubilax',
     name: 'Rubilax',
     archetype: 'La tentation attachante',
-    href: '../personnages/rubilax.html',
+    href: '../personnages/rubilax',
     image: '../../assets/personnages/cartes/rubilax.webp',
     traits: ['Shushu', 'Provocation', 'Lien'],
-    vector: { coeur: 2, action: 4, sagesse: 1, ambition: 3, ombre: 5, mystere: 2, liberte: 4, devoir: 1, chaos: 5, lien: 3 },
+    vector: { cœur: 2, action: 4, sagesse: 1, ambition: 3, ombre: 5, mystere: 2, liberte: 4, devoir: 1, chaos: 5, lien: 3 },
     text: "Vous aimez provoquer, tester, piquer là où ça réagit. Comme Rubilax, vous portez une part de chaos, mais elle peut s'attacher plus fort qu'elle ne l'admet."
   },
   {
     id: 'kerubim',
     name: 'Kérubim Crépin',
     archetype: 'Le conteur aux mille vies',
-    href: '../personnages/kerubim-crepin.html',
+    href: '../personnages/kerubim-crepin',
     image: '../../assets/personnages/cartes/kerubim-crepin.webp',
     traits: ['Écaflip', 'Panache', 'Mémoire'],
-    vector: { coeur: 4, action: 3, sagesse: 4, ambition: 2, ombre: 1, mystere: 3, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
+    vector: { cœur: 4, action: 3, sagesse: 4, ambition: 2, ombre: 1, mystere: 3, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
     text: "Vous transformez l'expérience en récit. Comme Kérubim, vous avez le goût du risque, du souvenir et des détours qui donnent à la vie son relief."
   },
   {
     id: 'ush',
     name: 'Ush Galesh',
     archetype: "Le joueur qui s'ennuie",
-    href: '../personnages/ush-galesh.html',
+    href: '../personnages/ush-galesh',
     image: '../../assets/personnages/cartes/ush-galesh.webp',
     traits: ['Écaflip', 'Jeu', 'Cruauté élégante'],
-    vector: { coeur: 1, action: 2, sagesse: 3, ambition: 4, ombre: 5, mystere: 3, liberte: 4, devoir: 0, chaos: 4, lien: 1 },
+    vector: { cœur: 1, action: 2, sagesse: 3, ambition: 4, ombre: 5, mystere: 3, liberte: 4, devoir: 0, chaos: 4, lien: 1 },
     text: "Vous aimez les règles surtout quand vous pouvez les tordre. Comme Ush, vous cherchez l'intensité, le défi, la partie rare qui rend l'ennui supportable."
   },
   {
     id: 'joris',
     name: 'Joris Jurgen',
     archetype: 'Le secret sous le chapeau',
-    href: '../personnages/joris-jurgen.html',
+    href: '../personnages/joris-jurgen',
     image: '../../assets/personnages/cartes/joris-jurgen.webp',
     traits: ['Mystère', 'Calme', 'Devoir'],
-    vector: { coeur: 3, action: 3, sagesse: 5, ambition: 1, ombre: 1, mystere: 5, liberte: 2, devoir: 5, chaos: 0, lien: 3 },
+    vector: { cœur: 3, action: 3, sagesse: 5, ambition: 1, ombre: 1, mystere: 5, liberte: 2, devoir: 5, chaos: 0, lien: 3 },
     text: "Vous n'avez pas besoin de tout dire pour exister. Comme Joris, votre force vient du silence, de la fidélité et d'une maîtrise qui laisse peu de prise aux autres."
   },
   {
     id: 'bakara',
     name: 'Bakara Jurgen',
     archetype: "L'intelligence lumineuse",
-    href: '../personnages/bakara-jurgen.html',
+    href: '../personnages/bakara-jurgen',
     image: '../../assets/personnages/cartes/bakara-jurgen.webp',
     traits: ['Huppermage', 'Génie', 'Audace'],
-    vector: { coeur: 4, action: 3, sagesse: 5, ambition: 2, ombre: 0, mystere: 3, liberte: 3, devoir: 3, chaos: 1, lien: 4 },
+    vector: { cœur: 4, action: 3, sagesse: 5, ambition: 2, ombre: 0, mystere: 3, liberte: 3, devoir: 3, chaos: 1, lien: 4 },
     text: "Vous cherchez la solution brillante, celle qui sauve sans renoncer à l'élégance. Comme Bakara, votre esprit est une arme, mais aussi une chaleur."
   },
   {
     id: 'ogrest',
     name: 'Ogrest',
     archetype: 'Le chagrin démesuré',
-    href: '../personnages/ogrest.html',
+    href: '../personnages/ogrest',
     image: '../../assets/personnages/cartes/ogrest.webp',
     traits: ['Ogre', 'Dofus', 'Débordement'],
-    vector: { coeur: 5, action: 4, sagesse: 0, ambition: 3, ombre: 3, mystere: 2, liberte: 2, devoir: 0, chaos: 5, lien: 5 },
+    vector: { cœur: 5, action: 4, sagesse: 0, ambition: 3, ombre: 3, mystere: 2, liberte: 2, devoir: 0, chaos: 5, lien: 5 },
     text: "Vous ressentez trop fort pour rester intact. Comme Ogrest, votre amour peut déplacer des montagnes, mais votre douleur peut devenir une marée."
   },
   {
     id: 'dathura',
     name: 'Dathura',
     archetype: 'La muse impossible',
-    href: '../personnages/dathura.html',
+    href: '../personnages/dathura',
     image: '../../assets/personnages/cartes/dathura.webp',
     traits: ['Sadida', 'Désir', 'Distance'],
-    vector: { coeur: 2, action: 1, sagesse: 3, ambition: 4, ombre: 3, mystere: 4, liberte: 4, devoir: 1, chaos: 3, lien: 2 },
+    vector: { cœur: 2, action: 1, sagesse: 3, ambition: 4, ombre: 3, mystere: 4, liberte: 4, devoir: 1, chaos: 3, lien: 2 },
     text: "Vous attirez les projections, mais vous refusez d'être possédé. Comme Dathura, vous incarnez une beauté qui dérange parce qu'elle ne se laisse pas réduire."
   },
   {
     id: 'rushu',
     name: 'Rushu',
     archetype: 'La domination brute',
-    href: '../personnages/rushu.html',
+    href: '../personnages/rushu',
     image: '../../assets/personnages/cartes/rushu.webp',
     traits: ['Démon', 'Pouvoir', 'Destruction'],
-    vector: { coeur: 0, action: 5, sagesse: 2, ambition: 5, ombre: 5, mystere: 2, liberte: 3, devoir: 0, chaos: 5, lien: 0 },
+    vector: { cœur: 0, action: 5, sagesse: 2, ambition: 5, ombre: 5, mystere: 2, liberte: 3, devoir: 0, chaos: 5, lien: 0 },
     text: "Vous détestez subir. Comme Rushu, votre énergie cherche l'ascendant, la prise, la victoire nette. Reste à savoir si vous commandez votre ombre ou si elle commande pour vous."
   },
   {
     id: 'comte-harebourg',
     name: 'Comte Harebourg',
     archetype: 'Le calcul glacé',
-    href: '../personnages/comte-harebourg.html',
+    href: '../personnages/comte-harebourg',
     image: '../../assets/personnages/cartes/comte-harebourg.webp',
     traits: ['Xélor', 'Frigost', 'Contrôle'],
-    vector: { coeur: 1, action: 2, sagesse: 5, ambition: 5, ombre: 4, mystere: 4, liberte: 1, devoir: 3, chaos: 2, lien: 1 },
+    vector: { cœur: 1, action: 2, sagesse: 5, ambition: 5, ombre: 4, mystere: 4, liberte: 1, devoir: 3, chaos: 2, lien: 1 },
     text: "Vous aimez comprendre avant d'agir, contrôler avant de risquer. Comme Harebourg, votre précision peut bâtir des merveilles ou enfermer un monde dans votre hiver."
   },
   {
     id: 'toxine',
     name: 'Toxine',
     archetype: 'La lame sans remords',
-    href: '../personnages/toxine.html',
+    href: '../personnages/toxine',
     image: '../../assets/personnages/cartes/toxine.webp',
     traits: ['Sram', 'Poison', 'Froideur'],
-    vector: { coeur: 0, action: 4, sagesse: 3, ambition: 4, ombre: 5, mystere: 4, liberte: 4, devoir: 0, chaos: 4, lien: 0 },
+    vector: { cœur: 0, action: 4, sagesse: 3, ambition: 4, ombre: 5, mystere: 4, liberte: 4, devoir: 0, chaos: 4, lien: 0 },
     text: "Vous savez où viser. Comme Toxine, vous êtes difficile à lire, précis, dangereux quand on vous sous-estime, et peu sensible aux morales toutes faites."
   },
   {
     id: 'lilotte',
     name: 'Lilotte',
     archetype: 'La petite survivante',
-    href: '../personnages/lilotte.html',
+    href: '../personnages/lilotte',
     image: '../../assets/personnages/cartes/lilotte.webp',
     traits: ['Ouginak', 'Vif', 'Instinct'],
-    vector: { coeur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 1, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
+    vector: { cœur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 1, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
     text: "Vous avancez à l'instinct, avec une énergie vive et une loyauté qui ne demande pas de grands discours. Comme Lilotte, vous survivez en restant mobile."
   },
   {
     id: 'lokus',
     name: 'Lokus',
     archetype: 'La machine ancienne',
-    href: '../personnages/lokus.html',
+    href: '../personnages/lokus',
     image: '../../assets/personnages/cartes/lokus.webp',
     traits: ['Méchasme', 'Stasis', 'Étrangeté'],
-    vector: { coeur: 0, action: 3, sagesse: 5, ambition: 2, ombre: 3, mystere: 5, liberte: 1, devoir: 4, chaos: 2, lien: 0 },
+    vector: { cœur: 0, action: 3, sagesse: 5, ambition: 2, ombre: 3, mystere: 5, liberte: 1, devoir: 4, chaos: 2, lien: 0 },
     text: "Vous semblez venir d'un autre rythme. Comme Lokus, vous incarnez la distance, la logique ancienne, une présence difficile à comprendre depuis les émotions ordinaires."
   },
   {
     id: 'grougaloragran',
     name: 'Grougaloragran',
     archetype: 'Le gardien ancestral',
-    href: '../personnages/grougaloragran.html',
+    href: '../personnages/grougaloragran',
     image: '../../assets/personnages/cartes/grougaloragran.webp',
     traits: ['Dragon Éliatrope', 'Gardien', 'Mémoire'],
-    vector: { coeur: 4, action: 3, sagesse: 5, ambition: 0, ombre: 1, mystere: 4, liberte: 1, devoir: 5, chaos: 1, lien: 4 },
+    vector: { cœur: 4, action: 3, sagesse: 5, ambition: 0, ombre: 1, mystere: 4, liberte: 1, devoir: 5, chaos: 1, lien: 4 },
     text: "Vous protégez sur le temps long. Comme Grougaloragran, vous portez la mémoire, la patience et cette forme d'amour qui accepte de rester dans l'ombre."
   },
   {
     id: 'remington',
     name: 'Remington Smisse',
     archetype: 'Le panache du voleur',
-    href: '../personnages/remington-smisse.html',
+    href: '../personnages/remington-smisse',
     image: '../../assets/personnages/cartes/remington-smisse.webp',
     traits: ['Roublard', 'Style', 'Liberté'],
-    vector: { coeur: 2, action: 4, sagesse: 2, ambition: 4, ombre: 3, mystere: 2, liberte: 5, devoir: 0, chaos: 4, lien: 2 },
+    vector: { cœur: 2, action: 4, sagesse: 2, ambition: 4, ombre: 3, mystere: 2, liberte: 5, devoir: 0, chaos: 4, lien: 2 },
     text: "Vous préférez une sortie spectaculaire à une victoire bien rangée. Comme Remington, vous avez le goût du risque, du style et des chemins qui sentent la poudre."
   }
 ];
@@ -250,7 +250,7 @@ const questions = [
     kicker: 'Instinct premier',
     title: 'Quand une situation tourne mal, que faites-vous en premier ',
     answers: [
-      { label: 'Protéger', text: 'Je vérifie tout de suite que mes proches vont bien.', weights: { coeur: 3, lien: 3, devoir: 1 } },
+      { label: 'Protéger', text: 'Je vérifie tout de suite que mes proches vont bien.', weights: { cœur: 3, lien: 3, devoir: 1 } },
       { label: 'Agir', text: 'Je fonce et je règle le problème avant qu’il empire.', weights: { action: 4, liberte: 2, chaos: 1 } },
       { label: 'Observer', text: 'Je prends quelques secondes pour comprendre ce qui se passe.', weights: { sagesse: 3, mystere: 2, devoir: 1 } },
       { label: 'Contrôler', text: 'Je cherche le meilleur moyen de reprendre l’avantage.', weights: { ambition: 3, ombre: 3, chaos: 2 } }
@@ -260,7 +260,7 @@ const questions = [
     kicker: 'Rapport au pouvoir',
     title: 'On vous confie un objet très puissant. Quelle est votre priorité ',
     answers: [
-      { label: 'Aider', text: 'Je l’utilise pour sauver ou réparer ce qui peut l’être.', weights: { coeur: 3, devoir: 3, lien: 2 } },
+      { label: 'Aider', text: 'Je l’utilise pour sauver ou réparer ce qui peut l’être.', weights: { cœur: 3, devoir: 3, lien: 2 } },
       { label: 'Étudier', text: 'Je veux d’abord comprendre comment il fonctionne.', weights: { sagesse: 4, mystere: 3 } },
       { label: 'Laisser libre', text: 'Je refuse qu’un tel pouvoir soit enfermé ou confisqué.', weights: { liberte: 4, chaos: 2, mystere: 1 } },
       { label: 'Le garder', text: 'Je préfère l’avoir entre mes mains plutôt que chez un ennemi.', weights: { ambition: 4, ombre: 3, action: 1 } }
@@ -270,18 +270,18 @@ const questions = [
     kicker: 'Blessure intime',
     title: 'Quel défaut pourrait le plus vous faire déraper ',
     answers: [
-      { label: 'Culpabilité', text: 'Je peux trop me reprocher ce que je n’ai pas réussi à empêcher.', weights: { coeur: 2, devoir: 3, lien: 2 } },
+      { label: 'Culpabilité', text: 'Je peux trop me reprocher ce que je n’ai pas réussi à empêcher.', weights: { cœur: 2, devoir: 3, lien: 2 } },
       { label: 'Obsession', text: 'Je peux rester bloqué sur une idée, une perte ou une vérité.', weights: { ambition: 3, sagesse: 2, ombre: 2 } },
       { label: 'Besoin de risque', text: 'Je peux provoquer les choses quand je m’ennuie.', weights: { liberte: 3, chaos: 3, ombre: 2 } },
-      { label: 'Colère', text: 'Je peux réagir trop fort quand quelque chose me touche.', weights: { action: 3, chaos: 4, coeur: 1 } }
+      { label: 'Colère', text: 'Je peux réagir trop fort quand quelque chose me touche.', weights: { action: 3, chaos: 4, cœur: 1 } }
     ]
   },
   {
     kicker: 'Lien aux autres',
     title: 'Dans un groupe, quel rôle prenez-vous le plus souvent ',
     answers: [
-      { label: 'Rassembler', text: 'J’essaie de garder le groupe uni.', weights: { lien: 4, coeur: 3 } },
-      { label: 'Protéger', text: 'Je veille sur les autres et je prends les coups durs.', weights: { devoir: 4, coeur: 2, sagesse: 1 } },
+      { label: 'Rassembler', text: 'J’essaie de garder le groupe uni.', weights: { lien: 4, cœur: 3 } },
+      { label: 'Protéger', text: 'Je veille sur les autres et je prends les coups durs.', weights: { devoir: 4, cœur: 2, sagesse: 1 } },
       { label: 'Explorer', text: 'Je pars devant et je teste les limites.', weights: { action: 3, liberte: 3 } },
       { label: 'Bousculer', text: 'Je dis ce que les autres n’osent pas dire.', weights: { ombre: 3, mystere: 2, chaos: 2 } }
     ]
@@ -290,7 +290,7 @@ const questions = [
     kicker: 'Race intérieure',
     title: 'Quelle nature du Krosmoz vous ressemble le plus ',
     answers: [
-      { label: 'Éliatrope', text: 'Je me sens lié aux autres, aux voyages et aux secrets anciens.', weights: { lien: 3, mystere: 3, coeur: 2 } },
+      { label: 'Éliatrope', text: 'Je me sens lié aux autres, aux voyages et aux secrets anciens.', weights: { lien: 3, mystere: 3, cœur: 2 } },
       { label: 'Dragon', text: 'Je me reconnais dans la patience, la mémoire et la puissance retenue.', weights: { sagesse: 4, devoir: 3, mystere: 2 } },
       { label: 'Shushu', text: 'J’ai une part de chaos, d’ironie et de provocation.', weights: { ombre: 4, chaos: 3, action: 1 } },
       { label: 'Écaflip', text: 'J’aime le hasard, le jeu, le style et les paris risqués.', weights: { liberte: 4, ambition: 2, chaos: 2 } }
@@ -300,7 +300,7 @@ const questions = [
     kicker: 'Face au destin',
     title: 'Si on vous annonce un grand destin, comment réagissez-vous ',
     answers: [
-      { label: 'J’accepte', text: 'Si c’est mon rôle, je ferai ce qu’il faut.', weights: { devoir: 4, coeur: 2 } },
+      { label: 'J’accepte', text: 'Si c’est mon rôle, je ferai ce qu’il faut.', weights: { devoir: 4, cœur: 2 } },
       { label: 'Je contourne', text: 'Je cherche une autre façon d’arriver au bout.', weights: { liberte: 4, sagesse: 2 } },
       { label: 'Je refuse', text: 'Je veux choisir ma route moi-même.', weights: { liberte: 3, chaos: 2, ambition: 2 } },
       { label: 'Je l’utilise', text: 'Si les autres y croient, ça peut devenir un avantage.', weights: { ambition: 4, ombre: 3 } }
@@ -310,7 +310,7 @@ const questions = [
     kicker: 'Morale',
     title: 'Dans quel cas pourriez-vous cacher la vérité à vos proches ',
     answers: [
-      { label: 'Presque jamais', text: 'Je préfère être honnête, même quand c’est difficile.', weights: { coeur: 3, lien: 3 } },
+      { label: 'Presque jamais', text: 'Je préfère être honnête, même quand c’est difficile.', weights: { cœur: 3, lien: 3 } },
       { label: 'Pour protéger', text: 'Je peux mentir si ça évite de blesser ou de mettre en danger.', weights: { devoir: 4, sagesse: 2, mystere: 1 } },
       { label: 'Pour gagner', text: 'Je peux cacher la vérité si la situation l’exige.', weights: { ambition: 3, ombre: 3 } },
       { label: 'Pour découvrir', text: 'Je peux garder un secret si ça me permet d’aller plus loin.', weights: { mystere: 4, liberte: 3 } }
@@ -330,8 +330,8 @@ const questions = [
     kicker: 'Amour et attachement',
     title: 'Comment montrez-vous le plus votre affection ',
     answers: [
-      { label: 'Je reste présent', text: 'Même quand ça va mal, je ne laisse pas tomber.', weights: { coeur: 4, lien: 4, devoir: 1 } },
-      { label: 'Je protège', text: 'Je prends les coups ou les décisions difficiles.', weights: { devoir: 4, coeur: 2 } },
+      { label: 'Je reste présent', text: 'Même quand ça va mal, je ne laisse pas tomber.', weights: { cœur: 4, lien: 4, devoir: 1 } },
+      { label: 'Je protège', text: 'Je prends les coups ou les décisions difficiles.', weights: { devoir: 4, cœur: 2 } },
       { label: 'Je taquine', text: 'Je montre mon attachement avec humour et provocation.', weights: { chaos: 2, ombre: 2, lien: 2 } },
       { label: 'Je laisse respirer', text: 'J’aime sans enfermer l’autre.', weights: { liberte: 4, mystere: 2 } }
     ]
@@ -341,7 +341,7 @@ const questions = [
     title: 'Quelle relation avez-vous avec le passé ',
     answers: [
       { label: 'Je l’honore', text: 'Il faut respecter ce qui nous a construits.', weights: { devoir: 4, sagesse: 2 } },
-      { label: 'Il me marque', text: 'Certaines blessures restent difficiles à dépasser.', weights: { coeur: 2, ombre: 2, chaos: 2 } },
+      { label: 'Il me marque', text: 'Certaines blessures restent difficiles à dépasser.', weights: { cœur: 2, ombre: 2, chaos: 2 } },
       { label: 'Je l’analyse', text: 'Le passé donne des indices pour comprendre la suite.', weights: { sagesse: 4, mystere: 2 } },
       { label: 'Je m’en libère', text: 'Je refuse de rester enfermé dans ce qui est arrivé.', weights: { liberte: 4, ambition: 1 } }
     ]
@@ -353,14 +353,14 @@ const questions = [
       { label: 'Ailes ou écailles', text: 'Quelque chose d’ancien, puissant et impressionnant.', weights: { sagesse: 3, mystere: 3, devoir: 2 } },
       { label: 'Masque ou chapeau', text: 'Un détail qui garde une part de mystère.', weights: { mystere: 4, sagesse: 2 } },
       { label: 'Arme vivante', text: 'Une force dangereuse que je dois apprendre à maîtriser.', weights: { action: 3, ombre: 3, chaos: 3 } },
-      { label: 'Regard étrange', text: 'Un regard qui montre que je ne suis pas tout à fait ordinaire.', weights: { coeur: 2, mystere: 3, lien: 1 } }
+      { label: 'Regard étrange', text: 'Un regard qui montre que je ne suis pas tout à fait ordinaire.', weights: { cœur: 2, mystere: 3, lien: 1 } }
     ]
   },
   {
     kicker: 'Fin de partie',
     title: 'À la fin d’une grande aventure, qu’avez-vous envie de faire ',
     answers: [
-      { label: 'Rentrer', text: 'Je veux retrouver les miens et souffler enfin.', weights: { coeur: 4, lien: 4 } },
+      { label: 'Rentrer', text: 'Je veux retrouver les miens et souffler enfin.', weights: { cœur: 4, lien: 4 } },
       { label: 'Comprendre', text: 'Je veux savoir ce que cette aventure m’a appris.', weights: { sagesse: 4, mystere: 3 } },
       { label: 'Repartir', text: 'Je cherche déjà la prochaine aventure.', weights: { liberte: 5, mystere: 2 } },
       { label: 'Construire', text: 'Je veux transformer la victoire en quelque chose de durable.', weights: { ambition: 4, devoir: 2, ombre: 1 } }
@@ -375,330 +375,330 @@ characters.push(
     id: 'aerafal',
     name: 'Aerafal',
     archetype: 'La puissance qui choisit son heure',
-    href: '../personnages/aerafal.html',
+    href: '../personnages/aerafal',
     image: '../../assets/personnages/cartes/aerafal.webp',
     traits: ['Dragon', 'Patience', 'Sagesse'],
-    vector: { coeur: 2, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 5, liberte: 2, devoir: 5, chaos: 1, lien: 3 },
+    vector: { cœur: 2, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 5, liberte: 2, devoir: 5, chaos: 1, lien: 3 },
     text: "Vous préférez la force tenue à la force jetée. Comme Aerafal, vous avancez avec une ancienneté calme, une mémoire profonde et une présence qui n'a pas besoin de bruit pour peser."
   },
   {
     id: 'aguabrial',
     name: 'Aguabrial',
     archetype: "L'onde ancienne",
-    href: '../personnages/aguabrial.html',
+    href: '../personnages/aguabrial',
     image: '../../assets/personnages/cartes/aguabrial.webp',
     traits: ['Dragon', 'Eau', 'Mystère'],
-    vector: { coeur: 3, action: 2, sagesse: 5, ambition: 1, ombre: 1, mystere: 5, liberte: 3, devoir: 4, chaos: 1, lien: 3 },
+    vector: { cœur: 3, action: 2, sagesse: 5, ambition: 1, ombre: 1, mystere: 5, liberte: 3, devoir: 4, chaos: 1, lien: 3 },
     text: "Vous traversez les conflits comme une eau profonde. Comme Aguabrial, vous cachez votre intensité sous une surface posée, avec une intuition ancienne des courants du monde."
   },
   {
     id: 'alibert',
     name: 'Alibert',
     archetype: 'Le foyer qui tient bon',
-    href: '../personnages/alibert.html',
+    href: '../personnages/alibert',
     image: '../../assets/personnages/cartes/alibert.webp',
     traits: ['Enutrof', 'Tendresse', 'Accueil'],
-    vector: { coeur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 0, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
+    vector: { cœur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 0, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous êtes de ceux qui rendent le monde habitable. Comme Alibert, votre grandeur se voit dans les gestes simples, la fidélité et cette chaleur qui donne aux autres un endroit où revenir."
   },
   {
     id: 'arpagone',
     name: 'Arpagone',
     archetype: "L'amour devenu manque",
-    href: '../personnages/arpagone.html',
+    href: '../personnages/arpagone',
     image: '../../assets/personnages/cartes/arpagone.webp',
     traits: ['Enutrof', 'Blessure', 'Attachement'],
-    vector: { coeur: 4, action: 2, sagesse: 3, ambition: 4, ombre: 3, mystere: 2, liberte: 1, devoir: 2, chaos: 3, lien: 4 },
+    vector: { cœur: 4, action: 2, sagesse: 3, ambition: 4, ombre: 3, mystere: 2, liberte: 1, devoir: 2, chaos: 3, lien: 4 },
     text: "Vous aimez fort, parfois au point de garder les cicatrices ouvertes. Comme Arpagone, vous pouvez transformer une perte en moteur, quitte à marcher longtemps avec elle."
   },
   {
     id: 'atcham-crepin',
     name: 'Atcham Crépin',
     archetype: 'La griffe élégante',
-    href: '../personnages/atcham-crepin.html',
+    href: '../personnages/atcham-crepin',
     image: '../../assets/personnages/cartes/atcham-crepin.webp',
     traits: ['Écaflip', 'Adresse', 'Défi'],
-    vector: { coeur: 2, action: 4, sagesse: 3, ambition: 3, ombre: 3, mystere: 2, liberte: 5, devoir: 1, chaos: 3, lien: 2 },
+    vector: { cœur: 2, action: 4, sagesse: 3, ambition: 3, ombre: 3, mystere: 2, liberte: 5, devoir: 1, chaos: 3, lien: 2 },
     text: "Vous aimez gagner avec style. Comme Atcham, vous avez le goût du défi, de la précision et des coups qui paraissent légers seulement à ceux qui n'ont pas vu les griffes."
   },
   {
     id: 'balthazar',
     name: 'Balthazar',
     archetype: 'Le vieux gardien du savoir',
-    href: '../personnages/balthazar.html',
+    href: '../personnages/balthazar',
     image: '../../assets/personnages/cartes/balthazar.webp',
     traits: ['Dragon Éliatrope', 'Mémoire', 'Transmission'],
-    vector: { coeur: 4, action: 1, sagesse: 5, ambition: 0, ombre: 0, mystere: 4, liberte: 1, devoir: 5, chaos: 0, lien: 4 },
-    text: "Vous protégez mieux en transmettant qu'en possédant. Comme Balthazar, votre force vient de la patience, du savoir et d'une fidélité qui pense au futur des autres."
+    vector: { cœur: 4, action: 1, sagesse: 5, ambition: 0, ombre: 0, mystere: 4, liberte: 1, devoir: 5, chaos: 0, lien: 4 },
+    text: "Vous protégez mieux en transmettant qu'en possédant. Comme Balthazar, votre force vient de la patience, du savoir et d'une fidélité qui pense àu futur des autres."
   },
   {
     id: 'chibi',
     name: 'Chibi',
     archetype: "L'esprit d'invention",
-    href: '../personnages/chibi.html',
+    href: '../personnages/chibi',
     image: '../../assets/personnages/cartes/chibi.webp',
     traits: ['Éliatrope', 'Création', 'Curiosité'],
-    vector: { coeur: 3, action: 3, sagesse: 5, ambition: 3, ombre: 1, mystere: 4, liberte: 4, devoir: 3, chaos: 1, lien: 3 },
+    vector: { cœur: 3, action: 3, sagesse: 5, ambition: 3, ombre: 1, mystere: 4, liberte: 4, devoir: 3, chaos: 1, lien: 3 },
     text: "Vous cherchez la solution qui n'existe pas encore. Comme Chibi, vous reliez l'intelligence, l'audace et la curiosité pour ouvrir des chemins que personne n'avait envisagés."
   },
   {
     id: 'cleophee',
     name: 'Cléophée',
     archetype: 'La flèche indocile',
-    href: '../personnages/cleophee.html',
+    href: '../personnages/cleophee',
     image: '../../assets/personnages/cartes/cleophee.webp',
     traits: ['Cra', 'Impulsion', 'Famille'],
-    vector: { coeur: 4, action: 5, sagesse: 2, ambition: 2, ombre: 1, mystere: 1, liberte: 5, devoir: 2, chaos: 3, lien: 4 },
+    vector: { cœur: 4, action: 5, sagesse: 2, ambition: 2, ombre: 1, mystere: 1, liberte: 5, devoir: 2, chaos: 3, lien: 4 },
     text: "Vous avez besoin d'air, de mouvement et de réponses franches. Comme Cléophée, vous pouvez foncer trop vite, mais rarement sans cœur."
   },
   {
     id: 'dark-vlad',
     name: 'Dark Vlad',
     archetype: "L'ombre du guerrier",
-    href: '../personnages/dark-vlad.html',
+    href: '../personnages/dark-vlad',
     image: '../../assets/personnages/cartes/dark-vlad.webp',
     traits: ['Iop', 'Colère', 'Malédiction'],
-    vector: { coeur: 1, action: 5, sagesse: 1, ambition: 4, ombre: 5, mystere: 3, liberte: 2, devoir: 1, chaos: 5, lien: 1 },
+    vector: { cœur: 1, action: 5, sagesse: 1, ambition: 4, ombre: 5, mystere: 3, liberte: 2, devoir: 1, chaos: 5, lien: 1 },
     text: "Vous portez une intensité qui peut devenir brûlante. Comme Dark Vlad, votre défi est de ne pas laisser la blessure choisir la forme de votre puissance."
   },
   {
     id: 'echo',
     name: 'Dame Echo',
     archetype: 'La foi qui complote',
-    href: '../personnages/echo.html',
+    href: '../personnages/echo',
     image: '../../assets/personnages/cartes/echo.webp',
     traits: ['Eniripsa', 'Secret', 'Idéal'],
-    vector: { coeur: 3, action: 2, sagesse: 4, ambition: 5, ombre: 4, mystere: 5, liberte: 2, devoir: 4, chaos: 3, lien: 3 },
+    vector: { cœur: 3, action: 2, sagesse: 4, ambition: 5, ombre: 4, mystere: 5, liberte: 2, devoir: 4, chaos: 3, lien: 3 },
     text: "Vous savez attendre, soigner, convaincre et dissimuler. Comme Echo, vous pouvez servir une cause avec douceur en surface et une stratégie redoutable en dessous."
   },
   {
     id: 'elely-de-percedal',
     name: 'Élely de Percedal',
     archetype: 'Le courage qui déborde',
-    href: '../personnages/elely-de-percedal.html',
+    href: '../personnages/elely-de-percedal',
     image: '../../assets/personnages/cartes/elely-de-percedal.webp',
     traits: ['Iop', 'Énergie', 'Famille'],
-    vector: { coeur: 4, action: 5, sagesse: 1, ambition: 2, ombre: 1, mystere: 0, liberte: 5, devoir: 3, chaos: 3, lien: 5 },
+    vector: { cœur: 4, action: 5, sagesse: 1, ambition: 2, ombre: 1, mystere: 0, liberte: 5, devoir: 3, chaos: 3, lien: 5 },
     text: "Vous transformez l'amour en élan. Comme Élely, vous n'attendez pas que le monde soit prêt pour agir, surtout si quelqu'un que vous aimez est en danger."
   },
   {
     id: 'flopin-de-percedal',
     name: 'Flopin de Percedal',
     archetype: 'La justesse discrète',
-    href: '../personnages/flopin-de-percedal.html',
+    href: '../personnages/flopin-de-percedal',
     image: '../../assets/personnages/cartes/flopin-de-percedal.webp',
     traits: ['Cra', 'Calme', 'Famille'],
-    vector: { coeur: 4, action: 3, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 4 },
+    vector: { cœur: 4, action: 3, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 4 },
     text: "Vous préférez viser juste plutôt que parler fort. Comme Flopin, vous observez, vous comprenez, puis vous agissez au bon moment."
   },
   {
     id: 'grany-smisse',
     name: 'Grany Smisse',
     archetype: 'La loyauté sous la poudre',
-    href: '../personnages/grany-smisse.html',
+    href: '../personnages/grany-smisse',
     image: '../../assets/personnages/cartes/grany-smisse.webp',
     traits: ['Roublard', 'Famille', 'Risques'],
-    vector: { coeur: 4, action: 4, sagesse: 2, ambition: 3, ombre: 3, mystere: 1, liberte: 4, devoir: 2, chaos: 4, lien: 4 },
+    vector: { cœur: 4, action: 4, sagesse: 2, ambition: 3, ombre: 3, mystere: 1, liberte: 4, devoir: 2, chaos: 4, lien: 4 },
     text: "Vous pouvez vivre dans le désordre sans perdre vos attaches. Comme Grany, votre fidélité n'est pas toujours sage, mais elle est réelle."
   },
   {
     id: 'jiva',
     name: 'Jiva',
     archetype: 'Le devoir lumineux',
-    href: '../personnages/jiva.html',
+    href: '../personnages/jiva',
     image: '../../assets/personnages/cartes/jiva.webp',
     traits: ['Protectrice', 'Ordre', 'Sacrifice'],
-    vector: { coeur: 3, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 3, liberte: 1, devoir: 5, chaos: 0, lien: 3 },
+    vector: { cœur: 3, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 3, liberte: 1, devoir: 5, chaos: 0, lien: 3 },
     text: "Vous tenez une ligne même quand elle coûte cher. Comme Jiva, vous pouvez paraître froide parce que votre priorité reste ce qui doit être préservé."
   },
   {
     id: 'kriss-la-krass',
     name: 'Kriss la Krass',
     archetype: 'Le panache de l’arène',
-    href: '../personnages/kriss-la-krass.html',
+    href: '../personnages/kriss-la-krass',
     image: '../../assets/personnages/cartes/kriss-la-krass.webp',
     traits: ['Sacrieur', 'Spectacle', 'Courage'],
-    vector: { coeur: 3, action: 5, sagesse: 2, ambition: 4, ombre: 2, mystere: 0, liberte: 5, devoir: 1, chaos: 4, lien: 3 },
+    vector: { cœur: 3, action: 5, sagesse: 2, ambition: 4, ombre: 2, mystere: 0, liberte: 5, devoir: 1, chaos: 4, lien: 3 },
     text: "Vous aimez que la vie ait du rythme et du répondant. Comme Kriss, vous avez besoin de sentir l'intensité du moment et de jouer votre chance en pleine lumière."
   },
   {
     id: 'lancedur',
     name: 'Lancedur',
     archetype: 'La droiture armée',
-    href: '../personnages/lancedur.html',
+    href: '../personnages/lancedur',
     image: '../../assets/personnages/cartes/lancedur.webp',
     traits: ['Forgelance', 'Honneur', 'Action'],
-    vector: { coeur: 3, action: 5, sagesse: 3, ambition: 2, ombre: 1, mystere: 1, liberte: 2, devoir: 5, chaos: 1, lien: 3 },
+    vector: { cœur: 3, action: 5, sagesse: 3, ambition: 2, ombre: 1, mystere: 1, liberte: 2, devoir: 5, chaos: 1, lien: 3 },
     text: "Vous avancez avec une idée nette de ce qui se fait et ne se fait pas. Comme Lancedur, votre courage cherche une forme droite, lisible, tenue."
   },
   {
     id: 'moon',
     name: 'Moon',
     archetype: 'Le sauvage sacré',
-    href: '../personnages/moon.html',
+    href: '../personnages/moon',
     image: '../../assets/personnages/cartes/moon.webp',
     traits: ['Instinct', 'Île', 'Puissance'],
-    vector: { coeur: 1, action: 5, sagesse: 2, ambition: 2, ombre: 3, mystere: 4, liberte: 5, devoir: 0, chaos: 5, lien: 1 },
+    vector: { cœur: 1, action: 5, sagesse: 2, ambition: 2, ombre: 3, mystere: 4, liberte: 5, devoir: 0, chaos: 5, lien: 1 },
     text: "Vous êtes plus proche de l'instinct que du règlement. Comme Moon, vous incarnez une force libre, difficile à ranger, presque impossible à apprivoiser."
   },
   {
     id: 'nora',
     name: 'Nora',
     archetype: 'La flamme liée',
-    href: '../personnages/nora.html',
+    href: '../personnages/nora',
     image: '../../assets/personnages/cartes/nora.webp',
     traits: ['Éliatrope', 'Lien', 'Courage'],
-    vector: { coeur: 5, action: 4, sagesse: 3, ambition: 1, ombre: 1, mystere: 4, liberte: 3, devoir: 4, chaos: 2, lien: 5 },
+    vector: { cœur: 5, action: 4, sagesse: 3, ambition: 1, ombre: 1, mystere: 4, liberte: 3, devoir: 4, chaos: 2, lien: 5 },
     text: "Vous puisez votre courage dans les liens qui vous fondent. Comme Nora, vous êtes capable d'une grande douceur, puis d'une détermination totale quand tout bascule."
   },
   {
     id: 'phaeris',
     name: 'Phaéris',
     archetype: 'Le dragon qui veille',
-    href: '../personnages/phaeris.html',
+    href: '../personnages/phaeris',
     image: '../../assets/personnages/cartes/phaeris.webp',
     traits: ['Dragon', 'Vigilance', 'Devoir'],
-    vector: { coeur: 3, action: 4, sagesse: 5, ambition: 1, ombre: 1, mystere: 4, liberte: 1, devoir: 5, chaos: 1, lien: 3 },
+    vector: { cœur: 3, action: 4, sagesse: 5, ambition: 1, ombre: 1, mystere: 4, liberte: 1, devoir: 5, chaos: 1, lien: 3 },
     text: "Vous savez que protéger demande parfois de tenir seul. Comme Phaéris, vous avez une vigilance grave, patiente, entièrement tournée vers ce qui ne doit pas tomber."
   },
   {
     id: 'pandora',
     name: 'Pandora',
     archetype: 'La chercheuse des portes',
-    href: '../personnages/pandora.html',
+    href: '../personnages/pandora',
     image: '../../assets/personnages/cartes/pandora.webp',
     traits: ['Curiosité', 'Savoir', 'Passage'],
-    vector: { coeur: 3, action: 2, sagesse: 5, ambition: 3, ombre: 1, mystere: 5, liberte: 4, devoir: 2, chaos: 1, lien: 3 },
+    vector: { cœur: 3, action: 2, sagesse: 5, ambition: 3, ombre: 1, mystere: 5, liberte: 4, devoir: 2, chaos: 1, lien: 3 },
     text: "Vous avez besoin de comprendre ce qui se cache derrière la prochaine porte. Comme Pandora, votre curiosité peut devenir une boussole, même lorsqu'elle vous mène trop loin."
   },
   {
     id: 'shinonome',
     name: 'Shinonome',
     archetype: 'La mémoire jumelle',
-    href: '../personnages/shinonome.html',
+    href: '../personnages/shinonome',
     image: '../../assets/personnages/cartes/shinonome.webp',
     traits: ['Dragon Éliatrope', 'Lien', 'Secret'],
-    vector: { coeur: 4, action: 2, sagesse: 5, ambition: 2, ombre: 2, mystere: 5, liberte: 3, devoir: 4, chaos: 1, lien: 5 },
+    vector: { cœur: 4, action: 2, sagesse: 5, ambition: 2, ombre: 2, mystere: 5, liberte: 3, devoir: 4, chaos: 1, lien: 5 },
     text: "Vous vivez les liens comme des vérités profondes. Comme Shinonome, votre présence parle de mémoire, de fidélité et de choses que l'on comprend rarement au premier regard."
   },
   {
     id: 'toross-mordal',
     name: 'Toross Mordal',
     archetype: 'Le roi de la faim',
-    href: '../personnages/toross-mordal.html',
+    href: '../personnages/toross-mordal',
     image: '../../assets/personnages/cartes/toross-mordal.webp',
     traits: ['Pouvoir', 'Manque', 'Ombre'],
-    vector: { coeur: 0, action: 5, sagesse: 3, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 5, lien: 0 },
+    vector: { cœur: 0, action: 5, sagesse: 3, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 5, lien: 0 },
     text: "Vous refusez d'être petit devant le monde. Comme Toross, votre énergie cherche la prise et la souveraineté, avec le risque de confondre besoin et domination."
   },
   {
     id: 'vampyro',
     name: 'Vampyro',
     archetype: 'La théâtralité mordante',
-    href: '../personnages/vampyro.html',
+    href: '../personnages/vampyro',
     image: '../../assets/personnages/cartes/vampyro.webp',
     traits: ['Ombre', 'Style', 'Excès'],
-    vector: { coeur: 1, action: 3, sagesse: 2, ambition: 4, ombre: 5, mystere: 4, liberte: 3, devoir: 0, chaos: 4, lien: 1 },
+    vector: { cœur: 1, action: 3, sagesse: 2, ambition: 4, ombre: 5, mystere: 4, liberte: 3, devoir: 0, chaos: 4, lien: 1 },
     text: "Vous aimez l'effet, le mystère et la scène. Comme Vampyro, vous pouvez transformer une faiblesse en personnage, puis un personnage en arme."
   },
   {
     id: 'wa-wabbit',
     name: 'Wa Wabbit',
     archetype: 'La couronne capricieuse',
-    href: '../personnages/wa-wabbit.html',
+    href: '../personnages/wa-wabbit',
     image: '../../assets/personnages/cartes/wa-wabbit.webp',
     traits: ['Roi', 'Caprice', 'Territoire'],
-    vector: { coeur: 1, action: 2, sagesse: 1, ambition: 5, ombre: 3, mystere: 1, liberte: 2, devoir: 2, chaos: 4, lien: 1 },
+    vector: { cœur: 1, action: 2, sagesse: 1, ambition: 5, ombre: 3, mystere: 1, liberte: 2, devoir: 2, chaos: 4, lien: 1 },
     text: "Vous aimez que les choses reconnaissent votre place. Comme le Wa Wabbit, vous avez une énergie de territoire, de caprice et de pouvoir assumé."
   },
   {
     id: 'djaul',
     name: 'Djaul',
     archetype: 'Le froid qui mord',
-    href: '../personnages/djaul.html',
+    href: '../personnages/djaul',
     image: '../../assets/personnages/cartes/djaul.webp',
     traits: ['Démon', 'Hiver', 'Ruse'],
-    vector: { coeur: 0, action: 4, sagesse: 4, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 4, lien: 0 },
+    vector: { cœur: 0, action: 4, sagesse: 4, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 4, lien: 0 },
     text: "Vous avez l'art de frapper là où cela laisse une trace. Comme Djaul, votre intelligence peut devenir glaciale quand vous décidez de ne plus ménager personne."
   },
   {
     id: 'dardondakal',
     name: 'Dardondakal',
     archetype: 'La braise du dragon',
-    href: '../personnages/dardondakal.html',
+    href: '../personnages/dardondakal',
     image: '../../assets/personnages/cartes/dardondakal.webp',
     traits: ['Dragon', 'Feu', 'Majesté'],
-    vector: { coeur: 2, action: 5, sagesse: 4, ambition: 3, ombre: 2, mystere: 4, liberte: 3, devoir: 4, chaos: 3, lien: 2 },
+    vector: { cœur: 2, action: 5, sagesse: 4, ambition: 3, ombre: 2, mystere: 4, liberte: 3, devoir: 4, chaos: 3, lien: 2 },
     text: "Vous avez une chaleur de puissance, fière et difficile à ignorer. Comme Dardondakal, vous mêlez instinct, autorité et mémoire ancienne."
   },
   {
     id: 'grand-dragon',
     name: 'Grand Dragon',
     archetype: 'La stasis primordiale',
-    href: '../personnages/grand-dragon.html',
+    href: '../personnages/grand-dragon',
     image: '../../assets/personnages/cartes/grand-dragon.webp',
     traits: ['Primordial', 'Stasis', 'Absolu'],
-    vector: { coeur: 0, action: 4, sagesse: 5, ambition: 4, ombre: 5, mystere: 5, liberte: 1, devoir: 3, chaos: 5, lien: 0 },
+    vector: { cœur: 0, action: 4, sagesse: 5, ambition: 4, ombre: 5, mystere: 5, liberte: 1, devoir: 3, chaos: 5, lien: 0 },
     text: "Vous êtes attiré par les forces premières, celles qui ne demandent pas la permission d'exister. Comme le Grand Dragon, vous portez une gravité rare, presque cosmique."
   },
   {
     id: 'grande-deesse-eliatrope',
     name: 'Grande Déesse Éliatrope',
     archetype: 'Le souffle qui relie',
-    href: '../personnages/grande-deesse-eliatrope.html',
+    href: '../personnages/grande-deesse-eliatrope',
     image: '../../assets/personnages/cartes/grande-deesse-eliatrope.webp',
     traits: ['Primordiale', 'Wakfu', 'Lien'],
-    vector: { coeur: 5, action: 2, sagesse: 5, ambition: 1, ombre: 0, mystere: 5, liberte: 3, devoir: 5, chaos: 0, lien: 5 },
+    vector: { cœur: 5, action: 2, sagesse: 5, ambition: 1, ombre: 0, mystere: 5, liberte: 3, devoir: 5, chaos: 0, lien: 5 },
     text: "Vous cherchez à unir, nourrir et ouvrir. Comme la Grande Déesse Éliatrope, votre force se manifeste dans le lien, la création et l'élan vital."
   },
   {
     id: 'efrim',
     name: 'Efrim',
     archetype: 'Le lien fragile',
-    href: '../personnages/efrim.html',
+    href: '../personnages/efrim',
     image: '../../assets/personnages/cartes/efrim.webp',
     traits: ['Éliatrope', 'Sensibilité', 'Attache'],
-    vector: { coeur: 5, action: 2, sagesse: 3, ambition: 1, ombre: 1, mystere: 4, liberte: 2, devoir: 3, chaos: 1, lien: 5 },
+    vector: { cœur: 5, action: 2, sagesse: 3, ambition: 1, ombre: 1, mystere: 4, liberte: 2, devoir: 3, chaos: 1, lien: 5 },
     text: "Vous ressentez les séparations comme des secousses profondes. Comme Efrim, vous avez une manière intense d'aimer, de rester lié et de chercher votre place."
   },
   {
     id: 'mina',
     name: 'Mina',
     archetype: 'La douceur ancienne',
-    href: '../personnages/mina.html',
+    href: '../personnages/mina',
     image: '../../assets/personnages/cartes/mina.webp',
     traits: ['Éliatrope', 'Tendresse', 'Mémoire'],
-    vector: { coeur: 5, action: 1, sagesse: 4, ambition: 0, ombre: 0, mystere: 4, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
+    vector: { cœur: 5, action: 1, sagesse: 4, ambition: 0, ombre: 0, mystere: 4, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous avez une tendresse qui n'est pas faiblesse. Comme Mina, vous portez le lien avec délicatesse, mais aussi avec une mémoire que le temps n'efface pas."
   },
   {
     id: 'lou',
     name: 'Lou',
     archetype: 'La présence vive',
-    href: '../personnages/lou.html',
+    href: '../personnages/lou',
     image: '../../assets/personnages/cartes/lou.webp',
     traits: ['Énergie', 'Lien', 'Élan'],
-    vector: { coeur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 1, liberte: 4, devoir: 2, chaos: 2, lien: 4 },
+    vector: { cœur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 1, liberte: 4, devoir: 2, chaos: 2, lien: 4 },
     text: "Vous avancez avec une vivacité qui réchauffe les autres. Comme Lou, vous pouvez sembler léger, mais vos attaches vous donnent une vraie force."
   },
   {
     id: 'poo',
     name: 'Poo',
     archetype: 'Le réflexe débrouillard',
-    href: '../personnages/poo.html',
+    href: '../personnages/poo',
     image: '../../assets/personnages/cartes/poo.webp',
     traits: ['Instinct', 'Survie', 'Mouvement'],
-    vector: { coeur: 3, action: 4, sagesse: 2, ambition: 2, ombre: 2, mystere: 1, liberte: 5, devoir: 1, chaos: 3, lien: 3 },
+    vector: { cœur: 3, action: 4, sagesse: 2, ambition: 2, ombre: 2, mystere: 1, liberte: 5, devoir: 1, chaos: 3, lien: 3 },
     text: "Vous trouvez souvent une sortie avant que les autres aient fini de paniquer. Comme Poo, vous avez un instinct de terrain, mobile et très difficile à coincer."
   },
   {
     id: 'simone',
     name: 'Simone',
     archetype: 'La douceur décidée',
-    href: '../personnages/simone.html',
+    href: '../personnages/simone',
     image: '../../assets/personnages/cartes/simone.webp',
     traits: ['Cœur', 'Calme', 'Volonté'],
-    vector: { coeur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
+    vector: { cœur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous n'avez pas besoin de brutalité pour tenir bon. Comme Simone, vous pouvez être doux, clair et beaucoup plus solide qu'on ne le croit."
   }
 );
@@ -708,7 +708,7 @@ questions.push(
     kicker: 'Décision rapide',
     title: 'Quand personne ne sait quoi faire, quelle décision prenez-vous ',
     answers: [
-      { label: 'Je rassure', text: 'Je calme le groupe avant de choisir.', weights: { coeur: 3, lien: 3, sagesse: 1 } },
+      { label: 'Je rassure', text: 'Je calme le groupe avant de choisir.', weights: { cœur: 3, lien: 3, sagesse: 1 } },
       { label: 'Je tranche', text: 'Je prends une décision nette pour débloquer la situation.', weights: { action: 4, devoir: 2 } },
       { label: 'Je questionne', text: 'Je cherche l’information qui manque.', weights: { sagesse: 4, mystere: 2 } },
       { label: 'Je dirige', text: 'Je prends la tête parce que quelqu’un doit le faire.', weights: { ambition: 4, devoir: 2 } }
@@ -718,9 +718,9 @@ questions.push(
     kicker: 'Rapport au risque',
     title: 'Face à une porte interdite, que faites-vous ',
     answers: [
-      { label: 'Je l’ouvre', text: 'Si elle est interdite, c’est qu’elle cache quelque chose.', weights: { mystere: 4, liberte: 3, chaos: 1 } },
+      { label: 'Je l’œuvre', text: 'Si elle est interdite, c’est qu’elle cache quelque chose.', weights: { mystere: 4, liberte: 3, chaos: 1 } },
       { label: 'Je vérifie', text: 'Je cherche le piège avant d’avancer.', weights: { sagesse: 4, devoir: 2 } },
-      { label: 'Je préviens', text: 'Je ne veux pas entraîner les autres sans leur accord.', weights: { coeur: 3, lien: 3 } },
+      { label: 'Je préviens', text: 'Je ne veux pas entraîner les autres sans leur accord.', weights: { cœur: 3, lien: 3 } },
       { label: 'Je m’en sers', text: 'Une porte interdite peut devenir un avantage.', weights: { ambition: 4, ombre: 2 } }
     ]
   },
@@ -728,7 +728,7 @@ questions.push(
     kicker: 'Autorité',
     title: 'Quel type de chef vous ressemble le plus ',
     answers: [
-      { label: 'Le protecteur', text: 'Je guide pour que personne ne soit laissé derrière.', weights: { coeur: 4, lien: 3, devoir: 2 } },
+      { label: 'Le protecteur', text: 'Je guide pour que personne ne soit laissé derrière.', weights: { cœur: 4, lien: 3, devoir: 2 } },
       { label: 'Le stratège', text: 'Je répartis les rôles et je garde une vue d’ensemble.', weights: { sagesse: 4, devoir: 3 } },
       { label: 'Le meneur', text: 'J’avance devant et les autres suivent le mouvement.', weights: { action: 4, ambition: 2 } },
       { label: 'Le manipulateur', text: 'Je préfère faire bouger les pièces sans tout révéler.', weights: { ombre: 4, mystere: 3, ambition: 3 } }
@@ -738,7 +738,7 @@ questions.push(
     kicker: 'Perte',
     title: 'Quand vous perdez quelque chose d’important, que faites-vous ',
     answers: [
-      { label: 'Je répare', text: 'Je cherche comment reconstruire ce qui peut l’être.', weights: { coeur: 4, devoir: 3 } },
+      { label: 'Je répare', text: 'Je cherche comment reconstruire ce qui peut l’être.', weights: { cœur: 4, devoir: 3 } },
       { label: 'Je poursuis', text: 'Je refuse de lâcher tant que je n’ai pas essayé.', weights: { ambition: 4, action: 2, ombre: 1 } },
       { label: 'Je comprends', text: 'Je veux donner un sens à ce qui s’est passé.', weights: { sagesse: 4, mystere: 2 } },
       { label: 'Je pars', text: 'Je bouge pour ne pas rester prisonnier du manque.', weights: { liberte: 4, chaos: 1 } }
@@ -748,9 +748,9 @@ questions.push(
     kicker: 'Magie',
     title: 'Quelle forme de pouvoir vous attire le plus ',
     answers: [
-      { label: 'Le soin', text: 'Un pouvoir qui protège et répare.', weights: { coeur: 4, devoir: 3, lien: 2 } },
+      { label: 'Le soin', text: 'Un pouvoir qui protège et répare.', weights: { cœur: 4, devoir: 3, lien: 2 } },
       { label: 'Le temps', text: 'Un pouvoir qui permet de prévoir, ralentir ou corriger.', weights: { sagesse: 4, ambition: 3, mystere: 3 } },
-      { label: 'Le portail', text: 'Un pouvoir qui ouvre des chemins impossibles.', weights: { liberte: 4, mystere: 4, lien: 2 } },
+      { label: 'Le portail', text: 'Un pouvoir qui œuvre des chemins impossibles.', weights: { liberte: 4, mystere: 4, lien: 2 } },
       { label: 'La destruction', text: 'Un pouvoir direct, dangereux, difficile à ignorer.', weights: { action: 4, chaos: 4, ombre: 2 } }
     ]
   },
@@ -758,9 +758,9 @@ questions.push(
     kicker: 'Face au mensonge',
     title: 'On vous ment. Quelle est votre réaction ',
     answers: [
-      { label: 'Je confronte', text: 'Je veux une réponse claire tout de suite.', weights: { action: 3, devoir: 2, coeur: 1 } },
+      { label: 'Je confronte', text: 'Je veux une réponse claire tout de suite.', weights: { action: 3, devoir: 2, cœur: 1 } },
       { label: 'J’observe', text: 'Je laisse parler pour comprendre le vrai motif.', weights: { sagesse: 4, mystere: 3 } },
-      { label: 'Je pardonne', text: 'Je peux comprendre si la peur ou la douleur explique le mensonge.', weights: { coeur: 4, lien: 3 } },
+      { label: 'Je pardonne', text: 'Je peux comprendre si la peur ou la douleur explique le mensonge.', weights: { cœur: 4, lien: 3 } },
       { label: 'Je rends coup pour coup', text: 'Si on joue avec moi, je peux jouer aussi.', weights: { ombre: 4, ambition: 2, chaos: 2 } }
     ]
   },
@@ -768,7 +768,7 @@ questions.push(
     kicker: 'Voyage',
     title: 'Pourquoi partiriez-vous à l’aventure ',
     answers: [
-      { label: 'Pour aider', text: 'Quelqu’un a besoin de moi.', weights: { coeur: 4, devoir: 3, lien: 2 } },
+      { label: 'Pour aider', text: 'Quelqu’un a besoin de moi.', weights: { cœur: 4, devoir: 3, lien: 2 } },
       { label: 'Pour découvrir', text: 'Je veux voir ce qu’il y a au-delà de la carte.', weights: { liberte: 5, mystere: 3 } },
       { label: 'Pour prouver', text: 'Je veux montrer ce dont je suis capable.', weights: { ambition: 4, action: 3 } },
       { label: 'Pour fuir', text: 'Rester en place m’étouffe.', weights: { liberte: 4, ombre: 2, chaos: 1 } }
@@ -788,7 +788,7 @@ questions.push(
     kicker: 'Fierté',
     title: 'Qu’aimeriez-vous qu’on dise de vous ',
     answers: [
-      { label: 'Fiable', text: 'On peut compter sur moi quand ça compte vraiment.', weights: { devoir: 4, coeur: 3, lien: 2 } },
+      { label: 'Fiable', text: 'On peut compter sur moi quand ça compte vraiment.', weights: { devoir: 4, cœur: 3, lien: 2 } },
       { label: 'Brillant', text: 'Je comprends vite et je trouve la bonne solution.', weights: { sagesse: 4, ambition: 2 } },
       { label: 'Libre', text: 'Personne ne peut m’enfermer dans un rôle.', weights: { liberte: 5, mystere: 1 } },
       { label: 'Redoutable', text: 'On réfléchit à deux fois avant de me provoquer.', weights: { ombre: 4, action: 3, ambition: 3 } }
@@ -798,7 +798,7 @@ questions.push(
     kicker: 'Colère',
     title: 'Quand vous êtes en colère, que se passe-t-il ',
     answers: [
-      { label: 'Je parle', text: 'Je cherche à dire ce qui m’a blessé.', weights: { coeur: 3, lien: 2 } },
+      { label: 'Je parle', text: 'Je cherche à dire ce qui m’a blessé.', weights: { cœur: 3, lien: 2 } },
       { label: 'J’agis', text: 'J’ai besoin de bouger ou de régler le problème.', weights: { action: 4, chaos: 2 } },
       { label: 'Je me ferme', text: 'Je deviens froid et difficile à lire.', weights: { ombre: 3, mystere: 3, sagesse: 1 } },
       { label: 'Je calcule', text: 'Je retiens tout et j’attends le bon moment.', weights: { sagesse: 3, ambition: 3, ombre: 3 } }
@@ -810,7 +810,7 @@ questions.push(
     answers: [
       { label: 'Une carte', text: 'Pour trouver la prochaine route.', weights: { liberte: 3, mystere: 2, sagesse: 2 } },
       { label: 'Une arme', text: 'Pour répondre vite au danger.', weights: { action: 4, chaos: 2 } },
-      { label: 'Un souvenir', text: 'Pour garder un lien avec les miens.', weights: { coeur: 4, lien: 4 } },
+      { label: 'Un souvenir', text: 'Pour garder un lien avec les miens.', weights: { cœur: 4, lien: 4 } },
       { label: 'Un symbole', text: 'Pour rappeler ma place ou ma mission.', weights: { devoir: 3, ambition: 3 } }
     ]
   },
@@ -818,8 +818,8 @@ questions.push(
     kicker: 'Justice',
     title: 'Une injustice se produit devant vous. Que faites-vous ',
     answers: [
-      { label: 'J’interviens', text: 'Je ne supporte pas de regarder sans agir.', weights: { action: 4, coeur: 3, devoir: 2 } },
-      { label: 'Je protège la victime', text: 'Je m’occupe d’abord de la personne touchée.', weights: { coeur: 4, lien: 3 } },
+      { label: 'J’interviens', text: 'Je ne supporte pas de regarder sans agir.', weights: { action: 4, cœur: 3, devoir: 2 } },
+      { label: 'Je protège la victime', text: 'Je m’occupe d’abord de la personne touchée.', weights: { cœur: 4, lien: 3 } },
       { label: 'Je cherche la preuve', text: 'Je veux que la vérité soit impossible à nier.', weights: { sagesse: 4, devoir: 3 } },
       { label: 'Je punis', text: 'Certains doivent apprendre qu’il y a un prix.', weights: { ombre: 4, chaos: 3, action: 2 } }
     ]
@@ -828,7 +828,7 @@ questions.push(
     kicker: 'Solitude',
     title: 'Comment vivez-vous la solitude ',
     answers: [
-      { label: 'Difficilement', text: 'J’ai besoin de sentir que je compte pour quelqu’un.', weights: { coeur: 4, lien: 4 } },
+      { label: 'Difficilement', text: 'J’ai besoin de sentir que je compte pour quelqu’un.', weights: { cœur: 4, lien: 4 } },
       { label: 'Calmement', text: 'Elle m’aide à réfléchir et à me recentrer.', weights: { sagesse: 4, mystere: 2 } },
       { label: 'Librement', text: 'Seul, je peux aller où je veux.', weights: { liberte: 5, mystere: 1 } },
       { label: 'Dangereusement', text: 'Seul, je rumine trop ou je vais trop loin.', weights: { ombre: 3, chaos: 3, ambition: 2 } }
@@ -838,8 +838,8 @@ questions.push(
     kicker: 'Promesse',
     title: 'Quelle promesse tiendriez-vous coûte que coûte ',
     answers: [
-      { label: 'Revenir', text: 'Je reviendrai vers ceux que j’aime.', weights: { coeur: 4, lien: 4 } },
-      { label: 'Protéger', text: 'Je garderai quelqu’un ou quelque chose en sécurité.', weights: { devoir: 5, coeur: 2 } },
+      { label: 'Revenir', text: 'Je reviendrai vers ceux que j’aime.', weights: { cœur: 4, lien: 4 } },
+      { label: 'Protéger', text: 'Je garderai quelqu’un ou quelque chose en sécurité.', weights: { devoir: 5, cœur: 2 } },
       { label: 'Réussir', text: 'J’irai jusqu’au bout de mon objectif.', weights: { ambition: 5, action: 2 } },
       { label: 'Découvrir', text: 'Je trouverai la vérité, même cachée.', weights: { mystere: 4, sagesse: 4 } }
     ]
@@ -848,7 +848,7 @@ questions.push(
     kicker: 'Humour',
     title: 'Votre humour ressemble plutôt à quoi ',
     answers: [
-      { label: 'Chaleureux', text: 'Je fais rire pour rapprocher les gens.', weights: { coeur: 3, lien: 4 } },
+      { label: 'Chaleureux', text: 'Je fais rire pour rapprocher les gens.', weights: { cœur: 3, lien: 4 } },
       { label: 'Provocateur', text: 'J’aime piquer un peu pour voir les réactions.', weights: { chaos: 3, ombre: 2, liberte: 2 } },
       { label: 'Sec', text: 'Je place une phrase au bon moment.', weights: { sagesse: 3, mystere: 2 } },
       { label: 'Spectaculaire', text: 'J’aime faire mon effet.', weights: { ambition: 3, action: 2, liberte: 2 } }
@@ -858,7 +858,7 @@ questions.push(
     kicker: 'Loyauté',
     title: 'Votre loyauté a quelle limite ',
     answers: [
-      { label: 'Aucune', text: 'Je reste même quand c’est compliqué.', weights: { coeur: 4, lien: 4, devoir: 2 } },
+      { label: 'Aucune', text: 'Je reste même quand c’est compliqué.', weights: { cœur: 4, lien: 4, devoir: 2 } },
       { label: 'La vérité', text: 'Je ne suivrai pas quelqu’un qui se ment.', weights: { sagesse: 3, devoir: 3 } },
       { label: 'Ma liberté', text: 'Je refuse qu’un lien devienne une cage.', weights: { liberte: 4, mystere: 1 } },
       { label: 'Mon intérêt', text: 'Je peux partir si le pacte ne tient plus.', weights: { ambition: 3, ombre: 3 } }
@@ -868,7 +868,7 @@ questions.push(
     kicker: 'Rapport au monde',
     title: 'Le monde vous semble surtout...',
     answers: [
-      { label: 'À protéger', text: 'Il est fragile et mérite qu’on s’en occupe.', weights: { coeur: 4, devoir: 4 } },
+      { label: 'À protéger', text: 'Il est fragile et mérite qu’on s’en occupe.', weights: { cœur: 4, devoir: 4 } },
       { label: 'À comprendre', text: 'Il cache des règles fascinantes.', weights: { sagesse: 5, mystere: 3 } },
       { label: 'À parcourir', text: 'Il est trop vaste pour rester immobile.', weights: { liberte: 5, action: 2 } },
       { label: 'À conquérir', text: 'Il appartient à ceux qui osent prendre leur place.', weights: { ambition: 5, ombre: 2 } }
@@ -878,9 +878,9 @@ questions.push(
     kicker: 'Conflit familial',
     title: 'Un proche fait un choix que vous jugez dangereux. Vous faites quoi ',
     answers: [
-      { label: 'Je le retiens', text: 'Je préfère qu’il m’en veuille plutôt qu’il se perde.', weights: { coeur: 4, devoir: 3, lien: 3 } },
+      { label: 'Je le retiens', text: 'Je préfère qu’il m’en veuille plutôt qu’il se perde.', weights: { cœur: 4, devoir: 3, lien: 3 } },
       { label: 'Je discute', text: 'Je veux comprendre avant de condamner.', weights: { sagesse: 4, lien: 3 } },
-      { label: 'Je le suis', text: 'Je viens avec lui pour limiter les dégâts.', weights: { coeur: 3, action: 3, lien: 3 } },
+      { label: 'Je le suis', text: 'Je viens avec lui pour limiter les dégâts.', weights: { cœur: 3, action: 3, lien: 3 } },
       { label: 'Je coupe', text: 'Je ne peux pas porter les choix de tout le monde.', weights: { liberte: 4, ombre: 2 } }
     ]
   },
@@ -890,7 +890,7 @@ questions.push(
     answers: [
       { label: 'Je m’en sers', text: 'Il peut devenir une motivation.', weights: { ambition: 4, action: 2 } },
       { label: 'Je l’ignore', text: 'Je sais qui je suis, ça suffit.', weights: { liberte: 4, sagesse: 2 } },
-      { label: 'Ça me touche', text: 'Même si je le cache, ça compte.', weights: { coeur: 3, lien: 2 } },
+      { label: 'Ça me touche', text: 'Même si je le cache, ça compte.', weights: { cœur: 3, lien: 2 } },
       { label: 'Je le retourne', text: 'Qu’on me sous-estime, c’est pratique.', weights: { ombre: 4, mystere: 3 } }
     ]
   },
@@ -898,7 +898,7 @@ questions.push(
     kicker: 'Sacrifice',
     title: 'Que seriez-vous prêt à sacrifier ',
     answers: [
-      { label: 'Mon confort', text: 'Pour aider ceux que j’aime.', weights: { coeur: 4, lien: 3 } },
+      { label: 'Mon confort', text: 'Pour aider ceux que j’aime.', weights: { cœur: 4, lien: 3 } },
       { label: 'Ma réputation', text: 'Si c’est nécessaire pour faire ce qui est juste.', weights: { devoir: 4, ombre: 1 } },
       { label: 'Ma sécurité', text: 'Si l’action demande de prendre un risque.', weights: { action: 4, chaos: 2 } },
       { label: 'Mes attaches', text: 'Si elles m’empêchent d’aller au bout.', weights: { ambition: 4, liberte: 3 } }
@@ -918,8 +918,8 @@ questions.push(
     kicker: 'Tempérament',
     title: 'On vous décrit le plus souvent comme...',
     answers: [
-      { label: 'Attachant', text: 'Je crée facilement des liens.', weights: { coeur: 4, lien: 4 } },
-      { label: 'Intense', text: 'Je vis les choses très fort.', weights: { action: 3, chaos: 3, coeur: 2 } },
+      { label: 'Attachant', text: 'Je crée facilement des liens.', weights: { cœur: 4, lien: 4 } },
+      { label: 'Intense', text: 'Je vis les choses très fort.', weights: { action: 3, chaos: 3, cœur: 2 } },
       { label: 'Mystérieux', text: 'On ne sait jamais tout à fait ce que je pense.', weights: { mystere: 4, ombre: 2 } },
       { label: 'Ambitieux', text: 'J’ai besoin d’avancer vers quelque chose de grand.', weights: { ambition: 5, devoir: 1 } }
     ]
@@ -928,7 +928,7 @@ questions.push(
     kicker: 'Après la victoire',
     title: 'Vous venez de gagner. Quelle est votre première pensée ',
     answers: [
-      { label: 'Les autres', text: 'Je vérifie que tout le monde va bien.', weights: { coeur: 4, lien: 3 } },
+      { label: 'Les autres', text: 'Je vérifie que tout le monde va bien.', weights: { cœur: 4, lien: 3 } },
       { label: 'La suite', text: 'Je prépare déjà le prochain problème.', weights: { sagesse: 3, devoir: 3 } },
       { label: 'La liberté', text: 'Je veux profiter du moment et respirer.', weights: { liberte: 4, chaos: 1 } },
       { label: 'Le pouvoir', text: 'Cette victoire doit servir à obtenir plus.', weights: { ambition: 5, ombre: 2 } }
@@ -941,7 +941,7 @@ questions.push(
       { label: 'Je recommence', text: 'Je ne veux pas rester sur une défaite.', weights: { action: 4, ambition: 3 } },
       { label: 'J’apprends', text: 'Je décortique ce qui n’a pas marché.', weights: { sagesse: 5, devoir: 1 } },
       { label: 'Je m’isole', text: 'J’ai besoin de digérer seul.', weights: { mystere: 3, ombre: 2 } },
-      { label: 'Je demande aide', text: 'Je sais que je n’ai pas à tout porter seul.', weights: { coeur: 3, lien: 4 } }
+      { label: 'Je demande aide', text: 'Je sais que je n’ai pas à tout porter seul.', weights: { cœur: 3, lien: 4 } }
     ]
   },
   {
@@ -958,7 +958,7 @@ questions.push(
     kicker: 'Apparence',
     title: 'Quel détail visuel vous correspond le mieux ',
     answers: [
-      { label: 'Un symbole clair', text: 'Quelque chose qui annonce mes valeurs.', weights: { devoir: 3, coeur: 2 } },
+      { label: 'Un symbole clair', text: 'Quelque chose qui annonce mes valeurs.', weights: { devoir: 3, cœur: 2 } },
       { label: 'Un détail étrange', text: 'Quelque chose qui intrigue sans tout expliquer.', weights: { mystere: 4, sagesse: 1 } },
       { label: 'Une allure vive', text: 'Quelque chose qui donne envie de bouger.', weights: { action: 3, liberte: 4 } },
       { label: 'Une présence sombre', text: 'Quelque chose qui impose une distance.', weights: { ombre: 4, ambition: 3 } }
@@ -968,7 +968,7 @@ questions.push(
     kicker: 'Énergie',
     title: 'Qu’est-ce qui vous recharge le plus ',
     answers: [
-      { label: 'Les proches', text: 'Retrouver les miens me remet debout.', weights: { coeur: 4, lien: 4 } },
+      { label: 'Les proches', text: 'Retrouver les miens me remet debout.', weights: { cœur: 4, lien: 4 } },
       { label: 'Le silence', text: 'J’ai besoin de calme pour retrouver ma clarté.', weights: { sagesse: 4, mystere: 2 } },
       { label: 'L’action', text: 'Je récupère en faisant quelque chose.', weights: { action: 4, liberte: 2 } },
       { label: 'Le défi', text: 'Je me sens vivant quand il y a un enjeu.', weights: { ambition: 3, chaos: 3 } }
@@ -978,7 +978,7 @@ questions.push(
     kicker: 'Dernier choix',
     title: 'Si tout dépendait de vous, quelle force choisiriez-vous ',
     answers: [
-      { label: 'Le cœur', text: 'Parce qu’un monde sans lien ne vaut rien.', weights: { coeur: 5, lien: 5 } },
+      { label: 'Le cœur', text: 'Parce qu’un monde sans lien ne vaut rien.', weights: { cœur: 5, lien: 5 } },
       { label: 'La maîtrise', text: 'Parce qu’il faut comprendre pour ne pas détruire.', weights: { sagesse: 5, devoir: 3 } },
       { label: 'La liberté', text: 'Parce qu’exister, c’est pouvoir choisir.', weights: { liberte: 5, action: 2 } },
       { label: 'La puissance', text: 'Parce qu’on ne protège rien sans pouvoir agir.', weights: { ambition: 4, action: 4, ombre: 2 } }
@@ -1074,7 +1074,7 @@ function scoreCharacter(character) {
 
 function getStrongAxes(character) {
   const axisLabels = {
-    coeur: 'le cœur',
+    cœur: 'le cœur',
     action: 'l’action',
     sagesse: 'la réflexion',
     ambition: 'l’ambition',
@@ -1131,15 +1131,15 @@ function getShareDescription(character) {
 
 function getTestUrl() {
   if (!/^https:$/.test(window.location.protocol)) {
-    return new URL('jeu-personnage.html', window.location.href).href;
+    return new URL('jeu-personnage', window.location.href).href;
   }
 
-  return new URL('/pages/jeux/jeu-personnage.html', window.location.origin).href;
+  return new URL('/pages/jeux/jeu-personnage', window.location.origin).href;
 }
 
 function getResultUrl(character) {
   if (!/^https:$/.test(window.location.protocol)) {
-    const url = new URL('jeu-personnage.html', window.location.href);
+    const url = new URL('jeu-personnage', window.location.href);
     url.searchParams.set('result', getCharacterSlug(character));
     return url.href;
   }

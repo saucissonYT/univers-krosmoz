@@ -1,8 +1,106 @@
 
 
-(function () {
+(async function () {
+  const parseCsv = (text) => {
+    const rows = [];
+    let row = [];
+    let value = "";
+    let quoted = false;
+
+    for (let index = 0; index < text.length; index += 1) {
+      const char = text[index];
+      const next = text[index + 1];
+
+      if (quoted) {
+        if (char === '"' && next === '"') {
+          value += '"';
+          index += 1;
+        } else if (char === '"') {
+          quoted = false;
+        } else {
+          value += char;
+        }
+        continue;
+      }
+
+      if (char === '"') {
+        quoted = true;
+      } else if (char === ",") {
+        row.push(value);
+        value = "";
+      } else if (char === "\n") {
+        row.push(value);
+        rows.push(row);
+        row = [];
+        value = "";
+      } else if (char !== "\r") {
+        value += char;
+      }
+    }
+
+    if (value || row.length) {
+      row.push(value);
+      rows.push(row);
+    }
+
+    return rows.filter((item) => item.some((cell) => cell.trim() !== ""));
+  };
+
+  const questionsFromCsv = (text) => {
+    const rows = parseCsv(text);
+    const headers = (rows[0] || []).map((header, index) => (
+      index === 0 ? header.replace(/^\uFEFF/, "") : header
+    ));
+    const correctLetters = ["A", "B", "C", "D"];
+
+    return rows.slice(1).map((row) => {
+      const record = {};
+      headers.forEach((header, index) => {
+        record[header] = row[index] || "";
+      });
+
+      return {
+        id: record.id.trim(),
+        category: record.category.trim(),
+        difficulty: record.difficulty.trim(),
+        question: record.question.trim(),
+        answers: [
+          record.answer_a.trim(),
+          record.answer_b.trim(),
+          record.answer_c.trim(),
+          record.answer_d.trim()
+        ],
+        correct: correctLetters.indexOf(record.correct_answer.trim().toUpperCase()),
+        explanation: record.explanation.trim(),
+        source: record.source.trim()
+      };
+    }).filter((question) => (
+      question.id &&
+      question.category &&
+      question.difficulty &&
+      question.question &&
+      question.answers.every(Boolean) &&
+      question.correct >= 0
+    ));
+  };
+
+  const loadQuestions = async () => {
+    const response = await fetch(`../../data/games/krosmoz-quiz.csv?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error("CSV introuvable");
+    }
+    return questionsFromCsv(await response.text());
+  };
+
   const forbiddenQuestionText = /\b(site|page|navigation|menu|section|support|allskreen|launcher|france\.tv)\b/i;
-  const questions = (Array.isArray(window.KROSMOZ_QUIZ_QUESTIONS) ? window.KROSMOZ_QUIZ_QUESTIONS : [])
+  let loadedQuestions = [];
+  try {
+    loadedQuestions = await loadQuestions();
+  } catch {
+    loadedQuestions = [];
+  }
+
+  const questions = loadedQuestions
     .filter((question) => question.category !== "Medias")
     .filter((question) => !forbiddenQuestionText.test(`${question.question} ${question.explanation}`));
   const categories = [...new Set(questions.map((question) => question.category))].sort((a, b) => a.localeCompare(b, "fr"));

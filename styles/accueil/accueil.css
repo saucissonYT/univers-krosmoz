@@ -1034,6 +1034,8 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 .home-band-video {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1425,6 +1427,20 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   .character-rail-section {
     display: none;
   }
+  .home-band-history,
+  .home-band-history .home-band-link {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
+  }
+  .home-band-history .home-scroll-indicator {
+    bottom: clamp(3.8rem, 7vh, 4.8rem) !important;
+    opacity: 1;
+    visibility: visible;
+  }
   .home-band-personnages-full {
     display: block;
   }
@@ -1447,6 +1463,13 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
     align-items: end;
     justify-items: center;
     padding-bottom: clamp(2.3rem, 10vh, 5.2rem);
+  }
+
+  .home-band-history .home-band-link,
+  .home-band-history.is-history-expanded .home-band-link {
+    align-items: end;
+    padding-top: clamp(2.4rem, 8vh, 5rem);
+    padding-bottom: clamp(8.8rem, 17vh, 9.8rem) !important;
   }
 
   .home-band-history.is-history-expanded,

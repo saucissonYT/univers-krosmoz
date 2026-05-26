@@ -55,6 +55,18 @@ body.krosmoz-quiz-page .krosmoz-legal-notice {
   text-transform: uppercase;
 }
 
+.quiz-page-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.quiz-page-links .back-link {
+  margin-bottom: 0;
+}
+
 .quiz-setup,
 .quiz-play,
 .quiz-result {
@@ -817,5 +829,10 @@ body.krosmoz-quiz-page .krosmoz-legal-notice {
 
   .quiz-share-actions {
     grid-template-columns: 1fr;
+  }
+
+  .quiz-page-links {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

@@ -311,11 +311,11 @@
     const page = path.split("/").pop() || "";
 
     if (path.includes("/pages/personnages/")) {
-      return page !== "personnages.html";
+      return page !== "personnages";
     }
 
     if (
-      path.includes("/__section-cartes-supprimee__/section-supprimee.html") &&
+      path.includes("/__section-cartes-supprimee__/section-supprimee") &&
       ["wakfu", "dofus"].includes(new URLSearchParams(window.location.search).get("era"))
     ) {
       return false;
@@ -332,7 +332,7 @@
     const path = window.location.pathname.toLowerCase();
 
     if (path.includes("/pages/contact/")) {
-      return "contact.html";
+      return "contact";
     }
 
     if (
@@ -345,10 +345,10 @@
       path.includes("/pages/jeux/") ||
       path.includes("/__section-cartes-supprimee__/")
     ) {
-      return "../contact/contact.html";
+      return "../contact/contact";
     }
 
-    return "pages/contact/contact.html";
+    return "pages/contact/contact";
   };
 
   const createContributionLink = () => {
@@ -393,7 +393,7 @@
     }
 
     const isNestedPage = window.location.pathname.toLowerCase().includes("/__section-cartes-supprimee__/");
-    const homeHref = isNestedPage ? "../index.html" : "index.html";
+    const homeHref = isNestedPage ? "../" : "./";
     const blocker = document.createElement("main");
     blocker.className = "krosmoz-mobile-map-blocker-main";
     blocker.innerHTML = `
@@ -401,7 +401,7 @@
         <span class="krosmoz-mobile-map-eyebrow">Cartes verrouillées sur mobile</span>
         <h1 id="krosmoz-mobile-map-title">Cette section est disponible sur ordinateur.</h1>
         <p>Les cartes interactives demandent une surface d'affichage plus large pour rester lisibles et confortables.</p>
-        <a class="krosmoz-mobile-map-action" href="${homeHref}">Retour a l'accueil</a>
+        <a class="krosmoz-mobile-map-action" href="${homeHref}">Retour à l'accueil</a>
       </section>
     `;
 
@@ -464,7 +464,7 @@
     const page = path.split("/").pop() || "";
     const link = createContributionLink();
 
-    if (path.includes("/pages/personnages/") && page !== "personnages.html") {
+    if (path.includes("/pages/personnages/") && page !== "personnages") {
       const isFullBiography = new URLSearchParams(window.location.search).get("bio") === "complete";
       if (!isFullBiography) {
         const infoPanel = document.querySelector(".info-panel");
@@ -482,7 +482,7 @@
     }
 
     if (path.includes("/pages/histoire/")) {
-      if (page === "histoire-krosmoz.html") {
+      if (page === "histoire-krosmoz") {
         return;
       }
 
@@ -1677,7 +1677,7 @@
     const isRootPage = !pagePath.includes("/pages/");
     const aboutLink = document.createElement("a");
     aboutLink.className = "krosmoz-about-link";
-    aboutLink.href = isRootPage ? "pages/about/a-propos.html" : (pagePath.includes("/pages/about/") ? "a-propos.html" : "../about/a-propos.html");
+    aboutLink.href = isRootPage ? "pages/about/a-propos" : (pagePath.includes("/pages/about/") ? "a-propos" : "../about/a-propos");
     aboutLink.setAttribute("aria-label", "À propos du site et sources");
     aboutLink.style.setProperty("text-transform", "none", "important");
     aboutLink.innerHTML = '<span class="krosmoz-about-icon" aria-hidden="true"></span><span>À propos</span>';
@@ -1690,10 +1690,10 @@
       return button && /m[eé]dias/i.test(button.textContent || "");
     }) : null;
     const mediaMenuList = mediaMenu ? mediaMenu.querySelector(".nav-menu") : null;
-    if (mediaMenuList && !mediaMenuList.querySelector('a[href*="galerie.html"]')) {
+    if (mediaMenuList && !mediaMenuList.querySelector('a[href*="galerie"]')) {
       const galleryLink = document.createElement("a");
       galleryLink.className = "nav-menu-item";
-      galleryLink.href = isRootPage ? "pages/media/galerie.html" : (pagePath.includes("/pages/media/") ? "galerie.html" : "../media/galerie.html");
+      galleryLink.href = isRootPage ? "pages/media/galerie" : (pagePath.includes("/pages/media/") ? "galerie" : "../media/galerie");
       galleryLink.textContent = "Galerie";
       mediaMenuList.prepend(galleryLink);
     }
@@ -1701,7 +1701,7 @@
       topbar.append(createSocialLinks("krosmoz-top-social-links"));
     }
     if (topbar && !topbar.querySelector(":scope > .krosmoz-header-contact")) {
-      const contactLink = topbar.querySelector('.top-nav a[href$="contact.html"], .top-nav a[href*="pages/contact/contact.html"]');
+      const contactLink = topbar.querySelector('.top-nav a[href$="contact"], .top-nav a[href*="pages/contact/contact"]');
       const socials = topbar.querySelector(".krosmoz-top-social-links");
       const language = createLanguageSelector();
       if (contactLink) {

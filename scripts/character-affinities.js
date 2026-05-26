@@ -1,5 +1,5 @@
 /*
-  Site developpe par phomsay pour zaki.
+  Site développé par phomsay pour zaki.
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Recherche et edition : Zaki & B.
@@ -24,7 +24,7 @@
     const item = document.createElement("li");
     const link = document.createElement("a");
     const icon = window.KrosmozAffinities?.getIcon(name);
-    link.href = `../media/arbre-affinites.html?personnage=${encodeURIComponent(name)}`;
+    link.href = `../media/arbre-affinites?personnage=${encodeURIComponent(name)}`;
     link.className = "character-affinity-token";
     link.title = name;
     link.setAttribute("aria-label", name);
@@ -111,7 +111,7 @@
     icon.className = "character-affinity-tree-icon";
     icon.setAttribute("aria-hidden", "true");
     const iconImage = document.createElement("img");
-    iconImage.src = "../../assets/affinites/affinity-tree-icon.png";
+    iconImage.src = "../../assets/affinites/affinity-tree-icon.webp";
     iconImage.alt = "";
     iconImage.loading = "lazy";
     iconImage.decoding = "async";
@@ -120,7 +120,7 @@
 
     const treeLink = document.createElement("a");
     treeLink.className = "character-affinity-tree-link";
-    treeLink.href = `../media/arbre-affinites.html?personnage=${encodeURIComponent(characterName)}`;
+    treeLink.href = `../media/arbre-affinites?personnage=${encodeURIComponent(characterName)}`;
     treeLink.textContent = "Arbre d'affinités";
 
     const toggle = document.createElement("button");

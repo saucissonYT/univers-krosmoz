@@ -35,7 +35,7 @@ const legacyDirectoryRedirects = new Map([
 ]);
 
 const mimeTypes = {
-  ".html": "text/html; charset=utf-8",
+  "": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
@@ -67,7 +67,7 @@ function getStaticCacheHeaders(extension) {
     };
   }
 
-  if (extension === ".html") {
+  if (extension === "") {
     return {
       "cache-control": "no-cache"
     };
@@ -91,13 +91,13 @@ function isInsideRoot(filePath) {
   return relativePath === "" || (!relativePath.startsWith("..") && !isAbsolute(relativePath));
 }
 
-function readBody(request) {
+function readBody(request, maxLength = 32_000) {
   return new Promise((resolveBody, reject) => {
     let body = "";
     request.setEncoding("utf8");
     request.on("data", (chunk) => {
       body += chunk;
-      if (body.length > 32_000) {
+      if (body.length > maxLength) {
         reject(new Error("payload_too_large"));
         request.destroy();
       }
@@ -145,7 +145,7 @@ function findLegacyRedirect(pathname) {
     }
   }
 
-  if (!/^\/[^/]+\.html$/i.test(pathname) || pathname === "/index.html") {
+  if (!/^\/[^/]+\.html$/i.test(pathname) || pathname === "/index") {
     return "";
   }
 
@@ -248,9 +248,9 @@ async function serveStatic(request, response) {
     return;
   }
 
-  const requested = pathname === "/" ? "/index.html" : pathname;
+  const requested = pathname === "/" ? "/index" : pathname;
   const routePath = pathname.startsWith("/result:") || pathname.startsWith("/result/")
-    ? "/pages/jeux/jeu-personnage.html"
+    ? "/pages/jeux/jeu-personnage"
     : requested;
   const filePath = normalize(join(root, routePath));
 
@@ -270,7 +270,9 @@ async function serveStatic(request, response) {
 
 createServer(async (request, response) => {
   try {
-    if (request.method === "POST" && request.url === "/api/contact") {
+    const url = new URL(request.url || "/", "http://localhost");
+
+    if (request.method === "POST" && url.pathname === "/api/contact") {
       await handleContact(request, response);
       return;
     }

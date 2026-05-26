@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>À propos | Univers Krosmoz</title>
 <meta name="description" content="Présentation d'Univers Krosmoz, de Zaki, créateur de contenu autour du Krosmoz, et des sources utilisées pour construire les articles du site.">
-<link rel="canonical" href="https://univers-krosmoz.fr/pages/about/a-propos.html">
+<link rel="canonical" href="https://univers-krosmoz.fr/pages/about/a-propos">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Univers Krosmoz">
 <meta property="og:title" content="À propos | Univers Krosmoz">
 <meta property="og:description" content="Univers Krosmoz rassemble, organise et met en valeur les informations autour de l'univers du Krosmoz, avec une attention particulière portée aux sources.">
-<meta property="og:url" content="https://univers-krosmoz.fr/pages/about/a-propos.html">
-<meta property="og:image" content="https://univers-krosmoz.fr/assets/a-propos/zaki-logo.png">
+<meta property="og:url" content="https://univers-krosmoz.fr/pages/about/a-propos">
+<meta property="og:image" content="https://univers-krosmoz.fr/assets/a-propos/zaki-logo.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="À propos | Univers Krosmoz">
 <meta name="twitter:description" content="Présentation du site, de Zaki et des sources utilisées pour les articles.">
-<meta name="twitter:image" content="https://univers-krosmoz.fr/assets/a-propos/zaki-logo.png">
+<meta name="twitter:image" content="https://univers-krosmoz.fr/assets/a-propos/zaki-logo.webp">
 <link rel="icon" type="image/webp" href="../../assets/logo_krosmoz.webp">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles/common.css">
 <link rel="stylesheet" href="../../styles/about/a-propos.css">
-<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"AboutPage","name":"À propos | Univers Krosmoz","headline":"À propos d'Univers Krosmoz","description":"Présentation d'Univers Krosmoz, de Zaki, créateur de contenu autour du Krosmoz, et des sources utilisées pour construire les articles du site.","url":"https://univers-krosmoz.fr/pages/about/a-propos.html","image":"https://univers-krosmoz.fr/assets/a-propos/zaki-logo.png","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp"}}}</script>
+<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"AboutPage","name":"À propos | Univers Krosmoz","headline":"À propos d'Univers Krosmoz","description":"Présentation d'Univers Krosmoz, de Zaki, créateur de contenu autour du Krosmoz, et des sources utilisées pour construire les articles du site.","url":"https://univers-krosmoz.fr/pages/about/a-propos","image":"https://univers-krosmoz.fr/assets/a-propos/zaki-logo.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp"}}}</script>
 <script src="../../scripts/site-common.js" defer></script>
 </head>
 <body class="about-page">
@@ -35,7 +35,7 @@
       <p>Univers Krosmoz est un site non officiel pensé pour explorer, relier et rendre plus lisible l'univers imaginé par Ankama : ses ères, ses personnages, ses régions, ses œuvres et les récits qui les traversent.</p>
     </div>
     <figure class="about-zaki-card">
-      <img src="../../assets/a-propos/zaki-logo.png" alt="Illustration de Zaki">
+      <img src="../../assets/a-propos/zaki-logo.webp" alt="Illustration de Zaki">
       <figcaption>
         <strong>Zaki</strong>
         <span>Créateur de contenu autour de l'univers du Krosmoz et responsable du site Univers Krosmoz.</span>
@@ -54,7 +54,7 @@
       </article>
       <article>
         <h3>Contextualiser</h3>
-        <p>Chaque page cherche à replacer un personnage, une région ou une œuvre dans son époque, ses liens et ses enjeux, sans remplacer les œuvres originales.</p>
+        <p>Chaque page cherche à replacer un personnage, une région où une œuvre dans son époque, ses liens et ses enjeux, sans remplacer les œuvres originales.</p>
       </article>
       <article>
         <h3>Orienter</h3>
@@ -128,6 +128,22 @@
   </section>
 </main>
 
+<button class="back-to-top" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut">
+  <span aria-hidden="true"></span>
+</button>
+<script>
+  const aboutBackToTop = document.querySelector('.back-to-top');
+  if (aboutBackToTop) {
+    const syncAboutBackToTop = () => {
+      aboutBackToTop.classList.toggle('is-visible', window.scrollY > 420);
+    };
+    window.addEventListener('scroll', syncAboutBackToTop, { passive: true });
+    aboutBackToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    syncAboutBackToTop();
+  }
+</script>
 <script src="../../scripts/legal-notice.js"></script>
 </body>
 </html>

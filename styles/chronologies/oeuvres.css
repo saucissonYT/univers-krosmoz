@@ -48,6 +48,11 @@ body.works-showcase-page .krosmoz-legal-notice * {
   text-transform: none !important;
 }
 
+body.works-showcase-page .krosmoz-contribution-link,
+body.works-showcase-page .krosmoz-contribution-link * {
+  font-style: normal !important;
+}
+
 body.works-showcase-page::before {
   content: '';
   position: fixed;
@@ -619,7 +624,7 @@ body.works-showcase-page::before {
   background:
     linear-gradient(90deg, rgba(8,8,16,0.92), rgba(8,8,16,0.76) 42%, rgba(8,8,16,0.46)),
     linear-gradient(180deg, rgba(8,8,16,0.48), rgba(8,8,16,0.88)),
-    url('../../assets/oeuvres/allskreen-band-bg.png') center 46% / cover no-repeat,
+    url('../../assets/oeuvres/allskreen-band-bg.webp') center 46% / cover no-repeat,
     rgba(8,8,16,0.74);
 }
 

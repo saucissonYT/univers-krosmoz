@@ -26,8 +26,8 @@ const events = [
     era: "primitif",
     date: "−11 000 à −10 000",
     title: "Naissance des Éliatropes & Déclin",
-    preview: "800 ans de paix avec les Méchasmes, puis Orgonax confie l'Eliacube à Qilby — le début de la tragédie.",
-    details: ["Les Éliatropes vivent 800 ans en paix avec les Méchasmes.", "Qilby est jugé digne par Orgonax et se voit confier l'Eliacube (cœur d'Orgonax) → guerre.", "Exode à bord du Zinit, fondation d'une colonie sur le futur Monde des Dix.", "Qilby trahit à nouveau : il est vaincu, mutilé par Phaéris, puis enfermé dans la Dimension Blanche par Yugo et Adamaï qui se sacrifient.", "Nora annihile la vie sur la planète avec l'aide de la Déesse Éliatrope."],
+    preview: "800 ans de paix avec les Méchasmes, puis Orgonax confie l'Éliacube à Qilby — le début de la tragédie.",
+    details: ["Les Éliatropes vivent 800 ans en paix avec les Méchasmes.", "Qilby est jugé digne par Orgonax et se voit confier l'Éliacube (cœur d'Orgonax) → guerre.", "Exode à bord du Zinit, fondation d'une colonie sur le futur Monde des Dix.", "Qilby trahit à nouveau : il est vaincu, mutilé par Phaéris, puis enfermé dans la Dimension Blanche par Yugo et Adamaï qui se sacrifient.", "Nora annihile la vie sur la planète avec l'aide de la Déesse Éliatrope."],
     major: true
   },
   {
@@ -117,7 +117,7 @@ const events = [
     date: "An 650 – 711",
     title: "Frigost & Fratrie des Oubliés",
     preview: "Ogrest s'empare du Dofus des Glaces. Les Steamers découvrent la Stasis.",
-    details: ["Nouveaux Forgelances face aux premiers signes de l'Éliocalypse.", "Lupa, Kali et Ogrest traquent Dathura.", "An 655 : Découverte d'Osavora par les voyageurs dimensionnels.", "Ogrest s'empare du Dofus des Glaces et reste piégé 123 ans avec Dathura et Harebourg.", "Les Steamers découvrent la Stasis.", "Oropo scelle la Tour Minérale hors du temps."],
+    details: ["Nouveaux Forgelances face aux premiers signes de l'Éliocalypse.", "Lupa, Kali et Ogrest traquent Dathura.", "An 655 : Découverte d'Osavora par les voyageurs dimensionnels.", "Ogrest s'empare du Dofus des Glaces et reste piégé 123 ans avec Dathura et Harebourg.", "Les Steamers découvrent la Stasis.", "Oropo scellé la Tour Minérale hors du temps."],
     major: false
   },
   {
@@ -125,7 +125,7 @@ const events = [
     date: "An 750 – 789",
     title: "Chaos d'Ogrest",
     preview: "Ogrest réunit les six Dofus Primordiaux, affronte les Dieux, trahi par Dathura — il pleure au sommet du Mont Zinit.",
-    details: ["Naissance de Noximilien, qui trouve l'Eliacube et sombre dans la folie.", "Ogrest réunit les six Dofus Primordiaux.", "Il affronte les Dieux et est trahi par Dathura.", "Fou de chagrin, Ogrest pleure au sommet du Mont Zinit."],
+    details: ["Naissance de Noximilien, qui trouve l'Éliacube et sombre dans la folie.", "Ogrest réunit les six Dofus Primordiaux.", "Il affronte les Dieux et est trahi par Dathura.", "Fou de chagrin, Ogrest pleure au sommet du Mont Zinit."],
     major: true
   },
   // ─── ÈRE DU WAKFU ───
@@ -189,8 +189,8 @@ const events = [
     era: "wakfu",
     date: "An 990",
     title: "Saison 3 — Guerre contre la Fratrie",
-    preview: "Révélation du plan d'Oropo : détruire l'Inglorium. L'Eliabombe explose dans la dimension d'Oropo.",
-    details: ["Guerre contre la Fratrie des Oubliés.", "Révélation : plan d'Oropo = détruire l'Inglorium.", "Création de l'Eliabombe (Eliacube + Dofus).", "Explosion dans la dimension d'Oropo : Oropo, Dame Echo et Harebourg meurent.", "La Confrérie et la Fratrie se retrouvent dans l'Inglorium."],
+    preview: "Révélation du plan d'Oropo : détruire l'Inglorium. L'Éliabombe explose dans la dimension d'Oropo.",
+    details: ["Guerre contre la Fratrie des Oubliés.", "Révélation : plan d'Oropo = détruire l'Inglorium.", "Création de l'Éliabombe (Éliacube + Dofus).", "Explosion dans la dimension d'Oropo : Oropo, Dame Echo et Harebourg meurent.", "La Confrérie et la Fratrie se retrouvent dans l'Inglorium."],
     major: true
   },
   {
@@ -273,13 +273,13 @@ const events = [
   {
     era: "waven",
     date: "Après Lancedur",
-    title: "Bestiale : Yrehn et l'elante",
-    preview: "Yrehn protège l'elante, héritage sacré de Coqueline, tandis que Nimoda cherche à sauver son fils grâce à lui.",
+    title: "Bestiale : Yrehn et l'élante",
+    preview: "Yrehn protège l'élante, héritage sacré de Coqueline, tandis que Nimoda cherche à sauver son fils grâce à lui.",
     details: [
-      "Coqueline aurait bâti un temple sur l'île d'Yrehn pour protéger les animaux et leur joyau, l'elante.",
-      "Yrehn défend l'elante face à sa sœur Nimoda, qui veut exploiter ses propriétés curatives par technomagie pour sauver son fils.",
-      "Nimoda missionne le célèbre Karn pour capturer l'elante.",
-      "Coqueline intervient sous forme divine et lie le bébé de l'elante au fils de Nimoda, le guérissant.",
+      "Coqueline aurait bâti un temple sur l'île d'Yrehn pour protéger les animaux et leur joyau, l'élante.",
+      "Yrehn défend l'élante face à sa sœur Nimoda, qui veut exploiter ses propriétés curatives par technomagie pour sauver son fils.",
+      "Nimoda missionne le célèbre Karn pour capturer l'élante.",
+      "Coqueline intervient sous forme divine et lie le bébé de l'élante au fils de Nimoda, le guérissant.",
       "Le comté d'Yrehn est rétabli dans le royaume Osamodas, où les deux sœurs règnent ensemble."
     ],
     major: true
@@ -349,55 +349,55 @@ function normalizeText(value) {
 const historyCards = [
   {
     match: title => title.includes('krosmoz'),
-    href: '../histoire/histoire-origines.html',
+    href: '../histoire/histoire-origines',
     image: '../../assets/histoire/illustrations/age-primitif-illu.webp',
     alt: "Illustration de l'Age primitif"
   },
   {
-    match: title => title.includes('necromonde'),
-    href: '../histoire/histoire-necromonde.html',
+    match: title => title.includes('nécromonde'),
+    href: '../histoire/histoire-necromonde',
     image: '../../assets/histoire/illustrations/necromonde.webp',
-    alt: 'Paysage du Necromonde'
+    alt: 'Paysage du Nécromonde'
   },
   {
     match: title => title.includes('horloge divine'),
-    href: '../histoire/histoire-age-des-dofus.html',
+    href: '../histoire/histoire-age-des-dofus',
     image: '../../assets/histoire/illustrations/dofus-illu.webp',
     alt: "Illustration de l'Age des Dofus"
   },
   {
     match: title => title.includes('djaul'),
-    href: '../histoire/histoire-aurore-pourpre.html',
+    href: '../histoire/histoire-aurore-pourpre',
     image: '../../assets/histoire/illustrations/aurore-pourpre.webp',
     alt: "Affrontement de l'Aurore Pourpre"
   },
   {
     match: title => title.includes("chaos d'ogrest"),
-    href: '../histoire/histoire-chaos-ogrest.html',
+    href: '../histoire/histoire-chaos-ogrest',
     image: '../../assets/histoire/illustrations/mont-zinit.webp',
     alt: "Le Mont Zinit, lieu du Chaos d'Ogrest"
   },
   {
-    match: title => title.includes("debut de l'ere du wakfu"),
-    href: '../histoire/histoire-ere-du-wakfu.html',
+    match: title => title.includes("debut de l'ère du wakfu"),
+    href: '../histoire/histoire-ere-du-wakfu',
     image: '../../assets/histoire/illustrations/wakfu-illu.webp',
     alt: "Illustration de l'Ere du Wakfu"
   },
   {
     match: title => title.includes('grande vague'),
-    href: '../histoire/histoire-la-source.html',
+    href: '../histoire/histoire-la-source',
     image: '../../assets/histoire/illustrations/la-source.webp',
     alt: 'La Source'
   },
   {
     match: title => title.includes('waven') && title.includes('mmo'),
-    href: '../histoire/histoire-ere-du-waven.html',
+    href: '../histoire/histoire-ere-du-waven',
     image: '../../assets/histoire/illustrations/waven-illu.webp',
     alt: "Illustration de l'Ere du Waven"
   },
   {
     match: title => title.includes('piraterie'),
-    href: '../histoire/histoire-ere-piraterie.html',
+    href: '../histoire/histoire-ere-piraterie',
     image: '../../assets/histoire/illustrations/ere-piraterie.webp',
     alt: "Illustration de l'Ere de la Piraterie"
   }

@@ -6,13 +6,13 @@
 <title>Régions | Univers Krosmoz</title>
 
 <meta name="description" content="Explorez les régions majeures du Monde des Douze, de Frigost aux terres encore à cartographier.">
-<link rel="canonical" href="https://univers-krosmoz.fr/pages/regions/regions.html">
+<link rel="canonical" href="https://univers-krosmoz.fr/pages/regions/regions">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Univers Krosmoz">
 <meta property="og:title" content="Régions | Univers Krosmoz">
 <meta property="og:description" content="Explorez les régions majeures du Monde des Douze, de Frigost aux terres encore à cartographier.">
-<meta property="og:url" content="https://univers-krosmoz.fr/pages/regions/regions.html">
+<meta property="og:url" content="https://univers-krosmoz.fr/pages/regions/regions">
 <meta property="og:image" content="https://univers-krosmoz.fr/assets/regions/frigost/frigost.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Régions | Univers Krosmoz">
@@ -25,11 +25,21 @@
 <link rel="stylesheet" href="../../styles/personnages/personnages.css">
 <link rel="stylesheet" href="../../styles/regions/regions.css">
 
-<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"CollectionPage","name":"Régions | Univers Krosmoz","headline":"Régions | Univers Krosmoz","description":"Explorez les régions majeures du Monde des Douze, de Frigost aux terres encore à cartographier.","url":"https://univers-krosmoz.fr/pages/regions/regions.html","image":"https://univers-krosmoz.fr/assets/regions/frigost/frigost.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp"}}}</script>
+<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"CollectionPage","name":"Régions | Univers Krosmoz","headline":"Régions | Univers Krosmoz","description":"Explorez les régions majeures du Monde des Douze, de Frigost aux terres encore à cartographier.","url":"https://univers-krosmoz.fr/pages/regions/regions","image":"https://univers-krosmoz.fr/assets/regions/frigost/frigost.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo_krosmoz.webp"}}}</script>
 <script src="../../scripts/site-common.js" defer></script>
+<script src="../../scripts/regions-index.js" defer></script>
 </head>
 <body class="regions-index-page">
 <header data-site-header></header>
+<div class="region-sort-band" aria-label="Tri des regions">
+  <div class="region-tools">
+    <label class="region-search" for="region-search">
+      <span>Rechercher</span>
+      <input id="region-search" type="search" placeholder="Nom de region" autocomplete="off">
+    </label>
+    <button class="region-sort-button" type="button" data-region-sort="az">Tri de A-Z</button>
+  </div>
+</div>
 
 <main class="characters-index regions-index">
   <section class="characters-heading regions-heading" aria-labelledby="regions-title">
@@ -39,39 +49,87 @@
   </section>
 
   <section class="regions-grid" aria-label="Liste des régions">
-    <a class="character-card region-card" href="krosmoz.html" aria-label="Lire la fiche Krosmoz">
-      <img src="../../assets/regions/krosmoz/krosmoz.png" alt="Le Krosmoz represente par un oeuf cosmique entoure de flux bleus et roses">
+    <a class="character-card region-card" href="krosmoz" aria-label="Lire la fiche Krosmoz">
+      <img src="../../assets/regions/krosmoz/krosmoz.webp" alt="Le Krosmoz represente par un oeuf cosmique entoure de flux bleus et roses">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Univers cosmique</span>
         <strong>Krosmoz</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="inglorium.html" aria-label="Lire la fiche Inglorium">
-      <img src="../../assets/regions/inglorium/inglorium.png" alt="Ruines célestes de l'Inglorium avec des fragments de temples flottant dans le ciel">
+    <a class="character-card region-card" href="plan-materiel" aria-label="Lire la fiche Plan Matériel">
+      <img src="../../assets/regions/plan-materiel/plan-materiel.webp" alt="Galaxies et planètes du Plan Matériel">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Espace physique</span>
+        <strong>Plan Matériel</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ether" aria-label="Lire la fiche Ether">
+      <img src="../../assets/regions/ether/ether.webp" alt="Étendue cosmique pourpre et azurée de l'Ether">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Plan Éthéré</span>
+        <strong>Ether</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="arbre-vagabonds" aria-label="Lire la fiche Arbre des Vagabonds">
+      <img src="../../assets/regions/arbre-vagabonds/arbre-vagabonds.webp" alt="Arbre lumineux flottant dans l'Ether">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Refuge de l'Ether</span>
+        <strong>Arbre des Vagabonds</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="pyramide-ocre" aria-label="Lire la fiche Pyramide Ocre">
+      <img src="../../assets/regions/pyramide-ocre/pyramide-ocre.webp" alt="Pyramide Ocre dérivant dans l'Ether">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Sanctuaire de l'Ether</span>
+        <strong>Pyramide Ocre</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="inglorium" aria-label="Lire la fiche Inglorium">
+      <img src="../../assets/regions/inglorium/inglorium.webp" alt="Ruines célestes de l'Inglorium avec des fragments de temples flottant dans le ciel">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Plan divin</span>
         <strong>Inglorium</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="monde-des-douze.html" aria-label="Lire la fiche Monde des Douze">
-      <img src="../../assets/regions/monde-des-douze/monde-des-douze.png" alt="Planète du Monde des Douze flottant dans l'espace">
+    <a class="character-card region-card" href="monde-des-douze" aria-label="Lire la fiche Monde des Douze">
+      <img src="../../assets/regions/monde-des-douze/monde-des-douze.webp" alt="Planète du Monde des Douze flottant dans l'espace">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Planète majeure</span>
         <strong>Monde des Douze</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="incarnam.html" aria-label="Lire la fiche Incarnam">
-      <img src="../../assets/regions/incarnam/incarnam.png" alt="Île céleste d'Incarnam portée par Prysmaradoth">
+    <a class="character-card region-card" href="mont-zinit" aria-label="Lire la fiche Mont Zinit">
+      <img src="../../assets/regions/mont-zinit/mont-zinit.webp" alt="Mont Zinit entouré de tempêtes et d'éclairs">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Montagne d'Ogrest</span>
+        <strong>Mont Zinit</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="incarnam" aria-label="Lire la fiche Incarnam">
+      <img src="../../assets/regions/incarnam/incarnam.webp" alt="Île céleste d'Incarnam portée par Prysmaradoth">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Plan spirituel</span>
         <strong>Incarnam</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="necromonde.html" aria-label="Lire la fiche Nécromonde">
+    <a class="character-card region-card" href="externam" aria-label="Lire la fiche Externam">
+      <img src="../../assets/regions/externam/externam.webp" alt="Architecture spectrale d'Externam dans le royaume des morts">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Royaume des morts</span>
+        <strong>Externam</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="necromonde" aria-label="Lire la fiche Nécromonde">
       <img src="../../assets/regions/necromonde/necromonde.webp" alt="Planète obscure du Nécromonde dominée par une tour spectrale">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -79,39 +137,47 @@
         <strong>Nécromonde</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="xelorium.html" aria-label="Lire la fiche Xélorium">
-      <img src="../../assets/regions/xelorium/xelorium.png" alt="Dieu Xélor au coeur d'une mécanique temporelle bleue et violette">
+    <a class="character-card region-card" href="xelorium" aria-label="Lire la fiche Xélorium">
+      <img src="../../assets/regions/xelorium/xelorium.webp" alt="Dieu Xélor au cœur d'une mécanique temporelle bleue et violette">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Dimension divine</span>
         <strong>Xélorium</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="hormonde.html" aria-label="Lire la fiche Hormonde">
-      <img src="../../assets/regions/hormonde/hormonde.png" alt="Vitrail circulaire de l'Hormonde entouré d'engrenages dorés">
+    <a class="character-card region-card" href="hormonde" aria-label="Lire la fiche Hormonde">
+      <img src="../../assets/regions/hormonde/hormonde.webp" alt="Vitrail circulaire de l'Hormonde entouré d'engrenages dorés">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Prison temporelle</span>
         <strong>Hormonde</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="ecaflipus.html" aria-label="Lire la fiche Ecaflipus">
-      <img src="../../assets/regions/ecaflipus/ecaflipus.png" alt="Îlots flottants et statues de chachas dans la dimension Ecaflipus">
+    <a class="character-card region-card" href="ecaflipus" aria-label="Lire la fiche Ecaflipus">
+      <img src="../../assets/regions/ecaflipus/ecaflipus.webp" alt="Îlots flottants et statues de chachas dans la dimension Ecaflipus">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Royaume du hasard</span>
         <strong>Ecaflipus</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="shukrute.html" aria-label="Lire la fiche Shukrute">
-      <img src="../../assets/regions/shukrute/shukrute.png" alt="Dimension infernale de la Shukrute avec forteresse démoniaque et spirales chaotiques">
+    <a class="character-card region-card" href="shukrute" aria-label="Lire la fiche Shukrute">
+      <img src="../../assets/regions/shukrute/shukrute.webp" alt="Dimension infernale de la Shukrute avec forteresse démoniaque et spirales chaotiques">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Plan infernal</span>
         <strong>Shukrute</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="osavora.html" aria-label="Lire la fiche Osavora">
+    <a class="character-card region-card" href="srambad" aria-label="Lire la fiche Srambad">
+      <img src="../../assets/regions/srambad/srambad.webp" alt="Cité sombre de Srambad éclairée par des lueurs bleues">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Cité du mal</span>
+        <strong>Srambad</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="osavora" aria-label="Lire la fiche Osavora">
       <img src="../../assets/regions/osavora/osavora.jpg" alt="Gargandyas domine les terres sauvages d'Osavora">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -119,15 +185,23 @@
         <strong>Osavora</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="enutrosor.html" aria-label="Lire la fiche Enutrosor">
-      <img src="../../assets/regions/enutrosor/enutrosor.png" alt="Grande porte dorée du royaume d'Enutrosor">
+    <a class="character-card region-card" href="enutrosor" aria-label="Lire la fiche Enutrosor">
+      <img src="../../assets/regions/enutrosor/enutrosor.webp" alt="Grande porte dorée du royaume d'Enutrosor">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Coffre-fort céleste</span>
         <strong>Enutrosor</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="frigost.html" aria-label="Lire la fiche Frigost">
+    <a class="character-card region-card" href="dimension-obscure" aria-label="Lire la fiche Dimension Obscure">
+      <img src="../../assets/regions/dimension-obscure/dimension-obscure.webp" alt="Îlots flottants et portails de la Dimension Obscure">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Royaume des ténèbres</span>
+        <strong>Dimension Obscure</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="frigost" aria-label="Lire la fiche Frigost">
       <img src="../../assets/regions/frigost/frigost.webp" alt="Île de Frigost vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -135,7 +209,31 @@
         <strong>Frigost</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="bonta.html" aria-label="Lire la fiche Bonta">
+    <a class="character-card region-card" href="royaume-chuchoku" aria-label="Lire la fiche Royaume Chuchoku">
+      <img src="../../assets/regions/royaume-chuchoku/royaume-chuchoku.jpg" alt="Royaume Chuchoku formé de falaises minérales au-dessus de la mer">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Royaume des Chuchoteurs</span>
+        <strong>Royaume Chuchoku</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="cania" aria-label="Lire la fiche Plaines de Cania">
+      <img src="../../assets/regions/cania/cania.webp" alt="Cimetière et plaines herbeuses de Cania">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Grandes plaines sauvages</span>
+        <strong>Plaines de Cania</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="bibliotemple" aria-label="Lire la fiche Bibliotemple">
+      <img src="../../assets/regions/bibliotemple/bibliotemple.png" alt="Salle intérieure du Bibliotemple consacrée aux Mérydes">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Sanctuaire des Mérydes</span>
+        <strong>Bibliotemple</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="bonta" aria-label="Lire la fiche Bonta">
       <img src="../../assets/regions/bonta/bonta.webp" alt="Cité de Bonta vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -143,7 +241,15 @@
         <strong>Bonta</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="brakmar.html" aria-label="Lire la fiche Brakmar">
+    <a class="character-card region-card" href="foire-du-trool" aria-label="Lire la fiche Foire du Trool">
+      <img src="../../assets/regions/foire-du-trool/foire-du-trool.jpg" alt="Allée festive de la Foire du Trool avec attractions et visiteurs">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Fête foraine de Cania</span>
+        <strong>Foire du Trool</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="brakmar" aria-label="Lire la fiche Brakmar">
       <img src="../../assets/regions/brakmar/brakmar.webp" alt="Panorama de Brakmar traversé par ses fleuves de lave">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -151,7 +257,23 @@
         <strong>Brakmar</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="sufokia.html" aria-label="Lire la fiche Sufokia">
+    <a class="character-card region-card" href="katrepat" aria-label="Lire la fiche Katrepat">
+      <img src="../../assets/regions/katrepat/katrepat.webp" alt="Village nocturne de Katrepat éclairé par des lanternes">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Village maudit</span>
+        <strong>Katrepat</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-aux-moines" aria-label="Lire la fiche Île aux Moines">
+      <img src="../../assets/regions/ile-aux-moines/ile-aux-moines.webp" alt="Moines et créatures de l'Île aux Moines sur un ponton sombre">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Couvent hanté</span>
+        <strong>Île aux Moines</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="sufokia" aria-label="Lire la fiche Sufokia">
       <img src="../../assets/regions/sufokia/sufokia.webp" alt="Région de Sufokia vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -159,15 +281,39 @@
         <strong>Sufokia</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="pandala.html" aria-label="Lire la fiche Pandala">
-      <img src="../../assets/regions/pandala/pandala.webp" alt="Île de Pandala vue depuis la carte du Monde des Douze">
+    <a class="character-card region-card" href="abysses-sufokia" aria-label="Lire la fiche Abysses de Sufokia">
+      <img src="../../assets/regions/abysses-sufokia/abysses-sufokia.webp" alt="Créature abyssale dans les profondeurs de Sufokia">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Profondeurs englouties</span>
+        <strong>Abysses de Sufokia</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="bilbyza" aria-label="Lire la fiche Bilbyza">
+      <img src="../../assets/regions/bilbyza/bilbyza.webp" alt="Scène festive lumineuse de Bilbyza">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Île festive</span>
+        <strong>Bilbyza</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="pandala" aria-label="Lire la fiche Pandala">
+      <img src="../../assets/regions/pandala/pandala.png" alt="Île de Pandala vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Île élémentaire</span>
         <strong>Pandala</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="amakna.html" aria-label="Lire la fiche Amakna">
+    <a class="character-card region-card" href="pandalousie" aria-label="Lire la fiche Pandalousie">
+      <img src="../../assets/regions/pandalousie/pandalousie.webp" alt="Paysage verdoyant de Pandalousie entouré de montagnes et de bambous">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Paradis pandalien</span>
+        <strong>Pandalousie</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="amakna" aria-label="Lire la fiche Amakna">
       <img src="../../assets/regions/amakna/amakna.webp" alt="Région d'Amakna vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -175,7 +321,47 @@
         <strong>Amakna</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="astrub.html" aria-label="Lire la fiche Astrub">
+    <a class="character-card region-card" href="domaine-sauvage" aria-label="Lire la fiche Domaine Sauvage">
+      <img src="../../assets/regions/domaine-sauvage/domaine-sauvage.webp" alt="Pâturages du Domaine Sauvage entre Bouftous et campement bwork">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Pâturage indompté</span>
+        <strong>Domaine Sauvage</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="kolizeum" aria-label="Lire la fiche Kolizéum">
+      <img src="../../assets/regions/kolizeum/kolizeum.webp" alt="Entrée du Kolizéum, arène compétitive du Monde des Douze">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Arène compétitive</span>
+        <strong>Kolizéum</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="royaume-sadida" aria-label="Lire la fiche Royaume Sadida">
+      <img src="../../assets/regions/royaume-sadida/royaume-sadida.webp" alt="Arbre de Vie au cœur du Royaume Sadida">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Royaume de l'Arbre de Vie</span>
+        <strong>Royaume Sadida</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="montagnes-koalaks" aria-label="Lire la fiche Montagnes des Koalaks">
+      <img src="../../assets/regions/montagnes-koalaks/montagnes-koalaks.webp" alt="Vallée verdoyante des Montagnes des Koalaks">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Massif sauvage</span>
+        <strong>Montagnes des Koalaks</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="kelba" aria-label="Lire la fiche Kelba">
+      <img src="../../assets/regions/kelba/kelba.webp" alt="Marchands et contrebandiers sur les routes de Kelba">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Marché des contrebandiers</span>
+        <strong>Kelba</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="astrub" aria-label="Lire la fiche Astrub">
       <img src="../../assets/regions/astrub/astrub.webp" alt="Cité d'Astrub vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -183,23 +369,95 @@
         <strong>Astrub</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="ile-otomai.html" aria-label="Lire la fiche Île d'Otomaï">
-      <img src="../../assets/regions/ile-otomai/ile-otomai.webp" alt="Île d'Otomaï vue depuis la carte du Monde des Douze">
+    <a class="character-card region-card" href="mer-dasse" aria-label="Lire la fiche Mer d'Asse">
+      <img src="../../assets/regions/mer-dasse/mer-dasse.webp" alt="Silhouette sous-marine dans les profondeurs de la Mer d'Asse">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Étendue maritime</span>
+        <strong>Mer d'Asse</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-des-brumes" aria-label="Lire la fiche Île des Brumes">
+      <img src="../../assets/regions/ile-des-brumes/ile-des-brumes.webp" alt="Île des Brumes encerclée par les nuages et la mer">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Île insaisissable</span>
+        <strong>Île des Brumes</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-de-rok" aria-label="Lire la fiche Île de Rok">
+      <img src="../../assets/regions/ile-de-rok/ile-de-rok.webp" alt="Île de Rok flottant comme une main de pierre">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Sanctuaire huppermage</span>
+        <strong>Île de Rok</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-wabbits" aria-label="Lire la fiche Île des Wabbits">
+      <img src="../../assets/regions/ile-wabbits/ile-wabbits.jpg" alt="Wa Wabbit et créatures de l'Île des Wabbits">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Archipel de la Cawotte</span>
+        <strong>Île des Wabbits</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="vulkania" aria-label="Lire la fiche Archipel de Vulkania">
+      <img src="../../assets/regions/vulkania/vulkania.jpg" alt="Grozilla et Grasmera poursuivant un aventurier sur les plages de Vulkania">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Archipel volcanique</span>
+        <strong>Archipel de Vulkania</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-nowel" aria-label="Lire la fiche Île de Nowel">
+      <img src="../../assets/regions/ile-nowel/ile-nowel.jpg" alt="Paysage enneigé de l'Île de Nowel avec aventuriers et cadeaux">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Île hivernale</span>
+        <strong>Île de Nowel</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="crocuzko" aria-label="Lire la fiche Crocuzko">
+      <img src="../../assets/regions/crocuzko/crocuzko.webp" alt="Île mystérieuse de Crocuzko observée à travers une loupe">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Île hors des cartes</span>
+        <strong>Crocuzko</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-minotoror" aria-label="Lire la fiche Île du Minotoror">
+      <img src="../../assets/regions/ile-minotoror/ile-minotoror.webp" alt="Minotoror au cœur du labyrinthe antique">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Labyrinthe antique</span>
+        <strong>Île du Minotoror</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-otomai" aria-label="Lire la fiche Île d'Otomaï">
+      <img src="../../assets/regions/ile-otomai/ile-otomai.png" alt="Île d'Otomaï vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Île scientifique</span>
         <strong>Île d'Otomaï</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="saharach.html" aria-label="Lire la fiche Saharach">
-      <img src="../../assets/regions/saharach/saharach.webp" alt="Saharach vue depuis la carte du Monde des Douze">
+    <a class="character-card region-card" href="nimotopia" aria-label="Lire la fiche Nimotopia">
+      <img src="../../assets/regions/nimotopia/nimotopia.webp" alt="Paysage paradisiaque de Nimotopia">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Sanctuaire animalier</span>
+        <strong>Nimotopia</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="saharach" aria-label="Lire la fiche Saharach">
+      <img src="../../assets/regions/saharach/saharach.png" alt="Saharach vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
         <span>Étendues désertiques</span>
         <strong>Saharach</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="archipel-valonia.html" aria-label="Lire la fiche Archipel de Valonia">
+    <a class="character-card region-card" href="archipel-valonia" aria-label="Lire la fiche Archipel de Valonia">
       <img src="../../assets/regions/archipel-valonia/archipel-valonia.webp" alt="Archipel de Valonia vu depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">
@@ -207,7 +465,15 @@
         <strong>Archipel de Valonia</strong>
       </span>
     </a>
-    <a class="character-card region-card" href="ile-moon.html" aria-label="Lire la fiche Île de Moon">
+    <a class="character-card region-card" href="ereboria" aria-label="Lire la fiche Ereboria">
+      <img src="../../assets/regions/ereboria/ereboria.webp" alt="Île volcanique maudite d'Ereboria">
+      <span class="character-card-shade"></span>
+      <span class="region-card-copy character-card-copy">
+        <span>Île maudite</span>
+        <strong>Ereboria</strong>
+      </span>
+    </a>
+    <a class="character-card region-card" href="ile-moon" aria-label="Lire la fiche Île de Moon">
       <img src="../../assets/regions/ile-moon/ile-de-moon.webp" alt="Île de Moon vue depuis la carte du Monde des Douze">
       <span class="character-card-shade"></span>
       <span class="region-card-copy character-card-copy">

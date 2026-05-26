@@ -1,5 +1,5 @@
 /*
-  Site developpe par phomsay pour zaki.
+  Site développé par phomsay pour zaki.
   Contact Discord : @phomsay671.
   Dev web : phomsay. Admin : sauci.
   Recherche et edition : Zaki & B.
@@ -1563,23 +1563,23 @@ function createAffinityRelations() {
     });
   }
 
-  const eliatropes = ["YUGO", "CHIBI", "QILBY", "NORA", "MINA", "GLIP", "BALTAZAR"];
+  const éliatropes = ["YUGO", "CHIBI", "QILBY", "NORA", "MINA", "GLIP", "BALTAZAR"];
   const eliatropeDragons = ["ADAMAÏ", "GROUGALORAGRAN", "SHINONOMÉ", "EFRIM", "PHAERIS LE PUISSANT"];
-  const eliatropeChildren = eliatropes.concat(eliatropeDragons);
+  const eliatropeChildren = éliatropes.concat(eliatropeDragons);
   parent("LA DÉESSE ÉLIATROPE", eliatropeChildren, "Mère");
   parent("GRAND DRAGON", eliatropeChildren, "Père");
   siblings(eliatropeChildren);
 
   const primordialDragons = ["AERAFAL", "AGUABRIAL", "DARDONDAKAL", "GROUGALORASALAR", "IGNEMIKHAL", "TERRAKOURIAL"];
   siblings(primordialDragons);
-  friendship("AGUABRIAL", eliatropes);
+  friendship("AGUABRIAL", éliatropes);
   friendship("GROUGALORASALAR", ["JULITH ABIGOR", "JORIS JURGEN"]);
   enemy("GROUGALORASALAR", ["AMALIA SHERAN SHARM", "ADAMAI"]);
   friendship("DARDONDAKAL", ["JORIS JURGEN"]);
   friendship("IGNEMIKHAL", ["GOULTARD"]);
 
-  const eliotropes = ["OROPO", "ATONE", "BOUILLON", "DESPERIA", "RIPULSE", "SIDAIRE"];
-  siblings(eliotropes);
+  const éliotropes = ["OROPO", "ATONE", "BOUILLON", "DESPERIA", "RIPULSE", "SIDAIRE"];
+  siblings(éliotropes);
 
   const demons = ["RUSHU", "MÉDOROZIAM", "RASHA"];
   const shushu = ["DJAUL", "ANATHAR", "OMBRAGE", "RUBILAX", "GRUFON", "LUIS", "UK’NOT’ALLAG"];
@@ -1608,11 +1608,11 @@ function createAffinityRelations() {
   gods.forEach((god) => enemy(god, demons.concat(shushu)));
   gods.forEach((god) => enemy(god, ["CORNU MOLLU"]));
 
-  enemy("ORGONAX", eliatropes.filter((name) => name !== "QILBY"));
+  enemy("ORGONAX", éliatropes.filter((name) => name !== "QILBY"));
   enemy("ORGONAX", ["SHINONOMÉ"]);
   friendship("QILBY", ["ORGONAX", "LOKUS"]);
-  enemy("CHIBI", eliotropes);
-  enemy("GROUGALORAGRAN", ["OROPO"].concat(eliotropes));
+  enemy("CHIBI", éliotropes);
+  enemy("GROUGALORAGRAN", ["OROPO"].concat(éliotropes));
   enemy("NORA", ["TOROSS MORDAL", "ROTALSTROM"]);
   enemy("LA DÉESSE ÉLIATROPE", ["LOKUS"]);
   enemy("EFRIM", ["LA DÉESSE ÉLIATROPE", "NORA", "QILBY"]);
@@ -1669,7 +1669,7 @@ function createAffinityRelations() {
   add("YUGO", "family", "Belle-famille", ["ROI SHERAN SHARM", "ARMANT SHERAN SHARM"]);
   add("AMALIA SHERAN SHARM", "family", "Belle-famille", ["LA DÉESSE ÉLIATROPE", "GRAND DRAGON"].concat(eliatropeChildren.filter((name) => name !== "YUGO")));
   add("AMALIA SHERAN SHARM", "family", "Beaux-frères et belles-soeurs", eliatropeChildren.filter((name) => name !== "YUGO"));
-  eliatropeChildren.filter((name) => name !== "YUGO").forEach((name) => add(name, "family", "Belle-soeur", "AMALIA SHERAN SHARM"));
+  eliatropeChildren.filter((name) => name !== "YUGO").forEach((name) => add(name, "family", "Belle-sœur", "AMALIA SHERAN SHARM"));
   couple("ARMANT SHERAN SHARM", "AURORA");
   friendship("AMALIA SHERAN SHARM", ["MOON"]);
   familyRelation("JAHASH JURGEN", "Soeur", "BAKARA JURGEN", "Frère");
@@ -1733,7 +1733,7 @@ function createAffinityRelations() {
     "BELLAPHONE"
   ];
   enemy("YUGO", yugoEnemies);
-  enemy("YUGO", eliotropes);
+  enemy("YUGO", éliotropes);
   const tofuBrotherhood = [
     "TRISTEPIN DE PERCEDAL",
     "ÉVANGÉLYNE",
@@ -1912,7 +1912,7 @@ function createAffinityRelations() {
   add("ÉVANGÉLYNE", "family", "Beau-fils", "GOULTARD");
   add("GOULTARD", "family", "Belle-famille", ["ÉVANGÉLYNE", "FLOPIN DE PERCEDAL", "PIN DE PERCEDAL", "ELELY DE PERCEDAL"]);
   percedalChildren.forEach((name) => add(name, "family", "Demi-frère", "GOULTARD"));
-  add("GOULTARD", "family", "Demi-frères et soeur", percedalChildren);
+  add("GOULTARD", "family", "Demi-frères et sœur", percedalChildren);
   removeFriend("GOULTARD", goultardFriendsToRemove);
   removeEnemy("GOULTARD", primordialDragons.concat(["MONSIEUR M", "RAZORTEMPS", "COMTE HAREBOURG", "VAMPYRO", "AURORA", "ROI OSAMODAS", "REMINGTON SMISSE", "GRANY SMISSE", "NOX", "BELLAPHONE"]));
   enemy("GOULTARD", ["KARN"]);
@@ -1941,11 +1941,11 @@ function createAffinityRelations() {
   enemy("ANATHAR", ["REMINGTON SMISSE", "GRANY SMISSE"]);
   enemy("DJAUL", ["JIVA"]);
 
-  eliotropes.forEach((name) => add(name, "family", "Père créateur", "YUGO"));
-  add("YUGO", "family", "Créations", eliotropes);
+  éliotropes.forEach((name) => add(name, "family", "Père créateur", "YUGO"));
+  add("YUGO", "family", "Créations", éliotropes);
   familyRelation("ADAMAÏ", "Frère de substitution", "OROPO", "Frère de substitution");
   couple("OROPO", "DAME ECHO");
-  removeEnemy("OROPO", eliotropes);
+  removeEnemy("OROPO", éliotropes);
 
   couple("BAKARA JURGEN", "KHAN KARKASS");
   enemy("JULITH ABIGOR", ["BAKARA JURGEN", "KHAN KARKASS", "ATCHAM CRÉPIN", "DARDONDAKAL"]);
@@ -2004,8 +2004,8 @@ function createAffinityRelations() {
   familyRelation("ROI OSAMODAS", "Beau-fils", "ARMANT SHERAN SHARM", "Beau-père");
   replaceEnemies("ROI OSAMODAS", ["TOROSS MORDAL", "ROTALSTROM", "YUGO", "AMALIA SHERAN SHARM"]);
 
-  add("AURORA", "family", "Belle-soeur", "AMALIA SHERAN SHARM");
-  add("AMALIA SHERAN SHARM", "family", "Belle-soeur", "AURORA");
+  add("AURORA", "family", "Belle-sœur", "AMALIA SHERAN SHARM");
+  add("AMALIA SHERAN SHARM", "family", "Belle-sœur", "AURORA");
   add("AURORA", "family", "Beau-père", "ROI SHERAN SHARM");
   add("ROI SHERAN SHARM", "family", "Belle-fille", "AURORA");
   friendship("AURORA", ["REINES DE BONTA"]);

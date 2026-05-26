@@ -26,6 +26,28 @@ body {
   overflow-x: hidden;
 }
 
+.bio-text p a,
+.history-detail-panel p a,
+.region-detail-panel > p a,
+.region-biography-text p a {
+  color: inherit !important;
+}
+
+.bio-text p a:visited,
+.history-detail-panel p a:visited,
+.region-detail-panel > p a:visited,
+.region-biography-text p a:visited,
+.bio-text p a:hover,
+.history-detail-panel p a:hover,
+.region-detail-panel > p a:hover,
+.region-biography-text p a:hover,
+.bio-text p a:focus-visible,
+.history-detail-panel p a:focus-visible,
+.region-detail-panel > p a:focus-visible,
+.region-biography-text p a:focus-visible {
+  color: inherit !important;
+}
+
 header {
   position: relative;
   z-index: 20;

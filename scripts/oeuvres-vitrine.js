@@ -36,31 +36,31 @@
     { title: 'Wakfu - La Grande Vague', type: 'Webtoon' }
   ];
   const showcaseImages = {
-    'Wakfu - Saison 4': '../../assets/oeuvres/wakfu-saison-4-showcase.png',
-    'Lancedur': '../../assets/oeuvres/lancedur-showcase.png',
-    'Bestiale': '../../assets/oeuvres/bestiale-showcase.png',
-    'Dofus le film': '../../assets/oeuvres/dofus-film-showcase.png',
+    'Wakfu - Saison 4': '../../assets/oeuvres/wakfu-saison-4-showcase.webp',
+    'Lancedur': '../../assets/oeuvres/lancedur-showcase.webp',
+    'Bestiale': '../../assets/oeuvres/bestiale-showcase.webp',
+    'Dofus le film': '../../assets/oeuvres/dofus-film-showcase.webp',
     'Ogrest - Épisodes 1 à 8': '../../assets/oeuvres/ogrest-episodes-1-8-showcase.jpg',
     'Mini Wakfu': '../../assets/oeuvres/mini-wakfu-showcase.jpg',
-    'Dofus aux tresors de Kérubim': '../../assets/oeuvres/aux-tresors-kerubim-showcase.png',
+    'Dofus aux trésors de Kérubim': '../../assets/oeuvres/aux-tresors-kerubim-showcase.webp',
     'Dofus - Manga': '../../assets/oeuvres/dofus-manga-showcase.jpg',
-    'Wakfu - Saison 1': '../../assets/oeuvres/wakfu-saison-1-showcase.png',
-    'Wakfu - Saison 2': '../../assets/oeuvres/wakfu-saison-2-showcase.png',
-    'Wakfu - Saison 3': '../../assets/oeuvres/wakfu-saison-3-showcase.png',
+    'Wakfu - Saison 1': '../../assets/oeuvres/wakfu-saison-1-showcase.webp',
+    'Wakfu - Saison 2': '../../assets/oeuvres/wakfu-saison-2-showcase.webp',
+    'Wakfu - Saison 3': '../../assets/oeuvres/wakfu-saison-3-showcase.webp',
     'Wakfu - Manga': '../../assets/oeuvres/wakfu-manga-showcase.webp',
     'Wakfu - La Grande Vague': '../../assets/oeuvres/wakfu-grande-vague-showcase.webp',
-    'Welsh & Shedar': '../../assets/oeuvres/welsh-shedar-showcase.png',
-    "Wakfu - Noximilien l'Horloger": '../../assets/oeuvres/wakfu-noximilien-showcase.png',
+    'Welsh & Shedar': '../../assets/oeuvres/welsh-shedar-showcase.webp',
+    "Wakfu - Noximilien l'Horloger": '../../assets/oeuvres/wakfu-noximilien-showcase.webp',
     'Wakfu OAV - Livre I : Le Trone de Glace': '../../assets/oeuvres/wakfu-oav-livre-1-showcase.webp',
     'Wakfu OAV - Livre II : Ush': '../../assets/oeuvres/wakfu-oav-livre-2-showcase.webp',
     'Wakfu OAV - Livre III : Mont Dragons': '../../assets/oeuvres/wakfu-oav-livre-3-showcase.webp',
-    "WAKFU OAV Oropo : Bataille pour l'Eliacube": '../../assets/oeuvres/wakfu-oav-oropo-showcase.png',
+    "WAKFU OAV Oropo : Bataille pour l'Éliacube": '../../assets/oeuvres/wakfu-oav-oropo-showcase.webp',
     'One More Gate: A Wakfu Legend': '../../assets/oeuvres/one-more-gate-showcase.jpg',
-    'Savara': '../../assets/oeuvres/savara-showcase.png'
+    'Savara': '../../assets/oeuvres/savara-showcase.webp'
   };
   const showcaseImagesByEntry = {
     'Dofus|Game': '../../assets/oeuvres/dofus-mmo-showcase.jpg',
-    'Wakfu|Game': '../../assets/oeuvres/wakfu-mmo-showcase.png'
+    'Wakfu|Game': '../../assets/oeuvres/wakfu-mmo-showcase.webp'
   };
   const getUrl = (work) => work.href || targets[work.linkType] || '';
   const getActionLabel = (work) => {

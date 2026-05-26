@@ -132,6 +132,11 @@ body.character-qilby .character-hero-bg {
   background-image: url('../../assets/personnages/QILBY.webp');
   background-position: 50% center;
 }
+body.character-prosperus-elementor .character-hero-bg {
+  background-image: url('../../assets/personnages/PROSPERUS ELEMENTOR.webp');
+  background-position: center center;
+  transform: scale(1);
+}
 body.character-oropo .character-hero-bg {
   background-image: url('../../assets/personnages/OROPO.webp');
   background-position: 36% center;
@@ -152,6 +157,11 @@ body.character-biste .character-hero-bg {
   background-position: center center;
   transform: scale(1);
 }
+body.character-balance-krosmique .character-hero-bg {
+  background-image: url('../../assets/personnages/BALANCE KROSMIQUE.webp');
+  background-position: center center;
+  transform: scale(1);
+}
 body.character-bouillon .character-hero-bg {
   background-image: url('../../assets/personnages/BOUILLON.webp');
   background-position: center center;
@@ -169,6 +179,11 @@ body.character-chaille .character-hero-bg {
 }
 body.character-desperia .character-hero-bg {
   background-image: url('../../assets/personnages/DESPERIA.webp');
+  background-position: center center;
+  transform: scale(1);
+}
+body.character-ereziah-melkewel .character-hero-bg {
+  background-image: url('../../assets/personnages/EREZIAH MELKEWEL.webp');
   background-position: center center;
   transform: scale(1);
 }
@@ -259,6 +274,11 @@ body.character-dathura .character-hero-bg {
 body.character-ogrest .character-hero-bg {
   background-image: url('../../assets/personnages/OGREST.webp');
   background-position: center 28%;
+}
+body.character-ombre .character-hero-bg {
+  background-image: url('../../assets/personnages/OMBRE.webp');
+  background-position: center center;
+  transform: scale(1);
 }
 body.character-otomai .character-hero-bg {
   background-image: url('../../assets/personnages/OTOMAI.webp');
@@ -437,6 +457,11 @@ body.character-belladone .character-hero-bg {
 body.character-lancedur .character-hero-bg {
   background-image: url('../../assets/personnages/LANCEDUR.webp');
   background-position: 56% 34%;
+  transform: scale(1);
+}
+body.character-lance-originelle .character-hero-bg {
+  background-image: url('../../assets/personnages/LANCE ORIGINELLE.webp');
+  background-position: center center;
   transform: scale(1);
 }
 body.character-cire-momore .character-hero-bg {
@@ -3525,6 +3550,16 @@ body.character-overview-page .character-affinity-toggle {
   border: 0 !important;
   box-shadow: none !important;
   outline: none !important;
+}
+
+body.character-overview-page .character-index-back-link {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+  padding: 0.72rem 1.05rem;
+  border: 1px solid rgba(232, 201, 122, 0.34) !important;
+  background: rgba(8, 8, 16, 0.42) !important;
+  color: var(--gold-light);
 }
 
 body.character-overview-page .krosmoz-contribution-link::before,

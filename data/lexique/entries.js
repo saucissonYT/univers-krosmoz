@@ -25,7 +25,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Arakne",
     "category": "monstres",
     "type": "Monstres",
-    "description": "Araignées géantes présente dans de nombreuses régions du Monde des Douze, connue pour ses toiles, son venin et son agressivité envers les aventuriers. Certaines variétés, comme l’Arakne Majeure ou l’Araknawa, comptent parmi les créatures les plus redoutées des terres sauvages du Monde des Douze."
+    "description": "Araignées géantes présentes dans de nombreuses régions du Monde des Douze, connues pour ses toiles, son venin et son agressivité envers les aventuriers. Certaines variétés, comme l’Arakne Majeure ou l’Araknawa, comptent parmi les créatures les plus redoutées des terres sauvages du Monde des Douze."
   },
   {
     "letter": "A",
@@ -277,7 +277,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Éliasphère",
     "category": "armes",
     "type": "Armes",
-    "description": "Le cœur du méchasme Lokus, capable de décuplé la puissance de son propriétaire et des personnes en lien avec lui contre le Wakfu vital de la personne qui pioche dans ce pouvoir."
+    "description": "Le cœur du méchasme Lokus, capable de décupler la puissance de son propriétaire et des personnes en lien avec lui contre le Wakfu vital de la personne qui pioche dans ce pouvoir."
   },
   {
     "letter": "E",
@@ -295,10 +295,10 @@ window.KROSMOZ_LEXICON_ENTRIES = [
   },
   {
     "letter": "E",
-    "title": "Eliotropes",
+    "title": "Éliotropes",
     "category": "peuples",
     "type": "Peuples",
-    "description": "Des êtres nés d'un profond voeu de Yugo de retrouver sa famille lors de l'utilisation des 6 dofus éliatropes. Dispersés à l'aube des temps, les eliotropes maîtrisent les portails de Wakfu et des techniques proches de leur créateur, marqué par la quête d’identité et l’héritage de Yugo, ils vont s'éteindre jusqu'à qu'Oropo ne soit le dernier des eliotropes."
+    "description": "Des êtres nés d'un profond voeu de Yugo de retrouver sa famille lors de l'utilisation des 6 dofus éliatropes. Dispersés à l'aube des temps, les éliotropes maîtrisent les portails de Wakfu et des techniques proches de leur créateur, marqué par la quête d’identité et l’héritage de Yugo, ils vont s'éteindre jusqu'à qu'Oropo ne soit le dernier des éliotropes."
   },
   {
     "letter": "E",
@@ -487,7 +487,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Inglorium",
     "category": "lieux",
     "type": "Lieux",
-    "description": "Dimension ou les divinités majeurs du Krosmoz ont élus domicile pour y conduire leurs conseils, érigeant chacun leur propre temple dans son enceinte et leurs dimension autour d'elle."
+    "description": "Dimension où les divinités majeurs du Krosmoz ont élus domicile pour y conduire leurs conseils, érigeant chacun leur propre temple dans son enceinte et leurs dimensions autour d'elle."
   },
   {
     "letter": "I",
@@ -579,6 +579,13 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "category": "monstres",
     "type": "Monstres",
     "description": "Créatures vivant aussi bien dans les galeries souterraines que dans certaines zones des plaines au sud d’Astrub. Réparties en différentes variétés élémentaires, elles évoluent souvent en groupes autour de leurs nids qu’elles défendent avec agressivité. Malgré leur apparence fragile, leur nombre et leur capacité d’adaptation en font une menace bien connue des jeunes aventuriers."
+  },
+  {
+    "letter": "L",
+    "title": "Lémure",
+    "category": "monstres",
+    "type": "Monstres",
+    "description": "Les Lémures sont des créatures spectrales originaires de l’Éther, nées de la corruption des Lumes. Dotés de longues griffes et d’une apparence grimaçante, ils se nourrissent de l’énergie spirituelle des êtres vivants."
   },
   {
     "letter": "L",
@@ -781,7 +788,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Rats",
     "category": "monstres",
     "type": "Monstres",
-    "description": "Créatures proliférant dans les égouts, souterrains et ruines du Monde des Douze, où ils vivent en colonies immenses. Opportunistes et particulièrement résistants, ils s’adaptent facilement aux environnements les plus hostiles et peuvent rapidement devenir une menace lorsqu’ils pullulent. Certaines espèces évoluées, comme les Rats de Brâkmar ou de Bonta, ont même développé leur propre organisation et territoire."
+    "description": "Créatures proliférant dans les égouts, souterrains et ruines du Monde des Douze, où elles vivent en colonies immenses. Opportunistes et particulièrement résistants, ils s’adaptent facilement aux environnements les plus hostiles et peuvent rapidement devenir une menace lorsqu’ils pullulent. Certaines espèces évoluées, comme les Rats de Brâkmar ou de Bonta, ont même développé leur propre organisation et territoire."
   },
   {
     "letter": "R",
@@ -823,7 +830,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Royaume Sadida",
     "category": "lieux",
     "type": "Lieux",
-    "description": "Un des grands royaumes de l’Ère du Wakfu, bâti autour de l’Arbre de Vie, symbole sacré du dieu Sadida. Gouverné par la dynastie des Sheram Sharm et lié à Bonta, il possède une concentration exceptionnelle de vie et de Wakfu, faisant de son territoire un enjeu stratégique majeur du Monde des Douze."
+    "description": "Un des grands royaumes de l’Ère du Wakfu, bâti autour de l’Arbre de Vie, symbole sacré du dieu Sadida. Gouverné par la dynastie des Sheran Sharm et lié à Bonta, il possède une concentration exceptionnelle de vie et de Wakfu, faisant de son territoire un enjeu stratégique majeur du Monde des Douze."
   },
   {
     "letter": "S",
@@ -872,7 +879,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Shushu",
     "category": "peuples",
     "type": "Peuples",
-    "description": "Ame capturé par un démon pour en faire un soldat à la solde de Rushu dans la shukrute."
+    "description": "Âme capturée par un démon pour en faire un soldat à la solde de Rushu dans la shukrute."
   },
   {
     "letter": "S",
@@ -893,7 +900,7 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "title": "Stasis",
     "category": "energies",
     "type": "Énergies",
-    "description": "Du condensé de Wakfu qui stagne devient de la stasis, une énergie instable et destructrice intimement lié au Wakfu."
+    "description": "Du condensé de Wakfu qui stagne devient de la stasis, une énergie instable et destructrice intimement liée au Wakfu."
   },
   {
     "letter": "S",
@@ -1020,6 +1027,13 @@ window.KROSMOZ_LEXICON_ENTRIES = [
     "category": "peuples",
     "type": "Peuples",
     "description": "Disciples du dieu Xélor, maîtres du temps, des mécanismes et du savoir ancien. Capables de manipuler les instants, de ralentir leurs ennemis ou d’accélérer leurs alliés, ils consacrent leur existence à l’étude des horloges, du Wakfu et des mystères temporels."
+  },
+  {
+    "letter": "Z",
+    "title": "Zaap",
+    "category": "generale",
+    "type": "Générale",
+    "description": "Les Zaaps sont des arches magiques permettant de voyager instantanément à travers le Monde des Douze grâce à l’énergie des kamas. Leur origine reste débattue, certains les attribuent au dieu Xélor, tandis que d’autres pensent qu’ils furent créés par les Éliatropes, dont les runes présentes sur les Zaaps rappellent celles de leurs anciens sanctuaires."
   },
   {
     "letter": "Z",

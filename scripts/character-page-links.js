@@ -4,571 +4,591 @@
   const characters = [
     {
       "name": "Adamaï",
-      "href": "adamai.html"
+      "href": "adamai"
     },
     {
       "name": "Aerafal",
-      "href": "aerafal.html"
+      "href": "aerafal"
     },
     {
       "name": "Agard",
-      "href": "agard.html"
+      "href": "agard"
     },
     {
       "name": "Aguabrial",
-      "href": "aguabrial.html"
+      "href": "aguabrial"
     },
     {
       "name": "Alibert",
-      "href": "alibert.html"
+      "href": "alibert"
     },
     {
       "name": "Amalia Sheran Sharm",
-      "href": "amalia-sheran-sharm.html"
+      "href": "amalia-sheran-sharm"
     },
     {
       "name": "Anathar",
-      "href": "anathar.html"
+      "href": "anathar"
     },
     {
       "name": "Armant Sheran Sharm",
-      "href": "armant-sheran-sharm.html"
+      "href": "armant-sheran-sharm"
     },
     {
       "name": "Arpagone",
-      "href": "arpagone.html"
+      "href": "arpagone"
     },
     {
       "name": "Arty",
-      "href": "arty.html"
+      "href": "arty"
     },
     {
       "name": "Atcham Crépin",
-      "href": "atcham-crepin.html"
+      "href": "atcham-crepin"
     },
     {
       "name": "Atone",
-      "href": "atone.html"
+      "href": "atone"
     },
     {
       "name": "Aurora",
-      "href": "aurora.html"
+      "href": "aurora"
     },
     {
       "name": "Bakara Jurgen",
-      "href": "bakara-jurgen.html"
+      "href": "bakara-jurgen"
+    },
+    {
+      "name": "Balance Krosmique",
+      "href": "balance-krosmique"
     },
     {
       "name": "Baltazar",
-      "href": "balthazar.html"
+      "href": "balthazar"
     },
     {
       "name": "Belladone",
-      "href": "belladone.html"
+      "href": "belladone"
     },
     {
       "name": "Bellaphone",
-      "href": "bellaphone.html"
+      "href": "bellaphone"
     },
     {
       "name": "Biste",
-      "href": "biste.html"
+      "href": "biste"
     },
     {
       "name": "Bolgrot",
-      "href": "bolgrot.html"
+      "href": "bolgrot"
     },
     {
       "name": "Bordegann",
-      "href": "bordegann.html"
+      "href": "bordegann"
     },
     {
       "name": "Bouillon",
-      "href": "bouillon.html"
+      "href": "bouillon"
     },
     {
       "name": "Bump",
-      "href": "bump.html"
+      "href": "bump"
     },
     {
       "name": "Cadence",
-      "href": "cadence.html"
+      "href": "cadence"
     },
     {
       "name": "Chaille",
-      "href": "chaille.html"
+      "href": "chaille"
     },
     {
       "name": "Chêne Mou",
-      "href": "chene-mou.html"
+      "href": "chene-mou"
     },
     {
       "name": "Chevalier Justice",
-      "href": "chevalier-justice.html"
+      "href": "chevalier-justice"
     },
     {
       "name": "Chibi",
-      "href": "chibi.html"
+      "href": "chibi"
     },
     {
       "name": "Cire Momore",
-      "href": "cire-momore.html"
+      "href": "cire-momore"
     },
     {
       "name": "Cléophée",
-      "href": "cleophee.html"
+      "href": "cleophee"
     },
     {
       "name": "Comte Harebourg",
-      "href": "comte-harebourg.html"
+      "href": "comte-harebourg"
     },
     {
       "name": "Coqueline",
-      "href": "coqueline.html"
+      "href": "coqueline"
     },
     {
       "name": "Corbeau Noir",
-      "href": "corbeau-noir.html"
+      "href": "corbeau-noir"
     },
     {
       "name": "Cornu Mollu",
-      "href": "cornu-mollu.html"
+      "href": "cornu-mollu"
     },
     {
       "name": "Dame Echo",
-      "href": "echo.html"
+      "href": "echo"
     },
     {
       "name": "Dardondakal",
-      "href": "dardondakal.html"
+      "href": "dardondakal"
     },
     {
       "name": "Dark Vlad",
-      "href": "dark-vlad.html"
+      "href": "dark-vlad"
     },
     {
       "name": "Dathura",
-      "href": "dathura.html"
+      "href": "dathura"
     },
     {
       "name": "Déesse Cra",
-      "href": "deesse-cra.html"
+      "href": "deesse-cra"
     },
     {
       "name": "Déesse Eniripsa",
-      "href": "deesse-eniripsa.html"
+      "href": "deesse-eniripsa"
     },
     {
       "name": "Déesse Féca",
-      "href": "deesse-feca.html"
+      "href": "deesse-feca"
     },
     {
       "name": "Déesse Panda",
-      "href": "deesse-panda.html"
+      "href": "deesse-panda"
     },
     {
       "name": "Déesse Sacrieur",
-      "href": "deesse-sacrieur.html"
+      "href": "deesse-sacrieur"
     },
     {
       "name": "Desperia",
-      "href": "desperia.html"
+      "href": "desperia"
     },
     {
       "name": "Dieu Écaflip",
-      "href": "dieu-ecaflip.html"
+      "href": "dieu-ecaflip"
     },
     {
       "name": "Dieu Enutrof",
-      "href": "dieu-enutrof.html"
+      "href": "dieu-enutrof"
     },
     {
       "name": "Dieu Iop",
-      "href": "dieu-iop.html"
+      "href": "dieu-iop"
     },
     {
       "name": "Dieu Osamodas",
-      "href": "dieu-osamodas.html"
+      "href": "dieu-osamodas"
     },
     {
       "name": "Dieu Ouginak",
-      "href": "dieu-ouginak.html"
+      "href": "dieu-ouginak"
     },
     {
       "name": "Dieu Sadida",
-      "href": "dieu-sadida.html"
+      "href": "dieu-sadida"
     },
     {
       "name": "Dieu Sram",
-      "href": "dieu-sram.html"
+      "href": "dieu-sram"
     },
     {
       "name": "Dieu Xélor",
-      "href": "dieu-xelor.html"
+      "href": "dieu-xelor"
     },
     {
       "name": "Djaul",
-      "href": "djaul.html"
+      "href": "djaul"
     },
     {
       "name": "Dragon Cochon",
-      "href": "dragon-cochon.html"
+      "href": "dragon-cochon"
     },
     {
       "name": "Efrim",
-      "href": "efrim.html"
+      "href": "efrim"
     },
     {
       "name": "Elaine & Encre noir",
-      "href": "elaine-encre-noir.html"
+      "href": "elaine-encre-noir"
     },
     {
       "name": "Élante",
-      "href": "elante.html"
+      "href": "elante"
     },
     {
       "name": "Elely de Percedal",
-      "href": "elely-de-percedal.html"
+      "href": "elely-de-percedal"
+    },
+    {
+      "name": "Ereziah Melkewel",
+      "href": "ereziah-melkewel"
     },
     {
       "name": "Évangelyne",
-      "href": "evangelyne.html"
+      "href": "evangelyne"
     },
     {
       "name": "Flopin de Percedal",
-      "href": "flopin-de-percedal.html"
+      "href": "flopin-de-percedal"
     },
     {
       "name": "Frida Mofette",
-      "href": "frida-mofette.html"
+      "href": "frida-mofette"
     },
     {
       "name": "Glip",
-      "href": "glip.html"
+      "href": "glip"
     },
     {
       "name": "Goultard",
-      "href": "goultard.html"
+      "href": "goultard"
     },
     {
       "name": "Grand Dragon",
-      "href": "grand-dragon.html"
+      "href": "grand-dragon"
     },
     {
       "name": "Grany Smisse",
-      "href": "grany-smisse.html"
+      "href": "grany-smisse"
     },
     {
       "name": "Grougaloragran",
-      "href": "grougaloragran.html"
+      "href": "grougaloragran"
     },
     {
       "name": "Grougalorasalar",
-      "href": "grougalorasalar.html"
+      "href": "grougalorasalar"
     },
     {
       "name": "Grufon",
-      "href": "gruffon.html"
+      "href": "gruffon"
     },
     {
       "name": "Hyrkul",
-      "href": "hyrkul.html"
+      "href": "hyrkul"
     },
     {
       "name": "Ignemikhal",
-      "href": "ignemikhal.html"
+      "href": "ignemikhal"
     },
     {
       "name": "Igole",
-      "href": "igole.html"
+      "href": "igole"
     },
     {
       "name": "Indie Delagrandaventure",
-      "href": "indie-delagrandaventure.html"
+      "href": "indie-delagrandaventure"
     },
     {
       "name": "Jahash Jurgen",
-      "href": "jahash-jurgen.html"
+      "href": "jahash-jurgen"
     },
     {
       "name": "Jiva",
-      "href": "jiva.html"
+      "href": "jiva"
     },
     {
       "name": "Joris Jurgen",
-      "href": "joris-jurgen.html"
+      "href": "joris-jurgen"
     },
     {
       "name": "Julith Abigor",
-      "href": "julith-abigor.html"
+      "href": "julith-abigor"
     },
     {
       "name": "Kali",
-      "href": "kali.html"
+      "href": "kali"
     },
     {
       "name": "Karn",
-      "href": "karn.html"
+      "href": "karn"
     },
     {
       "name": "Kabrok",
-      "href": "kabrok.html"
+      "href": "kabrok"
     },
     {
       "name": "Katar",
-      "href": "katar.html"
+      "href": "katar"
     },
     {
       "name": "Kérubim Crépin",
-      "href": "kerubim-crepin.html"
+      "href": "kerubim-crepin"
     },
     {
       "name": "Khan Karkass",
-      "href": "khan-karkass.html"
+      "href": "khan-karkass"
     },
     {
       "name": "Kriss la Krass",
-      "href": "kriss-la-krass.html"
+      "href": "kriss-la-krass"
     },
     {
       "name": "La Déesse Éliatrope",
-      "href": "grande-deesse-eliatrope.html"
+      "href": "grande-deesse-eliatrope"
     },
     {
       "name": "Lance Dur",
-      "href": "lancedur.html"
+      "href": "lancedur"
+    },
+    {
+      "name": "Lance Originelle",
+      "href": "lance-originelle"
     },
     {
       "name": "Les Miss Moches",
-      "href": "les-miss-moches.html"
+      "href": "les-miss-moches"
     },
     {
       "name": "Lilotte",
-      "href": "lilotte.html"
+      "href": "lilotte"
     },
     {
       "name": "Lokus",
-      "href": "lokus.html"
+      "href": "lokus"
     },
     {
       "name": "Lou",
-      "href": "lou.html"
+      "href": "lou"
     },
     {
       "name": "Luis",
-      "href": "luis.html"
+      "href": "luis"
     },
     {
       "name": "Madagaskan",
-      "href": "madagaskan.html"
+      "href": "madagaskan"
     },
     {
       "name": "Maskemane",
-      "href": "maskemane.html"
+      "href": "maskemane"
     },
     {
       "name": "Maude",
-      "href": "maude.html"
+      "href": "maude"
     },
     {
       "name": "Médoroziam",
-      "href": "medoroziam.html"
+      "href": "medoroziam"
     },
     {
       "name": "Mina",
-      "href": "mina.html"
+      "href": "mina"
     },
     {
       "name": "Miranda",
-      "href": "miranda.html"
+      "href": "miranda"
     },
     {
       "name": "Monsieur M",
-      "href": "monsieur-m.html"
+      "href": "monsieur-m"
     },
     {
       "name": "Moon",
-      "href": "moon.html"
+      "href": "moon"
     },
     {
       "name": "Mouche",
-      "href": "mouche.html"
+      "href": "mouche"
     },
     {
       "name": "Moumoune Stroud",
-      "href": "moumoune-stroud.html"
+      "href": "moumoune-stroud"
     },
     {
       "name": "Nimoda",
-      "href": "nimoda.html"
+      "href": "nimoda"
     },
     {
       "name": "Nora",
-      "href": "nora.html"
+      "href": "nora"
     },
     {
       "name": "Nox",
-      "href": "nox.html"
+      "href": "nox"
     },
     {
       "name": "Ogrest",
-      "href": "ogrest.html"
+      "href": "ogrest"
     },
     {
       "name": "Otomaï",
-      "href": "otomai.html"
+      "href": "otomai"
+    },
+    {
+      "name": "Ombre",
+      "href": "ombre"
     },
     {
       "name": "Ombrage",
-      "href": "ombrage.html"
+      "href": "ombrage"
     },
     {
       "name": "Orgonax",
-      "href": "orgonax.html"
+      "href": "orgonax"
     },
     {
       "name": "Oropo",
-      "href": "oropo.html"
+      "href": "oropo"
     },
     {
       "name": "Pandiego de la Vega",
-      "href": "pandiego-de-la-vega.html"
+      "href": "pandiego-de-la-vega"
     },
     {
       "name": "Pandora",
-      "href": "pandora.html"
+      "href": "pandora"
     },
     {
       "name": "Percimol",
-      "href": "percimol.html"
+      "href": "percimol"
     },
     {
       "name": "Phaeris le puissant",
-      "href": "phaeris.html"
+      "href": "phaeris"
     },
     {
       "name": "Pin de Percedal",
-      "href": "pin-de-percedal.html"
+      "href": "pin-de-percedal"
     },
     {
       "name": "Poo",
-      "href": "poo.html"
+      "href": "poo"
     },
     {
       "name": "Prince Adale",
-      "href": "prince-adale.html"
+      "href": "prince-adale"
     },
     {
       "name": "Prince de Brakmar",
-      "href": "prince-de-brakmar.html"
+      "href": "prince-de-brakmar"
+    },
+    {
+      "name": "Prosperus Elementor",
+      "href": "prosperus-elementor"
     },
     {
       "name": "Qilby",
-      "href": "qilby.html"
+      "href": "qilby"
     },
     {
       "name": "Rasha",
-      "href": "rasha.html"
+      "href": "rasha"
     },
     {
       "name": "Razortemps",
-      "href": "razortemps.html"
+      "href": "razortemps"
     },
     {
       "name": "Reines de Bonta",
-      "href": "reines-de-bonta.html"
+      "href": "reines-de-bonta"
     },
     {
       "name": "Remington Smisse",
-      "href": "remington-smisse.html"
+      "href": "remington-smisse"
     },
     {
       "name": "Ripulse",
-      "href": "ripulse.html"
+      "href": "ripulse"
     },
     {
       "name": "Roi Osamodas",
-      "href": "roi-osamodas.html"
+      "href": "roi-osamodas"
     },
     {
       "name": "Roi Sheran Sharm",
-      "href": "roi-sheran-sharm.html"
+      "href": "roi-sheran-sharm"
     },
     {
       "name": "Rotalstrom",
-      "href": "rotalstrom.html"
+      "href": "rotalstrom"
     },
     {
       "name": "Rubilax",
-      "href": "rubilax.html"
+      "href": "rubilax"
     },
     {
       "name": "Ruel Stroud",
-      "href": "ruel-stroud.html"
+      "href": "ruel-stroud"
     },
     {
       "name": "Rushu",
-      "href": "rushu.html"
+      "href": "rushu"
     },
     {
       "name": "Shinonomé",
-      "href": "shinonome.html"
+      "href": "shinonome"
     },
     {
       "name": "Sidaire",
-      "href": "sidaire.html"
+      "href": "sidaire"
     },
     {
       "name": "Simone",
-      "href": "simone.html"
+      "href": "simone"
     },
     {
       "name": "Sipho",
-      "href": "sipho.html"
+      "href": "sipho"
     },
     {
       "name": "Terrakourial",
-      "href": "terrakourial.html"
+      "href": "terrakourial"
     },
     {
       "name": "Toross Mordal",
-      "href": "toross-mordal.html"
+      "href": "toross-mordal"
     },
     {
       "name": "Toxine",
-      "href": "toxine.html"
+      "href": "toxine"
     },
     {
       "name": "Tristepin de Percedal",
-      "href": "tristepin.html"
+      "href": "tristepin"
     },
     {
       "name": "Uk’Not’Allag",
-      "href": "uk-not-allag.html"
+      "href": "uk-not-allag"
     },
     {
       "name": "Ush Galesh",
-      "href": "ush-galesh.html"
+      "href": "ush-galesh"
     },
     {
       "name": "Vampyro",
-      "href": "vampyro.html"
+      "href": "vampyro"
     },
     {
       "name": "Wa Wabbit",
-      "href": "wa-wabbit.html"
+      "href": "wa-wabbit"
     },
     {
       "name": "Xav le Boulanger",
-      "href": "xav-le-boulanger.html"
+      "href": "xav-le-boulanger"
     },
     {
       "name": "Yrehn",
-      "href": "yrehn.html"
+      "href": "yrehn"
     },
     {
       "name": "Yugo",
-      "href": "yugo.html"
+      "href": "yugo"
     }
   ];
   const currentHref = () => decodeURIComponent((window.location.pathname.split('/').pop() || '').toLowerCase());
@@ -584,14 +604,14 @@
     nextLink.href = next.href; nextLink.title = next.name; nextLink.setAttribute('aria-label', 'Personnage suivant : ' + next.name); nextLink.innerHTML = '<span aria-hidden="true">→</span>';
   };
   const normalizeValue = (value) => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  const makeIndexHref = (filter, label) => { const value = normalizeValue(label); return value ? 'personnages.html?' + filter + '=' + encodeURIComponent(value) : 'personnages.html'; };
+  const makeIndexHref = (filter, label) => { const value = normalizeValue(label); return value ? 'personnages?' + filter + '=' + encodeURIComponent(value) : 'personnages'; };
   const splitInfoValues = (text) => text.split(/\s*,\s*/g).map((part) => part.trim()).filter(Boolean);
   const linkInfoFilters = () => { document.querySelectorAll('.info-block').forEach((block) => { const labelEl = block.querySelector('.info-label'); const value = block.querySelector('.info-value'); if (!labelEl || !value || value.querySelector('a')) return; const label = normalizeValue(labelEl.textContent || ''); const filter = label === 'classe' ? 'class' : label === 'groupe' ? 'group' : label === 'univers' ? 'universe' : ''; if (!filter) return; const parts = splitInfoValues(value.textContent || ''); if (!parts.length) return; value.replaceChildren(...parts.flatMap((part, index) => { const link = document.createElement('a'); link.className = 'character-filter-link'; link.href = makeIndexHref(filter, part); link.textContent = part; link.setAttribute('aria-label', 'Voir les personnages filtrés par ' + part); return index === 0 ? [link] : [document.createTextNode(', '), link]; })); }); };
   const initBackToTop = () => { if (!document.querySelector('.bio-panel')) return; let backToTop = document.querySelector('.back-to-top'); if (!backToTop) { backToTop = document.createElement('button'); backToTop.className = 'back-to-top'; backToTop.type = 'button'; backToTop.setAttribute('aria-label', 'Revenir en haut de la page'); backToTop.title = 'Revenir en haut'; const label = document.createElement('span'); label.setAttribute('aria-hidden', 'true'); label.textContent = '↑'; backToTop.appendChild(label); document.body.appendChild(backToTop); } const syncBackToTop = () => { backToTop.classList.toggle('is-visible', window.scrollY > 420); }; window.addEventListener('scroll', syncBackToTop, { passive: true }); backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' })); syncBackToTop(); };
   const relatedCharacters = [
     {
       "name": "Adamaï",
-      "href": "adamai.html",
+      "href": "adamai",
       "image": "../../assets/personnages/cartes/adamai.webp",
       "classLabel": "DRAGON ELIATROPE",
       "groups": [
@@ -601,7 +621,7 @@
     },
     {
       "name": "Aerafal",
-      "href": "aerafal.html",
+      "href": "aerafal",
       "image": "../../assets/personnages/cartes/aerafal.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -610,7 +630,7 @@
     },
     {
       "name": "Agard",
-      "href": "agard.html",
+      "href": "agard",
       "image": "../../assets/personnages/cartes/agard.webp",
       "classLabel": "Forgelance",
       "groups": [
@@ -619,7 +639,7 @@
     },
     {
       "name": "Aguabrial",
-      "href": "aguabrial.html",
+      "href": "aguabrial",
       "image": "../../assets/personnages/cartes/aguabrial.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -628,7 +648,7 @@
     },
     {
       "name": "Alibert",
-      "href": "alibert.html",
+      "href": "alibert",
       "image": "../../assets/personnages/cartes/alibert.webp",
       "classLabel": "ENUTROF",
       "groups": [
@@ -637,7 +657,7 @@
     },
     {
       "name": "Amalia Sheran Sharm",
-      "href": "amalia-sheran-sharm.html",
+      "href": "amalia-sheran-sharm",
       "image": "../../assets/personnages/cartes/amalia-sheran-sharm.webp",
       "classLabel": "SADIDA",
       "groups": [
@@ -647,7 +667,7 @@
     },
     {
       "name": "Anathar",
-      "href": "anathar.html",
+      "href": "anathar",
       "image": "../../assets/personnages/cartes/anathar.webp",
       "classLabel": "Shushu",
       "groups": [
@@ -657,7 +677,7 @@
     },
     {
       "name": "Armant Sheran Sharm",
-      "href": "armant-sheran-sharm.html",
+      "href": "armant-sheran-sharm",
       "image": "../../assets/personnages/cartes/armant-sheran-sharm.webp",
       "classLabel": "SADIDA",
       "groups": [
@@ -666,7 +686,7 @@
     },
     {
       "name": "Arpagone",
-      "href": "arpagone.html",
+      "href": "arpagone",
       "image": "../../assets/personnages/cartes/arpagone.webp",
       "classLabel": "ENUTROF",
       "groups": [
@@ -676,7 +696,7 @@
     },
     {
       "name": "Arty",
-      "href": "arty.html",
+      "href": "arty",
       "image": "../../assets/personnages/cartes/arty.webp",
       "classLabel": "Féca",
       "groups": [
@@ -685,7 +705,7 @@
     },
     {
       "name": "Atcham Crépin",
-      "href": "atcham-crepin.html",
+      "href": "atcham-crepin",
       "image": "../../assets/personnages/cartes/atcham-crepin.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
@@ -694,18 +714,18 @@
     },
     {
       "name": "Atone",
-      "href": "atone.html",
+      "href": "atone",
       "image": "../../assets/personnages/cartes/atone.webp",
-      "classLabel": "Eliotrope",
+      "classLabel": "Éliotrope",
       "groups": [
         "Ennemis",
         "Fratrie",
-        "Eliotropes"
+        "Éliotropes"
       ]
     },
     {
       "name": "Aurora",
-      "href": "aurora.html",
+      "href": "aurora",
       "image": "../../assets/personnages/cartes/aurora.webp",
       "classLabel": "Osamodas",
       "groups": [
@@ -714,7 +734,7 @@
     },
     {
       "name": "Bakara Jurgen",
-      "href": "bakara-jurgen.html",
+      "href": "bakara-jurgen",
       "image": "../../assets/personnages/cartes/bakara-jurgen.webp",
       "classLabel": "Huppermage",
       "groups": [
@@ -722,8 +742,17 @@
       ]
     },
     {
+      "name": "Balance Krosmique",
+      "href": "balance-krosmique",
+      "image": "../../assets/personnages/cartes/balance-krosmique.webp",
+      "classLabel": "Huppermage",
+      "groups": [
+        "Dieu"
+      ]
+    },
+    {
       "name": "Baltazar",
-      "href": "balthazar.html",
+      "href": "balthazar",
       "image": "../../assets/personnages/cartes/balthazar.webp",
       "classLabel": "DRAGON ELIATROPE",
       "groups": [
@@ -732,7 +761,7 @@
     },
     {
       "name": "Belladone",
-      "href": "belladone.html",
+      "href": "belladone",
       "image": "../../assets/personnages/cartes/belladone.webp",
       "classLabel": "Eniripsa",
       "groups": [
@@ -742,7 +771,7 @@
     },
     {
       "name": "Bellaphone",
-      "href": "bellaphone.html",
+      "href": "bellaphone",
       "image": "../../assets/personnages/cartes/bellaphone.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -751,7 +780,7 @@
     },
     {
       "name": "Biste",
-      "href": "biste.html",
+      "href": "biste",
       "image": "../../assets/personnages/cartes/biste.webp",
       "classLabel": "Iop",
       "groups": [
@@ -760,7 +789,7 @@
     },
     {
       "name": "Bolgrot",
-      "href": "bolgrot.html",
+      "href": "bolgrot",
       "image": "../../assets/personnages/cartes/bolgrot.webp",
       "classLabel": "Dragon",
       "groups": [
@@ -770,7 +799,7 @@
     },
     {
       "name": "Bordegann",
-      "href": "bordegann.html",
+      "href": "bordegann",
       "image": "../../assets/personnages/cartes/bordegann.webp",
       "classLabel": "Forgelance",
       "groups": [
@@ -779,18 +808,18 @@
     },
     {
       "name": "Bouillon",
-      "href": "bouillon.html",
+      "href": "bouillon",
       "image": "../../assets/personnages/cartes/bouillon.webp",
-      "classLabel": "Eliotrope",
+      "classLabel": "Éliotrope",
       "groups": [
         "Ennemis",
         "Fratrie",
-        "Eliotropes"
+        "Éliotropes"
       ]
     },
     {
       "name": "Bump",
-      "href": "bump.html",
+      "href": "bump",
       "image": "../../assets/personnages/cartes/bump.webp",
       "classLabel": "FÉCA",
       "groups": [
@@ -800,7 +829,7 @@
     },
     {
       "name": "Cadence",
-      "href": "cadence.html",
+      "href": "cadence",
       "image": "../../assets/personnages/cartes/cadence.webp",
       "classLabel": "Xélor",
       "groups": [
@@ -809,7 +838,7 @@
     },
     {
       "name": "Chaille",
-      "href": "chaille.html",
+      "href": "chaille",
       "image": "../../assets/personnages/cartes/chaille.webp",
       "classLabel": "Ouginak",
       "groups": [
@@ -818,7 +847,7 @@
     },
     {
       "name": "Chêne Mou",
-      "href": "chene-mou.html",
+      "href": "chene-mou",
       "image": "../../assets/personnages/cartes/chene-mou.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -827,7 +856,7 @@
     },
     {
       "name": "Chevalier Justice",
-      "href": "chevalier-justice.html",
+      "href": "chevalier-justice",
       "image": "../../assets/personnages/cartes/chevalier-justice.webp",
       "classLabel": "Iop",
       "groups": [
@@ -836,7 +865,7 @@
     },
     {
       "name": "Chibi",
-      "href": "chibi.html",
+      "href": "chibi",
       "image": "../../assets/personnages/cartes/chibi.webp",
       "classLabel": "ELIATROPE",
       "groups": [
@@ -845,7 +874,7 @@
     },
     {
       "name": "Cire Momore",
-      "href": "cire-momore.html",
+      "href": "cire-momore",
       "image": "../../assets/personnages/cartes/cire-momore.webp",
       "classLabel": "Maudit",
       "groups": [
@@ -855,7 +884,7 @@
     },
     {
       "name": "Cléophée",
-      "href": "cleophee.html",
+      "href": "cleophee",
       "image": "../../assets/personnages/cartes/cleophee.webp",
       "classLabel": "CRA",
       "groups": [
@@ -864,7 +893,7 @@
     },
     {
       "name": "Comte Harebourg",
-      "href": "comte-harebourg.html",
+      "href": "comte-harebourg",
       "image": "../../assets/personnages/cartes/comte-harebourg.webp",
       "classLabel": "XELOR",
       "groups": [
@@ -874,7 +903,7 @@
     },
     {
       "name": "Coqueline",
-      "href": "coqueline.html",
+      "href": "coqueline",
       "image": "../../assets/personnages/cartes/coqueline.webp",
       "classLabel": "OSAMODAS",
       "groups": [
@@ -884,7 +913,7 @@
     },
     {
       "name": "Corbeau Noir",
-      "href": "corbeau-noir.html",
+      "href": "corbeau-noir",
       "image": "../../assets/personnages/cartes/corbeau-noir.webp",
       "classLabel": "Osamodas",
       "groups": [
@@ -893,7 +922,7 @@
     },
     {
       "name": "Cornu Mollu",
-      "href": "cornu-mollu.html",
+      "href": "cornu-mollu",
       "image": "../../assets/personnages/cartes/cornu-mollu.webp",
       "classLabel": "Sadida/Iop",
       "groups": [
@@ -903,7 +932,7 @@
     },
     {
       "name": "Dame Echo",
-      "href": "echo.html",
+      "href": "echo",
       "image": "../../assets/personnages/cartes/echo.webp",
       "classLabel": "ENIRIPSA",
       "groups": [
@@ -914,7 +943,7 @@
     },
     {
       "name": "Dardondakal",
-      "href": "dardondakal.html",
+      "href": "dardondakal",
       "image": "../../assets/personnages/cartes/dardondakal.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -923,7 +952,7 @@
     },
     {
       "name": "Dark Vlad",
-      "href": "dark-vlad.html",
+      "href": "dark-vlad",
       "image": "../../assets/personnages/cartes/dark-vlad.webp",
       "classLabel": "Iop",
       "groups": [
@@ -933,7 +962,7 @@
     },
     {
       "name": "Dathura",
-      "href": "dathura.html",
+      "href": "dathura",
       "image": "../../assets/personnages/cartes/dathura.webp",
       "classLabel": "SADIDA",
       "groups": [
@@ -943,7 +972,7 @@
     },
     {
       "name": "Déesse Cra",
-      "href": "deesse-cra.html",
+      "href": "deesse-cra",
       "image": "../../assets/personnages/cartes/deesse-cra.webp",
       "classLabel": "CRA",
       "groups": [
@@ -952,7 +981,7 @@
     },
     {
       "name": "Déesse Eniripsa",
-      "href": "deesse-eniripsa.html",
+      "href": "deesse-eniripsa",
       "image": "../../assets/personnages/cartes/deesse-eniripsa.webp",
       "classLabel": "ENIRIPSA",
       "groups": [
@@ -961,7 +990,7 @@
     },
     {
       "name": "Déesse Féca",
-      "href": "deesse-feca.html",
+      "href": "deesse-feca",
       "image": "../../assets/personnages/cartes/deesse-feca.webp",
       "classLabel": "FÉCA",
       "groups": [
@@ -970,7 +999,7 @@
     },
     {
       "name": "Déesse Panda",
-      "href": "deesse-panda.html",
+      "href": "deesse-panda",
       "image": "../../assets/personnages/cartes/deesse-panda.webp",
       "classLabel": "PANDAWA",
       "groups": [
@@ -979,7 +1008,7 @@
     },
     {
       "name": "Déesse Sacrieur",
-      "href": "deesse-sacrieur.html",
+      "href": "deesse-sacrieur",
       "image": "../../assets/personnages/cartes/deesse-sacrieur.webp",
       "classLabel": "SACRIEUR",
       "groups": [
@@ -988,18 +1017,18 @@
     },
     {
       "name": "Desperia",
-      "href": "desperia.html",
+      "href": "desperia",
       "image": "../../assets/personnages/cartes/desperia.webp",
-      "classLabel": "Eliotrope",
+      "classLabel": "Éliotrope",
       "groups": [
         "Ennemis",
         "Fratrie",
-        "Eliotropes"
+        "Éliotropes"
       ]
     },
     {
       "name": "Dieu Écaflip",
-      "href": "dieu-ecaflip.html",
+      "href": "dieu-ecaflip",
       "image": "../../assets/personnages/cartes/dieu-ecaflip.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
@@ -1008,7 +1037,7 @@
     },
     {
       "name": "Dieu Enutrof",
-      "href": "dieu-enutrof.html",
+      "href": "dieu-enutrof",
       "image": "../../assets/personnages/cartes/dieu-enutrof.webp",
       "classLabel": "ENUTROF",
       "groups": [
@@ -1017,7 +1046,7 @@
     },
     {
       "name": "Dieu Iop",
-      "href": "dieu-iop.html",
+      "href": "dieu-iop",
       "image": "../../assets/personnages/cartes/dieu-iop.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1026,7 +1055,7 @@
     },
     {
       "name": "Dieu Osamodas",
-      "href": "dieu-osamodas.html",
+      "href": "dieu-osamodas",
       "image": "../../assets/personnages/cartes/dieu-osamodas.webp",
       "classLabel": "OSAMODAS",
       "groups": [
@@ -1035,7 +1064,7 @@
     },
     {
       "name": "Dieu Ouginak",
-      "href": "dieu-ouginak.html",
+      "href": "dieu-ouginak",
       "image": "../../assets/personnages/cartes/dieu-ouginak.webp",
       "classLabel": "Ouginak",
       "groups": [
@@ -1044,7 +1073,7 @@
     },
     {
       "name": "Dieu Sadida",
-      "href": "dieu-sadida.html",
+      "href": "dieu-sadida",
       "image": "../../assets/personnages/cartes/dieu-sadida.webp",
       "classLabel": "SADIDA",
       "groups": [
@@ -1053,7 +1082,7 @@
     },
     {
       "name": "Dieu Sram",
-      "href": "dieu-sram.html",
+      "href": "dieu-sram",
       "image": "../../assets/personnages/cartes/dieu-sram.webp",
       "classLabel": "SRAM",
       "groups": [
@@ -1062,7 +1091,7 @@
     },
     {
       "name": "Dieu Xélor",
-      "href": "dieu-xelor.html",
+      "href": "dieu-xelor",
       "image": "../../assets/personnages/cartes/dieu-xelor.webp",
       "classLabel": "XÉLOR",
       "groups": [
@@ -1071,7 +1100,7 @@
     },
     {
       "name": "Djaul",
-      "href": "djaul.html",
+      "href": "djaul",
       "image": "../../assets/personnages/cartes/djaul.webp",
       "classLabel": "Shushu",
       "groups": [
@@ -1080,7 +1109,7 @@
     },
     {
       "name": "Dragon Cochon",
-      "href": "dragon-cochon.html",
+      "href": "dragon-cochon",
       "image": "../../assets/personnages/cartes/dragon-cochon.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -1090,17 +1119,17 @@
     },
     {
       "name": "Efrim",
-      "href": "efrim.html",
+      "href": "efrim",
       "image": "../../assets/personnages/cartes/efrim.webp",
-      "classLabel": "Dragon eliatrope",
+      "classLabel": "Dragon éliatrope",
       "groups": [
-        "Eliatrope primordial",
+        "Éliatrope primordial",
         "Nécromes"
       ]
     },
     {
       "name": "Elaine & Encre noir",
-      "href": "elaine-encre-noir.html",
+      "href": "elaine-encre-noir",
       "image": "../../assets/personnages/cartes/elaine-encre-noir.webp",
       "classLabel": "Roublard",
       "groups": [
@@ -1109,7 +1138,7 @@
     },
     {
       "name": "Élante",
-      "href": "elante.html",
+      "href": "elante",
       "image": "../../assets/personnages/cartes/elante.webp",
       "classLabel": "MONSTRE",
       "groups": [
@@ -1118,7 +1147,7 @@
     },
     {
       "name": "Elely de Percedal",
-      "href": "elely-de-percedal.html",
+      "href": "elely-de-percedal",
       "image": "../../assets/personnages/cartes/elely-de-percedal.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1126,8 +1155,17 @@
       ]
     },
     {
+      "name": "Ereziah Melkewel",
+      "href": "ereziah-melkewel",
+      "image": "../../assets/personnages/cartes/ereziah-melkewel.webp",
+      "classLabel": "Féca",
+      "groups": [
+        "Mythe & légende"
+      ]
+    },
+    {
       "name": "Évangelyne",
-      "href": "evangelyne.html",
+      "href": "evangelyne",
       "image": "../../assets/personnages/cartes/evangelyne.webp",
       "classLabel": "CRA",
       "groups": [
@@ -1138,7 +1176,7 @@
     },
     {
       "name": "Flopin de Percedal",
-      "href": "flopin-de-percedal.html",
+      "href": "flopin-de-percedal",
       "image": "../../assets/personnages/cartes/flopin-de-percedal.webp",
       "classLabel": "CRA",
       "groups": [
@@ -1147,7 +1185,7 @@
     },
     {
       "name": "Frida Mofette",
-      "href": "frida-mofette.html",
+      "href": "frida-mofette",
       "image": "../../assets/personnages/cartes/frida-mofette.webp",
       "classLabel": "Steamer",
       "groups": [
@@ -1156,7 +1194,7 @@
     },
     {
       "name": "Glip",
-      "href": "glip.html",
+      "href": "glip",
       "image": "../../assets/personnages/cartes/glip.webp",
       "classLabel": "ELIATROPE",
       "groups": [
@@ -1165,7 +1203,7 @@
     },
     {
       "name": "Goultard",
-      "href": "goultard.html",
+      "href": "goultard",
       "image": "../../assets/personnages/cartes/goultard.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1174,7 +1212,7 @@
     },
     {
       "name": "Grand Dragon",
-      "href": "grand-dragon.html",
+      "href": "grand-dragon",
       "image": "../../assets/personnages/cartes/grand-dragon.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -1183,7 +1221,7 @@
     },
     {
       "name": "Grany Smisse",
-      "href": "grany-smisse.html",
+      "href": "grany-smisse",
       "image": "../../assets/personnages/cartes/grany-smisse.webp",
       "classLabel": "Roublard",
       "groups": [
@@ -1192,7 +1230,7 @@
     },
     {
       "name": "Grougaloragran",
-      "href": "grougaloragran.html",
+      "href": "grougaloragran",
       "image": "../../assets/personnages/cartes/grougaloragran.webp",
       "classLabel": "DRAGON ELIATROPE",
       "groups": [
@@ -1201,7 +1239,7 @@
     },
     {
       "name": "Grougalorasalar",
-      "href": "grougalorasalar.html",
+      "href": "grougalorasalar",
       "image": "../../assets/personnages/cartes/grougalorasalar.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -1210,7 +1248,7 @@
     },
     {
       "name": "Grufon",
-      "href": "gruffon.html",
+      "href": "gruffon",
       "image": "../../assets/personnages/cartes/gruffon.webp",
       "classLabel": "SHUSHU",
       "groups": [
@@ -1219,7 +1257,7 @@
     },
     {
       "name": "Hyrkul",
-      "href": "hyrkul.html",
+      "href": "hyrkul",
       "image": "../../assets/personnages/cartes/hyrkul.webp",
       "classLabel": "Féca",
       "groups": [
@@ -1229,7 +1267,7 @@
     },
     {
       "name": "Ignemikhal",
-      "href": "ignemikhal.html",
+      "href": "ignemikhal",
       "image": "../../assets/personnages/cartes/ignemikhal.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -1238,7 +1276,7 @@
     },
     {
       "name": "Igole",
-      "href": "igole.html",
+      "href": "igole",
       "image": "../../assets/personnages/cartes/igole.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -1247,7 +1285,7 @@
     },
     {
       "name": "Indie Delagrandaventure",
-      "href": "indie-delagrandaventure.html",
+      "href": "indie-delagrandaventure",
       "image": "../../assets/personnages/cartes/indie-delagrandaventure.webp",
       "classLabel": "Ouginak",
       "groups": [
@@ -1256,7 +1294,7 @@
     },
     {
       "name": "Jahash Jurgen",
-      "href": "jahash-jurgen.html",
+      "href": "jahash-jurgen",
       "image": "../../assets/personnages/cartes/jahash-jurgen.webp",
       "classLabel": "Huppermage",
       "groups": [
@@ -1266,7 +1304,7 @@
     },
     {
       "name": "Jiva",
-      "href": "jiva.html",
+      "href": "jiva",
       "image": "../../assets/personnages/cartes/jiva.webp",
       "classLabel": "Divinité",
       "groups": [
@@ -1276,7 +1314,7 @@
     },
     {
       "name": "Joris Jurgen",
-      "href": "joris-jurgen.html",
+      "href": "joris-jurgen",
       "image": "../../assets/personnages/cartes/joris-jurgen.webp",
       "classLabel": "INCONNUE",
       "groups": [
@@ -1286,7 +1324,7 @@
     },
     {
       "name": "Julith Abigor",
-      "href": "julith-abigor.html",
+      "href": "julith-abigor",
       "image": "../../assets/personnages/cartes/julith-abigor.webp",
       "classLabel": "Huppermage",
       "groups": [
@@ -1295,7 +1333,7 @@
     },
     {
       "name": "Kali",
-      "href": "kali.html",
+      "href": "kali",
       "image": "../../assets/personnages/cartes/kali.webp",
       "classLabel": "Sacrieur",
       "groups": [
@@ -1305,7 +1343,7 @@
     },
     {
       "name": "Karn",
-      "href": "karn.html",
+      "href": "karn",
       "image": "../../assets/personnages/cartes/karn.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1315,7 +1353,7 @@
     },
     {
       "name": "Kabrok",
-      "href": "kabrok.html",
+      "href": "kabrok",
       "image": "../../assets/personnages/cartes/kabrok.webp",
       "classLabel": "Osamodas",
       "groups": [
@@ -1324,7 +1362,7 @@
     },
     {
       "name": "Katar",
-      "href": "katar.html",
+      "href": "katar",
       "image": "../../assets/personnages/cartes/katar.webp",
       "classLabel": "Sacrieur",
       "groups": [
@@ -1333,7 +1371,7 @@
     },
     {
       "name": "Kérubim Crépin",
-      "href": "kerubim-crepin.html",
+      "href": "kerubim-crepin",
       "image": "../../assets/personnages/cartes/kerubim-crepin.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
@@ -1344,7 +1382,7 @@
     },
     {
       "name": "Khan Karkass",
-      "href": "khan-karkass.html",
+      "href": "khan-karkass",
       "image": "../../assets/personnages/cartes/khan-karkass.webp",
       "classLabel": "Iop",
       "groups": [
@@ -1353,7 +1391,7 @@
     },
     {
       "name": "Kriss la Krass",
-      "href": "kriss-la-krass.html",
+      "href": "kriss-la-krass",
       "image": "../../assets/personnages/cartes/kriss-la-krass.webp",
       "classLabel": "Sacrieur",
       "groups": [
@@ -1362,7 +1400,7 @@
     },
     {
       "name": "La Déesse Éliatrope",
-      "href": "grande-deesse-eliatrope.html",
+      "href": "grande-deesse-eliatrope",
       "image": "../../assets/personnages/cartes/grande-deesse-eliatrope.webp",
       "classLabel": "ELIATROPE",
       "groups": [
@@ -1371,7 +1409,7 @@
     },
     {
       "name": "Lance Dur",
-      "href": "lancedur.html",
+      "href": "lancedur",
       "image": "../../assets/personnages/cartes/lancedur.webp",
       "classLabel": "FORGELANCE",
       "groups": [
@@ -1379,8 +1417,17 @@
       ]
     },
     {
+      "name": "Lance Originelle",
+      "href": "lance-originelle",
+      "image": "../../assets/personnages/cartes/lance-originelle.webp",
+      "classLabel": "Forgelance",
+      "groups": [
+        "Dieu"
+      ]
+    },
+    {
       "name": "Les Miss Moches",
-      "href": "les-miss-moches.html",
+      "href": "les-miss-moches",
       "image": "../../assets/personnages/cartes/les-miss-moches.webp",
       "classLabel": "Inconnue",
       "groups": [
@@ -1389,7 +1436,7 @@
     },
     {
       "name": "Lilotte",
-      "href": "lilotte.html",
+      "href": "lilotte",
       "image": "../../assets/personnages/cartes/lilotte.webp",
       "classLabel": "Ouginak",
       "groups": [
@@ -1398,7 +1445,7 @@
     },
     {
       "name": "Lokus",
-      "href": "lokus.html",
+      "href": "lokus",
       "image": "../../assets/personnages/cartes/lokus.webp",
       "classLabel": "Mechasme",
       "groups": [
@@ -1407,7 +1454,7 @@
     },
     {
       "name": "Lou",
-      "href": "lou.html",
+      "href": "lou",
       "image": "../../assets/personnages/cartes/lou.webp",
       "classLabel": "Ouginak",
       "groups": [
@@ -1416,7 +1463,7 @@
     },
     {
       "name": "Luis",
-      "href": "luis.html",
+      "href": "luis",
       "image": "../../assets/personnages/cartes/luis.webp",
       "classLabel": "Shushu",
       "groups": [
@@ -1426,7 +1473,7 @@
     },
     {
       "name": "Madagaskan",
-      "href": "madagaskan.html",
+      "href": "madagaskan",
       "image": "../../assets/personnages/cartes/madagaskan.webp",
       "classLabel": "CRA",
       "groups": [
@@ -1435,7 +1482,7 @@
     },
     {
       "name": "Maskemane",
-      "href": "maskemane.html",
+      "href": "maskemane",
       "image": "../../assets/personnages/cartes/maskemane.webp",
       "classLabel": "Zobal",
       "groups": [
@@ -1445,7 +1492,7 @@
     },
     {
       "name": "Maude",
-      "href": "maude.html",
+      "href": "maude",
       "image": "../../assets/personnages/cartes/maude.webp",
       "classLabel": "Sram",
       "groups": [
@@ -1454,7 +1501,7 @@
     },
     {
       "name": "Médoroziam",
-      "href": "medoroziam.html",
+      "href": "medoroziam",
       "image": "../../assets/personnages/cartes/medoroziam.webp",
       "classLabel": "Démon",
       "groups": [
@@ -1463,7 +1510,7 @@
     },
     {
       "name": "Mina",
-      "href": "mina.html",
+      "href": "mina",
       "image": "../../assets/personnages/cartes/mina.webp",
       "classLabel": "Éliatrope",
       "groups": [
@@ -1472,7 +1519,7 @@
     },
     {
       "name": "Miranda",
-      "href": "miranda.html",
+      "href": "miranda",
       "image": "../../assets/personnages/cartes/miranda.webp",
       "classLabel": "Ecaflip",
       "groups": [
@@ -1481,7 +1528,7 @@
     },
     {
       "name": "Monsieur M",
-      "href": "monsieur-m.html",
+      "href": "monsieur-m",
       "image": "../../assets/personnages/cartes/monsieur-m.webp",
       "classLabel": "Inconnue",
       "groups": [
@@ -1490,7 +1537,7 @@
     },
     {
       "name": "Moon",
-      "href": "moon.html",
+      "href": "moon",
       "image": "../../assets/personnages/cartes/moon.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -1500,7 +1547,7 @@
     },
     {
       "name": "Mouche",
-      "href": "mouche.html",
+      "href": "mouche",
       "image": "../../assets/personnages/cartes/mouche.webp",
       "classLabel": "Crâ",
       "groups": [
@@ -1509,7 +1556,7 @@
     },
     {
       "name": "Moumoune Stroud",
-      "href": "moumoune-stroud.html",
+      "href": "moumoune-stroud",
       "image": "../../assets/personnages/cartes/moumoune-stroud.webp",
       "classLabel": "Enutrof",
       "groups": [
@@ -1518,7 +1565,7 @@
     },
     {
       "name": "Nimoda",
-      "href": "nimoda.html",
+      "href": "nimoda",
       "image": "../../assets/personnages/cartes/nimoda.webp",
       "classLabel": "OSAMODAS",
       "groups": [
@@ -1527,16 +1574,16 @@
     },
     {
       "name": "Nora",
-      "href": "nora.html",
+      "href": "nora",
       "image": "../../assets/personnages/cartes/nora.webp",
-      "classLabel": "Eliatrope",
+      "classLabel": "Éliatrope",
       "groups": [
-        "Eliatrope primordial"
+        "Éliatrope primordial"
       ]
     },
     {
       "name": "Nox",
-      "href": "nox.html",
+      "href": "nox",
       "image": "../../assets/personnages/cartes/nox.webp",
       "classLabel": "XELOR",
       "groups": [
@@ -1545,7 +1592,7 @@
     },
     {
       "name": "Ogrest",
-      "href": "ogrest.html",
+      "href": "ogrest",
       "image": "../../assets/personnages/cartes/ogrest.webp",
       "classLabel": "OGRE",
       "groups": [
@@ -1554,7 +1601,7 @@
     },
     {
       "name": "Otomaï",
-      "href": "otomai.html",
+      "href": "otomai",
       "image": "../../assets/personnages/cartes/otomai.webp",
       "classLabel": "Féca",
       "groups": [
@@ -1563,8 +1610,17 @@
       ]
     },
     {
+      "name": "Ombre",
+      "href": "ombre",
+      "image": "../../assets/personnages/cartes/ombre.webp",
+      "classLabel": "Multiman",
+      "groups": [
+        "Ennemis"
+      ]
+    },
+    {
       "name": "Ombrage",
-      "href": "ombrage.html",
+      "href": "ombrage",
       "image": "../../assets/personnages/cartes/ombrage.webp",
       "classLabel": "Shushu",
       "groups": [
@@ -1574,7 +1630,7 @@
     },
     {
       "name": "Orgonax",
-      "href": "orgonax.html",
+      "href": "orgonax",
       "image": "../../assets/personnages/cartes/orgonax.webp",
       "classLabel": "Mechasme",
       "groups": [
@@ -1583,18 +1639,18 @@
     },
     {
       "name": "Oropo",
-      "href": "oropo.html",
+      "href": "oropo",
       "image": "../../assets/personnages/cartes/oropo.webp",
       "classLabel": "ELIOTROPE",
       "groups": [
         "Ennemis",
         "Fratrie",
-        "Eliotropes"
+        "Éliotropes"
       ]
     },
     {
       "name": "Pandiego de la Vega",
-      "href": "pandiego-de-la-vega.html",
+      "href": "pandiego-de-la-vega",
       "image": "../../assets/personnages/cartes/pandiego-de-la-vega.webp",
       "classLabel": "Pandawa",
       "groups": [
@@ -1603,7 +1659,7 @@
     },
     {
       "name": "Pandora",
-      "href": "pandora.html",
+      "href": "pandora",
       "image": "../../assets/personnages/cartes/pandora.webp",
       "classLabel": "Voyageur temporel",
       "groups": [
@@ -1612,7 +1668,7 @@
     },
     {
       "name": "Percimol",
-      "href": "percimol.html",
+      "href": "percimol",
       "image": "../../assets/personnages/cartes/percimol.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -1622,16 +1678,16 @@
     },
     {
       "name": "Phaeris le puissant",
-      "href": "phaeris.html",
+      "href": "phaeris",
       "image": "../../assets/personnages/cartes/phaeris.webp",
-      "classLabel": "Dragon eliatrope",
+      "classLabel": "Dragon éliatrope",
       "groups": [
-        "Eliatrope primordial"
+        "Éliatrope primordial"
       ]
     },
     {
       "name": "Pin de Percedal",
-      "href": "pin-de-percedal.html",
+      "href": "pin-de-percedal",
       "image": "../../assets/personnages/cartes/pin-de-percedal.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1640,7 +1696,7 @@
     },
     {
       "name": "Poo",
-      "href": "poo.html",
+      "href": "poo",
       "image": "../../assets/personnages/cartes/poo.webp",
       "classLabel": "PANDAWA",
       "groups": [
@@ -1650,7 +1706,7 @@
     },
     {
       "name": "Prince Adale",
-      "href": "prince-adale.html",
+      "href": "prince-adale",
       "image": "../../assets/personnages/cartes/prince-adale.webp",
       "classLabel": "Steamer",
       "groups": [
@@ -1659,7 +1715,7 @@
     },
     {
       "name": "Prince de Brakmar",
-      "href": "prince-de-brakmar.html",
+      "href": "prince-de-brakmar",
       "image": "../../assets/personnages/cartes/prince-de-brakmar.webp",
       "classLabel": "Sram",
       "groups": [
@@ -1667,8 +1723,18 @@
       ]
     },
     {
+      "name": "Prosperus Elementor",
+      "href": "prosperus-elementor",
+      "image": "../../assets/personnages/cartes/prosperus-elementor.webp",
+      "classLabel": "Huppermage",
+      "groups": [
+        "Héros",
+        "Mythe & légende"
+      ]
+    },
+    {
       "name": "Qilby",
-      "href": "qilby.html",
+      "href": "qilby",
       "image": "../../assets/personnages/cartes/qilby.webp",
       "classLabel": "ELIATROPE",
       "groups": [
@@ -1678,7 +1744,7 @@
     },
     {
       "name": "Rasha",
-      "href": "rasha.html",
+      "href": "rasha",
       "image": "../../assets/personnages/cartes/rasha.webp",
       "classLabel": "Démon",
       "groups": [
@@ -1687,7 +1753,7 @@
     },
     {
       "name": "Razortemps",
-      "href": "razortemps.html",
+      "href": "razortemps",
       "image": "../../assets/personnages/cartes/razortemps.webp",
       "classLabel": "INCONNUE",
       "groups": [
@@ -1696,7 +1762,7 @@
     },
     {
       "name": "Reines de Bonta",
-      "href": "reines-de-bonta.html",
+      "href": "reines-de-bonta",
       "image": "../../assets/personnages/cartes/reines-de-bonta.webp",
       "classLabel": "Inconnue",
       "groups": [
@@ -1705,7 +1771,7 @@
     },
     {
       "name": "Remington Smisse",
-      "href": "remington-smisse.html",
+      "href": "remington-smisse",
       "image": "../../assets/personnages/cartes/remington-smisse.webp",
       "classLabel": "Roublard",
       "groups": [
@@ -1714,18 +1780,18 @@
     },
     {
       "name": "Ripulse",
-      "href": "ripulse.html",
+      "href": "ripulse",
       "image": "../../assets/personnages/cartes/ripulse.webp",
-      "classLabel": "Eliotrope",
+      "classLabel": "Éliotrope",
       "groups": [
         "Ennemis",
         "Fratrie",
-        "Eliotropes"
+        "Éliotropes"
       ]
     },
     {
       "name": "Roi Osamodas",
-      "href": "roi-osamodas.html",
+      "href": "roi-osamodas",
       "image": "../../assets/personnages/cartes/roi-osamodas.webp",
       "classLabel": "Osamodas",
       "groups": [
@@ -1734,7 +1800,7 @@
     },
     {
       "name": "Roi Sheran Sharm",
-      "href": "roi-sheran-sharm.html",
+      "href": "roi-sheran-sharm",
       "image": "../../assets/personnages/cartes/roi-sheran-sharm.webp",
       "classLabel": "SADIDA",
       "groups": [
@@ -1743,7 +1809,7 @@
     },
     {
       "name": "Rotalstrom",
-      "href": "rotalstrom.html",
+      "href": "rotalstrom",
       "image": "../../assets/personnages/cartes/rotalstrom.webp",
       "classLabel": "Dragon",
       "groups": [
@@ -1753,7 +1819,7 @@
     },
     {
       "name": "Rubilax",
-      "href": "rubilax.html",
+      "href": "rubilax",
       "image": "../../assets/personnages/cartes/rubilax.webp",
       "classLabel": "SHUSHU",
       "groups": [
@@ -1762,7 +1828,7 @@
     },
     {
       "name": "Ruel Stroud",
-      "href": "ruel-stroud.html",
+      "href": "ruel-stroud",
       "image": "../../assets/personnages/cartes/ruel-stroud.webp",
       "classLabel": "ENUTROF",
       "groups": [
@@ -1771,7 +1837,7 @@
     },
     {
       "name": "Rushu",
-      "href": "rushu.html",
+      "href": "rushu",
       "image": "../../assets/personnages/cartes/rushu.webp",
       "classLabel": "DÉMON",
       "groups": [
@@ -1781,27 +1847,27 @@
     },
     {
       "name": "Shinonomé",
-      "href": "shinonome.html",
+      "href": "shinonome",
       "image": "../../assets/personnages/cartes/shinonome.webp",
-      "classLabel": "Dragon eliatrope",
+      "classLabel": "Dragon éliatrope",
       "groups": [
-        "Eliatrope primordial"
+        "Éliatrope primordial"
       ]
     },
     {
       "name": "Sidaire",
-      "href": "sidaire.html",
+      "href": "sidaire",
       "image": "../../assets/personnages/cartes/sidaire.webp",
-      "classLabel": "Eliotrope",
+      "classLabel": "Éliotrope",
       "groups": [
         "Ennemis",
         "Fratrie",
-        "Eliotropes"
+        "Éliotropes"
       ]
     },
     {
       "name": "Simone",
-      "href": "simone.html",
+      "href": "simone",
       "image": "../../assets/personnages/cartes/simone.webp",
       "classLabel": "Osamodas",
       "groups": [
@@ -1810,7 +1876,7 @@
     },
     {
       "name": "Sipho",
-      "href": "sipho.html",
+      "href": "sipho",
       "image": "../../assets/personnages/cartes/sipho.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -1820,7 +1886,7 @@
     },
     {
       "name": "Terrakourial",
-      "href": "terrakourial.html",
+      "href": "terrakourial",
       "image": "../../assets/personnages/cartes/terrakourial.webp",
       "classLabel": "DRAGON",
       "groups": [
@@ -1829,7 +1895,7 @@
     },
     {
       "name": "Toross Mordal",
-      "href": "toross-mordal.html",
+      "href": "toross-mordal",
       "image": "../../assets/personnages/cartes/toross-mordal.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1838,7 +1904,7 @@
     },
     {
       "name": "Toxine",
-      "href": "toxine.html",
+      "href": "toxine",
       "image": "../../assets/personnages/cartes/toxine.webp",
       "classLabel": "Sram",
       "groups": [
@@ -1848,7 +1914,7 @@
     },
     {
       "name": "Tristepin de Percedal",
-      "href": "tristepin.html",
+      "href": "tristepin",
       "image": "../../assets/personnages/cartes/tristepin.webp",
       "classLabel": "IOP",
       "groups": [
@@ -1858,7 +1924,7 @@
     },
     {
       "name": "Uk’Not’Allag",
-      "href": "uk-not-allag.html",
+      "href": "uk-not-allag",
       "image": "../../assets/personnages/cartes/uk-not-allag.webp",
       "classLabel": "SHUSHU",
       "groups": [
@@ -1868,7 +1934,7 @@
     },
     {
       "name": "Ush Galesh",
-      "href": "ush-galesh.html",
+      "href": "ush-galesh",
       "image": "../../assets/personnages/cartes/ush-galesh.webp",
       "classLabel": "ÉCAFLIP",
       "groups": [
@@ -1878,7 +1944,7 @@
     },
     {
       "name": "Vampyro",
-      "href": "vampyro.html",
+      "href": "vampyro",
       "image": "../../assets/personnages/cartes/vampyro.webp",
       "classLabel": "Iop",
       "groups": [
@@ -1887,7 +1953,7 @@
     },
     {
       "name": "Wa Wabbit",
-      "href": "wa-wabbit.html",
+      "href": "wa-wabbit",
       "image": "../../assets/personnages/cartes/wa-wabbit.webp",
       "classLabel": "Monstre",
       "groups": [
@@ -1897,7 +1963,7 @@
     },
     {
       "name": "Xav le Boulanger",
-      "href": "xav-le-boulanger.html",
+      "href": "xav-le-boulanger",
       "image": "../../assets/personnages/cartes/xav-le-boulanger.webp",
       "classLabel": "Inconnue",
       "groups": [
@@ -1906,7 +1972,7 @@
     },
     {
       "name": "Yrehn",
-      "href": "yrehn.html",
+      "href": "yrehn",
       "image": "../../assets/personnages/cartes/yrehn.webp",
       "classLabel": "OSAMODAS",
       "groups": [
@@ -1915,7 +1981,7 @@
     },
     {
       "name": "Yugo",
-      "href": "yugo.html",
+      "href": "yugo",
       "image": "../../assets/personnages/cartes/yugo.webp",
       "classLabel": "ELIATROPE",
       "groups": [
@@ -2005,6 +2071,16 @@
     indicator.textContent = 'Scroll';
     rule.appendChild(indicator);
   };
-  const init = () => { updateHeroNavigation(); linkInfoFilters(); initBackToTop(); initCharacterBiographyMode(); createRelatedPanel(); createCrossGroupPanel(); initBiographyScrollIndicator(); initBiographyScrollFade(); };
+  const createCharacterIndexBackLink = () => {
+    if (biographyMode()) return;
+    const main = document.querySelector('.character-main');
+    if (!main || main.querySelector('.character-index-back-link')) return;
+    const link = document.createElement('a');
+    link.className = 'back-link character-index-back-link';
+    link.href = 'personnages';
+    link.textContent = "Retour à l'index des personnages";
+    main.appendChild(link);
+  };
+  const init = () => { updateHeroNavigation(); linkInfoFilters(); initBackToTop(); initCharacterBiographyMode(); createRelatedPanel(); createCrossGroupPanel(); createCharacterIndexBackLink(); initBiographyScrollIndicator(); initBiographyScrollFade(); };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();
 })();

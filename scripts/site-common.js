@@ -7,31 +7,31 @@
   const rootUrl = new URL(document.currentScript ? "../" : "./", document.currentScript ? document.currentScript.src : window.location.href);
 
   const links = [
-    { label: "L'Univers", href: "pages/histoire/histoire-krosmoz.html", match: "/pages/histoire/" },
-    { label: "À découvrir", href: "pages/chronologies/oeuvres.html", match: "/pages/chronologies/oeuvres.html" },
-    { label: "Personnages", href: "pages/personnages/personnages.html", match: "/pages/personnages/" },
+    { label: "L'Univers", href: "pages/histoire/histoire-krosmoz", match: "/pages/histoire/" },
+    { label: "À découvrir", href: "pages/chronologies/oeuvres", match: "/pages/chronologies/oeuvres" },
+    { label: "Personnages", href: "pages/personnages/personnages", match: "/pages/personnages/" },
     {
       label: "Chronologie",
       items: [
-        { label: "Histoire", href: "pages/chronologies/chronologie-historique.html" },
-        { label: "Œuvre", href: "pages/chronologies/chronologie-oeuvres.html" }
+        { label: "Histoire", href: "pages/chronologies/chronologie-historique" },
+        { label: "Œuvre", href: "pages/chronologies/chronologie-oeuvres" }
       ],
       match: [
-        "/pages/chronologies/chronologie-historique.html",
-        "/pages/chronologies/chronologie-oeuvres.html"
+        "/pages/chronologies/chronologie-historique",
+        "/pages/chronologies/chronologie-oeuvres"
       ]
     },
-    { label: "Régions", href: "pages/regions/regions.html", match: "/pages/regions/" },
-    { label: "Lexique", href: "pages/lexique/lexique.html", match: "/pages/lexique/" },
-    { label: "Jeux", href: "pages/jeux/jeux.html", match: "/pages/jeux/" },
+    { label: "Régions", href: "pages/regions/regions", match: "/pages/regions/" },
+    { label: "Lexique", href: "pages/lexique/lexique", match: "/pages/lexique/" },
+    { label: "Jeux", href: "pages/jeux/jeux", match: "/pages/jeux/" },
     {
       label: "Médias",
       items: [
-        { label: "Arbre des affinités", href: "pages/media/arbre-affinites.html" }
+        { label: "Arbre des affinités", href: "pages/media/arbre-affinites" }
       ],
       match: "/pages/media/"
     },
-    { label: "Contactez-nous", href: "pages/contact/contact.html", match: "/pages/contact/" }
+    { label: "Contactez-nous", href: "pages/contact/contact", match: "/pages/contact/" }
   ];
 
   const socialLinks = [
@@ -94,7 +94,7 @@
       header.dataset.ready = "true";
       header.innerHTML = `
   <div class="site-topbar">
-    <a class="brand" href="${relativeFromPage("index.html")}" aria-label="Univers Krosmoz">
+    <a class="brand" href="${relativeFromPage("")}" aria-label="Univers Krosmoz">
       <img src="${relativeFromPage("assets/logo_krosmoz.webp")}" alt="">
       <span>Univers Krosmoz</span>
     </a>

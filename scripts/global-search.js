@@ -8,147 +8,371 @@
     {
       title: "Accueil",
       type: "Page",
-      href: "index.html",
+      href: "",
       summary: "Point d'entree vers l'histoire, les personnages, les chronologies et le lexique du Krosmoz.",
       keywords: "univers krosmoz dofus wakfu waven accueil"
     },
     {
       title: "Personnages",
       type: "Page",
-      href: "pages/personnages/personnages.html",
+      href: "pages/personnages/personnages",
       summary: "Index des personnages majeurs du Krosmoz avec filtres par classe, groupe et univers.",
       keywords: "yugo adamai tristepin evangelyne ruel nox qilby oropo personnages"
     },
     {
       title: "Histoire du Krosmoz",
       type: "Histoire",
-      href: "pages/histoire/histoire-krosmoz.html",
+      href: "pages/histoire/histoire-krosmoz",
       summary: "Fil conducteur des grandes ères du Krosmoz, depuis les origines jusqu'à l’ère du Waven.",
       keywords: "origines âge primitif dofus wakfu waven chaos ogrest histoire"
     },
     {
       title: "Origines",
       type: "Histoire",
-      href: "pages/histoire/histoire-origines.html",
+      href: "pages/histoire/histoire-origines",
       summary: "Naissance du Krosmoz, forces primordiales et premiers fondements du monde.",
-      keywords: "origines krosmoz grand dragon grande deesse éliatrope stasis wakfu"
+      keywords: "origines krosmoz grand dragon grande déesse éliatrope stasis wakfu"
     },
     {
       title: "Âge des Dofus",
       type: "Histoire",
-      href: "pages/histoire/histoire-age-des-dofus.html",
+      href: "pages/histoire/histoire-age-des-dofus",
       summary: "Epoque du Monde des Douze, des Dofus primordiaux et des grandes nations.",
       keywords: "dofus monde des douze bonta brakmar amakna sufokia"
     },
     {
       title: "Chaos d'Ogrest",
       type: "Histoire",
-      href: "pages/histoire/histoire-chaos-ogrest.html",
+      href: "pages/histoire/histoire-chaos-ogrest",
       summary: "Cataclysme provoque par Ogrest et bouleversements majeurs du Monde des Douze.",
       keywords: "ogrest chaos dathura mont zinit dofus"
     },
     {
       title: "Ère du Wakfu",
       type: "Histoire",
-      href: "pages/histoire/histoire-ere-du-wakfu.html",
+      href: "pages/histoire/histoire-ere-du-wakfu",
       summary: "Periode de la Confrerie du Tofu et des aventures de Yugo.",
-      keywords: "wakfu yugo confrerie tofu éliatrope nox qilby"
+      keywords: "wakfu yugo confrérie tofu éliatrope nox qilby"
     },
     {
       title: "Ère du Waven",
       type: "Histoire",
-      href: "pages/histoire/histoire-ere-du-waven.html",
+      href: "pages/histoire/histoire-ere-du-waven",
       summary: "Le monde englouti et les suites des grands bouleversements du Krosmoz.",
       keywords: "waven monde englouti krosmoz"
     },
     {
       title: "Chronologie historique",
       type: "Chronologie",
-      href: "pages/chronologies/chronologie-historique.html",
+      href: "pages/chronologies/chronologie-historique",
       summary: "Frise des grands événements du Krosmoz.",
       keywords: "événements timeline âge dofus wakfu waven ogrest"
     },
     {
       title: "Chronologie des œuvres",
       type: "Chronologie",
-      href: "pages/chronologies/chronologie-oeuvres.html",
+      href: "pages/chronologies/chronologie-oeuvres",
       summary: "Parcours des séries, jeux, mangas, webtoons et autres œuvres liées au Krosmoz.",
-      keywords: "œuvres ankama wakfu dofus waven manga serie webtoon"
+      keywords: "œuvres ankama wakfu dofus waven manga série webtoon"
     },
     {
       title: "Lexique",
       type: "Lexique",
-      href: "pages/lexique/lexique.html",
+      href: "pages/lexique/lexique",
       summary: "Definitions des lieux, peuples, energies, objets, entites et monstres du Krosmoz.",
       keywords: "lexique definitions wakfu stasis dofus shushu"
     },
     {
       title: "Régions",
       type: "Région",
-      href: "pages/regions/regions.html",
+      href: "pages/regions/regions",
       summary: "Index des régions majeures du Krosmoz, des plans divins aux terres du Monde des Douze.",
-      keywords: "régions lieux monde des douze incarnam necromonde amakna astrub bonta brakmar frigost sufokia pandala osavora enutrosor"
+      keywords: "régions lieux monde des douze mont zinit plan materiel ether arbre vagabonds pyramide ocre incarnam externam nécromonde amakna domaine sauvage kolizeum kolizéum royaume sadida montagnes koalaks kelba astrub cania bibliotemple mer d'asse ile brumes ile rok ile wabbits vulkania ile nowel crocuzko corcuzko ile minotoror bonta foire trool brakmar katrepat frigost royaume chuchoku sufokia abysses bilbyza pandala pandalousie shukrute srambad osavora enutrosor dimension obscure nimotopia valonia ereboria"
+    },
+    {
+      title: "Plan Matériel",
+      type: "Région",
+      href: "pages/regions/plan-materiel",
+      summary: "Immense espace physique du Krosmoz, composé de galaxies, de systèmes solaires, de planètes et de mondes habités comme le Monde des Douze.",
+      keywords: "plan materiel monde physique krosmoz galaxies systemes solaires planetes monde des douze dofus primordiaux wakfu terraformation"
+    },
+    {
+      title: "Mont Zinit",
+      type: "Région",
+      href: "pages/regions/mont-zinit",
+      summary: "Plus haute montagne du Monde des Douze, dissimulant le Vaisseau Zinit et liée aux Éliatropes, à Ogrest et au Chaos d’Ogrest.",
+      keywords: "mont zinit vaisseau zinit ogrest dathura chaos ogrest yugo tristepin otomai goultard éliatrope dofus éliatropes plage zinit slek smare phorreur shukrute"
+    },
+    {
+      title: "Ether",
+      type: "Région",
+      href: "pages/regions/ether",
+      summary: "Plan Éthéré entre le Plan Astral et le Plan Matériel, espace de transition abritant la Pyramide Ocre et l’Arbre des Vagabonds.",
+      keywords: "ether plan ethere plan astral plan materiel lumes lemures pyramide ocre arbre des vagabonds prosperus bivoak kaliptus"
+    },
+    {
+      title: "Arbre des Vagabonds",
+      type: "Région",
+      href: "pages/regions/arbre-vagabonds",
+      summary: "Immense Kaliptus perdu au cœur de l’Ether, refuge mystique et halte protectrice pour les voyageurs du Krosmoz.",
+      keywords: "arbre des vagabonds ether kaliptus grand arbre bivoak koalak voyageurs dimensions refuge krosmoz"
+    },
+    {
+      title: "Pyramide Ocre",
+      type: "Région",
+      href: "pages/regions/pyramide-ocre",
+      summary: "Structure mystique dérivant dans l’Ether, construite par Prosperus Elementor afin d’y sceller une Particule de Vide.",
+      keywords: "pyramide ocre ether prosperus elementor particule de vide balance krosmique omnirune huppermage dame jhessica saharach portail"
+    },
+    {
+      title: "Montagnes des Koalaks",
+      type: "Région",
+      href: "pages/regions/montagnes-koalaks",
+      summary: "Massif sauvage du continent amaknéen, habité par les Koalaks et marqué par les forêts de Kaliptus, les Dragodindes et une faune incontrôlable.",
+      keywords: "montagnes koalaks koalak kaliptus amakna canyon sauvage cimetiere primitif lacs enchantes foret kaliptus village eleveurs dragodindes crocodailles"
+    },
+    {
+      title: "Foire du Trool",
+      type: "Région",
+      href: "pages/regions/foire-du-trool",
+      summary: "Immense fête foraine de Cania créée par Léonzi Trool, célèbre pour ses attractions, ses jeux, le Gladiatrool et son accès au Monde de Nowel.",
+      keywords: "foire trool foire du trool cania leonzi trool gladiatrool monde nowel attractions roulette bouftou course larves tofu smash koin koins boostache academie trool bonta"
+    },
+    {
+      title: "Plaines de Cania",
+      type: "Région",
+      href: "pages/regions/cania",
+      summary: "Vaste territoire situé entre Bonta, Astrub et les Landes de Sidimote, composé de plaines, de massifs rocheux, de villages isolés et de zones sauvages.",
+      keywords: "cania plaines de cania lac champs porkass pics massif landes bois litneg bonta astrub sidimote kanigs dopeuls brigandins foire trool blops vetaurans malles outillees"
+    },
+    {
+      title: "Bibliotemple",
+      type: "Région",
+      href: "pages/regions/bibliotemple",
+      summary: "Sanctuaire consacré aux Mérydes dans la Plaine des Porkass, abritant l’Almanax et d’immenses archives spirituelles du Monde des Douze.",
+      keywords: "bibliotemple merydes mérydes almanax mage ax theodoran ax yacinthe ax vermo xanamla jenry hones porkass saisons sanctuaire calendrier"
+    },
+    {
+      title: "Domaine Sauvage",
+      type: "Région",
+      href: "pages/regions/domaine-sauvage",
+      summary: "Immense pâturage vivant et hostile, peuplé de Bouftous, de Bworks, de ruines anciennes et de mystères non résolus.",
+      keywords: "domaine sauvage paturage bouftous bworks bworkball boufbawl ruines mysteres enigmes monde des douze faune hostile"
+    },
+    {
+      title: "Kolizéum",
+      type: "Région",
+      href: "pages/regions/kolizeum",
+      summary: "Infrastructure majeure du PvP dans Dofus, dédiée aux combats équilibrés, aux ligues, à la cote et aux Kolizétons.",
+      keywords: "kolizeum kolizéum pvp dofus combat joueurs trois contre trois cote ligues saisons kolizetons kolizétons galets arene arène tactique"
+    },
+    {
+      title: "Royaume Sadida",
+      type: "Région",
+      href: "pages/regions/royaume-sadida",
+      summary: "Royaume apparu après le Chaos d’Ogrest, construit autour de l’Arbre de Vie et marqué par la famille Sheran Sharm, Nox, les Nécromes et la Corruption.",
+      keywords: "royaume sadida arbre de vie arbre de mort sheran sharm amalia armant aurora yugo nox wakfu harebourg ogrest nécromes eliasphere eliocalypse corruption stasis cavalier"
+    },
+    {
+      title: "Île des Brumes",
+      type: "Région",
+      href: "pages/regions/ile-des-brumes",
+      summary: "Île énigmatique entourée de légendes maritimes, de ruines antiques, de vestiges éliatropes et de secrets liés à Nox.",
+      keywords: "ile des brumes brumes nox xelor éliatropes vestiges éliatropes nuit ebene ruines antiques brouillard ile inconnue donjons village maritime"
+    },
+    {
+      title: "Île de Rok",
+      type: "Région",
+      href: "pages/regions/ile-de-rok",
+      summary: "Sanctuaire huppermage isolé après les persécutions de l’an 567, abritant le Temple de l’Équilibre, une école d’Huppermagie et des savoirs magiques.",
+      keywords: "ile de rok rok huppermages huppermagie temple equilibre forgemagie amakna gobernic chuchoteur chulien prosperus elementor chaos ogrest portail colosse pierre"
+    },
+    {
+      title: "Royaume Chuchoku",
+      type: "Région",
+      href: "pages/regions/royaume-chuchoku",
+      summary: "Royaume fondé par les Chuchoteurs sur la carcasse d’un gigantesque Craqueleur, entre falaises minérales, Mansots, Gloursons et échos de Frigost.",
+      keywords: "royaume chuchoku chuchoteurs craqueleur osamodas osamosa inglorium mansots gloursons frigost mont torrideau banquise ecosystème carcasse colosse"
+    },
+    {
+      title: "Kelba",
+      type: "Région",
+      href: "pages/regions/kelba",
+      summary: "Territoire indépendant entre Amakna et Astrub, réputé pour son marché, ses Corbacs, ses Kroapules, Chez Kabrok et les attaques de bandits.",
+      keywords: "kelba amakna astrub clan magik riktus kroapules corbacs kabrok miranda chez kabrok corbeau noir guilde chasseurs landes pics port contrebandiers marchands"
     },
     {
       title: "Incarnam",
       type: "Région",
-      href: "pages/regions/incarnam.html",
+      href: "pages/regions/incarnam",
       summary: "Plan spirituel suspendu au-dessus du Monde des Douze, où les âmes viennent s'incarner ou se réincarner avant de rejoindre le monde matériel.",
       keywords: "incarnam prysmaradoth ames incarnation reincarnation astrub kardorim hargnok milimulou ternette nhin kerubims kerubim crepin"
     },
     {
+      title: "Externam",
+      type: "Région",
+      href: "pages/regions/externam",
+      summary: "Royaume des morts où reposent les âmes ayant achevé leur cycle de réincarnation dans le Krosmoz.",
+      keywords: "externam thanatena royaume morts ames reincarnation shukrute frigost belvedere ilyzaelle sentinelle eternelle hall des valeureux"
+    },
+    {
       title: "Nécromonde",
       type: "Région",
-      href: "pages/regions/necromonde.html",
+      href: "pages/regions/necromonde",
       summary: "Planète mourante vidée de son Wakfu, royaume de Toross Mordal et prison de la Grande Déesse Éliatrope.",
-      keywords: "necromonde toross mordal necromes wakfu grande deesse eliatrope nora efrim dofus planete mourante"
+      keywords: "nécromonde toross mordal nécromes wakfu grande déesse éliatrope nora efrim dofus planete mourante"
+    },
+    {
+      title: "Srambad",
+      type: "Région",
+      href: "pages/regions/srambad",
+      summary: "Cité du mal associée au Dieu Sram, royaume des criminels, assassins et conspirateurs.",
+      keywords: "srambad sram cite du mal reine des voleurs gein catacombres necrotiques haut tenebreux cour sombre venome dieu sram"
     },
     {
       title: "Osavora",
       type: "Région",
-      href: "pages/regions/osavora.html",
+      href: "pages/regions/osavora",
       summary: "Dimension sauvage liée au Dieu Osamodas, située sur le dos de Gargandyas et dominée par la loi de la prédation.",
       keywords: "osavora osamodas gargandyas osavane rhoarims zarbivores kabombz osamandyas reprouve"
     },
     {
       title: "Enutrosor",
       type: "Région",
-      href: "pages/regions/enutrosor.html",
+      href: "pages/regions/enutrosor",
       summary: "Royaume du Dieu Enutrof, coffre-fort céleste rempli d'or, de kamas, de mines et de confréries vouées à la richesse.",
-      keywords: "enutrosor enutrof kamas or tresor quatrieme dimension koffrefors phorreurs phossile roi nidas reine des voleurs"
+      keywords: "enutrosor enutrof kamas or trésor quatrieme dimension koffrefors phorreurs phossile roi nidas reine des voleurs"
+    },
+    {
+      title: "Dimension Obscure",
+      type: "Région",
+      href: "pages/regions/dimension-obscure",
+      summary: "Dimension hostile plongée dans les ténèbres, royaume d’Ombre, des Obscuranti, de l’Obscurantis et de la Pyramide d’Ombre.",
+      keywords: "dimension obscure ombre ereziah melkewel obscuranti obscurantis pyramide d'ombre multiman harebourg frigost sylargh tenebres corruption plan hostile"
+    },
+    {
+      title: "Katrepat",
+      type: "Région",
+      href: "pages/regions/katrepat",
+      summary: "Village maudit des Landes de Sidimote, plongé dans une nuit éternelle et marqué par les Vampyres, les goules et les Shushus.",
+      keywords: "katrepat landes sidimote vampyre vampyro ombrage anerice shushu shushess goules rubilaxia chauffes souris"
+    },
+    {
+      title: "Île aux Moines",
+      type: "Région",
+      href: "pages/regions/ile-aux-moines",
+      summary: "Terre fermée entre Brâkmar et Sufokia, surnommée le Couvent Tripotant et hantée par des fantômes, des moines hostiles et des malédictions.",
+      keywords: "ile aux moines couvent tripotant dhan sominik kraust nonne sliptorium ratacombes vignoble ignoble viticultistes sydonia brakmar sufokia fantomes"
+    },
+    {
+      title: "Pandalousie",
+      type: "Région",
+      href: "pages/regions/pandalousie",
+      summary: "Contrée légendaire pandalienne, paradis caché de bambous, de sérénité et d’abondance revenu des brumes durant l’ère du Wakfu.",
+      keywords: "pandalousie pandala pandalien ginju pouddah shun gokong zang zang bambou lait de bambou plantalas pandissidans fleopards"
+    },
+    {
+      title: "Mer d'Asse",
+      type: "Région",
+      href: "pages/regions/mer-dasse",
+      summary: "Grande étendue maritime du Monde des Douze reliant Amakna, Sufokia, Pandala, Saharach, l’Île de Moon et des mystères engloutis.",
+      keywords: "mer d'asse mer asse sufokia abysses temple éliotrope ile moon wabbits kartonpath pandala saharach aguabrial madrestam sarakech osakwa"
+    },
+    {
+      title: "Abysses de Sufokia",
+      type: "Région",
+      href: "pages/regions/abysses-sufokia",
+      summary: "Territoire englouti sous Sufokia, peuplé de ruines steamer, de Trithons, de créatures abyssales et de secrets antiques.",
+      keywords: "abysses sufokia abysse mer d'asse steamers technomagie scaphandre trithons rlyugluglu temple éliotrope ruines englouties muldos"
+    },
+    {
+      title: "Île des Wabbits",
+      type: "Région",
+      href: "pages/regions/ile-wabbits",
+      summary: "Archipel de la Mer d’Asse envahi par le Wa Wabbit, ancien royaume des Lenalds devenu un territoire de Cawottes, de laboratoires et de donjons absurdes.",
+      keywords: "ile wabbits wa wabbit lenalds cawotte madrestam lily myxomawose wobots tal kasha dofus ivoire weine potorose legumutants"
+    },
+    {
+      title: "Archipel de Vulkania",
+      type: "Région",
+      href: "pages/regions/vulkania",
+      summary: "Destination estivale volcanique ouverte entre Joullier et Fraouctor, liée à Grozilla, Grasmera, l'Agence Touriste et aux expéditions du Monde des Douze.",
+      keywords: "vulkania archipel vulkania grozilla grasmera agence touriste joullier fraouctor volcan sous marin dragons dragoeufs dragœufs ile nowel plages tropicales ete estivale"
+    },
+    {
+      title: "Île de Nowel",
+      type: "Région",
+      href: "pages/regions/ile-nowel",
+      summary: "Destination hivernale saisonnière au nord-ouest d’Amakna, liée à Nicolas Nowel, Papa Nowel, Grozilla, Grasmera et aux Krokilles.",
+      keywords: "ile nowel île nowel nicolas nowel papa nowel descendre javian amakna frigost djaul mer kantil grozilla grasmera krokilles novamaire neige hiver"
+    },
+    {
+      title: "Crocuzko",
+      type: "Région",
+      href: "pages/regions/crocuzko",
+      summary: "Île énigmatique absente des cartes amaknéennes, plongée dans une nuit éternelle et liée à des mystères temporels.",
+      keywords: "crocuzko corcuzko ile mystérieuse cartes amakneennes portails magiques voyage temps nuit eternelle panthéon cultes vestiges phénomènes temporels"
+    },
+    {
+      title: "Île du Minotoror",
+      type: "Région",
+      href: "pages/regions/ile-minotoror",
+      summary: "Île mystérieuse à l’ouest du continent amaknéen, connue pour le Labyrinthe du Minotoror, le Minotoror, le Minotot et les rumeurs autour du Dofus Pourpre.",
+      keywords: "ile minotoror île minotoror labyrinthe minotoror minotot dofus pourpre amakna sanctuaire antique dedale pièges salles secretes trésors"
+    },
+    {
+      title: "Ereboria",
+      type: "Région",
+      href: "pages/regions/ereboria",
+      summary: "Île maudite de l’Archipel de Valonia, dominée par un volcan et hantée par des morts-vivants liés à une ancienne malédiction.",
+      keywords: "ereboria valonia albuera selma reen morts vivants malediction bourreau des dieux nascherite ephèdre cire momore marteaux aigris nimbos volcan"
+    },
+    {
+      title: "Bilbyza",
+      type: "Région",
+      href: "pages/regions/bilbyza",
+      summary: "Île tropicale au sud de Sufokia, transformée par le Grand Glucide après le Chaos d’Ogrest et entièrement tournée vers la fête.",
+      keywords: "bilbyza sufokia gelee gelees gelax bilby king grand glucide chaos ogrest show gelax arene dansante palais marin gelaxieme dimension"
+    },
+    {
+      title: "Nimotopia",
+      type: "Région",
+      href: "pages/regions/nimotopia",
+      summary: "Île sanctuaire de Coqueline destinée à protéger les espèces animales et végétales les plus rares du Monde des Douze.",
+      keywords: "nimotopia coqueline sanctuaire animalier chassouilleurs animaux especes rares ile otomai osamodas refuge arche"
     },
     {
       title: "Jeux",
       type: "Page",
-      href: "pages/jeux/jeux.html",
+      href: "pages/jeux/jeux",
       summary: "Index des jeux du site : test de personnage et grand quiz aleatoire du Krosmoz.",
       keywords: "jeux quiz jeu personnage krosmoz questions score"
     },
     {
       title: "Grand quiz du Krosmoz",
       type: "Jeu",
-      href: "pages/jeux/quiz-krosmoz.html",
+      href: "pages/jeux/quiz-krosmoz",
       summary: "Quiz aleatoire avec questions sur les personnages, l'histoire, les lieux, les objets, les peuples et le lexique.",
       keywords: "quiz krosmoz questions aleatoire personnages histoire lieux dofus wakfu waven"
     },
     {
       title: "Jeu personnage",
       type: "Jeu",
-      href: "pages/jeux/jeu-personnage.html",
+      href: "pages/jeux/jeu-personnage",
       summary: "Test pour decouvrir quel personnage du Krosmoz vous ressemble le plus.",
       keywords: "jeu personnage personnage resultat yugo nox amalia tristepin"
     },
     {
       title: "À propos",
       type: "Page",
-      href: "pages/about/a-propos.html",
+      href: "pages/about/a-propos",
       summary: "Présentation du site Univers Krosmoz, de Zaki et des sources utilisées pour documenter les articles.",
       keywords: "a propos zaki sources ankama allskreen wiki role play dofus krosmoz otakia"
     },
     {
       title: "Contactez-nous",
       type: "Page",
-      href: "pages/contact/contact.html",
+      href: "pages/contact/contact",
       summary: "Formulaire de contact pour signaler une erreur, proposer une correction ou envoyer un message.",
       keywords: "contact message formulaire correction suggestion univers krosmoz"
     }
@@ -217,7 +441,7 @@
   };
 
   const buildCharacterEntries = async () => {
-    const doc = await readDocument("pages/personnages/personnages.html");
+    const doc = await readDocument("pages/personnages/personnages");
     return Array.from(doc.querySelectorAll(".character-card")).map((card) => {
       const title = card.querySelector("strong")?.textContent || card.querySelector("img")?.alt || "Personnage";
       const rôle = card.querySelector(".character-card-copy span")?.textContent || card.dataset.classLabel || "";
@@ -237,7 +461,7 @@
   };
 
   const buildLexiconEntries = async () => {
-    const doc = await readDocument("pages/lexique/lexique.html");
+    const doc = await readDocument("pages/lexique/lexique");
     return Array.from(doc.querySelectorAll(".lexicon-entry")).map((entry) => {
       const title = entry.querySelector("h2")?.textContent || "Entree du lexique";
       const category = entry.querySelector(".lexicon-entry-type")?.textContent || "Lexique";
@@ -246,7 +470,7 @@
       return {
         title,
         type: `Lexique - ${category}`,
-        href: absoluteHref(`pages/lexique/lexique.html?q=${encodeURIComponent(title)}#${slugify(title)}`),
+        href: absoluteHref(`pages/lexique/lexique?q=${encodeURIComponent(title)}#${slugify(title)}`),
         summary,
         searchText: normalize(`${title} ${category} ${entry.dataset.search || ""} ${summary}`)
       };
