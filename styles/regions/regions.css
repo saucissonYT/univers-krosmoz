@@ -258,39 +258,39 @@ body.regions-index-page .characters-rule::after {
   transition: transform 0.46s ease, filter 0.46s ease;
 }
 
-.region-card[href="krosmoz.html"] img {
+.region-card[href="krosmoz"] img {
   object-position: 48% 42%;
 }
 
-.region-card[href="inglorium.html"] img {
+.region-card[href="inglorium"] img {
   object-position: 50% 52%;
 }
 
-.region-card[href="monde-des-douze.html"] img {
+.region-card[href="monde-des-douze"] img {
   object-position: 50% 48%;
 }
 
-.region-card[href="mont-zinit.html"] img {
-  object-position: 34% 42%;
+.region-card[href="mont-zinit"] img {
+  object-position: 30% 40%;
 }
 
-.region-card[href="xelorium.html"] img {
+.region-card[href="xelorium"] img {
   object-position: 50% 48%;
 }
 
-.region-card[href="hormonde.html"] img {
+.region-card[href="hormonde"] img {
   object-position: 50% center;
 }
 
-.region-card[href="ecaflipus.html"] img {
+.region-card[href="ecaflipus"] img {
   object-position: 50% 52%;
 }
 
-.region-card[href="shukrute.html"] img {
+.region-card[href="shukrute"] img {
   object-position: 50% 48%;
 }
 
-.region-card[href="crocuzko.html"] img {
+.region-card[href="crocuzko"] img {
   object-position: 8% 78%;
 }
 

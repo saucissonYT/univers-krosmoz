@@ -1687,7 +1687,7 @@
     const topbar = document.querySelector(".site-topbar");
     const mediaMenu = topbar ? Array.from(topbar.querySelectorAll(".nav-dropdown")).find((dropdown) => {
       const button = dropdown.querySelector(".nav-link");
-      return button && /m[eé]dias/i.test(button.textContent || "");
+      return button && /(?:m[eé]dias|autres)/i.test(button.textContent || "");
     }) : null;
     const mediaMenuList = mediaMenu ? mediaMenu.querySelector(".nav-menu") : null;
     if (mediaMenuList && !mediaMenuList.querySelector('a[href*="galerie"]')) {

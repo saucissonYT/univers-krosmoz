@@ -327,8 +327,8 @@ body::after {
 }
 
 .top-nav { flex: 1; }
-.top-nav > a[href$="contact.html"],
-.top-nav > a[href$="pages/contact/contact.html"] { margin-left: auto; }
+.top-nav > a[href$="contact"],
+.top-nav > a[href$="pages/contact/contact"] { margin-left: auto; }
 
 /* mobile-nav:start */
 .mobile-nav-toggle {
@@ -454,8 +454,8 @@ body::after {
     bottom: 0.3rem;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] {
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] {
     margin-left: 0 !important;
   }
 

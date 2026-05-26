@@ -616,7 +616,7 @@ characters.push(
     name: 'Djaul',
     archetype: 'Le froid qui mord',
     href: '../personnages/djaul',
-    image: '../../assets/personnages/cartes/djaul.webp',
+    image: '../../assets/personnages/cartes/djaul-2026.webp',
     traits: ['Démon', 'Hiver', 'Ruse'],
     vector: { cœur: 0, action: 4, sagesse: 4, ambition: 5, ombre: 5, mystere: 4, liberte: 2, devoir: 1, chaos: 4, lien: 0 },
     text: "Vous avez l'art de frapper là où cela laisse une trace. Comme Djaul, votre intelligence peut devenir glaciale quand vous décidez de ne plus ménager personne."
@@ -700,6 +700,506 @@ characters.push(
     traits: ['Cœur', 'Calme', 'Volonté'],
     vector: { cœur: 5, action: 2, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
     text: "Vous n'avez pas besoin de brutalité pour tenir bon. Comme Simone, vous pouvez être doux, clair et beaucoup plus solide qu'on ne le croit."
+  },
+  {
+    id: 'agard',
+    name: 'Agard',
+    archetype: 'Le sens du terrain',
+    href: '../personnages/agard',
+    image: '../../assets/personnages/cartes/agard.webp',
+    traits: ['Instinct', 'Endurance', 'Sang-froid'],
+    vector: { cœur: 2, action: 4, sagesse: 3, ambition: 2, ombre: 2, mystere: 1, liberte: 4, devoir: 3, chaos: 2, lien: 2 },
+    text: "Vous avancez sans demander que le monde soit simple. Comme Agard, vous faites confiance au terrain, aux réflexes et à cette patience solide qui tient quand les choses deviennent rudes."
+  },
+  {
+    id: 'anathar',
+    name: 'Anathar',
+    archetype: 'Le miroir dangereux',
+    href: '../personnages/anathar',
+    image: '../../assets/personnages/cartes/anathar.webp',
+    traits: ['Shushu', 'Copie', 'Menace'],
+    vector: { cœur: 0, action: 4, sagesse: 3, ambition: 4, ombre: 5, mystere: 4, liberte: 3, devoir: 0, chaos: 5, lien: 1 },
+    text: "Vous savez retourner les forces des autres contre eux. Comme Anathar, vous comprenez vite les failles, les formes et les masques, avec une intensité qui impressionne autant qu'elle inquiète."
+  },
+  {
+    id: 'arty',
+    name: 'Arty',
+    archetype: 'L’élan pur',
+    href: '../personnages/arty',
+    image: '../../assets/personnages/cartes/arty.webp',
+    traits: ['Aventure', 'Cœur', 'Courage'],
+    vector: { cœur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 0, mystere: 2, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
+    text: "Vous gardez une part d'enfance même quand l'aventure devient sérieuse. Comme Arty, vous avancez avec curiosité, courage et un besoin sincère de croire aux rencontres."
+  },
+  {
+    id: 'atone',
+    name: 'Atone',
+    archetype: 'La présence sans éclat',
+    href: '../personnages/atone',
+    image: '../../assets/personnages/cartes/atone.webp',
+    traits: ['Calme', 'Retenue', 'Mystère'],
+    vector: { cœur: 2, action: 2, sagesse: 4, ambition: 2, ombre: 3, mystere: 4, liberte: 2, devoir: 3, chaos: 1, lien: 2 },
+    text: "Vous n'avez pas besoin d'occuper toute la scène. Comme Atone, vous pesez par le silence, l'observation et une distance qui cache plus de choses qu'elle n'en montre."
+  },
+  {
+    id: 'aurora',
+    name: 'Aurora',
+    archetype: 'La lumière obstinée',
+    href: '../personnages/aurora',
+    image: '../../assets/personnages/cartes/aurora.webp',
+    traits: ['Espoir', 'Clarté', 'Volonté'],
+    vector: { cœur: 5, action: 3, sagesse: 3, ambition: 2, ombre: 0, mystere: 2, liberte: 3, devoir: 4, chaos: 0, lien: 4 },
+    text: "Vous cherchez la lueur qui reste quand tout se ferme. Comme Aurora, vous portez une énergie claire, tenace, capable de faire avancer les autres sans les écraser."
+  },
+  {
+    id: 'balance-krosmique',
+    name: 'Balance Krosmique',
+    archetype: 'L’équilibre implacable',
+    href: '../personnages/balance-krosmique',
+    image: '../../assets/personnages/cartes/balance-krosmique.webp',
+    traits: ['Équilibre', 'Justice', 'Ordre'],
+    vector: { cœur: 2, action: 2, sagesse: 5, ambition: 2, ombre: 1, mystere: 5, liberte: 0, devoir: 5, chaos: 0, lien: 2 },
+    text: "Vous supportez mal les excès qui brisent l'ordre des choses. Comme la Balance Krosmique, vous cherchez la justesse, même lorsque cette justesse demande une froideur presque sacrée."
+  },
+  {
+    id: 'belladone',
+    name: 'Belladone',
+    archetype: 'Le charme vénéneux',
+    href: '../personnages/belladone',
+    image: '../../assets/personnages/cartes/belladone.webp',
+    traits: ['Séduction', 'Poison', 'Secret'],
+    vector: { cœur: 1, action: 3, sagesse: 3, ambition: 4, ombre: 5, mystere: 4, liberte: 4, devoir: 0, chaos: 4, lien: 1 },
+    text: "Vous savez que la douceur peut être une arme. Comme Belladone, vous avancez avec charme, patience et une part d'ombre qui préfère agir au bon moment."
+  },
+  {
+    id: 'bolgrot',
+    name: 'Bolgrot',
+    archetype: 'La fureur légendaire',
+    href: '../personnages/bolgrot',
+    image: '../../assets/personnages/cartes/bolgrot.webp',
+    traits: ['Dragon', 'Feu', 'Destin'],
+    vector: { cœur: 1, action: 5, sagesse: 3, ambition: 3, ombre: 3, mystere: 4, liberte: 3, devoir: 2, chaos: 5, lien: 1 },
+    text: "Vous portez une intensité que les autres n'oublient pas. Comme Bolgrot, votre puissance peut devenir une légende, surtout lorsqu'une émotion ancienne l'allume."
+  },
+  {
+    id: 'bordegann',
+    name: 'Bordegann',
+    archetype: 'La force de commandement',
+    href: '../personnages/bordegann',
+    image: '../../assets/personnages/cartes/bordegann.webp',
+    traits: ['Autorité', 'Combat', 'Tenacité'],
+    vector: { cœur: 2, action: 5, sagesse: 3, ambition: 4, ombre: 2, mystere: 1, liberte: 2, devoir: 4, chaos: 3, lien: 2 },
+    text: "Vous prenez naturellement de la place quand la situation l'exige. Comme Bordegann, vous avez une autorité directe, physique, faite pour tenir une ligne sous pression."
+  },
+  {
+    id: 'bouillon',
+    name: 'Bouillon',
+    archetype: 'La chaleur robuste',
+    href: '../personnages/bouillon',
+    image: '../../assets/personnages/cartes/bouillon.webp',
+    traits: ['Générosité', 'Force', 'Foyer'],
+    vector: { cœur: 5, action: 4, sagesse: 2, ambition: 1, ombre: 0, mystere: 0, liberte: 2, devoir: 3, chaos: 1, lien: 5 },
+    text: "Vous avez une manière simple et solide d'être là. Comme Bouillon, vous rassurez par la présence, l'énergie et une générosité qui ne cherche pas les grands discours."
+  },
+  {
+    id: 'bump',
+    name: 'Bump',
+    archetype: 'Le choc joyeux',
+    href: '../personnages/bump',
+    image: '../../assets/personnages/cartes/bump.webp',
+    traits: ['Énergie', 'Impulsion', 'Jeu'],
+    vector: { cœur: 3, action: 5, sagesse: 1, ambition: 2, ombre: 1, mystere: 0, liberte: 5, devoir: 1, chaos: 4, lien: 3 },
+    text: "Vous faites bouger les choses en entrant dans la pièce. Comme Bump, vous avez l'élan, l'humour et cette capacité à transformer une hésitation en mouvement."
+  },
+  {
+    id: 'cadence',
+    name: 'Cadence',
+    archetype: 'Le rythme maîtrisé',
+    href: '../personnages/cadence',
+    image: '../../assets/personnages/cartes/cadence.webp',
+    traits: ['Rythme', 'Maîtrise', 'Style'],
+    vector: { cœur: 3, action: 3, sagesse: 4, ambition: 3, ombre: 1, mystere: 2, liberte: 4, devoir: 2, chaos: 2, lien: 3 },
+    text: "Vous sentez quand accélérer et quand retenir. Comme Cadence, votre force vient d'un rythme intérieur précis, élégant, capable de donner forme au désordre."
+  },
+  {
+    id: 'chaille',
+    name: 'Chaille',
+    archetype: 'La loyauté rugueuse',
+    href: '../personnages/chaille',
+    image: '../../assets/personnages/cartes/chaille.webp',
+    traits: ['Fidélité', 'Endurance', 'Terre'],
+    vector: { cœur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 1, mystere: 0, liberte: 3, devoir: 4, chaos: 2, lien: 4 },
+    text: "Vous n'êtes pas toujours délicat, mais vous êtes fiable. Comme Chaille, votre attachement se voit dans les actes, dans l'endurance et dans la manière de rester malgré tout."
+  },
+  {
+    id: 'chene-mou',
+    name: 'Chêne Mou',
+    archetype: 'La mémoire enracinée',
+    href: '../personnages/chene-mou',
+    image: '../../assets/personnages/cartes/chene-mou.webp',
+    traits: ['Nature', 'Ancienneté', 'Territoire'],
+    vector: { cœur: 3, action: 3, sagesse: 5, ambition: 1, ombre: 2, mystere: 4, liberte: 1, devoir: 4, chaos: 2, lien: 3 },
+    text: "Vous avez quelque chose d'ancien et d'enraciné. Comme le Chêne Mou, vous protégez votre territoire, votre mémoire et ce qui pousse lentement mais profondément."
+  },
+  {
+    id: 'chevalier-justice',
+    name: 'Chevalier Justice',
+    archetype: 'La droiture masquée',
+    href: '../personnages/chevalier-justice',
+    image: '../../assets/personnages/cartes/chevalier-justice.webp',
+    traits: ['Justice', 'Devoir', 'Masque'],
+    vector: { cœur: 3, action: 4, sagesse: 4, ambition: 2, ombre: 1, mystere: 3, liberte: 1, devoir: 5, chaos: 0, lien: 3 },
+    text: "Vous aimez quand les choses ont une ligne claire. Comme le Chevalier Justice, vous pouvez cacher vos doutes derrière une mission, mais vous avancez pour remettre le monde d'aplomb."
+  },
+  {
+    id: 'cire-momore',
+    name: 'Cire Momore',
+    archetype: 'L’armure du serment',
+    href: '../personnages/cire-momore',
+    image: '../../assets/personnages/cartes/cire-momore.webp',
+    traits: ['Malédiction', 'Armure', 'Obsession'],
+    vector: { cœur: 1, action: 4, sagesse: 3, ambition: 4, ombre: 5, mystere: 5, liberte: 0, devoir: 4, chaos: 4, lien: 1 },
+    text: "Vous savez ce que signifie être lié à une idée trop longtemps. Comme Cire Momore, vous portez une armure symbolique, entre fidélité, malédiction et volonté de ne jamais céder."
+  },
+  {
+    id: 'coqueline',
+    name: 'Coqueline',
+    archetype: 'La tendresse espiègle',
+    href: '../personnages/coqueline',
+    image: '../../assets/personnages/cartes/coqueline.webp',
+    traits: ['Douceur', 'Malice', 'Lien'],
+    vector: { cœur: 5, action: 2, sagesse: 3, ambition: 1, ombre: 1, mystere: 1, liberte: 3, devoir: 2, chaos: 1, lien: 5 },
+    text: "Vous avez une douceur qui sait sourire au bon moment. Comme Coqueline, vous créez du lien avec légèreté, sans perdre cette petite malice qui rend les choses vivantes."
+  },
+  {
+    id: 'corbeau-noir',
+    name: 'Corbeau Noir',
+    archetype: 'L’ombre spectaculaire',
+    href: '../personnages/corbeau-noir',
+    image: '../../assets/personnages/cartes/corbeau-noir.webp',
+    traits: ['Ombre', 'Panache', 'Secret'],
+    vector: { cœur: 2, action: 4, sagesse: 3, ambition: 4, ombre: 5, mystere: 4, liberte: 4, devoir: 1, chaos: 4, lien: 2 },
+    text: "Vous aimez que le mystère ait de l'allure. Comme le Corbeau Noir, vous pouvez agir dans l'ombre tout en laissant une signature impossible à ignorer."
+  },
+  {
+    id: 'desperia',
+    name: 'Despéria',
+    archetype: 'La noblesse inquiète',
+    href: '../personnages/desperia',
+    image: '../../assets/personnages/cartes/desperia.webp',
+    traits: ['Noblesse', 'Sensibilité', 'Devoir'],
+    vector: { cœur: 4, action: 2, sagesse: 4, ambition: 3, ombre: 1, mystere: 2, liberte: 1, devoir: 5, chaos: 0, lien: 4 },
+    text: "Vous portez vos responsabilités avec une sensibilité réelle. Comme Despéria, vous cherchez la tenue, la dignité et la bonne décision, même quand l'intérieur tremble."
+  },
+  {
+    id: 'elante',
+    name: 'Élante',
+    archetype: 'La grâce instinctive',
+    href: '../personnages/elante',
+    image: '../../assets/personnages/cartes/elante.webp',
+    traits: ['Nature', 'Instinct', 'Élan'],
+    vector: { cœur: 4, action: 4, sagesse: 3, ambition: 1, ombre: 0, mystere: 3, liberte: 5, devoir: 2, chaos: 2, lien: 4 },
+    text: "Vous avancez mieux quand rien ne vous enferme. Comme Élante, vous avez une grâce vive, proche de l'instinct, qui préfère la confiance aux chaînes."
+  },
+  {
+    id: 'ereziah-melkewel',
+    name: 'Ereziah Melkewel',
+    archetype: 'Le savant téméraire',
+    href: '../personnages/ereziah-melkewel',
+    image: '../../assets/personnages/cartes/ereziah-melkewel.webp',
+    traits: ['Savoir', 'Expérience', 'Risque'],
+    vector: { cœur: 2, action: 3, sagesse: 5, ambition: 4, ombre: 2, mystere: 5, liberte: 3, devoir: 2, chaos: 2, lien: 2 },
+    text: "Vous avez besoin de vérifier les limites par vous-même. Comme Ereziah, votre intelligence cherche l'expérience directe, même quand la curiosité mord un peu trop fort."
+  },
+  {
+    id: 'frida-mofette',
+    name: 'Frida Mofette',
+    archetype: 'La volonté qui ne plie pas',
+    href: '../personnages/frida-mofette',
+    image: '../../assets/personnages/cartes/frida-mofette.webp',
+    traits: ['Caractère', 'Tenacité', 'Franc-parler'],
+    vector: { cœur: 3, action: 4, sagesse: 2, ambition: 3, ombre: 1, mystere: 0, liberte: 4, devoir: 3, chaos: 2, lien: 3 },
+    text: "Vous n'êtes pas fait pour vous effacer. Comme Frida Mofette, vous avez du caractère, une parole franche et cette capacité à tenir debout quand l'ambiance se complique."
+  },
+  {
+    id: 'glip',
+    name: 'Glip',
+    archetype: 'Le soin organisé',
+    href: '../personnages/glip',
+    image: '../../assets/personnages/cartes/glip.webp',
+    traits: ['Soin', 'Savoir', 'Transmission'],
+    vector: { cœur: 4, action: 1, sagesse: 5, ambition: 1, ombre: 0, mystere: 3, liberte: 1, devoir: 5, chaos: 0, lien: 4 },
+    text: "Vous réparez mieux quand vous comprenez. Comme Glip, vous liez la douceur à la méthode, le soin à la connaissance, et la protection à la transmission."
+  },
+  {
+    id: 'grougalorasalar',
+    name: 'Grougalorasalar',
+    archetype: 'La garde flamboyante',
+    href: '../personnages/grougalorasalar',
+    image: '../../assets/personnages/cartes/grougalorasalar.webp',
+    traits: ['Dragon', 'Feu', 'Protection'],
+    vector: { cœur: 3, action: 5, sagesse: 4, ambition: 1, ombre: 1, mystere: 4, liberte: 2, devoir: 5, chaos: 3, lien: 3 },
+    text: "Vous protégez avec intensité. Comme Grougalorasalar, votre vigilance a quelque chose de brûlant, de direct, et votre colère se réveille surtout lorsque le lien est menacé."
+  },
+  {
+    id: 'hyrkul',
+    name: 'Hyrkul',
+    archetype: 'La gloire dévoyée',
+    href: '../personnages/hyrkul',
+    image: '../../assets/personnages/cartes/hyrkul.webp',
+    traits: ['Ambition', 'Guerre', 'Chute'],
+    vector: { cœur: 1, action: 5, sagesse: 2, ambition: 5, ombre: 5, mystere: 2, liberte: 3, devoir: 1, chaos: 5, lien: 1 },
+    text: "Vous avez un feu de conquête difficile à ignorer. Comme Hyrkul, votre grandeur dépend de ce que vous faites de votre ambition: une voie, ou une chute."
+  },
+  {
+    id: 'jahash-jurgen',
+    name: 'Jahash Jurgen',
+    archetype: 'Le héros sous pression',
+    href: '../personnages/jahash-jurgen',
+    image: '../../assets/personnages/cartes/jahash-jurgen.webp',
+    traits: ['Héroïsme', 'Responsabilité', 'Sacrifice'],
+    vector: { cœur: 4, action: 5, sagesse: 3, ambition: 2, ombre: 1, mystere: 2, liberte: 2, devoir: 5, chaos: 2, lien: 4 },
+    text: "Vous voulez être à la hauteur, même quand le rôle pèse lourd. Comme Jahash, vous portez le courage, le doute et cette envie de sauver sans toujours savoir comment se sauver soi-même."
+  },
+  {
+    id: 'julith-abigor',
+    name: 'Julith Abigor',
+    archetype: 'L’amour absolu',
+    href: '../personnages/julith-abigor',
+    image: '../../assets/personnages/cartes/julith-abigor.webp',
+    traits: ['Amour', 'Pouvoir', 'Déchirement'],
+    vector: { cœur: 5, action: 4, sagesse: 3, ambition: 4, ombre: 4, mystere: 3, liberte: 1, devoir: 3, chaos: 4, lien: 5 },
+    text: "Vous aimez avec une intensité qui ne connaît pas les demi-mesures. Comme Julith, vous pouvez faire trembler le monde pour un lien, une perte ou une promesse."
+  },
+  {
+    id: 'kabrok',
+    name: 'Kabrok',
+    archetype: 'L’aventure rangée au grenier',
+    href: '../personnages/kabrok',
+    image: '../../assets/personnages/cartes/kabrok.webp',
+    traits: ['Aventure', 'Mémoire', 'Panache'],
+    vector: { cœur: 4, action: 3, sagesse: 4, ambition: 2, ombre: 1, mystere: 2, liberte: 4, devoir: 2, chaos: 2, lien: 4 },
+    text: "Vous avez plus d'histoires que vous ne le montrez. Comme Kabrok, vous pouvez sembler installé, mais une part de vous entend encore l'appel du risque et du grand récit."
+  },
+  {
+    id: 'kali',
+    name: 'Kali',
+    archetype: 'La lame vive',
+    href: '../personnages/kali',
+    image: '../../assets/personnages/cartes/kali.webp',
+    traits: ['Vitesse', 'Combat', 'Instinct'],
+    vector: { cœur: 2, action: 5, sagesse: 2, ambition: 3, ombre: 3, mystere: 2, liberte: 5, devoir: 1, chaos: 4, lien: 2 },
+    text: "Vous réagissez vite, parfois avant même d'avoir nommé ce que vous sentez. Comme Kali, vous incarnez une énergie tranchante, mobile, qui refuse de rester coincée."
+  },
+  {
+    id: 'katar',
+    name: 'Katar',
+    archetype: 'Le défi brutal',
+    href: '../personnages/katar',
+    image: '../../assets/personnages/cartes/katar.webp',
+    traits: ['Force', 'Défi', 'Rudesse'],
+    vector: { cœur: 1, action: 5, sagesse: 1, ambition: 4, ombre: 4, mystere: 1, liberte: 4, devoir: 1, chaos: 5, lien: 1 },
+    text: "Vous aimez quand les choses sont nettes, physiques, sans détour. Comme Katar, vous cherchez l'épreuve qui prouve la valeur, même si elle laisse des marques."
+  },
+  {
+    id: 'khan-karkass',
+    name: 'Khan Karkass',
+    archetype: 'Le spectacle du combat',
+    href: '../personnages/khan-karkass',
+    image: '../../assets/personnages/cartes/khan-karkass.webp',
+    traits: ['Arène', 'Panache', 'Force'],
+    vector: { cœur: 2, action: 5, sagesse: 2, ambition: 4, ombre: 2, mystere: 0, liberte: 5, devoir: 1, chaos: 4, lien: 2 },
+    text: "Vous aimez que la force ait du style. Comme Khan Karkass, vous transformez l'affrontement en scène, avec une énergie qui veut être vue autant que ressentie."
+  },
+  {
+    id: 'lance-originelle',
+    name: 'Lance Originelle',
+    archetype: 'Le serment premier',
+    href: '../personnages/lance-originelle',
+    image: '../../assets/personnages/cartes/lance-originelle.webp',
+    traits: ['Relique', 'Devoir', 'Origine'],
+    vector: { cœur: 2, action: 4, sagesse: 5, ambition: 2, ombre: 1, mystere: 5, liberte: 0, devoir: 5, chaos: 1, lien: 3 },
+    text: "Vous êtes attiré par ce qui fonde les choses. Comme la Lance Originelle, vous représentez la promesse ancienne, la ligne tenue et la puissance qui ne sert qu'un sens précis."
+  },
+  {
+    id: 'maude',
+    name: 'Maude',
+    archetype: 'La curiosité lumineuse',
+    href: '../personnages/maude',
+    image: '../../assets/personnages/cartes/maude.webp',
+    traits: ['Curiosité', 'Vivacité', 'Lien'],
+    vector: { cœur: 4, action: 3, sagesse: 3, ambition: 1, ombre: 0, mystere: 3, liberte: 4, devoir: 2, chaos: 1, lien: 4 },
+    text: "Vous allez vers les choses avec un mélange de douceur et d'élan. Comme Maude, vous avez cette curiosité qui ouvre les portes sans forcément faire beaucoup de bruit."
+  },
+  {
+    id: 'maskemane',
+    name: 'Maskemane',
+    archetype: 'Le masque en mouvement',
+    href: '../personnages/maskemane',
+    image: '../../assets/personnages/cartes/maskemane.webp',
+    traits: ['Masque', 'Identité', 'Liberté'],
+    vector: { cœur: 2, action: 4, sagesse: 3, ambition: 3, ombre: 3, mystere: 5, liberte: 5, devoir: 1, chaos: 3, lien: 2 },
+    text: "Vous n'êtes jamais une seule version de vous-même. Comme Maskemane, vous changez de visage pour survivre, comprendre ou reprendre la main sur votre propre histoire."
+  },
+  {
+    id: 'medoroziam',
+    name: 'Medoroziam',
+    archetype: 'L’étrangeté savante',
+    href: '../personnages/medoroziam',
+    image: '../../assets/personnages/cartes/medoroziam.webp',
+    traits: ['Mystère', 'Savoir', 'Distance'],
+    vector: { cœur: 1, action: 2, sagesse: 5, ambition: 3, ombre: 3, mystere: 5, liberte: 2, devoir: 3, chaos: 2, lien: 1 },
+    text: "Vous regardez le monde comme une énigme à plusieurs fonds. Comme Medoroziam, vous avez une intelligence étrange, patiente, parfois trop loin des évidences des autres."
+  },
+  {
+    id: 'miranda',
+    name: 'Miranda',
+    archetype: 'La grâce organisée',
+    href: '../personnages/miranda',
+    image: '../../assets/personnages/cartes/miranda.webp',
+    traits: ['Élégance', 'Maîtrise', 'Volonté'],
+    vector: { cœur: 3, action: 2, sagesse: 4, ambition: 4, ombre: 1, mystere: 2, liberte: 2, devoir: 4, chaos: 0, lien: 3 },
+    text: "Vous aimez que les choses soient tenues, belles et efficaces. Comme Miranda, vous avez une grâce disciplinée, avec une volonté plus ferme qu'elle n'en a l'air."
+  },
+  {
+    id: 'mouche',
+    name: 'Mouche',
+    archetype: 'La petite présence tenace',
+    href: '../personnages/mouche',
+    image: '../../assets/personnages/cartes/mouche.webp',
+    traits: ['Tenacité', 'Discrétion', 'Survie'],
+    vector: { cœur: 3, action: 3, sagesse: 3, ambition: 2, ombre: 2, mystere: 1, liberte: 4, devoir: 2, chaos: 2, lien: 3 },
+    text: "Vous n'avez pas besoin d'être le plus imposant pour rester là. Comme Mouche, vous avez une ténacité discrète, parfois sous-estimée, mais difficile à faire disparaître."
+  },
+  {
+    id: 'moumoune-stroud',
+    name: 'Moumoune Stroud',
+    archetype: 'La tendresse qui résiste',
+    href: '../personnages/moumoune-stroud',
+    image: '../../assets/personnages/cartes/moumoune-stroud.webp',
+    traits: ['Famille', 'Douceur', 'Mémoire'],
+    vector: { cœur: 5, action: 1, sagesse: 4, ambition: 1, ombre: 0, mystere: 1, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
+    text: "Vous êtes lié aux autres par une douceur durable. Comme Moumoune, votre présence rappelle que les grandes aventures se construisent aussi dans les attaches simples."
+  },
+  {
+    id: 'nimoda',
+    name: 'Nimoda',
+    archetype: 'La volonté qui s’aiguise',
+    href: '../personnages/nimoda',
+    image: '../../assets/personnages/cartes/nimoda.webp',
+    traits: ['Volonté', 'Discipline', 'Tension'],
+    vector: { cœur: 2, action: 4, sagesse: 4, ambition: 4, ombre: 2, mystere: 2, liberte: 2, devoir: 4, chaos: 2, lien: 2 },
+    text: "Vous vous construisez par exigence. Comme Nimoda, vous pouvez paraître dur parce que vous cherchez la maîtrise, la progression et cette forme de netteté qui ne triche pas."
+  },
+  {
+    id: 'ombrage',
+    name: 'Ombrage',
+    archetype: 'La nuit intérieure',
+    href: '../personnages/ombrage',
+    image: '../../assets/personnages/cartes/ombrage.webp',
+    traits: ['Ombre', 'Secret', 'Pouvoir'],
+    vector: { cœur: 0, action: 3, sagesse: 4, ambition: 5, ombre: 5, mystere: 5, liberte: 2, devoir: 1, chaos: 4, lien: 0 },
+    text: "Vous savez habiter les zones que les autres évitent. Comme Ombrage, vous portez une puissance nocturne, faite de secret, de contrôle et d'une lucidité parfois coupante."
+  },
+  {
+    id: 'orgonax',
+    name: 'Orgonax',
+    archetype: 'La stasis en marche',
+    href: '../personnages/orgonax',
+    image: '../../assets/personnages/cartes/orgonax.webp',
+    traits: ['Méchasme', 'Stasis', 'Destruction'],
+    vector: { cœur: 0, action: 5, sagesse: 4, ambition: 4, ombre: 5, mystere: 5, liberte: 1, devoir: 3, chaos: 5, lien: 0 },
+    text: "Vous incarnez la force qui avance sans demander l'accord du monde. Comme Orgonax, vous êtes associé à une logique froide, immense, presque impossible à négocier."
+  },
+  {
+    id: 'otomai',
+    name: 'Otomaï',
+    archetype: 'L’alchimiste des possibles',
+    href: '../personnages/otomai',
+    image: '../../assets/personnages/cartes/otomai.webp',
+    traits: ['Science', 'Création', 'Curiosité'],
+    vector: { cœur: 3, action: 2, sagesse: 5, ambition: 3, ombre: 1, mystere: 5, liberte: 3, devoir: 3, chaos: 1, lien: 3 },
+    text: "Vous aimez comprendre comment transformer le réel. Comme Otomaï, votre curiosité n'est pas décorative: elle fabrique, expérimente et ouvre des formes nouvelles."
+  },
+  {
+    id: 'pin-de-percedal',
+    name: 'Pin de Percedal',
+    archetype: 'Le courage hérité',
+    href: '../personnages/pin-de-percedal',
+    image: '../../assets/personnages/cartes/pin-de-percedal.webp',
+    traits: ['Famille', 'Courage', 'Élan'],
+    vector: { cœur: 4, action: 4, sagesse: 2, ambition: 1, ombre: 0, mystere: 1, liberte: 4, devoir: 3, chaos: 2, lien: 5 },
+    text: "Vous portez l'envie de faire vos preuves sans renier vos attaches. Comme Pin, votre courage vient d'un héritage affectif, mais cherche déjà sa propre manière d'exister."
+  },
+  {
+    id: 'prince-adale',
+    name: 'Prince Adale',
+    archetype: 'La noblesse en déséquilibre',
+    href: '../personnages/prince-adale',
+    image: '../../assets/personnages/cartes/prince-adale.webp',
+    traits: ['Noblesse', 'Doute', 'Devoir'],
+    vector: { cœur: 3, action: 2, sagesse: 3, ambition: 3, ombre: 1, mystere: 2, liberte: 1, devoir: 5, chaos: 1, lien: 3 },
+    text: "Vous sentez le poids de la place que les autres vous donnent. Comme le Prince Adale, vous cherchez comment être digne sans vous perdre dans le rôle."
+  },
+  {
+    id: 'prince-de-brakmar',
+    name: 'Prince de Brâkmar',
+    archetype: 'L’héritier des braises',
+    href: '../personnages/prince-de-brakmar',
+    image: '../../assets/personnages/cartes/prince-de-brakmar.webp',
+    traits: ['Pouvoir', 'Héritage', 'Ombre'],
+    vector: { cœur: 2, action: 4, sagesse: 3, ambition: 5, ombre: 4, mystere: 3, liberte: 2, devoir: 4, chaos: 4, lien: 2 },
+    text: "Vous avancez avec une tension d'héritage et de pouvoir. Comme le Prince de Brâkmar, vous devez choisir ce que vous faites de la braise transmise: régner, brûler ou transformer."
+  },
+  {
+    id: 'ripulse',
+    name: 'Ripulse',
+    archetype: 'La secousse imprévisible',
+    href: '../personnages/ripulse',
+    image: '../../assets/personnages/cartes/ripulse.webp',
+    traits: ['Énergie', 'Chaos', 'Réaction'],
+    vector: { cœur: 2, action: 5, sagesse: 1, ambition: 3, ombre: 2, mystere: 2, liberte: 5, devoir: 1, chaos: 5, lien: 2 },
+    text: "Vous avez une énergie de rupture. Comme Ripulse, vous débloquez les situations par secousse, parfois trop vite, mais rarement sans provoquer un vrai mouvement."
+  },
+  {
+    id: 'rotalstrom',
+    name: 'Rotalstrom',
+    archetype: 'La spirale savante',
+    href: '../personnages/rotalstrom',
+    image: '../../assets/personnages/cartes/rotalstrom.webp',
+    traits: ['Temps', 'Savoir', 'Vertige'],
+    vector: { cœur: 1, action: 2, sagesse: 5, ambition: 4, ombre: 3, mystere: 5, liberte: 2, devoir: 3, chaos: 3, lien: 1 },
+    text: "Vous êtes attiré par les mécanismes profonds, ceux qui peuvent aussi vous aspirer. Comme Rotalstrom, vous cherchez la compréhension, même quand elle ouvre un vertige."
+  },
+  {
+    id: 'uk-not-allag',
+    name: 'Uk Not Allag',
+    archetype: 'La force du dehors',
+    href: '../personnages/uk-not-allag',
+    image: '../../assets/personnages/cartes/uk-not-allag.webp',
+    traits: ['Étrangeté', 'Puissance', 'Distance'],
+    vector: { cœur: 1, action: 4, sagesse: 4, ambition: 3, ombre: 3, mystere: 5, liberte: 3, devoir: 2, chaos: 4, lien: 1 },
+    text: "Vous semblez parfois venir d'une logique que les autres n'ont pas apprise. Comme Uk Not Allag, vous portez une étrangeté puissante, difficile à classer."
+  },
+  {
+    id: 'xav-le-boulanger',
+    name: 'Xav le Boulanger',
+    archetype: 'Le quotidien héroïque',
+    href: '../personnages/xav-le-boulanger',
+    image: '../../assets/personnages/cartes/xav-le-boulanger.webp',
+    traits: ['Travail', 'Cœur', 'Simplicité'],
+    vector: { cœur: 5, action: 2, sagesse: 3, ambition: 1, ombre: 0, mystere: 0, liberte: 2, devoir: 4, chaos: 0, lien: 5 },
+    text: "Vous savez que le monde tient aussi par les gestes ordinaires. Comme Xav, vous avez une force simple, chaleureuse, qui nourrit plus qu'elle ne cherche à briller."
+  },
+  {
+    id: 'yrehn',
+    name: 'Yrehn',
+    archetype: 'La survivante farouche',
+    href: '../personnages/yrehn',
+    image: '../../assets/personnages/cartes/yrehn.webp',
+    traits: ['Survie', 'Instinct', 'Liberté'],
+    vector: { cœur: 3, action: 5, sagesse: 2, ambition: 2, ombre: 2, mystere: 2, liberte: 5, devoir: 1, chaos: 4, lien: 3 },
+    text: "Vous refusez qu'on décide de votre place à votre place. Comme Yrehn, vous avez une énergie farouche, vive, prête à mordre le destin pour rester libre."
   }
 );
 

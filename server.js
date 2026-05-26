@@ -45,6 +45,7 @@ const mimeTypes = {
   ".png": "image/png",
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
+  ".mp4": "video/mp4",
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
   ".ico": "image/x-icon",
@@ -56,6 +57,7 @@ const longCacheExtensions = new Set([
   ".jpg",
   ".jpeg",
   ".webp",
+  ".mp4",
   ".svg",
   ".ico",
   ".ttf"

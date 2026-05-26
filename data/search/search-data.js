@@ -413,6 +413,62 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Xélorium Xélorium région lieu Krosmoz Dofus Wakfu Waven xelorium Xélorium est la dimension divine du Dieu Xélor, un royaume perdu hors du temps où passé, présent et futur coexistent entre paradoxes, Hordémons et Égarés."
   },
   {
+    "title": "Les Éliotropes",
+    "type": "Groupe",
+    "href": "pages/groupes/eliotropes",
+    "summary": "Peuple éphémère né de Yugo et des Dofus Éliatropes, dispersé à travers les époques du Krosmoz.",
+    "keywords": "Les Éliotropes groupe peuple Yugo Roi-Dieu Dofus Éliatropes portails Wakfu Oropo Fratrie des Oubliés Dofus Wakfu"
+  },
+  {
+    "title": "Les Éliatropes",
+    "type": "Groupe",
+    "href": "pages/groupes/eliatropes",
+    "summary": "Peuple primordial lié au Wakfu, aux Dofus Éliatropes, au Zinit et au Conseil des Six.",
+    "keywords": "Les Éliatropes groupe peuple primordial Wakfu Dofus Éliatropes Grande Déesse Éliatrope Grand Dragon Conseil des Six Yugo Adamaï Qilby Shinonomé Grougaloragran Nora Zinit Méchasmes Orgonax Lokus"
+  },
+  {
+    "title": "Les Méchasmes",
+    "type": "Groupe",
+    "href": "pages/groupes/mechasmes",
+    "summary": "Anciennes entités du Krosmoz, gardiennes de l'équilibre cosmique et maîtresses du Wakfu comme de la Stasis.",
+    "keywords": "Les Méchasmes groupe mechasmes machines divines Wakfu Stasis Krosmoz équilibre cosmique Orgonax Lokus Qilby Éliatropes Éliacube Éliasphère Zinit Nécromes"
+  },
+  {
+    "title": "La Fratrie des Oubliés",
+    "type": "Groupe",
+    "href": "pages/groupes/fratrie-des-oublies",
+    "summary": "Organisation secrète fondée par Oropo, réunissant Éliotropes, demi-dieux et êtres rejetés par les dieux.",
+    "keywords": "La Fratrie des Oubliés groupe fratrie oublies Oropo Echo Éliotropes Demi-dieux Dofus Éliatropes Éliacube Éliabombe Hyperzaap Tour des Rêves Ogrest Dathura Bouillon Atone Sidaire Desperia Ripulse"
+  },
+  {
+    "title": "Les Gardiens des Mois",
+    "type": "Groupe",
+    "href": "pages/groupes/gardiens-des-mois",
+    "summary": "Protecteurs liés à l'Horloge Divine, chargés de veiller sur les mois, les saisons et l'écoulement du temps.",
+    "keywords": "Les Gardiens des Mois groupe protecteurs mois Horloge Divine saisons temps Jiva Djaul Rushu Solar Ménalt Silvosse Ulgrude Silouate Rosal Sumens Hécate Pouchecot Raval Maïmane Brumaire Descendre Javian Dofus Wakfu"
+  },
+  {
+    "title": "La Confrérie du Tofu",
+    "type": "Groupe",
+    "href": "pages/groupes/confrerie-du-tofu",
+    "summary": "Groupe d'aventuriers légendaires réuni autour de Yugo durant l'ère du Wakfu, symbole d'espoir du Krosmoz.",
+    "keywords": "La Confrérie du Tofu groupe confrerie tofu Yugo Tristepin Évangelyne Amalia Sheran Sharm Ruel Stroud Adamaï Joris Otomaï Goultard Nox Qilby Ogrest Oropo Toross Mordal Wakfu"
+  },
+  {
+    "title": "Les Multiman",
+    "type": "Groupe",
+    "href": "pages/groupes/multiman",
+    "summary": "Justiciers créés par Ereziah Melkewel à partir de l'essence des Dofus Primordiaux pour défendre l'équilibre du Monde des Douze.",
+    "keywords": "Les Multiman groupe multiman justiciers Ereziah Melkewel Dofus Primordiaux Bolgrot Skale Scoreur Korbax Masse Lumino Ombre Dimension Obscure Dofus Wakfu"
+  },
+  {
+    "title": "L'Ordre du Cœur Vaillant",
+    "type": "Groupe",
+    "href": "pages/groupes/ordre-du-coeur-vaillant",
+    "summary": "Ancien ordre de chevalerie mené par Ménalt pour protéger les temples des dieux, les routes commerciales et les voyageurs du Monde des Douze.",
+    "keywords": "L'Ordre du Cœur Vaillant groupe ordre coeur vaillant chevalerie Ménalt Xélor Helioboros temples dieux routes voyageurs Bonta Brâkmar Aurore Pourpre Hyrkul Raval Djaul Rushu Dofus"
+  },
+  {
     "title": "Adamaï",
     "type": "Personnage",
     "href": "pages/personnages/adamai",
@@ -439,6 +495,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/alibert",
     "summary": "ENUTROF - Héros - Wakfu la série",
     "keywords": "Alibert Pere Adoptif de Yugo ENUTROF Héros Wakfu la série"
+  },
+  {
+    "title": "Allister",
+    "type": "Personnage",
+    "href": "pages/personnages/allister",
+    "summary": "Féca - Héros, Mythe & Légende - Dofus",
+    "keywords": "Allister Roi d'Amakna souverain Royaume d'Amakna berger Féca Uk'Not'Allag Guilde d'Allister Château d'Amakna Héros Mythe Légende Dofus"
   },
   {
     "title": "Amalia Sheran Sharm",
@@ -518,11 +581,11 @@ window.KROSMOZ_SEARCH_DATA = [
   "keywords": "Belladone Gardienne de la chambre des maléfices Eniripsa Mythe & légende, Ennemis Lancedur"
 },
   {
-    "title": "Bellaphone",
-    "type": "Personnage",
-    "href": "pages/personnages/bellaphone",
-    "summary": "Monstre - Mythe & légende - Wakfu la série",
-    "keywords": "Bellaphone Chanteuse Hypnotique Monstre Mythe & légende Wakfu la série"
+    "title": "Les Bellaphones",
+    "type": "Groupe",
+    "href": "pages/groupes/bellaphones",
+    "summary": "Reines hypnotiques - Mythe & légende - Wakfu la série",
+    "keywords": "Bellaphones reines hypnotiques chant ile sauvage lamias monstres Mythe légende Wakfu la série"
   },
   {
     "title": "Bolgrot",
@@ -724,8 +787,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Djaul",
     "type": "Personnage",
     "href": "pages/personnages/djaul",
-    "summary": "Shushu - Shushu - Dofus",
-    "keywords": "Djaul Gardien de Descendre Shushu Shushu Dofus"
+    "summary": "Shushu, Gardien des mois - Shushu, Protecteur - Dofus",
+    "keywords": "Djaul Gardien de Descendre Shushu Gardien des mois Shushu Protecteur Dofus"
   },
   {
   "title": "Dragon Cochon",
@@ -854,6 +917,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Grufon Guide trompeur SHUSHU Shushu Wakfu la série"
   },
   {
+    "title": "Hécate",
+    "type": "Personnage",
+    "href": "pages/personnages/hecate",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Hécate Mystificatrice protectrice du mois de Joullier Gardien des mois Protecteur démone illusion ombre Moskitos Sram Ulgrude Djaul Jiva Dofus"
+  },
+  {
     "title": "Hyrkul",
     "type": "Personnage",
     "href": "pages/personnages/hyrkul",
@@ -893,7 +963,7 @@ window.KROSMOZ_SEARCH_DATA = [
   "type": "Personnage",
   "href": "pages/personnages/jiva",
   "summary": "Protectrice de Javian",
-  "keywords": "Jiva Protectrice de Javian Divinité Mythe & légende, Ennemis Wakfu la série, Dofus"
+  "keywords": "Jiva Protectrice de Javian Gardien des mois Protecteur Wakfu la série, Dofus"
 },
   {
     "title": "Joris Jurgen",
@@ -1022,6 +1092,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Madagaskan Mentor de Flopin CRA Famille d'Évangelyne Wakfu la série"
   },
   {
+    "title": "Maïmane",
+    "type": "Personnage",
+    "href": "pages/personnages/maimane",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Maïmane Pacificateur protectrice du mois d’Octolliard Gardien des mois Protecteur paix émotions totems Stabilisateur Féca Terra Cogita Silvosse Corruption Ménologium Chêne Mou Plan Astral Brumaire Djaul Dofus"
+  },
+  {
     "title": "Maskemane",
     "type": "Personnage",
     "href": "pages/personnages/maskemane",
@@ -1041,6 +1118,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/medoroziam",
     "summary": "Démon - Démon - Dofus",
     "keywords": "Médoroziam L'un des 10 démons Démon Démon Dofus"
+  },
+  {
+    "title": "Ménalt",
+    "type": "Personnage",
+    "href": "pages/personnages/menalt",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Ménalt Le Centaure premier protecteur du mois de Martalo Gardien des mois Protecteur Xélor Bonta Ordre du Cœur Vaillant Aurore Pourpre Hyrkul Raval centaures Percepteurs Dofus"
   },
   {
     "title": "Mina",
@@ -1176,6 +1260,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Poo Domestique des Percedal PANDAWA Demi-dieu, Fratrie Dofus, Wakfu la série"
   },
   {
+    "title": "Pouchecot",
+    "type": "Personnage",
+    "href": "pages/personnages/pouchecot",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Pouchecot Grand Fruité protecteur du mois de Fraouctor gardien des mois Protecteur Sadida Chêne Mou Mérydes nature sagesse Dofus"
+  },
+  {
     "title": "Prince Adale",
     "type": "Personnage",
     "href": "pages/personnages/prince-adale",
@@ -1197,6 +1288,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Prosperus Elementor Premier Huppermage Huppermage Héros, Mythe & légende Dofus Balance Krosmique Omnirune Pyramide Ocre Éther Dame Jhessica"
   },
   {
+    "title": "Prysmaradoth",
+    "type": "Personnage",
+    "href": "pages/personnages/prysmaradoth",
+    "summary": "Dragon - Dragon - Dofus, Wakfu",
+    "keywords": "Prysmaradoth dragon céleste Incarnam cycle des âmes écailles sagesse férocité endurance courage Thanatena Spiritia Dofus Wakfu"
+  },
+  {
     "title": "Qilby",
     "type": "Personnage",
     "href": "pages/personnages/qilby",
@@ -1211,11 +1309,32 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Rasha Démon scellé Démon Démon Dofus, Wakfu la série"
   },
   {
+    "title": "Raval",
+    "type": "Personnage",
+    "href": "pages/personnages/raval",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Raval protecteur du mois de Septange Gardien des mois Protecteur nécromancie Trépamorts Aurore Pourpre Hyrkul Ordre du Cœur Vaillant Roublards Djaul Sram Fratrie des Oubliés Solar Bethel Toxine Agonie Dofus"
+  },
+  {
+    "title": "Rathrosk",
+    "type": "Personnage",
+    "href": "pages/personnages/rathrosk",
+    "summary": "Dragon - Dragon - Dofus, Wakfu",
+    "keywords": "Rathrosk Main Grise bourreau des dieux protecteur d'Astrub fils de Thanatena Externam Dofus Argenté Valonia Lance Originelle Dofus Wakfu"
+  },
+  {
     "title": "Razortemps",
     "type": "Personnage",
     "href": "pages/personnages/razortemps",
     "summary": "INCONNUE - WIP - Inconnue",
     "keywords": "Razortemps Wip INCONNUE WIP Inconnue"
+  },
+  {
+    "title": "Reine des Voleurs",
+    "type": "Personnage",
+    "href": "pages/personnages/reine-des-voleurs",
+    "summary": "Sram - Srambad - Dofus",
+    "keywords": "Reine des Voleurs souveraine de Srambad fille de Sram voleuse immortelle Cour Sombre Roi Nidas Enutrosor Dofus"
   },
   {
     "title": "Reines de Bonta",
@@ -1230,6 +1349,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/remington-smisse",
     "summary": "Roublard - Ennemis - Wakfu la série",
     "keywords": "Remington Smisse Frère Smisse jusqu'à la mort Roublard Ennemis Wakfu la série"
+  },
+  {
+    "title": "Roi Nidas",
+    "type": "Personnage",
+    "href": "pages/personnages/roi-nidas",
+    "summary": "Enutrof - Énutrofors - Dofus",
+    "keywords": "Roi Nidas souverain d'Enutrosor gardien des richesses kamas Enutrof Énutrofors Reine des Voleurs Shushus Dofus"
   },
   {
     "title": "Roi Osamodas",
@@ -1274,6 +1400,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Rushu Roi des Shushus DÉMON Démon, Ennemis Wakfu la série"
   },
   {
+    "title": "Rosal",
+    "type": "Personnage",
+    "href": "pages/personnages/rosal",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Rosal Maître des Fleurs protecteur du mois de Maisial Gardien des mois Protecteur empathie télépathie fleurs nature Pouchecot Coq Empathe Silouate Brumaire Dofus"
+  },
+  {
     "title": "Shinonomé",
     "type": "Personnage",
     "href": "pages/personnages/shinonome",
@@ -1295,11 +1428,32 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Sipho Métamorphe ultime DRAGON Fratrie, Demi-dieu Dofus, Wakfu la série"
   },
   {
+    "title": "Solar",
+    "type": "Personnage",
+    "href": "pages/personnages/solar",
+    "summary": "Iop, Gardien des mois - Protecteur - Dofus",
+    "keywords": "Solar premier protecteur du mois de Javian Iop Gardien des mois Protecteur Djaul Long Descendre Monde des Douze Sacrieur Jiva Raval Calcinés Marches Magmatiques Dofus"
+  },
+  {
+    "title": "Sumens",
+    "type": "Personnage",
+    "href": "pages/personnages/sumens",
+    "summary": "Enutrof, Gardien des mois - Protecteur - Dofus",
+    "keywords": "Sumens protecteur du mois de Juinssidor Enutrof Gardien des mois Protecteur Enutrof or abondance récoltes prospérité Silouate Dofus"
+  },
+  {
     "title": "Terrakourial",
     "type": "Personnage",
     "href": "pages/personnages/terrakourial",
     "summary": "DRAGON - Dragon primordial - Dofus, Wakfu la série",
     "keywords": "Terrakourial Créateur du Dofus Ocre DRAGON Dragon primordial Dofus, Wakfu la série"
+  },
+  {
+    "title": "Thanatena",
+    "type": "Personnage",
+    "href": "pages/personnages/thanatena",
+    "summary": "Grande Faucheuse - Dieu - Dofus, Wakfu",
+    "keywords": "Thanatena Grande Faucheuse souveraine d'Externam incarnation de la Mort Dieu Dofus Wakfu"
   },
   {
     "title": "Toross Mordal",
@@ -1321,6 +1475,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/tristepin",
     "summary": "IOP - Confrérie du Tofu, Famille Percedal - Wakfu la série",
     "keywords": "Tristepin de Percedal Gardien de Rubilax IOP Confrérie du Tofu, Famille Percedal Wakfu la série"
+  },
+  {
+    "title": "Ulgrude",
+    "type": "Personnage",
+    "href": "pages/personnages/ulgrude",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Ulgrude Ulgrude du Tonnerre protecteur du mois de Martalo Gardien des mois Protecteur tempêtes printemps Aurore Pourpre Ménalt Hyrkul Jiva Djaul Mérydes Fin Patraque Dofus"
   },
   {
     "title": "Uk’Not’Allag",
@@ -2443,11 +2604,18 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Biste Guerrière au grand cœur Iop Héros Lancedur"
   },
   {
-    "title": "Bouillon",
+  "title": "Bouillon",
+  "type": "Personnage",
+  "href": "pages/personnages/bouillon",
+  "summary": "Éliotrope - Ennemis, Fratrie, Éliotropes - Wakfu la série",
+  "keywords": "Bouillon Le plus fort des Éliotropes Éliotrope Ennemis, Fratrie, Éliotropes Wakfu la série"
+},
+  {
+    "title": "Brumaire",
     "type": "Personnage",
-    "href": "pages/personnages/bouillon",
-    "summary": "Éliotrope - Ennemis, Fratrie, Éliotropes - Wakfu la série",
-    "keywords": "Bouillon Le plus fort des Éliotropes Éliotrope Ennemis, Fratrie, Éliotropes Wakfu la série"
+    "href": "pages/personnages/brumaire",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Brumaire Saigneur Macabre protecteur du mois de Novamaire Gardien des mois Protecteur froid brume gel Rushu Xélor Djaul Solar Long Descendre Brâkmar Aurore Pourpre Katar Goultard Ordre de l’Œil Putride Dofus"
   },
   {
     "title": "Cadence",
@@ -2490,6 +2658,20 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/sidaire",
     "summary": "Éliotrope - Ennemis, Fratrie, Éliotropes - Wakfu la série",
     "keywords": "Sidaire Le plus rapide des Éliotropes Éliotrope Ennemis, Fratrie, Éliotropes Wakfu la série"
+  },
+  {
+    "title": "Silouate",
+    "type": "Personnage",
+    "href": "pages/personnages/silouate",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Silouate Le Minotoror protecteur du mois d’Aperirel Gardien des mois Protecteur retour des beaux jours dégivrant familiers Peste Noire Brumaire Rosal Sumens Dofus"
+  },
+  {
+    "title": "Silvosse",
+    "type": "Personnage",
+    "href": "pages/personnages/silvosse",
+    "summary": "Gardien des mois - Protecteur - Dofus",
+    "keywords": "Silvosse Maître des boutures protecteur du mois de Flovor Gardien des mois Protecteur Dofus Sylvestre nature forêts abraknydes Chêne Mou Djaul Solar Long Descendre Mérydes Dofus"
   },
   {
     "title": "Le Nécromonde",

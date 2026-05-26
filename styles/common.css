@@ -197,8 +197,8 @@ header {
   display: none;
 }
 
-.top-nav > a[href$="contact.html"],
-.top-nav > a[href$="pages/contact/contact.html"] {
+.top-nav > a[href$="contact"],
+.top-nav > a[href$="pages/contact/contact"] {
   margin-left: auto;
 }
 
@@ -225,6 +225,33 @@ header {
   width: 17px;
   height: 17px;
   fill: currentColor;
+}
+
+@media (min-width: 981px) and (max-width: 1320px) {
+  .site-topbar {
+    gap: 0.75rem;
+    padding: 0.82rem 1rem;
+  }
+
+  .brand {
+    gap: 0.6rem;
+    font-size: 0.88rem;
+  }
+
+  .nav-link {
+    padding: 0.66rem 0.52rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+  }
+
+  .krosmoz-top-social-links {
+    gap: 0.3rem;
+  }
+
+  .krosmoz-social-link {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .back-to-top {
@@ -374,8 +401,8 @@ header {
     display: block;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] {
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] {
     margin-left: 0;
   }
 

@@ -682,8 +682,8 @@ body.is-share-modal-open {
     gap: 0.65rem;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] { margin-left: 0; }
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] { margin-left: 0; }
 
   .answer-grid,
   .result-card,

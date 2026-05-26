@@ -30,6 +30,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "ALIBERT.webp"
   },
   {
+    "name": "Allister",
+    "href": "allister",
+    "slug": "allister",
+    "image": "ALLISTER.png"
+  },
+  {
     "name": "Amalia Sheran Sharm",
     "href": "amalia-sheran-sharm",
     "slug": "amalia-sheran-sharm",
@@ -96,12 +102,6 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "BELLADONE.webp"
   },
   {
-    "name": "Bellaphone",
-    "href": "bellaphone",
-    "slug": "bellaphone",
-    "image": "BELLAPHONE.webp"
-  },
-  {
     "name": "Biste",
     "href": "biste",
     "slug": "biste",
@@ -124,6 +124,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "bouillon",
     "slug": "bouillon",
     "image": "BOUILLON.webp"
+  },
+  {
+    "name": "Brumaire",
+    "href": "brumaire",
+    "slug": "brumaire",
+    "image": "BRUMAIRE.png"
   },
   {
     "name": "Bump",
@@ -309,7 +315,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Djaul",
     "href": "djaul",
     "slug": "djaul",
-    "image": "DJAUL.webp"
+    "image": "DJAUL-2026.webp"
   },
   {
     "name": "Dragon Cochon",
@@ -400,6 +406,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "gruffon",
     "slug": "gruffon",
     "image": "GRUFFON.webp"
+  },
+  {
+    "name": "Hécate",
+    "href": "hecate",
+    "slug": "hecate",
+    "image": "HECATE.png"
   },
   {
     "name": "Hyrkul",
@@ -534,6 +546,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "MADAGASKAN.webp"
   },
   {
+    "name": "Maïmane",
+    "href": "maimane",
+    "slug": "maimane",
+    "image": "MAIMANE.png"
+  },
+  {
     "name": "Maskemane",
     "href": "maskemane",
     "slug": "maskemane",
@@ -550,6 +568,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "medoroziam",
     "slug": "medoroziam",
     "image": "MEDOROZIAM.webp"
+  },
+  {
+    "name": "Ménalt",
+    "href": "menalt",
+    "slug": "menalt",
+    "image": "MENALT.png"
   },
   {
     "name": "Mina",
@@ -666,6 +690,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "POO.webp"
   },
   {
+    "name": "Pouchecot",
+    "href": "pouchecot",
+    "slug": "pouchecot",
+    "image": "POUCHECOT.png"
+  },
+  {
     "name": "Prince Adale",
     "href": "prince-adale",
     "slug": "prince-adale",
@@ -676,6 +706,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "prince-de-brakmar",
     "slug": "prince-de-brakmar",
     "image": "PRINCE DE BRAKMAR.webp"
+  },
+  {
+    "name": "Prysmaradoth",
+    "href": "prysmaradoth",
+    "slug": "prysmaradoth",
+    "image": "PRYSMARADOTH.webp"
   },
   {
     "name": "Qilby",
@@ -690,10 +726,28 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "RASHA.webp"
   },
   {
+    "name": "Raval",
+    "href": "raval",
+    "slug": "raval",
+    "image": "RAVAL.png"
+  },
+  {
+    "name": "Rathrosk",
+    "href": "rathrosk",
+    "slug": "rathrosk",
+    "image": "RATHROSK.png"
+  },
+  {
     "name": "Razortemps",
     "href": "razortemps",
     "slug": "razortemps",
     "image": "RAZORTEMPS.webp"
+  },
+  {
+    "name": "Reine des Voleurs",
+    "href": "reine-des-voleurs",
+    "slug": "reine-des-voleurs",
+    "image": "REINE DES VOLEURS.png"
   },
   {
     "name": "Reines de Bonta",
@@ -712,6 +766,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "ripulse",
     "slug": "ripulse",
     "image": "RIPULSE.webp"
+  },
+  {
+    "name": "Roi Nidas",
+    "href": "roi-nidas",
+    "slug": "roi-nidas",
+    "image": "ROI NIDAS.png"
   },
   {
     "name": "Roi Osamodas",
@@ -750,6 +810,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "RUSHU.webp"
   },
   {
+    "name": "Rosal",
+    "href": "rosal",
+    "slug": "rosal",
+    "image": "ROSAL.png"
+  },
+  {
     "name": "Shinonomé",
     "href": "shinonome",
     "slug": "shinonome",
@@ -760,6 +826,18 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "sidaire",
     "slug": "sidaire",
     "image": "SIDAIRE.webp"
+  },
+  {
+    "name": "Silouate",
+    "href": "silouate",
+    "slug": "silouate",
+    "image": "SILOUATE.png"
+  },
+  {
+    "name": "Silvosse",
+    "href": "silvosse",
+    "slug": "silvosse",
+    "image": "SILVOSSE.png"
   },
   {
     "name": "Simone",
@@ -774,10 +852,28 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "image": "SIPHO.webp"
   },
   {
+    "name": "Solar",
+    "href": "solar",
+    "slug": "solar",
+    "image": "SOLAR.png"
+  },
+  {
+    "name": "Sumens",
+    "href": "sumens",
+    "slug": "sumens",
+    "image": "SUMENS.png"
+  },
+  {
     "name": "Terrakourial",
     "href": "terrakourial",
     "slug": "terrakourial",
     "image": "TERRAKOURIAL.webp"
+  },
+  {
+    "name": "Thanatena",
+    "href": "thanatena",
+    "slug": "thanatena",
+    "image": "THANATENA.png"
   },
   {
     "name": "Toross Mordal",
@@ -796,6 +892,12 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "href": "tristepin",
     "slug": "tristepin",
     "image": "TRISTEPIN.webp"
+  },
+  {
+    "name": "Ulgrude",
+    "href": "ulgrude",
+    "slug": "ulgrude",
+    "image": "ULGRUDE.png"
   },
   {
     "name": "Uk’Not’Allag",

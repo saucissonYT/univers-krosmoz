@@ -88,6 +88,10 @@ body.character-alibert .character-hero-bg {
   background-image: url('../../assets/personnages/ALIBERT.webp');
   background-position: 58% 22%;
 }
+body.character-allister .character-hero-bg {
+  background-image: url('../../assets/personnages/ALLISTER.png');
+  background-position: 50% center;
+}
 body.character-amalia .character-hero-bg {
   background-image: url('../../assets/personnages/AMALIA.webp');
   background-position: center center;
@@ -167,6 +171,10 @@ body.character-bouillon .character-hero-bg {
   background-position: center center;
   transform: scale(1);
 }
+body.character-brumaire .character-hero-bg {
+  background-image: url('../../assets/personnages/BRUMAIRE.png');
+  background-position: 50% center;
+}
 body.character-cadence .character-hero-bg {
   background-image: url('../../assets/personnages/CADENCE.webp');
   background-position: center center;
@@ -228,12 +236,16 @@ body.character-rushu .character-hero-bg {
   background-position: 58% center;
 }
 body.character-djaul .character-hero-bg {
-  background-image: url('../../assets/personnages/DJAUL.webp');
+  background-image: url('../../assets/personnages/DJAUL-2026.webp');
   background-position: 50% center;
 }
 body.character-madagaskan .character-hero-bg {
   background-image: url('../../assets/personnages/MADAGASKAN.webp');
   background-position: 42% center;
+}
+body.character-maimane .character-hero-bg {
+  background-image: url('../../assets/personnages/MAIMANE.png');
+  background-position: 50% center;
 }
 body.character-deesse-cra .character-hero-bg {
   background-image: url('../../assets/personnages/DEESSE CRA BANNIERE.webp');
@@ -311,10 +323,6 @@ body.character-phaeris .character-hero-bg {
 body.character-mina .character-hero-bg {
   background-image: url('../../assets/personnages/MINA.webp');
   background-position: 54% center;
-}
-body.character-bellaphone .character-hero-bg {
-  background-image: url('../../assets/personnages/BELLAPHONE.webp');
-  background-position: 50% center;
 }
 body.character-glip .character-hero-bg {
   background-image: url('../../assets/personnages/GLIP.webp');
@@ -437,6 +445,10 @@ body.character-gruffon .character-hero-bg {
   background-repeat: no-repeat;
   transform: scale(1);
 }
+body.character-hecate .character-hero-bg {
+  background-image: url('../../assets/personnages/HECATE.png');
+  background-position: 50% center;
+}
 body.character-chevalier-justice .character-hero-bg {
   background-image: url('../../assets/personnages/CHEVALIER JUSTICE.webp');
   background-position: 34% center;
@@ -486,6 +498,10 @@ body.character-grand-dragon .character-hero-bg {
 }
 body.character-rasha .character-hero-bg {
   background-image: url('../../assets/personnages/RASHA.webp');
+  background-position: 50% center;
+}
+body.character-raval .character-hero-bg {
+  background-image: url('../../assets/personnages/RAVAL.png');
   background-position: 50% center;
 }
 body.character-aurora .character-hero-bg {
@@ -1915,156 +1931,158 @@ body.character-biography-page .related-card:nth-child(n+5) {
   transform: scale(1.04);
   transition: transform 0.34s ease, filter 0.34s ease;
 }
-.character-card[href="grand-dragon.html"] img { object-position: 78% center; }
-.character-card[href="rasha.html"] img { object-position: 50% center; }
-.character-card[href="aurora.html"] img { object-position: 50% center; }
-.character-card[href="corbeau-noir.html"] img { object-position: 50% center; }
-.character-card[href="miranda.html"] img { object-position: 50% center; }
-.character-card[href="kriss-la-krass.html"] img { object-position: center center; }
-.character-card[href="maude.html"] img { object-position: center center; }
-.character-card[href="anathar.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="ombrage.html"] img { object-position: 50% center; }
-.character-card[href="vampyro.html"] img { object-position: 60% center; transform: scale(1); }
-.character-card[href="chene-mou.html"] img { object-position: 50% center; }
-.character-card[href="prince-adale.html"] img { object-position: 58% center; transform: scale(1); }
-.character-card[href="les-miss-moches.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="xav-le-boulanger.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="jiva.html"] img { object-position: 50% center; }
-.character-card[href="moon.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="wa-wabbit.html"] img { object-position: center center; }
-.character-card[href="igole.html"] img { object-position: center center; }
-.character-card[href="remington-smisse.html"] img { object-position: 58% center; }
-.character-card[href="grany-smisse.html"] img { object-position: 30% center; }
-.character-card[href="dragon-cochon.html"] img { object-position: 34% center; transform: scale(1); }
-.character-card[href="moumoune-stroud.html"] img { object-position: 50% center; }
-.character-card[href="monsieur-m.html"] img { object-position: center center; }
-.character-card[href="razortemps.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="tristepin.html"] img { object-position: 52% center; }
-.character-card[href="dieu-iop.html"] img { object-position: 30% center; }
-.character-card[href="rubilax.html"] img { object-position: center center; }
-.character-card[href="djaul.html"] img { object-position: 47% center; transform: scale(1); }
-.character-card[href="rushu.html"] img { object-position: center center; }
-.character-card[href="goultard.html"] img { object-position: 51% center; }
-.character-card[href="deesse-cra.html"] img { object-position: 24% center; }
-.character-card[href="flopin-de-percedal.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="frida-mofette.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="madagaskan.html"] img { object-position: center center; }
-.character-card[href="cleophee.html"] img { object-position: center center; }
-.character-card[href="elely-de-percedal.html"] img {
+.character-card[href="grand-dragon"] img { object-position: 78% center; }
+.character-card[href="rasha"] img { object-position: 50% center; }
+.character-card[href="aurora"] img { object-position: 50% center; }
+.character-card[href="corbeau-noir"] img { object-position: 50% center; }
+.character-card[href="miranda"] img { object-position: 50% center; }
+.character-card[href="kriss-la-krass"] img { object-position: center center; }
+.character-card[href="maude"] img { object-position: center center; }
+.character-card[href="anathar"] img { object-position: center center; transform: scale(1); }
+.character-card[href="ombrage"] img { object-position: 50% center; }
+.character-card[href="vampyro"] img { object-position: 60% center; transform: scale(1); }
+.character-card[href="chene-mou"] img { object-position: 50% center; }
+.character-card[href="prince-adale"] img { object-position: 58% center; transform: scale(1); }
+.character-card[href="les-miss-moches"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="xav-le-boulanger"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="jiva"] img { object-position: 50% center; }
+.character-card[href="moon"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="wa-wabbit"] img { object-position: center center; }
+.character-card[href="igole"] img { object-position: center center; }
+.character-card[href="remington-smisse"] img { object-position: 58% center; }
+.character-card[href="grany-smisse"] img { object-position: 30% center; }
+.character-card[href="dragon-cochon"] img { object-position: 34% center; transform: scale(1); }
+.character-card[href="moumoune-stroud"] img { object-position: 50% center; }
+.character-card[href="monsieur-m"] img { object-position: center center; }
+.character-card[href="razortemps"] img { object-position: center center; transform: scale(1); }
+.character-card[href="tristepin"] img { object-position: 52% center; }
+.character-card[href="dieu-iop"] img { object-position: 30% center; }
+.character-card[href="rubilax"] img { object-position: center center; }
+.character-card[href="djaul"] img { object-position: 47% center; transform: scale(1); }
+.character-card[href="brumaire"] img { object-position: 76% center; transform: scale(1); }
+.character-card[href="hecate"] img { object-position: 42% center; transform: scale(1); }
+.character-card[href="maimane"] img { object-position: 39% center; transform: scale(1); }
+.character-card[href="rushu"] img { object-position: center center; }
+.character-card[href="goultard"] img { object-position: 51% center; }
+.character-card[href="deesse-cra"] img { object-position: 24% center; }
+.character-card[href="flopin-de-percedal"] img { object-position: center center; transform: scale(1); }
+.character-card[href="frida-mofette"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="madagaskan"] img { object-position: center center; }
+.character-card[href="cleophee"] img { object-position: center center; }
+.character-card[href="elely-de-percedal"] img {
   object-position: 45% center;
   transform: scale(1.04);
 }
-.character-card[href="pin-de-percedal.html"] img { object-position: 18% center; }
-.character-card[href="evangelyne.html"] img { object-position: 22% center; }
-.character-card[href="ruel-stroud.html"] img { object-position: 40% center; }
-.character-card[href="alibert.html"] img { object-position: 58% center; }
-.character-card[href="efrim.html"] img { object-position: 78% center; }
-.character-card[href="amalia-sheran-sharm.html"] img { object-position: 34% center; }
-.character-card[href="armant-sheran-sharm.html"] img { object-position: center center; }
-.character-card[href="arpagone.html"] img { object-position: 28% center; }
-.character-card[href="comte-harebourg.html"] img { object-position: 50% center; }
-.character-card[href="phaeris.html"] img { object-position: 50% center; }
-.character-card[href="bellaphone.html"] img { object-position: 50% center; }
-.character-card[href="glip.html"] img { object-position: 50% center; }
-.character-card[href="coqueline.html"] img { object-position: 50% center; }
-.character-card[href="kali.html"] img { object-position: 50% center; }
-.character-card[href="shinonome.html"] img { object-position: 50% center; }
-.character-card[href="dark-vlad.html"] img { object-position: 36% center; }
-.character-card[href="echo.html"] img { object-position: 50% center; }
-.character-card[href="bump.html"] img { object-position: 50% center; }
-.character-card[href="orgonax.html"] img { object-position: 50% center; }
-.character-card[href="sipho.html"] img { object-position: 50% center; }
-.character-card[href="ush-galesh.html"] img { object-position: 50% 18%; transform: scale(1); }
-.character-card[href="maskemane.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="balthazar.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="nimoda.html"] img { object-position: 50% center; }
-.character-card[href="yrehn.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="karn.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="elante.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="reines-de-bonta.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="prince-de-brakmar.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="rotalstrom.html"] img { object-position: 50% center; }
-.character-card[href="lokus.html"] img { object-position: 50% center; }
-.character-card[href="bakara-jurgen.html"] img { object-position: 50% center; }
-.character-card[href="jahash-jurgen.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="julith-abigor.html"] img { object-position: 50% center; transform: scale(1.02); }
-.character-card[href="lilotte.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="khan-karkass.html"] img { object-position: 50% center; transform: scale(1); }
-.character-card[href="bolgrot.html"] img {
+.character-card[href="pin-de-percedal"] img { object-position: 18% center; }
+.character-card[href="evangelyne"] img { object-position: 22% center; }
+.character-card[href="ruel-stroud"] img { object-position: 40% center; }
+.character-card[href="alibert"] img { object-position: 58% center; }
+.character-card[href="efrim"] img { object-position: 78% center; }
+.character-card[href="amalia-sheran-sharm"] img { object-position: 34% center; }
+.character-card[href="armant-sheran-sharm"] img { object-position: center center; }
+.character-card[href="arpagone"] img { object-position: 28% center; }
+.character-card[href="comte-harebourg"] img { object-position: 50% center; }
+.character-card[href="phaeris"] img { object-position: 50% center; }
+.character-card[href="glip"] img { object-position: 50% center; }
+.character-card[href="coqueline"] img { object-position: 50% center; }
+.character-card[href="kali"] img { object-position: 50% center; }
+.character-card[href="shinonome"] img { object-position: 50% center; }
+.character-card[href="dark-vlad"] img { object-position: 36% center; }
+.character-card[href="echo"] img { object-position: 50% center; }
+.character-card[href="bump"] img { object-position: 50% center; }
+.character-card[href="orgonax"] img { object-position: 50% center; }
+.character-card[href="sipho"] img { object-position: 50% center; }
+.character-card[href="ush-galesh"] img { object-position: 50% 18%; transform: scale(1); }
+.character-card[href="maskemane"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="balthazar"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="nimoda"] img { object-position: 50% center; }
+.character-card[href="yrehn"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="karn"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="elante"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="reines-de-bonta"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="prince-de-brakmar"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="rotalstrom"] img { object-position: 50% center; }
+.character-card[href="lokus"] img { object-position: 50% center; }
+.character-card[href="bakara-jurgen"] img { object-position: 50% center; }
+.character-card[href="jahash-jurgen"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="julith-abigor"] img { object-position: 50% center; transform: scale(1.02); }
+.character-card[href="lilotte"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="khan-karkass"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="bolgrot"] img {
   object-position: 18% 35%;
   transform: scale(1.78);
   transform-origin: 18% 35%;
 }
-.character-card[href="luis.html"] img { object-position: 50% center; }
-.character-card[href="atcham-crepin.html"] img { object-position: 23% center; }
-.character-card[href="belladone.html"] img { object-position: 47% 34%; }
-.character-card[href="chevalier-justice.html"] img { object-position: 34% center; }
-.character-card[href="roi-osamodas.html"] img { object-position: 42% center; }
-.character-card[href="roi-sheran-sharm.html"] img { object-position: center center; }
-.character-card[href="grande-deesse-eliatrope.html"] img { object-position: 50% center; }
-.character-card[href="yugo.html"] img { object-position: center center; }
-.character-card[href="adamai.html"] img { object-position: 50% 24%; transform: scale(1); }
-.character-card[href="grougaloragran.html"] img { object-position: 34% center; }
-.character-card[href="gruffon.html"] img { object-position: 60% center; transform: scale(0.96); }
-.character-card[href="ignemikhal.html"] img { object-position: center center; }
-.character-card[href="pandiego-de-la-vega.html"] img { object-position: 48% center; }
-.character-card[href="aguabrial.html"] img { object-position: 75% center; }
-.character-card[href="grougalorasalar.html"] img { object-position: 16% center; }
-.character-card[href="dardondakal.html"] img { object-position: 70% center; }
-.character-card[href="dathura.html"] img { object-position: 70% center; }
-.character-card[href="ogrest.html"] img { object-position: center 16%; transform: scale(1); }
-.character-card[href="toross-mordal.html"] img { object-position: 62% center; }
-.character-card[href="terrakourial.html"] img { object-position: 62% center; }
-.character-card[href="aerafal.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="joris-jurgen.html"] img { object-position: 58% 32%; }
-.character-card[href="kerubim-crepin.html"] img { object-position: center center; }
-.character-card[href="lancedur.html"] img { object-position: 56% 34%; transform: scale(1); }
-.character-card[href="chibi.html"] img { object-position: 56% center; }
-.character-card[href="cire-momore.html"] img { object-position: 50% 34%; }
-.character-card[href="nox.html"] img {
+.character-card[href="luis"] img { object-position: 50% center; }
+.character-card[href="atcham-crepin"] img { object-position: 23% center; }
+.character-card[href="belladone"] img { object-position: 47% 34%; }
+.character-card[href="chevalier-justice"] img { object-position: 34% center; }
+.character-card[href="roi-osamodas"] img { object-position: 42% center; }
+.character-card[href="roi-sheran-sharm"] img { object-position: center center; }
+.character-card[href="grande-deesse-eliatrope"] img { object-position: 50% center; }
+.character-card[href="yugo"] img { object-position: center center; }
+.character-card[href="adamai"] img { object-position: 50% 24%; transform: scale(1); }
+.character-card[href="grougaloragran"] img { object-position: 34% center; }
+.character-card[href="gruffon"] img { object-position: 60% center; transform: scale(0.96); }
+.character-card[href="ignemikhal"] img { object-position: center center; }
+.character-card[href="pandiego-de-la-vega"] img { object-position: 48% center; }
+.character-card[href="aguabrial"] img { object-position: 75% center; }
+.character-card[href="grougalorasalar"] img { object-position: 16% center; }
+.character-card[href="dardondakal"] img { object-position: 70% center; }
+.character-card[href="dathura"] img { object-position: 70% center; }
+.character-card[href="ogrest"] img { object-position: center 16%; transform: scale(1); }
+.character-card[href="toross-mordal"] img { object-position: 62% center; }
+.character-card[href="terrakourial"] img { object-position: 62% center; }
+.character-card[href="aerafal"] img { object-position: center center; transform: scale(1); }
+.character-card[href="joris-jurgen"] img { object-position: 58% 32%; }
+.character-card[href="kerubim-crepin"] img { object-position: center center; }
+.character-card[href="lancedur"] img { object-position: 56% 34%; transform: scale(1); }
+.character-card[href="chibi"] img { object-position: 56% center; }
+.character-card[href="cire-momore"] img { object-position: 50% 34%; }
+.character-card[href="nox"] img {
   object-position: center center;
   transform: translateY(-4%) scale(1.04);
 }
-.character-card[href="nora.html"] img { object-position: 66% center; }
-.character-card[href="qilby.html"] img { object-position: 48% center; }
-.character-card[href="oropo.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="agard.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="atone.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="biste.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="bouillon.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="cadence.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="chaille.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="desperia.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="mouche.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="ripulse.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="sidaire.html"] img { object-position: center center; transform: scale(1); }
-.character-card[href="elaine-encre-noir.html"] img { object-position: 23% center; transform: scale(1); }
-.character-card[href="percimol.html"] img { object-position: center center; }
-.character-card[href="grougaloragran.html"] .character-card-copy strong {
+.character-card[href="nora"] img { object-position: 66% center; }
+.character-card[href="qilby"] img { object-position: 48% center; }
+.character-card[href="oropo"] img { object-position: center center; transform: scale(1); }
+.character-card[href="agard"] img { object-position: center center; transform: scale(1); }
+.character-card[href="atone"] img { object-position: center center; transform: scale(1); }
+.character-card[href="biste"] img { object-position: center center; transform: scale(1); }
+.character-card[href="bouillon"] img { object-position: center center; transform: scale(1); }
+.character-card[href="cadence"] img { object-position: center center; transform: scale(1); }
+.character-card[href="chaille"] img { object-position: center center; transform: scale(1); }
+.character-card[href="desperia"] img { object-position: center center; transform: scale(1); }
+.character-card[href="mouche"] img { object-position: center center; transform: scale(1); }
+.character-card[href="ripulse"] img { object-position: center center; transform: scale(1); }
+.character-card[href="sidaire"] img { object-position: center center; transform: scale(1); }
+.character-card[href="elaine-encre-noir"] img { object-position: 23% center; transform: scale(1); }
+.character-card[href="percimol"] img { object-position: center center; }
+.character-card[href="grougaloragran"] .character-card-copy strong {
   font-size: clamp(0.68rem, 0.86vw, 0.84rem);
   letter-spacing: 0.08em;
 }
-.character-card[href="chevalier-justice.html"] .character-card-copy strong,
-.character-card[href="pandiego-de-la-vega.html"] .character-card-copy strong,
-.character-card[href="elaine-encre-noir.html"] .character-card-copy strong {
+.character-card[href="chevalier-justice"] .character-card-copy strong,
+.character-card[href="pandiego-de-la-vega"] .character-card-copy strong,
+.character-card[href="elaine-encre-noir"] .character-card-copy strong {
   font-size: clamp(0.66rem, 0.84vw, 0.82rem);
   letter-spacing: 0.07em;
 }
-.character-card[href="efrim.html"] .character-card-copy span {
+.character-card[href="efrim"] .character-card-copy span {
   letter-spacing: 0.1em;
 }
-.character-card[href="monsieur-m.html"] .character-card-copy span {
+.character-card[href="monsieur-m"] .character-card-copy span {
   letter-spacing: 0.1em;
 }
-.character-card[href="grande-deesse-eliatrope.html"] .character-card-copy strong {
+.character-card[href="grande-deesse-eliatrope"] .character-card-copy strong {
   font-size: clamp(0.68rem, 0.86vw, 0.84rem);
   letter-spacing: 0.08em;
 }
-.character-card[href="grougalorasalar.html"] .character-card-copy strong {
+.character-card[href="grougalorasalar"] .character-card-copy strong {
   font-size: clamp(0.66rem, 0.84vw, 0.82rem);
   letter-spacing: 0.07em;
 }
-.character-card[href="indie-delagrandaventure.html"] .character-card-copy strong {
+.character-card[href="indie-delagrandaventure"] .character-card-copy strong {
   font-size: clamp(0.56rem, 0.74vw, 0.72rem);
   letter-spacing: 0.05em;
 }
@@ -2073,16 +2091,16 @@ body.character-biography-page .related-card:nth-child(n+5) {
   filter: saturate(1.08) contrast(1.07);
   transform: scale(1.09);
 }
-.character-card[href="elely-de-percedal.html"]:hover img,
-.character-card[href="elely-de-percedal.html"]:focus-visible img {
+.character-card[href="elely-de-percedal"]:hover img,
+.character-card[href="elely-de-percedal"]:focus-visible img {
   transform: scale(1.09);
 }
-.character-card[href="nox.html"]:hover img,
-.character-card[href="nox.html"]:focus-visible img {
+.character-card[href="nox"]:hover img,
+.character-card[href="nox"]:focus-visible img {
   transform: translateY(-4%) scale(1.09);
 }
-.character-card[href="bolgrot.html"]:hover img,
-.character-card[href="bolgrot.html"]:focus-visible img {
+.character-card[href="bolgrot"]:hover img,
+.character-card[href="bolgrot"]:focus-visible img {
   transform: scale(1.88);
 }
 .character-card-shade {
@@ -3019,8 +3037,8 @@ body.character-overview-page .character-affinity-summary::after {
 }
 
 .top-nav { flex: 1; }
-.top-nav > a[href$="contact.html"],
-.top-nav > a[href$="pages/contact/contact.html"] { margin-left: auto; }
+.top-nav > a[href$="contact"],
+.top-nav > a[href$="pages/contact/contact"] { margin-left: auto; }
 /* Fiches WIP ajoutes le 2026-05-10. */
 body.character-cornu-mollu .character-hero-bg {
   background-image: url('../../assets/personnages/CORNU MOLLU.webp');
@@ -3034,9 +3052,45 @@ body.character-toxine .character-hero-bg {
   background-image: url('../../assets/personnages/TOXINE.webp');
   background-position: 50% center;
 }
+body.character-thanatena .character-hero-bg {
+  background-image: url('../../assets/personnages/THANATENA.png');
+  background-position: 50% 18%;
+}
 body.character-poo .character-hero-bg {
   background-image: url('../../assets/personnages/POO.webp');
   background-position: 50% 22%;
+}
+body.character-pouchecot .character-hero-bg {
+  background-image: url('../../assets/personnages/POUCHECOT.png');
+  background-position: 50% center;
+}
+body.character-menalt .character-hero-bg {
+  background-image: url('../../assets/personnages/MENALT.png');
+  background-position: 50% center;
+}
+body.character-solar .character-hero-bg {
+  background-image: url('../../assets/personnages/SOLAR.png');
+  background-position: 50% center;
+}
+body.character-sumens .character-hero-bg {
+  background-image: url('../../assets/personnages/SUMENS.png');
+  background-position: 50% center;
+}
+body.character-silouate .character-hero-bg {
+  background-image: url('../../assets/personnages/SILOUATE.png');
+  background-position: 50% center;
+}
+body.character-rosal .character-hero-bg {
+  background-image: url('../../assets/personnages/ROSAL.png');
+  background-position: 50% center;
+}
+body.character-silvosse .character-hero-bg {
+  background-image: url('../../assets/personnages/SILVOSSE.png');
+  background-position: 50% center;
+}
+body.character-ulgrude .character-hero-bg {
+  background-image: url('../../assets/personnages/ULGRUDE.png');
+  background-position: 50% center;
 }
 body.character-lou .character-hero-bg {
   background-image: url('../../assets/personnages/LOU.webp');
@@ -3051,12 +3105,32 @@ body.character-pandora .character-hero-bg {
   background-position: 50% center;
 }
 
+body.character-prysmaradoth .character-hero-bg {
+  background-image: url('../../assets/personnages/PRYSMARADOTH.webp');
+  background-position: 50% 48%;
+}
+
+body.character-rathrosk .character-hero-bg {
+  background-image: url('../../assets/personnages/RATHROSK.png');
+  background-position: 50% center;
+}
+
+body.character-roi-nidas .character-hero-bg {
+  background-image: url('../../assets/personnages/ROI NIDAS.png');
+  background-position: 50% center;
+}
+
+body.character-reine-des-voleurs .character-hero-bg {
+  background-image: url('../../assets/personnages/REINE DES VOLEURS.png');
+  background-position: 50% center;
+}
+
 body.character-uk-not-allag .character-hero-bg {
   background-image: url('../../assets/personnages/UK NOT ALLAG.webp');
   background-size: 125% auto;
   background-position: 72% top;
 }
-.character-card[href="uk-not-allag.html"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="uk-not-allag"] img { object-position: 50% center; transform: scale(1); }
 
 body.character-katar .character-hero-bg {
   background-image: url('../../assets/personnages/KATAR.webp');
@@ -3069,13 +3143,13 @@ body.character-medoroziam .character-hero-bg {
 }
 
 /* Corrections ciblees des cartes apres ajout des nouveaux personnages. */
-.character-card[href="katar.html"] img {
+.character-card[href="katar"] img {
   object-position: 72% 18% !important;
   transform-origin: 72% 18% !important;
   transform: scale(1.04) !important;
 }
 
-.character-card[href="medoroziam.html"] img {
+.character-card[href="medoroziam"] img {
   object-position: 22% 22% !important;
   transform-origin: 22% 22% !important;
   transform: scale(1.42) !important;
@@ -3205,8 +3279,8 @@ body.character-medoroziam .character-hero-bg {
     bottom: 0.3rem;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] {
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] {
     margin-left: 0 !important;
   }
 
@@ -3403,9 +3477,9 @@ body.character-medoroziam .character-hero-bg {
     white-space: nowrap;
   }
 
-  body.characters-index-page .character-card[href="indie-delagrandaventure.html"] .character-card-copy strong,
-  body.characters-index-page .character-card[href="grougalorasalar.html"] .character-card-copy strong,
-  body.characters-index-page .character-card[href="grande-deesse-eliatrope.html"] .character-card-copy strong {
+  body.characters-index-page .character-card[href="indie-delagrandaventure"] .character-card-copy strong,
+  body.characters-index-page .character-card[href="grougalorasalar"] .character-card-copy strong,
+  body.characters-index-page .character-card[href="grande-deesse-eliatrope"] .character-card-copy strong {
     font-size: clamp(0.72rem, 3.9vw, 0.92rem);
     letter-spacing: 0.08em;
   }

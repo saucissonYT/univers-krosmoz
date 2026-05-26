@@ -23,6 +23,10 @@
       "href": "alibert"
     },
     {
+      "name": "Allister",
+      "href": "allister"
+    },
+    {
       "name": "Amalia Sheran Sharm",
       "href": "amalia-sheran-sharm"
     },
@@ -71,10 +75,6 @@
       "href": "belladone"
     },
     {
-      "name": "Bellaphone",
-      "href": "bellaphone"
-    },
-    {
       "name": "Biste",
       "href": "biste"
     },
@@ -89,6 +89,10 @@
     {
       "name": "Bouillon",
       "href": "bouillon"
+    },
+    {
+      "name": "Brumaire",
+      "href": "brumaire"
     },
     {
       "name": "Bump",
@@ -279,6 +283,10 @@
       "href": "gruffon"
     },
     {
+      "name": "Hécate",
+      "href": "hecate"
+    },
+    {
       "name": "Hyrkul",
       "href": "hyrkul"
     },
@@ -375,6 +383,10 @@
       "href": "madagaskan"
     },
     {
+      "name": "Maïmane",
+      "href": "maimane"
+    },
+    {
       "name": "Maskemane",
       "href": "maskemane"
     },
@@ -385,6 +397,10 @@
     {
       "name": "Médoroziam",
       "href": "medoroziam"
+    },
+    {
+      "name": "Ménalt",
+      "href": "menalt"
     },
     {
       "name": "Mina",
@@ -471,6 +487,10 @@
       "href": "poo"
     },
     {
+      "name": "Pouchecot",
+      "href": "pouchecot"
+    },
+    {
       "name": "Prince Adale",
       "href": "prince-adale"
     },
@@ -483,6 +503,10 @@
       "href": "prosperus-elementor"
     },
     {
+      "name": "Prysmaradoth",
+      "href": "prysmaradoth"
+    },
+    {
       "name": "Qilby",
       "href": "qilby"
     },
@@ -491,8 +515,20 @@
       "href": "rasha"
     },
     {
+      "name": "Raval",
+      "href": "raval"
+    },
+    {
+      "name": "Rathrosk",
+      "href": "rathrosk"
+    },
+    {
       "name": "Razortemps",
       "href": "razortemps"
+    },
+    {
+      "name": "Reine des Voleurs",
+      "href": "reine-des-voleurs"
     },
     {
       "name": "Reines de Bonta",
@@ -505,6 +541,10 @@
     {
       "name": "Ripulse",
       "href": "ripulse"
+    },
+    {
+      "name": "Roi Nidas",
+      "href": "roi-nidas"
     },
     {
       "name": "Roi Osamodas",
@@ -531,12 +571,24 @@
       "href": "rushu"
     },
     {
+      "name": "Rosal",
+      "href": "rosal"
+    },
+    {
       "name": "Shinonomé",
       "href": "shinonome"
     },
     {
       "name": "Sidaire",
       "href": "sidaire"
+    },
+    {
+      "name": "Silouate",
+      "href": "silouate"
+    },
+    {
+      "name": "Silvosse",
+      "href": "silvosse"
     },
     {
       "name": "Simone",
@@ -547,8 +599,20 @@
       "href": "sipho"
     },
     {
+      "name": "Solar",
+      "href": "solar"
+    },
+    {
+      "name": "Sumens",
+      "href": "sumens"
+    },
+    {
       "name": "Terrakourial",
       "href": "terrakourial"
+    },
+    {
+      "name": "Thanatena",
+      "href": "thanatena"
     },
     {
       "name": "Toross Mordal",
@@ -561,6 +625,10 @@
     {
       "name": "Tristepin de Percedal",
       "href": "tristepin"
+    },
+    {
+      "name": "Ulgrude",
+      "href": "ulgrude"
     },
     {
       "name": "Uk’Not’Allag",
@@ -653,6 +721,16 @@
       "classLabel": "ENUTROF",
       "groups": [
         "Héros"
+      ]
+    },
+    {
+      "name": "Allister",
+      "href": "allister",
+      "image": "../../assets/personnages/cartes/allister.png",
+      "classLabel": "Féca",
+      "groups": [
+        "Héros",
+        "Mythe & Légende"
       ]
     },
     {
@@ -770,15 +848,6 @@
       ]
     },
     {
-      "name": "Bellaphone",
-      "href": "bellaphone",
-      "image": "../../assets/personnages/cartes/bellaphone.webp",
-      "classLabel": "Monstre",
-      "groups": [
-        "Mythe & légende"
-      ]
-    },
-    {
       "name": "Biste",
       "href": "biste",
       "image": "../../assets/personnages/cartes/biste.webp",
@@ -815,6 +884,15 @@
         "Ennemis",
         "Fratrie",
         "Éliotropes"
+      ]
+    },
+    {
+      "name": "Brumaire",
+      "href": "brumaire",
+      "image": "../../assets/personnages/cartes/brumaire.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
       ]
     },
     {
@@ -1101,10 +1179,11 @@
     {
       "name": "Djaul",
       "href": "djaul",
-      "image": "../../assets/personnages/cartes/djaul.webp",
-      "classLabel": "Shushu",
+      "image": "../../assets/personnages/cartes/djaul-2026.webp",
+      "classLabel": "Shushu, Gardien des mois",
       "groups": [
-        "Shushu"
+        "Shushu",
+        "Protecteur"
       ]
     },
     {
@@ -1256,6 +1335,15 @@
       ]
     },
     {
+      "name": "Hécate",
+      "href": "hecate",
+      "image": "../../assets/personnages/cartes/hecate.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
       "name": "Hyrkul",
       "href": "hyrkul",
       "image": "../../assets/personnages/cartes/hyrkul.webp",
@@ -1306,10 +1394,9 @@
       "name": "Jiva",
       "href": "jiva",
       "image": "../../assets/personnages/cartes/jiva.webp",
-      "classLabel": "Divinité",
+      "classLabel": "Gardien des mois",
       "groups": [
-        "Mythe & légende",
-        "Ennemis"
+        "Protecteur"
       ]
     },
     {
@@ -1481,6 +1568,15 @@
       ]
     },
     {
+      "name": "Maïmane",
+      "href": "maimane",
+      "image": "../../assets/personnages/cartes/maimane.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
       "name": "Maskemane",
       "href": "maskemane",
       "image": "../../assets/personnages/cartes/maskemane.webp",
@@ -1506,6 +1602,15 @@
       "classLabel": "Démon",
       "groups": [
         "Démon"
+      ]
+    },
+    {
+      "name": "Ménalt",
+      "href": "menalt",
+      "image": "../../assets/personnages/cartes/menalt.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
       ]
     },
     {
@@ -1705,6 +1810,15 @@
       ]
     },
     {
+      "name": "Pouchecot",
+      "href": "pouchecot",
+      "image": "../../assets/personnages/cartes/pouchecot.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
       "name": "Prince Adale",
       "href": "prince-adale",
       "image": "../../assets/personnages/cartes/prince-adale.webp",
@@ -1733,6 +1847,15 @@
       ]
     },
     {
+      "name": "Prysmaradoth",
+      "href": "prysmaradoth",
+      "image": "../../assets/personnages/cartes/prysmaradoth.webp",
+      "classLabel": "Dragon",
+      "groups": [
+        "Dragon"
+      ]
+    },
+    {
       "name": "Qilby",
       "href": "qilby",
       "image": "../../assets/personnages/cartes/qilby.webp",
@@ -1752,12 +1875,39 @@
       ]
     },
     {
+      "name": "Raval",
+      "href": "raval",
+      "image": "../../assets/personnages/cartes/raval.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
+      "name": "Rathrosk",
+      "href": "rathrosk",
+      "image": "../../assets/personnages/cartes/rathrosk.png",
+      "classLabel": "Dragon",
+      "groups": [
+        "Dragon"
+      ]
+    },
+    {
       "name": "Razortemps",
       "href": "razortemps",
       "image": "../../assets/personnages/cartes/razortemps.webp",
       "classLabel": "INCONNUE",
       "groups": [
         "WIP"
+      ]
+    },
+    {
+      "name": "Reine des Voleurs",
+      "href": "reine-des-voleurs",
+      "image": "../../assets/personnages/cartes/reine-des-voleurs.png",
+      "classLabel": "Sram",
+      "groups": [
+        "Srambad"
       ]
     },
     {
@@ -1787,6 +1937,15 @@
         "Ennemis",
         "Fratrie",
         "Éliotropes"
+      ]
+    },
+    {
+      "name": "Roi Nidas",
+      "href": "roi-nidas",
+      "image": "../../assets/personnages/cartes/roi-nidas.png",
+      "classLabel": "Enutrof",
+      "groups": [
+        "Énutrofors"
       ]
     },
     {
@@ -1846,6 +2005,15 @@
       ]
     },
     {
+      "name": "Rosal",
+      "href": "rosal",
+      "image": "../../assets/personnages/cartes/rosal.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
       "name": "Shinonomé",
       "href": "shinonome",
       "image": "../../assets/personnages/cartes/shinonome.webp",
@@ -1863,6 +2031,24 @@
         "Ennemis",
         "Fratrie",
         "Éliotropes"
+      ]
+    },
+    {
+      "name": "Silouate",
+      "href": "silouate",
+      "image": "../../assets/personnages/cartes/silouate.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
+      "name": "Silvosse",
+      "href": "silvosse",
+      "image": "../../assets/personnages/cartes/silvosse.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
       ]
     },
     {
@@ -1885,12 +2071,39 @@
       ]
     },
     {
+      "name": "Solar",
+      "href": "solar",
+      "image": "../../assets/personnages/cartes/solar.png",
+      "classLabel": "Iop, Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
+      "name": "Sumens",
+      "href": "sumens",
+      "image": "../../assets/personnages/cartes/sumens.png",
+      "classLabel": "Enutrof, Gardien des mois",
+      "groups": [
+        "Protecteur"
+      ]
+    },
+    {
       "name": "Terrakourial",
       "href": "terrakourial",
       "image": "../../assets/personnages/cartes/terrakourial.webp",
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
+      ]
+    },
+    {
+      "name": "Thanatena",
+      "href": "thanatena",
+      "image": "../../assets/personnages/cartes/thanatena.png",
+      "classLabel": "Grande Faucheuse",
+      "groups": [
+        "Dieu"
       ]
     },
     {
@@ -1920,6 +2133,15 @@
       "groups": [
         "Confrérie du Tofu",
         "Famille Percedal"
+      ]
+    },
+    {
+      "name": "Ulgrude",
+      "href": "ulgrude",
+      "image": "../../assets/personnages/cartes/ulgrude.png",
+      "classLabel": "Gardien des mois",
+      "groups": [
+        "Protecteur"
       ]
     },
     {

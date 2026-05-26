@@ -10,6 +10,7 @@
     { label: "L'Univers", href: "pages/histoire/histoire-krosmoz", match: "/pages/histoire/" },
     { label: "À découvrir", href: "pages/chronologies/oeuvres", match: "/pages/chronologies/oeuvres" },
     { label: "Personnages", href: "pages/personnages/personnages", match: "/pages/personnages/" },
+    { label: "Groupes", href: "pages/groupes/groupes", match: "/pages/groupes/" },
     {
       label: "Chronologie",
       items: [
@@ -23,13 +24,13 @@
     },
     { label: "Régions", href: "pages/regions/regions", match: "/pages/regions/" },
     { label: "Lexique", href: "pages/lexique/lexique", match: "/pages/lexique/" },
-    { label: "Jeux", href: "pages/jeux/jeux", match: "/pages/jeux/" },
     {
-      label: "Médias",
+      label: "Autres",
       items: [
+        { label: "Jeux", href: "pages/jeux/jeux" },
         { label: "Arbre des affinités", href: "pages/media/arbre-affinites" }
       ],
-      match: "/pages/media/"
+      match: ["/pages/jeux/", "/pages/media/"]
     },
     { label: "Contactez-nous", href: "pages/contact/contact", match: "/pages/contact/" }
   ];

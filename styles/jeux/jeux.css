@@ -60,18 +60,40 @@ body::after {
 .games-main {
   position: relative;
   z-index: 2;
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1180px, calc(100% - 1rem));
   flex: 0 0 auto;
   margin: 0 auto;
   padding: clamp(3rem, 7vw, 6rem) 0 0;
 }
 
 .games-intro {
-  max-width: 900px;
+  width: min(980px, calc(100vw - 2rem));
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2.5rem, 5vw, 4.35rem);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.games-intro::before,
+.games-intro::after {
+  content: '';
+  flex: 1 1 0;
+  max-width: 360px;
+  height: 1px;
+  background: linear-gradient(to var(--games-heading-line-direction), transparent, rgba(201, 168, 76, 0.48));
+}
+
+.games-intro::before {
+  --games-heading-line-direction: right;
+}
+
+.games-intro::after {
+  --games-heading-line-direction: left;
 }
 
 .games-kicker {
@@ -85,23 +107,46 @@ body::after {
 }
 
 .games-intro h1 {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
   margin-top: 0;
-  color: #fff7df;
+  color: #d8b16a;
   font-family: 'Cinzel Decorative', 'Cinzel', serif;
-  font-size: clamp(1.9rem, 4vw, 3.4rem);
+  font-size: clamp(1.18rem, 2vw, 1.92rem);
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.46em;
   line-height: 1;
   text-transform: uppercase;
-  text-shadow: 0 18px 54px rgba(0,0,0,0.9), 0 0 34px rgba(201,168,76,0.18);
+  text-shadow:
+    0 0 16px rgba(216, 177, 106, 0.2),
+    0 10px 28px rgba(0, 0, 0, 0.9);
+}
+
+.games-intro h1::before,
+.games-intro h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: clamp(15px, 1.4vw, 22px);
+  height: clamp(15px, 1.4vw, 22px);
+  background: url('../../assets/personnages/ELIACUBE.webp') center / contain no-repeat;
+  filter:
+    drop-shadow(0 0 7px rgba(46,207,176,0.58))
+    drop-shadow(0 0 14px rgba(46,207,176,0.2));
+  transform: translateY(-50%);
+}
+
+.games-intro h1::before {
+  left: calc(-1 * clamp(2.05rem, 3.8vw, 3.35rem));
+}
+
+.games-intro h1::after {
+  right: calc(-1 * clamp(2.05rem, 3.8vw, 3.35rem));
 }
 
 .games-title-rule {
-  width: min(440px, 72vw);
-  height: 1px;
-  display: block;
-  margin: 1rem auto 0;
-  background: linear-gradient(90deg, transparent, rgba(232,201,122,0.85), transparent);
+  display: none;
 }
 
 .games-grid {
@@ -109,7 +154,7 @@ body::after {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   align-items: stretch;
-  height: clamp(360px, calc(100vh - 520px), 430px);
+  height: clamp(380px, calc(100vh - 500px), 480px);
 }
 
 .game-card {
@@ -117,39 +162,64 @@ body::after {
 }
 
 .game-card a {
+  position: relative;
   height: 100%;
   min-height: 0;
-  display: grid;
-  grid-template-rows: minmax(190px, 56%) minmax(0, 44%);
+  display: block;
   border: 1px solid rgba(201,168,76,0.24);
   background: rgba(7,9,15,0.7);
   color: var(--text-main);
   text-decoration: none;
   overflow: hidden;
   box-shadow: 0 24px 70px rgba(0,0,0,0.34);
-  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .game-card a:hover,
 .game-card a:focus-visible {
   border-color: rgba(232,201,122,0.58);
   background: rgba(11,14,22,0.86);
+  box-shadow: 0 28px 76px rgba(0,0,0,0.46), 0 0 28px rgba(232,201,122,0.12);
   transform: translateY(-3px);
   outline: none;
 }
 
 .game-card-media {
-  min-height: 190px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  min-height: 0;
   background-position: center;
   background-size: cover;
-  position: relative;
+  filter: saturate(0.96) contrast(1.04) brightness(0.92);
+  transform: scale(1.01);
+  transition: filter 0.24s ease, transform 0.28s ease;
 }
 
 .game-card-media::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(7,9,15,0.88));
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.18)),
+    rgba(7,9,15,0);
+  opacity: 0;
+  transition: opacity 0.24s ease, background 0.24s ease;
+}
+
+.game-card a:hover .game-card-media,
+.game-card a:focus-visible .game-card-media {
+  filter: grayscale(0.78) saturate(0.38) contrast(1.16) brightness(0.58);
+  transform: scale(1.055);
+}
+
+.game-card a:hover .game-card-media::after,
+.game-card a:focus-visible .game-card-media::after {
+  opacity: 1;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.18), rgba(7,9,15,0.82)),
+    rgba(7,9,15,0.34);
 }
 
 .game-card-personality .game-card-media {
@@ -162,29 +232,45 @@ body::after {
 }
 
 .game-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   display: grid;
   align-content: center;
   justify-items: center;
   gap: 0.75rem;
-  padding: clamp(0.95rem, 2vw, 1.35rem);
+  padding: clamp(1.1rem, 2.4vw, 2.2rem);
+  opacity: 0;
   text-align: center;
+  transform: translateY(10px);
+  transition: opacity 0.22s ease, transform 0.24s ease;
+}
+
+.game-card a:hover .game-card-content,
+.game-card a:focus-visible .game-card-content {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .game-card-content strong {
   color: #fff7df;
-  font-family: 'Cinzel', serif;
-  font-size: clamp(1.3rem, 2.2vw, 1.95rem);
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.24rem, 2vw, 1.82rem);
+  font-style: normal;
   line-height: 1.12;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .game-card-content > span:not(.games-kicker, .game-card-meta, .game-card-action) {
   color: #eadfc8;
-  font-family: 'Crimson Text', Georgia, serif;
-  font-size: 1.08rem;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.78rem, 1.2vw, 0.95rem);
   font-style: italic;
-  line-height: 1.32;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.42;
+  text-transform: uppercase;
 }
 
 .game-card-meta {
@@ -214,6 +300,7 @@ body::after {
   color: var(--gold-light);
   font-family: 'Cinzel', serif;
   font-size: 0.72rem;
+  font-style: italic;
   font-weight: 700;
   letter-spacing: 0.16em;
   line-height: 1;
@@ -304,8 +391,8 @@ body.games-page .krosmoz-legal-notice {
     padding-top: 0.5rem;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] { margin-left: 0; }
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] { margin-left: 0; }
 
   .nav-link {
   position: relative;
@@ -334,8 +421,7 @@ body.games-page .krosmoz-legal-notice {
   }
 
   .game-card a {
-    min-height: 0;
-    grid-template-rows: minmax(210px, auto) auto;
+    min-height: clamp(300px, 62vw, 430px);
   }
 }
 
@@ -362,12 +448,11 @@ body.games-page .krosmoz-legal-notice {
   }
 
   .game-card a {
-    grid-template-rows: auto auto;
+    min-height: clamp(300px, 78vw, 390px);
   }
 
   .game-card-media {
     min-height: 0;
-    aspect-ratio: 16 / 7.4;
   }
 
   .game-card-content {

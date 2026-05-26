@@ -1729,8 +1729,7 @@ function createAffinityRelations() {
     "GROUGALORASALAR",
     "RAZORTEMPS",
     "PRINCE DE BRAKMAR",
-    "IGOLE",
-    "BELLAPHONE"
+    "IGOLE"
   ];
   enemy("YUGO", yugoEnemies);
   enemy("YUGO", éliotropes);
@@ -1813,7 +1812,7 @@ function createAffinityRelations() {
   enemy("DARK VLAD", ["KATAR"]);
   removeEnemy("EFRIM", ["ATCHAM CRÉPIN", "KÉRUBIM CRÉPIN", "GRUFON"]);
   removeEnemy("NORA", ["QILBY"]);
-  removeEnemy("KÉRUBIM CRÉPIN", ["NOX", "QILBY", "OROPO", "AURORA", "ROI OSAMODAS", "VAMPYRO", "OMBRAGE", "RASHA", "AERAFAL", "TERRAKOURIAL", "IGNEMIKHAL", "DARDONDAKAL", "GROUGALORASALAR", "RAZORTEMPS", "IGOLE", "BELLAPHONE", "PRINCE DE BRAKMAR"]);
+  removeEnemy("KÉRUBIM CRÉPIN", ["NOX", "QILBY", "OROPO", "AURORA", "ROI OSAMODAS", "VAMPYRO", "OMBRAGE", "RASHA", "AERAFAL", "TERRAKOURIAL", "IGNEMIKHAL", "DARDONDAKAL", "GROUGALORASALAR", "RAZORTEMPS", "IGOLE", "PRINCE DE BRAKMAR"]);
   enemy("KÉRUBIM CRÉPIN", ["JULITH ABIGOR", "CIRE MOMORE"]);
   friendship("ADAMAÏ", yugoFriends.concat([
     "LANCEDUR",
@@ -1839,8 +1838,7 @@ function createAffinityRelations() {
     "ROTALSTROM",
     "RAZORTEMPS",
     "PRINCE DE BRAKMAR",
-    "IGOLE",
-    "BELLAPHONE"
+    "IGOLE"
   ]);
   enemy("KARN", ["ÉLANTE", "YREHN"]);
   friendship("KARN", ["NIMODA"]);
@@ -1855,7 +1853,7 @@ function createAffinityRelations() {
   enemy("OGREST", ["YUGO", "TRISTEPIN DE PERCEDAL", "ÉVANGELYNE"]);
   enemy("REINES DE BONTA", ["YUGO", "PRINCE DE BRAKMAR"]);
 
-  const percedalEnemiesToRemove = ["BELLAPHONE", "IGOLE", "NOX", "QILBY", "REMINGTON SMISSE", "GRANY SMISSE", "AURORA", "ROI OSAMODAS"];
+  const percedalEnemiesToRemove = ["IGOLE", "NOX", "QILBY", "REMINGTON SMISSE", "GRANY SMISSE", "AURORA", "ROI OSAMODAS"];
   const percedalCloseFriendsToRemove = ["KÉRUBIM CRÉPIN", "JORIS JURGEN", "JORIS", "GRUFON", "ATCHAM CRÉPIN", "NORA"];
   const tofuExtendedFriendsToRemove = [
     "CHEVALIER JUSTICE",
@@ -1914,7 +1912,7 @@ function createAffinityRelations() {
   percedalChildren.forEach((name) => add(name, "family", "Demi-frère", "GOULTARD"));
   add("GOULTARD", "family", "Demi-frères et sœur", percedalChildren);
   removeFriend("GOULTARD", goultardFriendsToRemove);
-  removeEnemy("GOULTARD", primordialDragons.concat(["MONSIEUR M", "RAZORTEMPS", "COMTE HAREBOURG", "VAMPYRO", "AURORA", "ROI OSAMODAS", "REMINGTON SMISSE", "GRANY SMISSE", "NOX", "BELLAPHONE"]));
+  removeEnemy("GOULTARD", primordialDragons.concat(["MONSIEUR M", "RAZORTEMPS", "COMTE HAREBOURG", "VAMPYRO", "AURORA", "ROI OSAMODAS", "REMINGTON SMISSE", "GRANY SMISSE", "NOX"]));
   enemy("GOULTARD", ["KARN"]);
   enemy("MÉDOROZIAM", ["DARK VLAD", "KATAR"]);
 
@@ -2043,7 +2041,6 @@ function createAffinityRelations() {
   add("AGUABRIAL", "family", "Création", "BOLGROT");
   add("BOLGROT", "family", "Créateurs", ["DJAUL", "AGUABRIAL"]);
   removeFriend("XAV LE BOULANGER", ["ATCHAM CRÉPIN", "KÉRUBIM CRÉPIN", "JORIS", "JORIS JURGEN"]);
-  removeEnemy("BELLAPHONE", ["JORIS", "JORIS JURGEN", "KÉRUBIM CRÉPIN", "ATCHAM CRÉPIN", "ADAMAÏ"]);
   friendshipGroup(["AGARD", "CHAILLE", "BISTE", "MOUCHE"]);
 
   alias("GRAND DRAGON", "LE GRAND DRAGON");

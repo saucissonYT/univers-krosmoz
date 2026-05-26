@@ -438,6 +438,21 @@ body[data-era="waven"] .story-bg-waven {
   margin: 0;
 }
 
+.chapter-head p a,
+.chapter-body p a,
+.story-event-continuation p a,
+.chapter-head p a:visited,
+.chapter-body p a:visited,
+.story-event-continuation p a:visited,
+.chapter-head p a:hover,
+.chapter-body p a:hover,
+.story-event-continuation p a:hover,
+.chapter-head p a:focus-visible,
+.chapter-body p a:focus-visible,
+.story-event-continuation p a:focus-visible {
+  color: inherit !important;
+}
+
 .chapter-body p:first-child::first-letter {
   margin-right: 0.04em;
   color: var(--era-accent);
@@ -731,8 +746,8 @@ body[data-era="waven"] .story-bg-waven {
     gap: 1.5rem;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] { margin-left: auto; }
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] { margin-left: auto; }
 
   .reading-compass {
     display: none;

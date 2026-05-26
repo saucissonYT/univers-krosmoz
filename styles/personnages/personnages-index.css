@@ -266,18 +266,18 @@ body.characters-index-page .character-card:focus-visible img {
   transform: scale(var(--index-image-scale));
 }
 
-body.characters-index-page .character-card[href="elely-de-percedal.html"]:hover img,
-body.characters-index-page .character-card[href="elely-de-percedal.html"]:focus-visible img {
+body.characters-index-page .character-card[href="elely-de-percedal"]:hover img,
+body.characters-index-page .character-card[href="elely-de-percedal"]:focus-visible img {
   transform: scale(var(--index-image-scale));
 }
 
-body.characters-index-page .character-card[href="nox.html"]:hover img,
-body.characters-index-page .character-card[href="nox.html"]:focus-visible img {
+body.characters-index-page .character-card[href="nox"]:hover img,
+body.characters-index-page .character-card[href="nox"]:focus-visible img {
   transform: translateY(-5%) scale(var(--index-image-scale));
 }
 
-body.characters-index-page .character-card[href="bolgrot.html"]:hover img,
-body.characters-index-page .character-card[href="bolgrot.html"]:focus-visible img {
+body.characters-index-page .character-card[href="bolgrot"]:hover img,
+body.characters-index-page .character-card[href="bolgrot"]:focus-visible img {
   transform: scale(clamp(1.84, calc(var(--index-image-scale) + 0.81), 1.95));
 }
 
@@ -492,9 +492,9 @@ body.characters-index-page .character-card:focus-visible .character-card-copy st
     white-space: nowrap;
   }
 
-  body.characters-index-page .character-card[href="indie-delagrandaventure.html"] .character-card-copy strong,
-  body.characters-index-page .character-card[href="grougalorasalar.html"] .character-card-copy strong,
-  body.characters-index-page .character-card[href="grande-deesse-eliatrope.html"] .character-card-copy strong {
+  body.characters-index-page .character-card[href="indie-delagrandaventure"] .character-card-copy strong,
+  body.characters-index-page .character-card[href="grougalorasalar"] .character-card-copy strong,
+  body.characters-index-page .character-card[href="grande-deesse-eliatrope"] .character-card-copy strong {
     font-size: clamp(0.72rem, 3.9vw, 0.92rem);
     letter-spacing: 0.08em;
   }

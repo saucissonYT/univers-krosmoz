@@ -1,0 +1,105 @@
+body.groupes-index-page::before {
+  background: url('../../assets/groupes/groupes-background-mechasmes-desature.webp') center / cover no-repeat;
+  opacity: 0.16;
+}
+
+.group-filter-button {
+  margin: 0;
+  min-height: 44px;
+  padding: 0.55rem 0.72rem;
+  border: 0;
+  background: transparent;
+  color: rgba(201,168,76,0.76);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.group-filter-button:hover,
+.group-filter-button:focus-visible,
+.group-filter-button.is-active {
+  color: var(--gold-light);
+  background: rgba(255,255,255,0.025);
+}
+
+.group-filter-button:focus-visible {
+  outline: 1px solid rgba(232, 201, 122, 0.45);
+  outline-offset: 2px;
+}
+
+.groupes-index-page .region-tools {
+  grid-template-columns: minmax(220px, 1fr) auto auto auto auto;
+}
+
+.groupes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+  justify-content: center;
+  gap: clamp(0.7rem, 1.4vw, 1.05rem);
+}
+
+.group-card {
+  min-height: 390px;
+}
+
+.group-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.group-card-copy span {
+  text-transform: uppercase;
+}
+
+body.group-detail-page .region-hero::before {
+  filter: saturate(1.02) contrast(1.04);
+}
+
+body.group-biography-page .region-detail-panel {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+body.group-biography-page .region-biography-text {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+body.group-biography-page .region-biography-text p {
+  max-width: 1040px;
+  margin: 0 auto clamp(1.45rem, 2.4vw, 2rem);
+  color: #f0e7d6;
+  font-size: clamp(1.35rem, 2.15vw, 1.72rem);
+  line-height: 1.95;
+  text-align: center;
+}
+
+body.group-biography-page .region-biography-text p:first-child::first-letter {
+  float: none;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+}
+
+body.group-biography-page .region-detail-panel > .back-link {
+  justify-content: center;
+  width: 100%;
+  margin-top: 2.4rem;
+}
+
+@media (max-width: 760px) {
+  .groupes-index-page .region-tools {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .groupes-index-page .region-search {
+    grid-column: 1 / -1;
+  }
+}

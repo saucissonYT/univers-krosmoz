@@ -257,54 +257,54 @@ html.home-page {
   transition: transform 0.34s ease, filter 0.34s ease;
 }
 
-.rail-character[href="pages/personnages/tristepin.html"] img { object-position: 53% center; }
-.rail-character[href="pages/personnages/rubilax.html"] img { object-position: 70% 18%; }
-.rail-character[href="pages/personnages/goultard.html"] img { object-position: 51% center; }
-.rail-character[href="pages/personnages/flopin-de-percedal.html"] img { object-position: 58% center; }
-.rail-character[href="pages/personnages/madagaskan.html"] img { object-position: 36% center; }
-.rail-character[href="pages/personnages/cleophee.html"] img { object-position: 28% center; }
-.rail-character[href="pages/personnages/elely-de-percedal.html"] img { object-position: 45% center; }
-.rail-character[href="pages/personnages/pin-de-percedal.html"] img { object-position: 27% center; }
-.rail-character[href="pages/personnages/yugo.html"] img { object-position: 34% center; }
-.rail-character[href="pages/personnages/evangelyne.html"] img { object-position: 22% center; }
-.rail-character[href="pages/personnages/alibert.html"] img { object-position: 58% center; }
-.rail-character[href="pages/personnages/amalia-sheran-sharm.html"] img { object-position: 34% center; }
-.rail-character[href="pages/personnages/armant-sheran-sharm.html"] img { object-position: center center; }
-.rail-character[href="pages/personnages/roi-osamodas.html"] img { object-position: 42% center; }
-.rail-character[href="pages/personnages/roi-sheran-sharm.html"] img { object-position: 58% center; }
-.rail-character[href="pages/personnages/ruel-stroud.html"] img { object-position: 40% center; }
-.rail-character[href="pages/personnages/aerafal.html"] img { object-position: 10% center; }
-.rail-character[href="pages/personnages/aguabrial.html"] img { object-position: 88% center; }
-.rail-character[href="pages/personnages/adamai.html"] img { object-position: 10% center; }
-.rail-character[href="pages/personnages/atcham-crepin.html"] img { object-position: 28% center; }
-.rail-character[href="pages/personnages/balthazar.html"] img { object-position: 62% center; }
-.rail-character[href="pages/personnages/dardondakal.html"] img { object-position: 76% center; }
-.rail-character[href="pages/personnages/deesse-cra.html"] img { object-position: 28% center; }
-.rail-character[href="pages/personnages/deesse-feca.html"] img { object-position: 58% center; }
-.rail-character[href="pages/personnages/chevalier-justice.html"] img { object-position: 38% center; }
-.rail-character[href="pages/personnages/cornu-mollu.html"] img { object-position: 90% center; }
-.rail-character[href="pages/personnages/dathura.html"] img { object-position: 72% center; }
-.rail-character[href="pages/personnages/dragon-cochon.html"] img { object-position: 34% center; }
-.rail-character[href="pages/personnages/efrim.html"] img { object-position: 8% center; }
-.rail-character[href="pages/personnages/elaine-encre-noir.html"] img { object-position: 34% center; }
-.rail-character[href="pages/personnages/elante.html"] img { object-position: 86% center; }
-.rail-character[href="pages/personnages/glip.html"] img { object-position: 72% center; }
-.rail-character[href="pages/personnages/grougaloragran.html"] img { object-position: 34% center; }
-.rail-character[href="pages/personnages/grougalorasalar.html"] img { object-position: 20% center; }
-.rail-character[href="pages/personnages/chibi.html"] img { object-position: 57% center; }
-.rail-character[href="pages/personnages/ignemikhal.html"] img { object-position: 12% center; }
-.rail-character[href="pages/personnages/grany-smisse.html"] img { object-position: 36% center; }
-.rail-character[href="pages/personnages/indie-delagrandaventure.html"] img { object-position: 100% center; }
-.rail-character[href="pages/personnages/maskemane.html"] img { object-position: 75% center; }
-.rail-character[href="pages/personnages/nora.html"] img { object-position: 92% center; }
-.rail-character[href="pages/personnages/nox.html"] img { object-position: 52% center; }
-.rail-character[href="pages/personnages/otomai.html"] img { object-position: 62% 68%; }
-.rail-character[href="pages/personnages/percimol.html"] img { object-position: 30% center; }
-.rail-character[href="pages/personnages/qilby.html"] img { object-position: 48% center; }
-.rail-character[href="pages/personnages/oropo.html"] img { object-position: 28% center; }
-.rail-character[href="pages/personnages/terrakourial.html"] img { object-position: 82% center; }
-.rail-character[href="pages/personnages/uk-not-allag.html"] img { object-position: 90% center; }
-.rail-character[href="pages/personnages/wa-wabbit.html"] img { object-position: 90% center; }
+.rail-character[href="pages/personnages/tristepin"] img { object-position: 53% center; }
+.rail-character[href="pages/personnages/rubilax"] img { object-position: 70% 18%; }
+.rail-character[href="pages/personnages/goultard"] img { object-position: 51% center; }
+.rail-character[href="pages/personnages/flopin-de-percedal"] img { object-position: 58% center; }
+.rail-character[href="pages/personnages/madagaskan"] img { object-position: 36% center; }
+.rail-character[href="pages/personnages/cleophee"] img { object-position: 28% center; }
+.rail-character[href="pages/personnages/elely-de-percedal"] img { object-position: 45% center; }
+.rail-character[href="pages/personnages/pin-de-percedal"] img { object-position: 27% center; }
+.rail-character[href="pages/personnages/yugo"] img { object-position: 34% center; }
+.rail-character[href="pages/personnages/evangelyne"] img { object-position: 22% center; }
+.rail-character[href="pages/personnages/alibert"] img { object-position: 58% center; }
+.rail-character[href="pages/personnages/amalia-sheran-sharm"] img { object-position: 34% center; }
+.rail-character[href="pages/personnages/armant-sheran-sharm"] img { object-position: center center; }
+.rail-character[href="pages/personnages/roi-osamodas"] img { object-position: 42% center; }
+.rail-character[href="pages/personnages/roi-sheran-sharm"] img { object-position: 58% center; }
+.rail-character[href="pages/personnages/ruel-stroud"] img { object-position: 40% center; }
+.rail-character[href="pages/personnages/aerafal"] img { object-position: 10% center; }
+.rail-character[href="pages/personnages/aguabrial"] img { object-position: 88% center; }
+.rail-character[href="pages/personnages/adamai"] img { object-position: 10% center; }
+.rail-character[href="pages/personnages/atcham-crepin"] img { object-position: 28% center; }
+.rail-character[href="pages/personnages/balthazar"] img { object-position: 62% center; }
+.rail-character[href="pages/personnages/dardondakal"] img { object-position: 76% center; }
+.rail-character[href="pages/personnages/deesse-cra"] img { object-position: 28% center; }
+.rail-character[href="pages/personnages/deesse-feca"] img { object-position: 58% center; }
+.rail-character[href="pages/personnages/chevalier-justice"] img { object-position: 38% center; }
+.rail-character[href="pages/personnages/cornu-mollu"] img { object-position: 90% center; }
+.rail-character[href="pages/personnages/dathura"] img { object-position: 72% center; }
+.rail-character[href="pages/personnages/dragon-cochon"] img { object-position: 34% center; }
+.rail-character[href="pages/personnages/efrim"] img { object-position: 8% center; }
+.rail-character[href="pages/personnages/elaine-encre-noir"] img { object-position: 34% center; }
+.rail-character[href="pages/personnages/elante"] img { object-position: 86% center; }
+.rail-character[href="pages/personnages/glip"] img { object-position: 72% center; }
+.rail-character[href="pages/personnages/grougaloragran"] img { object-position: 34% center; }
+.rail-character[href="pages/personnages/grougalorasalar"] img { object-position: 20% center; }
+.rail-character[href="pages/personnages/chibi"] img { object-position: 57% center; }
+.rail-character[href="pages/personnages/ignemikhal"] img { object-position: 12% center; }
+.rail-character[href="pages/personnages/grany-smisse"] img { object-position: 36% center; }
+.rail-character[href="pages/personnages/indie-delagrandaventure"] img { object-position: 100% center; }
+.rail-character[href="pages/personnages/maskemane"] img { object-position: 75% center; }
+.rail-character[href="pages/personnages/nora"] img { object-position: 92% center; }
+.rail-character[href="pages/personnages/nox"] img { object-position: 52% center; }
+.rail-character[href="pages/personnages/otomai"] img { object-position: 62% 68%; }
+.rail-character[href="pages/personnages/percimol"] img { object-position: 30% center; }
+.rail-character[href="pages/personnages/qilby"] img { object-position: 48% center; }
+.rail-character[href="pages/personnages/oropo"] img { object-position: 28% center; }
+.rail-character[href="pages/personnages/terrakourial"] img { object-position: 82% center; }
+.rail-character[href="pages/personnages/uk-not-allag"] img { object-position: 90% center; }
+.rail-character[href="pages/personnages/wa-wabbit"] img { object-position: 90% center; }
 
 .rail-character::after {
   content: '';
@@ -1071,7 +1071,6 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 }
 
 .home-band-history .home-band-media::before {
-  background-image: url('../../assets/accueil/histoire-background-poster.webp');
   background-position: center 28%;
 }
 
@@ -1621,8 +1620,8 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 }
 
 .top-nav { flex: 1; }
-.top-nav > a[href$="contact.html"],
-.top-nav > a[href$="pages/contact/contact.html"] { margin-left: auto; }
+.top-nav > a[href$="contact"],
+.top-nav > a[href$="pages/contact/contact"] { margin-left: auto; }
 
 /* mobile-nav:start */
 .mobile-nav-toggle {
@@ -1747,8 +1746,8 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
     bottom: 0.3rem;
   }
 
-  .top-nav > a[href$="contact.html"],
-  .top-nav > a[href$="pages/contact/contact.html"] {
+  .top-nav > a[href$="contact"],
+  .top-nav > a[href$="pages/contact/contact"] {
     margin-left: 0 !important;
   }
 
