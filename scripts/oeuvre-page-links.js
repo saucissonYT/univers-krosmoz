@@ -3,7 +3,7 @@
     { title: 'Islands of Wakfu', href: 'island-of-wakfu', image: '../../assets/oeuvres/island-of-wakfu.webp', type: 'Game', era: 'primitif' },
     { title: 'Goultard le Barbare', href: 'goultard-le-barbare', image: '../../assets/personnages/GOULTARD.webp', type: 'Série / film', era: 'primitif' },
     { title: 'Hyrkul le Tendancieux', href: 'hyrkul-le-tendancieux', image: '../../assets/personnages/HYRKUL.webp', type: 'Webtoon', era: 'dofus' },
-    { title: 'Cire Momore', href: 'cire-momore', image: '../../assets/personnages/CIRE MOMORE.webp', type: 'Webtoon', era: 'dofus' },
+    { title: 'Cire Momore', href: 'cire-momore', image: '../../assets/personnages/cire-momore.webp', type: 'Webtoon', era: 'dofus' },
     { title: 'Kérubim', href: 'kerubim', image: '../../assets/oeuvres/kerubim.webp', type: 'Webtoon', era: 'dofus' },
     { title: 'Aux trésors de Kérubim', href: 'dofus-aux-tresors-kerubim', image: '../../assets/oeuvres/dofus-aux-tresors-kerubim.webp', type: 'Série / film', era: 'dofus' },
     { title: 'Dofus le film', href: 'dofus-le-film', image: '../../assets/oeuvres/dofus-le-film.webp', type: 'Série / film', era: 'dofus' },

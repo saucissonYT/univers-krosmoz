@@ -1081,7 +1081,7 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 }
 
 .home-band-chronology .home-band-media::before {
-  background-image: url('../../assets/chronologie/bg_wakfu.webp');
+  background-image: url('../../assets/chronologie/bg-wakfu.webp');
   background-position: 38% 18%;
 }
 

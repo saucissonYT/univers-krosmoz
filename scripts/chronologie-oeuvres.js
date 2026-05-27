@@ -57,7 +57,7 @@ const works = [
     title: 'Cire Momore',
     type: 'Webtoon',
     href: '../histoire/cire-momore',
-    image: '../../assets/personnages/CIRE MOMORE.webp',
+    image: '../../assets/personnages/cire-momore.webp',
     linkLabel: 'Fiche',
     preview: 'Récit webtoon consacré à la malédiction de Cire Momore.',
     details: ['Fiche dédiée à Cire Momore.']

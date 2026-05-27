@@ -89,7 +89,7 @@ body.character-alibert .character-hero-bg {
   background-position: 58% 22%;
 }
 body.character-allister .character-hero-bg {
-  background-image: url('../../assets/personnages/ALLISTER.png');
+  background-image: url('../../assets/personnages/ALLISTER.webp');
   background-position: 50% center;
 }
 body.character-amalia .character-hero-bg {
@@ -97,15 +97,15 @@ body.character-amalia .character-hero-bg {
   background-position: center center;
 }
 body.character-roi-sheran-sharm .character-hero-bg {
-  background-image: url('../../assets/personnages/ROI_SHERAN_SHARM.webp');
+  background-image: url('../../assets/personnages/roi-sheran-sharm.webp');
   background-position: 58% center;
 }
 body.character-roi-osamodas .character-hero-bg {
-  background-image: url('../../assets/personnages/ROI OSAMODAS.webp');
+  background-image: url('../../assets/personnages/roi-osamodas.webp');
   background-position: 38% center;
 }
 body.character-grande-deesse .character-hero-bg {
-  background-image: url('../../assets/personnages/GRANDE DEESSE.webp');
+  background-image: url('../../assets/personnages/grande-deesse.webp');
   background-position: 50% center;
 }
 body.character-armant .character-hero-bg {
@@ -137,7 +137,7 @@ body.character-qilby .character-hero-bg {
   background-position: 50% center;
 }
 body.character-prosperus-elementor .character-hero-bg {
-  background-image: url('../../assets/personnages/PROSPERUS ELEMENTOR.webp');
+  background-image: url('../../assets/personnages/prosperus-elementor.webp');
   background-position: center center;
   transform: scale(1);
 }
@@ -162,7 +162,7 @@ body.character-biste .character-hero-bg {
   transform: scale(1);
 }
 body.character-balance-krosmique .character-hero-bg {
-  background-image: url('../../assets/personnages/BALANCE KROSMIQUE.webp');
+  background-image: url('../../assets/personnages/balance-krosmique.webp');
   background-position: center center;
   transform: scale(1);
 }
@@ -172,7 +172,7 @@ body.character-bouillon .character-hero-bg {
   transform: scale(1);
 }
 body.character-brumaire .character-hero-bg {
-  background-image: url('../../assets/personnages/BRUMAIRE.png');
+  background-image: url('../../assets/personnages/BRUMAIRE.webp');
   background-position: 50% center;
 }
 body.character-cadence .character-hero-bg {
@@ -191,7 +191,7 @@ body.character-desperia .character-hero-bg {
   transform: scale(1);
 }
 body.character-ereziah-melkewel .character-hero-bg {
-  background-image: url('../../assets/personnages/EREZIAH MELKEWEL.webp');
+  background-image: url('../../assets/personnages/ereziah-melkewel.webp');
   background-position: center center;
   transform: scale(1);
 }
@@ -244,11 +244,11 @@ body.character-madagaskan .character-hero-bg {
   background-position: 42% center;
 }
 body.character-maimane .character-hero-bg {
-  background-image: url('../../assets/personnages/MAIMANE.png');
+  background-image: url('../../assets/personnages/MAIMANE.webp');
   background-position: 50% center;
 }
 body.character-deesse-cra .character-hero-bg {
-  background-image: url('../../assets/personnages/DEESSE CRA BANNIERE.webp');
+  background-image: url('../../assets/personnages/deesse-cra-banniere.webp');
   background-position: 40% center;
 }
 body.character-cleophee .character-hero-bg {
@@ -259,7 +259,7 @@ body.character-tristepin .character-hero-bg {
   background-position: center 42%;
 }
 body.character-dieu-iop .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU IOP BANNIERE.webp');
+  background-image: url('../../assets/personnages/dieu-iop-banniere.webp');
   background-position: 50% center;
 }
 /* Fiches des dragons primordiaux: chaque classe body pilote son visuel hero. */
@@ -313,7 +313,7 @@ body.character-kerubim .character-hero-bg {
   background-position: 70% center;
 }
 body.character-comte-harebourg .character-hero-bg {
-  background-image: url('../../assets/personnages/COMTE HAREBOURG.webp');
+  background-image: url('../../assets/personnages/comte-harebourg.webp');
   background-position: 56% center;
 }
 body.character-phaeris .character-hero-bg {
@@ -341,7 +341,7 @@ body.character-shinonome .character-hero-bg {
   background-position: 50% center;
 }
 body.character-dark-vlad .character-hero-bg {
-  background-image: url('../../assets/personnages/DARK VLAD.webp');
+  background-image: url('../../assets/personnages/dark-vlad.webp');
   background-position: 50% center;
 }
 body.character-echo .character-hero-bg {
@@ -361,7 +361,7 @@ body.character-sipho .character-hero-bg {
   background-position: 50% center;
 }
 body.character-ush-galesh .character-hero-bg {
-  background-image: url('../../assets/personnages/USH GALESH.webp');
+  background-image: url('../../assets/personnages/ush-galesh.webp');
   background-position: 60% 42%;
   background-size: 126% auto;
   transform: scale(1);
@@ -391,7 +391,7 @@ body.character-elante .character-hero-bg {
   background-position: 72% center;
 }
 body.character-reines-de-bonta .character-hero-bg {
-  background-image: url('../../assets/personnages/REINES DE BONTA.webp');
+  background-image: url('../../assets/personnages/reines-de-bonta.webp');
   background-position: 32% center;
 }
 body.character-rotalstrom .character-hero-bg {
@@ -403,15 +403,15 @@ body.character-lokus .character-hero-bg {
   background-position: 50% center;
 }
 body.character-bakara-jurgen .character-hero-bg {
-  background-image: url('../../assets/personnages/BAKARA JURGEN.webp');
+  background-image: url('../../assets/personnages/bakara-jurgen.webp');
   background-position: 50% center;
 }
 body.character-jahash-jurgen .character-hero-bg {
-  background-image: url('../../assets/personnages/JAHASH JURGEN.webp');
+  background-image: url('../../assets/personnages/jahash-jurgen.webp');
   background-position: 50% center;
 }
 body.character-julith-abigor .character-hero-bg {
-  background-image: url('../../assets/personnages/JULITH ABIGOR.webp');
+  background-image: url('../../assets/personnages/julith-abigor.webp');
   background-position: 48% center;
 }
 body.character-lilotte .character-hero-bg {
@@ -419,7 +419,7 @@ body.character-lilotte .character-hero-bg {
   background-position: 50% center;
 }
 body.character-khan-karkass .character-hero-bg {
-  background-image: url('../../assets/personnages/KHAN KARKASS.webp');
+  background-image: url('../../assets/personnages/khan-karkass.webp');
   background-position: 44% center;
 }
 body.character-luis .character-hero-bg {
@@ -446,19 +446,19 @@ body.character-gruffon .character-hero-bg {
   transform: scale(1);
 }
 body.character-hecate .character-hero-bg {
-  background-image: url('../../assets/personnages/HECATE.png');
+  background-image: url('../../assets/personnages/HECATE.webp');
   background-position: 50% center;
 }
 body.character-chevalier-justice .character-hero-bg {
-  background-image: url('../../assets/personnages/CHEVALIER JUSTICE.webp');
+  background-image: url('../../assets/personnages/chevalier-justice.webp');
   background-position: 34% center;
 }
 body.character-pandiego .character-hero-bg {
-  background-image: url('../../assets/personnages/PANDIEGO DE LA VEGA.webp');
+  background-image: url('../../assets/personnages/pandiego-de-la-vega.webp');
   background-position: 48% 30%;
 }
 body.character-elaine-encre-noir .character-hero-bg {
-  background-image: url('../../assets/personnages/ELAINE ENCRE NOIR.webp');
+  background-image: url('../../assets/personnages/elaine-encre-noir.webp');
   background-position: 44% center;
   transform: scale(1);
 }
@@ -472,12 +472,12 @@ body.character-lancedur .character-hero-bg {
   transform: scale(1);
 }
 body.character-lance-originelle .character-hero-bg {
-  background-image: url('../../assets/personnages/LANCE ORIGINELLE.webp');
+  background-image: url('../../assets/personnages/lance-originelle.webp');
   background-position: center center;
   transform: scale(1);
 }
 body.character-cire-momore .character-hero-bg {
-  background-image: url('../../assets/personnages/CIRE MOMORE.webp');
+  background-image: url('../../assets/personnages/cire-momore.webp');
   background-position: 50% 34%;
 }
 body.character-percimol .character-hero-bg {
@@ -485,15 +485,15 @@ body.character-percimol .character-hero-bg {
   background-position: 32% center;
 }
 body.character-nora .character-hero-bg {
-  background-image: url('../../assets/personnages/NORA EFRIM.webp');
+  background-image: url('../../assets/personnages/nora-efrim.webp');
   background-position: 66% center;
 }
 body.character-efrim .character-hero-bg {
-  background-image: url('../../assets/personnages/NORA EFRIM.webp');
+  background-image: url('../../assets/personnages/nora-efrim.webp');
   background-position: 25% center;
 }
 body.character-grand-dragon .character-hero-bg {
-  background-image: url('../../assets/personnages/GRAND DRAGON.webp');
+  background-image: url('../../assets/personnages/grand-dragon.webp');
   background-position: 78% center;
 }
 body.character-rasha .character-hero-bg {
@@ -501,7 +501,7 @@ body.character-rasha .character-hero-bg {
   background-position: 50% center;
 }
 body.character-raval .character-hero-bg {
-  background-image: url('../../assets/personnages/RAVAL.png');
+  background-image: url('../../assets/personnages/RAVAL.webp');
   background-position: 50% center;
 }
 body.character-aurora .character-hero-bg {
@@ -509,7 +509,7 @@ body.character-aurora .character-hero-bg {
   background-position: 50% center;
 }
 body.character-corbeau-noir .character-hero-bg {
-  background-image: url('../../assets/personnages/CORBEAU NOIR.webp');
+  background-image: url('../../assets/personnages/corbeau-noir.webp');
   background-position: 50% center;
 }
 body.character-kabrok .character-hero-bg {
@@ -521,7 +521,7 @@ body.character-miranda .character-hero-bg {
   background-position: 50% center;
 }
 body.character-kriss-la-krass .character-hero-bg {
-  background-image: url('../../assets/personnages/kriss la krass.webp');
+  background-image: url('../../assets/personnages/kriss-la-krass.webp');
   background-position: 50% 26%;
 }
 body.character-maude .character-hero-bg {
@@ -543,26 +543,26 @@ body.character-vampyro .character-hero-bg {
   transform: scale(1);
 }
 body.character-chene-mou .character-hero-bg {
-  background-image: url('../../assets/personnages/CHENE MOU.webp');
+  background-image: url('../../assets/personnages/chene-mou.webp');
   background-position: 50% center;
 }
 body.character-prince-adale .character-hero-bg {
-  background-image: url('../../assets/personnages/PRINCE ADALE.webp');
+  background-image: url('../../assets/personnages/prince-adale.webp');
   background-position: 58% center;
   transform: scale(1);
 }
 body.character-les-miss-moches .character-hero-bg {
-  background-image: url('../../assets/personnages/MISS MOCHE.webp');
+  background-image: url('../../assets/personnages/miss-moche.webp');
   background-position: 50% center;
   transform: scale(1);
 }
 body.character-xav-le-boulanger .character-hero-bg {
-  background-image: url('../../assets/personnages/XAV LE BOULANGER.webp');
+  background-image: url('../../assets/personnages/xav-le-boulanger.webp');
   background-position: 50% center;
   transform: scale(1);
 }
 body.character-frida-mofette .character-hero-bg {
-  background-image: url('../../assets/personnages/FRIDA MOFETTE.webp');
+  background-image: url('../../assets/personnages/frida-mofette.webp');
   background-position: 50% center;
   transform: scale(1);
 }
@@ -576,7 +576,7 @@ body.character-moon .character-hero-bg {
   transform: scale(1);
 }
 body.character-wa-wabbit .character-hero-bg {
-  background-image: url('../../assets/personnages/WA WABBIT.webp');
+  background-image: url('../../assets/personnages/wa-wabbit.webp');
   background-position: 73% center;
 }
 body.character-igole .character-hero-bg {
@@ -584,15 +584,15 @@ body.character-igole .character-hero-bg {
   background-position: 34% 62%;
 }
 body.character-remington-smisse .character-hero-bg {
-  background-image: url('../../assets/personnages/REMINGTON GRANY SMISSE.webp');
+  background-image: url('../../assets/personnages/remington-grany-smisse.webp');
   background-position: 58% center;
 }
 body.character-grany-smisse .character-hero-bg {
-  background-image: url('../../assets/personnages/REMINGTON GRANY SMISSE.webp');
+  background-image: url('../../assets/personnages/remington-grany-smisse.webp');
   background-position: 30% center;
 }
 body.character-dragon-cochon .character-hero-bg {
-  background-image: url('../../assets/personnages/DRAGON COCHON.webp');
+  background-image: url('../../assets/personnages/dragon-cochon.webp');
   background-position: 34% center;
   transform: scale(1);
 }
@@ -601,7 +601,7 @@ body.character-moumoune .character-hero-bg {
   background-position: 50% center;
 }
 body.character-monsieur-m .character-hero-bg {
-  background-image: url('../../assets/personnages/LE MMMMMMMMPORG.webp');
+  background-image: url('../../assets/personnages/le-mmmmmmmmporg.webp');
   background-position: 50% center;
 }
 body.character-razortemps .character-hero-bg {
@@ -610,43 +610,43 @@ body.character-razortemps .character-hero-bg {
   transform: scale(1);
 }
 body.character-dieu-xelor .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU XELOR.webp');
+  background-image: url('../../assets/personnages/dieu-xelor.webp');
   background-position: 50% 42%;
 }
 body.character-dieu-ecaflip .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU ECAFLIP.webp');
+  background-image: url('../../assets/personnages/dieu-ecaflip.webp');
   background-position: 50% 42%;
 }
 body.character-dieu-sadida .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU SADIDA.webp');
+  background-image: url('../../assets/personnages/dieu-sadida.webp');
   background-position: 50% center;
 }
 body.character-deesse-feca .character-hero-bg {
-  background-image: url('../../assets/personnages/DEESSE FECA.webp');
+  background-image: url('../../assets/personnages/deesse-feca.webp');
   background-position: 50% 42%;
 }
 body.character-dieu-sram .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU SRAM.webp');
+  background-image: url('../../assets/personnages/dieu-sram.webp');
   background-position: 50% center;
 }
 body.character-deesse-sacrieur .character-hero-bg {
-  background-image: url('../../assets/personnages/DEESSE SACRIEUR.webp');
+  background-image: url('../../assets/personnages/deesse-sacrieur.webp');
   background-position: 50% 34%;
 }
 body.character-dieu-enutrof .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU ENUTROF.webp');
+  background-image: url('../../assets/personnages/dieu-enutrof.webp');
   background-position: 50% 42%;
 }
 body.character-deesse-panda .character-hero-bg {
-  background-image: url('../../assets/personnages/DEESSE PANDA.webp');
+  background-image: url('../../assets/personnages/deesse-panda.webp');
   background-position: 50% 34%;
 }
 body.character-deesse-eniripsa .character-hero-bg {
-  background-image: url('../../assets/personnages/DEESSE ENIRIPSA.webp');
+  background-image: url('../../assets/personnages/deesse-eniripsa.webp');
   background-position: 50% center;
 }
 body.character-dieu-osamodas .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU OSAMODAS.webp');
+  background-image: url('../../assets/personnages/dieu-osamodas.webp');
   background-position: 50% 34%;
 }
 .character-hero::before {
@@ -3041,11 +3041,11 @@ body.character-overview-page .character-affinity-summary::after {
 .top-nav > a[href$="pages/contact/contact"] { margin-left: auto; }
 /* Fiches WIP ajoutes le 2026-05-10. */
 body.character-cornu-mollu .character-hero-bg {
-  background-image: url('../../assets/personnages/CORNU MOLLU.webp');
+  background-image: url('../../assets/personnages/cornu-mollu.webp');
   background-position: 50% center;
 }
 body.character-indie-delagrandaventure .character-hero-bg {
-  background-image: url('../../assets/personnages/INDIE DELAGRANDAVENTURE.webp');
+  background-image: url('../../assets/personnages/indie-delagrandaventure.webp');
   background-position: 50% 18%;
 }
 body.character-toxine .character-hero-bg {
@@ -3053,7 +3053,7 @@ body.character-toxine .character-hero-bg {
   background-position: 50% center;
 }
 body.character-thanatena .character-hero-bg {
-  background-image: url('../../assets/personnages/THANATENA.png');
+  background-image: url('../../assets/personnages/THANATENA.webp');
   background-position: 50% 18%;
 }
 body.character-poo .character-hero-bg {
@@ -3061,35 +3061,35 @@ body.character-poo .character-hero-bg {
   background-position: 50% 22%;
 }
 body.character-pouchecot .character-hero-bg {
-  background-image: url('../../assets/personnages/POUCHECOT.png');
+  background-image: url('../../assets/personnages/POUCHECOT.webp');
   background-position: 50% center;
 }
 body.character-menalt .character-hero-bg {
-  background-image: url('../../assets/personnages/MENALT.png');
+  background-image: url('../../assets/personnages/MENALT.webp');
   background-position: 50% center;
 }
 body.character-solar .character-hero-bg {
-  background-image: url('../../assets/personnages/SOLAR.png');
+  background-image: url('../../assets/personnages/SOLAR.webp');
   background-position: 50% center;
 }
 body.character-sumens .character-hero-bg {
-  background-image: url('../../assets/personnages/SUMENS.png');
+  background-image: url('../../assets/personnages/SUMENS.webp');
   background-position: 50% center;
 }
 body.character-silouate .character-hero-bg {
-  background-image: url('../../assets/personnages/SILOUATE.png');
+  background-image: url('../../assets/personnages/SILOUATE.webp');
   background-position: 50% center;
 }
 body.character-rosal .character-hero-bg {
-  background-image: url('../../assets/personnages/ROSAL.png');
+  background-image: url('../../assets/personnages/ROSAL.webp');
   background-position: 50% center;
 }
 body.character-silvosse .character-hero-bg {
-  background-image: url('../../assets/personnages/SILVOSSE.png');
+  background-image: url('../../assets/personnages/SILVOSSE.webp');
   background-position: 50% center;
 }
 body.character-ulgrude .character-hero-bg {
-  background-image: url('../../assets/personnages/ULGRUDE.png');
+  background-image: url('../../assets/personnages/ULGRUDE.webp');
   background-position: 50% center;
 }
 body.character-lou .character-hero-bg {
@@ -3111,22 +3111,22 @@ body.character-prysmaradoth .character-hero-bg {
 }
 
 body.character-rathrosk .character-hero-bg {
-  background-image: url('../../assets/personnages/RATHROSK.png');
+  background-image: url('../../assets/personnages/RATHROSK.webp');
   background-position: 50% center;
 }
 
 body.character-roi-nidas .character-hero-bg {
-  background-image: url('../../assets/personnages/ROI NIDAS.png');
+  background-image: url('../../assets/personnages/roi-nidas.webp');
   background-position: 50% center;
 }
 
 body.character-reine-des-voleurs .character-hero-bg {
-  background-image: url('../../assets/personnages/REINE DES VOLEURS.png');
+  background-image: url('../../assets/personnages/reine-des-voleurs.webp');
   background-position: 50% center;
 }
 
 body.character-uk-not-allag .character-hero-bg {
-  background-image: url('../../assets/personnages/UK NOT ALLAG.webp');
+  background-image: url('../../assets/personnages/uk-not-allag.webp');
   background-size: 125% auto;
   background-position: 72% top;
 }
@@ -3511,7 +3511,7 @@ body.character-hyrkul .character-hero-bg {
   background-position: 50% 12%;
 }
 body.character-dieu-ouginak .character-hero-bg {
-  background-image: url('../../assets/personnages/DIEU OUGINAK.webp');
+  background-image: url('../../assets/personnages/dieu-ouginak.webp');
   background-position: 50% 12%;
 }
 body.character-arty .character-hero-bg {
@@ -3527,7 +3527,7 @@ body.character-bolgrot .character-hero-bg {
   background-position: 50% 44%;
 }
 body.character-prince-de-brakmar .character-hero-bg {
-  background-image: url('../../assets/personnages/PRINCE DE BRAKMAR.webp');
+  background-image: url('../../assets/personnages/prince-de-brakmar.webp');
   background-position: 50% center;
 }
 /* character-hero-new:end */

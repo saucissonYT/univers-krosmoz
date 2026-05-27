@@ -2016,7 +2016,7 @@ async function createShareCard(character, closeCharacters = []) {
   canvas.width = 1200;
   canvas.height = 630;
   const context = canvas.getContext('2d');
-  const logoImage = await loadShareImage('../../assets/logo_krosmoz.webp').catch(() => null);
+  const logoImage = await loadShareImage('../../assets/logo-krosmoz.webp').catch(() => null);
   const image = await loadShareImage(character.image).catch(() => logoImage);
   const closeImages = await Promise.all(closeCharacters.slice(0, 3).map((closeCharacter) => {
     return loadShareImage(closeCharacter.image).catch(() => null);

@@ -493,10 +493,10 @@ main {
   opacity: 0.15;
 }
 
-#bg-layer .bg-primitif { background-image: url('../../assets/oeuvres/bg_primitive.webp'); }
-#bg-layer .bg-dofus { background-image: url('../../assets/oeuvres/bg_dofus.webp'); }
-#bg-layer .bg-wakfu { background-image: url('../../assets/oeuvres/bg_wakfu.webp'); }
-#bg-layer .bg-waven { background-image: url('../../assets/oeuvres/bg_waven.webp'); }
+#bg-layer .bg-primitif { background-image: url('../../assets/oeuvres/bg-primitive.webp'); }
+#bg-layer .bg-dofus { background-image: url('../../assets/oeuvres/bg-dofus.webp'); }
+#bg-layer .bg-wakfu { background-image: url('../../assets/oeuvres/bg-wakfu.webp'); }
+#bg-layer .bg-waven { background-image: url('../../assets/oeuvres/bg-waven.webp'); }
 
 .legend {
   display: none;

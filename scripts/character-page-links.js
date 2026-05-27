@@ -726,7 +726,7 @@
     {
       "name": "Allister",
       "href": "allister",
-      "image": "../../assets/personnages/cartes/allister.png",
+      "image": "../../assets/personnages/cartes/allister.webp",
       "classLabel": "Féca",
       "groups": [
         "Héros",
@@ -889,7 +889,7 @@
     {
       "name": "Brumaire",
       "href": "brumaire",
-      "image": "../../assets/personnages/cartes/brumaire.png",
+      "image": "../../assets/personnages/cartes/brumaire.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -1337,7 +1337,7 @@
     {
       "name": "Hécate",
       "href": "hecate",
-      "image": "../../assets/personnages/cartes/hecate.png",
+      "image": "../../assets/personnages/cartes/hecate.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -1570,7 +1570,7 @@
     {
       "name": "Maïmane",
       "href": "maimane",
-      "image": "../../assets/personnages/cartes/maimane.png",
+      "image": "../../assets/personnages/cartes/maimane.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -1607,7 +1607,7 @@
     {
       "name": "Ménalt",
       "href": "menalt",
-      "image": "../../assets/personnages/cartes/menalt.png",
+      "image": "../../assets/personnages/cartes/menalt.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -1812,7 +1812,7 @@
     {
       "name": "Pouchecot",
       "href": "pouchecot",
-      "image": "../../assets/personnages/cartes/pouchecot.png",
+      "image": "../../assets/personnages/cartes/pouchecot.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -1877,7 +1877,7 @@
     {
       "name": "Raval",
       "href": "raval",
-      "image": "../../assets/personnages/cartes/raval.png",
+      "image": "../../assets/personnages/cartes/raval.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -1886,7 +1886,7 @@
     {
       "name": "Rathrosk",
       "href": "rathrosk",
-      "image": "../../assets/personnages/cartes/rathrosk.png",
+      "image": "../../assets/personnages/cartes/rathrosk.webp",
       "classLabel": "Dragon",
       "groups": [
         "Dragon"
@@ -1904,7 +1904,7 @@
     {
       "name": "Reine des Voleurs",
       "href": "reine-des-voleurs",
-      "image": "../../assets/personnages/cartes/reine-des-voleurs.png",
+      "image": "../../assets/personnages/cartes/reine-des-voleurs.webp",
       "classLabel": "Sram",
       "groups": [
         "Srambad"
@@ -1942,7 +1942,7 @@
     {
       "name": "Roi Nidas",
       "href": "roi-nidas",
-      "image": "../../assets/personnages/cartes/roi-nidas.png",
+      "image": "../../assets/personnages/cartes/roi-nidas.webp",
       "classLabel": "Enutrof",
       "groups": [
         "Énutrofors"
@@ -2007,7 +2007,7 @@
     {
       "name": "Rosal",
       "href": "rosal",
-      "image": "../../assets/personnages/cartes/rosal.png",
+      "image": "../../assets/personnages/cartes/rosal.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -2036,7 +2036,7 @@
     {
       "name": "Silouate",
       "href": "silouate",
-      "image": "../../assets/personnages/cartes/silouate.png",
+      "image": "../../assets/personnages/cartes/silouate.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -2045,7 +2045,7 @@
     {
       "name": "Silvosse",
       "href": "silvosse",
-      "image": "../../assets/personnages/cartes/silvosse.png",
+      "image": "../../assets/personnages/cartes/silvosse.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
@@ -2073,7 +2073,7 @@
     {
       "name": "Solar",
       "href": "solar",
-      "image": "../../assets/personnages/cartes/solar.png",
+      "image": "../../assets/personnages/cartes/solar.webp",
       "classLabel": "Iop, Gardien des mois",
       "groups": [
         "Protecteur"
@@ -2082,7 +2082,7 @@
     {
       "name": "Sumens",
       "href": "sumens",
-      "image": "../../assets/personnages/cartes/sumens.png",
+      "image": "../../assets/personnages/cartes/sumens.webp",
       "classLabel": "Enutrof, Gardien des mois",
       "groups": [
         "Protecteur"
@@ -2100,7 +2100,7 @@
     {
       "name": "Thanatena",
       "href": "thanatena",
-      "image": "../../assets/personnages/cartes/thanatena.png",
+      "image": "../../assets/personnages/cartes/thanatena.webp",
       "classLabel": "Grande Faucheuse",
       "groups": [
         "Dieu"
@@ -2138,7 +2138,7 @@
     {
       "name": "Ulgrude",
       "href": "ulgrude",
-      "image": "../../assets/personnages/cartes/ulgrude.png",
+      "image": "../../assets/personnages/cartes/ulgrude.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"

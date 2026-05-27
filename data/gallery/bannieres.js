@@ -33,7 +33,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Allister",
     "href": "allister",
     "slug": "allister",
-    "image": "ALLISTER.png"
+    "image": "ALLISTER.webp"
   },
   {
     "name": "Amalia Sheran Sharm",
@@ -87,7 +87,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Bakara Jurgen",
     "href": "bakara-jurgen",
     "slug": "bakara-jurgen",
-    "image": "BAKARA JURGEN.webp"
+    "image": "bakara-jurgen.webp"
   },
   {
     "name": "Baltazar",
@@ -129,7 +129,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Brumaire",
     "href": "brumaire",
     "slug": "brumaire",
-    "image": "BRUMAIRE.png"
+    "image": "BRUMAIRE.webp"
   },
   {
     "name": "Bump",
@@ -153,13 +153,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Chêne Mou",
     "href": "chene-mou",
     "slug": "chene-mou",
-    "image": "CHENE MOU.webp"
+    "image": "chene-mou.webp"
   },
   {
     "name": "Chevalier Justice",
     "href": "chevalier-justice",
     "slug": "chevalier-justice",
-    "image": "CHEVALIER JUSTICE.webp"
+    "image": "chevalier-justice.webp"
   },
   {
     "name": "Chibi",
@@ -171,7 +171,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Cire Momore",
     "href": "cire-momore",
     "slug": "cire-momore",
-    "image": "CIRE MOMORE.webp"
+    "image": "cire-momore.webp"
   },
   {
     "name": "Cléophée",
@@ -183,7 +183,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Comte Harebourg",
     "href": "comte-harebourg",
     "slug": "comte-harebourg",
-    "image": "COMTE HAREBOURG.webp"
+    "image": "comte-harebourg.webp"
   },
   {
     "name": "Coqueline",
@@ -195,13 +195,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Corbeau Noir",
     "href": "corbeau-noir",
     "slug": "corbeau-noir",
-    "image": "CORBEAU NOIR.webp"
+    "image": "corbeau-noir.webp"
   },
   {
     "name": "Cornu Mollu",
     "href": "cornu-mollu",
     "slug": "cornu-mollu",
-    "image": "CORNU MOLLU.webp"
+    "image": "cornu-mollu.webp"
   },
   {
     "name": "Dame Echo",
@@ -219,7 +219,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Dark Vlad",
     "href": "dark-vlad",
     "slug": "dark-vlad",
-    "image": "DARK VLAD.webp"
+    "image": "dark-vlad.webp"
   },
   {
     "name": "Dathura",
@@ -231,31 +231,31 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Déesse Cra",
     "href": "deesse-cra",
     "slug": "deesse-cra",
-    "image": "DEESSE CRA.webp"
+    "image": "deesse-cra.webp"
   },
   {
     "name": "Déesse Eniripsa",
     "href": "deesse-eniripsa",
     "slug": "deesse-eniripsa",
-    "image": "DEESSE ENIRIPSA.webp"
+    "image": "deesse-eniripsa.webp"
   },
   {
     "name": "Déesse Féca",
     "href": "deesse-feca",
     "slug": "deesse-feca",
-    "image": "DEESSE FECA.webp"
+    "image": "deesse-feca.webp"
   },
   {
     "name": "Déesse Panda",
     "href": "deesse-panda",
     "slug": "deesse-panda",
-    "image": "DEESSE PANDA.webp"
+    "image": "deesse-panda.webp"
   },
   {
     "name": "Déesse Sacrieur",
     "href": "deesse-sacrieur",
     "slug": "deesse-sacrieur",
-    "image": "DEESSE SACRIEUR.webp"
+    "image": "deesse-sacrieur.webp"
   },
   {
     "name": "Desperia",
@@ -267,49 +267,49 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Dieu Écaflip",
     "href": "dieu-ecaflip",
     "slug": "dieu-ecaflip",
-    "image": "DIEU ECAFLIP.webp"
+    "image": "dieu-ecaflip.webp"
   },
   {
     "name": "Dieu Enutrof",
     "href": "dieu-enutrof",
     "slug": "dieu-enutrof",
-    "image": "DIEU ENUTROF.webp"
+    "image": "dieu-enutrof.webp"
   },
   {
     "name": "Dieu Iop",
     "href": "dieu-iop",
     "slug": "dieu-iop",
-    "image": "DIEU IOP.webp"
+    "image": "dieu-iop.webp"
   },
   {
     "name": "Dieu Osamodas",
     "href": "dieu-osamodas",
     "slug": "dieu-osamodas",
-    "image": "DIEU OSAMODAS.webp"
+    "image": "dieu-osamodas.webp"
   },
   {
     "name": "Dieu Ouginak",
     "href": "dieu-ouginak",
     "slug": "dieu-ouginak",
-    "image": "DIEU OUGINAK.webp"
+    "image": "dieu-ouginak.webp"
   },
   {
     "name": "Dieu Sadida",
     "href": "dieu-sadida",
     "slug": "dieu-sadida",
-    "image": "DIEU SADIDA.webp"
+    "image": "dieu-sadida.webp"
   },
   {
     "name": "Dieu Sram",
     "href": "dieu-sram",
     "slug": "dieu-sram",
-    "image": "DIEU SRAM.webp"
+    "image": "dieu-sram.webp"
   },
   {
     "name": "Dieu Xélor",
     "href": "dieu-xelor",
     "slug": "dieu-xelor",
-    "image": "DIEU XELOR.webp"
+    "image": "dieu-xelor.webp"
   },
   {
     "name": "Djaul",
@@ -321,19 +321,19 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Dragon Cochon",
     "href": "dragon-cochon",
     "slug": "dragon-cochon",
-    "image": "DRAGON COCHON.webp"
+    "image": "dragon-cochon.webp"
   },
   {
     "name": "Efrim",
     "href": "efrim",
     "slug": "efrim",
-    "image": "NORA EFRIM.webp"
+    "image": "nora-efrim.webp"
   },
   {
     "name": "Elaine & Encre noir",
     "href": "elaine-encre-noir",
     "slug": "elaine-encre-noir",
-    "image": "ELAINE ENCRE NOIR.webp"
+    "image": "elaine-encre-noir.webp"
   },
   {
     "name": "Élante",
@@ -363,7 +363,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Frida Mofette",
     "href": "frida-mofette",
     "slug": "frida-mofette",
-    "image": "FRIDA MOFETTE.webp"
+    "image": "frida-mofette.webp"
   },
   {
     "name": "Glip",
@@ -381,13 +381,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Grand Dragon",
     "href": "grand-dragon",
     "slug": "grand-dragon",
-    "image": "GRAND DRAGON.webp"
+    "image": "grand-dragon.webp"
   },
   {
     "name": "Grany Smisse",
     "href": "grany-smisse",
     "slug": "grany-smisse",
-    "image": "REMINGTON GRANY SMISSE.webp"
+    "image": "remington-grany-smisse.webp"
   },
   {
     "name": "Grougaloragran",
@@ -411,7 +411,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Hécate",
     "href": "hecate",
     "slug": "hecate",
-    "image": "HECATE.png"
+    "image": "HECATE.webp"
   },
   {
     "name": "Hyrkul",
@@ -435,13 +435,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Indie Delagrandaventure",
     "href": "indie-delagrandaventure",
     "slug": "indie-delagrandaventure",
-    "image": "INDIE DELAGRANDAVENTURE.webp"
+    "image": "indie-delagrandaventure.webp"
   },
   {
     "name": "Jahash Jurgen",
     "href": "jahash-jurgen",
     "slug": "jahash-jurgen",
-    "image": "JAHASH JURGEN.webp"
+    "image": "jahash-jurgen.webp"
   },
   {
     "name": "Jiva",
@@ -459,7 +459,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Julith Abigor",
     "href": "julith-abigor",
     "slug": "julith-abigor",
-    "image": "JULITH ABIGOR.webp"
+    "image": "julith-abigor.webp"
   },
   {
     "name": "Kali",
@@ -489,19 +489,19 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Khan Karkass",
     "href": "khan-karkass",
     "slug": "khan-karkass",
-    "image": "KHAN KARKASS.webp"
+    "image": "khan-karkass.webp"
   },
   {
     "name": "Kriss la Krass",
     "href": "kriss-la-krass",
     "slug": "kriss-la-krass",
-    "image": "kriss la krass.webp"
+    "image": "kriss-la-krass.webp"
   },
   {
     "name": "La Déesse Éliatrope",
     "href": "grande-deesse-eliatrope",
     "slug": "grande-deesse-eliatrope",
-    "image": "GRANDE DEESSE.webp"
+    "image": "grande-deesse.webp"
   },
   {
     "name": "Lance Dur",
@@ -513,7 +513,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Les Miss Moches",
     "href": "les-miss-moches",
     "slug": "les-miss-moches",
-    "image": "MISS MOCHE.webp"
+    "image": "miss-moche.webp"
   },
   {
     "name": "Lilotte",
@@ -549,7 +549,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Maïmane",
     "href": "maimane",
     "slug": "maimane",
-    "image": "MAIMANE.png"
+    "image": "MAIMANE.webp"
   },
   {
     "name": "Maskemane",
@@ -573,7 +573,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Ménalt",
     "href": "menalt",
     "slug": "menalt",
-    "image": "MENALT.png"
+    "image": "MENALT.webp"
   },
   {
     "name": "Mina",
@@ -591,7 +591,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Monsieur M",
     "href": "monsieur-m",
     "slug": "monsieur-m",
-    "image": "LE MMMMMMMMPORG.webp"
+    "image": "le-mmmmmmmmporg.webp"
   },
   {
     "name": "Moon",
@@ -621,7 +621,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Nora",
     "href": "nora",
     "slug": "nora",
-    "image": "NORA EFRIM.webp"
+    "image": "nora-efrim.webp"
   },
   {
     "name": "Nox",
@@ -657,7 +657,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Pandiego de la Vega",
     "href": "pandiego-de-la-vega",
     "slug": "pandiego-de-la-vega",
-    "image": "PANDIEGO DE LA VEGA.webp"
+    "image": "pandiego-de-la-vega.webp"
   },
   {
     "name": "Pandora",
@@ -693,19 +693,19 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Pouchecot",
     "href": "pouchecot",
     "slug": "pouchecot",
-    "image": "POUCHECOT.png"
+    "image": "POUCHECOT.webp"
   },
   {
     "name": "Prince Adale",
     "href": "prince-adale",
     "slug": "prince-adale",
-    "image": "PRINCE ADALE.webp"
+    "image": "prince-adale.webp"
   },
   {
     "name": "Prince de Brakmar",
     "href": "prince-de-brakmar",
     "slug": "prince-de-brakmar",
-    "image": "PRINCE DE BRAKMAR.webp"
+    "image": "prince-de-brakmar.webp"
   },
   {
     "name": "Prysmaradoth",
@@ -729,13 +729,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Raval",
     "href": "raval",
     "slug": "raval",
-    "image": "RAVAL.png"
+    "image": "RAVAL.webp"
   },
   {
     "name": "Rathrosk",
     "href": "rathrosk",
     "slug": "rathrosk",
-    "image": "RATHROSK.png"
+    "image": "RATHROSK.webp"
   },
   {
     "name": "Razortemps",
@@ -747,19 +747,19 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Reine des Voleurs",
     "href": "reine-des-voleurs",
     "slug": "reine-des-voleurs",
-    "image": "REINE DES VOLEURS.png"
+    "image": "reine-des-voleurs.webp"
   },
   {
     "name": "Reines de Bonta",
     "href": "reines-de-bonta",
     "slug": "reines-de-bonta",
-    "image": "REINES DE BONTA.webp"
+    "image": "reines-de-bonta.webp"
   },
   {
     "name": "Remington Smisse",
     "href": "remington-smisse",
     "slug": "remington-smisse",
-    "image": "REMINGTON GRANY SMISSE.webp"
+    "image": "remington-grany-smisse.webp"
   },
   {
     "name": "Ripulse",
@@ -771,19 +771,19 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Roi Nidas",
     "href": "roi-nidas",
     "slug": "roi-nidas",
-    "image": "ROI NIDAS.png"
+    "image": "roi-nidas.webp"
   },
   {
     "name": "Roi Osamodas",
     "href": "roi-osamodas",
     "slug": "roi-osamodas",
-    "image": "ROI OSAMODAS.webp"
+    "image": "roi-osamodas.webp"
   },
   {
     "name": "Roi Sheran Sharm",
     "href": "roi-sheran-sharm",
     "slug": "roi-sheran-sharm",
-    "image": "ROI_SHERAN_SHARM.webp"
+    "image": "roi-sheran-sharm.webp"
   },
   {
     "name": "Rotalstrom",
@@ -813,7 +813,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Rosal",
     "href": "rosal",
     "slug": "rosal",
-    "image": "ROSAL.png"
+    "image": "ROSAL.webp"
   },
   {
     "name": "Shinonomé",
@@ -831,13 +831,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Silouate",
     "href": "silouate",
     "slug": "silouate",
-    "image": "SILOUATE.png"
+    "image": "SILOUATE.webp"
   },
   {
     "name": "Silvosse",
     "href": "silvosse",
     "slug": "silvosse",
-    "image": "SILVOSSE.png"
+    "image": "SILVOSSE.webp"
   },
   {
     "name": "Simone",
@@ -855,13 +855,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Solar",
     "href": "solar",
     "slug": "solar",
-    "image": "SOLAR.png"
+    "image": "SOLAR.webp"
   },
   {
     "name": "Sumens",
     "href": "sumens",
     "slug": "sumens",
-    "image": "SUMENS.png"
+    "image": "SUMENS.webp"
   },
   {
     "name": "Terrakourial",
@@ -873,7 +873,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Thanatena",
     "href": "thanatena",
     "slug": "thanatena",
-    "image": "THANATENA.png"
+    "image": "THANATENA.webp"
   },
   {
     "name": "Toross Mordal",
@@ -897,19 +897,19 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Ulgrude",
     "href": "ulgrude",
     "slug": "ulgrude",
-    "image": "ULGRUDE.png"
+    "image": "ULGRUDE.webp"
   },
   {
     "name": "Uk’Not’Allag",
     "href": "uk-not-allag",
     "slug": "uk-not-allag",
-    "image": "UK NOT ALLAG.webp"
+    "image": "uk-not-allag.webp"
   },
   {
     "name": "Ush Galesh",
     "href": "ush-galesh",
     "slug": "ush-galesh",
-    "image": "USH GALESH.webp"
+    "image": "ush-galesh.webp"
   },
   {
     "name": "Vampyro",
@@ -921,13 +921,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
     "name": "Wa Wabbit",
     "href": "wa-wabbit",
     "slug": "wa-wabbit",
-    "image": "WA WABBIT.webp"
+    "image": "wa-wabbit.webp"
   },
   {
     "name": "Xav le Boulanger",
     "href": "xav-le-boulanger",
     "slug": "xav-le-boulanger",
-    "image": "XAV LE BOULANGER.webp"
+    "image": "xav-le-boulanger.webp"
   },
   {
     "name": "Yrehn",

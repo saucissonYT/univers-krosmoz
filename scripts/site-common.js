@@ -96,7 +96,7 @@
       header.innerHTML = `
   <div class="site-topbar">
     <a class="brand" href="${relativeFromPage("")}" aria-label="Univers Krosmoz">
-      <img src="${relativeFromPage("assets/logo_krosmoz.webp")}" alt="">
+      <img src="${relativeFromPage("assets/logo-krosmoz.webp")}" alt="">
       <span>Univers Krosmoz</span>
     </a>
     <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Afficher le menu"><span>Menu</span><span class="mobile-nav-icon" aria-hidden="true"></span></button>

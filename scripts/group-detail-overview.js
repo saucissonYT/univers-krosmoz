@@ -66,14 +66,14 @@ const initGroupOverview = () => {
 
   const groups = [
     { slug: 'bellaphones', name: 'Les Bellaphones', image: 'bellaphones/bellaphones-carte.webp' },
-    { slug: 'eliatropes', name: 'Les Éliatropes', image: 'eliatropes/eliatropes-carte.png' },
+    { slug: 'eliatropes', name: 'Les Éliatropes', image: 'eliatropes/eliatropes-carte.webp' },
     { slug: 'confrerie-du-tofu', name: 'La Confrérie du Tofu', image: 'confrerie-du-tofu/confrerie-du-tofu-carte.jpg' },
-    { slug: 'eliotropes', name: 'Les Éliotropes', image: 'eliotropes/eliotropes.png' },
-    { slug: 'fratrie-des-oublies', name: 'La Fratrie des Oubliés', image: 'fratrie-des-oublies/fratrie-des-oublies-carte.png' },
-    { slug: 'gardiens-des-mois', name: 'Les Gardiens des Mois', image: 'gardiens-des-mois/gardiens-des-mois-carte.png' },
-    { slug: 'mechasmes', name: 'Les Méchasmes', image: 'mechasmes/mechasmes-carte.png' },
-    { slug: 'multiman', name: 'Les Multiman', image: 'multiman/multiman-418932-carte.png' },
-    { slug: 'ordre-du-coeur-vaillant', name: "L'Ordre du Cœur Vaillant", image: 'ordre-du-coeur-vaillant/ordre-du-coeur-vaillant-carte.png' },
+    { slug: 'eliotropes', name: 'Les Éliotropes', image: 'eliotropes/eliotropes.webp' },
+    { slug: 'fratrie-des-oublies', name: 'La Fratrie des Oubliés', image: 'fratrie-des-oublies/fratrie-des-oublies-carte.webp' },
+    { slug: 'gardiens-des-mois', name: 'Les Gardiens des Mois', image: 'gardiens-des-mois/gardiens-des-mois-carte.webp' },
+    { slug: 'mechasmes', name: 'Les Méchasmes', image: 'mechasmes/mechasmes-carte.webp' },
+    { slug: 'multiman', name: 'Les Multiman', image: 'multiman/multiman-418932-carte.webp' },
+    { slug: 'ordre-du-coeur-vaillant', name: "L'Ordre du Cœur Vaillant", image: 'ordre-du-coeur-vaillant/ordre-du-coeur-vaillant-carte.webp' },
   ];
 
   const currentIndex = groups.findIndex((group) => group.slug === currentSlug);

@@ -1,5 +1,8 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+ - Conversion des dernières images d'assets encore en .png vers .webp et mise à jour des chemins concernés.
+ - Normalisation des noms d'images les plus problématiques, dont les portraits d'affinités générés avec identifiants techniques, et mise à jour des chemins associés.
+
 
  - correction d'une incohérence liée à la saison 4, modification du texte dans 24 pages. (rapport à l'éliacube)
 
