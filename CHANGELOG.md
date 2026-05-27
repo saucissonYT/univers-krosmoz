@@ -1,5 +1,31 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+
+ - correction d'une incohérence liée à la saison 4, modification du texte dans 24 pages. (rapport à l'éliacube)
+
+groupes/eliatropes
+groupes/mechasmes
+histoire/necromonde
+histoire/island of wakfu
+histoire/origines
+personnages/adamai
+personnages/balthazar
+personnages/efrim
+personnages/glip
+personnages/grande-deesse
+personnages/grougaloragran
+personnages/mina
+personnages/nora
+personnages/orgonax
+personnages/phaeris
+personnages/qilby
+personnages/shinonome
+personnages/yugo
+regions/inglorium
+region/monde-des-douzes
+region/necromonde
+
+
 27/05/2026 :
 
 - Ajout de la rubrique : Groupes avec les groupes suivants :
