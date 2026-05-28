@@ -546,13 +546,6 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
-        "name":  "Jiva (carte)",
-        "href":  "jiva",
-        "slug":  "jiva-carte",
-        "path":  "assets/personnages/cartes/jiva-carte-v2.webp",
-        "category":  "personnages"
-    },
-    {
         "name":  "Joris Jurgen",
         "href":  "joris-jurgen",
         "slug":  "joris",
@@ -1313,13 +1306,6 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "frigost",
         "slug":  "frigost",
         "path":  "assets/regions/frigost/frigost.webp",
-        "category":  "regions"
-    },
-    {
-        "name":  "Frigost - Carte Frigost",
-        "href":  "frigost",
-        "slug":  "carte-frigost",
-        "path":  "assets/regions/frigost/carte-frigost.webp",
         "category":  "regions"
     },
     {
