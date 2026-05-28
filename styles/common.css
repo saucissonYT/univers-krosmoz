@@ -227,6 +227,135 @@ header {
   fill: currentColor;
 }
 
+.page-like {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 0.8rem;
+  width: min(620px, 100%);
+  margin: clamp(3rem, 6vw, 4.8rem) auto 0;
+  padding: clamp(1.4rem, 3vw, 2rem);
+  border-top: 1px solid rgba(201, 168, 76, 0.24);
+  border-bottom: 1px solid rgba(46, 207, 176, 0.16);
+  text-align: center;
+}
+
+.page-like-title,
+.page-like-total,
+.page-like-note {
+  margin: 0;
+}
+
+.page-like-title {
+  color: #fff7df;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.86rem, 1.7vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.page-like-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.62rem;
+  min-height: 52px;
+  max-width: 100%;
+  padding: 0.74rem 1.15rem;
+  border: 1px solid rgba(201, 168, 76, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f3efe4;
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.page-like-button:hover,
+.page-like-button:focus-visible {
+  border-color: rgba(232, 201, 122, 0.72);
+  background: rgba(201, 168, 76, 0.13);
+  color: #fff7df;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.page-like-button:disabled {
+  cursor: default;
+  opacity: 0.66;
+  transform: none;
+}
+
+.page-like-heart {
+  color: #d96b6b;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(217, 107, 107, 0.24);
+}
+
+.page-like.is-active .page-like-button {
+  border-color: rgba(217, 107, 107, 0.62);
+  background: rgba(217, 107, 107, 0.14);
+  color: #fff7df;
+}
+
+.page-like.is-active .page-like-heart {
+  color: #ff8b8b;
+}
+
+.page-like.is-cancelled .page-like-heart,
+.page-like.is-unavailable .page-like-heart {
+  color: rgba(169, 157, 136, 0.76);
+  text-shadow: none;
+}
+
+.page-like-total {
+  color: var(--gold-light);
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-like-total strong {
+  color: #fff7df;
+  font-size: 1.15em;
+}
+
+.page-like-summary .page-like-total {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42rem;
+}
+
+.page-like-summary .page-like-heart {
+  font-size: 1.16rem;
+}
+
+.page-like-note {
+  max-width: 430px;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.page-like-note a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 201, 122, 0.34);
+  text-underline-offset: 0.18em;
+}
+
 @media (min-width: 981px) and (max-width: 1320px) {
   .site-topbar {
     gap: 0.75rem;

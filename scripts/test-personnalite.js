@@ -506,7 +506,7 @@ characters.push(
     name: 'Jiva',
     archetype: 'Le devoir lumineux',
     href: '../personnages/jiva',
-    image: '../../assets/personnages/cartes/jiva.webp',
+    image: '../../assets/personnages/cartes/jiva-carte-v2.webp',
     traits: ['Protectrice', 'Ordre', 'Sacrifice'],
     vector: { cœur: 3, action: 3, sagesse: 5, ambition: 2, ombre: 1, mystere: 3, liberte: 1, devoir: 5, chaos: 0, lien: 3 },
     text: "Vous tenez une ligne même quand elle coûte cher. Comme Jiva, vous pouvez paraître froide parce que votre priorité reste ce qui doit être préservé."

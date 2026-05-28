@@ -1393,7 +1393,7 @@
     {
       "name": "Jiva",
       "href": "jiva",
-      "image": "../../assets/personnages/cartes/jiva.webp",
+      "image": "../../assets/personnages/cartes/jiva-carte-v2.webp",
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"

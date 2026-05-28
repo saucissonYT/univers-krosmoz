@@ -1,6 +1,8 @@
 
 
 import { createReadStream, existsSync, statSync } from "node:fs";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { extname, isAbsolute, join, normalize, relative, resolve } from "node:path";
 import { createServer } from "node:http";
 
@@ -12,6 +14,10 @@ const resendApiKey = process.env.RESEND_API_KEY || "";
 const contactTo = process.env.CONTACT_TO || "universkrosmoz@gmail.com";
 const resendFrom = process.env.RESEND_FROM || "Univers Krosmoz <onboarding@resend.dev>";
 const rateLimit = new Map();
+const pageLikeRateLimit = new Map();
+const pageLikesFile = join(root, "data", "reactions", "page-likes.json");
+let pageLikesCache = null;
+let pageLikesWriteQueue = Promise.resolve();
 const pageDirectories = [
   "pages/chronologies",
   "pages/contact",
@@ -19,6 +25,7 @@ const pageDirectories = [
   "pages/jeux",
   "pages/lexique",
   "pages/media",
+  "pages/groupes",
   "pages/personnages",
   "pages/regions"
 ];
@@ -114,6 +121,114 @@ function cleanText(value, maxLength) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, maxLength);
 }
 
+function cleanPageKey(value) {
+  const page = String(value || "")
+    .trim()
+    .replace(/\\/g, "/")
+    .replace(/\.html$/i, "")
+    .replace(/\/+$/g, "");
+
+  if (!/^\/pages\/(?:personnages|regions|groupes)\/[a-z0-9-]+(?:-biographie)?$/i.test(page)) {
+    return "";
+  }
+
+  if (/\/(?:personnages|regions|groupes)$/i.test(page)) {
+    return "";
+  }
+
+  return page.toLowerCase();
+}
+
+function getPageFilePath(page) {
+  return normalize(join(root, `${page}.html`));
+}
+
+function pageExists(page) {
+  const filePath = getPageFilePath(page);
+  return isInsideRoot(filePath) && existsSync(filePath) && statSync(filePath).isFile();
+}
+
+function cleanVoterId(value) {
+  const voterId = String(value || "").trim();
+  return /^[a-z0-9._:-]{16,160}$/i.test(voterId) ? voterId : "";
+}
+
+function getVoterHash(page, voterId) {
+  return createHash("sha256").update(`${page}:${voterId}`).digest("hex");
+}
+
+function normalizePageLikesData(data) {
+  const normalized = data && typeof data === "object" && data.pages && typeof data.pages === "object"
+    ? data
+    : { pages: {} };
+
+  for (const [page, entry] of Object.entries(normalized.pages)) {
+    if (!cleanPageKey(page) || !pageExists(page) || !entry || typeof entry !== "object") {
+      delete normalized.pages[page];
+      continue;
+    }
+
+    const voters = entry.voters && typeof entry.voters === "object" ? entry.voters : {};
+    for (const [hash, status] of Object.entries(voters)) {
+      if (!/^[a-f0-9]{64}$/i.test(hash) || status !== "active") {
+        delete voters[hash];
+      }
+    }
+
+    entry.voters = voters;
+    entry.count = Object.keys(voters).length;
+  }
+
+  return normalized;
+}
+
+async function loadPageLikes() {
+  if (pageLikesCache) {
+    return pageLikesCache;
+  }
+
+  try {
+    const content = await readFile(pageLikesFile, "utf8");
+    const data = JSON.parse(content);
+    pageLikesCache = normalizePageLikesData(data);
+  } catch {
+    pageLikesCache = { pages: {} };
+  }
+
+  return pageLikesCache;
+}
+
+async function savePageLikes(data) {
+  normalizePageLikesData(data);
+  pageLikesWriteQueue = pageLikesWriteQueue.then(async () => {
+    await mkdir(join(root, "data", "reactions"), { recursive: true });
+    await writeFile(pageLikesFile, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+  });
+
+  return pageLikesWriteQueue;
+}
+
+function getPageLikeEntry(data, page) {
+  if (!data.pages[page]) {
+    data.pages[page] = { count: 0, voters: {} };
+  }
+
+  const entry = data.pages[page];
+  if (!entry.voters || typeof entry.voters !== "object") {
+    entry.voters = {};
+  }
+  entry.count = Math.max(0, Number.parseInt(entry.count || 0, 10) || 0);
+  return entry;
+}
+
+function getPageLikeStatus(entry, page, voterId) {
+  if (!voterId) {
+    return "none";
+  }
+
+  return entry.voters[getVoterHash(page, voterId)] === "active" ? "active" : "none";
+}
+
 function getIp(request) {
   const forwarded = request.headers["x-forwarded-for"];
   return String(Array.isArray(forwarded) ? forwarded[0] : forwarded || request.socket.remoteAddress || "unknown")
@@ -132,6 +247,34 @@ function isRateLimited(ip) {
   item.count += 1;
   rateLimit.set(ip, item);
   return item.count > 5;
+}
+
+function isPageLikeRateLimited(ip, page, voterHash) {
+  const now = Date.now();
+  const windowMs = 60 * 1000;
+  const minimumDelayMs = 1200;
+  const key = `${ip}:${page}:${voterHash}`;
+  const item = pageLikeRateLimit.get(key) || { count: 0, resetAt: now + windowMs, lastAt: 0 };
+
+  if (item.resetAt < now) {
+    item.count = 0;
+    item.resetAt = now + windowMs;
+  }
+
+  const tooSoon = now - item.lastAt < minimumDelayMs;
+  item.count += 1;
+  item.lastAt = now;
+  pageLikeRateLimit.set(key, item);
+
+  if (pageLikeRateLimit.size > 10_000) {
+    for (const [storedKey, storedItem] of pageLikeRateLimit) {
+      if (storedItem.resetAt < now) {
+        pageLikeRateLimit.delete(storedKey);
+      }
+    }
+  }
+
+  return tooSoon || item.count > 20;
 }
 
 function findLegacyRedirect(pathname) {
@@ -257,6 +400,87 @@ async function handleContact(request, response) {
   sendJson(response, 200, { ok: true, message: "Message envoyé. Merci pour ton retour." });
 }
 
+async function handlePageLikes(request, response, url) {
+  const data = await loadPageLikes();
+
+  if (request.method === "GET") {
+    const page = cleanPageKey(url.searchParams.get("page"));
+    if (!page) {
+      sendJson(response, 400, { ok: false, message: "Page invalide." });
+      return;
+    }
+    if (!pageExists(page)) {
+      sendJson(response, 404, { ok: false, message: "Page introuvable." });
+      return;
+    }
+
+    const voterId = cleanVoterId(url.searchParams.get("voterId"));
+    const entry = getPageLikeEntry(data, page);
+    sendJson(response, 200, {
+      ok: true,
+      count: entry.count,
+      status: getPageLikeStatus(entry, page, voterId)
+    });
+    return;
+  }
+
+  if (request.method !== "POST") {
+    response.writeHead(405, { "content-type": "text/plain; charset=utf-8" });
+    response.end("Method not allowed");
+    return;
+  }
+
+  let payload;
+  try {
+    payload = JSON.parse(await readBody(request, 4_000));
+  } catch {
+    sendJson(response, 400, { ok: false, message: "Vote invalide." });
+    return;
+  }
+
+  const page = cleanPageKey(payload.page);
+  const voterId = cleanVoterId(payload.voterId);
+  const action = payload.action === "unlike" ? "unlike" : "like";
+
+  if (!page || !voterId) {
+    sendJson(response, 400, { ok: false, message: "Vote invalide." });
+    return;
+  }
+  if (!pageExists(page)) {
+    sendJson(response, 404, { ok: false, message: "Page introuvable." });
+    return;
+  }
+
+  const entry = getPageLikeEntry(data, page);
+  const voterHash = getVoterHash(page, voterId);
+  if (isPageLikeRateLimited(getIp(request), page, voterHash)) {
+    sendJson(response, 429, {
+      ok: false,
+      message: "Trop d'actions rapprochées sur cette page. Réessaie dans quelques secondes.",
+      count: entry.count,
+      status: getPageLikeStatus(entry, page, voterId)
+    });
+    return;
+  }
+
+  const currentStatus = entry.voters[voterHash] || "none";
+
+  if (action === "like" && currentStatus !== "active") {
+    entry.voters[voterHash] = "active";
+    entry.count += 1;
+  } else if (action === "unlike" && currentStatus === "active") {
+    delete entry.voters[voterHash];
+    entry.count = Math.max(0, entry.count - 1);
+  }
+
+  await savePageLikes(data);
+  sendJson(response, 200, {
+    ok: true,
+    count: entry.count,
+    status: entry.voters[voterHash] === "active" ? "active" : "none"
+  });
+}
+
 async function serveStatic(request, response) {
   const url = new URL(request.url || "/", "http://localhost");
   const pathname = decodeURIComponent(url.pathname);
@@ -302,6 +526,11 @@ createServer(async (request, response) => {
 
     if (request.method === "POST" && url.pathname === "/api/contact") {
       await handleContact(request, response);
+      return;
+    }
+
+    if ((request.method === "GET" || request.method === "POST") && url.pathname === "/api/page-likes") {
+      await handlePageLikes(request, response, url);
       return;
     }
 

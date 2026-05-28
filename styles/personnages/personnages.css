@@ -567,7 +567,7 @@ body.character-frida-mofette .character-hero-bg {
   transform: scale(1);
 }
 body.character-jiva .character-hero-bg {
-  background-image: url('../../assets/personnages/JIVA.webp');
+  background-image: url('../../assets/personnages/jiva-banniere.webp');
   background-position: 50% center;
 }
 body.character-moon .character-hero-bg {
@@ -867,6 +867,18 @@ body.character-adamai .hero-rule::after {
   grid-template-columns: 230px minmax(0, 1fr) 285px;
   gap: 2rem;
 }
+
+body.has-page-like .character-main {
+  background: #080810;
+  box-shadow: 0 0 0 100vmax #080810;
+  clip-path: inset(0 -100vmax);
+}
+
+body.has-page-like .bio-panel {
+  position: relative;
+  z-index: 1;
+}
+
 .info-panel, .related-panel {
   border: 1px solid rgba(201,168,76,0.18);
   background: linear-gradient(180deg, rgba(13,13,26,0.86), rgba(8,8,16,0.72));

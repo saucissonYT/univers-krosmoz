@@ -19,6 +19,16 @@
 
   const sourceUrl = "../../scripts/character-page-links.js";
   const characterBase = "../personnages/";
+  const categoryBase = {
+    personnages: "../personnages/",
+    regions: "../regions/",
+    groupes: "../groupes/"
+  };
+  const categoryLabels = {
+    personnages: "personnage",
+    regions: "region",
+    groupes: "groupe"
+  };
   const unique = new Map();
 
   const normalize = (value) => String(value || "")
@@ -45,7 +55,7 @@
 
     lastFocusedElement = document.activeElement;
     modalImage.src = item.image;
-    modalImage.alt = "Bannière de " + item.name;
+    modalImage.alt = "Image de " + item.name;
     modalTitle.textContent = item.name;
     modalProfile.href = item.href;
     modalProfile.setAttribute("aria-label", "Ouvrir la fiche de " + item.name);
@@ -104,14 +114,23 @@
   };
 
   const mapManifest = (items) => items
-    .filter((item) => item && item.name && item.href && item.slug)
-    .map((item) => ({
-      name: item.name,
-      href: characterBase + item.href,
-      image: "../../assets/personnages/" + item.image,
-      download: item.image,
-      search: normalize(item.name + " " + item.slug)
-    }));
+    .filter((item) => item && item.name && item.href && (item.path || item.image))
+    .map((item) => {
+      const category = item.category || "personnages";
+      const imagePath = item.path || ("assets/personnages/" + item.image);
+      const imageFile = imagePath.split("/").pop();
+      const slug = item.slug || imageFile.replace(/\.(webp|png|jpe?g)$/i, "");
+      const href = item.href.includes("/") ? item.href : (categoryBase[category] || characterBase) + item.href;
+
+      return {
+        name: item.name,
+        category,
+        href,
+        image: imagePath.startsWith("../") ? imagePath : "../../" + imagePath,
+        download: item.download || imageFile,
+        search: normalize(item.name + " " + slug + " " + (categoryLabels[category] || category))
+      };
+    });
 
   const downloadImage = (item) => {
     fetch(item.image)
@@ -145,12 +164,12 @@
     const media = document.createElement("button");
     media.className = "gallery-card-media";
     media.type = "button";
-    media.setAttribute("aria-label", "Afficher la bannière de " + item.name);
+    media.setAttribute("aria-label", "Afficher l'image de " + item.name);
     media.addEventListener("click", () => openModal(item));
 
     const image = document.createElement("img");
     image.src = item.image;
-    image.alt = "Bannière de " + item.name;
+    image.alt = "Image de " + item.name;
     image.loading = "lazy";
     image.decoding = "async";
     image.addEventListener("error", () => {
@@ -165,7 +184,7 @@
     download.href = item.image;
     download.download = item.download;
     download.title = "Télécharger l'image";
-    download.setAttribute("aria-label", "Télécharger la bannière de " + item.name);
+    download.setAttribute("aria-label", "Télécharger l'image de " + item.name);
     download.innerHTML = icon("download");
     download.addEventListener("click", (event) => {
       event.preventDefault();

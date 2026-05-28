@@ -1,5 +1,7 @@
 (function () {
   const ANALYTICS_ID = "G-ENCHQ15LHS";
+  const PAGE_LIKE_REFRESH_INTERVAL_MS = 60 * 1000;
+  const PAGE_LIKE_ACTION_COOLDOWN_MS = 1500;
 
   const stripFileName = (pathname) => pathname.replace(/[^/]*$/, "");
   const currentPath = new URL(window.location.href).pathname;
@@ -130,6 +132,290 @@
     window.gtag("config", ANALYTICS_ID);
   };
 
+  const getPageLikeVoterId = () => {
+    const key = "krosmoz-page-like-voter";
+    try {
+      const existing = window.localStorage.getItem(key);
+      if (existing) {
+        return existing;
+      }
+
+      const generated = window.crypto && typeof window.crypto.randomUUID === "function"
+        ? window.crypto.randomUUID()
+        : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}-${Math.random().toString(36).slice(2)}`;
+      window.localStorage.setItem(key, generated);
+      return generated;
+    } catch {
+      return "";
+    }
+  };
+
+  const getPageLikeTarget = () => {
+    const path = currentPath.replace(/\.html$/i, "").replace(/\/+$/g, "");
+    const characterMatch = path.match(/^\/pages\/personnages\/([a-z0-9-]+)$/i);
+    const isCharacterBiography = new URLSearchParams(window.location.search).get("bio") === "complete";
+    const regionOverviewMatch = path.match(/^\/pages\/regions\/([a-z0-9-]+)$/i);
+    const groupOverviewMatch = path.match(/^\/pages\/groupes\/([a-z0-9-]+)$/i);
+    const isCharacterPage = Boolean(characterMatch) && characterMatch[1] !== "personnages";
+    const isRegionBiography = document.body.classList.contains("region-biography-page")
+      && /^\/pages\/regions\/[a-z0-9-]+-biographie$/i.test(path);
+    const isGroupBiography = document.body.classList.contains("group-biography-page")
+      && /^\/pages\/groupes\/[a-z0-9-]+-biographie$/i.test(path);
+    const isRegionOverview = document.body.classList.contains("region-overview-page")
+      && Boolean(regionOverviewMatch)
+      && regionOverviewMatch[1] !== "regions";
+    const isGroupOverview = document.body.classList.contains("group-overview-page")
+      && Boolean(groupOverviewMatch)
+      && groupOverviewMatch[1] !== "groupes";
+
+    if (!isCharacterPage && !isRegionBiography && !isGroupBiography && !isRegionOverview && !isGroupOverview) {
+      return null;
+    }
+
+    const panel = isCharacterPage
+      ? document.querySelector(".bio-panel")
+      : document.querySelector(".region-detail-panel");
+
+    if (!panel) {
+      return null;
+    }
+
+    if (isCharacterPage && characterMatch && !isCharacterBiography) {
+      return {
+        mode: "summary",
+        page: path,
+        panel,
+        biographyHref: `${characterMatch[1]}?bio=complete`
+      };
+    }
+
+    if (isRegionOverview && regionOverviewMatch) {
+      return {
+        mode: "summary",
+        page: `/pages/regions/${regionOverviewMatch[1]}-biographie`,
+        panel,
+        biographyHref: `${regionOverviewMatch[1]}-biographie`
+      };
+    }
+
+    if (isGroupOverview && groupOverviewMatch) {
+      return {
+        mode: "summary",
+        page: `/pages/groupes/${groupOverviewMatch[1]}-biographie`,
+        panel,
+        biographyHref: `${groupOverviewMatch[1]}-biographie`
+      };
+    }
+
+    return { mode: "vote", page: path, panel };
+  };
+
+  const updatePageLikeView = (root, status, count) => {
+    const button = root.querySelector("[data-page-like-button]");
+    const buttonText = root.querySelector("[data-page-like-button-text]");
+    const countNode = root.querySelector("[data-page-like-count]");
+    const countLabel = root.querySelector("[data-page-like-count-label]");
+    const note = root.querySelector("[data-page-like-note]");
+    const safeCount = Number.isFinite(count) ? Math.max(0, count) : 0;
+
+    root.classList.toggle("is-active", status === "active");
+    root.classList.toggle("is-cancelled", status === "cancelled");
+    root.classList.toggle("is-unavailable", status === "unavailable");
+
+    if (countNode) {
+      countNode.textContent = safeCount.toLocaleString("fr-FR");
+    }
+    if (countLabel) {
+      countLabel.textContent = safeCount > 1 ? "c\u0153urs" : "c\u0153ur";
+    }
+
+    if (!button || !buttonText || !note) {
+      return;
+    }
+
+    button.disabled = status === "unavailable" || status === "loading";
+    button.setAttribute("aria-pressed", status === "active" ? "true" : "false");
+
+    if (status === "active") {
+      buttonText.textContent = "Retirer mon c\u0153ur";
+      note.textContent = "Votre c\u0153ur est compt\u00e9. Cliquez de nouveau pour annuler votre vote.";
+    } else if (status === "cancelled") {
+      buttonText.textContent = "J'aime cette page";
+      note.textContent = "Votre vote est annul\u00e9. Vous pouvez remettre votre c\u0153ur sans augmenter le compteur plusieurs fois.";
+    } else if (status === "unavailable") {
+      buttonText.textContent = "Vote indisponible";
+      note.textContent = "Le vote n'est pas disponible pour le moment.";
+    } else if (status === "loading") {
+      buttonText.textContent = "Chargement";
+      note.textContent = "V\u00e9rification du vote en cours.";
+    } else {
+      buttonText.textContent = "J'aime cette page";
+      note.textContent = "Vous pouvez aimer ou annuler votre vote. Le compteur ne garde qu'un seul c\u0153ur actif par visiteur.";
+    }
+  };
+
+  const mountPageLike = () => {
+    const target = getPageLikeTarget();
+    if (!target || target.panel.querySelector("[data-page-like]")) {
+      return;
+    }
+
+    const voterId = target.mode === "vote" ? getPageLikeVoterId() : "";
+    if (target.mode === "vote" && !voterId) {
+      return;
+    }
+
+    const root = document.createElement("section");
+    document.body.classList.add("has-page-like");
+    root.className = target.mode === "summary" ? "page-like page-like-summary" : "page-like";
+    root.dataset.pageLike = "";
+    root.innerHTML = target.mode === "summary"
+      ? `
+      <p class="page-like-title">Compteur de c\u0153urs</p>
+      <p class="page-like-total"><span class="page-like-heart" aria-hidden="true">♥</span> <strong data-page-like-count>0</strong> <span data-page-like-count-label>c\u0153ur</span></p>
+      <p class="page-like-note" data-page-like-note><a href="${target.biographyHref}">Lire la biographie</a> pour voter.</p>`
+      : `
+      <p class="page-like-title">Vous avez aim\u00e9 cette page ?</p>
+      <button class="page-like-button" type="button" data-page-like-button aria-pressed="false">
+        <span class="page-like-heart" aria-hidden="true">♥</span>
+        <span data-page-like-button-text>J'aime cette page</span>
+      </button>
+      <p class="page-like-total"><strong data-page-like-count>0</strong> <span data-page-like-count-label>c\u0153ur</span></p>
+      <p class="page-like-note" data-page-like-note>Vous pouvez aimer ou annuler votre vote. Le compteur ne garde qu'un seul c\u0153ur actif par visiteur.</p>`;
+
+    const backLink = Array.from(target.panel.children).find((child) => child.matches(".back-link, .region-back-link"));
+    if (backLink) {
+      target.panel.insertBefore(root, backLink);
+    } else {
+      target.panel.append(root);
+    }
+
+    const button = root.querySelector("[data-page-like-button]");
+    let currentStatus = "loading";
+    let currentCount = 0;
+    let refreshTimer = 0;
+    let refreshInFlight = false;
+    let pageLikeRequestId = 0;
+    let actionCooldownTimer = 0;
+    let isActionCoolingDown = false;
+    if (target.mode === "vote") {
+      updatePageLikeView(root, currentStatus, currentCount);
+    }
+
+    const refresh = (payload) => {
+      currentStatus = payload.status || "none";
+      currentCount = Number.parseInt(payload.count || 0, 10) || 0;
+      updatePageLikeView(root, target.mode === "summary" ? "summary" : currentStatus, currentCount);
+      if (button && isActionCoolingDown) {
+        button.disabled = true;
+      }
+    };
+
+    const requestLikeState = () => {
+      const params = target.mode === "summary"
+        ? new URLSearchParams({ page: target.page })
+        : new URLSearchParams({ page: target.page, voterId });
+      return fetch(`/api/page-likes?${params.toString()}`, { cache: "no-store" })
+        .then((response) => (response.ok ? response.json() : Promise.reject(new Error("like_state_failed"))));
+    };
+
+    const sendLikeAction = (action) => fetch("/api/page-likes", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ page: target.page, voterId, action })
+    }).then(async (response) => {
+      const payload = await response.json().catch(() => ({}));
+      if (response.ok) {
+        return payload;
+      }
+
+      const error = new Error("like_action_failed");
+      error.payload = payload;
+      throw error;
+    });
+
+    const startActionCooldown = () => {
+      if (!button || !PAGE_LIKE_ACTION_COOLDOWN_MS) {
+        return;
+      }
+
+      isActionCoolingDown = true;
+      button.disabled = true;
+      window.clearTimeout(actionCooldownTimer);
+      actionCooldownTimer = window.setTimeout(() => {
+        isActionCoolingDown = false;
+        updatePageLikeView(root, currentStatus, currentCount);
+      }, PAGE_LIKE_ACTION_COOLDOWN_MS);
+    };
+
+    const refreshLikeState = () => {
+      if (refreshInFlight) {
+        return Promise.resolve();
+      }
+
+      const requestId = ++pageLikeRequestId;
+      refreshInFlight = true;
+      return requestLikeState()
+        .then((payload) => {
+          if (requestId === pageLikeRequestId) {
+            refresh(payload);
+          }
+        })
+        .catch(() => {
+          if (target.mode === "vote" && currentStatus === "loading") {
+            updatePageLikeView(root, "unavailable", currentCount);
+          }
+        })
+        .finally(() => {
+          refreshInFlight = false;
+        });
+    };
+
+    const startAutoRefresh = () => {
+      if (refreshTimer || !PAGE_LIKE_REFRESH_INTERVAL_MS) {
+        return;
+      }
+
+      refreshTimer = window.setInterval(() => {
+        if (document.visibilityState === "visible") {
+          refreshLikeState();
+        }
+      }, PAGE_LIKE_REFRESH_INTERVAL_MS);
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+          refreshLikeState();
+        }
+      });
+    };
+
+    refreshLikeState();
+    startAutoRefresh();
+
+    if (button && target.mode === "vote") {
+      button.addEventListener("click", () => {
+        if (currentStatus === "loading" || isActionCoolingDown) {
+          return;
+        }
+
+        const action = currentStatus === "active" ? "unlike" : "like";
+        pageLikeRequestId += 1;
+        updatePageLikeView(root, "loading", currentCount);
+        sendLikeAction(action)
+          .then(refresh)
+          .catch((error) => {
+            if (error && error.payload && Number.isFinite(Number.parseInt(error.payload.count, 10))) {
+              refresh(error.payload);
+            } else {
+              updatePageLikeView(root, "unavailable", currentCount);
+            }
+          })
+          .finally(startActionCooldown);
+      });
+    }
+  };
+
   mountHeader();
   mountAnalytics();
+  mountPageLike();
 }());
