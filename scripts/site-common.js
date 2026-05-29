@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 (function () {
   const ANALYTICS_ID = "G-ENCHQ15LHS";
   const PAGE_LIKE_REFRESH_INTERVAL_MS = 60 * 1000;

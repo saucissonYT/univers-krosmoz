@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 const initGroupOverview = () => {
   const body = document.body;
   if (!body.classList.contains('group-overview-page')) return;

@@ -660,10 +660,10 @@ body.artefacts-page .krosmoz-legal-notice {
   }
 }
 
-.artifact-pedestal {
-  position: fixed;
+.artifact-pedestal-fixed {
+  position: absolute;
   left: 50%;
-  bottom: -56vh;
+  top: var(--artifact-pedestal-top, calc(51% + clamp(82px, 8vw, 120px)));
   z-index: 2;
   display: block;
   width: clamp(140px, 16.25vw, 210px);
@@ -866,8 +866,8 @@ body.artefacts-page .krosmoz-legal-notice {
     transform: translate(-50%, -50%);
   }
 
-  .artifact-pedestal {
-    bottom: -52vh;
+  .artifact-pedestal-fixed {
+    top: var(--artifact-pedestal-top, calc(50% + clamp(64px, 18vw, 92px)));
     width: clamp(113px, 31vw, 161px);
     height: auto;
     transform: translateX(-50%) scaleY(1.18);

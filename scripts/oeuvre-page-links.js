@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 (function () {
   const works = [
     { title: 'Islands of Wakfu', href: 'island-of-wakfu', image: '../../assets/oeuvres/island-of-wakfu.webp', type: 'Game', era: 'primitif' },

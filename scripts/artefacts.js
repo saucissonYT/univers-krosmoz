@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 (function () {
   const hall = document.querySelector('[data-artifact-hall]');
   if (!hall) return;
@@ -6,6 +13,7 @@
   const previousButton = hall.querySelector('[data-artifact-prev]');
   const nextButton = hall.querySelector('[data-artifact-next]');
   const track = hall.querySelector('.artifact-track');
+  const pedestal = hall.querySelector('.artifact-pedestal-fixed');
 
   if (artifacts.length < 2 || !previousButton || !nextButton || !track) return;
 
@@ -239,6 +247,23 @@
     updateSidePreview('right', nextArtifact);
   };
 
+  const updatePedestalPosition = () => {
+    const activeArtifact = artifacts[activeIndex];
+    const activeImage = activeArtifact?.querySelector('.artifact-display img');
+    if (!pedestal || !activeImage) return;
+
+    const imageRect = activeImage.getBoundingClientRect();
+    const pedestalTop = imageRect.bottom - 64;
+    pedestal.style.setProperty('--artifact-pedestal-top', Math.round(pedestalTop) + 'px');
+  };
+
+  const schedulePedestalUpdate = () => {
+    window.requestAnimationFrame(() => {
+      updatePedestalPosition();
+      window.requestAnimationFrame(updatePedestalPosition);
+    });
+  };
+
   const updateControls = () => {
     const previousArtifact = artifacts[(activeIndex - 1 + artifacts.length) % artifacts.length];
     const nextArtifact = artifacts[(activeIndex + 1) % artifacts.length];
@@ -314,6 +339,7 @@
 
     updateControls();
     updateSidePreviews();
+    schedulePedestalUpdate();
 
     if (artifacts[activeIndex].id && shouldFocus) {
       try {
@@ -341,6 +367,9 @@
   nextButton.addEventListener('click', () => {
     showArtifact(activeIndex + 1, true);
   });
+
+  window.addEventListener('resize', schedulePedestalUpdate);
+  window.addEventListener('load', schedulePedestalUpdate);
 
   hall.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {

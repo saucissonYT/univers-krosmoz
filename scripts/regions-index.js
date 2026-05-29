@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 (function () {
   const searchInput = document.getElementById("region-search");
   const sortButton = document.querySelector("[data-region-sort='az']");
