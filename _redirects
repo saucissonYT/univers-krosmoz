@@ -7,6 +7,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/chronologies/chronologie-oeuvres.html /pages/chronologies/chronologie-oeuvres 301
 /pages/chronologies/oeuvres.html /pages/chronologies/oeuvres 301
 /pages/contact/contact.html /pages/contact/contact 301
+/pages/artefacts/artefacts.html /pages/artefacts/artefacts 301
 /pages/groupes/eliatropes-biographie.html /pages/groupes/eliatropes-biographie 301
 /pages/groupes/eliatropes.html /pages/groupes/eliatropes 301
 /pages/groupes/confrerie-du-tofu-biographie.html /pages/groupes/confrerie-du-tofu-biographie 301
@@ -385,6 +386,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/jeux/jeu-personnage /pages/jeux/jeu-personnage.html 200
 /pages/jeux/jeux /pages/jeux/jeux.html 200
 /pages/jeux/quiz-krosmoz /pages/jeux/quiz-krosmoz.html 200
+/pages/artefacts/artefacts /pages/artefacts/artefacts.html 200
 /pages/lexique/lexique /pages/lexique/lexique.html 200
 /pages/media/arbre-affinites /pages/media/arbre-affinites.html 200
 /pages/media/galerie /pages/media/galerie.html 200
@@ -722,6 +724,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /histoire-origines.html /pages/histoire/histoire-origines 301
 /savara.html /pages/histoire/savara 301
 /lexique.html /pages/lexique/lexique 301
+/artefacts.html /pages/artefacts/artefacts 301
 /groupes.html /pages/groupes/groupes 301
 /eliatropes.html /pages/groupes/eliatropes 301
 /eliatropes-biographie.html /pages/groupes/eliatropes-biographie 301

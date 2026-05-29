@@ -77,6 +77,10 @@ const initRegionOverview = () => {
   summary.appendChild(biographyLink);
 
   article.prepend(summary);
+  const pageLike = article.querySelector(':scope > .page-like');
+  if (pageLike) {
+    summary.appendChild(pageLike);
+  }
 
   const regions = [
     { slug: 'krosmoz', name: 'Krosmoz', image: 'krosmoz/krosmoz.webp' },

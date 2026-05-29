@@ -29,10 +29,11 @@
     {
       label: "Autres",
       items: [
+        { label: "Artefacts", href: "pages/artefacts/artefacts" },
         { label: "Jeux", href: "pages/jeux/jeux" },
         { label: "Arbre des affinités", href: "pages/media/arbre-affinites" }
       ],
-      match: ["/pages/jeux/", "/pages/media/"]
+      match: ["/pages/artefacts/", "/pages/jeux/", "/pages/media/"]
     },
     { label: "Contactez-nous", href: "pages/contact/contact", match: "/pages/contact/" }
   ];
@@ -229,28 +230,34 @@
       countLabel.textContent = safeCount > 1 ? "c\u0153urs" : "c\u0153ur";
     }
 
-    if (!button || !buttonText || !note) {
+    if (!button || !buttonText) {
       return;
     }
+
+    const setNote = (text) => {
+      if (note) {
+        note.textContent = text;
+      }
+    };
 
     button.disabled = status === "unavailable" || status === "loading";
     button.setAttribute("aria-pressed", status === "active" ? "true" : "false");
 
     if (status === "active") {
       buttonText.textContent = "Retirer mon c\u0153ur";
-      note.textContent = "Votre c\u0153ur est compt\u00e9. Cliquez de nouveau pour annuler votre vote.";
+      setNote("Votre c\u0153ur est compt\u00e9. Cliquez de nouveau pour annuler votre vote.");
     } else if (status === "cancelled") {
       buttonText.textContent = "J'aime cette page";
-      note.textContent = "Votre vote est annul\u00e9. Vous pouvez remettre votre c\u0153ur sans augmenter le compteur plusieurs fois.";
+      setNote("Votre vote est annul\u00e9. Vous pouvez remettre votre c\u0153ur quand vous voulez.");
     } else if (status === "unavailable") {
       buttonText.textContent = "Vote indisponible";
-      note.textContent = "Le vote n'est pas disponible pour le moment.";
+      setNote("Le vote n'est pas disponible pour le moment.");
     } else if (status === "loading") {
       buttonText.textContent = "Chargement";
-      note.textContent = "V\u00e9rification du vote en cours.";
+      setNote("V\u00e9rification du vote en cours.");
     } else {
       buttonText.textContent = "J'aime cette page";
-      note.textContent = "Vous pouvez aimer ou annuler votre vote. Le compteur ne garde qu'un seul c\u0153ur actif par visiteur.";
+      setNote("");
     }
   };
 
@@ -271,7 +278,6 @@
     root.dataset.pageLike = "";
     root.innerHTML = target.mode === "summary"
       ? `
-      <p class="page-like-title">Compteur de c\u0153urs</p>
       <p class="page-like-total"><span class="page-like-heart" aria-hidden="true">♥</span> <strong data-page-like-count>0</strong> <span data-page-like-count-label>c\u0153ur</span></p>
       <p class="page-like-note" data-page-like-note><a href="${target.biographyHref}">Lire la biographie</a> pour voter.</p>`
       : `
@@ -280,8 +286,7 @@
         <span class="page-like-heart" aria-hidden="true">♥</span>
         <span data-page-like-button-text>J'aime cette page</span>
       </button>
-      <p class="page-like-total"><strong data-page-like-count>0</strong> <span data-page-like-count-label>c\u0153ur</span></p>
-      <p class="page-like-note" data-page-like-note>Vous pouvez aimer ou annuler votre vote. Le compteur ne garde qu'un seul c\u0153ur actif par visiteur.</p>`;
+      <p class="page-like-total"><strong data-page-like-count>0</strong> <span data-page-like-count-label>c\u0153ur</span></p>`;
 
     const backLink = Array.from(target.panel.children).find((child) => child.matches(".back-link, .region-back-link"));
     if (backLink) {

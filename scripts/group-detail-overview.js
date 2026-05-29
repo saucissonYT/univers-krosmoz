@@ -63,6 +63,10 @@ const initGroupOverview = () => {
   summary.appendChild(biographyLink);
 
   article.prepend(summary);
+  const pageLike = article.querySelector(':scope > .page-like');
+  if (pageLike) {
+    summary.appendChild(pageLike);
+  }
 
   const groups = [
     { slug: 'bellaphones', name: 'Les Bellaphones', image: 'bellaphones/bellaphones-carte.webp' },
