@@ -248,19 +248,29 @@
   };
 
   const updatePedestalPosition = () => {
-    const activeArtifact = artifacts[activeIndex];
-    const activeImage = activeArtifact?.querySelector('.artifact-display img');
-    if (!pedestal || !activeImage) return;
+    const referenceArtifact = artifacts.find((artifact) => artifact.id === 'eliacube') || artifacts[0];
+    const referenceImage = referenceArtifact?.querySelector('.artifact-display img');
+    const referenceDisplay = referenceArtifact?.querySelector('.artifact-display');
+    if (!pedestal || !referenceImage || !referenceDisplay) return;
 
-    const imageRect = activeImage.getBoundingClientRect();
-    const pedestalTop = imageRect.bottom - 64;
+    const displayRect = referenceDisplay.getBoundingClientRect();
+    const imageStyle = window.getComputedStyle(referenceImage);
+    const imageWidth = Number.parseFloat(imageStyle.width) || referenceImage.getBoundingClientRect().width;
+    const imageRatio = referenceImage.naturalWidth > 0
+      ? referenceImage.naturalHeight / referenceImage.naturalWidth
+      : 1;
+    const referenceImageHeight = imageWidth * imageRatio;
+    const referenceImageBottom = displayRect.top + (displayRect.height * 0.51) + (referenceImageHeight / 2);
+    const pedestalTop = referenceImageBottom - 64;
     pedestal.style.setProperty('--artifact-pedestal-top', Math.round(pedestalTop) + 'px');
   };
 
   const schedulePedestalUpdate = () => {
-    window.requestAnimationFrame(() => {
+    const runFrame = window.requestAnimationFrame || ((callback) => window.setTimeout(callback, 0));
+
+    runFrame(() => {
       updatePedestalPosition();
-      window.requestAnimationFrame(updatePedestalPosition);
+      runFrame(updatePedestalPosition);
     });
   };
 

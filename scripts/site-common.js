@@ -20,6 +20,7 @@
     { label: "À découvrir", href: "pages/chronologies/oeuvres", match: "/pages/chronologies/oeuvres" },
     { label: "Personnages", href: "pages/personnages/personnages", match: "/pages/personnages/" },
     { label: "Groupes", href: "pages/groupes/groupes", match: "/pages/groupes/" },
+    { label: "Artefacts", href: "pages/artefacts/artefacts", match: "/pages/artefacts/" },
     {
       label: "Chronologie",
       items: [
@@ -36,11 +37,10 @@
     {
       label: "Autres",
       items: [
-        { label: "Artefacts", href: "pages/artefacts/artefacts" },
         { label: "Jeux", href: "pages/jeux/jeux" },
         { label: "Arbre des affinités", href: "pages/media/arbre-affinites" }
       ],
-      match: ["/pages/artefacts/", "/pages/jeux/", "/pages/media/"]
+      match: ["/pages/jeux/", "/pages/media/"]
     },
     { label: "Contactez-nous", href: "pages/contact/contact", match: "/pages/contact/" }
   ];
