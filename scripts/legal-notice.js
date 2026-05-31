@@ -9,6 +9,7 @@
 
 (function () {
   const sharedScript = document.currentScript;
+  const rootUrl = sharedScript ? new URL("../", sharedScript.src) : new URL("./", window.location.href);
   const globalSearchUrl = sharedScript ? new URL("global-search.js", sharedScript.src).href : "";
   const searchDataUrl = sharedScript ? new URL("../data/search/search-data.js", sharedScript.src).href : "";
   const mobileMapLockQuery = "(max-width: 1024px), (pointer: coarse) and (max-width: 1180px)";
@@ -16,6 +17,48 @@
   const isMobileMapLocked = () => window.matchMedia(mobileMapLockQuery).matches;
 
   const isMapPathname = (pathname) => pathname.toLowerCase().includes("/__section-cartes-supprimee__/");
+
+  const ensureFavicons = () => {
+    const faviconLinks = [
+      {
+        selector: "link[rel~=\"icon\"][sizes=\"any\"]",
+        attributes: {
+          rel: "icon",
+          href: new URL("favicon.ico", rootUrl).pathname,
+          sizes: "any"
+        }
+      },
+      {
+        selector: "link[rel~=\"icon\"][sizes=\"32x32\"]",
+        attributes: {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: new URL("assets/favicon-32.png", rootUrl).pathname
+        }
+      },
+      {
+        selector: "link[rel=\"apple-touch-icon\"]",
+        attributes: {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: new URL("assets/apple-touch-icon.png", rootUrl).pathname
+        }
+      }
+    ];
+
+    faviconLinks.forEach(({ selector, attributes }) => {
+      if (document.head.querySelector(selector)) {
+        return;
+      }
+
+      const link = document.createElement("link");
+      Object.entries(attributes).forEach(([name, value]) => {
+        link.setAttribute(name, value);
+      });
+      document.head.append(link);
+    });
+  };
 
   const isMapHref = (href) => {
     if (!href) {
@@ -1888,6 +1931,8 @@
       });
     });
   };
+
+  ensureFavicons();
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initMobileNavigation, { once: true });

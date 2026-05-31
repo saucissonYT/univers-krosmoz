@@ -70,6 +70,48 @@
       : target.pathname;
   };
 
+  const ensureFavicons = () => {
+    const faviconLinks = [
+      {
+        selector: "link[rel~=\"icon\"][sizes=\"any\"]",
+        attributes: {
+          rel: "icon",
+          href: relativeFromPage("favicon.ico"),
+          sizes: "any"
+        }
+      },
+      {
+        selector: "link[rel~=\"icon\"][sizes=\"32x32\"]",
+        attributes: {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: relativeFromPage("assets/favicon-32.png")
+        }
+      },
+      {
+        selector: "link[rel=\"apple-touch-icon\"]",
+        attributes: {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: relativeFromPage("assets/apple-touch-icon.png")
+        }
+      }
+    ];
+
+    faviconLinks.forEach(({ selector, attributes }) => {
+      if (document.head.querySelector(selector)) {
+        return;
+      }
+
+      const link = document.createElement("link");
+      Object.entries(attributes).forEach(([name, value]) => {
+        link.setAttribute(name, value);
+      });
+      document.head.append(link);
+    });
+  };
+
   const isActive = (entry) => {
     const matches = Array.isArray(entry.match) ? entry.match : [entry.match];
     return matches.some((match) => currentPath.includes(match));
@@ -427,6 +469,7 @@
     }
   };
 
+  ensureFavicons();
   mountHeader();
   mountAnalytics();
   mountPageLike();

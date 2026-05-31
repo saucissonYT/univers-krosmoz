@@ -1,9 +1,50 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+31/05/2026
+
+- Refonte du logo du site & favicon. 
+- Logo de la navbar légèrement agrandi.
+- Ajout de favicons propres : .ico, PNG 32x32 et Apple Touch Icon.
+- Mise à jour des pages existantes pour utiliser les nouvelles favicons.
+- Ajout automatique des favicons sur les nouvelles pages si elles chargent les scripts communs via legal-notice & site-commun.js 
+
+
+29/05/2026
+
+
+- Ajout d’une nouvelle page dédiée aux artefacts du Krosmoz.
+- Ajout des ressources visuelles associées : Dofus, Dokoko, Eliacube, faux Dofus et visuels de décor.
+- Ajout du script dédié à l’affichage et aux interactions de la page Artefacts.
+- Ajout de la feuille de style spécifique à cette nouvelle section.
+
+
+- Ajout de l’entrée “Artefacts” dans le menu principal, dans la catégorie “Autres”.
+- Ajout des routes et redirections propres à la page Artefacts.
+- Ajout de la page Artefacts au sitemap.
+
+- Ajustement de l’affichage du compteur de cœurs sur les pages de groupes et de régions.
+- Repositionnement du bloc de vote dans les aperçus de détail lorsqu’il est présent.
+
+
+- Simplification des textes affichés autour du vote.
+- Gestion plus souple de la note explicative, désormais optionnelle selon le contexte.
+- Allègement de l’affichage du compteur dans certains modes, notamment les vues résumé.
+
+
+
+
+28/05/2026
+
+- Ajout d’un système de cœurs pour aimer les pages de personnages, régions et groupes.
+- Ajout d’une API locale pour enregistrer, récupérer et annuler les votes.
+- Ajout du fichier de données des réactions : `data/reactions/page-likes.json`.
+- Mise à jour de la galerie pour inclure aussi les images de régions et de groupes, pas seulement les personnages.
+- Amélioration de la recherche et des textes de la page Galerie.
+- Mise à jour des visuels de Jiva avec de nouvelles images de bannière et de carte.
+- Remplacement de l’ancienne carte de Jiva sur les pages liées : personnages, Bonta, Frigost, Gardiens des Mois et test de personnalité.
+- Ajustement du fond de la page personnage de Jiva.
  - Conversion des dernières images d'assets encore en .png vers .webp et mise à jour des chemins concernés.
  - Normalisation des noms d'images les plus problématiques, dont les portraits d'affinités générés avec identifiants techniques, et mise à jour des chemins associés.
-
-
  - correction d'une incohérence liée à la saison 4, modification du texte dans 24 pages. (rapport à l'éliacube)
 
 groupes/eliatropes
