@@ -248,7 +248,10 @@
   };
 
   const updatePedestalPosition = () => {
-    const referenceArtifact = artifacts.find((artifact) => artifact.id === 'eliacube') || artifacts[0];
+    const isMobileLayout = window.matchMedia('(max-width: 840px)').matches;
+    const referenceArtifact = isMobileLayout
+      ? artifacts[activeIndex]
+      : artifacts.find((artifact) => artifact.id === 'eliacube') || artifacts[0];
     const referenceImage = referenceArtifact?.querySelector('.artifact-display img');
     const referenceDisplay = referenceArtifact?.querySelector('.artifact-display');
     if (!pedestal || !referenceImage || !referenceDisplay) return;
@@ -261,7 +264,7 @@
       : 1;
     const referenceImageHeight = imageWidth * imageRatio;
     const referenceImageBottom = displayRect.top + (displayRect.height * 0.51) + (referenceImageHeight / 2);
-    const pedestalTop = referenceImageBottom - 64;
+    const pedestalTop = referenceImageBottom + (isMobileLayout ? 4 : -64);
     pedestal.style.setProperty('--artifact-pedestal-top', Math.round(pedestalTop) + 'px');
   };
 
@@ -282,6 +285,17 @@
     previousButton.title = getArtifactTitle(previousArtifact);
     nextButton.setAttribute('aria-label', 'Artefact suivant : ' + getArtifactTitle(nextArtifact));
     nextButton.title = getArtifactTitle(nextArtifact);
+  };
+
+  const updateDescriptionScrollHint = () => {
+    artifacts.forEach((artifact) => {
+      const description = artifact.querySelector('.artifact-description');
+      if (!description) return;
+
+      const hasOverflow = description.scrollHeight > description.clientHeight + 2;
+      const isNearBottom = description.scrollTop + description.clientHeight >= description.scrollHeight - 6;
+      description.classList.toggle('has-scroll-more', hasOverflow && !isNearBottom);
+    });
   };
 
   const setupPageWheel = () => {
@@ -350,6 +364,7 @@
     updateControls();
     updateSidePreviews();
     schedulePedestalUpdate();
+    updateDescriptionScrollHint();
 
     if (artifacts[activeIndex].id && shouldFocus) {
       try {
@@ -380,6 +395,11 @@
 
   window.addEventListener('resize', schedulePedestalUpdate);
   window.addEventListener('load', schedulePedestalUpdate);
+  window.addEventListener('resize', updateDescriptionScrollHint);
+  window.addEventListener('load', updateDescriptionScrollHint);
+  artifacts.forEach((artifact) => {
+    artifact.querySelector('.artifact-description')?.addEventListener('scroll', updateDescriptionScrollHint, { passive: true });
+  });
 
   hall.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {

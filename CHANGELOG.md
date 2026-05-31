@@ -9,6 +9,16 @@ petit changelog pour expliquer les modifications du site et les corrections :
 - Ajout automatique des favicons sur les nouvelles pages si elles chargent les scripts communs via legal-notice & site-commun.js 
 
 
+
+ page artefact : 
+- Responsive mobile ajouté.
+- Colonne mobile élargie et placée sous l’artefact.
+- Texte mobile centré.
+- Cadre texte fixé sur la moitié basse de l’écran.
+- Scroll interne gardé, scrollbar cachée.
+- Petite flèche ajoutée quand il reste du texte à lire.
+- Cadre texte stabilisé pour ne plus bouger entre les artefacts.
+
 29/05/2026
 
 

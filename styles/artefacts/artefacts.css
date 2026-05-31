@@ -842,9 +842,9 @@ body.artefacts-page .krosmoz-legal-notice {
     min-height: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(210px, 36vh) minmax(0, 1fr);
-    gap: 0.8rem;
-    padding: 1rem 0.5rem;
+    grid-template-rows: 50% 50%;
+    gap: 0;
+    padding: 0;
     overflow: hidden;
   }
 
@@ -862,32 +862,103 @@ body.artefacts-page .krosmoz-legal-notice {
 
   .artifact-display img {
     top: 50%;
-    width: min(190px, 48vw);
+    width: min(168px, 43vw);
     transform: translate(-50%, -50%);
   }
 
   .artifact-pedestal-fixed {
+    position: fixed;
     top: var(--artifact-pedestal-top, calc(50% + clamp(64px, 18vw, 92px)));
-    width: clamp(113px, 31vw, 161px);
-    height: auto;
-    transform: translateX(-50%) scaleY(1.18);
+    bottom: 0;
+    width: clamp(112px, 29vw, 136px);
+    height: calc(100vh - var(--artifact-pedestal-top, 50vh));
+    min-height: 46vh;
+    aspect-ratio: auto;
+    transform: translateX(-50%);
+    background-size: 100% 100%;
   }
 
   .artifact-description {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 5;
-    width: 100%;
-    max-height: 100%;
+    box-sizing: border-box;
+    width: auto;
+    max-width: none;
+    height: 50vh;
+    max-height: none;
+    margin: 0;
     overflow-y: auto;
+    padding: 1rem 1.25rem calc(1.1rem + env(safe-area-inset-bottom, 0px));
     opacity: 1;
     transform: none;
+    transition: none;
     border-left: 0;
+    border-right: 0;
     border-top: 1px solid rgba(201,168,76,0.26);
     background:
-      linear-gradient(90deg, rgba(7,7,13,0.9), rgba(7,7,13,0.7)),
+      linear-gradient(90deg, rgba(7,7,13,0.9), rgba(7,7,13,0.78)),
       radial-gradient(circle at 0 0, rgba(var(--artifact-accent-rgb),0.09), transparent 18rem);
+    text-align: center;
+    scrollbar-width: none;
+  }
+
+  .museum-artifact:nth-child(even) .artifact-description,
+  .museum-artifact:hover .artifact-description,
+  .museum-artifact.is-revealed .artifact-description,
+  .museum-artifact:focus-visible .artifact-description,
+  .museum-artifact:focus-within .artifact-description {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-width: none;
+    height: 50vh;
+    transform: none;
+    transition: none;
+    border-left: 0;
+    border-right: 0;
+    background:
+      linear-gradient(90deg, rgba(7,7,13,0.9), rgba(7,7,13,0.78)),
+      radial-gradient(circle at 0 0, rgba(var(--artifact-accent-rgb),0.09), transparent 18rem);
+  }
+
+  .artifact-description::-webkit-scrollbar {
+    display: none;
+  }
+
+  .artifact-description.has-scroll-more::after {
+    content: '';
+    position: sticky;
+    left: 50%;
+    bottom: 0.45rem;
+    display: block;
+    width: 0.72rem;
+    height: 0.72rem;
+    margin: 0.5rem auto 0;
+    border-right: 2px solid rgba(232,201,122,0.92);
+    border-bottom: 2px solid rgba(232,201,122,0.92);
+    filter: drop-shadow(0 0 6px rgba(232,201,122,0.42));
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+
+  .artifact-description h1,
+  .artifact-description h2 {
+    margin: 0.1rem 0 0.65rem;
+    font-size: clamp(1.35rem, 8vw, 2rem);
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  .artifact-description p {
+    margin-bottom: 0.62rem;
+    font-size: clamp(0.92rem, 3.65vw, 1rem);
+    line-height: 1.36;
+    text-align: center;
   }
 }
 
