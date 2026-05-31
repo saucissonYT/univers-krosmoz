@@ -887,7 +887,8 @@ body.artefacts-page .krosmoz-legal-notice {
     box-sizing: border-box;
     width: auto;
     max-width: none;
-    height: 50vh;
+    height: 42vh;
+    height: 42dvh;
     max-height: none;
     margin: 0;
     overflow-y: auto;
@@ -915,7 +916,8 @@ body.artefacts-page .krosmoz-legal-notice {
     bottom: 0;
     width: auto;
     max-width: none;
-    height: 50vh;
+    height: 42vh;
+    height: 42dvh;
     transform: none;
     transition: none;
     border-left: 0;
