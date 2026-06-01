@@ -3,6 +3,8 @@ petit changelog pour expliquer les modifications du site et les corrections :
 
 02/06/2026
 
+- changement de la gestion des likes sur les pages, json > SQLite
+
 - Page d’accueil ajustée : fond histoire en image au lieu de vidéo, pop-up Méryde réduite.
 - Page Almanax enrichie avec un encart et une intro sur les Mérydes.
 - Index des régions réorganisé en grandes catégories.

@@ -3,6 +3,8 @@ output/
 
 # Donnees locales du compteur de j'aime
 data/reactions/page-likes.json
+data/reactions/page-likes.sqlite
+data/reactions/page-likes.sqlite-*
 
 # OS / editor noise
 .DS_Store

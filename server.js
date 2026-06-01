@@ -7,11 +7,12 @@
 
 
 
-import { createReadStream, existsSync, statSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { createReadStream, existsSync, mkdirSync, statSync } from "node:fs";
+import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { extname, isAbsolute, join, normalize, relative, resolve } from "node:path";
 import { createServer } from "node:http";
+import Database from "better-sqlite3";
 
 const root = resolve(".");
 const parsedPort = Number.parseInt(process.env.PORT || "3000", 10);
@@ -23,8 +24,8 @@ const resendFrom = process.env.RESEND_FROM || "Univers Krosmoz <onboarding@resen
 const rateLimit = new Map();
 const pageLikeRateLimit = new Map();
 const pageLikesFile = join(root, "data", "reactions", "page-likes.json");
-let pageLikesCache = null;
-let pageLikesWriteQueue = Promise.resolve();
+const pageLikesDatabaseFile = join(root, "data", "reactions", "page-likes.sqlite");
+let pageLikesDatabase = null;
 const pageDirectories = [
   "pages/chronologies",
   "pages/contact",
@@ -189,51 +190,85 @@ function normalizePageLikesData(data) {
   return normalized;
 }
 
-async function loadPageLikes() {
-  if (pageLikesCache) {
-    return pageLikesCache;
+async function importLegacyPageLikes(database) {
+  const imported = database.prepare("SELECT value FROM meta WHERE key = ?").get("legacy_json_imported");
+  if (imported) {
+    return;
   }
 
   try {
     const content = await readFile(pageLikesFile, "utf8");
-    const data = JSON.parse(content);
-    pageLikesCache = normalizePageLikesData(data);
+    const data = normalizePageLikesData(JSON.parse(content));
+    const insertLike = database.prepare("INSERT OR IGNORE INTO page_likes (page, voter_hash) VALUES (?, ?)");
+    const importLikes = database.transaction(() => {
+      for (const [page, entry] of Object.entries(data.pages)) {
+        for (const voterHash of Object.keys(entry.voters)) {
+          insertLike.run(page, voterHash);
+        }
+      }
+    });
+    importLikes();
   } catch {
-    pageLikesCache = { pages: {} };
+    // Pas d'ancien fichier JSON à migrer, ou fichier local invalide : on démarre avec une base vide.
   }
 
-  return pageLikesCache;
+  database.prepare("INSERT OR REPLACE INTO meta (key, value) VALUES (?, ?)").run("legacy_json_imported", "1");
 }
 
-async function savePageLikes(data) {
-  normalizePageLikesData(data);
-  pageLikesWriteQueue = pageLikesWriteQueue.then(async () => {
-    await mkdir(join(root, "data", "reactions"), { recursive: true });
-    await writeFile(pageLikesFile, `${JSON.stringify(data, null, 2)}\n`, "utf8");
-  });
-
-  return pageLikesWriteQueue;
-}
-
-function getPageLikeEntry(data, page) {
-  if (!data.pages[page]) {
-    data.pages[page] = { count: 0, voters: {} };
+async function getPageLikesDatabase() {
+  if (pageLikesDatabase) {
+    return pageLikesDatabase;
   }
 
-  const entry = data.pages[page];
-  if (!entry.voters || typeof entry.voters !== "object") {
-    entry.voters = {};
-  }
-  entry.count = Math.max(0, Number.parseInt(entry.count || 0, 10) || 0);
-  return entry;
+  mkdirSync(join(root, "data", "reactions"), { recursive: true });
+  pageLikesDatabase = new Database(pageLikesDatabaseFile);
+  pageLikesDatabase.pragma("journal_mode = WAL");
+  pageLikesDatabase.exec(`
+    CREATE TABLE IF NOT EXISTS page_likes (
+      page TEXT NOT NULL,
+      voter_hash TEXT NOT NULL,
+      created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (page, voter_hash)
+    );
+    CREATE TABLE IF NOT EXISTS meta (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
+    );
+  `);
+  await importLegacyPageLikes(pageLikesDatabase);
+  return pageLikesDatabase;
 }
 
-function getPageLikeStatus(entry, page, voterId) {
-  if (!voterId) {
+function getPageLikeCount(database, page) {
+  const row = database.prepare("SELECT COUNT(*) AS count FROM page_likes WHERE page = ?").get(page);
+  return Math.max(0, Number.parseInt(row?.count || 0, 10) || 0);
+}
+
+function getPageLikeStatus(database, page, voterHash) {
+  if (!voterHash) {
     return "none";
   }
 
-  return entry.voters[getVoterHash(page, voterId)] === "active" ? "active" : "none";
+  const row = database.prepare("SELECT 1 FROM page_likes WHERE page = ? AND voter_hash = ?").get(page, voterHash);
+  return row ? "active" : "none";
+}
+
+function setPageLike(database, page, voterHash, action) {
+  const updateLike = database.transaction(() => {
+    const currentStatus = getPageLikeStatus(database, page, voterHash);
+    if (action === "like" && currentStatus !== "active") {
+      database.prepare("INSERT OR IGNORE INTO page_likes (page, voter_hash) VALUES (?, ?)").run(page, voterHash);
+    } else if (action === "unlike" && currentStatus === "active") {
+      database.prepare("DELETE FROM page_likes WHERE page = ? AND voter_hash = ?").run(page, voterHash);
+    }
+
+    return {
+      count: getPageLikeCount(database, page),
+      status: getPageLikeStatus(database, page, voterHash)
+    };
+  });
+
+  return updateLike();
 }
 
 function getIp(request) {
@@ -408,7 +443,7 @@ async function handleContact(request, response) {
 }
 
 async function handlePageLikes(request, response, url) {
-  const data = await loadPageLikes();
+  const database = await getPageLikesDatabase();
 
   if (request.method === "GET") {
     const page = cleanPageKey(url.searchParams.get("page"));
@@ -422,11 +457,11 @@ async function handlePageLikes(request, response, url) {
     }
 
     const voterId = cleanVoterId(url.searchParams.get("voterId"));
-    const entry = getPageLikeEntry(data, page);
+    const voterHash = voterId ? getVoterHash(page, voterId) : "";
     sendJson(response, 200, {
       ok: true,
-      count: entry.count,
-      status: getPageLikeStatus(entry, page, voterId)
+      count: getPageLikeCount(database, page),
+      status: getPageLikeStatus(database, page, voterHash)
     });
     return;
   }
@@ -458,33 +493,22 @@ async function handlePageLikes(request, response, url) {
     return;
   }
 
-  const entry = getPageLikeEntry(data, page);
   const voterHash = getVoterHash(page, voterId);
   if (isPageLikeRateLimited(getIp(request), page, voterHash)) {
     sendJson(response, 429, {
       ok: false,
       message: "Trop d'actions rapprochées sur cette page. Réessaie dans quelques secondes.",
-      count: entry.count,
-      status: getPageLikeStatus(entry, page, voterId)
+      count: getPageLikeCount(database, page),
+      status: getPageLikeStatus(database, page, voterHash)
     });
     return;
   }
 
-  const currentStatus = entry.voters[voterHash] || "none";
-
-  if (action === "like" && currentStatus !== "active") {
-    entry.voters[voterHash] = "active";
-    entry.count += 1;
-  } else if (action === "unlike" && currentStatus === "active") {
-    delete entry.voters[voterHash];
-    entry.count = Math.max(0, entry.count - 1);
-  }
-
-  await savePageLikes(data);
+  const entry = setPageLike(database, page, voterHash, action);
   sendJson(response, 200, {
     ok: true,
     count: entry.count,
-    status: entry.voters[voterHash] === "active" ? "active" : "none"
+    status: entry.status
   });
 }
 
