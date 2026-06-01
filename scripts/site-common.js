@@ -18,6 +18,7 @@
   const links = [
     { label: "Personnages", href: "pages/personnages/personnages", match: "/pages/personnages/" },
     { label: "Groupes", href: "pages/groupes/groupes", match: "/pages/groupes/" },
+    { label: "Régions", href: "pages/regions/regions", match: "/pages/regions/" },
     { label: "Artefacts", href: "pages/artefacts/artefacts", match: "/pages/artefacts/" },
     {
       label: "Chronologie",
@@ -30,7 +31,6 @@
         "/pages/chronologies/chronologie-oeuvres"
       ]
     },
-    { label: "Régions", href: "pages/regions/regions", match: "/pages/regions/" },
     { label: "Lexique", href: "pages/lexique/lexique", match: "/pages/lexique/" },
     {
       label: "Autres",

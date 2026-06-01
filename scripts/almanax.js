@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 (function () {
   const monthGrid = document.querySelector('[data-month-grid]');
   const monthPanels = document.querySelector('[data-month-panels]');

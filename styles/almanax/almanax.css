@@ -1,3 +1,10 @@
+/*
+  Site développé par phomsay pour zaki.
+  Contact Discord : @phomsay671.
+  Dev web : phomsay. Admin : sauci.
+  Recherche et édition : Zaki & B.
+*/
+
 :root {
   --almanax-bg: #05060d;
   --almanax-gold: #e8c97a;
@@ -281,11 +288,17 @@ body.almanax-page::after {
   text-transform: uppercase;
 }
 
-.almanax-guardian-callout {
+.almanax-guardian-callout,
+.almanax-meryde-callout {
   margin-top: clamp(1.2rem, 3vw, 2.4rem);
 }
 
-.almanax-guardian-callout a {
+.almanax-meryde-callout {
+  margin-top: clamp(2rem, 4.5vw, 4rem);
+}
+
+.almanax-guardian-callout a,
+.almanax-meryde-callout a {
   position: relative;
   min-height: clamp(230px, 26vw, 360px);
   display: grid;
@@ -304,7 +317,8 @@ body.almanax-page::after {
   transition: border-color 0.28s ease, box-shadow 0.28s ease;
 }
 
-.almanax-guardian-callout a::before {
+.almanax-guardian-callout a::before,
+.almanax-meryde-callout a::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -318,7 +332,15 @@ body.almanax-page::after {
   transition: filter 0.38s ease, transform 0.42s ease;
 }
 
-.almanax-guardian-callout a::after {
+.almanax-meryde-callout a::before {
+  background:
+    linear-gradient(90deg, rgba(5,6,13,0.44), rgba(5,6,13,0.1), rgba(5,6,13,0.44)),
+    radial-gradient(circle at 50% 50%, transparent 0 34%, rgba(0,0,0,0.46) 100%),
+    url('../../assets/groupes/merydes/merydes.png') center / cover no-repeat;
+}
+
+.almanax-guardian-callout a::after,
+.almanax-meryde-callout a::after {
   content: '';
   position: absolute;
   inset: clamp(0.45rem, 1vw, 0.8rem);
@@ -330,7 +352,9 @@ body.almanax-page::after {
 }
 
 .almanax-guardian-callout a:hover,
-.almanax-guardian-callout a:focus-visible {
+.almanax-guardian-callout a:focus-visible,
+.almanax-meryde-callout a:hover,
+.almanax-meryde-callout a:focus-visible {
   border-color: rgba(255,243,189,0.58);
   box-shadow:
     0 28px 76px rgba(0,0,0,0.46),
@@ -340,18 +364,23 @@ body.almanax-page::after {
 }
 
 .almanax-guardian-callout a:hover::before,
-.almanax-guardian-callout a:focus-visible::before {
+.almanax-guardian-callout a:focus-visible::before,
+.almanax-meryde-callout a:hover::before,
+.almanax-meryde-callout a:focus-visible::before {
   filter: grayscale(1) contrast(1.02) brightness(0.7);
   transform: scale(1.025);
 }
 
 .almanax-guardian-callout a:hover::after,
-.almanax-guardian-callout a:focus-visible::after {
+.almanax-guardian-callout a:focus-visible::after,
+.almanax-meryde-callout a:hover::after,
+.almanax-meryde-callout a:focus-visible::after {
   border-color: rgba(255,243,189,0.42);
   opacity: 1;
 }
 
-.almanax-guardian-callout span {
+.almanax-guardian-callout span,
+.almanax-meryde-callout span {
   position: relative;
   z-index: 2;
   color: rgba(232,201,122,0.74);
@@ -365,7 +394,8 @@ body.almanax-page::after {
   transition: opacity 0.24s ease, transform 0.24s ease;
 }
 
-.almanax-guardian-callout strong {
+.almanax-guardian-callout strong,
+.almanax-meryde-callout strong {
   position: relative;
   z-index: 2;
   color: rgba(248,239,212,0.7);
@@ -383,13 +413,19 @@ body.almanax-page::after {
 .almanax-guardian-callout a:hover span,
 .almanax-guardian-callout a:focus-visible span,
 .almanax-guardian-callout a:hover strong,
-.almanax-guardian-callout a:focus-visible strong {
+.almanax-guardian-callout a:focus-visible strong,
+.almanax-meryde-callout a:hover span,
+.almanax-meryde-callout a:focus-visible span,
+.almanax-meryde-callout a:hover strong,
+.almanax-meryde-callout a:focus-visible strong {
   opacity: 1;
   transform: translateY(0);
 }
 
 .almanax-guardian-callout a:hover strong,
-.almanax-guardian-callout a:focus-visible strong {
+.almanax-guardian-callout a:focus-visible strong,
+.almanax-meryde-callout a:hover strong,
+.almanax-meryde-callout a:focus-visible strong {
   color: #fff8df;
   -webkit-text-stroke: 0.35px rgba(255, 214, 111, 0.52);
   text-shadow:
@@ -401,8 +437,13 @@ body.almanax-page::after {
 }
 
 .almanax-guardians,
+.almanax-meryde-introduction,
 .almanax-months {
   padding-top: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.almanax-meryde-introduction {
+  padding-top: clamp(1.4rem, 2.5vw, 2.2rem);
 }
 
 .almanax-months {
@@ -674,6 +715,22 @@ body.almanax-page .krosmoz-legal-notice {
 }
 
 @media (max-width: 640px) {
+  .almanax-page {
+    overflow-x: hidden;
+  }
+
+  .almanax-page .site-topbar .top-nav {
+    right: 0 !important;
+    max-width: min(82vw, 320px) !important;
+    transform: none !important;
+    visibility: hidden;
+  }
+
+  .almanax-page .site-topbar.is-mobile-nav-open .top-nav {
+    visibility: visible;
+    transform: none !important;
+  }
+
   .almanax-main {
     width: min(100% - 1rem, 1240px);
   }
@@ -681,6 +738,18 @@ body.almanax-page .krosmoz-legal-notice {
   .almanax-hero {
     min-height: 420px;
     padding: 1rem;
+  }
+
+  .almanax-hero h1 {
+    max-width: 100%;
+    gap: clamp(0.45rem, 2.8vw, 0.75rem);
+    font-size: clamp(2.45rem, 13vw, 3.25rem);
+    white-space: nowrap;
+  }
+
+  .almanax-hero h1::before,
+  .almanax-hero h1::after {
+    width: clamp(30px, 10vw, 42px);
   }
 
   .almanax-today {

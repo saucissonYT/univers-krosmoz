@@ -140,18 +140,12 @@ body.regions-index-page .characters-rule::after {
 .regions-index {
   flex: 1 0 auto;
   width: min(1540px, calc(100% - 1rem));
-  padding-top: clamp(2.6rem, 5vw, 4.6rem);
+  padding-top: clamp(1.8rem, 3vw, 2.8rem);
   padding-bottom: clamp(2.2rem, 5vw, 5rem);
 }
 
 .regions-heading {
-  width: min(980px, calc(100vw - 2rem));
-  max-width: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(2.5rem, 5vw, 4.35rem);
-  margin-bottom: clamp(2.2rem, 4vw, 3.5rem);
+  display: none;
 }
 
 .regions-heading::before,
@@ -217,23 +211,80 @@ body.regions-index-page .characters-rule::after {
 
 .regions-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3.6vw, 3.45rem) clamp(0.9rem, 1.4vw, 1.35rem);
-  align-items: start;
+  gap: clamp(2.2rem, 4vw, 3.6rem);
+}
+
+.region-tier {
+  display: grid;
+  gap: clamp(2.8rem, 5vw, 4.2rem);
+}
+
+.region-tier[hidden] {
+  display: none;
+}
+
+.region-tier-heading {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  padding: 0 clamp(0.15rem, 0.6vw, 0.5rem);
+  text-align: center;
+}
+
+.region-tier-title {
+  position: relative;
+  margin: 0;
+  padding-bottom: clamp(0.75rem, 1.4vw, 1rem);
+  color: #efe3c4;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.35rem, 2.45vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 10px rgba(239, 227, 196, 0.22),
+    0 0 24px rgba(216, 177, 106, 0.16),
+    0 10px 24px rgba(0, 0, 0, 0.82);
+}
+
+.region-tier-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: min(280px, 68vw);
+  height: 1px;
+  background:
+    linear-gradient(90deg, transparent, rgba(239, 227, 196, 0.32), rgba(239, 227, 196, 0.86), rgba(239, 227, 196, 0.32), transparent);
+  box-shadow: 0 0 14px rgba(239, 227, 196, 0.18);
+  transform: translateX(-50%);
+}
+
+.region-tier-subtitle {
+  display: none;
+}
+
+.region-tier-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.4vw, 1.35rem);
 }
 
 .region-card {
   --region-card-lift: clamp(8px, 1.05vw, 14px);
-  --region-image-scale: 1.075;
-  --region-copy-height: clamp(86px, 6.8vw, 112px);
+  --region-image-scale: 1.09;
+  --region-copy-height: auto;
+  display: grid;
+  align-content: end;
   flex: none;
   max-width: none;
-  min-height: 0;
-  aspect-ratio: 0.58;
+  min-height: clamp(230px, 21vw, 315px);
+  aspect-ratio: auto;
   border-color: rgba(201, 168, 76, 0.2);
   border-radius: 0;
-  background: #050508;
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.34);
+  background: rgba(9, 10, 19, 0.72);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.26);
   transition:
     transform 0.32s ease,
     border-color 0.32s ease,
@@ -242,20 +293,40 @@ body.regions-index-page .characters-rule::after {
 
 .region-card:hover,
 .region-card:focus-visible {
-  border-color: rgba(216, 177, 106, 0.58);
+  border-color: rgba(255, 243, 189, 0.58);
   box-shadow:
-    0 34px 78px rgba(0, 0, 0, 0.56),
-    0 0 0 1px rgba(255, 247, 223, 0.05),
-    0 0 20px rgba(216, 177, 106, 0.12);
+    0 24px 52px rgba(0, 0, 0, 0.42),
+    0 0 24px rgba(232, 201, 122, 0.08),
+    inset 0 0 0 1px rgba(255, 243, 189, 0.1);
   transform: translateY(calc(var(--region-card-lift) * -1)) scale(1.018);
 }
 
+.region-card::before {
+  content: '';
+  position: absolute;
+  inset: 0.45rem;
+  z-index: 2;
+  border: 1px solid rgba(255, 243, 189, 0.14);
+  opacity: 0.74;
+  pointer-events: none;
+  transition: border-color 0.28s ease, opacity 0.28s ease;
+}
+
+.region-card:hover::before,
+.region-card:focus-visible::before {
+  border-color: rgba(255, 243, 189, 0.38);
+  opacity: 1;
+}
+
 .region-card img {
+  position: absolute;
   inset: 0;
+  width: 100%;
   height: 100%;
   object-position: center center;
-  filter: saturate(0.95) contrast(1.04) brightness(0.82);
-  transition: transform 0.46s ease, filter 0.46s ease;
+  filter: saturate(0.88) brightness(0.82);
+  transform: scale(1.04);
+  transition: transform 0.42s ease, filter 0.38s ease;
 }
 
 .region-card[href="krosmoz"] img {
@@ -296,49 +367,79 @@ body.regions-index-page .characters-rule::after {
 
 .region-card:hover img,
 .region-card:focus-visible img {
-  filter: grayscale(0.72) saturate(0.42) contrast(1.18) brightness(0.62);
+  filter: grayscale(1) contrast(1.02) brightness(0.72);
   transform: scale(var(--region-image-scale));
 }
 
 .region-card .character-card-shade {
+  display: block;
+  z-index: 1;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(4,4,8,0.08) 0%, rgba(4,4,8,0.04) 50%, rgba(4,4,8,0.32) 100%),
-    linear-gradient(to right, rgba(4,4,8,0.16), transparent 38%, rgba(4,4,8,0.16));
+    linear-gradient(90deg, rgba(5,6,13,0.26), rgba(5,6,13,0.04), rgba(5,6,13,0.28)),
+    linear-gradient(180deg, transparent 34%, rgba(5,6,13,0.94) 100%);
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+.region-card:hover .character-card-shade,
+.region-card:focus-visible .character-card-shade {
+  opacity: 0.92;
 }
 
 .region-card-copy {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 3;
+  display: grid;
+  gap: 0.16rem;
   align-content: center;
   min-height: 0;
-  height: var(--region-copy-height);
-  padding: clamp(1rem, 1.25vw, 1.25rem) 0.7rem;
-  border-top: 1px solid rgba(201, 168, 76, 0.26);
-  background: rgba(4, 4, 8, 0.7);
-  box-shadow: inset 0 18px 28px rgba(255, 255, 255, 0.012);
-  backdrop-filter: blur(2px);
+  height: auto;
+  padding: 1rem;
+  border-top: 0;
+  border-left: 0;
+  background: transparent;
+  text-align: left;
+  box-shadow: none;
+  backdrop-filter: none;
   transition: background 0.32s ease, border-color 0.32s ease, box-shadow 0.32s ease;
 }
 
 .region-card:hover .region-card-copy,
 .region-card:focus-visible .region-card-copy {
-  border-color: rgba(216, 177, 106, 0.48);
-  background: rgba(5, 5, 10, 0.74);
-  box-shadow: 0 -18px 34px rgba(0,0,0,0.2), inset 0 18px 28px rgba(255, 255, 255, 0.018);
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
 }
 
 .region-card-copy strong {
   order: 1;
   color: #d8b16a;
-  font-family: 'Cinzel', serif;
-  font-size: clamp(0.86rem, 1.04vw, 1.1rem);
-  line-height: 1.15;
-  letter-spacing: 0.22em;
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.45rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  transition: color 0.28s ease, text-shadow 0.28s ease;
+}
+
+.region-card:hover .region-card-copy strong,
+.region-card:focus-visible .region-card-copy strong {
+  color: #fff8df;
+  -webkit-text-stroke: 0.25px rgba(255, 214, 111, 0.44);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 245, 0.62),
+    0 0 10px rgba(255,248,223,0.58),
+    0 0 26px rgba(255,219,132,0.5),
+    0 10px 24px rgba(0,0,0,0.86);
 }
 
 .region-card-copy span {
   order: 2;
-  color: #f7ead0;
-  font-size: clamp(0.64rem, 0.78vw, 0.78rem);
+  color: rgba(248,239,212,0.78);
+  font-size: 0.72rem;
   line-height: 1.18;
   letter-spacing: 0.1em;
 }
@@ -412,7 +513,30 @@ body.regions-index-page .krosmoz-legal-notice {
   .regions-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.5rem;
+  }
+
+  .region-tier {
+    gap: 0.7rem;
+  }
+
+  .region-tier-heading {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0 0.8rem;
+  }
+
+  .region-tier-subtitle {
+    text-align: left;
+  }
+
+  .region-tier-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    overflow: visible;
+    padding: 0;
+    scroll-snap-type: none;
   }
 
   .region-card {
@@ -420,24 +544,27 @@ body.regions-index-page .krosmoz-legal-notice {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
-    min-height: 0;
-    aspect-ratio: 1.36 / 1;
-    border-width: 1px 0;
+    min-height: clamp(220px, 65vw, 300px);
+    aspect-ratio: auto;
+    border-width: 1px;
+  }
+
+  .region-card-copy {
+    padding: 1rem;
   }
 
   .region-card-copy strong {
-    font-size: clamp(1rem, 7vw, 1.55rem);
-    letter-spacing: 0.18em;
+    font-size: clamp(1.05rem, 6vw, 1.45rem);
+    letter-spacing: 0.08em;
   }
 }
 
 @media (min-width: 721px) and (max-width: 1180px) {
-  .regions-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .region-tier-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .region-card {
-    flex: none;
     max-width: none;
   }
 }

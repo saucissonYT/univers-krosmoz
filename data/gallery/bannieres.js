@@ -1515,7 +1515,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Kelba",
         "href":  "kelba",
         "slug":  "kelba",
-        "path":  "assets/regions/kelba/kelba.webp",
+        "path":  "assets/regions/kelba/kelba.webp?v=3",
         "category":  "regions"
     },
     {

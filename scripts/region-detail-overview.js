@@ -121,7 +121,7 @@ const initRegionOverview = () => {
     { slug: 'kolizeum', name: 'Kolizéum', image: 'kolizeum/kolizeum.webp' },
     { slug: 'royaume-sadida', name: 'Royaume Sadida', image: 'royaume-sadida/royaume-sadida.webp' },
     { slug: 'montagnes-koalaks', name: 'Montagnes des Koalaks', image: 'montagnes-koalaks/montagnes-koalaks.webp' },
-    { slug: 'kelba', name: 'Kelba', image: 'kelba/kelba.webp' },
+    { slug: 'kelba', name: 'Kelba', image: 'kelba/kelba.webp?v=3' },
     { slug: 'astrub', name: 'Astrub', image: 'astrub/astrub.webp' },
     { slug: 'mer-dasse', name: "Mer d'Asse", image: 'mer-dasse/mer-dasse.webp' },
     { slug: 'ile-des-brumes', name: 'Île des Brumes', image: 'ile-des-brumes/ile-des-brumes.webp' },

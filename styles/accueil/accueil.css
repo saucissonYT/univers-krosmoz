@@ -50,12 +50,12 @@ body::before {
   right: clamp(0.9rem, 2vw, 1.6rem);
   bottom: clamp(0.9rem, 2vw, 1.6rem);
   z-index: 90;
-  width: min(640px, calc(100vw - 1.8rem));
+  width: min(544px, calc(100vw - 1.8rem));
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 0.9rem;
+  gap: 0.765rem;
   align-items: center;
-  padding: 0.9rem 2.6rem 0.9rem 0.95rem;
+  padding: 0.765rem 2.21rem 0.765rem 0.8075rem;
   border: 1px solid rgba(232,201,122,0.2);
   background:
     radial-gradient(circle at 18% 46%, rgba(46,207,176,0.08), transparent 38%),
@@ -126,8 +126,8 @@ body::before {
 }
 
 .home-meryde-image {
-  width: 58px;
-  height: 74px;
+  width: 49px;
+  height: 63px;
   object-fit: contain;
   filter:
     drop-shadow(0 8px 14px rgba(0,0,0,0.42))
@@ -140,10 +140,10 @@ body::before {
 
 .home-meryde-kicker {
   display: block;
-  margin-bottom: 0.18rem;
+  margin-bottom: 0.153rem;
   color: rgba(232,201,122,0.88);
   font-family: 'Cinzel', Georgia, serif;
-  font-size: 0.62rem;
+  font-size: 0.527rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   line-height: 1.2;
@@ -154,27 +154,27 @@ body::before {
   display: block;
   color: #fff8e8;
   font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
-  font-size: clamp(1rem, 2vw, 1.28rem);
+  font-size: clamp(0.85rem, 1.7vw, 1.088rem);
   line-height: 1.05;
   text-shadow: 0 6px 18px rgba(0,0,0,0.65);
 }
 
 .home-meryde-copy blockquote {
   display: block;
-  margin: 0.42rem 0 0;
+  margin: 0.357rem 0 0;
   color: rgba(255,247,223,0.82);
   font-family: 'Crimson Text', Georgia, serif;
-  font-size: clamp(0.88rem, 1.6vw, 1rem);
+  font-size: clamp(0.748rem, 1.36vw, 0.85rem);
   font-style: italic;
   line-height: 1.35;
 }
 
 .home-meryde-close {
   position: absolute;
-  top: 0.6rem;
-  right: 0.62rem;
-  width: 28px;
-  height: 28px;
+  top: 0.51rem;
+  right: 0.527rem;
+  width: 24px;
+  height: 24px;
   border: 0;
   background: transparent;
   color: rgba(255,247,223,0.74);
@@ -187,7 +187,7 @@ body::before {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 14px;
+  width: 12px;
   height: 2px;
   background: currentColor;
   transform-origin: center;
@@ -1268,7 +1268,7 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 
 .home-band-media::after {
   background:
-    linear-gradient(90deg, rgba(8,8,16,0.68), rgba(8,8,16,0.42) 42%, rgba(8,8,16,0.08) 58%, rgba(8,8,16,0.66)),
+    linear-gradient(90deg, rgba(8,8,16,0.46), rgba(8,8,16,0.24) 42%, rgba(8,8,16,0.06) 58%, rgba(8,8,16,0.44)),
     linear-gradient(180deg, rgba(8,8,16,0.14), transparent 34%, rgba(8,8,16,0.72));
 }
 
@@ -1279,12 +1279,12 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 
 .home-band-reverse .home-band-media::after {
   background:
-    linear-gradient(270deg, rgba(8,8,16,0.68), rgba(8,8,16,0.42) 42%, rgba(8,8,16,0.08) 58%, rgba(8,8,16,0.66)),
+    linear-gradient(270deg, rgba(8,8,16,0.46), rgba(8,8,16,0.24) 42%, rgba(8,8,16,0.06) 58%, rgba(8,8,16,0.44)),
     linear-gradient(180deg, rgba(8,8,16,0.14), transparent 34%, rgba(8,8,16,0.72));
 }
 
 .home-band-history .home-band-media::before {
-  background-image: url('../../assets/histoire/KROSMOZ.webp');
+  background-image: url('../../assets/accueil/histoire-background.webp');
   background-position: center 28%;
 }
 
@@ -1783,7 +1783,7 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   .home-band-reverse .home-band-media::after {
     background:
       linear-gradient(180deg, rgba(8,8,16,0.08), rgba(8,8,16,0.52) 42%, rgba(8,8,16,0.96)),
-      linear-gradient(90deg, rgba(8,8,16,0.52), transparent 50%, rgba(8,8,16,0.52));
+      linear-gradient(90deg, rgba(8,8,16,0.34), transparent 50%, rgba(8,8,16,0.34));
   }
   .home-band-content,
   .home-band-reverse .home-band-content {
