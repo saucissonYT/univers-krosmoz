@@ -2,14 +2,6 @@
 
 Site non officiel autour de l'univers du Krosmoz, avec des pages dédiées à l'histoire, aux personnages, aux régions, aux groupes, à l'Almanax, aux chronologies, aux artefacts, aux jeux et aux médias.
 
-## Lancement local
-
-```bash
-npm start
-```
-
-Le serveur local démarre par défaut sur `http://127.0.0.1:3000/`.
-
 ## Structure
 
 - `index.html` : page d'accueil.
