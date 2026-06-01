@@ -395,7 +395,7 @@ html.home-page {
 
 .rail-character {
   position: relative;
-  flex: 1 1 0;
+  flex: 0.72 1 0;
   min-width: 0;
   min-height: clamp(330px, 29vw, 520px);
   overflow: hidden;
@@ -405,7 +405,7 @@ html.home-page {
   background: #0b0b14;
   border-right: 1px solid rgba(201,168,76,0.18);
   transform: skewX(-3deg);
-  transition: flex-grow 0.34s ease, transform 0.34s ease, filter 0.34s ease;
+  transition: flex-grow 0.34s ease, transform 0.34s ease, box-shadow 0.34s ease, filter 0.34s ease;
 }
 
 .rail-character img {
@@ -414,9 +414,20 @@ html.home-page {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.78) contrast(1.05) brightness(0.72);
+  filter: grayscale(1) saturate(0.14) contrast(1.04) brightness(0.58);
   transform: skewX(3deg) scale(1.04);
   transition: transform 0.34s ease, filter 0.34s ease;
+}
+
+.rail-character.is-featured {
+  flex-grow: 1.45;
+  z-index: 5;
+  box-shadow: 0 24px 58px rgba(0,0,0,0.36), 0 0 18px rgba(232,201,122,0.1);
+}
+
+.rail-character.is-featured img {
+  filter: saturate(1.08) contrast(1.08) brightness(0.96);
+  transform: skewX(3deg) scale(1.1);
 }
 
 .rail-character[href="pages/personnages/tristepin"] img { object-position: 53% center; }
@@ -476,6 +487,13 @@ html.home-page {
     linear-gradient(to bottom, rgba(8,8,16,0.06), rgba(8,8,16,0.18) 42%, rgba(8,8,16,0.9)),
     linear-gradient(to right, rgba(8,8,16,0.54), transparent 45%, rgba(8,8,16,0.38));
   transform: skewX(3deg);
+  transition: opacity 0.34s ease;
+}
+
+.rail-character.is-featured::after,
+.rail-character:hover::after,
+.rail-character:focus-visible::after {
+  opacity: 0.72;
 }
 
 .rail-character span {
@@ -489,7 +507,16 @@ html.home-page {
   justify-items: center;
   text-align: center;
   text-shadow: 0 8px 24px rgba(0,0,0,0.9);
-  transform: skewX(3deg);
+  opacity: 0;
+  transform: skewX(3deg) translateY(0.8rem);
+  transition: opacity 0.26s ease, transform 0.26s ease;
+}
+
+.rail-character.is-featured span,
+.rail-character:hover span,
+.rail-character:focus-visible span {
+  opacity: 1;
+  transform: skewX(3deg) translateY(0);
 }
 
 .rail-character strong,
@@ -524,6 +551,30 @@ html.home-page {
 .rail-character:focus-visible img {
   filter: saturate(1.08) contrast(1.08) brightness(0.96);
   transform: skewX(3deg) scale(1.1);
+}
+
+.character-rail:has(.rail-character:hover) .rail-character.is-featured:not(:hover),
+.character-rail:has(.rail-character:focus-visible) .rail-character.is-featured:not(:focus-visible) {
+  flex-grow: 0.72;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.character-rail:has(.rail-character:hover) .rail-character.is-featured:not(:hover)::after,
+.character-rail:has(.rail-character:focus-visible) .rail-character.is-featured:not(:focus-visible)::after {
+  opacity: 1;
+}
+
+.character-rail:has(.rail-character:hover) .rail-character.is-featured:not(:hover) span,
+.character-rail:has(.rail-character:focus-visible) .rail-character.is-featured:not(:focus-visible) span {
+  opacity: 0;
+  transform: skewX(3deg) translateY(0.8rem);
+}
+
+.character-rail:has(.rail-character:hover) .rail-character.is-featured:not(:hover) img,
+.character-rail:has(.rail-character:focus-visible) .rail-character.is-featured:not(:focus-visible) img {
+  filter: grayscale(1) saturate(0.14) contrast(1.04) brightness(0.58);
+  transform: skewX(3deg) scale(1.04);
 }
 
 .rail-character:focus-visible {
@@ -1233,6 +1284,7 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 }
 
 .home-band-history .home-band-media::before {
+  background-image: url('../../assets/histoire/KROSMOZ.webp');
   background-position: center 28%;
 }
 

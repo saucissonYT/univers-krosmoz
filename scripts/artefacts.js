@@ -181,32 +181,47 @@
     }, { passive: false });
   };
 
-  const createSidePreviews = () => {
+  const createTurntable = () => {
     const stage = document.createElement('div');
-    stage.className = 'artifact-side-stage';
-    stage.setAttribute('aria-hidden', 'true');
+    stage.className = 'artifact-turntable-stage';
+    stage.setAttribute('role', 'group');
+    stage.setAttribute('aria-label', 'Plateau des artefacts');
 
-    const createPreview = (side) => {
-      const preview = document.createElement('div');
+    const items = artifacts.map((artifact, index) => {
+      const image = artifact.querySelector('.artifact-display img');
+      const item = document.createElement('button');
       const imageWrap = document.createElement('span');
-      const pedestal = document.createElement('span');
+      const title = getArtifactTitle(artifact);
 
-      preview.className = 'artifact-side-preview artifact-side-' + side;
-      imageWrap.className = 'artifact-side-image';
-      pedestal.className = 'artifact-side-pedestal';
-      preview.append(imageWrap, pedestal);
-      stage.append(preview);
+      item.type = 'button';
+      item.className = 'artifact-turntable-item';
+      item.dataset.artifactIndex = String(index);
+      item.setAttribute('aria-label', 'Afficher ' + title);
 
-      return { preview, imageWrap };
-    };
+      imageWrap.className = 'artifact-turntable-image';
 
-    const previews = {
-      left: createPreview('left'),
-      right: createPreview('right')
-    };
+      if (image) {
+        const clone = image.cloneNode(false);
+        clone.alt = '';
+        clone.draggable = false;
+        clone.loading = 'lazy';
+        clone.decoding = 'async';
+        imageWrap.append(clone);
+      }
+
+      const accent = getComputedStyle(artifact).getPropertyValue('--artifact-accent-rgb').trim();
+      item.style.setProperty('--artifact-accent-rgb', accent || '46, 207, 176');
+      item.append(imageWrap);
+      item.addEventListener('click', () => showArtifact(index, true));
+      stage.append(item);
+
+      return item;
+    });
 
     track.prepend(stage);
-    return previews;
+    track.classList.add('has-turntable');
+    hall.classList.add('has-turntable');
+    return items;
   };
 
   const getDirection = (nextIndex) => {
@@ -218,37 +233,40 @@
 
   let activeIndex = Math.max(0, artifacts.findIndex((artifact) => artifact.classList.contains('is-active')));
   let carouselItems = [];
-  let sidePreviews = null;
+  let turntableItems = [];
   let turnAnimationTimer = 0;
   let carouselWheelTimer = 0;
   let pageWheelTimer = 0;
 
-  const updateSidePreview = (side, artifact) => {
-    const slot = sidePreviews?.[side];
-    const image = artifact?.querySelector('.artifact-display img');
-    if (!slot || !image) return;
+  const updateTurntable = () => {
+    turntableItems.forEach((item, itemIndex) => {
+      const isCurrent = itemIndex === activeIndex;
+      let relativeIndex = (itemIndex - activeIndex + artifacts.length) % artifacts.length;
 
-    slot.imageWrap.replaceChildren();
-    const clone = image.cloneNode(false);
-    clone.alt = '';
-    clone.loading = 'lazy';
-    clone.decoding = 'async';
-    slot.imageWrap.append(clone);
+      if (relativeIndex > artifacts.length / 2) {
+        relativeIndex -= artifacts.length;
+      }
 
-    const accent = getComputedStyle(artifact).getPropertyValue('--artifact-accent-rgb').trim();
-    slot.preview.style.setProperty('--artifact-accent-rgb', accent || '46, 207, 176');
-  };
+      const clampedOffset = Math.max(-2, Math.min(2, relativeIndex));
+      const isVisible = Math.abs(relativeIndex) <= 1;
 
-  const updateSidePreviews = () => {
-    const previousArtifact = artifacts[(activeIndex - 1 + artifacts.length) % artifacts.length];
-    const nextArtifact = artifacts[(activeIndex + 1) % artifacts.length];
-
-    updateSidePreview('left', previousArtifact);
-    updateSidePreview('right', nextArtifact);
+      item.classList.toggle('is-active', isCurrent);
+      item.classList.toggle('is-turntable-hidden', !isVisible);
+      item.setAttribute('aria-current', isCurrent ? 'true' : 'false');
+      item.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+      item.tabIndex = isVisible ? 0 : -1;
+      item.style.setProperty('--turntable-offset', String(clampedOffset));
+      item.setAttribute('data-turntable-offset', String(clampedOffset));
+    });
   };
 
   const updatePedestalPosition = () => {
     const isMobileLayout = window.matchMedia('(max-width: 840px)').matches;
+    if (!isMobileLayout) {
+      pedestal?.style.removeProperty('--artifact-pedestal-top');
+      return;
+    }
+
     const referenceArtifact = isMobileLayout
       ? artifacts[activeIndex]
       : artifacts.find((artifact) => artifact.id === 'eliacube') || artifacts[0];
@@ -362,7 +380,7 @@
     });
 
     updateControls();
-    updateSidePreviews();
+    updateTurntable();
     schedulePedestalUpdate();
     updateDescriptionScrollHint();
 
@@ -417,7 +435,7 @@
   setupCarouselDrag();
   setupCarouselWheel();
   setupPageWheel();
-  sidePreviews = createSidePreviews();
+  turntableItems = createTurntable();
   const hashIndex = artifacts.findIndex((artifact) => artifact.id && '#' + artifact.id === window.location.hash);
   showArtifact(hashIndex >= 0 ? hashIndex : activeIndex, false);
 })();

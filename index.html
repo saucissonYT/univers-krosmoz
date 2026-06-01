@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accueil | Univers Krosmoz</title>
 
-<meta name="description" content="Explorez l'Univers Krosmoz par Zaki : histoire, personnages, chronologies et cartes autour de Dofus, Wakfu et Waven.">
+<meta name="description" content="Univers Krosmoz vous ouvre les portes du Monde des Douze : histoires, personnages, artefacts, régions et chronologies de Dofus, Wakfu et Waven.">
 <link rel="canonical" href="https://univers-krosmoz.fr/">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Univers Krosmoz">
 <meta property="og:title" content="Accueil | Univers Krosmoz">
-<meta property="og:description" content="Explorez l'Univers Krosmoz par Zaki : histoire, personnages, chronologies et cartes autour de Dofus, Wakfu et Waven.">
+<meta property="og:description" content="Univers Krosmoz vous ouvre les portes du Monde des Douze : histoires, personnages, artefacts, régions et chronologies de Dofus, Wakfu et Waven.">
 <meta property="og:url" content="https://univers-krosmoz.fr/">
 <meta property="og:image" content="https://univers-krosmoz.fr/assets/logo-krosmoz.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Accueil | Univers Krosmoz">
-<meta name="twitter:description" content="Explorez l'Univers Krosmoz par Zaki : histoire, personnages, chronologies et cartes autour de Dofus, Wakfu et Waven.">
+<meta name="twitter:description" content="Univers Krosmoz vous ouvre les portes du Monde des Douze : histoires, personnages, artefacts, régions et chronologies de Dofus, Wakfu et Waven.">
 <meta name="twitter:image" content="https://univers-krosmoz.fr/assets/logo-krosmoz.webp">
 
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -26,9 +26,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/common.css">
-<link rel="stylesheet" href="styles/accueil/accueil.css">
+<link rel="stylesheet" href="styles/accueil/accueil.css?v=4">
 
-<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"WebSite","name":"Accueil | Univers Krosmoz","headline":"Accueil | Univers Krosmoz","description":"Explorez l\u0027Univers Krosmoz par Zaki : histoire, personnages, chronologies et cartes autour de Dofus, Wakfu et Waven.","url":"https://univers-krosmoz.fr/","image":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp"}}}</script>
+<script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"WebSite","name":"Accueil | Univers Krosmoz","headline":"Accueil | Univers Krosmoz","description":"Univers Krosmoz vous ouvre les portes du Monde des Douze : histoires, personnages, artefacts, régions et chronologies de Dofus, Wakfu et Waven.","url":"https://univers-krosmoz.fr/","image":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp"}}}</script>
 <script src="scripts/site-common.js" defer></script>
 <script src="scripts/home-meryde.js?v=3" defer></script>
 </head>
@@ -43,7 +43,7 @@
   <section class="home-category-band home-band-history" aria-labelledby="home-history-title">
     <a class="home-band-link" href="pages/histoire/histoire-krosmoz" aria-label="Explorer le fil d'histoire du Krosmoz">
       <span class="home-band-media" aria-hidden="true">
-        <video class="home-band-video" autoplay muted loop playsinline preload="metadata">
+        <video class="home-band-video" src="assets/accueil/histoire-background-20260526.mp4" poster="assets/histoire/KROSMOZ.webp" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" webkit-playsinline="webkit-playsinline" preload="auto">
           <source src="assets/accueil/histoire-background-20260526.mp4" type="video/mp4">
         </video>
       </span>
@@ -310,36 +310,84 @@
     video.autoplay = true;
     video.loop = true;
     video.playsInline = true;
+    video.webkitPlaysInline = true;
+    video.controls = false;
     video.preload = 'auto';
-    video.setAttribute('muted', '');
-    video.setAttribute('autoplay', '');
-    video.setAttribute('loop', '');
-    video.setAttribute('playsinline', '');
-    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('muted', 'muted');
+    video.setAttribute('autoplay', 'autoplay');
+    video.setAttribute('loop', 'loop');
+    video.setAttribute('playsinline', 'playsinline');
+    video.setAttribute('webkit-playsinline', 'webkit-playsinline');
     video.setAttribute('preload', 'auto');
+    video.removeAttribute('controls');
+
+    if (video.readyState === 0) {
+      video.load();
+    }
   };
 
-  const playHomeBandVideos = () => {
+  const videoRetryCounts = new WeakMap();
+  const videoRetryTimers = new WeakMap();
+
+  const playHomeBandVideo = (video, resetRetry = false) => {
+    if (!video) {
+      return;
+    }
+
+    prepareHomeBandVideo(video);
+    if (resetRetry) {
+      videoRetryCounts.set(video, 0);
+      window.clearTimeout(videoRetryTimers.get(video));
+      videoRetryTimers.delete(video);
+    }
+
+    const playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === 'function') {
+      playAttempt
+        .then(() => {
+          video.dataset.videoReady = 'true';
+          videoRetryCounts.set(video, 0);
+        })
+        .catch(() => {
+          const retryCount = videoRetryCounts.get(video) || 0;
+          if (retryCount >= 4) {
+            return;
+          }
+
+          videoRetryCounts.set(video, retryCount + 1);
+          window.clearTimeout(videoRetryTimers.get(video));
+          const retryTimer = window.setTimeout(() => {
+            videoRetryTimers.delete(video);
+            playHomeBandVideo(video);
+          }, 420 + retryCount * 360);
+          videoRetryTimers.set(video, retryTimer);
+        });
+    }
+  };
+
+  const playHomeBandVideos = (resetRetry = false) => {
     homeBandVideos.forEach((video) => {
-      prepareHomeBandVideo(video);
-      const playAttempt = video.play();
-      if (playAttempt && typeof playAttempt.catch === 'function') {
-        playAttempt.catch(() => {});
-      }
+      playHomeBandVideo(video, resetRetry);
     });
   };
 
   if (homeBandVideos.length) {
-    playHomeBandVideos();
-    window.addEventListener('load', playHomeBandVideos, { once: true });
+    playHomeBandVideos(true);
+    window.addEventListener('load', () => playHomeBandVideos(true), { once: true });
     document.addEventListener('visibilitychange', () => {
       if (!document.hidden) {
-        playHomeBandVideos();
+        playHomeBandVideos(true);
       }
     });
 
-    ['pointerdown', 'touchstart', 'scroll'].forEach((eventName) => {
-      window.addEventListener(eventName, playHomeBandVideos, { once: true, passive: true });
+    ['pointerdown', 'touchstart', 'click', 'scroll'].forEach((eventName) => {
+      window.addEventListener(eventName, () => playHomeBandVideos(true), { passive: true, capture: true });
+    });
+
+    homeBandVideos.forEach((video) => {
+      ['loadeddata', 'canplay', 'canplaythrough'].forEach((eventName) => {
+        video.addEventListener(eventName, () => playHomeBandVideo(video, true));
+      });
     });
 
     if ('IntersectionObserver' in window) {
@@ -379,8 +427,15 @@
   const renderCharacterRail = () => {
     if (!characterRail) return;
     const fragment = document.createDocumentFragment();
-    randomizedRailCharacters.slice(0, getRailCharacterLimit()).forEach((character) => {
-      fragment.append(createRailCharacter(character));
+    const visibleCharacters = randomizedRailCharacters.slice(0, getRailCharacterLimit());
+    const featuredIndex = Math.floor(visibleCharacters.length / 2);
+
+    visibleCharacters.forEach((character, index) => {
+      const card = createRailCharacter(character);
+      if (index === featuredIndex) {
+        card.classList.add('is-featured');
+      }
+      fragment.append(card);
     });
     characterRail.replaceChildren(fragment);
   };

@@ -3,6 +3,14 @@ petit changelog pour expliquer les modifications du site et les corrections :
 
 01/05/2026
 
+- Mise à jour des descriptions SEO de la page d’accueil.
+- Amélioration du chargement et de l’autoplay de la vidéo d’accueil.
+- Mise en avant automatique d’un personnage central dans le rail de personnages.
+- Ajustements visuels du rail de personnages sur la page d’accueil.
+- Ajout d’un menu mobile interactif avec ouverture/fermeture accessible.
+- Refonte de l’affichage des artefacts avec un plateau interactif.
+- Ajustements des styles de la page artefacts, notamment les colonnes et animations.
+
 - Ajout de la page / section Almanax.
 - Ajout de nouveaux personnages et de leurs pages.
 - Ajout de nouveaux groupes, dont les Mérydes et les Poupées de Sadida.

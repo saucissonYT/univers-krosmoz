@@ -181,6 +181,49 @@
     </div>
   </div>`;
 
+      const topbar = header.querySelector(".site-topbar");
+      const mobileToggle = header.querySelector(".mobile-nav-toggle");
+      const topNav = header.querySelector(".top-nav");
+      if (topbar && mobileToggle && topNav) {
+        const navId = `site-nav-${Math.random().toString(36).slice(2)}`;
+        topNav.id = navId;
+        mobileToggle.setAttribute("aria-controls", navId);
+
+        const setMobileNavOpen = (isOpen) => {
+          topbar.classList.toggle("is-mobile-nav-open", isOpen);
+          mobileToggle.setAttribute("aria-expanded", String(isOpen));
+          mobileToggle.setAttribute("aria-label", isOpen ? "Masquer le menu" : "Afficher le menu");
+        };
+
+        mobileToggle.addEventListener("click", () => {
+          setMobileNavOpen(!topbar.classList.contains("is-mobile-nav-open"));
+        });
+
+        topNav.addEventListener("click", (event) => {
+          if (event.target.closest("a")) {
+            setMobileNavOpen(false);
+          }
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!topbar.contains(event.target)) {
+            setMobileNavOpen(false);
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            setMobileNavOpen(false);
+          }
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.matchMedia("(min-width: 981px)").matches) {
+            setMobileNavOpen(false);
+          }
+        });
+      }
+
       const brandShell = header.querySelector(".brand-shell");
       if (brandShell) {
         let almanaxCloseTimeout;
