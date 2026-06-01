@@ -1,6 +1,9 @@
 .gitdata/
 output/
 
+# Donnees locales du compteur de j'aime
+data/reactions/page-likes.json
+
 # OS / editor noise
 .DS_Store
 Thumbs.db

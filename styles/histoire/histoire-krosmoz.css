@@ -1034,3 +1034,28 @@ body[data-era="waven"] .story-bg-waven {
   transform: translate(-50%, -26%) rotate(-135deg) !important;
   filter: drop-shadow(0 0 8px rgba(255,247,223,0.46)) !important;
 }
+
+.back-to-top::before,
+.back-to-top::after {
+  width: clamp(18px, 2vw, 24px) !important;
+  height: clamp(18px, 2vw, 24px) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-top: 4px solid currentColor !important;
+  border-left: 4px solid currentColor !important;
+  border-radius: 0 !important;
+  filter:
+    drop-shadow(0 0 8px rgba(232,201,122,0.45))
+    drop-shadow(0 5px 14px rgba(0,0,0,0.65)) !important;
+}
+
+.back-to-top::before {
+  transform: translate(-50%, -76%) rotate(45deg) !important;
+}
+
+.back-to-top::after,
+.back-to-top:hover::after,
+.back-to-top:focus-visible::after {
+  opacity: 0.42 !important;
+  transform: translate(-50%, -18%) rotate(45deg) scale(0.72) !important;
+}

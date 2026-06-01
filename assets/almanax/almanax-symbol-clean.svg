@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="Symbole Almanax">
+  <defs>
+    <style>
+      .mark {
+        fill: none;
+        stroke: #fff7df;
+        stroke-width: 14;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .fine {
+        fill: none;
+        stroke: #fff7df;
+        stroke-width: 9;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .fill {
+        fill: #fff7df;
+      }
+    </style>
+  </defs>
+
+  <path class="mark" d="M160 17 303 160 160 303 17 160 160 17Z"/>
+  <path class="fine" d="M160 52 268 160 160 268 52 160 160 52Z"/>
+
+  <path class="mark" d="M160 76v168"/>
+  <path class="fine" d="M160 118l-25-25"/>
+  <path class="fine" d="M160 139l-33-33"/>
+  <path class="fine" d="M160 118l25-25"/>
+  <path class="fine" d="M160 139l33-33"/>
+
+  <path class="mark" d="M82 160h156"/>
+  <path class="fine" d="M207 160l31-31"/>
+  <path class="fine" d="M207 160l31 31"/>
+  <path class="fill" d="M247 160 266 145 285 160 266 175Z"/>
+  <circle class="fill" cx="266" cy="160" r="5"/>
+
+  <path class="fine" d="M113 160c0-23 17-42 40-46"/>
+  <path class="fine" d="M123 185c-12-7-20-19-22-33"/>
+  <path class="fine" d="M128 136l-26-16"/>
+  <path class="fine" d="M114 154H80"/>
+  <path class="fine" d="M126 179l-28 17"/>
+  <path class="fill" d="M75 130 101 137 82 155Z"/>
+  <path class="fill" d="M59 154 87 143 87 177Z"/>
+  <path class="fill" d="M75 190 82 164 101 183Z"/>
+
+  <path class="fine" d="M118 145h-18"/>
+  <path class="fine" d="M121 160h-21"/>
+  <path class="fine" d="M126 175h-16"/>
+
+  <path class="fill" d="M160 222c18 13 24 29 0 46-24-17-18-33 0-46Z"/>
+  <path class="fine" d="M160 222v41"/>
+  <path class="fill" d="M134 212c20 4 27 18 15 33-19-5-25-18-15-33Z"/>
+  <path class="fill" d="M186 212c-20 4-27 18-15 33 19-5 25-18 15-33Z"/>
+
+  <path class="fine" d="M160 160l-38 38"/>
+  <path class="fine" d="M160 160l38 38"/>
+  <path class="fine" d="M160 160l-38-38"/>
+  <path class="fine" d="M160 160l38-38"/>
+</svg>

@@ -445,7 +445,7 @@ window.KROSMOZ_SEARCH_DATA = [
     "type": "Groupe",
     "href": "pages/groupes/fratrie-des-oublies",
     "summary": "Organisation secrète fondée par Oropo, réunissant Éliotropes, demi-dieux et êtres rejetés par les dieux.",
-    "keywords": "La Fratrie des Oubliés groupe fratrie oublies Oropo Echo Éliotropes Demi-dieux Dofus Éliatropes Éliacube Éliabombe Hyperzaap Tour des Rêves Ogrest Dathura Bouillon Atone Sidaire Desperia Ripulse"
+    "keywords": "La Fratrie des Oubliés groupe fratrie oublies Oropo Echo Éliotropes Demi-dieux Dofus Éliatropes Éliacube Éliabombe Hyperzaap Tour des Rêves Ogrest Bouillon Atone Sidaire Desperia Ripulse"
   },
   {
     "title": "Les Gardiens des Mois",
@@ -453,6 +453,20 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/groupes/gardiens-des-mois",
     "summary": "Protecteurs liés à l'Horloge Divine, chargés de veiller sur les mois, les saisons et l'écoulement du temps.",
     "keywords": "Les Gardiens des Mois groupe protecteurs mois Horloge Divine saisons temps Jiva Djaul Rushu Solar Ménalt Silvosse Ulgrude Silouate Rosal Sumens Hécate Pouchecot Raval Maïmane Brumaire Descendre Javian Dofus Wakfu"
+  },
+  {
+    "title": "Les Mérydes",
+    "type": "Groupe",
+    "href": "pages/groupes/merydes",
+    "summary": "Divinités mineures associées aux jours du calendrier, responsables de l'Effet Méryde consigné dans l'Almanax.",
+    "keywords": "Les Mérydes groupe merydes mérydes Almanax Effet Méryde Xélor Mage Ax Mahiya calendrier jours Djaul Jiva Inglorium Protecteurs des Mois Démons des Heures Bibliotemple"
+  },
+  {
+    "title": "Les Poupées de Sadida",
+    "type": "Groupe",
+    "href": "pages/groupes/poupees-de-sadida",
+    "summary": "Créatures magiques de Sadida, des poupées communes aux Poupées Divines liées à la création des Dofus Primordiaux.",
+    "keywords": "Les Poupées de Sadida groupe poupees poupées divines Sadida Maminala Lophapharo Bellodana Pepavara Yôpo Ladysally Ibago Dathura Lacrima Razeriane Dofus Primordiaux Aguabrial Aerafal Ignemikhal Terrakourial Gargoylone Dardondakal Grougalorasalar Ogrine Ogrest Otomai Dofus Wakfu"
   },
   {
     "title": "La Confrérie du Tofu",
@@ -588,6 +602,20 @@ window.KROSMOZ_SEARCH_DATA = [
   "keywords": "Belladone Gardienne de la chambre des maléfices Eniripsa Mythe & légende, Ennemis Lancedur"
 },
   {
+    "title": "Bellodana",
+    "type": "Personnage",
+    "href": "pages/personnages/bellodana",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Bellodana troisième Poupée Divine Sadida Grougalorasalar Dofus Ébène intelligence érudition Dofus"
+  },
+  {
+    "title": "Bethel Akarna",
+    "type": "Personnage",
+    "href": "pages/personnages/bethel-akarna",
+    "summary": "Osamodas - Ennemis - Dofus",
+    "keywords": "Bethel Akarna Mage osamodas déchu Koutoulou Indicible Mériana Furye Bolgrot Raval Solar Fratrie des Oubliés Submergés Dimension Abyssale Dofus"
+  },
+  {
     "title": "Les Bellaphones",
     "type": "Groupe",
     "href": "pages/groupes/bellaphones",
@@ -696,8 +724,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Dathura",
     "type": "Personnage",
     "href": "pages/personnages/dathura",
-    "summary": "SADIDA - Demi-dieu, Fratrie - Dofus, Wakfu la série",
-    "keywords": "Dathura Muse d’Ogrest SADIDA Demi-dieu, Fratrie Dofus, Wakfu la série"
+    "summary": "SADIDA - Poupée de Sadida - Dofus, Wakfu la série",
+    "keywords": "Dathura Muse d’Ogrest SADIDA Poupée Divine Poupée de Sadida Dofus, Wakfu la série"
   },
   {
     "title": "Déesse Cra",
@@ -805,6 +833,13 @@ window.KROSMOZ_SEARCH_DATA = [
   "keywords": "Dragon Cochon Moitié dragon moitié cochon Monstre Ennemis, Figurants Wakfu la série"
 },
   {
+    "title": "Ecaron",
+    "type": "Personnage",
+    "href": "pages/personnages/ecaron",
+    "summary": "Ecaflip - Demi-dieu - Dofus",
+    "keywords": "Ecaron Voyageur aux neuf vies Ecaflip Demi-dieu Dofus Allister Amakna Pandala Moon Dieu Ecaflip enfants Ecaflip"
+  },
+  {
     "title": "Dame Echo",
     "type": "Personnage",
     "href": "pages/personnages/echo",
@@ -866,6 +901,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/frida-mofette",
     "summary": "Steamer - Figurants - Wakfu la série",
     "keywords": "Frida Mofette Commandante de l'armée sufokienne Steamer Figurants Wakfu la série Sufokia Stasis Steamflex Griffes Pourpres"
+  },
+  {
+    "title": "Gein",
+    "type": "Personnage",
+    "href": "pages/personnages/gein",
+    "summary": "Sram - Demi-dieu - Dofus",
+    "keywords": "Gein Assassin silencieux Srambad Sram Demi-dieu Dofus Dieu Sram Reine des Voleurs Echo Explorancienne Fratrie des Oubliés Voyageurs Dimensionnels"
   },
   {
     "title": "Glip",
@@ -938,6 +980,12 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Hyrkul Champion de Brakmar Féca Héros, Mythe & légende Dofus"
   },
   {
+    "title": "Ibago",
+    "type": "Personnage",
+    "href": "pages/personnages/ibago",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Ibago huitième Poupée Divine Sadida Dardondakal Dofus Ivoire Dofus Primordiaux Dofus"
+  },  {
     "title": "Ignemikhal",
     "type": "Personnage",
     "href": "pages/personnages/ignemikhal",
@@ -1036,6 +1084,19 @@ window.KROSMOZ_SEARCH_DATA = [
   "keywords": "Kriss la Krass Le plus grand Boufbowler brakmarien Sacrieur Héros Wakfu la série"
 },
   {
+    "title": "Lacrima",
+    "type": "Personnage",
+    "href": "pages/personnages/lacrima",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Lacrima Poupée Divine Sadida Dathura Cornu Mollu Fratrie des Oubliés Chaos d'Ogrest Dofus Primordiaux Frigost Harebourg Sœurs de Dathura Dofus"
+  },
+  {
+    "title": "Ladysally",
+    "type": "Personnage",
+    "href": "pages/personnages/ladysally",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Ladysally septième Poupée Divine Sadida Ignemikhal Dofus Pourpre Eniripsadida guérisseuse Dofus"
+  },  {
     "title": "Lance Dur",
     "type": "Personnage",
     "href": "pages/personnages/lancedur",
@@ -1078,6 +1139,12 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Lokus Méchasme puissant Mechasme Mechasme Wakfu la série"
   },
   {
+    "title": "Lophapharo",
+    "type": "Personnage",
+    "href": "pages/personnages/lophapharo",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Lophapharo deuxième Poupée Divine Sadida muette Celui dont on tait le nom Dofus"
+  },  {
   "title": "Lou",
   "type": "Personnage",
   "href": "pages/personnages/lou",
@@ -1106,6 +1173,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Maïmane Pacificateur protectrice du mois d’Octolliard Gardien des mois Protecteur paix émotions totems Stabilisateur Féca Terra Cogita Silvosse Corruption Ménologium Chêne Mou Plan Astral Brumaire Djaul Dofus"
   },
   {
+    "title": "Maminala",
+    "type": "Personnage",
+    "href": "pages/personnages/maminala",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Maminala première Poupée Divine Sadida Poupée de Sadida Terrakourial Dofus Ocre Dofus Primordiaux Source Harmonie Âge des Dofus Dofus"
+  },
+  {
     "title": "Maskemane",
     "type": "Personnage",
     "href": "pages/personnages/maskemane",
@@ -1132,6 +1206,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/menalt",
     "summary": "Gardien des mois - Protecteur - Dofus",
     "keywords": "Ménalt Le Centaure premier protecteur du mois de Martalo Gardien des mois Protecteur Xélor Bonta Ordre du Cœur Vaillant Aurore Pourpre Hyrkul Raval centaures Percepteurs Dofus"
+  },
+  {
+    "title": "Mériana",
+    "type": "Personnage",
+    "href": "pages/personnages/meriana",
+    "summary": "Enutrof - Demi-dieu - Dofus",
+    "keywords": "Mériana Meriana Sorcière Gardienne des Dofus Primordiaux Enutrof Demi-dieu Dofus Barda Yaga Dieu Enutrof Bethel Akarna Furye Bolgrot Gardiennes Amakna"
   },
   {
     "title": "Mina",
@@ -1246,6 +1327,12 @@ window.KROSMOZ_SEARCH_DATA = [
   "keywords": "Percimol Légende des Flaqueux Monstre Mythe & légende, Héros Wakfu la série, Dofus"
 },
   {
+    "title": "Pepavara",
+    "type": "Personnage",
+    "href": "pages/personnages/pepavara",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Pepavara quatrième Poupée Divine Sadida Gresgaoulian Dofus Primordiaux Dofus"
+  },  {
     "title": "Phaeris le puissant",
     "type": "Personnage",
     "href": "pages/personnages/phaeris",
@@ -1330,6 +1417,12 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Rathrosk Main Grise bourreau des dieux protecteur d'Astrub fils de Thanatena Externam Dofus Argenté Valonia Lance Originelle Dofus Wakfu"
   },
   {
+    "title": "Razeriane",
+    "type": "Personnage",
+    "href": "pages/personnages/razeriane",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Razeriane Poupée Divine Sadida Aerafal Dofus Émeraude Dark Vlad Dofus"
+  },  {
     "title": "Razortemps",
     "type": "Personnage",
     "href": "pages/personnages/razortemps",
@@ -1453,7 +1546,7 @@ window.KROSMOZ_SEARCH_DATA = [
     "type": "Personnage",
     "href": "pages/personnages/terrakourial",
     "summary": "DRAGON - Dragon primordial - Dofus, Wakfu la série",
-    "keywords": "Terrakourial Créateur du Dofus Ocre DRAGON Dragon primordial Dofus, Wakfu la série"
+    "keywords": "Terrakourial Créateur du Dofus Ocre DRAGON Dragon primordial Maminala Poupée Divine Dofus, Wakfu la série"
   },
   {
     "title": "Thanatena",
@@ -1524,6 +1617,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/xav-le-boulanger",
     "summary": "Inconnue - Figurants - Wakfu la série",
     "keywords": "Xav le Boulanger Boulanger ultime Inconnue Figurants Wakfu la série Bonta Chtibou Ratafouine Chouquette"
+  },
+  {
+    "title": "Yôpo",
+    "type": "Personnage",
+    "href": "pages/personnages/yopo",
+    "summary": "Sadida - Poupée de Sadida - Dofus",
+    "keywords": "Yôpo Yopo cinquième Poupée Divine Sadida Poupée de Sadida Gargoylone conteuse imagination récits histoires Dofus Primordiaux Dofus"
   },
   {
     "title": "Yrehn",

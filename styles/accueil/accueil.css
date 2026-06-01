@@ -45,6 +45,168 @@ body::before {
   z-index: 0;
 }
 
+.home-meryde-card {
+  position: fixed;
+  right: clamp(0.9rem, 2vw, 1.6rem);
+  bottom: clamp(0.9rem, 2vw, 1.6rem);
+  z-index: 90;
+  width: min(640px, calc(100vw - 1.8rem));
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  align-items: center;
+  padding: 0.9rem 2.6rem 0.9rem 0.95rem;
+  border: 1px solid rgba(232,201,122,0.2);
+  background:
+    radial-gradient(circle at 18% 46%, rgba(46,207,176,0.08), transparent 38%),
+    linear-gradient(135deg, rgba(3,4,10,0.98), rgba(0,0,0,0.96) 58%, rgba(4,5,12,0.99));
+  color: #fff7df;
+  box-shadow:
+    0 18px 54px rgba(0,0,0,0.58),
+    0 0 0 1px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.045);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  isolation: isolate;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(14px);
+  cursor: pointer;
+  transition: opacity 0.48s ease, transform 0.48s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.home-meryde-card::before {
+  content: '';
+  position: absolute;
+  inset: -34% -8% -38% 22%;
+  z-index: 0;
+  background: url('../../assets/almanax/almanax-symbol-original-cut.png') center / contain no-repeat;
+  opacity: 0.11;
+  filter: grayscale(1) brightness(0.9);
+  pointer-events: none;
+}
+
+.home-meryde-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.78), rgba(0,0,0,0.28) 58%, rgba(0,0,0,0.66)),
+    radial-gradient(circle at 74% 50%, rgba(232,201,122,0.08), transparent 42%);
+  pointer-events: none;
+}
+
+.home-meryde-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-meryde-card.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.home-meryde-card.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.home-meryde-card:hover,
+.home-meryde-card:focus-visible {
+  border-color: rgba(255,243,189,0.46);
+  box-shadow:
+    0 22px 64px rgba(0,0,0,0.68),
+    0 0 24px rgba(232,201,122,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.home-meryde-image {
+  width: 58px;
+  height: 74px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 8px 14px rgba(0,0,0,0.42))
+    drop-shadow(0 0 12px rgba(232,201,122,0.18));
+}
+
+.home-meryde-copy {
+  min-width: 0;
+}
+
+.home-meryde-kicker {
+  display: block;
+  margin-bottom: 0.18rem;
+  color: rgba(232,201,122,0.88);
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.home-meryde-copy strong {
+  display: block;
+  color: #fff8e8;
+  font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.28rem);
+  line-height: 1.05;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.65);
+}
+
+.home-meryde-copy blockquote {
+  display: block;
+  margin: 0.42rem 0 0;
+  color: rgba(255,247,223,0.82);
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: clamp(0.88rem, 1.6vw, 1rem);
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.home-meryde-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.62rem;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  color: rgba(255,247,223,0.74);
+  cursor: pointer;
+}
+
+.home-meryde-close::before,
+.home-meryde-close::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 2px;
+  background: currentColor;
+  transform-origin: center;
+}
+
+.home-meryde-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.home-meryde-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.home-meryde-close:hover,
+.home-meryde-close:focus-visible {
+  color: #fff8e8;
+  outline: none;
+}
+
 html.home-page {
   scroll-snap-type: none;
   scroll-padding-top: 0;
@@ -285,7 +447,7 @@ html.home-page {
 .rail-character[href="pages/personnages/cornu-mollu"] img { object-position: 90% center; }
 .rail-character[href="pages/personnages/dathura"] img { object-position: 72% center; }
 .rail-character[href="pages/personnages/dragon-cochon"] img { object-position: 34% center; }
-.rail-character[href="pages/personnages/efrim"] img { object-position: 8% center; }
+.rail-character[href="pages/personnages/efrim"] img { object-position: center center; }
 .rail-character[href="pages/personnages/elaine-encre-noir"] img { object-position: 34% center; }
 .rail-character[href="pages/personnages/elante"] img { object-position: 86% center; }
 .rail-character[href="pages/personnages/glip"] img { object-position: 72% center; }
@@ -296,7 +458,7 @@ html.home-page {
 .rail-character[href="pages/personnages/grany-smisse"] img { object-position: 36% center; }
 .rail-character[href="pages/personnages/indie-delagrandaventure"] img { object-position: 100% center; }
 .rail-character[href="pages/personnages/maskemane"] img { object-position: 75% center; }
-.rail-character[href="pages/personnages/nora"] img { object-position: 92% center; }
+.rail-character[href="pages/personnages/nora"] img { object-position: center center; }
 .rail-character[href="pages/personnages/nox"] img { object-position: 52% center; }
 .rail-character[href="pages/personnages/otomai"] img { object-position: 62% 68%; }
 .rail-character[href="pages/personnages/percimol"] img { object-position: 30% center; }
@@ -1913,4 +2075,83 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   opacity: 1 !important;
   transform: translate(-50%, -26%) rotate(-135deg) !important;
   filter: drop-shadow(0 0 8px rgba(255,247,223,0.46)) !important;
+}
+
+.character-rail-arrow {
+  width: clamp(44px, 4.6vw, 64px);
+  height: clamp(44px, 4.6vw, 64px);
+  border: 0;
+  background: transparent;
+  clip-path: none;
+  color: var(--gold-light);
+  font-size: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 0 8px rgba(232,201,122,0.18));
+}
+
+.character-rail-arrow::before,
+.character-rail-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  inset: auto;
+  width: clamp(18px, 2vw, 28px);
+  height: clamp(18px, 2vw, 28px);
+  border: 0;
+  border-top: 4px solid currentColor;
+  border-left: 4px solid currentColor;
+  clip-path: none;
+  filter:
+    drop-shadow(0 0 8px rgba(232,201,122,0.45))
+    drop-shadow(0 5px 14px rgba(0,0,0,0.65));
+  pointer-events: none;
+}
+
+.character-rail-arrow::after {
+  opacity: 0.42;
+}
+
+.character-rail-arrow-left::before {
+  left: 52%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.character-rail-arrow-left::after {
+  left: 68%;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0.72);
+}
+
+.character-rail-arrow-right::before {
+  left: 48%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.character-rail-arrow-right::after {
+  left: 32%;
+  transform: translate(-50%, -50%) rotate(135deg) scale(0.72);
+}
+
+.back-to-top::before,
+.back-to-top::after {
+  width: clamp(18px, 2vw, 24px) !important;
+  height: clamp(18px, 2vw, 24px) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-top: 4px solid currentColor !important;
+  border-left: 4px solid currentColor !important;
+  border-radius: 0 !important;
+  filter:
+    drop-shadow(0 0 8px rgba(232,201,122,0.45))
+    drop-shadow(0 5px 14px rgba(0,0,0,0.65)) !important;
+}
+
+.back-to-top::before {
+  transform: translate(-50%, -76%) rotate(45deg) !important;
+}
+
+.back-to-top::after,
+.back-to-top:hover::after,
+.back-to-top:focus-visible::after {
+  opacity: 0.42 !important;
+  transform: translate(-50%, -18%) rotate(45deg) scale(0.72) !important;
 }

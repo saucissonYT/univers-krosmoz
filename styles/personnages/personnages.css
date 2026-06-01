@@ -247,6 +247,11 @@ body.character-maimane .character-hero-bg {
   background-image: url('../../assets/personnages/MAIMANE.webp');
   background-position: 50% center;
 }
+body.character-maminala .character-hero-bg {
+  background-image: url('../../assets/personnages/maminala.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-deesse-cra .character-hero-bg {
   background-image: url('../../assets/personnages/deesse-cra-banniere.webp');
   background-position: 40% center;
@@ -374,6 +379,11 @@ body.character-balthazar .character-hero-bg {
   background-image: url('../../assets/personnages/BALTHAZAR.webp');
   background-position: 50% center;
 }
+body.character-bethel-akarna .character-hero-bg {
+  background-image: url('../../assets/personnages/cartes/bethel-akarna.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-nimoda .character-hero-bg {
   background-image: url('../../assets/personnages/NIMODA.webp');
   background-position: 50% center;
@@ -449,6 +459,11 @@ body.character-hecate .character-hero-bg {
   background-image: url('../../assets/personnages/HECATE.webp');
   background-position: 50% center;
 }
+body.character-ibago .character-hero-bg {
+  background-image: url('../../assets/personnages/ibago.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-chevalier-justice .character-hero-bg {
   background-image: url('../../assets/personnages/chevalier-justice.webp');
   background-position: 34% center;
@@ -456,6 +471,11 @@ body.character-chevalier-justice .character-hero-bg {
 body.character-pandiego .character-hero-bg {
   background-image: url('../../assets/personnages/pandiego-de-la-vega.webp');
   background-position: 48% 30%;
+}
+body.character-pepavara .character-hero-bg {
+  background-image: url('../../assets/personnages/pepavara.webp');
+  background-position: 50% center;
+  transform: scale(1);
 }
 body.character-elaine-encre-noir .character-hero-bg {
   background-image: url('../../assets/personnages/elaine-encre-noir.webp');
@@ -471,6 +491,21 @@ body.character-lancedur .character-hero-bg {
   background-position: 56% 34%;
   transform: scale(1);
 }
+body.character-lacrima .character-hero-bg {
+  background-image: url('../../assets/personnages/lacrima.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-ladysally .character-hero-bg {
+  background-image: url('../../assets/personnages/ladysally.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-lophapharo .character-hero-bg {
+  background-image: url('../../assets/personnages/lophapharo.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-lance-originelle .character-hero-bg {
   background-image: url('../../assets/personnages/lance-originelle.webp');
   background-position: center center;
@@ -484,13 +519,25 @@ body.character-percimol .character-hero-bg {
   background-image: url('../../assets/personnages/PERCIMOLE.webp');
   background-position: 32% center;
 }
+body.character-razeriane .character-hero-bg {
+  background-image: url('../../assets/personnages/razeriane.webp');
+  background-position: 48% 62%;
+  background-size: 138% auto;
+  transform: scale(1.02);
+}
+body.character-bellodana .character-hero-bg {
+  background-image: url('../../assets/personnages/bellodana.webp');
+  background-position: 78% 62%;
+  background-size: 138% auto;
+  transform: scale(1.02);
+}
 body.character-nora .character-hero-bg {
-  background-image: url('../../assets/personnages/nora-efrim.webp');
-  background-position: 66% center;
+  background-image: url('../../assets/personnages/cartes/nora.webp');
+  background-position: center center;
 }
 body.character-efrim .character-hero-bg {
-  background-image: url('../../assets/personnages/nora-efrim.webp');
-  background-position: 25% center;
+  background-image: url('../../assets/personnages/cartes/efrim.webp');
+  background-position: center center;
 }
 body.character-grand-dragon .character-hero-bg {
   background-image: url('../../assets/personnages/grand-dragon.webp');
@@ -561,8 +608,18 @@ body.character-xav-le-boulanger .character-hero-bg {
   background-position: 50% center;
   transform: scale(1);
 }
+body.character-yopo .character-hero-bg {
+  background-image: url('../../assets/personnages/yopo.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-frida-mofette .character-hero-bg {
   background-image: url('../../assets/personnages/frida-mofette.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
+body.character-gein .character-hero-bg {
+  background-image: url('../../assets/personnages/cartes/gein.webp');
   background-position: 50% center;
   transform: scale(1);
 }
@@ -594,6 +651,11 @@ body.character-grany-smisse .character-hero-bg {
 body.character-dragon-cochon .character-hero-bg {
   background-image: url('../../assets/personnages/dragon-cochon.webp');
   background-position: 34% center;
+  transform: scale(1);
+}
+body.character-ecaron .character-hero-bg {
+  background-image: url('../../assets/personnages/cartes/ecaron.webp');
+  background-position: center center;
   transform: scale(1);
 }
 body.character-moumoune .character-hero-bg {
@@ -759,6 +821,51 @@ body.character-dieu-osamodas .character-hero-bg {
 .character-hero-nav-next::after {
   left: 64%;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.character-hero-nav {
+  width: clamp(44px, 4.6vw, 64px);
+  height: clamp(44px, 4.6vw, 64px);
+  text-shadow: none;
+  filter: drop-shadow(0 0 8px rgba(232,201,122,0.18));
+}
+
+.character-hero-nav::before,
+.character-hero-nav::after {
+  width: clamp(18px, 2vw, 28px);
+  height: clamp(18px, 2vw, 28px);
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 4px solid currentColor;
+  border-left: 4px solid currentColor;
+  border-radius: 0;
+  filter:
+    drop-shadow(0 0 8px rgba(232,201,122,0.45))
+    drop-shadow(0 5px 14px rgba(0,0,0,0.65));
+}
+
+.character-hero-nav::after {
+  opacity: 0.42;
+}
+
+.character-hero-nav-prev::before {
+  left: 52%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.character-hero-nav-prev::after {
+  left: 68%;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0.72);
+}
+
+.character-hero-nav-next::before {
+  left: 48%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.character-hero-nav-next::after {
+  left: 32%;
+  transform: translate(-50%, -50%) rotate(135deg) scale(0.72);
 }
 .eyebrow {
   margin-bottom: 1rem;
@@ -1950,6 +2057,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="miranda"] img { object-position: 50% center; }
 .character-card[href="kriss-la-krass"] img { object-position: center center; }
 .character-card[href="maude"] img { object-position: center center; }
+.character-card[href="meriana"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="anathar"] img { object-position: center center; transform: scale(1); }
 .character-card[href="ombrage"] img { object-position: 50% center; }
 .character-card[href="vampyro"] img { object-position: 60% center; transform: scale(1); }
@@ -1960,10 +2068,12 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="jiva"] img { object-position: 50% center; }
 .character-card[href="moon"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="wa-wabbit"] img { object-position: center center; }
+.character-card[href="yopo"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="igole"] img { object-position: center center; }
 .character-card[href="remington-smisse"] img { object-position: 58% center; }
 .character-card[href="grany-smisse"] img { object-position: 30% center; }
 .character-card[href="dragon-cochon"] img { object-position: 34% center; transform: scale(1); }
+.character-card[href="ecaron"] img { object-position: center center; transform: scale(1); }
 .character-card[href="moumoune-stroud"] img { object-position: 50% center; }
 .character-card[href="monsieur-m"] img { object-position: center center; }
 .character-card[href="razortemps"] img { object-position: center center; transform: scale(1); }
@@ -1974,11 +2084,13 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="brumaire"] img { object-position: 76% center; transform: scale(1); }
 .character-card[href="hecate"] img { object-position: 42% center; transform: scale(1); }
 .character-card[href="maimane"] img { object-position: 39% center; transform: scale(1); }
+.character-card[href="maminala"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="rushu"] img { object-position: center center; }
 .character-card[href="goultard"] img { object-position: 51% center; }
 .character-card[href="deesse-cra"] img { object-position: 24% center; }
 .character-card[href="flopin-de-percedal"] img { object-position: center center; transform: scale(1); }
 .character-card[href="frida-mofette"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="gein"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="madagaskan"] img { object-position: center center; }
 .character-card[href="cleophee"] img { object-position: center center; }
 .character-card[href="elely-de-percedal"] img {
@@ -1989,7 +2101,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="evangelyne"] img { object-position: 22% center; }
 .character-card[href="ruel-stroud"] img { object-position: 40% center; }
 .character-card[href="alibert"] img { object-position: 58% center; }
-.character-card[href="efrim"] img { object-position: 78% center; }
+.character-card[href="efrim"] img { object-position: center center; }
 .character-card[href="amalia-sheran-sharm"] img { object-position: 34% center; }
 .character-card[href="armant-sheran-sharm"] img { object-position: center center; }
 .character-card[href="arpagone"] img { object-position: 28% center; }
@@ -2007,6 +2119,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="ush-galesh"] img { object-position: 50% 18%; transform: scale(1); }
 .character-card[href="maskemane"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="balthazar"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="bethel-akarna"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="nimoda"] img { object-position: 50% center; }
 .character-card[href="yrehn"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="karn"] img { object-position: 50% center; transform: scale(1); }
@@ -2032,6 +2145,10 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="roi-osamodas"] img { object-position: 42% center; }
 .character-card[href="roi-sheran-sharm"] img { object-position: center center; }
 .character-card[href="grande-deesse-eliatrope"] img { object-position: 50% center; }
+.character-card[href="ibago"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="lacrima"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="ladysally"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="lophapharo"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="yugo"] img { object-position: center center; }
 .character-card[href="adamai"] img { object-position: 50% 24%; transform: scale(1); }
 .character-card[href="grougaloragran"] img { object-position: 34% center; }
@@ -2042,6 +2159,9 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="grougalorasalar"] img { object-position: 16% center; }
 .character-card[href="dardondakal"] img { object-position: 70% center; }
 .character-card[href="dathura"] img { object-position: 70% center; }
+.character-card[href="pepavara"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="razeriane"] img { object-position: 48% 62%; transform: scale(1.28); }
+.character-card[href="bellodana"] img { object-position: 78% 62%; transform: scale(1.28); }
 .character-card[href="ogrest"] img { object-position: center 16%; transform: scale(1); }
 .character-card[href="toross-mordal"] img { object-position: 62% center; }
 .character-card[href="terrakourial"] img { object-position: 62% center; }
@@ -2055,7 +2175,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
   object-position: center center;
   transform: translateY(-4%) scale(1.04);
 }
-.character-card[href="nora"] img { object-position: 66% center; }
+.character-card[href="nora"] img { object-position: center center; }
 .character-card[href="qilby"] img { object-position: 48% center; }
 .character-card[href="oropo"] img { object-position: center center; transform: scale(1); }
 .character-card[href="agard"] img { object-position: center center; transform: scale(1); }
@@ -3080,6 +3200,11 @@ body.character-menalt .character-hero-bg {
   background-image: url('../../assets/personnages/MENALT.webp');
   background-position: 50% center;
 }
+body.character-meriana .character-hero-bg {
+  background-image: url('../../assets/personnages/cartes/meriana.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-solar .character-hero-bg {
   background-image: url('../../assets/personnages/SOLAR.webp');
   background-position: 50% center;
@@ -3748,4 +3873,29 @@ body.character-overview-page .character-main > .related-panel::after,
 body.character-overview-page .info-panel::before {
   display: block !important;
   opacity: 0.9;
+}
+
+.back-to-top::before,
+.back-to-top::after {
+  width: clamp(18px, 2vw, 24px) !important;
+  height: clamp(18px, 2vw, 24px) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-top: 4px solid currentColor !important;
+  border-left: 4px solid currentColor !important;
+  border-radius: 0 !important;
+  filter:
+    drop-shadow(0 0 8px rgba(232,201,122,0.45))
+    drop-shadow(0 5px 14px rgba(0,0,0,0.65)) !important;
+}
+
+.back-to-top::before {
+  transform: translate(-50%, -76%) rotate(45deg) !important;
+}
+
+.back-to-top::after,
+.back-to-top:hover::after,
+.back-to-top:focus-visible::after {
+  opacity: 0.42 !important;
+  transform: translate(-50%, -18%) rotate(45deg) scale(0.72) !important;
 }

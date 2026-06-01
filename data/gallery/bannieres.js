@@ -133,6 +133,20 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Bellodana",
+        "href":  "bellodana",
+        "slug":  "bellodana",
+        "path":  "assets/personnages/bellodana.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Bethel Akarna",
+        "href":  "bethel-akarna",
+        "slug":  "bethel-akarna",
+        "path":  "assets/personnages/cartes/bethel-akarna.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Biste",
         "href":  "biste",
         "slug":  "biste",
@@ -287,13 +301,6 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
-        "name":  "Déesse Cra (banniere)",
-        "href":  "deesse-cra",
-        "slug":  "deesse-cra-banniere",
-        "path":  "assets/personnages/deesse-cra-banniere.webp",
-        "category":  "personnages"
-    },
-    {
         "name":  "Déesse Eniripsa",
         "href":  "deesse-eniripsa",
         "slug":  "deesse-eniripsa",
@@ -350,13 +357,6 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
-        "name":  "Dieu Iop (banniere)",
-        "href":  "dieu-iop",
-        "slug":  "dieu-iop-banniere",
-        "path":  "assets/personnages/dieu-iop-banniere.webp",
-        "category":  "personnages"
-    },
-    {
         "name":  "Dieu Osamodas",
         "href":  "dieu-osamodas",
         "slug":  "dieu-osamodas",
@@ -403,6 +403,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "dragon-cochon",
         "slug":  "dragon-cochon",
         "path":  "assets/personnages/dragon-cochon.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Ecaron",
+        "href":  "ecaron",
+        "slug":  "ecaron",
+        "path":  "assets/personnages/cartes/ecaron.webp",
         "category":  "personnages"
     },
     {
@@ -462,6 +469,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Gein",
+        "href":  "gein",
+        "slug":  "gein",
+        "path":  "assets/personnages/cartes/gein.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Glip",
         "href":  "glip",
         "slug":  "glip",
@@ -515,6 +529,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "hyrkul",
         "slug":  "hyrkul",
         "path":  "assets/personnages/HYRKUL.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Ibago",
+        "href":  "ibago",
+        "slug":  "ibago",
+        "path":  "assets/personnages/ibago.webp",
         "category":  "personnages"
     },
     {
@@ -623,10 +644,24 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Lacrima",
+        "href":  "lacrima",
+        "slug":  "lacrima",
+        "path":  "assets/personnages/lacrima.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Lance Dur",
         "href":  "lancedur",
         "slug":  "lancedur",
         "path":  "assets/personnages/LANCEDUR.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Ladysally",
+        "href":  "ladysally",
+        "slug":  "ladysally",
+        "path":  "assets/personnages/ladysally.webp",
         "category":  "personnages"
     },
     {
@@ -658,6 +693,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Lophapharo",
+        "href":  "lophapharo",
+        "slug":  "lophapharo",
+        "path":  "assets/personnages/lophapharo.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Lou",
         "href":  "lou",
         "slug":  "lou",
@@ -686,6 +728,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Maminala",
+        "href":  "maminala",
+        "slug":  "maminala",
+        "path":  "assets/personnages/maminala.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Maskemane",
         "href":  "maskemane",
         "slug":  "maskemane",
@@ -711,6 +760,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "menalt",
         "slug":  "menalt",
         "path":  "assets/personnages/MENALT.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Mériana",
+        "href":  "meriana",
+        "slug":  "meriana",
+        "path":  "assets/personnages/cartes/meriana.webp",
         "category":  "personnages"
     },
     {
@@ -765,8 +821,8 @@ window.KROSMOZ_GALLERY_IMAGES = [
     {
         "name":  "Nora",
         "href":  "nora",
-        "slug":  "nora-efrim",
-        "path":  "assets/personnages/nora-efrim.webp",
+        "slug":  "nora",
+        "path":  "assets/personnages/cartes/nora.webp",
         "category":  "personnages"
     },
     {
@@ -837,6 +893,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "percimol",
         "slug":  "percimole",
         "path":  "assets/personnages/PERCIMOLE.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Pepavara",
+        "href":  "pepavara",
+        "slug":  "pepavara",
+        "path":  "assets/personnages/pepavara.webp",
         "category":  "personnages"
     },
     {
@@ -921,6 +984,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "raval",
         "slug":  "raval",
         "path":  "assets/personnages/RAVAL.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Razeriane",
+        "href":  "razeriane",
+        "slug":  "razeriane",
+        "path":  "assets/personnages/razeriane.webp",
         "category":  "personnages"
     },
     {
@@ -1145,6 +1215,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "xav-le-boulanger",
         "slug":  "xav-le-boulanger",
         "path":  "assets/personnages/xav-le-boulanger.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Yôpo",
+        "href":  "yopo",
+        "slug":  "yopo",
+        "path":  "assets/personnages/yopo.webp",
         "category":  "personnages"
     },
     {
@@ -1635,6 +1712,20 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "gardiens-des-mois",
         "slug":  "gardiens-des-mois",
         "path":  "assets/groupes/gardiens-des-mois/gardiens-des-mois.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Mérydes",
+        "href":  "merydes",
+        "slug":  "merydes",
+        "path":  "assets/groupes/merydes/merydes.png",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Poupées de Sadida",
+        "href":  "poupees-de-sadida",
+        "slug":  "poupees-de-sadida",
+        "path":  "assets/groupes/poupees-de-sadida/poupees-de-sadida.webp",
         "category":  "groupes"
     },
     {

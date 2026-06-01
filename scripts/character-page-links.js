@@ -82,6 +82,14 @@
       "href": "belladone"
     },
     {
+      "name": "Bellodana",
+      "href": "bellodana"
+    },
+    {
+      "name": "Bethel Akarna",
+      "href": "bethel-akarna"
+    },
+    {
       "name": "Biste",
       "href": "biste"
     },
@@ -230,6 +238,10 @@
       "href": "dragon-cochon"
     },
     {
+      "name": "Ecaron",
+      "href": "ecaron"
+    },
+    {
       "name": "Efrim",
       "href": "efrim"
     },
@@ -260,6 +272,10 @@
     {
       "name": "Frida Mofette",
       "href": "frida-mofette"
+    },
+    {
+      "name": "Gein",
+      "href": "gein"
     },
     {
       "name": "Glip",
@@ -296,6 +312,10 @@
     {
       "name": "Hyrkul",
       "href": "hyrkul"
+    },
+    {
+      "name": "Ibago",
+      "href": "ibago"
     },
     {
       "name": "Ignemikhal",
@@ -358,6 +378,14 @@
       "href": "grande-deesse-eliatrope"
     },
     {
+      "name": "Lacrima",
+      "href": "lacrima"
+    },
+    {
+      "name": "Ladysally",
+      "href": "ladysally"
+    },
+    {
       "name": "Lance Dur",
       "href": "lancedur"
     },
@@ -378,6 +406,10 @@
       "href": "lokus"
     },
     {
+      "name": "Lophapharo",
+      "href": "lophapharo"
+    },
+    {
       "name": "Lou",
       "href": "lou"
     },
@@ -394,6 +426,10 @@
       "href": "maimane"
     },
     {
+      "name": "Maminala",
+      "href": "maminala"
+    },
+    {
       "name": "Maskemane",
       "href": "maskemane"
     },
@@ -408,6 +444,10 @@
     {
       "name": "Ménalt",
       "href": "menalt"
+    },
+    {
+      "name": "Mériana",
+      "href": "meriana"
     },
     {
       "name": "Mina",
@@ -482,6 +522,10 @@
       "href": "percimol"
     },
     {
+      "name": "Pepavara",
+      "href": "pepavara"
+    },
+    {
       "name": "Phaeris le puissant",
       "href": "phaeris"
     },
@@ -528,6 +572,10 @@
     {
       "name": "Rathrosk",
       "href": "rathrosk"
+    },
+    {
+      "name": "Razeriane",
+      "href": "razeriane"
     },
     {
       "name": "Razortemps",
@@ -656,6 +704,10 @@
     {
       "name": "Xav le Boulanger",
       "href": "xav-le-boulanger"
+    },
+    {
+      "name": "Yôpo",
+      "href": "yopo"
     },
     {
       "name": "Yrehn",
@@ -851,6 +903,24 @@
       "classLabel": "Eniripsa",
       "groups": [
         "Mythe & légende",
+        "Ennemis"
+      ]
+    },
+    {
+      "name": "Bellodana",
+      "href": "bellodana",
+      "image": "../../assets/personnages/cartes/bellodana.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
+      ]
+    },
+    {
+      "name": "Bethel Akarna",
+      "href": "bethel-akarna",
+      "image": "../../assets/personnages/cartes/bethel-akarna.webp",
+      "classLabel": "Osamodas",
+      "groups": [
         "Ennemis"
       ]
     },
@@ -1051,8 +1121,7 @@
       "image": "../../assets/personnages/cartes/dathura.webp",
       "classLabel": "SADIDA",
       "groups": [
-        "Demi-dieu",
-        "Fratrie"
+        "Poupée de Sadida"
       ]
     },
     {
@@ -1204,6 +1273,15 @@
       ]
     },
     {
+      "name": "Ecaron",
+      "href": "ecaron",
+      "image": "../../assets/personnages/cartes/ecaron.webp",
+      "classLabel": "Ecaflip",
+      "groups": [
+        "Demi-dieu"
+      ]
+    },
+    {
       "name": "Efrim",
       "href": "efrim",
       "image": "../../assets/personnages/cartes/efrim.webp",
@@ -1276,6 +1354,15 @@
       "classLabel": "Steamer",
       "groups": [
         "Figurants"
+      ]
+    },
+    {
+      "name": "Gein",
+      "href": "gein",
+      "image": "../../assets/personnages/cartes/gein.webp",
+      "classLabel": "Sram",
+      "groups": [
+        "Demi-dieu"
       ]
     },
     {
@@ -1367,6 +1454,15 @@
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
+      ]
+    },
+    {
+      "name": "Ibago",
+      "href": "ibago",
+      "image": "../../assets/personnages/cartes/ibago.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
       ]
     },
     {
@@ -1502,6 +1598,24 @@
       ]
     },
     {
+      "name": "Lacrima",
+      "href": "lacrima",
+      "image": "../../assets/personnages/cartes/lacrima.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
+      ]
+    },
+    {
+      "name": "Ladysally",
+      "href": "ladysally",
+      "image": "../../assets/personnages/cartes/ladysally.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
+      ]
+    },
+    {
       "name": "Lance Dur",
       "href": "lancedur",
       "image": "../../assets/personnages/cartes/lancedur.webp",
@@ -1547,6 +1661,15 @@
       ]
     },
     {
+      "name": "Lophapharo",
+      "href": "lophapharo",
+      "image": "../../assets/personnages/cartes/lophapharo.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
+      ]
+    },
+    {
       "name": "Lou",
       "href": "lou",
       "image": "../../assets/personnages/cartes/lou.webp",
@@ -1584,6 +1707,15 @@
       ]
     },
     {
+      "name": "Maminala",
+      "href": "maminala",
+      "image": "../../assets/personnages/cartes/maminala.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
+      ]
+    },
+    {
       "name": "Maskemane",
       "href": "maskemane",
       "image": "../../assets/personnages/cartes/maskemane.webp",
@@ -1618,6 +1750,15 @@
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
+      ]
+    },
+    {
+      "name": "Mériana",
+      "href": "meriana",
+      "image": "../../assets/personnages/cartes/meriana.webp",
+      "classLabel": "Enutrof",
+      "groups": [
+        "Demi-dieu"
       ]
     },
     {
@@ -1789,6 +1930,15 @@
       ]
     },
     {
+      "name": "Pepavara",
+      "href": "pepavara",
+      "image": "../../assets/personnages/cartes/pepavara.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
+      ]
+    },
+    {
       "name": "Phaeris le puissant",
       "href": "phaeris",
       "image": "../../assets/personnages/cartes/phaeris.webp",
@@ -1897,6 +2047,15 @@
       "classLabel": "Dragon",
       "groups": [
         "Dragon"
+      ]
+    },
+    {
+      "name": "Razeriane",
+      "href": "razeriane",
+      "image": "../../assets/personnages/cartes/razeriane.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
       ]
     },
     {
@@ -2197,6 +2356,15 @@
       "classLabel": "Inconnue",
       "groups": [
         "Figurants"
+      ]
+    },
+    {
+      "name": "Yôpo",
+      "href": "yopo",
+      "image": "../../assets/personnages/cartes/yopo.webp",
+      "classLabel": "Sadida",
+      "groups": [
+        "Poupée de Sadida"
       ]
     },
     {

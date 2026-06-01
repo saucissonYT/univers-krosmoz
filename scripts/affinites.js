@@ -1171,6 +1171,13 @@ function getAffinityIconForName(name, preferredIcon = "") {
     "DAME ECHO": "echo.webp",
     "JULITH ABIGOR": "julith-abigor.webp",
     "KATAR": "katar.webp",
+    "LACRIMA": "lacrima.webp",
+    "IBAGO": "ibago.webp",
+    "LADYSALLY": "ladysally.webp",
+    "LOPHAPHARO": "lophapharo.webp",
+    "PEPAVARA": "pepavara.webp",
+    "BELLODANA": "bellodana.webp",
+    "RAZERIANE": "razeriane.webp",
     "OGREST": "ogrest.webp",
     "ELAINE & ENCRE NOIR": "elaine-encre-noir.webp",
     "ELAINE &AMP; ENCRE NOIR": "elaine-encre-noir.webp",
@@ -1627,9 +1634,18 @@ function createAffinityRelations() {
   enemy("GRAND DRAGON", godsExceptIop);
 
   parent("DIEU OSAMODAS", ["COQUELINE"], "Père");
-  parent("DIEU ÉCAFLIP", ["ATCHAM CRÉPIN", "USH GALESH", "KÉRUBIM CRÉPIN"], "Père");
-  parent("DIEU SADIDA", ["DATHURA", "CORNU MOLLU"], "Père");
-  parent("DIEU SRAM", ["TOXINE"], "Père");
+  parent("DIEU ÉCAFLIP", ["ATCHAM CRÉPIN", "USH GALESH", "KÉRUBIM CRÉPIN", "ECARON"], "Père");
+  parent("DIEU ENUTROF", ["MÉRIANA"], "Père");
+  parent("DIEU SADIDA", ["DATHURA", "MAMINALA", "LOPHAPHARO", "BELLODANA", "PEPAVARA", "YÔPO", "LADYSALLY", "IBAGO", "LACRIMA", "RAZERIANE", "CORNU MOLLU"], "Père");
+  parent("LACRIMA", ["CORNU MOLLU"], "Mère");
+  siblings(["DATHURA", "MAMINALA", "LOPHAPHARO", "BELLODANA", "PEPAVARA", "YÔPO", "LADYSALLY", "IBAGO", "LACRIMA", "RAZERIANE"], "Sœurs");
+  friendship("MAMINALA", ["TERRAKOURIAL"]);
+  friendship("BELLODANA", ["GROUGALORASALAR"]);
+  friendship("IBAGO", ["DARDONDAKAL"]);
+  friendship("LADYSALLY", ["IGNEMIKHAL"]);
+  friendship("RAZERIANE", ["AERAFAL"]);
+  parent("DIEU SRAM", ["TOXINE", "GEIN", "REINE DES VOLEURS"], "Père");
+  siblings(["TOXINE", "GEIN", "REINE DES VOLEURS"], "Frères et soeurs");
   parent("DÉESSE SACRIEUR", ["KALI"], "Mère");
   parent("DÉESSE PANDA", ["POO"], "Mère");
   parent("DÉESSE FÉCA", ["OTOMAÏ", "BUMP"], "Mère");
@@ -1783,7 +1799,7 @@ function createAffinityRelations() {
     "JAHASH JURGEN",
     "LUIS"
   ]));
-  siblings(["KÉRUBIM CRÉPIN", "USH GALESH", "ATCHAM CRÉPIN"], "Frères");
+  siblings(["KÉRUBIM CRÉPIN", "USH GALESH", "ATCHAM CRÉPIN", "ECARON"], "Frères");
   add("KÉRUBIM CRÉPIN", "family", "Fils adoptif", "JORIS");
   add("JORIS", "family", "Père adoptif", "KÉRUBIM CRÉPIN");
   friendshipMany("RUBILAX", tofuBrotherhood.concat(["GOULTARD"], percedalChildren));
@@ -1991,7 +2007,7 @@ function createAffinityRelations() {
   enemy("TOXINE", ["DAME ECHO"]);
   replaceEnemies("DAME ECHO", gods);
   gods.forEach((god) => remove(god, "enemies", "Ennemis", "DAME ECHO"));
-  enemy("DAME ECHO", ["TOXINE", "RIPULSE"]);
+  enemy("DAME ECHO", ["TOXINE", "RIPULSE", "GEIN"]);
   removeFriend("DAME ECHO", ["RIPULSE"]);
   enemy("OROPO", ["RIPULSE"]);
   parent("DÉESSE ENIRIPSA", ["DAME ECHO"], "Mère");
@@ -2040,6 +2056,11 @@ function createAffinityRelations() {
   add("DJAUL", "family", "Création", "BOLGROT");
   add("AGUABRIAL", "family", "Création", "BOLGROT");
   add("BOLGROT", "family", "Créateurs", ["DJAUL", "AGUABRIAL"]);
+  couple("BETHEL AKARNA", "MÉRIANA");
+  add("BETHEL AKARNA", "friends", "Ramené par", "RAVAL");
+  add("RAVAL", "friends", "Ressuscité", "BETHEL AKARNA");
+  add("BETHEL AKARNA", "friends", "Allié", "SOLAR");
+  add("SOLAR", "friends", "Allié", "BETHEL AKARNA");
   removeFriend("XAV LE BOULANGER", ["ATCHAM CRÉPIN", "KÉRUBIM CRÉPIN", "JORIS", "JORIS JURGEN"]);
   friendshipGroup(["AGARD", "CHAILLE", "BISTE", "MOUCHE"]);
 

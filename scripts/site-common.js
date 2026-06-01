@@ -16,8 +16,6 @@
   const rootUrl = new URL(document.currentScript ? "../" : "./", document.currentScript ? document.currentScript.src : window.location.href);
 
   const links = [
-    { label: "L'Univers", href: "pages/histoire/histoire-krosmoz", match: "/pages/histoire/" },
-    { label: "À découvrir", href: "pages/chronologies/oeuvres", match: "/pages/chronologies/oeuvres" },
     { label: "Personnages", href: "pages/personnages/personnages", match: "/pages/personnages/" },
     { label: "Groupes", href: "pages/groupes/groupes", match: "/pages/groupes/" },
     { label: "Artefacts", href: "pages/artefacts/artefacts", match: "/pages/artefacts/" },
@@ -44,6 +42,13 @@
     },
     { label: "Contactez-nous", href: "pages/contact/contact", match: "/pages/contact/" }
   ];
+
+  const chronologyIndex = links.findIndex((entry) => entry.label === "Chronologie");
+  const otherIndex = links.findIndex((entry) => entry.label === "Autres");
+  if (chronologyIndex > -1 && otherIndex > -1 && chronologyIndex !== otherIndex - 1) {
+    const [chronologyLink] = links.splice(chronologyIndex, 1);
+    links.splice(chronologyIndex < otherIndex ? otherIndex - 1 : otherIndex, 0, chronologyLink);
+  }
 
   const socialLinks = [
     {
@@ -147,10 +152,26 @@
       header.dataset.ready = "true";
       header.innerHTML = `
   <div class="site-topbar">
-    <a class="brand" href="${relativeFromPage("")}" aria-label="Univers Krosmoz">
-      <img src="${relativeFromPage("assets/logo-krosmoz.webp")}" alt="">
-      <span>Univers Krosmoz</span>
-    </a>
+    <div class="brand-shell">
+      <a class="brand" href="${relativeFromPage("")}" aria-label="Univers Krosmoz">
+        <img src="${relativeFromPage("assets/logo-krosmoz.webp")}" alt="">
+        <span>Univers Krosmoz</span>
+      </a>
+      <div class="brand-quick-menu" aria-label="Accès rapides Univers Krosmoz">
+        <a class="brand-quick-link brand-universe-link" href="${relativeFromPage("pages/histoire/histoire-krosmoz")}" aria-label="Ouvrir L'Histoire">
+          <span class="brand-universe-symbol" aria-hidden="true"></span>
+          <strong>L'Histoire</strong>
+        </a>
+        <a class="brand-quick-link brand-discover-link" href="${relativeFromPage("pages/chronologies/oeuvres")}" aria-label="Ouvrir À découvrir">
+          <span class="brand-discover-symbol" aria-hidden="true"></span>
+          <strong>À découvrir</strong>
+        </a>
+        <a class="brand-quick-link brand-almanax-link" href="${relativeFromPage("pages/almanax/almanax")}" aria-label="Ouvrir l'Almanax">
+          <span class="brand-almanax-symbol" aria-hidden="true"></span>
+          <strong>Almanax</strong>
+        </a>
+      </div>
+    </div>
     <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Afficher le menu"><span>Menu</span><span class="mobile-nav-icon" aria-hidden="true"></span></button>
     <nav class="top-nav" aria-label="Navigation principale">
       ${links.map(renderNavItem).join("")}
@@ -159,6 +180,32 @@
       ${socialLinks.map(renderSocialLink).join("")}
     </div>
   </div>`;
+
+      const brandShell = header.querySelector(".brand-shell");
+      if (brandShell) {
+        let almanaxCloseTimeout;
+        const openAlmanax = () => {
+          window.clearTimeout(almanaxCloseTimeout);
+          brandShell.classList.add("is-almanax-open");
+        };
+        const closeAlmanax = () => {
+          window.clearTimeout(almanaxCloseTimeout);
+          almanaxCloseTimeout = window.setTimeout(() => {
+            brandShell.classList.remove("is-almanax-open");
+          }, 420);
+        };
+
+        brandShell.addEventListener("mouseenter", openAlmanax);
+        brandShell.addEventListener("mouseleave", closeAlmanax);
+        brandShell.addEventListener("focusin", openAlmanax);
+        brandShell.addEventListener("focusout", () => {
+          window.setTimeout(() => {
+            if (!brandShell.contains(document.activeElement)) {
+              closeAlmanax();
+            }
+          }, 0);
+        });
+      }
     });
   };
 

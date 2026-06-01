@@ -373,6 +373,7 @@
 
     return (
       path.includes("/pages/chronologies/") ||
+      path.includes("/pages/almanax/") ||
       path.includes("/pages/histoire/") ||
       path.includes("/__section-cartes-supprimee__/")
     );
@@ -389,6 +390,7 @@
       path.includes("/pages/personnages/") ||
       path.includes("/pages/histoire/") ||
       path.includes("/pages/chronologies/") ||
+      path.includes("/pages/almanax/") ||
       path.includes("/pages/regions/") ||
       path.includes("/pages/lexique/") ||
       path.includes("/pages/media/") ||
@@ -558,7 +560,7 @@
       return;
     }
 
-    if (path.includes("/pages/chronologies/")) {
+    if (path.includes("/pages/chronologies/") || path.includes("/pages/almanax/")) {
       const main = document.querySelector("main");
       if (main) {
         main.append(link);

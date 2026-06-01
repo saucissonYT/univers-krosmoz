@@ -1,0 +1,19 @@
+{
+  "totalFolders": 488,
+  "extracted": 486,
+  "uniqueDates": 486,
+  "withImages": 486,
+  "missingImages": [],
+  "skipped": [
+    {
+      "folder": "aide",
+      "reason": "missing meryde or description"
+    },
+    {
+      "folder": "semaine",
+      "reason": "missing meryde or description"
+    }
+  ],
+  "firstDate": "05-14",
+  "lastDate": "2027-01-08"
+}

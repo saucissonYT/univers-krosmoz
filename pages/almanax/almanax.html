@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Almanax | Univers Krosmoz</title>
+<meta name="description" content="Explorez l'Almanax du Krosmoz, les Gardiens des Mois et les Mérydes associés à chaque jour.">
+<link rel="canonical" href="https://univers-krosmoz.fr/pages/almanax/almanax">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Univers Krosmoz">
+<meta property="og:title" content="Almanax | Univers Krosmoz">
+<meta property="og:description" content="Explorez l'Almanax du Krosmoz, les Gardiens des Mois et les Mérydes associés à chaque jour.">
+<meta property="og:url" content="https://univers-krosmoz.fr/pages/almanax/almanax">
+<meta property="og:image" content="https://univers-krosmoz.fr/assets/groupes/gardiens-des-mois/gardiens-des-mois-carte.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Almanax | Univers Krosmoz">
+<meta name="twitter:description" content="Explorez l'Almanax du Krosmoz, les Gardiens des Mois et les Mérydes associés à chaque jour.">
+<meta name="twitter:image" content="https://univers-krosmoz.fr/assets/groupes/gardiens-des-mois/gardiens-des-mois-carte.webp">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles/common.css?v=almanax-dropdown">
+<link rel="stylesheet" href="../../styles/almanax/almanax.css?v=guardian-gold">
+<script src="../../scripts/site-common.js?v=almanax-dropdown" defer></script>
+<script src="../../scripts/almanax.js" defer></script>
+</head>
+<body class="almanax-page">
+<header data-site-header></header>
+
+<main class="almanax-main">
+  <section class="almanax-hero" aria-labelledby="almanax-title">
+    <h1 id="almanax-title">Almanax</h1>
+    <span class="almanax-title-rule" aria-hidden="true"></span>
+    <p class="almanax-hero-lead">Chaque jour est placé sous l'influence d'un Méryde. Les mois, eux, sont veillés par les Gardiens des Mois, protecteurs liés à l'Horloge Divine.</p>
+  </section>
+
+  <section class="almanax-today" data-almanax-today hidden aria-live="polite"></section>
+
+  <section class="almanax-guardian-callout" aria-labelledby="guardian-callout-title">
+    <a href="../groupes/gardiens-des-mois">
+      <span>Découvrir</span>
+      <strong id="guardian-callout-title">Les Gardiens des Mois</strong>
+    </a>
+  </section>
+
+  <section class="almanax-guardians" aria-label="Gardiens des Mois">
+    <p class="almanax-intro">Les Gardiens des Mois structurent l'année du Monde des Douze. Sélectionne un mois pour déplier les Mérydes qui lui sont associés.</p>
+    <div class="almanax-month-grid" data-month-grid></div>
+  </section>
+
+  <section class="almanax-months" aria-label="Mérydes par mois" data-month-panels></section>
+</main>
+
+<button class="back-to-top" type="button" aria-label="Revenir en haut de la page" title="Revenir en haut">
+  <span aria-hidden="true">↑</span>
+</button>
+
+<script>
+  const almanaxBackToTop = document.querySelector('.back-to-top');
+  if (almanaxBackToTop) {
+    window.addEventListener('scroll', () => {
+      almanaxBackToTop.classList.toggle('is-visible', window.scrollY > 520);
+    }, { passive: true });
+    almanaxBackToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+<script src="../../scripts/legal-notice.js"></script>
+<!-- Site développé par phomsay pour zaki. Contact Discord : @phomsay671. Dev web : phomsay. Admin : sauci. Recherche et édition : Zaki & B. -->
+</body>
+</html>

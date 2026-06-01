@@ -1,5 +1,62 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+
+01/05/2026
+
+- Ajout de la page / section Almanax.
+- Ajout de nouveaux personnages et de leurs pages.
+- Ajout de nouveaux groupes, dont les Mérydes et les Poupées de Sadida.
+- Ajout de nouveaux visuels pour personnages, groupes et œuvres.
+- Mise à jour de plusieurs pages personnages existantes.
+- Amélioration des chronologies et des pages œuvres.
+- Mise à jour de la recherche et des données associées.
+- Améliorations visuelles sur plusieurs pages du site.
+- Ajout de data/reactions/page-likes.json au .gitignore.
+- Retrait du fichier des likes du suivi Git pour éviter la remise à zéro au push.
+
+
+- Personnages ajoutés :
+
+Bellodana
+Bethel Akarna
+Ecaron
+Gein
+Ibago
+Lacrima
+Ladysally
+Lophapharo
+Maminala
+Meriana
+Pepavara
+Razeriane
+Yopo
+
+- Personnages existants modifiés :
+
+Belladone
+Biste
+Dathura
+Dragon Cochon
+Efrim
+Frida Mofette
+Glip
+Grande Déesse Eliatrope
+Hyrkul
+Ignemikhal
+Lancedur
+Lokus
+Lou
+Maimane
+Maskemane
+Menalt
+Mina
+Percimol
+Phaeris
+Rathrosk
+Razortemps
+Xav le Boulanger
+Yrehn
+
 31/05/2026
 
 - Refonte du logo du site & favicon. 

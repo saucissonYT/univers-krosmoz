@@ -420,6 +420,37 @@
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
+  const contextualTerms = new Set([
+    "d",
+    "dans",
+    "de",
+    "des",
+    "du",
+    "groupe",
+    "groupes",
+    "l",
+    "la",
+    "le",
+    "les",
+    "personnage",
+    "personnages"
+  ]);
+
+  const getSearchTerms = (query) => {
+    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (terms.length <= 1) return terms;
+
+    const filteredTerms = terms.filter((term) => !contextualTerms.has(term));
+    return filteredTerms.length ? filteredTerms : terms;
+  };
+
+  const textIncludesTerm = (text, term) => {
+    if (!term) return true;
+    if (text.includes(term)) return true;
+    if (term.endsWith("s") && term.length > 3 && text.includes(term.slice(0, -1))) return true;
+    return false;
+  };
+
   const readDocument = async (href) => {
     const response = await fetch(absoluteHref(href), { cache: "force-cache" });
     if (!response.ok) throw new Error(`Impossible de charger ${href}`);
@@ -720,14 +751,14 @@
       if (title === term) score += typeRoot === "Personnage" ? 160 : 80;
       else if (title.startsWith(term)) score += 45;
       else if (title.includes(term)) score += 25;
-      if (entry.searchText.includes(term)) score += 10;
+      if (textIncludesTerm(entry.searchText, term)) score += 10;
     });
 
     return score;
   };
 
   const renderResults = (resultsContainer, entries, query) => {
-    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    const terms = getSearchTerms(query);
     if (!terms.length) {
       setSearchMessage(resultsContainer, "krosmoz-search-empty", "Tapez un personnage ou un mot du lexique.");
       return;
@@ -735,7 +766,11 @@
 
     const results = entries
       .map((entry) => ({ entry, score: scoreEntry(entry, terms) }))
-      .filter((result) => result.score > 0 && terms.every((term) => result.entry.searchText.includes(term) || normalize(result.entry.title).includes(term)))
+      .filter((result) => {
+        if (result.score <= 0) return false;
+        const title = normalize(result.entry.title);
+        return terms.every((term) => textIncludesTerm(result.entry.searchText, term) || textIncludesTerm(title, term));
+      })
       .sort((a, b) => b.score - a.score || a.entry.title.localeCompare(b.entry.title, "fr"))
       .slice(0, 24)
       .map((result) => result.entry);
