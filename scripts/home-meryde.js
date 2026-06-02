@@ -6,8 +6,6 @@
 */
 
 (function () {
-  const DISPLAY_DURATION = 30000;
-
   const pad = (value) => String(value).padStart(2, '0');
 
   const getTodayKeys = () => {
@@ -73,7 +71,6 @@
       dismiss(card);
     });
     window.setTimeout(() => card.classList.add('is-visible'), 80);
-    window.setTimeout(() => dismiss(card), DISPLAY_DURATION);
   };
 
   const init = async () => {
