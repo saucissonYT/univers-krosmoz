@@ -1534,6 +1534,51 @@
       return normalizedToken === normalizedValue || singularToken === singularValue;
     });
 
+  const cardMatchesSearch = (card, query, hasExactTitleMatch) => {
+    if (!query) return true;
+
+    const title = card.querySelector('strong')?.textContent || card.querySelector('img')?.alt || '';
+    const searchable = [
+      title,
+      card.dataset.character,
+      card.dataset.classLabel,
+      card.dataset.groupLabel,
+      card.dataset.universeLabel,
+    ].join(' ');
+    const normalizedSearchable = normalizeFilterValue(searchable);
+    const normalizedTitle = normalizeFilterValue(title);
+    return hasExactTitleMatch ? normalizedTitle === query : normalizedSearchable.includes(query);
+  };
+
+  const cardMatchesFilters = (card, activeFilters) => {
+    const matchesClass = !activeFilters.class || tokenListContains(card.dataset.class || '', activeFilters.class);
+    const matchesGroup = !activeFilters.group || tokenListContains(card.dataset.group || '', activeFilters.group);
+    const matchesUniverse = !activeFilters.universe || tokenListContains(card.dataset.universe || '', activeFilters.universe);
+    return matchesClass && matchesGroup && matchesUniverse;
+  };
+
+  const updateFilterAvailability = (query, hasExactTitleMatch, activeFilters) => {
+    filterControls.forEach((filter) => {
+      const filterKey = filter.dataset.filter;
+      filter.querySelectorAll('.character-filter-item').forEach((item) => {
+        const value = item.dataset.value || '';
+        const isDefault = value === '';
+        const candidateFilters = {
+          ...activeFilters,
+          [filterKey]: value,
+        };
+        const isAvailable = isDefault || characterCards.some((card) => (
+          cardMatchesSearch(card, query, hasExactTitleMatch)
+          && cardMatchesFilters(card, candidateFilters)
+        ));
+
+        item.classList.toggle('is-unavailable', !isAvailable);
+        item.disabled = !isAvailable;
+        item.setAttribute('aria-disabled', isAvailable ? 'false' : 'true');
+      });
+    });
+  };
+
   const syncFilterUrl = () => {
     const params = new URLSearchParams(window.location.search);
     filterControls.forEach((filter) => {
@@ -1622,6 +1667,7 @@
       const item = event.target.closest('.character-filter-item');
       if (!item) return;
       event.preventDefault();
+      if (item.disabled || item.classList.contains('is-unavailable')) return;
       setFilterValue(filter, item.dataset.value, item.textContent);
       closeFilterMenus();
     });
@@ -1637,25 +1683,12 @@
     let visibleCount = 0;
 
     characterCards.forEach((card) => {
-      const title = card.querySelector('strong')?.textContent || card.querySelector('img')?.alt || '';
-      const searchable = [
-        title,
-        card.dataset.character,
-        card.dataset.classLabel,
-        card.dataset.groupLabel,
-        card.dataset.universeLabel,
-      ].join(' ');
-      const normalizedSearchable = normalizeFilterValue(searchable);
-      const normalizedTitle = normalizeFilterValue(title);
-      const matchesQuery = !query || (hasExactTitleMatch ? normalizedTitle === query : normalizedSearchable.includes(query));
-      const matchesClass = !activeFilters.class || tokenListContains(card.dataset.class || '', activeFilters.class);
-      const matchesGroup = !activeFilters.group || tokenListContains(card.dataset.group || '', activeFilters.group);
-      const matchesUniverse = !activeFilters.universe || tokenListContains(card.dataset.universe || '', activeFilters.universe);
-      const isVisible = matchesQuery && matchesClass && matchesGroup && matchesUniverse;
+      const isVisible = cardMatchesSearch(card, query, hasExactTitleMatch) && cardMatchesFilters(card, activeFilters);
       card.hidden = !isVisible;
       if (isVisible) visibleCount += 1;
     });
 
+    updateFilterAvailability(query, hasExactTitleMatch, activeFilters);
     if (emptyState) emptyState.hidden = visibleCount !== 0;
   };
 

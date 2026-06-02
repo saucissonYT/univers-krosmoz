@@ -2009,6 +2009,19 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-filter-item {
   font-size: 0.68rem;
 }
+.character-filter-item.is-unavailable,
+.character-filter-item:disabled {
+  color: rgba(232,224,208,0.34) !important;
+  cursor: not-allowed;
+  opacity: 0.46;
+}
+.character-filter-item.is-unavailable:hover,
+.character-filter-item.is-unavailable:focus-visible,
+.character-filter-item:disabled:hover,
+.character-filter-item:disabled:focus-visible {
+  color: rgba(232,224,208,0.34) !important;
+  outline: none;
+}
 .characters-empty {
   margin: 1.2rem 0 0;
   color: rgba(246,242,231,0.72);
