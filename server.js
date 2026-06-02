@@ -552,7 +552,7 @@ async function serveStatic(request, response) {
   createReadStream(filePath).pipe(response);
 }
 
-createServer(async (request, response) => {
+const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url || "/", "http://localhost");
 
@@ -576,6 +576,57 @@ createServer(async (request, response) => {
   } catch {
     sendJson(response, 500, { ok: false, message: "Erreur serveur." });
   }
-}).listen(port, host, () => {
+});
+
+let isShuttingDown = false;
+
+function closePageLikesDatabase() {
+  if (!pageLikesDatabase) {
+    return;
+  }
+
+  pageLikesDatabase.close();
+  pageLikesDatabase = null;
+}
+
+function shutdown(signal) {
+  if (isShuttingDown) {
+    return;
+  }
+
+  isShuttingDown = true;
+  console.log(`Arrêt demandé par ${signal}. Fermeture du serveur...`);
+
+  const forceExitTimeout = setTimeout(() => {
+    console.error("Fermeture trop longue, arrêt forcé.");
+    process.exit(1);
+  }, 8_000);
+  forceExitTimeout.unref();
+
+  server.close((error) => {
+    clearTimeout(forceExitTimeout);
+
+    if (error) {
+      console.error("Erreur pendant la fermeture du serveur.", error);
+      process.exitCode = 1;
+    }
+
+    try {
+      closePageLikesDatabase();
+    } catch (databaseError) {
+      console.error("Erreur pendant la fermeture de la base des réactions.", databaseError);
+      process.exitCode = 1;
+    }
+
+    process.exit();
+  });
+
+  server.closeAllConnections?.();
+}
+
+process.on("SIGTERM", () => shutdown("SIGTERM"));
+process.on("SIGINT", () => shutdown("SIGINT"));
+
+server.listen(port, host, () => {
   console.log(`Univers Krosmoz listening on ${host}:${port}`);
 });
