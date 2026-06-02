@@ -24,7 +24,8 @@ const resendFrom = process.env.RESEND_FROM || "Univers Krosmoz <onboarding@resen
 const rateLimit = new Map();
 const pageLikeRateLimit = new Map();
 const pageLikesFile = join(root, "data", "reactions", "page-likes.json");
-const pageLikesDatabaseFile = join(root, "data", "reactions", "page-likes.sqlite");
+const pageLikesDatabaseDirectory = process.env.PAGE_LIKES_DATABASE_DIR || join(root, ".data", "reactions");
+const pageLikesDatabaseFile = join(pageLikesDatabaseDirectory, "page-likes.sqlite");
 let pageLikesDatabase = null;
 const pageDirectories = [
   "pages/chronologies",
@@ -220,7 +221,7 @@ async function getPageLikesDatabase() {
     return pageLikesDatabase;
   }
 
-  mkdirSync(join(root, "data", "reactions"), { recursive: true });
+  mkdirSync(pageLikesDatabaseDirectory, { recursive: true });
   pageLikesDatabase = new Database(pageLikesDatabaseFile);
   pageLikesDatabase.pragma("journal_mode = WAL");
   pageLikesDatabase.exec(`

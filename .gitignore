@@ -2,6 +2,7 @@
 output/
 
 # Donnees locales du compteur de j'aime
+.data/
 data/reactions/page-likes.json
 data/reactions/page-likes.sqlite
 data/reactions/page-likes.sqlite-*
