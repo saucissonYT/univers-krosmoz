@@ -243,6 +243,10 @@ body.characters-index-page .character-card {
     box-shadow 0.32s ease;
 }
 
+body.characters-index-page .character-card[hidden] {
+  display: none;
+}
+
 body.characters-index-page .character-card:hover,
 body.characters-index-page .character-card:focus-visible {
   border-color: rgba(216, 177, 106, 0.58);
