@@ -59,6 +59,10 @@ body.groupes-index-page::before {
   object-fit: cover;
 }
 
+.group-card[href="brakmariens"] img {
+  object-position: 90% center;
+}
+
 .group-card-copy span {
   text-transform: uppercase;
 }
@@ -108,5 +112,20 @@ body.group-biography-page .region-detail-panel > .back-link {
 
   .groupes-index-page .region-search {
     grid-column: 1 / -1;
+  }
+
+  .group-filter-button,
+  .groupes-index-page .region-sort-button {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid rgba(201,168,76,0.16);
+    background: rgba(6,6,12,0.42);
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .groupes-index-page .region-tools {
+    grid-template-columns: 1fr;
   }
 }

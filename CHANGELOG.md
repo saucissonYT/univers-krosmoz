@@ -1,6 +1,39 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
 
+03/06/2026
+
+- Ajout d’une barre de recherche sur la page Artefacts
+- Ajout du tri A-Z sur les artefacts
+- Ajustement du style du bandeau Artefacts pour le rapprocher de celui des Régions
+- Ajout d’une fine barre dorée entre la navbar et le bandeau Artefacts
+- Ajout de nouveaux artefacts et images associées :
+    Dofus Argenté
+    Dofus Cawotte
+    Dofus Tacheté
+    Dofus Vulbis
+    Dolmanax
+    Domakuro
+    Dorigami
+
+- Ajout de nouveaux personnages et portraits :
+    Amayiro
+    Az
+    Ilyzaelle
+    Imagirorukam
+    Oto Mustam
+
+- Ajout de nouveaux groupes :
+    Bontariens
+    Brakmariens
+
+- Mise à jour de plusieurs pages Régions
+- Mise à jour de plusieurs pages Personnages
+- Mise à jour de plusieurs pages Groupes
+- Mise à jour des fichiers de recherche, navigation et sitemap
+- Mise à jour de styles CSS et scripts JS liés aux pages index et détails
+
+
 02/06/2026
 
 - changement de la gestion des likes sur les pages, json > SQLite

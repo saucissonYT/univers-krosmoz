@@ -490,6 +490,20 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "L'Ordre du Cœur Vaillant groupe ordre coeur vaillant chevalerie Ménalt Xélor Helioboros temples dieux routes voyageurs Bonta Brâkmar Aurore Pourpre Hyrkul Raval Djaul Rushu Dofus"
   },
   {
+    "title": "Les Bontariens",
+    "type": "Groupe",
+    "href": "pages/groupes/bontariens",
+    "summary": "Habitants de Bonta, la cité blanche fondée par Jiva, Ménalt et Pouchecot autour d'un idéal de justice.",
+    "keywords": "Les Bontariens groupe Bonta Bontarien cité blanche Jiva Ménalt Pouchecot Amayiro Ilyzaelle Brâkmar justice ordre Dofus"
+  },
+  {
+    "title": "Les Brakmariens",
+    "type": "Groupe",
+    "href": "pages/groupes/brakmariens",
+    "summary": "Habitants de Brâkmar, la cité pourpre fondée sous l'influence de Djaul, Brumaire et Rushu.",
+    "keywords": "Les Brakmariens groupe Brakmar Brâkmar Brakmarien cité pourpre Djaul Brumaire Rushu Hyrkul Oto Mustam Bonta Dofus"
+  },
+  {
     "title": "Adamaï",
     "type": "Personnage",
     "href": "pages/personnages/adamai",
@@ -532,6 +546,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Amalia Sheran Sharm Reine Sadida SADIDA Confrérie du Tofu, Famille Sheran Sharm Wakfu la série"
   },
   {
+    "title": "Amayiro",
+    "type": "Personnage",
+    "href": "pages/personnages/amayiro",
+    "summary": "Inconnue - Bontarien - Dofus",
+    "keywords": "Amayiro Chef de la milice bontarienne défenseur de Bonta Inconnue Bontarien Dofus Oto Mustam Brakmar"
+  },
+  {
   "title": "Anathar",
   "type": "Personnage",
   "href": "pages/personnages/anathar",
@@ -572,6 +593,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/aurora",
     "summary": "Osamodas - Ennemis - Wakfu la série",
     "keywords": "Aurora Princesse Osamodas Osamodas Ennemis Wakfu la série"
+  },
+  {
+    "title": "Az",
+    "type": "Personnage",
+    "href": "pages/personnages/az",
+    "summary": "Monstre - Confrérie du Tofu - Wakfu la série",
+    "keywords": "Az Tofu de Yugo messager de Grougaloragran Monstre Confrérie du Tofu Wakfu la série"
   },
   {
     "title": "Bakara Jurgen",
@@ -822,8 +850,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Djaul",
     "type": "Personnage",
     "href": "pages/personnages/djaul",
-    "summary": "Shushu, Gardien des mois - Shushu, Protecteur - Dofus",
-    "keywords": "Djaul Gardien de Descendre Shushu Gardien des mois Shushu Protecteur Dofus"
+    "summary": "Shushu, Gardien des mois - Brakmarien, Shushu, Protecteur - Dofus",
+    "keywords": "Djaul Gardien de Descendre Shushu Gardien des mois Brakmarien Shushu Protecteur Brâkmar Brakmar Dofus"
   },
   {
   "title": "Dragon Cochon",
@@ -976,8 +1004,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Hyrkul",
     "type": "Personnage",
     "href": "pages/personnages/hyrkul",
-    "summary": "Féca - Héros, Mythe & légende - Dofus",
-    "keywords": "Hyrkul Champion de Brakmar Féca Héros, Mythe & légende Dofus"
+    "summary": "Féca - Brakmarien, Héros, Mythe & légende - Dofus",
+    "keywords": "Hyrkul Champion de Brakmar Féca Brakmarien Héros, Mythe & légende Dofus"
   },
   {
     "title": "Ibago",
@@ -991,6 +1019,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/ignemikhal",
     "summary": "DRAGON - Dragon primordial - Dofus, Wakfu la série",
     "keywords": "Ignemikhal Créateur du Dofus Pourpre DRAGON Dragon primordial Dofus, Wakfu la série"
+  },
+  {
+    "title": "Imagirorukam",
+    "type": "Personnage",
+    "href": "pages/personnages/imagirorukam",
+    "summary": "Dragon - Dragon - Dofus",
+    "keywords": "Imagirorukam Dragon protecteur de Pandala Pondeur du Dofus Tacheté Wukin Wukang Imagiro Orukam Dorigami Domakuro Dragon Dofus"
   },
   {
   "title": "Igole",
@@ -1014,11 +1049,18 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Jahash Jurgen Père de Joris Huppermage Héros, Mythe & légende Dofus, Dofus le film"
   },
   {
+    "title": "Ilyzaelle",
+    "type": "Personnage",
+    "href": "pages/personnages/ilyzaelle",
+    "summary": "Forgelance - Bontarien - Dofus",
+    "keywords": "Ilyzaelle Championne de Jiva Chevalier du Ciel gardienne de Noa sentinelle d'Externam Forgelance Bontarien Dofus Frigost Brûlâmes"
+  },
+  {
   "title": "Jiva",
   "type": "Personnage",
   "href": "pages/personnages/jiva",
-  "summary": "Protectrice de Javian",
-  "keywords": "Jiva Protectrice de Javian Gardien des mois Protecteur Wakfu la série, Dofus"
+  "summary": "Gardien des mois - Bontarien, Protecteur - Wakfu la série, Dofus",
+  "keywords": "Jiva Protectrice de Javian Gardien des mois Bontarien Protecteur Bonta Wakfu la série, Dofus"
 },
   {
     "title": "Joris Jurgen",
@@ -1204,8 +1246,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Ménalt",
     "type": "Personnage",
     "href": "pages/personnages/menalt",
-    "summary": "Gardien des mois - Protecteur - Dofus",
-    "keywords": "Ménalt Le Centaure premier protecteur du mois de Martalo Gardien des mois Protecteur Xélor Bonta Ordre du Cœur Vaillant Aurore Pourpre Hyrkul Raval centaures Percepteurs Dofus"
+    "summary": "Gardien des mois - Bontarien, Protecteur - Dofus",
+    "keywords": "Ménalt Le Centaure premier protecteur du mois de Martalo Gardien des mois Bontarien Protecteur Xélor Bonta Ordre du Cœur Vaillant Aurore Pourpre Hyrkul Raval centaures Percepteurs Dofus"
   },
   {
     "title": "Mériana",
@@ -1276,6 +1318,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/otomai",
     "summary": "Féca - Héros, Mythe & légende - Dofus, Wakfu la série",
     "keywords": "Otomaï Créateur d'Ogrest alchimiste de génie Féca Héros, Mythe & légende Dofus, Wakfu la série"
+  },
+  {
+    "title": "Oto Mustam",
+    "type": "Personnage",
+    "href": "pages/personnages/oto-mustam",
+    "summary": "Inconnue - Brakmarien - Dofus",
+    "keywords": "Oto Mustam Chef des armées de Brâkmar dirigeant de Brakmar Inconnue Brakmarien Dofus Bonta Djaul Rushu Amayiro"
   },
   {
     "title": "Ombre",
@@ -1357,8 +1406,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Pouchecot",
     "type": "Personnage",
     "href": "pages/personnages/pouchecot",
-    "summary": "Gardien des mois - Protecteur - Dofus",
-    "keywords": "Pouchecot Grand Fruité protecteur du mois de Fraouctor gardien des mois Protecteur Sadida Chêne Mou Mérydes nature sagesse Dofus"
+    "summary": "Gardien des mois - Bontarien, Protecteur - Dofus",
+    "keywords": "Pouchecot Grand Fruité protecteur du mois de Fraouctor gardien des mois Bontarien Protecteur Bonta Sadida Chêne Mou Mérydes nature sagesse Dofus"
   },
   {
     "title": "Prince Adale",
@@ -1862,6 +1911,55 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/lexique/lexique?q=Dofus#dofus",
     "summary": "Œuf de dragon qu'il pond lorsqu'il éprouve un amour sincère pour quelqu'un, de nombreuses variantes existent mais les vrais Dofus primordiaux offrent une puissance sans p...",
     "keywords": "dofus armes œuf de dragon qu'il pond lorsqu'il éprouve un amour sincère pour quelqu'un, de nombreuses variantes existent mais les vrais Dofus primordiaux offrent une puissance sans pareil à leur gardien."
+  },
+  {
+    "title": "Le Dofus Tacheté",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dofus-tachete",
+    "summary": "Dofus lié à Imagirorukam, au Wukin et au Wukang, dont la séparation donna naissance à Dorigami et Domakuro.",
+    "keywords": "Dofus Tacheté artefact Imagirorukam Pandala Wukin Wukang Imagiro Orukam Dorigami Domakuro Dofus de papier Dofus d'encre"
+  },
+  {
+    "title": "Le Dofus Argenté",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dofus-argente",
+    "summary": "Œuf draconique créé par Rathrosk, le Dragon Gris, relique ancienne liée au retour à la vie de la première des Phénix.",
+    "keywords": "Dofus Argenté artefact Rathrosk Dragon Gris Phénix Nordes Xélor œuf draconique relique ancienne Monde des Douze"
+  },
+  {
+    "title": "Le Dofus Cawotte",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dofus-cawotte",
+    "summary": "Faux Dofus créé par le Wa Wabbit pour attirer les aventuriers dans son royaume et les dépouiller.",
+    "keywords": "Dofus Cawotte artefact faux Dofus Wa Wabbit Wabbits Royaume des Wabbits sagesse relique supercherie Monde des Douze"
+  },
+  {
+    "title": "Le Dolmanax",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dolmanax",
+    "summary": "Dofus lié au calendrier des Mérydes, offert par Théodoran Ax aux visiteurs assidus du Bibliotemple.",
+    "keywords": "Dolmanax artefact Dofus Bibliotemple Mérydes Theodoran Ax Théodoran Ax calendrier saisons offrandes dragon colporteur"
+  },
+  {
+    "title": "Le Domakuro",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#domakuro",
+    "summary": "Dofus d'encre issu d'Orukam, né de la séparation du Dofus Tacheté et complémentaire du Dorigami.",
+    "keywords": "Domakuro Dofus d'encre artefact Orukam Imagirorukam Dofus Tacheté Dorigami Pandala Maître Pandore Maitre Pandore Pandikazes encre"
+  },
+  {
+    "title": "Le Dorigami",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dorigami",
+    "summary": "Dofus de papier issu d'Imagiro, né de la séparation du Dofus Tacheté et complémentaire du Domakuro.",
+    "keywords": "Dorigami Dofus de papier artefact Imagiro Imagirorukam Dofus Tacheté Domakuro Pandala Lenalds Ronald le Sage Grobe Shogun Tofugawa Péki Garou Peki Garou Cime Maudite"
+  },
+  {
+    "title": "Le Dofus Vulbis",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dofus-vulbis",
+    "summary": "Dofus pondu par Tylezia, protégé par Crocabulia et lié à Tyzerion, Oyukipoca et aux premiers âges du Monde des Douze.",
+    "keywords": "Dofus Vulbis artefact Tylezia Crocabulia Tyzerion Oyukipoca Chagouars Village Primordial Dragoeufs Dragœufs Osamodas Grozilla Grasmera dragons primordiaux"
   },
   {
     "title": "Domaine Sauvage",
@@ -2721,8 +2819,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Brumaire",
     "type": "Personnage",
     "href": "pages/personnages/brumaire",
-    "summary": "Gardien des mois - Protecteur - Dofus",
-    "keywords": "Brumaire Saigneur Macabre protecteur du mois de Novamaire Gardien des mois Protecteur froid brume gel Rushu Xélor Djaul Solar Long Descendre Brâkmar Aurore Pourpre Katar Goultard Ordre de l’Œil Putride Dofus"
+    "summary": "Gardien des mois - Brakmarien, Protecteur - Dofus",
+    "keywords": "Brumaire Saigneur Macabre protecteur du mois de Novamaire Gardien des mois Brakmarien Protecteur froid brume gel Rushu Xélor Djaul Solar Long Descendre Brâkmar Aurore Pourpre Katar Goultard Ordre de l’Œil Putride Dofus"
   },
   {
     "title": "Cadence",

@@ -38,6 +38,10 @@
       "href": "amalia-sheran-sharm"
     },
     {
+      "name": "Amayiro",
+      "href": "amayiro"
+    },
+    {
       "name": "Anathar",
       "href": "anathar"
     },
@@ -64,6 +68,10 @@
     {
       "name": "Aurora",
       "href": "aurora"
+    },
+    {
+      "name": "Az",
+      "href": "az"
     },
     {
       "name": "Bakara Jurgen",
@@ -322,6 +330,10 @@
       "href": "ignemikhal"
     },
     {
+      "name": "Imagirorukam",
+      "href": "imagirorukam"
+    },
+    {
       "name": "Igole",
       "href": "igole"
     },
@@ -332,6 +344,10 @@
     {
       "name": "Jahash Jurgen",
       "href": "jahash-jurgen"
+    },
+    {
+      "name": "Ilyzaelle",
+      "href": "ilyzaelle"
     },
     {
       "name": "Jiva",
@@ -492,6 +508,10 @@
     {
       "name": "Otomaï",
       "href": "otomai"
+    },
+    {
+      "name": "Oto Mustam",
+      "href": "oto-mustam"
     },
     {
       "name": "Ombre",
@@ -803,6 +823,15 @@
       ]
     },
     {
+      "name": "Amayiro",
+      "href": "amayiro",
+      "image": "../../assets/personnages/cartes/amayiro.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Bontarien"
+      ]
+    },
+    {
       "name": "Anathar",
       "href": "anathar",
       "image": "../../assets/personnages/cartes/anathar.webp",
@@ -867,6 +896,15 @@
       "classLabel": "Osamodas",
       "groups": [
         "Ennemis"
+      ]
+    },
+    {
+      "name": "Az",
+      "href": "az",
+      "image": "../../assets/personnages/cartes/az.webp",
+      "classLabel": "Monstre",
+      "groups": [
+        "Confrérie du Tofu"
       ]
     },
     {
@@ -969,6 +1007,7 @@
       "image": "../../assets/personnages/cartes/brumaire.webp",
       "classLabel": "Gardien des mois",
       "groups": [
+        "Brakmarien",
         "Protecteur"
       ]
     },
@@ -1258,6 +1297,7 @@
       "image": "../../assets/personnages/cartes/djaul-2026.webp",
       "classLabel": "Shushu, Gardien des mois",
       "groups": [
+        "Brakmarien",
         "Shushu",
         "Protecteur"
       ]
@@ -1443,6 +1483,7 @@
       "image": "../../assets/personnages/cartes/hyrkul.webp",
       "classLabel": "Féca",
       "groups": [
+        "Brakmarien",
         "Héros",
         "Mythe & légende"
       ]
@@ -1454,6 +1495,15 @@
       "classLabel": "DRAGON",
       "groups": [
         "Dragon primordial"
+      ]
+    },
+    {
+      "name": "Imagirorukam",
+      "href": "imagirorukam",
+      "image": "../../assets/personnages/cartes/imagirorukam.webp",
+      "classLabel": "Dragon",
+      "groups": [
+        "Dragon"
       ]
     },
     {
@@ -1494,11 +1544,21 @@
       ]
     },
     {
+      "name": "Ilyzaelle",
+      "href": "ilyzaelle",
+      "image": "../../assets/personnages/cartes/ilyzaelle.jpg",
+      "classLabel": "Forgelance",
+      "groups": [
+        "Bontarien"
+      ]
+    },
+    {
       "name": "Jiva",
       "href": "jiva",
       "image": "../../assets/personnages/cartes/jiva-carte-v2.webp",
       "classLabel": "Gardien des mois",
       "groups": [
+        "Bontarien",
         "Protecteur"
       ]
     },
@@ -1749,6 +1809,7 @@
       "image": "../../assets/personnages/cartes/menalt.webp",
       "classLabel": "Gardien des mois",
       "groups": [
+        "Bontarien",
         "Protecteur"
       ]
     },
@@ -1863,6 +1924,15 @@
       ]
     },
     {
+      "name": "Oto Mustam",
+      "href": "oto-mustam",
+      "image": "../../assets/personnages/cartes/oto-mustam.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Brakmarien"
+      ]
+    },
+    {
       "name": "Ombre",
       "href": "ombre",
       "image": "../../assets/personnages/cartes/ombre.webp",
@@ -1972,6 +2042,7 @@
       "image": "../../assets/personnages/cartes/pouchecot.webp",
       "classLabel": "Gardien des mois",
       "groups": [
+        "Bontarien",
         "Protecteur"
       ]
     },

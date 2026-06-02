@@ -26,7 +26,7 @@ const initRegionOverview = () => {
 
   const characterGrid = article.querySelector('.region-characters-grid');
   const characterTitle = article.querySelector('.region-characters-section h2');
-  if (characterTitle) characterTitle.textContent = `Personnages de ${regionTitle}`;
+  if (characterTitle) characterTitle.textContent = 'Personnages de la région';
 
   const visionTitle = article.querySelector('.region-visions-section h2');
   if (visionTitle) visionTitle.textContent = `Visions de ${regionTitle}`;

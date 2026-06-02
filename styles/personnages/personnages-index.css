@@ -370,9 +370,37 @@ body.characters-index-page .character-card:focus-visible .character-card-copy st
     gap: 0.45rem;
   }
 
+  body.characters-index-page .character-filter {
+    display: grid;
+  }
+
   body.characters-index-page .character-filter-toggle {
     border: 1px solid rgba(201,168,76,0.16);
     background: rgba(6,6,12,0.42);
+  }
+
+  body.characters-index-page .character-filter-menu {
+    position: static;
+    max-height: 0;
+    margin-top: 0;
+    padding: 0 0.45rem;
+    border-width: 0;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: none;
+    transform: none;
+    transition: max-height 0.22s ease, margin-top 0.18s ease, padding 0.18s ease, border-width 0.18s ease, visibility 0.18s ease;
+    visibility: hidden;
+  }
+
+  body.characters-index-page .character-filter.is-open .character-filter-menu {
+    max-height: min(52vh, 420px);
+    margin-top: 0.35rem;
+    padding: 0.45rem;
+    border-width: 1px;
+    overflow-y: auto;
+    pointer-events: auto;
+    visibility: visible;
   }
 
   body.characters-index-page .characters-index {

@@ -546,6 +546,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Imagirorukam",
+        "href":  "imagirorukam",
+        "slug":  "imagirorukam",
+        "path":  "assets/personnages/imagirorukam.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Igole",
         "href":  "igole",
         "slug":  "igole",

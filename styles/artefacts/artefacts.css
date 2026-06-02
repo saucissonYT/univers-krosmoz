@@ -74,6 +74,123 @@ body.artefacts-page .krosmoz-legal-notice {
   overflow: hidden;
 }
 
+.artifact-search-band {
+  position: relative;
+  z-index: 8;
+  width: 100%;
+  border-top: 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  background:
+    linear-gradient(180deg, rgba(7, 7, 12, 0.78), rgba(7, 7, 12, 0.94) 34%),
+    rgba(7, 7, 12, 0.92);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.26);
+  backdrop-filter: blur(10px);
+}
+
+.artifact-search-band::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.5) 18%, rgba(232, 201, 122, 0.62) 50%, rgba(201, 168, 76, 0.5) 82%, transparent);
+  pointer-events: none;
+}
+
+.artifact-tools {
+  width: min(1220px, calc(100% - 2rem));
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  align-items: center;
+  gap: clamp(0.65rem, 1.4vw, 1.1rem);
+  margin: 0 auto;
+  padding: 0.7rem 0;
+}
+
+.artifact-search {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.artifact-search::before {
+  content: '';
+  width: clamp(30px, 3vw, 40px);
+  height: clamp(30px, 3vw, 40px);
+  background: url('../../assets/personnages/ELIACUBE.webp') center / contain no-repeat;
+  filter:
+    drop-shadow(0 0 10px rgba(var(--artifact-accent-rgb),0.62))
+    drop-shadow(0 0 18px rgba(var(--artifact-accent-rgb),0.26));
+  opacity: 1;
+}
+
+.artifact-search span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.artifact-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #fff7df;
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.artifact-search input::placeholder {
+  color: rgba(201,168,76,0.5);
+}
+
+.artifact-search input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.artifact-sort-button {
+  margin: 0;
+  min-height: 44px;
+  padding: 0.55rem 0.72rem;
+  border: 0;
+  background: transparent;
+  color: rgba(201,168,76,0.76);
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.artifact-sort-button:hover,
+.artifact-sort-button:focus-visible,
+.artifact-sort-button.is-active {
+  color: var(--artifact-gold-light);
+  background: rgba(255,255,255,0.025);
+}
+
+.artifact-sort-button:focus-visible {
+  outline: 1px solid rgba(232, 201, 122, 0.45);
+  outline-offset: 2px;
+}
+
 .artifact-carousel {
   position: relative;
   z-index: 7;
@@ -645,6 +762,34 @@ body.artefacts-page .krosmoz-legal-notice {
   --artifact-accent-rgb: 142, 238, 255;
 }
 
+.museum-artifact.artifact-spotted {
+  --artifact-accent-rgb: 135, 194, 142;
+}
+
+.museum-artifact.artifact-silver {
+  --artifact-accent-rgb: 213, 221, 205;
+}
+
+.museum-artifact.artifact-cawotte {
+  --artifact-accent-rgb: 246, 142, 28;
+}
+
+.museum-artifact.artifact-dolmanax {
+  --artifact-accent-rgb: 248, 116, 62;
+}
+
+.museum-artifact.artifact-domakuro {
+  --artifact-accent-rgb: 86, 124, 139;
+}
+
+.museum-artifact.artifact-dorigami {
+  --artifact-accent-rgb: 237, 217, 183;
+}
+
+.museum-artifact.artifact-vulbis {
+  --artifact-accent-rgb: 228, 49, 21;
+}
+
 .museum-artifact::before,
 .museum-artifact::after {
   display: none;
@@ -932,11 +1077,41 @@ body.artefacts-page .krosmoz-legal-notice {
     overflow: hidden;
   }
 
+  .artifact-tools {
+    width: min(1220px, calc(100% - 2rem));
+    min-height: 76px;
+    grid-template-columns: minmax(220px, 1fr) auto;
+    gap: clamp(0.65rem, 1.4vw, 1.1rem);
+    padding: 0.7rem 0;
+  }
+
+  .artifact-search {
+    gap: 0.85rem;
+  }
+
+  .artifact-search::before {
+    width: clamp(30px, 3vw, 40px);
+    height: clamp(30px, 3vw, 40px);
+  }
+
+  .artifact-search input {
+    font-size: 0.76rem;
+    letter-spacing: 0.22em;
+  }
+
+  .artifact-sort-button {
+    justify-self: auto;
+    min-height: 44px;
+    padding: 0.55rem 0.72rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+  }
+
   .artifact-carousel {
     --artifact-carousel-height: 98px;
     justify-content: flex-start;
     padding: 0 0.75rem;
-    transform: translateY(0.75rem);
+    transform: translateY(0.2rem);
   }
 
   .artifact-carousel-item {
@@ -1117,6 +1292,36 @@ body.artefacts-page .krosmoz-legal-notice {
     font-size: clamp(0.92rem, 3.65vw, 1rem);
     line-height: 1.36;
     text-align: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .artifact-tools {
+    width: min(100% - 1rem, 560px);
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 0.8rem 0;
+  }
+
+  .artifact-search {
+    min-height: 42px;
+    padding: 0 0.75rem;
+    border: 1px solid rgba(201,168,76,0.16);
+    background: rgba(6,6,12,0.42);
+  }
+
+  .artifact-search input {
+    min-height: 42px;
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+  }
+
+  .artifact-sort-button {
+    width: 100%;
+    justify-self: stretch;
+    border: 1px solid rgba(201,168,76,0.16);
+    background: rgba(6,6,12,0.42);
   }
 }
 

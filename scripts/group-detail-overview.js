@@ -23,7 +23,7 @@ const initGroupOverview = () => {
   const summaryParagraphs = paragraphs.slice(0, 2);
 
   const membersTitle = article.querySelector('.region-characters-section h2');
-  if (membersTitle) membersTitle.textContent = `Membres de ${groupTitle}`;
+  if (membersTitle) membersTitle.textContent = 'Membres de ce groupe';
 
   const memberGrid = article.querySelector('.region-characters-grid');
   if (memberGrid) {
@@ -77,6 +77,8 @@ const initGroupOverview = () => {
 
   const groups = [
     { slug: 'bellaphones', name: 'Les Bellaphones', image: 'bellaphones/bellaphones-carte.webp' },
+    { slug: 'bontariens', name: 'Les Bontariens', image: 'bontariens/bontariens-carte.webp' },
+    { slug: 'brakmariens', name: 'Les Brakmariens', image: 'brakmariens/brakmariens-carte.webp' },
     { slug: 'eliatropes', name: 'Les Éliatropes', image: 'eliatropes/eliatropes-carte.webp' },
     { slug: 'confrerie-du-tofu', name: 'La Confrérie du Tofu', image: 'confrerie-du-tofu/confrerie-du-tofu-carte.jpg' },
     { slug: 'eliotropes', name: 'Les Éliotropes', image: 'eliotropes/eliotropes.webp' },

@@ -9,9 +9,12 @@
   const hall = document.querySelector('[data-artifact-hall]');
   if (!hall) return;
 
-  const artifacts = Array.from(hall.querySelectorAll('.museum-artifact'));
+  let artifacts = Array.from(hall.querySelectorAll('.museum-artifact'));
   const previousButton = hall.querySelector('[data-artifact-prev]');
   const nextButton = hall.querySelector('[data-artifact-next]');
+  const searchInput = hall.querySelector('[data-artifact-search]');
+  const searchCount = hall.querySelector('[data-artifact-search-count]');
+  const sortButton = hall.querySelector("[data-artifact-sort='az']");
   const track = hall.querySelector('.artifact-track');
   const pedestal = hall.querySelector('.artifact-pedestal-fixed');
 
@@ -20,6 +23,34 @@
   const getArtifactTitle = (artifact) => {
     return artifact.querySelector('.artifact-description h1, .artifact-description h2')?.textContent?.trim() || 'Artefact';
   };
+
+  const normalizeSearchText = (value) => {
+    return String(value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  };
+
+  const buildArtifactSearchEntries = () => artifacts.map((artifact) => {
+    const title = getArtifactTitle(artifact);
+    const searchableText = [
+      title,
+      artifact.id,
+      artifact.querySelector('.artifact-display-caption span')?.textContent,
+      artifact.querySelector('.artifact-display-caption strong')?.textContent,
+      artifact.querySelector('.artifact-description')?.textContent,
+      artifact.querySelector('.artifact-display img')?.alt
+    ].join(' ');
+
+    return {
+      artifact,
+      title,
+      searchText: normalizeSearchText(searchableText)
+    };
+  });
+
+  let artifactSearchEntries = buildArtifactSearchEntries();
 
   let suppressCarouselClick = false;
   let carouselElement = null;
@@ -59,7 +90,12 @@
       return button;
     });
 
-    hall.prepend(carousel);
+    const searchBand = hall.querySelector('.artifact-search-band');
+    if (searchBand) {
+      searchBand.after(carousel);
+    } else {
+      hall.prepend(carousel);
+    }
     return items;
   };
 
@@ -237,6 +273,59 @@
   let turnAnimationTimer = 0;
   let carouselWheelTimer = 0;
   let pageWheelTimer = 0;
+  let searchMatches = [];
+  let activeSearchMatch = 0;
+  let isSortedAz = false;
+
+  const updateSearchCount = (query) => {
+    if (!searchCount) return;
+
+    if (!query) {
+      searchCount.textContent = '';
+      return;
+    }
+
+    if (!searchMatches.length) {
+      searchCount.textContent = 'Aucun résultat';
+      return;
+    }
+
+    searchCount.textContent = `${activeSearchMatch + 1} / ${searchMatches.length}`;
+  };
+
+  const goToSearchMatch = (offset) => {
+    if (!searchMatches.length) return;
+
+    activeSearchMatch = (activeSearchMatch + offset + searchMatches.length) % searchMatches.length;
+    showArtifact(searchMatches[activeSearchMatch], true);
+    updateSearchCount(normalizeSearchText(searchInput?.value));
+  };
+
+  const updateArtifactSearch = () => {
+    const query = normalizeSearchText(searchInput?.value);
+    searchMatches = query
+      ? artifactSearchEntries
+        .map((entry, index) => entry.searchText.includes(query) ? index : -1)
+        .filter((index) => index !== -1)
+      : [];
+
+    hall.classList.toggle('has-artifact-search', Boolean(query));
+    hall.classList.toggle('has-artifact-search-results', Boolean(query && searchMatches.length));
+    hall.classList.toggle('has-artifact-search-empty', Boolean(query && !searchMatches.length));
+
+    if (query && searchMatches.length) {
+      const currentMatchIndex = searchMatches.indexOf(activeIndex);
+      activeSearchMatch = currentMatchIndex >= 0 ? currentMatchIndex : 0;
+
+      if (currentMatchIndex === -1) {
+        showArtifact(searchMatches[0], true);
+      }
+    } else {
+      activeSearchMatch = 0;
+    }
+
+    updateSearchCount(query);
+  };
 
   const updateTurntable = () => {
     turntableItems.forEach((item, itemIndex) => {
@@ -319,6 +408,7 @@
   const setupPageWheel = () => {
     document.addEventListener('wheel', (event) => {
       if (event.target.closest('[data-site-header], .site-topbar, header')) return;
+      if (event.target.closest('.artifact-search-band')) return;
 
       const mainDelta = Math.abs(event.deltaY) >= Math.abs(event.deltaX) ? event.deltaY : event.deltaX;
       if (Math.abs(mainDelta) < 8) return;
@@ -349,6 +439,13 @@
     }
 
     activeIndex = nextIndex;
+    if (searchMatches.length) {
+      const matchIndex = searchMatches.indexOf(activeIndex);
+      if (matchIndex >= 0) {
+        activeSearchMatch = matchIndex;
+        updateSearchCount(normalizeSearchText(searchInput?.value));
+      }
+    }
 
     artifacts.forEach((artifact, artifactIndex) => {
       const isActive = artifactIndex === activeIndex;
@@ -403,6 +500,37 @@
     }
   };
 
+  const sortArtifactsAz = () => {
+    if (isSortedAz) return;
+
+    const currentArtifact = artifacts[activeIndex];
+    artifacts = [...artifacts].sort((first, second) => {
+      return getArtifactTitle(first).localeCompare(getArtifactTitle(second), 'fr', {
+        sensitivity: 'base',
+        ignorePunctuation: true
+      });
+    });
+    activeIndex = Math.max(0, artifacts.indexOf(currentArtifact));
+    artifactSearchEntries = buildArtifactSearchEntries();
+    isSortedAz = true;
+
+    carouselElement?.remove();
+    carouselElement = null;
+    track.querySelector('.artifact-turntable-stage')?.remove();
+    track.classList.remove('has-turntable');
+    hall.classList.remove('has-turntable');
+
+    carouselItems = createCarousel();
+    setupCarouselDrag();
+    setupCarouselWheel();
+    turntableItems = createTurntable();
+
+    sortButton?.classList.add('is-active');
+    sortButton?.setAttribute('aria-pressed', 'true');
+    updateArtifactSearch();
+    showArtifact(activeIndex, false);
+  };
+
   previousButton.addEventListener('click', () => {
     showArtifact(activeIndex - 1, true);
   });
@@ -410,6 +538,28 @@
   nextButton.addEventListener('click', () => {
     showArtifact(activeIndex + 1, true);
   });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', updateArtifactSearch);
+    searchInput.addEventListener('keydown', (event) => {
+      if (!searchMatches.length) return;
+
+      if (event.key === 'Enter' || event.key === 'ArrowDown') {
+        event.preventDefault();
+        goToSearchMatch(1);
+      }
+
+      if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        goToSearchMatch(-1);
+      }
+    });
+  }
+
+  if (sortButton) {
+    sortButton.setAttribute('aria-pressed', 'false');
+    sortButton.addEventListener('click', sortArtifactsAz);
+  }
 
   window.addEventListener('resize', schedulePedestalUpdate);
   window.addEventListener('load', schedulePedestalUpdate);

@@ -87,6 +87,8 @@ body.regions-index-page .characters-rule::after {
 }
 
 .region-search input {
+  width: 100%;
+  min-width: 0;
   padding: 0;
   border: 0;
   background: transparent;
@@ -469,8 +471,15 @@ body.regions-index-page .krosmoz-legal-notice {
     background: rgba(6,6,12,0.42);
   }
 
+  .region-search input {
+    min-height: 42px;
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+  }
+
   .region-sort-button {
-    justify-self: end;
+    width: 100%;
+    justify-self: stretch;
     border: 1px solid rgba(201,168,76,0.16);
     background: rgba(6,6,12,0.42);
   }

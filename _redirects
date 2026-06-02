@@ -29,6 +29,10 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/groupes/ordre-du-coeur-vaillant.html /pages/groupes/ordre-du-coeur-vaillant 301
 /pages/groupes/bellaphones-biographie.html /pages/groupes/bellaphones-biographie 301
 /pages/groupes/bellaphones.html /pages/groupes/bellaphones 301
+/pages/groupes/bontariens-biographie.html /pages/groupes/bontariens-biographie 301
+/pages/groupes/bontariens.html /pages/groupes/bontariens 301
+/pages/groupes/brakmariens-biographie.html /pages/groupes/brakmariens-biographie 301
+/pages/groupes/brakmariens.html /pages/groupes/brakmariens 301
 /pages/groupes/groupes.html /pages/groupes/groupes 301
 /pages/histoire/bestiale.html /pages/histoire/bestiale 301
 /pages/histoire/cire-momore.html /pages/histoire/cire-momore 301
@@ -76,6 +80,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/alibert.html /pages/personnages/alibert 301
 /pages/personnages/allister.html /pages/personnages/allister 301
 /pages/personnages/amalia-sheran-sharm.html /pages/personnages/amalia-sheran-sharm 301
+/pages/personnages/amayiro.html /pages/personnages/amayiro 301
 /pages/personnages/anathar.html /pages/personnages/anathar 301
 /pages/personnages/armant-sheran-sharm.html /pages/personnages/armant-sheran-sharm 301
 /pages/personnages/arpagone.html /pages/personnages/arpagone 301
@@ -83,6 +88,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/atcham-crepin.html /pages/personnages/atcham-crepin 301
 /pages/personnages/atone.html /pages/personnages/atone 301
 /pages/personnages/aurora.html /pages/personnages/aurora 301
+/pages/personnages/az.html /pages/personnages/az 301
 /pages/personnages/bakara-jurgen.html /pages/personnages/bakara-jurgen 301
 /pages/personnages/balance-krosmique.html /pages/personnages/balance-krosmique 301
 /pages/personnages/balthazar.html /pages/personnages/balthazar 301
@@ -148,10 +154,12 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/hyrkul.html /pages/personnages/hyrkul 301
 /pages/personnages/ibago.html /pages/personnages/ibago 301
 /pages/personnages/ignemikhal.html /pages/personnages/ignemikhal 301
+/pages/personnages/imagirorukam.html /pages/personnages/imagirorukam 301
 /pages/personnages/igole.html /pages/personnages/igole 301
 /pages/personnages/indie-delagrandaventure.html /pages/personnages/indie-delagrandaventure 301
 /pages/personnages/jahash-jurgen.html /pages/personnages/jahash-jurgen 301
 /pages/personnages/jiva.html /pages/personnages/jiva 301
+/pages/personnages/ilyzaelle.html /pages/personnages/ilyzaelle 301
 /pages/personnages/joris-jurgen.html /pages/personnages/joris-jurgen 301
 /pages/personnages/julith-abigor.html /pages/personnages/julith-abigor 301
 /pages/personnages/kabrok.html /pages/personnages/kabrok 301
@@ -194,6 +202,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/orgonax.html /pages/personnages/orgonax 301
 /pages/personnages/oropo.html /pages/personnages/oropo 301
 /pages/personnages/otomai.html /pages/personnages/otomai 301
+/pages/personnages/oto-mustam.html /pages/personnages/oto-mustam 301
 /pages/personnages/pandiego-de-la-vega.html /pages/personnages/pandiego-de-la-vega 301
 /pages/personnages/pandora.html /pages/personnages/pandora 301
 /pages/personnages/percimol.html /pages/personnages/percimol 301
@@ -413,6 +422,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/alibert /pages/personnages/alibert.html 200
 /pages/personnages/allister /pages/personnages/allister.html 200
 /pages/personnages/amalia-sheran-sharm /pages/personnages/amalia-sheran-sharm.html 200
+/pages/personnages/amayiro /pages/personnages/amayiro.html 200
 /pages/personnages/anathar /pages/personnages/anathar.html 200
 /pages/personnages/armant-sheran-sharm /pages/personnages/armant-sheran-sharm.html 200
 /pages/personnages/arpagone /pages/personnages/arpagone.html 200
@@ -420,6 +430,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/atcham-crepin /pages/personnages/atcham-crepin.html 200
 /pages/personnages/atone /pages/personnages/atone.html 200
 /pages/personnages/aurora /pages/personnages/aurora.html 200
+/pages/personnages/az /pages/personnages/az.html 200
 /pages/personnages/bakara-jurgen /pages/personnages/bakara-jurgen.html 200
 /pages/personnages/balance-krosmique /pages/personnages/balance-krosmique.html 200
 /pages/personnages/balthazar /pages/personnages/balthazar.html 200
@@ -485,10 +496,12 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/hyrkul /pages/personnages/hyrkul.html 200
 /pages/personnages/ibago /pages/personnages/ibago.html 200
 /pages/personnages/ignemikhal /pages/personnages/ignemikhal.html 200
+/pages/personnages/imagirorukam /pages/personnages/imagirorukam.html 200
 /pages/personnages/igole /pages/personnages/igole.html 200
 /pages/personnages/indie-delagrandaventure /pages/personnages/indie-delagrandaventure.html 200
 /pages/personnages/jahash-jurgen /pages/personnages/jahash-jurgen.html 200
 /pages/personnages/jiva /pages/personnages/jiva.html 200
+/pages/personnages/ilyzaelle /pages/personnages/ilyzaelle.html 200
 /pages/personnages/joris-jurgen /pages/personnages/joris-jurgen.html 200
 /pages/personnages/julith-abigor /pages/personnages/julith-abigor.html 200
 /pages/personnages/kabrok /pages/personnages/kabrok.html 200
@@ -531,6 +544,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/orgonax /pages/personnages/orgonax.html 200
 /pages/personnages/oropo /pages/personnages/oropo.html 200
 /pages/personnages/otomai /pages/personnages/otomai.html 200
+/pages/personnages/oto-mustam /pages/personnages/oto-mustam.html 200
 /pages/personnages/pandiego-de-la-vega /pages/personnages/pandiego-de-la-vega.html 200
 /pages/personnages/pandora /pages/personnages/pandora.html 200
 /pages/personnages/percimol /pages/personnages/percimol.html 200
@@ -607,6 +621,10 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/groupes/ordre-du-coeur-vaillant /pages/groupes/ordre-du-coeur-vaillant.html 200
 /pages/groupes/bellaphones-biographie /pages/groupes/bellaphones-biographie.html 200
 /pages/groupes/bellaphones /pages/groupes/bellaphones.html 200
+/pages/groupes/bontariens-biographie /pages/groupes/bontariens-biographie.html 200
+/pages/groupes/bontariens /pages/groupes/bontariens.html 200
+/pages/groupes/brakmariens-biographie /pages/groupes/brakmariens-biographie.html 200
+/pages/groupes/brakmariens /pages/groupes/brakmariens.html 200
 /pages/groupes/groupes /pages/groupes/groupes.html 200
 /pages/regions/abysses-sufokia-biographie /pages/regions/abysses-sufokia-biographie.html 200
 /pages/regions/abysses-sufokia /pages/regions/abysses-sufokia.html 200
@@ -781,6 +799,10 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /ordre-du-coeur-vaillant-biographie.html /pages/groupes/ordre-du-coeur-vaillant-biographie 301
 /bellaphones.html /pages/groupes/bellaphones 301
 /bellaphones-biographie.html /pages/groupes/bellaphones-biographie 301
+/bontariens.html /pages/groupes/bontariens 301
+/bontariens-biographie.html /pages/groupes/bontariens-biographie 301
+/brakmariens.html /pages/groupes/brakmariens 301
+/brakmariens-biographie.html /pages/groupes/brakmariens-biographie 301
 /regions.html /pages/regions/regions 301
 /krosmoz.html /pages/regions/krosmoz 301
 /inglorium.html /pages/regions/inglorium 301
@@ -820,12 +842,14 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /alibert.html /pages/personnages/alibert 301
 /allister.html /pages/personnages/allister 301
 /amalia-sheran-sharm.html /pages/personnages/amalia-sheran-sharm 301
+/amayiro.html /pages/personnages/amayiro 301
 /anathar.html /pages/personnages/anathar 301
 /armant-sheran-sharm.html /pages/personnages/armant-sheran-sharm 301
 /arpagone.html /pages/personnages/arpagone 301
 /arty.html /pages/personnages/arty 301
 /atcham-crepin.html /pages/personnages/atcham-crepin 301
 /aurora.html /pages/personnages/aurora 301
+/az.html /pages/personnages/az 301
 /bakara-jurgen.html /pages/personnages/bakara-jurgen 301
 /balance-krosmique.html /pages/personnages/balance-krosmique 301
 /balthazar.html /pages/personnages/balthazar 301
@@ -886,10 +910,12 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /hyrkul.html /pages/personnages/hyrkul 301
 /ibago.html /pages/personnages/ibago 301
 /ignemikhal.html /pages/personnages/ignemikhal 301
+/imagirorukam.html /pages/personnages/imagirorukam 301
 /igole.html /pages/personnages/igole 301
 /indie-delagrandaventure.html /pages/personnages/indie-delagrandaventure 301
 /jahash-jurgen.html /pages/personnages/jahash-jurgen 301
 /jiva.html /pages/personnages/jiva 301
+/ilyzaelle.html /pages/personnages/ilyzaelle 301
 /joris-jurgen.html /pages/personnages/joris-jurgen 301
 /julith-abigor.html /pages/personnages/julith-abigor 301
 /kali.html /pages/personnages/kali 301
@@ -927,6 +953,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /nox.html /pages/personnages/nox 301
 /ogrest.html /pages/personnages/ogrest 301
 /otomai.html /pages/personnages/otomai 301
+/oto-mustam.html /pages/personnages/oto-mustam 301
 /ombre.html /pages/personnages/ombre 301
 /ombrage.html /pages/personnages/ombrage 301
 /orgonax.html /pages/personnages/orgonax 301

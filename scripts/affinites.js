@@ -1161,6 +1161,10 @@ function getAffinityIconForName(name, preferredIcon = "") {
     "LANCE DUR": "lancedur.webp",
     "OTOMAÏ": "otomai.webp",
     "OTOMAI": "otomai.webp",
+    "ILYZAELLE": "ilyzaelle.jpg",
+    "OTO MUSTAM": "oto-mustam.webp",
+    "AMAYIRO": "amayiro.webp",
+    "AZ": "az.webp",
     "GRUFON": "gruffon.webp",
     "BALTAZAR": "balthazar.webp",
     "MINA": "mina.webp",
@@ -1695,6 +1699,7 @@ function createAffinityRelations() {
   couple("BISTE", "MOUCHE");
   couple("POO", "KALI");
   const yugoFriends = [
+    "AZ",
     "TRISTEPIN DE PERCEDAL",
     "ÉVANGÉLYNE",
     "RUBILAX",
@@ -1750,6 +1755,7 @@ function createAffinityRelations() {
   enemy("YUGO", yugoEnemies);
   enemy("YUGO", éliotropes);
   const tofuBrotherhood = [
+    "AZ",
     "TRISTEPIN DE PERCEDAL",
     "ÉVANGÉLYNE",
     "RUBILAX",
@@ -1954,6 +1960,19 @@ function createAffinityRelations() {
   removeEnemy("ANATHAR", ["PIN DE PERCEDAL", "FLOPIN DE PERCEDAL", "ELELY DE PERCEDAL", "JORIS", "JORIS JURGEN", "KÉRUBIM CRÉPIN", "GOULTARD"]);
   enemy("ANATHAR", ["REMINGTON SMISSE", "GRANY SMISSE"]);
   enemy("DJAUL", ["JIVA"]);
+  add("ILYZAELLE", "friends", "Championne de", "JIVA");
+  add("JIVA", "friends", "Championne", "ILYZAELLE");
+  add("ILYZAELLE", "friends", "Allié bontarien", "AMAYIRO");
+  add("AMAYIRO", "friends", "Mène la contre-offensive appelée par", "ILYZAELLE");
+  enemy("ILYZAELLE", ["DJAUL", "OTO MUSTAM"]);
+  add("OTO MUSTAM", "friends", "Maître spirituel", "DJAUL");
+  add("DJAUL", "friends", "Disciple brakmarien", "OTO MUSTAM");
+  add("OTO MUSTAM", "friends", "Mandaté par", "RUSHU");
+  add("RUSHU", "friends", "Commandant choisi", "OTO MUSTAM");
+  add("AMAYIRO", "friends", "Protecteur spirituel", "SILVOSSE");
+  add("SILVOSSE", "friends", "Disciple", "AMAYIRO");
+  friendship("AMAYIRO", ["JIVA"]);
+  enemy("OTO MUSTAM", ["AMAYIRO", "REINES DE BONTA", "JIVA"]);
 
   éliotropes.forEach((name) => add(name, "family", "Père créateur", "YUGO"));
   add("YUGO", "family", "Créations", éliotropes);

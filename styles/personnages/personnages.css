@@ -96,6 +96,15 @@ body.character-amalia .character-hero-bg {
   background-image: url('../../assets/personnages/AMALIA.webp');
   background-position: center center;
 }
+body.character-amayiro .character-hero-bg {
+  background-image: url('../../assets/personnages/amayiro.webp');
+  background-position: 36% center;
+}
+body.character-ilyzaelle .character-hero-bg {
+  background-image: url('../../assets/personnages/ilyzaelle.jpg');
+  background-position: 42% center;
+  transform: scale(1);
+}
 body.character-roi-sheran-sharm .character-hero-bg {
   background-image: url('../../assets/personnages/roi-sheran-sharm.webp');
   background-position: 58% center;
@@ -272,6 +281,10 @@ body.character-ignemikhal .character-hero-bg {
   background-image: url('../../assets/personnages/IGNEMIKHAL.webp');
   background-position: 25% center;
 }
+body.character-imagirorukam .character-hero-bg {
+  background-image: url('../../assets/personnages/imagirorukam.webp');
+  background-position: 36% center;
+}
 body.character-aguabrial .character-hero-bg {
   background-image: url('../../assets/personnages/AGUABRIAL.webp');
   background-position: 75% center;
@@ -300,6 +313,10 @@ body.character-ombre .character-hero-bg {
 body.character-otomai .character-hero-bg {
   background-image: url('../../assets/personnages/OTOMAI.webp');
   background-position: 62% 68%;
+}
+body.character-oto-mustam .character-hero-bg {
+  background-image: url('../../assets/personnages/oto-mustam.webp');
+  background-position: 50% center;
 }
 body.character-toross .character-hero-bg {
   background-image: url('../../assets/personnages/TOROSS.webp');
@@ -554,6 +571,10 @@ body.character-raval .character-hero-bg {
 body.character-aurora .character-hero-bg {
   background-image: url('../../assets/personnages/AURORA.webp');
   background-position: 50% center;
+}
+body.character-az .character-hero-bg {
+  background-image: url('../../assets/personnages/AZ.webp');
+  background-position: 52% 62%;
 }
 body.character-corbeau-noir .character-hero-bg {
   background-image: url('../../assets/personnages/corbeau-noir.webp');
@@ -1958,6 +1979,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
   background: rgba(12, 12, 18, 0.97);
   box-shadow: 0 16px 35px rgba(0,0,0,0.35);
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
   transform: translateY(-4px);
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
@@ -1978,10 +2000,9 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-filter-menu::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, rgba(201,168,76,0.78), rgba(122,94,37,0.95));
 }
-.character-filter:hover .character-filter-menu,
-.character-filter:focus-within .character-filter-menu,
 .character-filter.is-open .character-filter-menu {
   opacity: 1;
+  pointer-events: auto;
   visibility: visible;
   transform: translateY(0);
 }
@@ -2053,6 +2074,9 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="grand-dragon"] img { object-position: 78% center; }
 .character-card[href="rasha"] img { object-position: 50% center; }
 .character-card[href="aurora"] img { object-position: 50% center; }
+.character-card[href="amayiro"] img { object-position: 36% center; transform: scale(1); }
+.character-card[href="ilyzaelle"] img { object-position: 42% center; transform: scale(1); }
+.character-card[href="az"] img { object-position: 53% 62%; transform: scale(1.08); }
 .character-card[href="corbeau-noir"] img { object-position: 50% center; }
 .character-card[href="miranda"] img { object-position: 50% center; }
 .character-card[href="kriss-la-krass"] img { object-position: center center; }
@@ -2060,6 +2084,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="meriana"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="anathar"] img { object-position: center center; transform: scale(1); }
 .character-card[href="ombrage"] img { object-position: 50% center; }
+.character-card[href="oto-mustam"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="vampyro"] img { object-position: 60% center; transform: scale(1); }
 .character-card[href="chene-mou"] img { object-position: 50% center; }
 .character-card[href="prince-adale"] img { object-position: 58% center; transform: scale(1); }
@@ -2155,6 +2180,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="grougaloragran"] img { object-position: 34% center; }
 .character-card[href="gruffon"] img { object-position: 60% center; transform: scale(0.96); }
 .character-card[href="ignemikhal"] img { object-position: center center; }
+.character-card[href="imagirorukam"] img { object-position: 22% center; transform: scale(1); }
 .character-card[href="pandiego-de-la-vega"] img { object-position: 48% center; }
 .character-card[href="aguabrial"] img { object-position: 75% center; }
 .character-card[href="grougalorasalar"] img { object-position: 16% center; }
