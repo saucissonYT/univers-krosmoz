@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 760" role="img" aria-label="">
+  <defs>
+    <linearGradient id="minuteMetal" x1="15" y1="10" x2="97" y2="748" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a232c"/>
+      <stop offset=".28" stop-color="#030405"/>
+      <stop offset=".52" stop-color="#1d252c"/>
+      <stop offset=".76" stop-color="#060708"/>
+      <stop offset="1" stop-color="#151316"/>
+    </linearGradient>
+    <linearGradient id="minuteGold" x1="12" y1="46" x2="100" y2="742" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff2bf"/>
+      <stop offset=".18" stop-color="#9b6428"/>
+      <stop offset=".46" stop-color="#f9de95"/>
+      <stop offset=".7" stop-color="#6d421b"/>
+      <stop offset="1" stop-color="#ffe8a8"/>
+    </linearGradient>
+    <radialGradient id="minuteAqua" cx="50%" cy="57%" r="54%">
+      <stop offset="0" stop-color="#aafcff" stop-opacity=".88"/>
+      <stop offset=".42" stop-color="#3dc4d8" stop-opacity=".36"/>
+      <stop offset="1" stop-color="#0f3b4a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="minuteShadow" x="-24%" y="-8%" width="148%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity=".64"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="2.4" flood-color="#79f0ff" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <g filter="url(#minuteShadow)">
+    <path fill="url(#minuteMetal)" stroke="url(#minuteGold)" stroke-width="1.95" fill-rule="evenodd" d="
+      M56 8
+      C65 40 68 78 65 132
+      C62 185 61 222 64 257
+      C78 284 84 316 82 351
+      C80 392 69 426 61 462
+      C54 495 56 531 74 565
+      L64 582
+      C72 601 86 620 101 637
+      L78 646
+      C83 675 93 699 99 722
+      C105 746 90 757 56 757
+      C22 757 7 746 13 722
+      C19 699 29 675 34 646
+      L11 637
+      C26 620 40 601 48 582
+      L38 565
+      C56 531 58 495 51 462
+      C43 426 32 392 30 351
+      C28 316 34 284 48 257
+      C51 222 50 185 47 132
+      C44 78 47 40 56 8
+      Z
+
+      M56 289
+      C43 308 43 334 56 355
+      C69 334 69 308 56 289
+      Z
+
+      M56 493
+      C43 518 44 548 56 572
+      C68 548 69 518 56 493
+      Z
+
+      M56 679
+      m-17 0
+      a17 17 0 1 0 34 0
+      a17 17 0 1 0 -34 0
+    "/>
+    <path fill="url(#minuteAqua)" d="
+      M56 369
+      C68 396 68 427 58 461
+      C54 442 50 421 50 397
+      C50 386 52 376 56 369
+      Z
+    "/>
+    <path fill="none" stroke="#ffe9a7" stroke-width="1.45" stroke-linecap="round" stroke-opacity=".68" d="
+      M56 34
+      C55 104 55 178 56 258
+      M56 590
+      C56 625 56 655 56 703
+    "/>
+    <circle cx="56" cy="679" r="25" fill="none" stroke="url(#minuteGold)" stroke-width="3.8"/>
+    <circle cx="56" cy="679" r="11" fill="#07080a" stroke="#7ff2ff" stroke-width="1.15" stroke-opacity=".72"/>
+  </g>
+</svg>

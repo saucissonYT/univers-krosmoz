@@ -386,6 +386,10 @@
       "href": "khan-karkass"
     },
     {
+      "name": "Klime",
+      "href": "klime"
+    },
+    {
       "name": "Kriss la Krass",
       "href": "kriss-la-krass"
     },
@@ -474,6 +478,10 @@
       "href": "miranda"
     },
     {
+      "name": "Missiz Frizz",
+      "href": "missiz-frizz"
+    },
+    {
       "name": "Monsieur M",
       "href": "monsieur-m"
     },
@@ -492,6 +500,10 @@
     {
       "name": "Nimoda",
       "href": "nimoda"
+    },
+    {
+      "name": "Nileza",
+      "href": "nileza"
     },
     {
       "name": "Nora",
@@ -680,6 +692,10 @@
     {
       "name": "Sumens",
       "href": "sumens"
+    },
+    {
+      "name": "Sylargh",
+      "href": "sylargh"
     },
     {
       "name": "Terrakourial",
@@ -1640,6 +1656,16 @@
       ]
     },
     {
+      "name": "Klime",
+      "href": "klime",
+      "image": "../../assets/personnages/cartes/klime.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Frigost",
+        "Ennemis"
+      ]
+    },
+    {
       "name": "Kriss la Krass",
       "href": "kriss-la-krass",
       "image": "../../assets/personnages/cartes/kriss-la-krass.webp",
@@ -1841,6 +1867,16 @@
       ]
     },
     {
+      "name": "Missiz Frizz",
+      "href": "missiz-frizz",
+      "image": "../../assets/personnages/cartes/missiz-frizz.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Frigost",
+        "Ennemis"
+      ]
+    },
+    {
       "name": "Monsieur M",
       "href": "monsieur-m",
       "image": "../../assets/personnages/cartes/monsieur-m.webp",
@@ -1884,6 +1920,16 @@
       "classLabel": "OSAMODAS",
       "groups": [
         "Héros"
+      ]
+    },
+    {
+      "name": "Nileza",
+      "href": "nileza",
+      "image": "../../assets/personnages/cartes/nileza.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Frigost",
+        "Ennemis"
       ]
     },
     {
@@ -2323,6 +2369,16 @@
       "classLabel": "Enutrof, Gardien des mois",
       "groups": [
         "Protecteur"
+      ]
+    },
+    {
+      "name": "Sylargh",
+      "href": "sylargh",
+      "image": "../../assets/personnages/cartes/sylargh.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Frigost",
+        "Ennemis"
       ]
     },
     {

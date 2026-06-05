@@ -63,6 +63,86 @@ body.groupes-index-page::before {
   object-position: 90% center;
 }
 
+.group-card[href="bontariens"] img {
+  object-position: 82% center;
+}
+
+.group-card[href="cras"] img {
+  object-position: 62% center;
+}
+
+.group-card[href="ecaflips"] img {
+  object-position: 65% center;
+}
+
+.group-card[href="huppermages"] img {
+  object-position: 82% center;
+}
+
+.group-card[href="iops"] img {
+  object-position: 72% center;
+}
+
+.group-card[href="osamodas"] img {
+  object-position: 72% center;
+}
+
+.group-card[href="dragons"] img {
+  object-position: 78% center;
+}
+
+.group-card[href="eliatropes"] img {
+  object-position: 88% center;
+}
+
+.group-card[href="eliotropes"] img {
+  object-position: 12% center;
+}
+
+.group-card[href="eniripsas"] img {
+  object-position: 64% center;
+}
+
+.group-card[href="enutrofs"] img {
+  object-position: 72% center;
+}
+
+.group-card[href="ouginaks"] img {
+  object-position: 42% center;
+}
+
+.group-card[href="pandawas"] img {
+  object-position: 68% center;
+}
+
+.group-card[href="fecas"] img {
+  object-position: 72% center;
+}
+
+.group-card[href="roublards"] img {
+  object-position: 24% center;
+}
+
+.group-card[href="sacrieurs"] img {
+  object-position: 50% center;
+}
+
+.group-card[href="sadidas"] img {
+  object-position: 62% center;
+}
+
+.group-card[href="srams"] img {
+  object-position: 36% center;
+}
+
+.group-card[href="voyageurs-dimensionnels"] img {
+  object-position: 70% center;
+}
+
+.group-card[href="xelors"] img {
+  object-position: 50% center;
+}
+
 .group-card-copy span {
   text-transform: uppercase;
 }

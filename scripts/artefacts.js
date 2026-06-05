@@ -9,12 +9,11 @@
   const hall = document.querySelector('[data-artifact-hall]');
   if (!hall) return;
 
-  let artifacts = Array.from(hall.querySelectorAll('.museum-artifact'));
+  const artifacts = Array.from(hall.querySelectorAll('.museum-artifact'));
   const previousButton = hall.querySelector('[data-artifact-prev]');
   const nextButton = hall.querySelector('[data-artifact-next]');
   const searchInput = hall.querySelector('[data-artifact-search]');
   const searchCount = hall.querySelector('[data-artifact-search-count]');
-  const sortButton = hall.querySelector("[data-artifact-sort='az']");
   const track = hall.querySelector('.artifact-track');
   const pedestal = hall.querySelector('.artifact-pedestal-fixed');
 
@@ -32,7 +31,7 @@
       .trim();
   };
 
-  const buildArtifactSearchEntries = () => artifacts.map((artifact) => {
+  const artifactSearchEntries = artifacts.map((artifact) => {
     const title = getArtifactTitle(artifact);
     const searchableText = [
       title,
@@ -49,8 +48,6 @@
       searchText: normalizeSearchText(searchableText)
     };
   });
-
-  let artifactSearchEntries = buildArtifactSearchEntries();
 
   let suppressCarouselClick = false;
   let carouselElement = null;
@@ -275,7 +272,6 @@
   let pageWheelTimer = 0;
   let searchMatches = [];
   let activeSearchMatch = 0;
-  let isSortedAz = false;
 
   const updateSearchCount = (query) => {
     if (!searchCount) return;
@@ -500,37 +496,6 @@
     }
   };
 
-  const sortArtifactsAz = () => {
-    if (isSortedAz) return;
-
-    const currentArtifact = artifacts[activeIndex];
-    artifacts = [...artifacts].sort((first, second) => {
-      return getArtifactTitle(first).localeCompare(getArtifactTitle(second), 'fr', {
-        sensitivity: 'base',
-        ignorePunctuation: true
-      });
-    });
-    activeIndex = Math.max(0, artifacts.indexOf(currentArtifact));
-    artifactSearchEntries = buildArtifactSearchEntries();
-    isSortedAz = true;
-
-    carouselElement?.remove();
-    carouselElement = null;
-    track.querySelector('.artifact-turntable-stage')?.remove();
-    track.classList.remove('has-turntable');
-    hall.classList.remove('has-turntable');
-
-    carouselItems = createCarousel();
-    setupCarouselDrag();
-    setupCarouselWheel();
-    turntableItems = createTurntable();
-
-    sortButton?.classList.add('is-active');
-    sortButton?.setAttribute('aria-pressed', 'true');
-    updateArtifactSearch();
-    showArtifact(activeIndex, false);
-  };
-
   previousButton.addEventListener('click', () => {
     showArtifact(activeIndex - 1, true);
   });
@@ -554,11 +519,6 @@
         goToSearchMatch(-1);
       }
     });
-  }
-
-  if (sortButton) {
-    sortButton.setAttribute('aria-pressed', 'false');
-    sortButton.addEventListener('click', sortArtifactsAz);
   }
 
   window.addEventListener('resize', schedulePedestalUpdate);

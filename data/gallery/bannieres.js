@@ -637,6 +637,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Klime",
+        "href":  "klime",
+        "slug":  "klime",
+        "path":  "assets/personnages/klime.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Kriss la Krass",
         "href":  "kriss-la-krass",
         "slug":  "kriss-la-krass",
@@ -791,6 +798,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Missiz Frizz",
+        "href":  "missiz-frizz",
+        "slug":  "missiz-frizz",
+        "path":  "assets/personnages/missiz-frizz.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Monsieur M",
         "href":  "monsieur-m",
         "slug":  "le-mmmmmmmmporg",
@@ -823,6 +837,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "nimoda",
         "slug":  "nimoda",
         "path":  "assets/personnages/NIMODA.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Nileza",
+        "href":  "nileza",
+        "slug":  "nileza",
+        "path":  "assets/personnages/nileza.webp",
         "category":  "personnages"
     },
     {
@@ -1145,6 +1166,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "sumens",
         "slug":  "sumens",
         "path":  "assets/personnages/SUMENS.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Sylargh",
+        "href":  "sylargh",
+        "slug":  "sylargh",
+        "path":  "assets/personnages/sylargh.webp",
         "category":  "personnages"
     },
     {
@@ -1694,6 +1722,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "groupes"
     },
     {
+        "name":  "Les Forgelances",
+        "href":  "forgelances",
+        "slug":  "forgelances",
+        "path":  "assets/groupes/forgelances/forgelances.webp",
+        "category":  "groupes"
+    },
+    {
         "name":  "Les Bellaphones",
         "href":  "bellaphones",
         "slug":  "bellaphones",
@@ -1708,6 +1743,27 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "groupes"
     },
     {
+        "name":  "Les Dragons",
+        "href":  "dragons",
+        "slug":  "dragons",
+        "path":  "assets/groupes/dragons/dragons.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Crâs",
+        "href":  "cras",
+        "slug":  "cras",
+        "path":  "assets/groupes/cras/cras.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Écaflips",
+        "href":  "ecaflips",
+        "slug":  "ecaflips",
+        "path":  "assets/groupes/ecaflips/ecaflips.webp",
+        "category":  "groupes"
+    },
+    {
         "name":  "Les Éliotropes",
         "href":  "eliotropes",
         "slug":  "eliotropes",
@@ -1715,10 +1771,87 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "groupes"
     },
     {
+        "name":  "Les Éniripsas",
+        "href":  "eniripsas",
+        "slug":  "eniripsas",
+        "path":  "assets/groupes/eniripsas/eniripsas.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Énutrofs",
+        "href":  "enutrofs",
+        "slug":  "enutrofs",
+        "path":  "assets/groupes/enutrofs/enutrofs.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Fécas",
+        "href":  "fecas",
+        "slug":  "fecas",
+        "path":  "assets/groupes/fecas/fecas.webp",
+        "category":  "groupes"
+    },
+    {
         "name":  "Les Gardiens des Mois",
         "href":  "gardiens-des-mois",
         "slug":  "gardiens-des-mois",
         "path":  "assets/groupes/gardiens-des-mois/gardiens-des-mois.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "La Guilde des Murmures",
+        "href":  "guilde-des-murmures",
+        "slug":  "guilde-des-murmures",
+        "path":  "assets/groupes/guilde-des-murmures/guilde-des-murmures.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Huppermages",
+        "href":  "huppermages",
+        "slug":  "huppermages",
+        "path":  "assets/groupes/huppermages/huppermages.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Iops",
+        "href":  "iops",
+        "slug":  "iops",
+        "path":  "assets/groupes/iops/iops.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Ouginaks",
+        "href":  "ouginaks",
+        "slug":  "ouginaks",
+        "path":  "assets/groupes/ouginaks/ouginaks.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Sacrieurs",
+        "href":  "sacrieurs",
+        "slug":  "sacrieurs",
+        "path":  "assets/groupes/sacrieurs/sacrieurs.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Xélors",
+        "href":  "xelors",
+        "slug":  "xelors",
+        "path":  "assets/groupes/xelors/xelors.jpg",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Osamodas",
+        "href":  "osamodas",
+        "slug":  "osamodas",
+        "path":  "assets/groupes/osamodas/osamodas.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Pandawas",
+        "href":  "pandawas",
+        "slug":  "pandawas",
+        "path":  "assets/groupes/pandawas/pandawas.webp",
         "category":  "groupes"
     },
     {
@@ -1740,6 +1873,62 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "mechasmes",
         "slug":  "mechasmes",
         "path":  "assets/groupes/mechasmes/mechasmes.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Nécromes",
+        "href":  "necromes",
+        "slug":  "necromes",
+        "path":  "assets/groupes/necromes/necromes.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Roublards",
+        "href":  "roublards",
+        "slug":  "roublards",
+        "path":  "assets/groupes/roublards/roublards.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Sadidas",
+        "href":  "sadidas",
+        "slug":  "sadidas",
+        "path":  "assets/groupes/sadidas/sadidas.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Shushus",
+        "href":  "shushus",
+        "slug":  "shushus",
+        "path":  "assets/groupes/shushus/shushus.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Srams",
+        "href":  "srams",
+        "slug":  "srams",
+        "path":  "assets/groupes/srams/srams.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Steamers",
+        "href":  "steamers",
+        "slug":  "steamers",
+        "path":  "assets/groupes/steamers/steamers.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Voyageurs Dimensionnels",
+        "href":  "voyageurs-dimensionnels",
+        "slug":  "voyageurs-dimensionnels",
+        "path":  "assets/groupes/voyageurs-dimensionnels/voyageurs-dimensionnels.webp",
+        "category":  "groupes"
+    },
+    {
+        "name":  "Les Zobals",
+        "href":  "zobals",
+        "slug":  "zobals",
+        "path":  "assets/groupes/zobals/zobals.webp",
         "category":  "groupes"
     },
     {

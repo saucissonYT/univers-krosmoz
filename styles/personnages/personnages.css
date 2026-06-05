@@ -141,6 +141,11 @@ body.character-nox .character-hero-bg {
   background-image: url('../../assets/personnages/NOX.webp');
   background-position: 52% center;
 }
+body.character-nileza .character-hero-bg {
+  background-image: url('../../assets/personnages/nileza.webp');
+  background-position: center center;
+  transform: scale(1);
+}
 body.character-qilby .character-hero-bg {
   background-image: url('../../assets/personnages/QILBY.webp');
   background-position: 50% center;
@@ -449,6 +454,11 @@ body.character-khan-karkass .character-hero-bg {
   background-image: url('../../assets/personnages/khan-karkass.webp');
   background-position: 44% center;
 }
+body.character-klime .character-hero-bg {
+  background-image: url('../../assets/personnages/klime.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-luis .character-hero-bg {
   background-image: url('../../assets/personnages/LUIS.webp');
   background-position: 50% center;
@@ -587,6 +597,11 @@ body.character-kabrok .character-hero-bg {
 body.character-miranda .character-hero-bg {
   background-image: url('../../assets/personnages/MIRANDA.webp');
   background-position: 50% center;
+}
+body.character-missiz-frizz .character-hero-bg {
+  background-image: url('../../assets/personnages/missiz-frizz.webp');
+  background-position: 50% center;
+  transform: scale(1);
 }
 body.character-kriss-la-krass .character-hero-bg {
   background-image: url('../../assets/personnages/kriss-la-krass.webp');
@@ -2009,19 +2024,6 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-filter-item {
   font-size: 0.68rem;
 }
-.character-filter-item.is-unavailable,
-.character-filter-item:disabled {
-  color: rgba(232,224,208,0.34) !important;
-  cursor: not-allowed;
-  opacity: 0.46;
-}
-.character-filter-item.is-unavailable:hover,
-.character-filter-item.is-unavailable:focus-visible,
-.character-filter-item:disabled:hover,
-.character-filter-item:disabled:focus-visible {
-  color: rgba(232,224,208,0.34) !important;
-  outline: none;
-}
 .characters-empty {
   margin: 1.2rem 0 0;
   color: rgba(246,242,231,0.72);
@@ -2092,6 +2094,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="az"] img { object-position: 53% 62%; transform: scale(1.08); }
 .character-card[href="corbeau-noir"] img { object-position: 50% center; }
 .character-card[href="miranda"] img { object-position: 50% center; }
+.character-card[href="missiz-frizz"] img { object-position: 44% center; }
 .character-card[href="kriss-la-krass"] img { object-position: center center; }
 .character-card[href="maude"] img { object-position: center center; }
 .character-card[href="meriana"] img { object-position: 50% center; transform: scale(1); }
@@ -2160,6 +2163,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="balthazar"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="bethel-akarna"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="nimoda"] img { object-position: 50% center; }
+.character-card[href="nileza"] img { object-position: 72% center; }
 .character-card[href="yrehn"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="karn"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="elante"] img { object-position: 50% center; transform: scale(1); }
@@ -2172,6 +2176,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="julith-abigor"] img { object-position: 50% center; transform: scale(1.02); }
 .character-card[href="lilotte"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="khan-karkass"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="klime"] img { object-position: 70% center; transform: scale(1); }
 .character-card[href="bolgrot"] img {
   object-position: 18% 35%;
   transform: scale(1.78);
@@ -2205,6 +2210,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="ogrest"] img { object-position: center 16%; transform: scale(1); }
 .character-card[href="toross-mordal"] img { object-position: 62% center; }
 .character-card[href="terrakourial"] img { object-position: 62% center; }
+.character-card[href="sylargh"] img { object-position: 76% center; transform: scale(1); }
 .character-card[href="aerafal"] img { object-position: center center; transform: scale(1); }
 .character-card[href="joris-jurgen"] img { object-position: 58% 32%; }
 .character-card[href="kerubim-crepin"] img { object-position: center center; }
@@ -3252,6 +3258,11 @@ body.character-solar .character-hero-bg {
 body.character-sumens .character-hero-bg {
   background-image: url('../../assets/personnages/SUMENS.webp');
   background-position: 50% center;
+}
+body.character-sylargh .character-hero-bg {
+  background-image: url('../../assets/personnages/sylargh.webp');
+  background-position: 50% center;
+  transform: scale(1);
 }
 body.character-silouate .character-hero-bg {
   background-image: url('../../assets/personnages/SILOUATE.webp');

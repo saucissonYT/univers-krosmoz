@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 620" role="img" aria-label="">
+  <defs>
+    <linearGradient id="hourMetal" x1="24" y1="18" x2="116" y2="598" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111821"/>
+      <stop offset=".35" stop-color="#030507"/>
+      <stop offset=".58" stop-color="#182027"/>
+      <stop offset="1" stop-color="#050507"/>
+    </linearGradient>
+    <linearGradient id="hourGold" x1="22" y1="48" x2="118" y2="586" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff0b8"/>
+      <stop offset=".2" stop-color="#a66d2b"/>
+      <stop offset=".52" stop-color="#f5d68d"/>
+      <stop offset=".78" stop-color="#6d431c"/>
+      <stop offset="1" stop-color="#ffe2a1"/>
+    </linearGradient>
+    <radialGradient id="hourAqua" cx="50%" cy="46%" r="52%">
+      <stop offset="0" stop-color="#9ff9ff" stop-opacity=".95"/>
+      <stop offset=".45" stop-color="#45c9dc" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#1d5668" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hourShadow" x="-22%" y="-8%" width="144%" height="118%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity=".62"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#79f0ff" flood-opacity=".14"/>
+    </filter>
+  </defs>
+  <g filter="url(#hourShadow)">
+    <path fill="url(#hourMetal)" stroke="url(#hourGold)" stroke-width="2.2" fill-rule="evenodd" d="
+      M70 16
+      C81 34 88 57 85 91
+      C82 127 81 154 84 181
+      C97 203 104 228 105 257
+      C106 303 89 337 74 358
+      C86 383 91 407 89 431
+      C86 462 76 487 73 522
+      C89 528 100 542 100 559
+      C100 582 87 596 70 604
+      C53 596 40 582 40 559
+      C40 542 51 528 67 522
+      C64 487 54 462 51 431
+      C49 407 54 383 66 358
+      C51 337 34 303 35 257
+      C36 228 43 203 56 181
+      C59 154 58 127 55 91
+      C52 57 59 34 70 16
+      Z
+
+      M70 98
+      C60 119 61 145 70 166
+      C79 145 80 119 70 98
+      Z
+
+      M70 232
+      C52 253 52 282 70 305
+      C88 282 88 253 70 232
+      Z
+
+      M70 392
+      C56 416 58 446 70 471
+      C82 446 84 416 70 392
+      Z
+
+      M70 559
+      m-23 0
+      a23 23 0 1 0 46 0
+      a23 23 0 1 0 -46 0
+    "/>
+    <path fill="url(#hourAqua)" d="
+      M70 201
+      C84 218 90 241 87 266
+      C84 287 77 302 70 314
+      C63 302 56 287 53 266
+      C50 241 56 218 70 201
+      Z
+    "/>
+    <path fill="none" stroke="#ffe7a2" stroke-width="1.6" stroke-linecap="round" stroke-opacity=".62" d="
+      M70 42
+      C68 93 68 143 70 190
+      M70 331
+      C70 389 70 454 70 521
+    "/>
+    <circle cx="70" cy="559" r="31" fill="none" stroke="url(#hourGold)" stroke-width="4.5"/>
+    <circle cx="70" cy="559" r="15" fill="#07080a" stroke="#7ff2ff" stroke-width="1.4" stroke-opacity=".72"/>
+  </g>
+</svg>

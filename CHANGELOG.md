@@ -1,5 +1,22 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+05/06/2026
+
+- Mise à jour de la page d’accueil
+- Ajout de nouveaux visuels sur l’accueil
+- Ajout d’une barre de progression sur l’accueil
+- Ajout du Dofus Forgelave
+- Ajustement de la recherche des artefacts
+- Suppression de l’ancien visuel colonne-crop.webp
+- Ajout de nouveaux groupes sur la page Groupes
+- Mise à jour des cartes de groupes
+- Ajout de Klime, Missiz Frizz et Nileza dans les liens personnages
+- Ajustement de plusieurs fiches personnages
+- Mise à jour des styles CSS de l’accueil, des artefacts, des groupes et des personnages
+- Mise à jour des fichiers de recherche et navigation
+- Mise à jour du sitemap
+- Ajout de nombreuses redirections dans _redirects
+- Nettoyage de fichiers inutilisés non référencés dans le projet
 
 03/06/2026
 
@@ -7,32 +24,14 @@ petit changelog pour expliquer les modifications du site et les corrections :
 - Ajout du tri A-Z sur les artefacts
 - Ajustement du style du bandeau Artefacts pour le rapprocher de celui des Régions
 - Ajout d’une fine barre dorée entre la navbar et le bandeau Artefacts
-- Ajout de nouveaux artefacts et images associées :
-    Dofus Argenté
-    Dofus Cawotte
-    Dofus Tacheté
-    Dofus Vulbis
-    Dolmanax
-    Domakuro
-    Dorigami
-
-- Ajout de nouveaux personnages et portraits :
-    Amayiro
-    Az
-    Ilyzaelle
-    Imagirorukam
-    Oto Mustam
-
-- Ajout de nouveaux groupes :
-    Bontariens
-    Brakmariens
-
+- Ajout de nouveaux artefacts et images associées : Dofus Argenté Dofus Cawotte Dofus Tacheté Dofus Vulbis Dolmanax Domakuro Dorigami
+- Ajout de nouveaux personnages et portraits : Amayiro Az Ilyzaelle Imagirorukam Oto Mustam
+- Ajout de nouveaux groupes : Bontariens Brakmariens
 - Mise à jour de plusieurs pages Régions
 - Mise à jour de plusieurs pages Personnages
 - Mise à jour de plusieurs pages Groupes
 - Mise à jour des fichiers de recherche, navigation et sitemap
 - Mise à jour de styles CSS et scripts JS liés aux pages index et détails
-
 
 02/06/2026
 

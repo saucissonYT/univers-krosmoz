@@ -434,11 +434,102 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Les Éliatropes groupe peuple primordial Wakfu Dofus Éliatropes Grande Déesse Éliatrope Grand Dragon Conseil des Six Yugo Adamaï Qilby Shinonomé Grougaloragran Nora Zinit Méchasmes Orgonax Lokus"
   },
   {
+    "title": "Les Éniripsas",
+    "type": "Groupe",
+    "href": "pages/groupes/eniripsas",
+    "summary": "Disciples de la déesse Eniripsa, guérisseurs ailés, médecins, érudits du langage et maîtres des mots magiques.",
+    "keywords": "Les Éniripsas groupe eniripsas eniripsa Déesse Eniripsa soin guérison compassion savoir médical mots magiques verbe arpenteurs du verbe ailes médecins érudits Echo Belladone Ladysally Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Énutrofs",
+    "type": "Groupe",
+    "href": "pages/groupes/enutrofs",
+    "summary": "Disciples du dieu Enutrof, mineurs, prospecteurs, commerçants et chercheurs de trésors obsédés par les kamas, l'or et les richesses.",
+    "keywords": "Les Énutrofs groupe enutrofs enutrof Dieu Enutrof richesse trésors prospection kamas or mines pierres précieuses reliques pelle commerce Doigts d'Enutrof Enutrosor Ruel Stroud Alibert Arpagone Mériana Roi Nidas Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Sacrieurs",
+    "type": "Groupe",
+    "href": "pages/groupes/sacrieurs",
+    "summary": "Disciples de la déesse Sacrieur, guerriers du sang, de la douleur, du sacrifice et de l'endurance capables de transformer la souffrance en puissance.",
+    "keywords": "Les Sacrieurs groupe sacrieurs sacrieur Déesse Sacrieur sang sacrifice douleur souffrance endurance berserkers blessures rituels purification braises corrosif Kali Katar Kriss la Krass Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Xélors",
+    "type": "Groupe",
+    "href": "pages/groupes/xelors",
+    "summary": "Disciples du dieu Xélor, maîtres du temps, de la mémoire, des mécanismes, des téléportations et des arts spatio-temporels.",
+    "keywords": "Les Xélors groupe xelors xélors xelor xélor Dieu Xélor temps mémoire mécanismes horloges cadrans carillons sabliers clepsydres marteau bandelettes anomalies temporelles téléportation Xélorium Nox Comte Harebourg Cadence Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Ouginaks",
+    "type": "Groupe",
+    "href": "pages/groupes/ouginaks",
+    "summary": "Disciples du dieu Ouginak, peuple de meutes, de tribus, de chasseurs et de guerriers guidés par l'honneur, les ancêtres et les rites shamaniques.",
+    "keywords": "Les Ouginaks groupe ouginaks ouginak Dieu Ouginak meute tribus Mériens Maciens Bradors Pagneuls Bermanes Shibaks Braks Aniches Tlanth chasse Cania Sidimote Saharach shamanes ancêtres arcanins pierre boue écailles poussière sang fer Indie Delagrandaventure Lilotte Lou Chaille Dofus Wakfu"
+  },
+  {
+    "title": "Les Pandawas",
+    "type": "Groupe",
+    "href": "pages/groupes/pandawas",
+    "summary": "Disciples de la déesse Pandawa, héritiers de Pandala, maîtres du Pandawushu, du portage, de la projection et de l'Ébriété.",
+    "keywords": "Les Pandawas groupe pandawas pandawa Déesse Pandawa Pandala Pandalousie Pandawushu portage projection hache lait de bambou Ébriété fête convivialité Poo Pandiego de la Vega Dofus Wakfu"
+  },
+  {
+    "title": "Les Fécas",
+    "type": "Groupe",
+    "href": "pages/groupes/fecas",
+    "summary": "Disciples de la déesse Féca, gardiens loyaux spécialisés dans les glyphes, les armures élémentaires, les boucliers et la protection.",
+    "keywords": "Les Fécas groupe fecas fécas feca féca Déesse Féca protection glyphes armures boucliers gardiens bergers Bouftous Allister Arty Ereziah Melkewel Hyrkul Otomai Maïmane Bump Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Crâs",
+    "type": "Groupe",
+    "href": "pages/groupes/cras",
+    "summary": "Disciples de la déesse Crâ, archers d'élite du Monde des Douze, maîtres de la précision, de l'observation et des flèches magiques.",
+    "keywords": "Les Crâs groupe cras cra Déesse Crâ adresse précision tir à l'arc archers armes de jet vue perçante flèches magiques distance mobilité Évangelyne Cléophée Flopin de Percedal Madagaskan Mouche Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Écaflips",
+    "type": "Groupe",
+    "href": "pages/groupes/ecaflips",
+    "summary": "Disciples du dieu Ecaflip, joueurs invétérés guidés par le hasard, la chance, le risque, le pari et les retournements du destin.",
+    "keywords": "Les Écaflips groupe ecaflips ecaflip Dieu Ecaflip hasard chance jeu pari destin kamas tavernes salles de jeu épreuve enfance épée sorts chance Ecaflipus Kérubim Crépin Atcham Crépin Ecaron Ush Galesh Miranda Dofus Wakfu"
+  },
+  {
+    "title": "Les Dragons",
+    "type": "Groupe",
+    "href": "pages/groupes/dragons",
+    "summary": "Créatures primordiales du Krosmoz, liées au Grand Dragon, aux Dofus, aux dragons Éliatropes et aux lignées draconiques d'Osamodas.",
+    "keywords": "Les Dragons groupe dragons dragon Grand Dragon Grande Déesse Éliatrope Dofus Dragons Primordiaux Dardondakal Grougalorasalar Aerafal Aguabrial Ignemikhal Terrakourial Rotalstrom Adamai Grougaloragran Phaeris Balthazar Efrim Shinonome Thanatena Prysmaradoth Osamodas Wakfu Stasis"
+  },
+  {
     "title": "Les Méchasmes",
     "type": "Groupe",
     "href": "pages/groupes/mechasmes",
     "summary": "Anciennes entités du Krosmoz, gardiennes de l'équilibre cosmique et maîtresses du Wakfu comme de la Stasis.",
     "keywords": "Les Méchasmes groupe mechasmes machines divines Wakfu Stasis Krosmoz équilibre cosmique Orgonax Lokus Qilby Éliatropes Éliacube Éliasphère Zinit Nécromes"
+  },
+  {
+    "title": "Les Nécromes",
+    "type": "Groupe",
+    "href": "pages/groupes/necromes",
+    "summary": "Créatures originaires du Nécromonde, dépourvues d'émotions et guidées par une faim insatiable de Wakfu.",
+    "keywords": "Les Nécromes groupe necromes necromonde Wakfu Stasis Communion Toross Mordal Rotalstrom Efrim Grande Déesse Éliatrope Nora invasion Monde des Douze saison 4"
+  },
+  {
+    "title": "Les Shushus",
+    "type": "Groupe",
+    "href": "pages/groupes/shushus",
+    "summary": "Démons de la Shukrute gouvernés par Rushu, capables de posséder objets et êtres vivants.",
+    "keywords": "Les Shushus groupe shushu demons Shukrute Rushu Rubilax Anathar Ombrage Rasha possession objets Shushettes invasion demon shapeshift Wakfu Dofus"
+  },
+  {
+    "title": "Les Srams",
+    "type": "Groupe",
+    "href": "pages/groupes/srams",
+    "summary": "Disciples du dieu Sram, maîtres du vol, de l'infiltration, de l'invisibilité, des pièges, des doubles et des secrets.",
+    "keywords": "Les Srams groupe srams sram Dieu Sram sournoiserie vol secrets infiltration assassinat invisibilité pièges doubles Kama Sutroud Srambad Gein Toxine Reine des Voleurs Maude Prince de Brâkmar Dofus Wakfu"
   },
   {
     "title": "La Fratrie des Oubliés",
@@ -448,11 +539,46 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "La Fratrie des Oubliés groupe fratrie oublies Oropo Echo Éliotropes Demi-dieux Dofus Éliatropes Éliacube Éliabombe Hyperzaap Tour des Rêves Ogrest Bouillon Atone Sidaire Desperia Ripulse"
   },
   {
+    "title": "Les Forgelances",
+    "type": "Groupe",
+    "href": "pages/groupes/forgelances",
+    "summary": "Guerriers héritiers de la Lance Originelle, guidés par la gloire, le courage et le refus de dépendre des dieux.",
+    "keywords": "Les Forgelances groupe forgelances Lance Originelle Heïmer Valonia gloire exploits courage dieux Lancedur Agard Bordegann Ilyzaelle Lance Dur Dofus Wakfu"
+  },
+  {
     "title": "Les Gardiens des Mois",
     "type": "Groupe",
     "href": "pages/groupes/gardiens-des-mois",
     "summary": "Protecteurs liés à l'Horloge Divine, chargés de veiller sur les mois, les saisons et l'écoulement du temps.",
     "keywords": "Les Gardiens des Mois groupe protecteurs mois Horloge Divine saisons temps Jiva Djaul Rushu Solar Ménalt Silvosse Ulgrude Silouate Rosal Sumens Hécate Pouchecot Raval Maïmane Brumaire Descendre Javian Dofus Wakfu"
+  },
+  {
+    "title": "La Guilde des Murmures",
+    "type": "Groupe",
+    "href": "pages/groupes/guilde-des-murmures",
+    "summary": "Organisation familiale d'assassins réputée pour son ouïe surdéveloppée, ses renseignements et son efficacité.",
+    "keywords": "La Guilde des Murmures groupe guilde murmures murmureurs assassins famille Madagaskan ouie surdeveloppee renseignement contrats nobles marchands Wakfu"
+  },
+  {
+    "title": "Les Huppermages",
+    "type": "Groupe",
+    "href": "pages/groupes/huppermages",
+    "summary": "Érudits et magiciens élémentaires gardiens de la Balance Krosmique, maîtres des runes, du Wakfu, de la Stasis et de la Brise Quadramentale.",
+    "keywords": "Les Huppermages groupe huppermages huppermage Brise Quadramentale runes Balance Krosmique Wakfu Stasis Feu Blanc Feu Noir Bonta Ile de Rok Prosperus Elementor Bakara Jurgen Jahash Jurgen Julith Abigor Joris Jurgen Dofus Wakfu"
+  },
+  {
+    "title": "Les Iops",
+    "type": "Groupe",
+    "href": "pages/groupes/iops",
+    "summary": "Disciples du dieu Iop, guerriers impulsifs guidés par le courage, la force brute, les charges héroïques et le goût du combat.",
+    "keywords": "Les Iops groupe iops iop Dieu Iop combat courage bravoure épée guerriers Tristepin Goultard Dark Vlad Elely Pin de Percedal Cornu Mollu Solar Khan Karkass Vampyro Rish Claymore Eratz Monde des Douze Dofus Wakfu"
+  },
+  {
+    "title": "Les Osamodas",
+    "type": "Groupe",
+    "href": "pages/groupes/osamodas",
+    "summary": "Disciples du dieu Osamodas, maîtres des créatures, des invocations, des Gobgobs et d'une tradition profondément liée aux dragons.",
+    "keywords": "Les Osamodas groupe osamodas invocateurs créatures animaux faune dresseurs Dragonnet Gobgob dieu Osamodas dragons Chaos d'Ogrest Era Wakfu Aurora Roi Osamodas Bethel Akarna Coqueline Kabrok Corbeau Noir Miranda Simone Dofus Wakfu"
   },
   {
     "title": "Les Mérydes",
@@ -467,6 +593,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/groupes/poupees-de-sadida",
     "summary": "Créatures magiques de Sadida, des poupées communes aux Poupées Divines liées à la création des Dofus Primordiaux.",
     "keywords": "Les Poupées de Sadida groupe poupees poupées divines Sadida Maminala Lophapharo Bellodana Pepavara Yôpo Ladysally Ibago Dathura Lacrima Razeriane Dofus Primordiaux Aguabrial Aerafal Ignemikhal Terrakourial Gargoylone Dardondakal Grougalorasalar Ogrine Ogrest Otomai Dofus Wakfu"
+  },
+  {
+    "title": "Les Sadidas",
+    "type": "Groupe",
+    "href": "pages/groupes/sadidas",
+    "summary": "Disciples du dieu Sadida, protecteurs de la nature, des plantes, des rêves, des forêts, des poupées magiques et de l'Arbre de Vie.",
+    "keywords": "Les Sadidas groupe sadidas sadida Dieu Sadida nature plantes rêves songes Éther poupées magiques Puissance Sylvestre Soulier de Sadida Arbre de Vie Royaume Sadida Chaos d'Ogrest Nox Amalia Sheran Sharm Dathura Lacrima Chêne Mou Dofus Wakfu"
   },
   {
     "title": "La Confrérie du Tofu",
@@ -488,6 +621,34 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/groupes/ordre-du-coeur-vaillant",
     "summary": "Ancien ordre de chevalerie mené par Ménalt pour protéger les temples des dieux, les routes commerciales et les voyageurs du Monde des Douze.",
     "keywords": "L'Ordre du Cœur Vaillant groupe ordre coeur vaillant chevalerie Ménalt Xélor Helioboros temples dieux routes voyageurs Bonta Brâkmar Aurore Pourpre Hyrkul Raval Djaul Rushu Dofus"
+  },
+  {
+    "title": "Les Zobals",
+    "type": "Groupe",
+    "href": "pages/groupes/zobals",
+    "summary": "Guerriers masqués héritiers des Masques Primordiaux, capables de changer de style de combat selon les pouvoirs de leurs masques.",
+    "keywords": "Les Zobals groupe zobals zobal Masques Primordiaux Maskemane Razad Karail Morld Sadida Iop Lacrima Cornu Mollu Kouto Smisse Pazteks Kwetzakk Ul'Khan village zobal Dofus Wakfu"
+  },
+  {
+    "title": "Les Roublards",
+    "type": "Groupe",
+    "href": "pages/groupes/roublards",
+    "summary": "Organisation de criminels, stratèges et artificiers fondée par Raval, liée à Sram, aux explosifs et à la famille Smisse.",
+    "keywords": "Les Roublards groupe roublards roublard Clan des Roublards Raval Sram Dralbour Vil Smisse famille Smisse Remington Smisse Grany Smisse bombes explosifs sabotage Uk'Not'Allag Djaul Brakmar Bonta Amakna Dofus Wakfu"
+  },
+  {
+    "title": "Les Steamers",
+    "type": "Groupe",
+    "href": "pages/groupes/steamers",
+    "summary": "Ingénieurs, explorateurs et technomages de Sufokia voués à Oktapodas, maîtres de la vapeur, des tourelles et des machines marines.",
+    "keywords": "Les Steamers groupe steamers steamer Sufokia Oktapodas Osamodas technomagie vapeur marinventeurs tourelles machines océans exploration sous-marine Frida Mofette Prince Adale Stasis Dofus Wakfu"
+  },
+  {
+    "title": "Les Voyageurs Dimensionnels",
+    "type": "Groupe",
+    "href": "pages/groupes/voyageurs-dimensionnels",
+    "summary": "Ordre d'explorateurs, chercheurs et technomages dirigé par l'Explorancienne, pionnier des portails vers les Dimensions Divines.",
+    "keywords": "Les Voyageurs Dimensionnels groupe voyageurs dimensionnels ordre explorateurs chercheurs technomages Explorancienne Pandora Echo portails dimensionnels Dimensions Divines orichor Enutrosor Srambad Xélorium Gein Mal Dimensionnel Égarés Plaines de Cania Dofus Wakfu"
   },
   {
     "title": "Les Bontariens",
@@ -1119,6 +1280,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Khan Karkass Boufbawler ultime Iop Héros Dofus, Dofus le film"
   },
   {
+    "title": "Klime",
+    "type": "Personnage",
+    "href": "pages/personnages/klime",
+    "summary": "Inconnue - Frigost, Ennemis - Dofus",
+    "keywords": "Klime Emilk Maître cordonnier château Harebourg Inconnue Frigost Ennemis Dofus Ordre du Cul Botté Clepsydre Comte Harebourg"
+  },
+  {
   "title": "Kriss la Krass",
   "type": "Personnage",
   "href": "pages/personnages/kriss-la-krass",
@@ -1204,8 +1372,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Madagaskan",
     "type": "Personnage",
     "href": "pages/personnages/madagaskan",
-    "summary": "CRA - Famille d'Évangelyne - Wakfu la série",
-    "keywords": "Madagaskan Mentor de Flopin CRA Famille d'Évangelyne Wakfu la série"
+    "summary": "CRA - Guilde des Murmures, Famille d'Évangelyne - Wakfu la série",
+    "keywords": "Madagaskan Mentor de Flopin CRA Guilde des Murmures Famille d'Évangelyne Wakfu la série"
   },
   {
     "title": "Maïmane",
@@ -1271,6 +1439,13 @@ window.KROSMOZ_SEARCH_DATA = [
   "keywords": "Miranda Brocanteuse de Kelba Ecaflip Figurants Wakfu la série"
 },
   {
+  "title": "Missiz Frizz",
+  "type": "Personnage",
+  "href": "pages/personnages/missiz-frizz",
+  "summary": "Inconnue - Frigost, Ennemis - Dofus",
+  "keywords": "Missiz Frizz Dame de Glace Forgefroide Inconnue Frigost Ennemis Dofus forgemage xélor Comte Harebourg Clepsydre Armutins Feu Noir"
+},
+  {
   "title": "Moon",
   "type": "Personnage",
   "href": "pages/personnages/moon",
@@ -1290,6 +1465,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/nimoda",
     "summary": "OSAMODAS - Héros - Waven, Bestiale",
     "keywords": "Nimoda Comtesse d’Yrehn, liée au destin tragique de l’Élante OSAMODAS Héros Waven, Bestiale"
+  },
+  {
+    "title": "Nileza",
+    "type": "Personnage",
+    "href": "pages/personnages/nileza",
+    "summary": "Inconnue - Frigost, Ennemis - Dofus",
+    "keywords": "Nileza Alchimiste des Jardins d'Hiver Inconnue Frigost Ennemis Dofus longévité immortalité alchimie Comte Harebourg Clepsydre Gloursons"
   },
   {
     "title": "Nora",
@@ -1589,6 +1771,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/sumens",
     "summary": "Enutrof, Gardien des mois - Protecteur - Dofus",
     "keywords": "Sumens protecteur du mois de Juinssidor Enutrof Gardien des mois Protecteur Enutrof or abondance récoltes prospérité Silouate Dofus"
+  },
+  {
+    "title": "Sylargh",
+    "type": "Personnage",
+    "href": "pages/personnages/sylargh",
+    "summary": "Inconnue - Frigost, Ennemis - Dofus",
+    "keywords": "Sylargh Brigandin inventeur transporteur brigandin Inconnue Frigost Ennemis Dofus mécanique ingénierie Comte Harebourg Clepsydre Missiz Frizz Ombre Sakai"
   },
   {
     "title": "Terrakourial",
@@ -1960,6 +2149,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/artefacts/artefacts#dofus-vulbis",
     "summary": "Dofus pondu par Tylezia, protégé par Crocabulia et lié à Tyzerion, Oyukipoca et aux premiers âges du Monde des Douze.",
     "keywords": "Dofus Vulbis artefact Tylezia Crocabulia Tyzerion Oyukipoca Chagouars Village Primordial Dragoeufs Dragœufs Osamodas Grozilla Grasmera dragons primordiaux"
+  },
+  {
+    "title": "Le Dofus Forgelave",
+    "type": "Artefact",
+    "href": "pages/artefacts/artefacts#dofus-forgelave",
+    "summary": "Authentique œuf de dragon à la chaleur constante, associé à Volkaragnar, forgeron de la Fratrie des Oubliés.",
+    "keywords": "Dofus Forgelave artefact Volkaragnar Fratrie des Oubliés feu lave chaleur Crocobur dague d'Imaguni Volkornes œuf de dragon"
   },
   {
     "title": "Domaine Sauvage",

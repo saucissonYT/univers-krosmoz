@@ -243,10 +243,6 @@ body.characters-index-page .character-card {
     box-shadow 0.32s ease;
 }
 
-body.characters-index-page .character-card[hidden] {
-  display: none;
-}
-
 body.characters-index-page .character-card:hover,
 body.characters-index-page .character-card:focus-visible {
   border-color: rgba(216, 177, 106, 0.58);
@@ -259,6 +255,10 @@ body.characters-index-page .character-card img {
   height: 100%;
   filter: saturate(0.95) contrast(1.04) brightness(0.82);
   transition: transform 0.46s ease, filter 0.46s ease;
+}
+
+body.characters-index-page .character-card[href="nileza"] img {
+  object-position: 72% center;
 }
 
 body.characters-index-page .character-card:hover img,
@@ -398,7 +398,6 @@ body.characters-index-page .character-card:focus-visible .character-card-copy st
   }
 
   body.characters-index-page .character-filter.is-open .character-filter-menu {
-    max-height: 420px;
     max-height: min(52vh, 420px);
     margin-top: 0.35rem;
     padding: 0.45rem;
@@ -444,10 +443,6 @@ body.characters-index-page .character-card:focus-visible .character-card-copy st
       linear-gradient(90deg, rgba(12, 12, 18, 0.96), rgba(8, 8, 14, 0.98) 55%, rgba(12, 10, 12, 0.96));
     box-shadow: none;
     transform: none;
-  }
-
-  body.characters-index-page .character-card[hidden] {
-    display: none;
   }
 
   body.characters-index-page .character-card:last-child {
@@ -540,10 +535,6 @@ body.characters-index-page .character-card:focus-visible .character-card-copy st
   body.characters-index-page .character-card {
     grid-template-columns: 96px minmax(0, 1fr);
     min-height: 96px;
-  }
-
-  body.characters-index-page .character-card[hidden] {
-    display: none;
   }
 
   body.characters-index-page .character-card::after {
