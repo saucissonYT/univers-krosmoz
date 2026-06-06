@@ -25,6 +25,11 @@ body.artefacts-page {
   overflow: hidden;
 }
 
+body.artefacts-page header,
+body.artefacts-page .site-topbar {
+  border-bottom: 0;
+}
+
 body.artefacts-page::before {
   content: '';
   position: fixed;
@@ -77,6 +82,15 @@ body.artefacts-page .krosmoz-legal-notice {
 .artifact-search-band {
   position: relative;
   z-index: 8;
+  width: 100%;
+  border-top: 1px solid rgba(201, 168, 76, 0.72);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  background: rgba(7, 7, 12, 0.94);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(10px);
+}
+
+.artifact-tools {
   width: min(1220px, calc(100% - 2rem));
   min-height: 72px;
   display: grid;
@@ -84,7 +98,7 @@ body.artefacts-page .krosmoz-legal-notice {
   align-items: center;
   gap: clamp(0.65rem, 1.4vw, 1.1rem);
   margin: 0 auto;
-  padding: 0.7rem 0 0.2rem;
+  padding: 0.7rem 0;
 }
 
 .artifact-search {
@@ -1047,15 +1061,23 @@ body.artefacts-page .krosmoz-legal-notice {
   }
 
   .artifact-search-band {
+    width: 100%;
+  }
+
+  .artifact-tools {
     width: calc(100% - 1.5rem);
     min-height: 58px;
     grid-template-columns: 1fr;
     gap: 0.2rem;
-    padding: 0.5rem 0 0;
+    padding: 0.8rem 0;
   }
 
   .artifact-search {
     gap: 0.62rem;
+    min-height: 42px;
+    padding: 0 0.75rem;
+    border: 1px solid rgba(201,168,76,0.16);
+    background: rgba(6,6,12,0.42);
   }
 
   .artifact-search::before {
@@ -1064,6 +1086,7 @@ body.artefacts-page .krosmoz-legal-notice {
   }
 
   .artifact-search input {
+    min-height: 42px;
     font-size: 0.66rem;
     letter-spacing: 0.16em;
   }

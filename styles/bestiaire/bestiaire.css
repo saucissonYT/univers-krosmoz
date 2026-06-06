@@ -52,11 +52,11 @@ body.bestiary-index-page {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, min(74vw, 96vh)));
+  grid-template-columns: repeat(2, minmax(0, min(44vw, 58vh)));
   gap: clamp(0.6rem, 1.6vw, 1.15rem);
   justify-content: center;
   align-items: center;
-  width: min(2360px, 190vw);
+  width: min(1500px, calc(100vw - 1rem));
   min-height: calc(100svh - 112px);
   margin: 0 auto;
   padding: clamp(1.2rem, 2.2vw, 2rem) clamp(0.6rem, 1.8vw, 1.4rem) clamp(1.1rem, 2.4vw, 1.7rem);
@@ -75,7 +75,7 @@ body.bestiary-index-page {
   --bestiary-parchment: url("../../assets/bestiaire/parcho-page-v1.webp?v=20260605-single");
   position: relative;
   display: grid;
-  grid-template-columns: clamp(9.5rem, 16vw, 14rem) minmax(0, 1fr);
+  grid-template-columns: clamp(7.6rem, 12.4vw, 11.1rem) minmax(0, 1fr);
   grid-template-rows: auto minmax(0, 1fr);
   column-gap: clamp(0.8rem, 1.5vw, 1.2rem);
   width: 100%;
@@ -156,7 +156,7 @@ body.bestiary-index-page {
   justify-self: stretch;
   display: grid;
   place-items: center;
-  min-height: clamp(8.25rem, 18vh, 13rem);
+  min-height: clamp(7rem, 14vh, 10.4rem);
   margin: 0;
   overflow: visible;
   border-bottom: 0;
@@ -167,8 +167,8 @@ body.bestiary-index-page {
   z-index: 1;
   width: auto;
   height: auto;
-  max-width: min(100%, 220px);
-  max-height: clamp(8.25rem, 18vh, 13rem);
+  max-width: min(92%, 172px);
+  max-height: clamp(6.8rem, 14vh, 10.2rem);
   object-fit: contain;
   filter: sepia(0.82) saturate(0.74) contrast(1.07) drop-shadow(0 12px 18px rgba(48, 28, 11, 0.24));
   mix-blend-mode: multiply;
@@ -182,14 +182,14 @@ body.bestiary-index-page {
   grid-row: 1 / span 2;
   min-height: 0;
   display: grid;
-  grid-template-columns: clamp(9.5rem, 16vw, 14rem) minmax(0, 1fr);
+  grid-template-columns: clamp(7.6rem, 12.4vw, 11.1rem) minmax(0, 1fr);
   grid-template-rows: auto auto auto minmax(0, 1fr);
   column-gap: clamp(0.8rem, 1.5vw, 1.2rem);
 }
 
 .bestiary-kicker {
   grid-column: 2;
-  margin: clamp(0.6rem, 1.2vh, 0.9rem) 0 0;
+  margin: clamp(1.1rem, 2.2vh, 1.55rem) 0 0;
   font-family: "Cinzel", serif;
   font-size: clamp(0.72rem, 0.95vw, 0.9rem);
   font-weight: 600;
@@ -202,7 +202,7 @@ body.bestiary-index-page {
 
 .bestiary-copy h2 {
   grid-column: 2;
-  margin: 0.08rem 0 0;
+  margin: 0.18rem 0 0;
   padding-top: 0.18rem;
   font-family: "Parisienne", "IM Fell English", cursive;
   font-size: clamp(3rem, 4vw, 4.45rem);
@@ -252,13 +252,19 @@ body.bestiary-index-page {
   text-align: justify;
 }
 
-.bestiary-scroll p:first-child::first-letter {
+.bestiary-dropcap {
   float: left;
-  margin: 0.26rem 0.46rem 0 0;
+  width: 5.4rem;
+  margin: 0.22rem 0.72rem 0 0;
   font-family: "Parisienne", cursive;
-  font-size: clamp(4.25rem, 4.9vw, 5.35rem);
-  line-height: 1.02;
+  font-size: clamp(3.9rem, 4.5vw, 4.9rem);
+  line-height: 0.98;
   color: #522c11;
+  text-align: left;
+}
+
+.bestiary-dropcap-rest {
+  padding-left: 0;
 }
 
 @keyframes bestiaryScrollHint {

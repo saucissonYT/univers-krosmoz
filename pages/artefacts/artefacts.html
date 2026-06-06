@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles/common.css">
-<link rel="stylesheet" href="../../styles/artefacts/artefacts.css?v=25">
+<link rel="stylesheet" href="../../styles/artefacts/artefacts.css?v=31">
 <script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"CollectionPage","name":"Artefacts | Univers Krosmoz","headline":"Artefacts | Univers Krosmoz","description":"Galerie des artefacts majeurs du Krosmoz, presentes comme des pieces de musee.","url":"https://univers-krosmoz.fr/pages/artefacts/artefacts","image":"https://univers-krosmoz.fr/assets/artefacts/eliacube.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"}}</script>
 <script src="../../scripts/site-common.js" defer></script>
 <script src="../../scripts/artefacts.js?v=8" defer></script>
@@ -35,11 +35,13 @@
 <main class="artefacts-main" aria-labelledby="artefacts-title">
   <section class="artifact-hall" data-artifact-hall aria-label="Galerie des artefacts">
     <div class="artifact-search-band" aria-label="Recherche d'artefact">
-      <label class="artifact-search" for="artifact-search">
-        <span>Rechercher</span>
-        <input id="artifact-search" data-artifact-search type="search" placeholder="Nom ou mot-clé d'artefact" autocomplete="off">
-      </label>
-      <output class="artifact-search-count" data-artifact-search-count for="artifact-search" aria-live="polite"></output>
+      <div class="artifact-tools">
+        <label class="artifact-search" for="artifact-search">
+          <span>Recherche d'artefact</span>
+          <input id="artifact-search" data-artifact-search type="search" placeholder="Nom ou mot-clé d'artefact" autocomplete="off">
+        </label>
+        <output class="artifact-search-count" data-artifact-search-count for="artifact-search" aria-live="polite"></output>
+      </div>
     </div>
     <button class="artifact-nav artifact-nav-prev" type="button" data-artifact-prev aria-label="Artefact pr&eacute;c&eacute;dent">
       <span aria-hidden="true">&larr;</span>

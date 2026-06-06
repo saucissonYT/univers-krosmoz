@@ -1,5 +1,11 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+06/06/2026
+
+- Modification de l'horloge chonologie
+- Ajout du bestiaire
+- Fix navbar artefact
+
 05/06/2026
 
 - Mise à jour de la page d’accueil
