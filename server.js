@@ -28,6 +28,7 @@ const pageLikesDatabaseDirectory = process.env.PAGE_LIKES_DATABASE_DIR || join(r
 const pageLikesDatabaseFile = join(pageLikesDatabaseDirectory, "page-likes.sqlite");
 let pageLikesDatabase = null;
 const pageDirectories = [
+  "pages/bestiaire",
   "pages/chronologies",
   "pages/contact",
   "pages/histoire",

@@ -18,6 +18,7 @@
   const links = [
     { label: "Personnages", href: "pages/personnages/personnages", match: "/pages/personnages/" },
     { label: "Groupes", href: "pages/groupes/groupes", match: "/pages/groupes/" },
+    { label: "Bestiaire", href: "pages/bestiaire/bestiaire", match: "/pages/bestiaire/" },
     { label: "Régions", href: "pages/regions/regions", match: "/pages/regions/" },
     { label: "Artefacts", href: "pages/artefacts/artefacts", match: "/pages/artefacts/" },
     {
@@ -115,6 +116,24 @@
       });
       document.head.append(link);
     });
+  };
+
+  const ensureNavbarFont = () => {
+    if (document.head.querySelector("style[data-navbar-font-lock]")) {
+      return;
+    }
+
+    const style = document.createElement("style");
+    style.dataset.navbarFontLock = "true";
+    style.textContent = `
+      .site-topbar .brand,
+      .site-topbar .top-nav .nav-link,
+      .site-topbar .nav-menu-item,
+      .site-topbar .mobile-nav-toggle {
+        font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif !important;
+      }
+    `;
+    document.head.append(style);
   };
 
   const isActive = (entry) => {
@@ -560,6 +579,7 @@
   };
 
   ensureFavicons();
+  ensureNavbarFont();
   mountHeader();
   mountAnalytics();
   mountPageLike();

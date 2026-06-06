@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/common.css">
-<link rel="stylesheet" href="styles/accueil/accueil.css?v=102">
+<link rel="stylesheet" href="styles/accueil/accueil.css?v=109">
 
 <script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"WebSite","name":"Accueil | Univers Krosmoz","headline":"Accueil | Univers Krosmoz","description":"Univers Krosmoz vous ouvre les portes du Monde des Douze : histoires, personnages, artefacts, régions et chronologies de Dofus, Wakfu et Waven.","url":"https://univers-krosmoz.fr/","image":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp"}}}</script>
 <script src="scripts/site-common.js" defer></script>
@@ -669,7 +669,7 @@
         title: '\u00c8re du Wakfu',
         kicker: 'Apr\u00e8s le chaos',
         time: '06:00',
-        image: 'assets/accueil/chronologie-wakfu-ogrest.webp',
+        image: 'assets/accueil/chronologie-wakfu-ogrest-clock.webp',
         position: 'center',
         transform: 'none',
         href: chronologyPageUrl
@@ -697,38 +697,157 @@
     const minuteHand = chronologyClock.querySelector('[data-home-chrono-minute-hand]');
     let chronologyEraIndex = 0;
     let chronologyHourStep = 0;
+    let chronologyTurnFallback = null;
+    let chronologySwitchFallback = null;
+    let chronologyTransitionFallback = null;
+    let chronologyExitFallback = null;
+    const chronologyImagePreloads = new Map();
 
-    const setChronologyEra = (index, direction = 1) => {
-      const normalizedIndex = (index + chronologyEras.length) % chronologyEras.length;
-      const era = chronologyEras[normalizedIndex];
-      if (direction) {
-        chronologyHourStep += direction;
+    const setChronologyHandTurn = (hand, startAngle, endAngle) => {
+      if (!hand) return;
+      hand.style.setProperty('--chrono-hand-start-angle', `${startAngle}deg`);
+      hand.style.setProperty('--chrono-hand-end-angle', `${endAngle}deg`);
+      hand.style.setProperty('--hand-angle', `${endAngle}deg`);
+    };
+
+    const preloadChronologyEra = (era) => {
+      if (!era?.image) return Promise.resolve();
+      if (chronologyImagePreloads.has(era.image)) {
+        return chronologyImagePreloads.get(era.image);
       }
 
+      const preloadImage = new Image();
+      preloadImage.decoding = 'async';
+      preloadImage.src = era.image;
+      const preloadPromise = preloadImage.decode
+        ? preloadImage.decode().catch(() => undefined)
+        : new Promise((resolve) => {
+            preloadImage.onload = resolve;
+            preloadImage.onerror = resolve;
+          });
+
+      chronologyImagePreloads.set(era.image, preloadPromise);
+      return preloadPromise;
+    };
+
+    const markChronologyReady = (enableControls = true) => {
+      chronologyClock.classList.remove('is-turning');
+      chronologyClock.classList.add('is-ready');
+      if (enableControls) {
+        if (previousButton) previousButton.disabled = false;
+        if (nextButton) nextButton.disabled = false;
+      }
+    };
+
+    const enableChronologyControls = () => {
+      if (previousButton) previousButton.disabled = false;
+      if (nextButton) nextButton.disabled = false;
+    };
+
+    const startChronologyEraExit = () => {
+      link?.classList.remove('is-era-leaving');
+      void chronologyClock.offsetWidth;
+      link?.classList.add('is-era-leaving');
+    };
+
+    const applyChronologyEra = (era, normalizedIndex, reveal = false) => {
+      let ghostImage = null;
+      if (reveal && image && imageElement) {
+        image.querySelectorAll('.home-chrono-era-ghost').forEach((ghost) => ghost.remove());
+        ghostImage = imageElement.cloneNode(false);
+        ghostImage.removeAttribute('data-home-chrono-img');
+        ghostImage.setAttribute('aria-hidden', 'true');
+        ghostImage.classList.remove('is-era-entering');
+        ghostImage.classList.add('home-chrono-era-ghost');
+        image.appendChild(ghostImage);
+        imageElement.classList.remove('is-era-entering');
+        link?.classList.remove('is-era-entering');
+        link?.classList.remove('is-era-leaving');
+      }
+
+      image?.style.setProperty('--chrono-era-image', `url('${era.image}')`);
+      if (imageElement) {
+        imageElement.src = era.image;
+        imageElement.style.objectPosition = era.position || 'center';
+        imageElement.style.transform = era.transform || 'none';
+      }
+      if (time) time.textContent = era.time;
+      if (title) title.textContent = era.title;
+      if (kicker) kicker.textContent = era.kicker;
+      if (link) link.href = era.href;
+      chronologyEraIndex = normalizedIndex;
+
+      if (reveal) {
+        void chronologyClock.offsetWidth;
+        imageElement?.classList.add('is-era-entering');
+        link?.classList.add('is-era-entering');
+        if (chronologyTransitionFallback) window.clearTimeout(chronologyTransitionFallback);
+        chronologyTransitionFallback = window.setTimeout(() => {
+          imageElement?.classList.remove('is-era-entering');
+          link?.classList.remove('is-era-entering');
+          link?.classList.remove('is-era-leaving');
+          ghostImage?.remove();
+          enableChronologyControls();
+        }, 700);
+      } else {
+        enableChronologyControls();
+      }
+    };
+
+    chronologyEras.forEach(preloadChronologyEra);
+
+    const setChronologyEra = async (index, direction = 1) => {
+      const normalizedIndex = (index + chronologyEras.length) % chronologyEras.length;
+      const era = chronologyEras[normalizedIndex];
+
+      if (!direction) {
+        applyChronologyEra(era, normalizedIndex);
+        markChronologyReady();
+        return;
+      }
+
+      if (previousButton) previousButton.disabled = true;
+      if (nextButton) nextButton.disabled = true;
+      await preloadChronologyEra(era);
+
+      const previousHourStep = chronologyHourStep;
+      chronologyHourStep += direction;
+      setChronologyHandTurn(hourHand, previousHourStep * 30, chronologyHourStep * 30);
+      setChronologyHandTurn(minuteHand, previousHourStep * 360, chronologyHourStep * 360);
+      chronologyClock.classList.remove('is-turning');
+      void chronologyClock.offsetWidth;
       chronologyClock.classList.add('is-turning');
       chronologyClock.classList.remove('is-ready');
-      previousButton.disabled = true;
-      nextButton.disabled = true;
-      time.textContent = era.time;
-      hourHand?.style.setProperty('--hand-angle', `${chronologyHourStep * 30}deg`);
-      minuteHand?.style.setProperty('--hand-angle', `${chronologyHourStep * 360}deg`);
 
-      window.setTimeout(() => {
-        image?.style.setProperty('--chrono-era-image', `url('${era.image}')`);
-        if (imageElement) {
-          imageElement.src = era.image;
-          imageElement.style.objectPosition = era.position || 'center';
-          imageElement.style.transform = era.transform || 'none';
-        }
-        if (title) title.textContent = era.title;
-        if (kicker) kicker.textContent = era.kicker;
-        if (link) link.href = era.href;
-        chronologyEraIndex = normalizedIndex;
-        chronologyClock.classList.remove('is-turning');
-        chronologyClock.classList.add('is-ready');
-        previousButton.disabled = false;
-        nextButton.disabled = false;
-      }, 820);
+      let hasSwitched = false;
+      let hasApplied = false;
+      let handleTurnEnd;
+      const switchEra = () => {
+        if (hasSwitched) return;
+        hasSwitched = true;
+        if (chronologySwitchFallback) window.clearTimeout(chronologySwitchFallback);
+        if (chronologyExitFallback) window.clearTimeout(chronologyExitFallback);
+        applyChronologyEra(era, normalizedIndex, true);
+      };
+
+      const finishTurn = () => {
+        if (hasApplied) return;
+        hasApplied = true;
+        if (chronologyTurnFallback) window.clearTimeout(chronologyTurnFallback);
+        hourHand?.removeEventListener('animationend', handleTurnEnd);
+        if (!hasSwitched) switchEra();
+        markChronologyReady(false);
+      };
+
+      handleTurnEnd = (event) => {
+        if (event.animationName !== 'homeChronoHandTurn') return;
+        finishTurn();
+      };
+
+      hourHand?.addEventListener('animationend', handleTurnEnd, { once: true });
+      chronologyExitFallback = window.setTimeout(startChronologyEraExit, 700);
+      chronologySwitchFallback = window.setTimeout(switchEra, 760);
+      chronologyTurnFallback = window.setTimeout(finishTurn, 940);
     };
 
     previousButton?.addEventListener('click', () => {
@@ -1164,4 +1283,3 @@
 <script src="scripts/legal-notice.js"></script>
 </body>
 </html>
-

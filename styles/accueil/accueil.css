@@ -1940,7 +1940,7 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 4;
   background:
     radial-gradient(circle at 50% 40%, transparent 0 48%, rgba(9, 5, 13, 0.1) 72%, rgba(6, 3, 8, 0.3)),
     linear-gradient(180deg, rgba(8, 5, 14, 0.02), rgba(8, 5, 14, 0.16));
@@ -1959,6 +1959,16 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   opacity: 1;
   transform-origin: center center;
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-chrono-era-image img.is-era-entering {
+  animation: homeChronoEraImageEnter 0.58s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.home-chrono-era-ghost {
+  z-index: 3 !important;
+  pointer-events: none;
+  animation: homeChronoEraImageLeave 0.58s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .home-chrono-standard-time {
@@ -2238,9 +2248,82 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
 }
 
 .home-chrono-clock.is-turning .home-chrono-era-image {
-  opacity: 0;
-  transform: scale(1.08);
+  opacity: 1;
   transition-delay: 0s;
+}
+
+.home-chrono-clock.is-turning .home-chrono-hand {
+  animation: homeChronoHandTurn 0.82s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.home-chrono-era-card.is-era-entering {
+  animation: homeChronoEraCardReveal 0.58s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.home-chrono-era-card.is-era-leaving {
+  animation: homeChronoEraCardLeave 0.2s cubic-bezier(0.7, 0, 0.84, 0) both;
+}
+
+@keyframes homeChronoHandTurn {
+  from {
+    transform: translate(var(--hand-offset-x, -50%), var(--hand-offset-y, -92%)) rotate(var(--chrono-hand-start-angle, var(--hand-angle, 0deg)));
+  }
+
+  to {
+    transform: translate(var(--hand-offset-x, -50%), var(--hand-offset-y, -92%)) rotate(var(--chrono-hand-end-angle, var(--hand-angle, 0deg)));
+  }
+}
+
+@keyframes homeChronoEraImageEnter {
+  0% {
+    opacity: 0;
+    filter: brightness(1.34) saturate(1.18) blur(3px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(1) saturate(1) blur(0);
+  }
+}
+
+@keyframes homeChronoEraImageLeave {
+  0% {
+    opacity: 1;
+    filter: brightness(1) saturate(1) blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    filter: brightness(0.72) saturate(0.82) blur(4px);
+  }
+}
+
+@keyframes homeChronoEraCardReveal {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%) translateY(0.45rem) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes homeChronoEraCardLeave {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateX(-50%) translateY(-0.32rem) scale(0.97);
+  }
 }
 
 @keyframes homeChronoFutureRing {

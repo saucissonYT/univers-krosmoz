@@ -275,7 +275,7 @@ header {
   border: 0;
   background: transparent;
   color: #f3efe4;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
   font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -344,7 +344,7 @@ header {
   border: 0;
   background: transparent;
   color: var(--text-main);
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
   font-size: 0.72rem;
   letter-spacing: 0.07em;
   text-align: left;
@@ -657,7 +657,7 @@ header {
     border: 1px solid rgba(201, 168, 76, 0.26);
     background: rgba(255, 255, 255, 0.04);
     color: #f6f2e7;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
     font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
