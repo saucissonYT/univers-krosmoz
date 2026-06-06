@@ -486,6 +486,11 @@ body.character-hecate .character-hero-bg {
   background-image: url('../../assets/personnages/HECATE.webp');
   background-position: 50% center;
 }
+body.character-hell-mina .character-hero-bg {
+  background-image: url('../../assets/personnages/hell-mina.webp');
+  background-position: 50% center;
+  transform: scale(1);
+}
 body.character-ibago .character-hero-bg {
   background-image: url('../../assets/personnages/ibago.webp');
   background-position: 50% center;
@@ -2118,12 +2123,14 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="moumoune-stroud"] img { object-position: 50% center; }
 .character-card[href="monsieur-m"] img { object-position: center center; }
 .character-card[href="razortemps"] img { object-position: center center; transform: scale(1); }
+.character-card[href="reine-des-voleurs"] img { object-position: 74% center; transform: scale(1); }
 .character-card[href="tristepin"] img { object-position: 52% center; }
 .character-card[href="dieu-iop"] img { object-position: 30% center; }
 .character-card[href="rubilax"] img { object-position: center center; }
 .character-card[href="djaul"] img { object-position: 47% center; transform: scale(1); }
 .character-card[href="brumaire"] img { object-position: 76% center; transform: scale(1); }
 .character-card[href="hecate"] img { object-position: 42% center; transform: scale(1); }
+.character-card[href="hell-mina"] img { object-position: 52% center; transform: scale(1); }
 .character-card[href="maimane"] img { object-position: 39% center; transform: scale(1); }
 .character-card[href="maminala"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="rushu"] img { object-position: center center; }
@@ -2131,6 +2138,7 @@ body.character-biography-page .related-card:nth-child(n+5) {
 .character-card[href="deesse-cra"] img { object-position: 24% center; }
 .character-card[href="flopin-de-percedal"] img { object-position: center center; transform: scale(1); }
 .character-card[href="frida-mofette"] img { object-position: 50% center; transform: scale(1); }
+.character-card[href="ganymede"] img { object-position: 56% center; transform: scale(1); }
 .character-card[href="gein"] img { object-position: 50% center; transform: scale(1); }
 .character-card[href="madagaskan"] img { object-position: center center; }
 .character-card[href="cleophee"] img { object-position: center center; }
@@ -3306,6 +3314,11 @@ body.character-rathrosk .character-hero-bg {
 body.character-roi-nidas .character-hero-bg {
   background-image: url('../../assets/personnages/roi-nidas.webp');
   background-position: 50% center;
+}
+
+body.character-ganymede .character-hero-bg {
+  background-image: url('../../assets/personnages/ganymede.webp');
+  background-position: 56% center;
 }
 
 body.character-reine-des-voleurs .character-hero-bg {

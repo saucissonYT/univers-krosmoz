@@ -282,6 +282,10 @@
       "href": "frida-mofette"
     },
     {
+      "name": "Ganymède",
+      "href": "ganymede"
+    },
+    {
       "name": "Gein",
       "href": "gein"
     },
@@ -316,6 +320,10 @@
     {
       "name": "Hécate",
       "href": "hecate"
+    },
+    {
+      "name": "Hell Mina",
+      "href": "hell-mina"
     },
     {
       "name": "Hyrkul",
@@ -1413,6 +1421,15 @@
       ]
     },
     {
+      "name": "Ganymède",
+      "href": "ganymede",
+      "image": "../../assets/personnages/cartes/ganymede.webp",
+      "classLabel": "Inconnue",
+      "groups": [
+        "Mythe & légende"
+      ]
+    },
+    {
       "name": "Gein",
       "href": "gein",
       "image": "../../assets/personnages/cartes/gein.webp",
@@ -1491,6 +1508,15 @@
       "classLabel": "Gardien des mois",
       "groups": [
         "Protecteur"
+      ]
+    },
+    {
+      "name": "Hell Mina",
+      "href": "hell-mina",
+      "image": "../../assets/personnages/cartes/hell-mina.webp",
+      "classLabel": "Iop",
+      "groups": [
+        "Ennemis"
       ]
     },
     {
@@ -2190,7 +2216,7 @@
       "image": "../../assets/personnages/cartes/reine-des-voleurs.webp",
       "classLabel": "Sram",
       "groups": [
-        "Srambad"
+        "Ennemis"
       ]
     },
     {
@@ -2228,7 +2254,7 @@
       "image": "../../assets/personnages/cartes/roi-nidas.webp",
       "classLabel": "Enutrof",
       "groups": [
-        "Énutrofors"
+        "Ennemis"
       ]
     },
     {

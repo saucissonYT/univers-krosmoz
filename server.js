@@ -21,6 +21,8 @@ const host = process.env.HOST || "0.0.0.0";
 const resendApiKey = process.env.RESEND_API_KEY || "";
 const contactTo = process.env.CONTACT_TO || "universkrosmoz@gmail.com";
 const resendFrom = process.env.RESEND_FROM || "Univers Krosmoz <onboarding@resend.dev>";
+const canonicalHost = "univers-krosmoz.fr";
+const legacyWwwHost = "www.univers-krosmoz.fr";
 const rateLimit = new Map();
 const pageLikeRateLimit = new Map();
 const pageLikesFile = join(root, "data", "reactions", "page-likes.json");
@@ -380,6 +382,24 @@ function redirectPermanent(request, response, location) {
   response.end(`Moved permanently to ${location}`);
 }
 
+function getRequestHost(request) {
+  const forwardedHost = request.headers["x-forwarded-host"];
+  const hostHeader = Array.isArray(forwardedHost)
+    ? forwardedHost[0]
+    : forwardedHost || request.headers.host || "";
+
+  return String(hostHeader).split(",")[0].trim().toLowerCase().replace(/:\d+$/, "");
+}
+
+function redirectWwwToCanonicalHost(request, response, url) {
+  if (getRequestHost(request) !== legacyWwwHost) {
+    return false;
+  }
+
+  redirectPermanent(request, response, `https://${canonicalHost}${url.pathname}${url.search}`);
+  return true;
+}
+
 async function handleContact(request, response) {
   if (!resendApiKey) {
     sendJson(response, 500, { ok: false, message: "Le formulaire n'est pas encore configuré." });
@@ -556,6 +576,10 @@ async function serveStatic(request, response) {
 const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url || "/", "http://localhost");
+
+    if (redirectWwwToCanonicalHost(request, response, url)) {
+      return;
+    }
 
     if (request.method === "POST" && url.pathname === "/api/contact") {
       await handleContact(request, response);

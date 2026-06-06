@@ -1092,6 +1092,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "keywords": "Frida Mofette Commandante de l'armée sufokienne Steamer Figurants Wakfu la série Sufokia Stasis Steamflex Griffes Pourpres"
   },
   {
+    "title": "Ganymède",
+    "type": "Personnage",
+    "href": "pages/personnages/ganymede",
+    "summary": "Inconnue - Mythe & légende - Dofus",
+    "keywords": "Ganymède guide Incarnam Tainéla apprentissage Viviantho Méryde de l'Apprentissage Inconnue Mythe & légende Dofus"
+  },
+  {
     "title": "Gein",
     "type": "Personnage",
     "href": "pages/personnages/gein",
@@ -1160,6 +1167,13 @@ window.KROSMOZ_SEARCH_DATA = [
     "href": "pages/personnages/hecate",
     "summary": "Gardien des mois - Protecteur - Dofus",
     "keywords": "Hécate Mystificatrice protectrice du mois de Joullier Gardien des mois Protecteur démone illusion ombre Moskitos Sram Ulgrude Djaul Jiva Dofus"
+  },
+  {
+    "title": "Hell Mina",
+    "type": "Personnage",
+    "href": "pages/personnages/hell-mina",
+    "summary": "Iop - Ennemis - Dofus",
+    "keywords": "Hell Mina Souveraine de la Forêt Maléfique Iop Ennemis Dofus Dark Vlad Malters Tertre du Long Sommeil Amakna"
   },
   {
     "title": "Hyrkul",
@@ -1664,8 +1678,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Reine des Voleurs",
     "type": "Personnage",
     "href": "pages/personnages/reine-des-voleurs",
-    "summary": "Sram - Srambad - Dofus",
-    "keywords": "Reine des Voleurs souveraine de Srambad fille de Sram voleuse immortelle Cour Sombre Roi Nidas Enutrosor Dofus"
+    "summary": "Sram - Ennemis - Dofus",
+    "keywords": "Reine des Voleurs souveraine de Srambad fille de Sram voleuse immortelle Cour Sombre Ennemis Roi Nidas Enutrosor Dofus"
   },
   {
     "title": "Reines de Bonta",
@@ -1685,8 +1699,8 @@ window.KROSMOZ_SEARCH_DATA = [
     "title": "Roi Nidas",
     "type": "Personnage",
     "href": "pages/personnages/roi-nidas",
-    "summary": "Enutrof - Énutrofors - Dofus",
-    "keywords": "Roi Nidas souverain d'Enutrosor gardien des richesses kamas Enutrof Énutrofors Reine des Voleurs Shushus Dofus"
+    "summary": "Enutrof - Ennemis - Dofus",
+    "keywords": "Roi Nidas souverain d'Enutrosor gardien des richesses kamas Enutrof Ennemis Reine des Voleurs Shushus Dofus"
   },
   {
     "title": "Roi Osamodas",

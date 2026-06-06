@@ -9,9 +9,14 @@
   const spread = document.querySelector("[data-bestiary-spread]");
   if (!spread) return;
 
-  const cursor = spread.querySelector("[data-bestiary-cursor]");
   const pages = Array.from(spread.querySelectorAll("[data-bestiary-page]"));
   const turnButtons = Array.from(spread.querySelectorAll("[data-bestiary-turn]"));
+  const searchInput = document.querySelector("[data-bestiary-search]");
+  const filter = document.querySelector("[data-bestiary-filter]");
+  const filterToggle = filter?.querySelector(".bestiary-filter-toggle");
+  const filterLabel = filterToggle?.querySelector("strong");
+  const filterMenu = filter?.querySelector(".bestiary-filter-menu");
+  const filterCount = document.querySelector("[data-bestiary-filter-count]");
   const parchmentUrl = "/assets/bestiaire/parcho-page-v1.webp?v=20260605-single";
   let spreadStart = 0;
   let focusedSide = "left";
@@ -21,6 +26,26 @@
   });
 
   const getMaxSpreadStart = () => Math.max(0, pages.length - 2);
+  const clampSpreadStart = (index) => Math.min(Math.max(0, index), getMaxSpreadStart());
+
+  const normalize = (value) => (value || "")
+    .toString()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+  const entries = pages.map((page, index) => {
+    const title = page.querySelector("h2")?.textContent?.trim() || `Fiche ${index + 1}`;
+    const kicker = page.querySelector(".bestiary-kicker")?.textContent?.trim() || "";
+    return {
+      index,
+      page,
+      title,
+      search: normalize(`${title} ${kicker} ${page.textContent || ""}`)
+    };
+  });
 
   const renderSpread = () => {
     pages.forEach((page, index) => {
@@ -37,11 +62,29 @@
 
     spread.classList.toggle("is-focused-left", focusedSide === "left");
     spread.classList.toggle("is-focused-right", focusedSide === "right");
+  };
 
-    if (cursor) {
-      cursor.classList.toggle("is-left", focusedSide === "left");
-      cursor.classList.toggle("is-right", focusedSide === "right");
-    }
+  const setFilterLabel = (label) => {
+    if (filterLabel) filterLabel.textContent = label || "Toutes";
+  };
+
+  const setActiveFilterItem = (value) => {
+    filterMenu?.querySelectorAll(".bestiary-filter-item").forEach((item) => {
+      const isActive = item.dataset.value === value;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+  };
+
+  const updateCount = (text) => {
+    if (filterCount) filterCount.textContent = text || "";
+  };
+
+  const resetFilterState = () => {
+    if (searchInput) searchInput.value = "";
+    setFilterLabel("Toutes");
+    setActiveFilterItem("");
+    updateCount("");
   };
 
   const focusSide = (side) => {
@@ -49,7 +92,27 @@
     renderSpread();
   };
 
+  const showEntry = (index, options = {}) => {
+    const targetIndex = Math.min(Math.max(0, index), pages.length - 1);
+    spreadStart = clampSpreadStart(targetIndex);
+    focusedSide = targetIndex === spreadStart ? "left" : "right";
+    renderSpread();
+
+    if (!options.keepFilterLabel) {
+      const entry = entries[targetIndex];
+      setFilterLabel(entry?.title || "Toutes");
+      setActiveFilterItem(String(targetIndex));
+    }
+  };
+
   const turnSpread = (side) => {
+    if (window.matchMedia("(max-width: 920px)").matches) {
+      const currentIndex = spreadStart + (focusedSide === "right" ? 1 : 0);
+      const direction = side === "right" ? 1 : -1;
+      showEntry(currentIndex + direction, { keepFilterLabel: true });
+      return;
+    }
+
     const maxStart = getMaxSpreadStart();
 
     if (side === "right" && spreadStart < maxStart) {
@@ -69,37 +132,119 @@
     focusSide(side);
   };
 
-  const getSideFromPointer = (event) => {
-    const bounds = spread.getBoundingClientRect();
-    return event.clientX < bounds.left + bounds.width / 2 ? "left" : "right";
+  const closeFilterMenu = () => {
+    filter?.classList.remove("is-open");
+    filterToggle?.setAttribute("aria-expanded", "false");
   };
 
-  spread.addEventListener("pointermove", (event) => {
-    const side = getSideFromPointer(event);
-    focusSide(side);
+  const openFilterMenu = () => {
+    filter?.classList.add("is-open");
+    filterToggle?.setAttribute("aria-expanded", "true");
+  };
 
-    if (cursor && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-      cursor.classList.add("is-visible");
-      cursor.style.transform = `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
+  const populateFilterMenu = () => {
+    if (!filterMenu) return;
+
+    filterMenu.innerHTML = "";
+
+    const createItem = (label, value) => {
+      const item = document.createElement("button");
+      item.className = "bestiary-filter-item";
+      item.type = "button";
+      item.role = "menuitem";
+      item.dataset.value = value;
+      item.textContent = label;
+      return item;
+    };
+
+    filterMenu.appendChild(createItem("Toutes", ""));
+    entries.forEach((entry) => {
+      filterMenu.appendChild(createItem(entry.title, String(entry.index)));
+    });
+
+    setActiveFilterItem("");
+  };
+
+  const applySearch = () => {
+    const query = normalize(searchInput?.value || "");
+
+    if (!query) {
+      setFilterLabel("Toutes");
+      setActiveFilterItem("");
+      updateCount("");
+      showEntry(0, { keepFilterLabel: true });
+      return;
     }
-  });
 
-  spread.addEventListener("pointerleave", () => {
-    cursor?.classList.remove("is-visible");
-  });
+    const matches = entries.filter((entry) => entry.search.includes(query));
+
+    if (!matches.length) {
+      updateCount("Aucun resultat");
+      return;
+    }
+
+    const firstMatch = matches[0];
+    showEntry(firstMatch.index);
+    updateCount(matches.length === 1 ? "1 fiche" : `${matches.length} fiches`);
+  };
 
   turnButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      resetFilterState();
       turnSpread(button.dataset.bestiaryTurn);
     });
   });
 
   window.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
+      resetFilterState();
       turnSpread("left");
     } else if (event.key === "ArrowRight") {
+      resetFilterState();
       turnSpread("right");
     }
+  });
+
+  populateFilterMenu();
+
+  if (filterToggle && filter) {
+    filterToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (filter.classList.contains("is-open")) {
+        closeFilterMenu();
+      } else {
+        openFilterMenu();
+      }
+    });
+  }
+
+  filterMenu?.addEventListener("click", (event) => {
+    const item = event.target.closest(".bestiary-filter-item");
+    if (!item) return;
+
+    const value = item.dataset.value || "";
+    if (searchInput) searchInput.value = "";
+    updateCount("");
+
+    if (!value) {
+      setFilterLabel("Toutes");
+      setActiveFilterItem("");
+      showEntry(0, { keepFilterLabel: true });
+    } else {
+      showEntry(Number(value));
+    }
+
+    closeFilterMenu();
+  });
+
+  searchInput?.addEventListener("input", applySearch);
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest("[data-bestiary-filter]")) closeFilterMenu();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeFilterMenu();
   });
 
   renderSpread();

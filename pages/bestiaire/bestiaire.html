@@ -27,19 +27,35 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Crimson+Text:wght@400;600&family=IM+Fell+English:ital@0;1&family=Parisienne&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../styles/common.css?v=20260605-navbar">
-<link rel="stylesheet" href="../../styles/bestiaire/bestiaire.css?v=20260605-35">
+<link rel="stylesheet" href="../../styles/bestiaire/bestiaire.css?v=20260606-craqueleur">
 
 <script type="application/ld+json" data-seo="univers-krosmoz">{"@context":"https://schema.org","@type":"CollectionPage","name":"Bestiaire | Univers Krosmoz","headline":"Bestiaire | Univers Krosmoz","description":"Feuilletez le bestiaire de l'Univers Krosmoz et découvrez les créatures emblématiques du Monde des Douze.","url":"https://univers-krosmoz.fr/pages/bestiaire/bestiaire","image":"https://univers-krosmoz.fr/assets/bestiaire/bestiaire.webp","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/"},"publisher":{"@type":"Organization","name":"Univers Krosmoz","url":"https://univers-krosmoz.fr/","logo":{"@type":"ImageObject","url":"https://univers-krosmoz.fr/assets/logo-krosmoz.webp"}}}</script>
 <script src="../../scripts/site-common.js?v=20260605-navbar" defer></script>
-<script src="../../scripts/bestiaire.js?v=20260605-bwork" defer></script>
+<script src="../../scripts/bestiaire.js?v=20260606-mobile-chevrons" defer></script>
 </head>
 <body class="bestiary-index-page">
 <header data-site-header></header>
 
+<div class="bestiary-filter-band" aria-label="Recherche et filtres du bestiaire">
+  <div class="bestiary-tools">
+    <label class="bestiary-search" for="bestiary-search">
+      <span>Rechercher</span>
+      <input id="bestiary-search" data-bestiary-search type="search" placeholder="Nom ou mot-cle de creature" autocomplete="off">
+    </label>
+    <div class="bestiary-filter nav-dropdown" data-bestiary-filter data-value="">
+      <button class="bestiary-filter-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+        <span>Creature</span>
+        <strong>Toutes</strong>
+        <span class="nav-caret" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="bestiary-filter-menu" role="menu"></div>
+    </div>
+    <output class="bestiary-filter-count" data-bestiary-filter-count for="bestiary-search" aria-live="polite"></output>
+  </div>
+</div>
+
 <main class="bestiary-main">
   <section class="bestiary-spread is-focused-left" data-bestiary-spread aria-label="Bestiaire">
-    <div class="bestiary-cursor-chevron" data-bestiary-cursor aria-hidden="true"></div>
-
     <article class="bestiary-page-card is-focused" data-bestiary-page="left" aria-labelledby="tofu-title">
       <div class="bestiary-page-number">I</div>
       <figure class="bestiary-illustration">
@@ -121,6 +137,324 @@
       </div>
     </article>
 
+    <article class="bestiary-page-card bestiary-page-scarafeuille" data-bestiary-page="right" aria-labelledby="scarafeuille-title" hidden>
+      <div class="bestiary-page-number">V</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/scarafeuille/scarafeuille.png" alt="Scarafeuille à carapace verte" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Carapace quadramentale</p>
+        <h2 id="scarafeuille-title">Scarafeuille</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Scarafeuilles sont des créatures emblématiques que l'on rencontre principalement sur la Plaine des Scarafeuilles, au sud d'Amakna. Derrière leur apparence de simples insectes cuirassés se cache une espèce fascinante dont l'évolution est intimement liée aux forces magiques qui traversent le Monde des Douze.</p>
+          <p>Au fil des générations, les Scarafeuilles se sont adaptés aux courants de la Brise Quadramentale, cette énergie fondamentale qui alimente la magie élémentaire. Cette adaptation leur a permis de développer des affinités avec différents éléments, donnant naissance à plusieurs variétés aisément reconnaissables à la couleur de leur carapace. Certains arborent des teintes rouges, d'autres bleues, vertes, blanches ou encore noires, chaque couleur reflétant leur lien particulier avec une manifestation de la Brise Quadramentale.</p>
+          <p>Selon les croyances les plus répandues, cette remarquable capacité d'adaptation ne serait pas le fruit du hasard. Elle serait un cadeau accordé par Pouki, le Méryde du camouflage. Grâce à cette bénédiction, les Scarafeuilles auraient développé des carapaces capables de mieux s'intégrer à leur environnement et de canaliser les influences élémentaires qui les entourent. Cette particularité leur a permis de prospérer dans des habitats variés tout en devenant l'une des espèces les plus reconnaissables des plaines amaknéennes.</p>
+          <p>Leur robuste carapace constitue leur principale défense contre les prédateurs et les aventuriers. Très recherchées pour leurs propriétés artisanales, ces carapaces sont utilisées dans la confection de nombreux équipements et attirent régulièrement chasseurs et collectionneurs. Parmi eux figure notamment Duanaf, connu pour entretenir une impressionnante collection de carapaces de Scarafeuilles. D'après les récits, ce sont les carapaces vertes qui ont sa préférence, bien qu'il soit difficile de savoir si cet intérêt relève de leur rareté ou simplement de ses goûts personnels.</p>
+          <p>Malgré leur petite taille, les Scarafeuilles jouent un rôle important dans l'équilibre naturel des plaines où ils vivent. Leur présence témoigne de l'influence permanente des forces élémentaires sur la faune du Monde des Douze et rappelle que même les créatures les plus modestes peuvent être façonnées par les puissantes énergies qui parcourent le monde.</p>
+          <p>Aujourd'hui encore, les Scarafeuilles demeurent l'une des espèces les plus caractéristiques d'Amakna. Entre leurs étonnantes variations de couleurs, leur lien avec la Brise Quadramentale et les légendes qui entourent leur origine, ils incarnent parfaitement la richesse et la diversité de la faune du Monde des Douze.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card bestiary-page-chacha" data-bestiary-page="right" aria-labelledby="chacha-title" hidden>
+      <div class="bestiary-page-number">VI</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/chacha/chacha-cadre.webp" alt="Chacha noir aux grands yeux" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Félin charmeur</p>
+        <h2 id="chacha-title">Chacha</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Chachas sont de petits félins domestiques particulièrement répandus dans le Monde des Douze. Derrière leur apparence attendrissante se cache pourtant une créature bien plus influente qu'il n'y paraît. Avec leur pelage soyeux, leurs grands yeux expressifs et leur tempérament affectueux, les Chachas exercent un charme auquel peu d'habitants savent résister. Leur réputation est telle qu'ils sont souvent considérés comme de véritables experts de la manipulation affective, capables d'obtenir nourriture, confort et attention grâce à quelques miaulements bien placés.</p>
+          <p>Ces petites boules de poils sont particulièrement appréciées pour leur nature joueuse et câline. Leur présence est fréquente aussi bien dans les campagnes amaknéennes que dans les grandes cités du Monde des Douze, où ils partagent le quotidien des aventuriers, des artisans et des nobles. Leur capacité à susciter immédiatement la sympathie leur a permis de devenir l'un des animaux de compagnie les plus populaires du continent. Certains plaisantent même en affirmant que les Chachas constituent une menace redoutable tant leur pouvoir de séduction semble irrésistible.</p>
+          <p>Contrairement à ce que l'on pourrait croire, les Chachas possèdent également leur propre dimension spirituelle. Les traditions félines évoquent notamment Chatan, le seigneur des Chachas noirs, ainsi que Nixie, la déesse des Chachas roux. Ces figures occupent une place importante dans les récits et croyances associés à l'espèce, témoignant d'une culture bien plus riche que ne le laisse supposer leur apparente insouciance.</p>
+          <p>L'influence des Chachas dépasse même le cadre de la faune puisqu'ils occupent une place dans l'astrologie du Monde des Douze. Le signe du Chacha s'étend du 22 Joullier au 23 Fraouctor. Selon les croyances populaires, les aventuriers nés sous ce signe hériteraient d'un tempérament charmeur et d'une grande facilité à séduire leur entourage. On leur prête également une certaine habileté à obtenir ce qu'ils désirent grâce à leur charisme plutôt qu'à la force ou à l'autorité.</p>
+          <p>Au fil des siècles, les Chachas sont devenus bien plus que de simples animaux domestiques. Symboles de malice, de séduction et d'indépendance, ils occupent une place particulière dans l'imaginaire collectif du Monde des Douze. Derrière leurs ronronnements et leur apparente douceur se cachent des créatures qui ont su conquérir le cœur de générations entières d'habitants, parfois avec une efficacité que bien des héros pourraient leur envier.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card bestiary-page-abraknyde" data-bestiary-page="right" aria-labelledby="abraknyde-title" hidden>
+      <div class="bestiary-page-number">VII</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/abraknyde/abraknyde.png" alt="Abraknyde de bois et d'écorce" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Gardien sylvestre</p>
+        <h2 id="abraknyde-title">Abraknyde</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Abraknydes sont parmi les créatures les plus anciennes et les plus mystérieuses du Monde des Douze. Leur origine demeure incertaine et plusieurs légendes tentent d'expliquer leur existence. Selon les récits les plus répandus, ces êtres de bois et d'écorce étaient autrefois des humains. Certains affirment qu'ils existaient déjà lorsque les premiers colons arrivèrent en Amakna, à une époque où la région n'était qu'une immense forêt. D'autres attribuent leur création au Chêne Mou, qui aurait transformé les hommes qu'il tuait en Abraknydes durant sa guerre contre l'humanité. Une troisième tradition raconte que Silvosse aurait changé les bûcherons de Boulgour en créatures sylvestres pour les punir d'avoir détruit trop d'arbres.</p>
+          <p>Malgré leurs différences, ces récits partagent un point commun, les Abraknydes seraient tous issus d'êtres humains frappés par une puissante magie liée à la forêt. Serviteurs ou gardiens des forces naturelles, ils semblent entretenir un lien particulier avec des figures telles que le Chêne Mou ou le protecteur Silvosse. Il est même possible que la vérité se situe à la croisée de ces différentes légendes, dont les événements se seraient mélangés au fil des siècles.</p>
+          <p>Aujourd'hui, les Abraknydes peuplent encore de nombreuses zones boisées d'Amakna, bien que les plus puissants d'entre eux résident au cœur de la célèbre Forêt des Abraknydes. Certains arbres de cette forêt possèdent d'ailleurs des visages, des yeux ou des membres figés dans le bois, renforçant les récits selon lesquels d'anciens Abraknydes auraient été définitivement enracinés. Parmi eux se distinguent plusieurs variétés, comme les Abraknydes Vénérables, les Abraknydes Sombres, les Tronknydes ou encore le mystérieux Abraknyde Ancestral, dont l'autorité semble reconnue par les autres membres de son espèce.</p>
+          <p>Bien qu'ils aient adopté l'apparence d'arbres vivants, les Abraknydes conservent certains traits de leur ancienne humanité. Beaucoup sont encore capables de parler la langue des hommes, même si leur caractère les pousse rarement à engager la conversation. Lorsqu'ils combattent, ils utilisent leurs racines et leurs branches comme des armes, les faisant surgir du sol pour frapper leurs ennemis à distance. Ils sont souvent accompagnés d'Araknes ou de Champas qui partagent leur habitat forestier.</p>
+          <p>Les légendes les plus inquiétantes prétendent enfin qu'un individu tué par un Abraknyde pourrait à son tour être transformé en créature sylvestre. Qu'il s'agisse d'une simple croyance ou d'une réalité oubliée, cette rumeur contribue à entretenir le mystère qui entoure ces gardiens de la forêt, dont les racines semblent profondément ancrées dans les plus anciennes histoires d'Amakna.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="wabbit-title" hidden>
+      <div class="bestiary-page-number">VIII</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/wabbit/wabbit.png" alt="Wabbit aux longues oreilles" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Peuple des cawottes</p>
+        <h2 id="wabbit-title">Wabbit</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Wabbits sont un peuple de petits rongeurs originaires d'Amakna, aujourd'hui installé sur un archipel composé de plusieurs îlots et d'un vaste réseau de galeries souterraines. Derrière leur apparence ridicule, leurs longues oreilles et leur accent si particulier se cache une civilisation étonnamment organisée. Autrefois paisibles, les Wabbits sont devenus au fil du temps un peuple agressif et méfiant, largement influencé par le règne autoritaire du Wa Wabbit, un souverain qui aurait usurpé le trône après avoir assassiné son rival Lulé et s'être emparé de la prestigieuse panoplie du Wa.</p>
+          <p>Selon leurs traditions, une ancienne prophétie annonçait qu'un Wa guiderait son peuple vers une terre fertile où il pourrait prospérer. Lorsque les forêts d'Amakna furent progressivement détruites par les bûcherons de Brouce Boulgoure, les Wabbits quittèrent leur terre natale et entreprirent un long voyage à travers des galeries creusées sous la Mer d'Asse. Le 15 Descendre 634, ils atteignirent finalement l'île des Lenalds, où ils furent accueillis avec bienveillance par les habitants.</p>
+          <p>Cette hospitalité tourna rapidement au drame. Sous l'autorité du Wa Wabbit, les nouveaux arrivants se retournèrent contre les Lenalds, massacrant une partie de la population et forçant les survivants à l'exil. Une fois maîtres de l'archipel, les Wabbits développèrent leur royaume et construisirent de nombreuses installations souterraines, notamment un laboratoire secret où furent menées diverses expériences ayant donné naissance à d'étranges créatures comme les Wabbits Vampires ou les Wabbits Siamois.</p>
+          <p>Malgré leur apparence maladroite, les Wabbits disposent également d'une technologie avancée. Leur garde royale utilise des armures mécaniques tandis que leurs ingénieurs ont conçu de puissantes foreuses capables d'explorer les profondeurs du sous-sol. Ces inventions leur ont notamment permis de découvrir l'île de Kartonpath et d'étendre leur influence sur une partie de l'archipel.</p>
+          <p>Aujourd'hui encore, les Wabbits vivent sous la domination du Wa Wabbit. Si quelques individus, comme Xiap, refusent de se soumettre à son autorité, la plupart continuent d'obéir à ce souverain tyrannique. Entre leurs inventions surprenantes, leur obsession pour les Cawottes et l'histoire sanglante de leur conquête, les Wabbits demeurent l'un des peuples les plus singuliers et les plus imprévisibles du Monde des Douze.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="malter-title" hidden>
+      <div class="bestiary-page-number">IX</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/malter/malter.png" alt="Malter végétal tenant une longue tige" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Esprit de la Forêt Maléfique</p>
+        <h2 id="malter-title">Malter</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Malters sont de mystérieux esprits végétaux qui peuplent les profondeurs de la Forêt Maléfique. Dissimulés parmi les feuillages, les racines et les fleurs de cette forêt redoutée, ils observent silencieusement les voyageurs qui osent s'aventurer dans leur domaine. Leur apparence délicate et presque inoffensive contraste fortement avec la véritable nature de ces créatures, dont les intentions sont rarement bienveillantes.</p>
+          <p>Ces êtres tirent leur existence de la magie qui imprègne la forêt. Les légendes racontent que Terrakourial, le Dragon de la Terre, a laissé son empreinte sur ces lieux, permettant aux pétales des Malters de conserver leur éclat et leur vitalité aussi longtemps qu'ils demeurent à l'intérieur de la Forêt Maléfique. Loin de leur territoire, cette protection disparaît et leur apparence se dégrade rapidement, les reliant intimement aux bois qu'ils habitent.</p>
+          <p>Les Malters passent l'essentiel de leur temps à épier les aventuriers depuis les hauteurs des arbres ou derrière les épais buissons du labyrinthe forestier. Grâce à leur discrétion naturelle et à leur parfaite connaissance des lieux, ils sont capables de suivre une proie pendant des heures sans jamais être repérés. Beaucoup de voyageurs perdus dans la forêt ignorent même qu'ils sont observés depuis leur entrée dans le domaine des Malters.</p>
+          <p>Sous leurs airs de petites créatures curieuses se cache cependant une mission bien plus sinistre. Les Malters cherchent à attirer les visiteurs toujours plus profondément au cœur de la Forêt Maléfique. Par leurs ruses, leurs apparitions furtives ou les fausses pistes qu'ils laissent derrière eux, ils conduisent progressivement les intrus vers le centre du labyrinthe végétal.</p>
+          <p>Là réside leur véritable maîtresse, Hell Mina, la redoutable souveraine de la Forêt Maléfique. Les Malters lui offrent les aventuriers égarés comme sacrifices, accomplissant ainsi le rôle qui leur a été confié depuis des générations. Derrière leurs pétales colorés et leur apparente fragilité se cachent donc les serviteurs dévoués d'une puissance ancienne, faisant des Malters l'une des nombreuses menaces dissimulées dans les ombres de la Forêt Maléfique.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card bestiary-page-crocodaille" data-bestiary-page="right" aria-labelledby="crocodaille-title" hidden>
+      <div class="bestiary-page-number">X</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/crocodaille/crocodaille.png" alt="Crocodaille trapu aux écailles verdâtres" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Guerrier des écailles</p>
+        <h2 id="crocodaille-title">Crocodaille</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Crocodailles sont des créatures originaires de l'Archipel des Écailles, un vaste territoire autrefois dominé par l'empereur Crocahualpa depuis la cité de Crocuzko. Leur histoire est étroitement liée à l'une des plus grandes invasions de l'ère primitive. Sous l'influence du Shushu Bulak'Shub'Tan, qui avait pris possession de l'esprit de leur empereur, les guerriers écailleux franchirent le portail de Kaziman et déferlèrent sur Amakna. Leur armée écrasa les Nimbos chargés de garder le passage avant de semer la destruction à travers le continent, de Sidimote à Cania. Cette période de conquête atteignit son apogée lors du Crépuscule de Jade en l'an -355, avant que les Crocodailles ne soient finalement repoussées quelques années plus tard par Rathrosk et le Chevalier de l'Automne. Piégés en Amakna après la fermeture du portail par Tressa Vert-de-Gris, une partie du peuple crocodaillien se retrouva définitivement coupée de son archipel natal.</p>
+          <p>Pendant ce temps, les Crocodailles demeurées à Crocuzko connurent un destin tout aussi tragique. Après la disparition de leur empereur, elles abandonnèrent progressivement le culte de leurs divinités, affaiblissant le panthéon crocodaillien. Selon les légendes, la déesse tortue-lune Ixchelonia plongea alors l'île dans une nuit éternelle après avoir découvert l'infidélité de son époux Kinichinti. La colère du dieu soleil qui s'ensuivit brûla la peau et les yeux des habitants de Crocuzko, donnant naissance aux Crocodailles albinos, une nouvelle lignée adaptée à cette obscurité permanente.</p>
+          <p>Le destin des Crocodailles d'Amakna bascula plusieurs siècles plus tard avec la naissance de Crocoburio. Fils de Grougalorasalar, il élimina les mâles de son espèce avant d'engendrer une nouvelle génération de Crocodailles réputées plus agressives et plus cruelles que leurs ancêtres. Armé plus tard de la légendaire épée Crocobur offerte par son père, Crocoburio lança à son tour une vaste campagne de conquête à travers le Monde des Douze. Son avancée fut finalement stoppée aux portes de Bonta par le dragon blanc Croulaklakoss.</p>
+          <p>Après cet échec, les Crocodailles d'Amakna furent repoussées vers les marécages situés près de la Montagne des Koalaks. Isolées du reste du monde durant des générations, elles semblèrent perdre progressivement une partie de leur intelligence et retournèrent à un mode de vie beaucoup plus primitif. Certaines traditions rapportent qu'elles vouent encore un culte à Azrou, le Méryde des Cloques, même si leur compréhension des rites religieux paraît aujourd'hui extrêmement limitée.</p>
+          <p>Autrefois conquérants redoutés capables de faire trembler des royaumes entiers, les Crocodailles ne sont plus que l'ombre de la puissance qu'elles représentaient durant l'ère primitive. Pourtant, derrière leur apparente décadence subsistent les vestiges d'un peuple ancien dont l'histoire demeure profondément liée à celle d'Amakna, de l'Archipel des Écailles et des grandes guerres qui ont façonné le Monde des Douze.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="chafer-title" hidden>
+      <div class="bestiary-page-number">XI</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/chafer/chafer.png" alt="Chafer squelette armé d'une grande lame" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Squelette animé</p>
+        <h2 id="chafer-title">Chafer</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Chafers sont les morts revenus à la vie sous la forme de squelettes animés. Présents dans presque toutes les régions du Monde des Douze, ils constituent l'une des manifestations les plus répandues de la nécromancie et des forces obscures. Leur existence peut avoir de nombreuses origines. Certains sont le résultat d'anciennes malédictions, comme celles qui frappent certaines zones d'Incarnam, tandis que d'autres sont relevés par la volonté du dieu Sram, par l'influence du Feu Noir ou encore par les manipulations de puissants nécromanciens. Bien qu'ils aient perdu leur chair et leur identité, les Chafers conservent souvent des fragments de leur agressivité passée, ce qui en fait des adversaires redoutés des voyageurs imprudents.</p>
+          <p>On rencontre des Chafers dans la plupart des cimetières du Monde des Douze, mais leurs concentrations les plus importantes se trouvent à Bonta, Brâkmar et Amakna. Ils partagent ces lieux avec d'autres créatures liées à la mort, comme les fantômes, les vampires ou diverses bêtes nocturnes attirées par les énergies funestes qui imprègnent ces terres. Les cimetières constituent ainsi de véritables écosystèmes où les morts et les vivants coexistent dans un équilibre précaire.</p>
+          <p>Contrairement à ce que leur apparence pourrait laisser croire, les Chafers ne forment pas toujours des hordes désorganisées. Dans de nombreux cas, ils sont placés sous l'autorité d'individus plus puissants tels que le Chafer Ronin, le Chafer Haï ou Kardorim. D'autres fois, ils servent directement des maîtres plus dangereux encore, comme l'archevêque Erazal ou le Dark Vlad, qui utilisent les pouvoirs du Feu Noir pour soumettre les morts à leur volonté. Pour surveiller leurs territoires, les Chafers s'appuient souvent sur les Ribs, d'étranges Bouftous squelettiques employés comme gardiens aux abords des cryptes et des tombeaux.</p>
+          <p>Les Chafers occupent également une place particulière dans certaines sociétés. À Brâkmar, ils sont régulièrement utilisés comme fantassins. Peu coûteux à maintenir et faciles à remplacer, ils constituent une force militaire appréciée malgré leur efficacité limitée. Sur Incarnam, leur présence est en revanche combattue par le Milimulou, une créature connue pour se nourrir de leurs os. D'autres histoires racontent encore comment l'équipage du Perlouze, sur l'île de Moon, fut transformé en Chafers à la suite d'une terrible malédiction vaudou.</p>
+          <p>Qu'ils soient les vestiges d'anciennes tragédies, les instruments de sombres maîtres ou les victimes de malédictions oubliées, les Chafers incarnent la frontière fragile entre la vie et la mort. Omniprésents dans les cimetières du Monde des Douze, ils rappellent que certains défunts refusent parfois de trouver le repos, que ce soit par volonté propre ou sous l'influence de forces qui les dépassent.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="koalak-title" hidden>
+      <div class="bestiary-page-number">XII</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/koalak/koalak.png" alt="Koalak orange tenant une massue" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Habitant des hauteurs</p>
+        <h2 id="koalak-title">Koalak</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Koalaks sont des créatures vivant dans la Montagne des Koalaks, une vaste région sauvage située au sud du Village des Éleveurs. Malgré leur apparence parfois étrange et leur comportement souvent imprévisible, ils forment un peuple bien implanté dans ces terres escarpées. Les traditions locales les présentent comme des fidèles de Tasmalin, le Méryde de la Montagne, dont l'influence se ressent dans leur attachement aux reliefs rocheux et à leur territoire ancestral. Au fil du temps, les Koalaks se sont adaptés à cet environnement hostile, développant une société organisée autour de différentes castes et spécialisations.</p>
+          <p>La majorité des tribus koalaks vit cependant sous l'emprise de Skeunk, un puissant maître qui exerce son autorité grâce à un mystérieux chant. Ce pouvoir lui aurait été enseigné par Darkchy, le Méryde de l'Agressivité. Sous l'effet de cette mélodie ensorcelante, de nombreux Koalaks se retrouvent soumis à sa volonté et exécutent ses ordres sans discussion. Cette domination a profondément marqué l'histoire récente de la montagne et explique pourquoi la plupart des clans demeurent aujourd'hui sous son contrôle.</p>
+          <p>La société koalak se compose de nombreux individus aux rôles variés. Parmi eux figurent notamment les Dok Alako, qui remplissent les fonctions de médecins et de soigneurs auprès de leurs congénères. Grâce à leurs connaissances, ils assurent la survie des tribus et prennent en charge les blessés dans un environnement où les affrontements et les dangers naturels sont fréquents. Leur statut leur confère une place importante au sein de la communauté koalak.</p>
+          <p>Les relations entre les Koalaks et les habitants des régions voisines sont souvent tendues. Les créatures ont en effet la réputation peu enviable de souiller les sources qui prennent naissance dans leur montagne. Ces cours d'eau alimentent ensuite le Village des Éleveurs en eau potable, ce qui a donné naissance à de nombreuses plaisanteries concernant l'état mental parfois instable des Dragodindes élevées dans la région. Cette situation a notamment attiré l'attention de Poupik, la Méryde des Ruisseaux, qui nourrit une profonde antipathie envers les Koalaks et souhaiterait les voir sévèrement châtiés.</p>
+          <p>Entre traditions montagnardes, domination de Skeunk et réputation douteuse auprès des peuples voisins, les Koalaks occupent une place singulière dans la faune du Monde des Douze. Tantôt considérés comme de simples monstres, tantôt comme un véritable peuple doté de sa propre culture, ils demeurent les maîtres incontestés des hauteurs sauvages de la Montagne des Koalaks.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="gligli-title" hidden>
+      <div class="bestiary-page-number">XIII</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/gligli/gligli.png" alt="Gligli robuste aux défenses épaisses" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Sanglier de Cania</p>
+        <h2 id="gligli-title">Gligli</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Gliglis sont des sangliers que l'on rencontre principalement dans les vastes Landes de Cania. Réputés pour leur robustesse, leur appétit insatiable et leur tempérament parfois agressif, ils font partie des créatures les plus caractéristiques de cette région balayée par les vents. Leur comportement est relativement simple, les Gliglis passent la majeure partie de leur temps à fouiller le sol à la recherche de nourriture, n'hésitant pas à dévorer absolument tout ce qui leur tombe sous le groin.</p>
+          <p>Cette habitude alimentaire particulièrement douteuse a eu des conséquences inattendues au fil des siècles. Les Landes de Cania ayant été affectées par des perturbations temporelles liées aux manipulations de Septange, de nombreuses reliques issues d'autres époques se retrouvèrent dispersées dans la région. Fidèles à leur réputation, certains Gliglis avalèrent ces objets sans la moindre hésitation. L'exposition à ces artefacts chargés d'énergies temporelles provoqua alors d'étranges mutations donnant naissance à une variété singulière connue sous le nom de Gliglitch.</p>
+          <p>Les Gliglitchs se distinguent de leurs congénères par les anomalies qui affectent leur corps et leur comportement. Marqués par les distorsions du temps, ils représentent l'exemple le plus spectaculaire de l'influence exercée par les phénomènes temporels sur la faune des Landes de Cania. Leur existence constitue d'ailleurs l'un des témoignages les plus visibles des événements liés à Septange dans cette région.</p>
+          <p>Les Gliglis ne se limitent toutefois pas à cette seule variété. Au fil du temps, plusieurs espèces ont été recensées, chacune possédant ses propres particularités. Parmi les plus connues figurent les Gliglibidos, les Gliglicérins, les Gliglidoudurs ainsi que les Gliglitchs. Cette diversité témoigne de la remarquable capacité d'adaptation de ces créatures à leur environnement et aux phénomènes étranges qui affectent parfois les Landes de Cania.</p>
+          <p>Souvent considérés comme de simples sangliers sauvages, les Gliglis occupent pourtant une place à part dans l'écosystème canien. Entre leur incroyable faculté à survivre en dévorant tout ce qu'ils trouvent et les mutations provoquées par les anomalies temporelles de la région, ils illustrent parfaitement la manière dont la magie et les forces surnaturelles peuvent façonner les créatures du Monde des Douze.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="truche-title" hidden>
+      <div class="bestiary-page-number">XIV</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/truche/truche.png" alt="Truche au long cou et aux plumes claires" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Oiseau du Cirque</p>
+        <h2 id="truche-title">Truche</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Truches sont d'étranges créatures du Monde des Douze dont l'apparence rappelle vaguement celle des Dragodindes. Dotées de longues pattes puissantes, d'un cou particulièrement développé et d'un corps recouvert de plumes, elles se distinguent toutefois par leur imposant bec, qu'elles utilisent aussi bien pour se nourrir que pour se défendre. Malgré leur allure parfois maladroite, les Truches sont des animaux robustes et souvent bien plus dangereux qu'elles n'en ont l'air lorsque l'on s'approche un peu trop près de leur territoire.</p>
+          <p>Autrefois plus répandues, les Truches ont failli disparaître de la surface du Monde des Douze. Les causes exactes de leur déclin restent mal connues, mais leur population a atteint un niveau critique avant qu'une intervention ne permette d'éviter leur extinction. Leur survie est aujourd'hui largement attribuée aux efforts de l'Association des Gardiens de Truches, une organisation consacrée à la protection et à la préservation de l'espèce.</p>
+          <p>Grâce à cette initiative, les derniers représentants de leur peuple ont trouvé refuge au Cirque de Cania. Cette région est devenue le principal sanctuaire des Truches, offrant un environnement suffisamment sûr pour permettre à leur population de se maintenir. Une vaste volière y a notamment été construite afin d'accueillir plusieurs spécimens et d'assurer leur protection face aux dangers qui menaçaient autrefois leur existence.</p>
+          <p>Parmi les créatures qui résident dans cette réserve se trouve la célèbre Haute Truche, un spécimen particulièrement imposant et réputé pour son caractère difficile. Peu docile et farouchement territoriale, elle est considérée comme l'un des individus les plus remarquables de son espèce. Sa présence contribue largement à la réputation du Cirque de Cania auprès des aventuriers et des naturalistes.</p>
+          <p>Cependant, de nombreuses rumeurs entourent encore la volière des Truches. Certains évoquent l'existence de mystérieuses expériences menées sur ces oiseaux, loin des regards indiscrets. Si peu d'informations fiables permettent de confirmer ces histoires, elles alimentent depuis longtemps les légendes qui entourent les Truches. Entre espèce sauvée de l'extinction, créatures fascinantes et sujet de sombres spéculations, les Truches demeurent aujourd'hui l'une des curiosités les plus singulières des plaines de Cania.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="trooll-title" hidden>
+      <div class="bestiary-page-number">XV</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/trooll/trooll.png" alt="Trooll massif à la crinière claire" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Colosse chevelu</p>
+        <h2 id="trooll-title">Trooll</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Troolls sont de gigantesques créatures humanoïdes couvertes d'une épaisse fourrure que l'on rencontre dans de nombreuses régions du Monde des Douze. Réputés pour leur force colossale et leur endurance exceptionnelle, ils sont souvent employés comme gardiens, combattants ou gladiateurs. Leur apparence impressionnante et leur musculature hors norme en font des adversaires redoutables, même si leur intelligence est généralement considérée comme limitée. Beaucoup les comparent d'ailleurs aux Iops pour leur tendance à privilégier la force brute à la réflexion, une comparaison qui ne les offense pas forcément puisqu'ils accordent davantage d'importance à leurs exploits physiques qu'à leur réputation intellectuelle.</p>
+          <p>Parmi toutes les choses auxquelles un Trooll tient, aucune n'est plus précieuse que sa chevelure. Leur épaisse toison représente à leurs yeux un symbole de puissance, de prestige et d'identité. Les légendes racontent qu'un Trooll privé de ses cheveux perdrait une grande partie de sa vigueur et de sa détermination. Une fois tondu, il deviendrait incapable d'accomplir les prouesses qui faisaient auparavant sa renommée. Cette croyance est si profondément ancrée dans leur culture que la menace de la tonte est souvent considérée comme pire qu'une défaite au combat.</p>
+          <p>Certains Troolls nourrissent également un rêve singulier, celui du Troollback. Selon cette croyance, il existerait un moyen de retrouver l'état sauvage de leurs ancêtres, une époque où les Troolls étaient encore plus féroces, plus puissants et plus redoutés qu'aujourd'hui. Pour les partisans de cette idée, le Troollback représente un retour à une force primitive perdue au fil du temps, débarrassée des contraintes imposées par la civilisation.</p>
+          <p>La renommée des Troolls est particulièrement visible à la célèbre Foire du Trool. Ce vaste parc de divertissement a été fondé par Léonzi Trool, qui fit de ses congénères les principales attractions de son établissement. Les Troolls y participent régulièrement à des combats et à diverses épreuves destinées à impressionner les visiteurs. Leur puissance spectaculaire constitue l'une des plus grandes fiertés de la foire et contribue largement à sa réputation à travers le Monde des Douze.</p>
+          <p>Entre leur force légendaire, leur attachement presque sacré à leur chevelure et leur rêve de retrouver la sauvagerie de leurs ancêtres, les Troolls occupent une place unique parmi les créatures du Monde des Douze. Tantôt gardiens, tantôt gladiateurs ou simples colosses errants, ils demeurent l'incarnation même de la puissance brute, capables d'accomplir des exploits extraordinaires pour peu qu'on ne touche pas à leur précieuse crinière.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="arakne-title" hidden>
+      <div class="bestiary-page-number">XVI</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/arakne/arakne.png" alt="Arakne suspendue à son fil" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Prédatrice tisseuse</p>
+        <h2 id="arakne-title">Arakne</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Araknes sont des araignées prédatrices que l'on rencontre dans une grande partie du Monde des Douze. Adaptées à de nombreux environnements, elles peuplent aussi bien les champs, les forêts que les cavernes d'Amakna. Leur remarquable capacité à se dissimuler leur permet également de s'installer à proximité des habitations, où elles tissent leurs toiles dans les greniers, les caves ou les recoins oubliés. Bien que certaines soient de taille modeste, d'autres peuvent atteindre des dimensions impressionnantes et représenter une menace réelle pour les voyageurs imprudents.</p>
+          <p>Redoutables chasseuses, les Araknes vivent principalement de la capture de proies qu'elles immobilisent grâce à leurs toiles ou à leur venin. Leur patience est légendaire, certaines pouvant attendre des heures, voire des jours, avant qu'une victime ne s'approche suffisamment. Cette efficacité a permis à leur espèce de prospérer dans pratiquement tous les écosystèmes d'Amakna, où elles occupent une place importante parmi les prédateurs de petite et moyenne taille.</p>
+          <p>Malgré leur apparente simplicité, toutes les Araknes ne sont pas identiques. Certaines lignées ont évolué au fil du temps pour développer des caractéristiques bien plus avancées. C'est notamment le cas des Arak-Haï, une espèce plus intelligente et plus organisée que les Araknes ordinaires. Leur comportement laisse penser qu'elles possèdent une véritable structure sociale, capable de coordonner les actions de nombreux individus.</p>
+          <p>Au sommet de cette société se trouve Nyée, la reine des Arak-Haï. Figure centrale de son peuple, elle exerce son autorité sur les différentes colonies qui lui sont soumises. Les Arak-Haï lui obéissent avec une fidélité absolue et agissent souvent comme une force unifiée lorsqu'il s'agit de défendre leur territoire ou d'éliminer une menace. Cette organisation distingue fortement les Arak-Haï des simples Araknes que l'on rencontre dans la nature.</p>
+          <p>Omniprésentes dans les campagnes, les bois et les profondeurs souterraines du Monde des Douze, les Araknes comptent parmi les créatures les plus répandues d'Amakna. Si la plupart ne cherchent qu'à survivre en chassant leurs proies, l'existence des Arak-Haï et de leur reine Nyée rappelle que certaines lignées ont évolué bien au-delà du simple instinct animal, donnant naissance à l'une des sociétés arachnéennes les plus remarquables du monde connu.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="blop-title" hidden>
+      <div class="bestiary-page-number">XVII</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/blop/blop.png" alt="Blop vert gélatineux coiffé d'une fleur" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Gelée de Cania</p>
+        <h2 id="blop-title">Blop</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Blops sont d'étranges créatures végétales qui prolifèrent principalement autour des lacs et des plaines de Cania. Leur apparence gélatineuse, leurs couleurs éclatantes et leur manière caractéristique de se déplacer en bondissant les rendent immédiatement reconnaissables. Où qu'ils aillent, ils laissent résonner leur célèbre cri, un simple mais inimitable « Blop », devenu l'une des signatures sonores les plus connues des terres caniennes.</p>
+          <p>Il existe quatre grandes familles de Blops, chacune associée à une couleur et à une essence particulière, les Blops Coco, Griotte, Indigo et Reinette. Malgré leurs différences, ces créatures partagent le même mode de vie et occupent les mêmes territoires. On les rencontre souvent au milieu d'autres habitants des plaines, notamment des Porkass ou des Kanigrous, avec lesquels ils semblent coexister sans trop de difficultés. Leur présence est si importante dans certaines régions que les paysages de Cania sont aujourd'hui indissociables de leurs silhouettes rebondissantes.</p>
+          <p>Au cœur de leurs territoires se cache un lieu redouté par les aventuriers, l'antre des Blops Royaux. L'accès à ce domaine est surveillé par Biblop, un Sacrieur qui n'autorise le passage qu'aux porteurs d'une clé appropriée. Ceux qui franchissent ses portes doivent alors affronter les souverains des différentes lignées de Blops ainsi que leurs nombreux serviteurs gélatineux. Parmi ces créatures règne une entité particulièrement dangereuse, le Blop Multicolore Royal, dont la puissance est renforcée par la présence des autres rois Blops à ses côtés.</p>
+          <p>L'influence des Blops ne se limite pas aux plaines de Cania. Dans le Canyon Sauvage, les Koalaks ont développé une étrange capacité leur permettant d'invoquer des Blops parfaitement identiques à ceux que l'on trouve autour des lacs. Cette particularité demeure mal comprise et continue d'alimenter les théories des érudits qui s'intéressent à l'origine de ces créatures végétales.</p>
+          <p>À mi-chemin entre plante et créature vivante, les Blops comptent parmi les espèces les plus emblématiques de Cania. Leur prolifération, leur étonnante diversité et les dangers que représentent leurs souverains ont fait d'eux des figures incontournables du Monde des Douze, aussi familières aux aventuriers que redoutées lorsqu'ils se regroupent sous l'autorité de leurs rois.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="boo-title" hidden>
+      <div class="bestiary-page-number">XVIII</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/boo/boo.png" alt="Boo formé de boue vivante" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Boue vivante</p>
+        <h2 id="boo-title">Boo</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Boos sont d'étranges créatures constituées de boue vivante que l'on rencontre dans certaines zones humides du Monde des Douze. Formées d'amas de terre détrempée animés par une force mystérieuse, elles se montrent particulièrement agressives envers quiconque s'approche de leur territoire. Leur corps informe leur permet d'absorber une grande partie des coups qui leur sont portés, ce qui en fait des adversaires étonnamment résistants malgré leur apparence rudimentaire.</p>
+          <p>La principale faiblesse d'une Boo réside dans son humidité. Pour espérer la vaincre définitivement, il faut parvenir à dessécher la boue qui compose son corps. Cette tâche s'avère cependant compliquée tant ces créatures semblent capables de conserver l'eau qui les anime. Nombreux sont les aventuriers à avoir cru les éliminer avant de les voir continuer à se mouvoir comme si de rien n'était.</p>
+          <p>Bien que leur origine demeure inconnue, les Boos comptent parmi les créatures les plus singulières du Monde des Douze. Leur apparence simple cache une remarquable capacité de survie, faisant de ces amas de boue vivante des adversaires bien plus coriaces qu'ils n'en ont l'air.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="cacterre-title" hidden>
+      <div class="bestiary-page-number">XIX</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/cacterre/cacterre.png" alt="Cacterre portant un grand cactus épineux" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Esprit de Saharach</p>
+        <h2 id="cacterre-title">Cacterre</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Cacterres sont un peuple originaire de l'île de Saharach, présent bien avant que celle-ci ne soit frappée par la grande sécheresse qui façonna son paysage actuel. À une époque reculée, ils étaient connus sous le nom d'« esprits de la Nature » et faisaient partie intégrante de l'écosystème de l'île. Leur histoire est intimement liée aux bouleversements qui ont transformé Saharach au fil des âges. Confrontés autrefois aux redoutables Troolglodytes, leurs prédateurs naturels, les Cacterres développèrent progressivement des mécanismes de défense de plus en plus efficaces. Lorsque le climat de l'île changea, leur métabolisme évolua à son tour, leur donnant la peau épineuse qui les caractérise aujourd'hui.</p>
+          <p>Malgré leur apparence végétale et leur mode de vie isolé, les Cacterres entretiennent des relations complexes avec les autres habitants de Saharach. Leur conflit le plus célèbre les oppose à la Corporation Parafiole. À l'origine, les deux camps commerçaient pourtant pacifiquement autour de l'épice produite sur l'île. Selon Idarfen Madjika, les tensions apparurent lorsque les prix exigés par les Cacterres devinrent trop élevés aux yeux de la Corporation. Cette dernière tenta alors de récolter l'épice sans leur participation, provoquant la colère des autochtones et le début d'hostilités qui perdurent encore aujourd'hui. Depuis lors, les Cacterres n'hésitent pas à attaquer les convois et les installations qui empiètent sur leurs terres.</p>
+          <p>Les Cacterres possèdent également une culture particulièrement singulière. Leur langue repose presque exclusivement sur les sons « pik » et « pak », dont les variations de durée et les combinaisons permettent de former un vocabulaire complet. Grâce à un étrange rituel impliquant l'insertion d'une épine dans la peau d'un étranger, ils peuvent transmettre instantanément la compréhension de leur langage. Ils surnomment d'ailleurs les Douziens les « peaux douces », une appellation qui reflète autant leur curiosité que la différence qui les sépare des autres peuples. Ils sont également réputés pour produire un alcool extrêmement puissant, probablement issu des ressources végétales de Saharach, dont la consommation met à rude épreuve les visiteurs qui ne sont pas habitués à sa force.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card" data-bestiary-page="right" aria-labelledby="corbac-title" hidden>
+      <div class="bestiary-page-number">XX</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/corbac/corbac.png" alt="Corbac sombre au regard mauvais" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Oiseau de mauvais augure</p>
+        <h2 id="corbac-title">Corbac</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Corbacs sont des oiseaux de mauvais augure que l'on rencontre dans de nombreuses régions du Monde des Douze. Présents aussi bien dans les plaines de Cania que dans les landes de Sidimote ou les forêts d'Amakna, ils sont souvent associés aux lieux isolés, aux ruines et aux événements funestes. Leur réputation sinistre est ancienne, et nombreux sont ceux qui considèrent leur présence comme le présage d'un malheur imminent. Même l'Abraknyde Ancestral abrite plusieurs de ces volatiles dans ses immenses branches, preuve de leur capacité à s'adapter aux environnements les plus variés.</p>
+          <p>Tous les Corbacs ne sont cependant pas de simples oiseaux. Les individus les plus évolués ont longtemps vécu dans la bibliothèque du Maître Corbac, où ils développèrent une intelligence bien supérieure à celle de leurs congénères sauvages. Cette proximité avec le savoir et la magie contribua à faire des Corbacs l'une des espèces aviaires les plus remarquables du continent, capable de former de véritables sociétés organisées autour de chefs et de figures d'autorité.</p>
+          <p>Durant l'ère du Wakfu, une importante population de Corbacs s'établit dans la région de Kelba, en Amakna. Avec le temps, une partie de l'espèce évolua vers une forme humanoïde connue sous le nom de Croapules. Ces descendants conservent de nombreux traits aviaires tout en possédant une intelligence et une dextérité comparables à celles des peuples du Monde des Douze. D'autres Corbacs restèrent fidèles à leur forme originelle et continuent de peupler les falaises, les ruines et les forêts de la région.</p>
+          <p>Kelba est également le domaine du Corbeau Noir, un personnage mystérieux dont l'influence s'étend sur toute la contrée. Entouré de Corbacs, il semble entretenir avec eux une relation particulière, les utilisant parfois comme de véritables projectiles lors des combats. Son apparence elle-même reflète ce lien, puisque son célèbre costume lui permet d'adopter l'allure d'un gigantesque corbeau.</p>
+          <p>Entre les forêts d'Amakna, les ruines de Kelba et les antiques bibliothèques du Maître Corbac, les Corbacs occupent une place unique dans l'histoire du Monde des Douze. Tantôt simples charognards, tantôt créatures intelligentes capables d'évoluer en Croapules, ils demeurent des figures incontournables des légendes et des mystères qui entourent les terres d'Amakna.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="bestiary-page-card bestiary-page-craqueleur" data-bestiary-page="right" aria-labelledby="craqueleur-title" hidden>
+      <div class="bestiary-page-number">XXI</div>
+      <figure class="bestiary-illustration">
+        <img src="../../assets/bestiaire/craqueleur/craqueleur.png" alt="Craqueleur massif couvert de mousse" decoding="async">
+      </figure>
+      <div class="bestiary-copy">
+        <p class="bestiary-kicker">Colosse minéral</p>
+        <h2 id="craqueleur-title">Craqueleur</h2>
+        <div class="bestiary-rule" aria-hidden="true"></div>
+        <div class="bestiary-scroll">
+          <p><span class="bestiary-dropcap" aria-hidden="true">L</span><span class="bestiary-dropcap-rest">es</span> Craqueleurs sont d'imposantes créatures minérales que l'on rencontre dans de nombreuses régions du Monde des Douze. Leur apparence varie selon leur environnement, certains étant composés de roche, de minerai ou de pierre façonnée par les terres qu'ils habitent. Pourtant, selon les légendes les plus répandues, les Craqueleurs n'auraient pas toujours été les colosses silencieux que l'on connaît aujourd'hui. Ils auraient autrefois été des mineurs obsédés par la recherche de richesses, prêts à éventrer montagnes et collines à coups de pioches et d'explosifs artisanaux, sans se soucier des dégâts causés à la nature.</p>
+          <p>Leur destin aurait basculé lorsqu'ils osèrent creuser au cœur d'une montagne sacrée malgré les avertissements répétés des disciples de Tasmalin, le Méryde des Montagnes. Courroucé par leur avidité et leur manque de respect envers les lieux sacrés, Tasmalin les aurait transformés en créatures de pierre, leur retirant à jamais les trésors qu'ils convoitaient tant. D'autres récits avancent cependant une version différente. Selon Théodoran Ax, ce serait Nufrank qui leur aurait offert une peau capable de résister aux coups les plus violents, contribuant à faire des Craqueleurs les créatures presque indestructibles qu'ils sont devenus.</p>
+          <p>Aujourd'hui, les différentes espèces de Craqueleurs vivent dispersées à travers le monde, chacune adaptée à son environnement. Malgré leurs différences, elles se réunissent périodiquement lors du Conseil des Craqueleurs, un rassemblement destiné à débattre des affaires importantes concernant leur peuple. Ces rencontres ne sont toutefois pas toujours paisibles, les rivalités entre Craqueleurs des plaines et Craqueleurs des montagnes venant parfois troubler les discussions. On raconte également que les Craqueleurs vouent un culte discret à Oopah, le Méryde des Stalactites, qu'ils honorent dans le silence des cavernes et des montagnes qu'ils considèrent comme leur véritable foyer.</p>
+        </div>
+      </div>
+    </article>
+
     <button class="bestiary-page-turn bestiary-page-turn-left" type="button" data-bestiary-turn="left" aria-label="Page précédente">
       <span></span>
     </button>
@@ -130,5 +464,6 @@
   </section>
 </main>
 
+<script src="../../scripts/legal-notice.js"></script>
 </body>
 </html>

@@ -187,6 +187,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/evangelyne.html /pages/personnages/evangelyne 301
 /pages/personnages/flopin-de-percedal.html /pages/personnages/flopin-de-percedal 301
 /pages/personnages/frida-mofette.html /pages/personnages/frida-mofette 301
+/pages/personnages/ganymede.html /pages/personnages/ganymede 301
 /pages/personnages/gein.html /pages/personnages/gein 301
 /pages/personnages/glip.html /pages/personnages/glip 301
 /pages/personnages/goultard.html /pages/personnages/goultard 301
@@ -197,6 +198,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/grougalorasalar.html /pages/personnages/grougalorasalar 301
 /pages/personnages/gruffon.html /pages/personnages/gruffon 301
 /pages/personnages/hecate.html /pages/personnages/hecate 301
+/pages/personnages/hell-mina.html /pages/personnages/hell-mina 301
 /pages/personnages/hyrkul.html /pages/personnages/hyrkul 301
 /pages/personnages/ibago.html /pages/personnages/ibago 301
 /pages/personnages/ignemikhal.html /pages/personnages/ignemikhal 301
@@ -533,6 +535,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/evangelyne /pages/personnages/evangelyne.html 200
 /pages/personnages/flopin-de-percedal /pages/personnages/flopin-de-percedal.html 200
 /pages/personnages/frida-mofette /pages/personnages/frida-mofette.html 200
+/pages/personnages/ganymede /pages/personnages/ganymede.html 200
 /pages/personnages/gein /pages/personnages/gein.html 200
 /pages/personnages/glip /pages/personnages/glip.html 200
 /pages/personnages/goultard /pages/personnages/goultard.html 200
@@ -543,6 +546,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /pages/personnages/grougalorasalar /pages/personnages/grougalorasalar.html 200
 /pages/personnages/gruffon /pages/personnages/gruffon.html 200
 /pages/personnages/hecate /pages/personnages/hecate.html 200
+/pages/personnages/hell-mina /pages/personnages/hell-mina.html 200
 /pages/personnages/hyrkul /pages/personnages/hyrkul.html 200
 /pages/personnages/ibago /pages/personnages/ibago.html 200
 /pages/personnages/ignemikhal /pages/personnages/ignemikhal.html 200
@@ -1043,6 +1047,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /evangelyne.html /pages/personnages/evangelyne 301
 /flopin-de-percedal.html /pages/personnages/flopin-de-percedal 301
 /frida-mofette.html /pages/personnages/frida-mofette 301
+/ganymede.html /pages/personnages/ganymede 301
 /gein.html /pages/personnages/gein 301
 /glip.html /pages/personnages/glip 301
 /goultard.html /pages/personnages/goultard 301
@@ -1053,6 +1058,7 @@ http://www.univers-krosmoz.fr/* https://univers-krosmoz.fr/:splat 301!
 /grougalorasalar.html /pages/personnages/grougalorasalar 301
 /gruffon.html /pages/personnages/gruffon 301
 /hecate.html /pages/personnages/hecate 301
+/hell-mina.html /pages/personnages/hell-mina 301
 /hyrkul.html /pages/personnages/hyrkul 301
 /ibago.html /pages/personnages/ibago 301
 /ignemikhal.html /pages/personnages/ignemikhal 301

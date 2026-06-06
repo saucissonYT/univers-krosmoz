@@ -469,6 +469,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "category":  "personnages"
     },
     {
+        "name":  "Ganymède",
+        "href":  "ganymede",
+        "slug":  "ganymede",
+        "path":  "assets/personnages/ganymede.webp",
+        "category":  "personnages"
+    },
+    {
         "name":  "Gein",
         "href":  "gein",
         "slug":  "gein",
@@ -522,6 +529,13 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "href":  "hecate",
         "slug":  "hecate",
         "path":  "assets/personnages/HECATE.webp",
+        "category":  "personnages"
+    },
+    {
+        "name":  "Hell Mina",
+        "href":  "hell-mina",
+        "slug":  "hell-mina",
+        "path":  "assets/personnages/hell-mina.webp",
         "category":  "personnages"
     },
     {

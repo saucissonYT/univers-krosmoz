@@ -3,8 +3,12 @@ petit changelog pour expliquer les modifications du site et les corrections :
 06/06/2026
 
 - Modification de l'horloge chonologie
-- Ajout du bestiaire
+- Ajout du bestiaire avec les montres suivants : Tofu, Bouftou, Larves, Bwork, Scarafeuille, Chacha, Abraknyde, Wabbit, Malter, Crocodaille, Chafer, Koalak, Gligli, Truche, Trooll, Arakne, Blop, Boo, Cacterre, Corbac, Craqueleur.
 - Fix navbar artefact
+- Fix Dns + server.js et redirection 301 (utilisation de cloudflare au lieu de ionos)
+- Ajout des personnages Ganymède et Hell Mina
+- Passage de Reine des Voleurs et Roi Nidas dans le groupe Ennemis au lieu de Srambad / énutrofors
+
 
 05/06/2026
 
