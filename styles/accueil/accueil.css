@@ -871,7 +871,7 @@ body.reveal-ready .home-category-band.is-visible .home-band-meta span:nth-child(
   min-height: clamp(430px, 43vw, 660px);
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  transition: min-height 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: min-height 0.48s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home-band-chronology-full.is-chronology-expanded {
@@ -1327,8 +1327,8 @@ body.reveal-ready .home-category-band.is-visible .home-band-meta span:nth-child(
   padding-bottom: clamp(1.8rem, 4.2vw, 3.8rem);
   cursor: pointer;
   transition:
-    min-height 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    padding 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    min-height 0.48s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 0.48s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .home-band-regions-full .home-band-link {
@@ -1677,13 +1677,29 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   transform: translateX(-50%);
 }
 
+.home-band-chronology-full.is-snap-arriving,
+.home-band-chronology-full.is-snap-arriving .home-band-media,
+.home-band-chronology-full.is-snap-arriving .home-band-content {
+  animation: none;
+}
+
+.home-band-chronology-full.is-snap-arriving .home-band-media {
+  opacity: 0.98;
+  transform: translateX(-50%) scale(1);
+}
+
+.home-band-chronology-full.is-snap-arriving .home-chrono-clock::before,
+.home-band-chronology-full.is-snap-arriving .home-chrono-clock::after {
+  animation-play-state: paused;
+}
+
 @keyframes homeBandArrival {
   from {
-    filter: brightness(0.9);
+    opacity: 0.98;
   }
 
   to {
-    filter: brightness(1);
+    opacity: 1;
   }
 }
 
@@ -1877,11 +1893,9 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   mask:
     radial-gradient(circle, transparent 0 58%, #000 58.4% 83%, transparent 83.5%);
   opacity: 0.82;
-  filter:
-    drop-shadow(0 0 4px rgba(122, 244, 255, 0.18))
-    drop-shadow(0 0 4px rgba(244, 210, 132, 0.14));
+  filter: none;
   pointer-events: none;
-  animation: homeChronoFutureRing 34s linear infinite;
+  animation: homeChronoFutureRing 58s linear infinite;
 }
 
 .home-chrono-clock::after {
@@ -1898,11 +1912,9 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   mask:
     radial-gradient(circle, transparent 0 83.8%, #000 84% 85.35%, transparent 85.55%);
   opacity: 0.78;
-  filter:
-    drop-shadow(0 0 3px rgba(255, 226, 150, 0.16))
-    drop-shadow(0 0 3px rgba(121, 239, 255, 0.14));
+  filter: none;
   pointer-events: none;
-  animation: homeChronoFutureRingReverse 48s linear infinite;
+  animation: homeChronoFutureRingReverse 72s linear infinite;
 }
 
 .home-chrono-clock-face {
@@ -1986,10 +1998,7 @@ body.reveal-ready .home-band-jeux-full.is-jeux-text-visible .home-band-copy,
   background: center bottom / contain no-repeat transparent;
   border-radius: 0;
   box-shadow: none;
-  filter:
-    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.48))
-    drop-shadow(0 0 4px rgba(255, 225, 150, 0.18))
-    drop-shadow(0 0 7px rgba(121, 240, 255, 0.1));
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.42));
   transform-origin: var(--hand-pivot-x, 50%) var(--hand-pivot-y, 92%);
   transform: translate(var(--hand-offset-x, -50%), var(--hand-offset-y, -92%)) rotate(var(--hand-angle, 0deg));
   transition: transform 0.82s cubic-bezier(0.16, 1, 0.3, 1);

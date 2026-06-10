@@ -478,6 +478,37 @@
     }));
   };
 
+  const ensureStaticSearchData = () => {
+    if (Array.isArray(window.KROSMOZ_SEARCH_DATA)) {
+      return Promise.resolve();
+    }
+
+    return new Promise((resolve) => {
+      let attempts = 0;
+      const waitForData = () => {
+        if (Array.isArray(window.KROSMOZ_SEARCH_DATA) || attempts >= 40) {
+          resolve();
+          return;
+        }
+
+        attempts += 1;
+        window.setTimeout(waitForData, 50);
+      };
+
+      if (document.querySelector('script[data-krosmoz-search-data]')) {
+        waitForData();
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.src = new URL("data/search/search-data.js", siteRoot).href;
+      script.dataset.krosmozSearchData = "true";
+      script.addEventListener("load", waitForData, { once: true });
+      script.addEventListener("error", resolve, { once: true });
+      document.head.append(script);
+    });
+  };
+
   const buildCharacterEntries = async () => {
     const doc = await readDocument("pages/personnages/personnages");
     return Array.from(doc.querySelectorAll(".character-card")).map((card) => {
@@ -518,12 +549,12 @@
   let indexPromise;
   const loadIndex = () => {
     if (!indexPromise) {
-      indexPromise = Promise.allSettled([
+      indexPromise = ensureStaticSearchData().then(() => Promise.allSettled([
         Promise.resolve(createBaseEntries()),
         Promise.resolve(getStaticSearchEntries()),
         buildCharacterEntries(),
         buildLexiconEntries()
-      ]).then((groups) => {
+      ])).then((groups) => {
         const entries = groups.flatMap((group) => group.status === "fulfilled" ? group.value : []);
         const seen = new Set();
         return entries.filter((entry) => {

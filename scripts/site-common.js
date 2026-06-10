@@ -7,7 +7,7 @@
 
 (function () {
   const ANALYTICS_ID = "G-ENCHQ15LHS";
-  const PAGE_LIKE_REFRESH_INTERVAL_MS = 60 * 1000;
+  const PAGE_LIKE_REFRESH_INTERVAL_MS = 0;
   const PAGE_LIKE_ACTION_COOLDOWN_MS = 1500;
 
   const stripFileName = (pathname) => pathname.replace(/[^/]*$/, "");
@@ -269,12 +269,21 @@
         });
       }
     });
+
+    mountAnalytics();
   };
 
   const mountAnalytics = () => {
     if (typeof window.gtag === "function" && document.querySelector(`script[src*="${ANALYTICS_ID}"]`)) {
       return;
     }
+
+    const canonicalHref = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+    const analyticsUrl = new URL(canonicalHref, window.location.href);
+    if (window.location.search && !analyticsUrl.search) {
+      analyticsUrl.search = window.location.search;
+    }
+    const analyticsPath = `${analyticsUrl.pathname}${analyticsUrl.search}`;
 
     if (!document.querySelector(`script[src*="${ANALYTICS_ID}"]`)) {
       const script = document.createElement("script");
@@ -288,7 +297,11 @@
       window.dataLayer.push(arguments);
     };
     window.gtag("js", new Date());
-    window.gtag("config", ANALYTICS_ID);
+    window.gtag("config", ANALYTICS_ID, {
+      page_location: analyticsUrl.href,
+      page_path: analyticsPath,
+      page_title: document.title
+    });
   };
 
   const getPageLikeVoterId = () => {
@@ -535,15 +548,13 @@
     };
 
     const startAutoRefresh = () => {
-      if (refreshTimer || !PAGE_LIKE_REFRESH_INTERVAL_MS) {
-        return;
+      if (!refreshTimer && PAGE_LIKE_REFRESH_INTERVAL_MS) {
+        refreshTimer = window.setInterval(() => {
+          if (document.visibilityState === "visible") {
+            refreshLikeState();
+          }
+        }, PAGE_LIKE_REFRESH_INTERVAL_MS);
       }
-
-      refreshTimer = window.setInterval(() => {
-        if (document.visibilityState === "visible") {
-          refreshLikeState();
-        }
-      }, PAGE_LIKE_REFRESH_INTERVAL_MS);
 
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
@@ -581,6 +592,5 @@
   ensureFavicons();
   ensureNavbarFont();
   mountHeader();
-  mountAnalytics();
   mountPageLike();
 }());

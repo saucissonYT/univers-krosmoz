@@ -17,9 +17,26 @@
   const filterLabel = filterToggle?.querySelector("strong");
   const filterMenu = filter?.querySelector(".bestiary-filter-menu");
   const filterCount = document.querySelector("[data-bestiary-filter-count]");
+  const hunter = document.querySelector("[data-bestiary-hunter]");
+  const hunterList = document.querySelector("[data-bestiary-hunter-list]");
+  const hunterDetail = document.querySelector("[data-bestiary-hunter-detail]");
+  const hunterImage = document.querySelector("[data-bestiary-hunter-image]");
+  const hunterNumber = document.querySelector("[data-bestiary-hunter-number]");
+  const hunterTitle = document.querySelector("[data-bestiary-hunter-title]");
+  const hunterKicker = document.querySelector("[data-bestiary-hunter-kicker]");
+  const hunterNature = document.querySelector("[data-bestiary-hunter-nature]");
+  const hunterSummary = document.querySelector("[data-bestiary-hunter-summary]");
+  const hunterOpen = document.querySelector("[data-bestiary-hunter-open]");
+  const hunterPrev = document.querySelector("[data-bestiary-hunter-prev]");
+  const hunterNext = document.querySelector("[data-bestiary-hunter-next]");
+  const hunterPageLabel = document.querySelector("[data-bestiary-hunter-page-label]");
   const parchmentUrl = "/assets/bestiaire/parcho-page-v1.webp?v=20260605-single";
+  const hunterPageSize = 5;
+  const mobileMedia = window.matchMedia("(max-width: 920px)");
   let spreadStart = 0;
   let focusedSide = "left";
+  let selectedHunterIndex = 0;
+  let hunterIndexPage = 0;
 
   pages.forEach((page) => {
     page.style.setProperty("--bestiary-parchment", `url("${parchmentUrl}")`);
@@ -36,16 +53,124 @@
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
+  const getEntrySlug = (value) => normalize(value).replace(/\s+/g, "-");
+
   const entries = pages.map((page, index) => {
     const title = page.querySelector("h2")?.textContent?.trim() || `Fiche ${index + 1}`;
     const kicker = page.querySelector(".bestiary-kicker")?.textContent?.trim() || "";
+    const image = page.querySelector(".bestiary-illustration img");
+    const number = page.querySelector(".bestiary-page-number")?.textContent?.trim() || String(index + 1);
+    const paragraphs = Array.from(page.querySelectorAll(".bestiary-scroll p"))
+      .map((paragraph) => paragraph.textContent?.trim())
+      .filter(Boolean);
     return {
       index,
       page,
       title,
+      kicker,
+      number,
+      imageSrc: image?.getAttribute("src") || "",
+      imageAlt: image?.getAttribute("alt") || title,
+      paragraphs,
+      slug: getEntrySlug(title),
       search: normalize(`${title} ${kicker} ${page.textContent || ""}`)
     };
   });
+
+  const syncLayoutMode = () => {
+    const isMobile = mobileMedia.matches;
+    if (hunter) hunter.hidden = isMobile;
+    spread.hidden = !isMobile;
+    spread.setAttribute("aria-hidden", String(!isMobile));
+    if (isMobile) {
+      spread.removeAttribute("inert");
+      renderSpread();
+    } else {
+      spread.setAttribute("inert", "");
+    }
+  };
+
+  const setActiveHunterItem = (index) => {
+    hunterList?.querySelectorAll(".bestiary-hunter-item").forEach((item) => {
+      const isActive = Number(item.dataset.index) === index;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+  };
+
+  const getHunterPageCount = () => Math.max(1, Math.ceil(entries.length / hunterPageSize));
+
+  const updateHunterControls = () => {
+    const pageCount = getHunterPageCount();
+    if (hunterPageLabel) hunterPageLabel.textContent = `${hunterIndexPage + 1} / ${pageCount}`;
+    if (hunterPrev) hunterPrev.disabled = hunterIndexPage === 0;
+    if (hunterNext) hunterNext.disabled = hunterIndexPage >= pageCount - 1;
+  };
+
+  const renderHunterPage = (nextSelectedIndex) => {
+    if (!hunterList) return;
+
+    const pageCount = getHunterPageCount();
+    hunterIndexPage = Math.min(Math.max(0, hunterIndexPage), pageCount - 1);
+    const start = hunterIndexPage * hunterPageSize;
+    const visibleEntries = entries.slice(start, start + hunterPageSize);
+
+    hunterList.innerHTML = "";
+    visibleEntries.forEach((entry) => {
+      const item = document.createElement("button");
+      item.className = "bestiary-hunter-item";
+      item.type = "button";
+      item.dataset.index = String(entry.index);
+      item.innerHTML = `
+        <span class="bestiary-hunter-medallion" data-creature="${entry.slug}"><img src="${entry.imageSrc}" alt="" loading="lazy" decoding="async"></span>
+        <span class="bestiary-hunter-item-copy">
+          <strong>${entry.title}</strong>
+          <span class="bestiary-hunter-leader" aria-hidden="true"></span>
+          <span class="bestiary-hunter-page-number">${entry.number}</span>
+        </span>
+      `;
+      hunterList.appendChild(item);
+    });
+
+    updateHunterControls();
+
+    if (typeof nextSelectedIndex === "number") {
+      setActiveHunterItem(nextSelectedIndex);
+    }
+  };
+
+  const updateHunterDetail = (index) => {
+    const entry = entries[Math.min(Math.max(0, index), entries.length - 1)];
+    if (!entry || !hunterDetail) return;
+
+    selectedHunterIndex = entry.index;
+    const targetHunterPage = Math.floor(entry.index / hunterPageSize);
+    if (targetHunterPage !== hunterIndexPage || !hunterList?.children.length) {
+      hunterIndexPage = targetHunterPage;
+      renderHunterPage(entry.index);
+    }
+
+    if (hunterImage) {
+      hunterImage.src = entry.imageSrc;
+      hunterImage.alt = entry.imageAlt;
+      hunterImage.dataset.creature = entry.slug;
+    }
+    if (hunterNumber) hunterNumber.textContent = `Page ${entry.number}`;
+    if (hunterTitle) hunterTitle.textContent = entry.title;
+    if (hunterKicker) hunterKicker.textContent = entry.kicker;
+    if (hunterNature) hunterNature.textContent = entry.kicker || "Creature du Monde des Douze";
+    if (hunterSummary) {
+      hunterSummary.replaceChildren();
+      const paragraphs = entry.paragraphs.length ? entry.paragraphs : [entry.kicker].filter(Boolean);
+      paragraphs.forEach((text) => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text;
+        hunterSummary.appendChild(paragraph);
+      });
+    }
+    hunterDetail.scrollTop = 0;
+    setActiveHunterItem(entry.index);
+  };
 
   const renderSpread = () => {
     pages.forEach((page, index) => {
@@ -97,6 +222,7 @@
     spreadStart = clampSpreadStart(targetIndex);
     focusedSide = targetIndex === spreadStart ? "left" : "right";
     renderSpread();
+    updateHunterDetail(targetIndex);
 
     if (!options.keepFilterLabel) {
       const entry = entries[targetIndex];
@@ -165,6 +291,13 @@
     setActiveFilterItem("");
   };
 
+  const populateHunterList = () => {
+    if (!hunterList) return;
+
+    renderHunterPage(0);
+    updateHunterDetail(0);
+  };
+
   const applySearch = () => {
     const query = normalize(searchInput?.value || "");
 
@@ -206,6 +339,7 @@
   });
 
   populateFilterMenu();
+  populateHunterList();
 
   if (filterToggle && filter) {
     filterToggle.addEventListener("click", (event) => {
@@ -237,6 +371,32 @@
     closeFilterMenu();
   });
 
+  hunterList?.addEventListener("click", (event) => {
+    const item = event.target.closest(".bestiary-hunter-item");
+    if (!item) return;
+    updateHunterDetail(Number(item.dataset.index || 0));
+  });
+
+  hunterPrev?.addEventListener("click", () => {
+    if (hunterIndexPage <= 0) return;
+    hunterIndexPage -= 1;
+    const nextIndex = hunterIndexPage * hunterPageSize;
+    renderHunterPage(nextIndex);
+    updateHunterDetail(nextIndex);
+  });
+
+  hunterNext?.addEventListener("click", () => {
+    if (hunterIndexPage >= getHunterPageCount() - 1) return;
+    hunterIndexPage += 1;
+    const nextIndex = hunterIndexPage * hunterPageSize;
+    renderHunterPage(nextIndex);
+    updateHunterDetail(nextIndex);
+  });
+
+  hunterOpen?.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+
   searchInput?.addEventListener("input", applySearch);
 
   document.addEventListener("click", (event) => {
@@ -248,4 +408,6 @@
   });
 
   renderSpread();
+  syncLayoutMode();
+  mobileMedia.addEventListener("change", syncLayoutMode);
 })();

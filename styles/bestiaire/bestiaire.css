@@ -276,10 +276,604 @@ body.bestiary-index-page .krosmoz-legal-notice {
   margin-bottom: 0.8rem !important;
 }
 
+.bestiary-index-page {
+  --bestiary-page-image-filter: sepia(0.74) saturate(0.68) hue-rotate(346deg) brightness(1.04) contrast(0.92);
+  --bestiary-page-image-opacity: 0.88;
+}
+
+.bestiary-hunter-index {
+  position: relative;
+  z-index: 1;
+  width: min(1500px, calc(100vw - 1rem));
+  margin: 0 auto clamp(1.6rem, 3vw, 2.6rem);
+  padding: clamp(0.4rem, 1vw, 0.8rem) 0;
+}
+
+.bestiary-hunter-book {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  min-height: 520px;
+  overflow: visible;
+  background: transparent;
+}
+
+.bestiary-hunter-book::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("../../assets/bestiaire/index/hunter-book.webp?v=20260609-user-book") center / contain no-repeat;
+  filter: drop-shadow(0 26px 36px rgba(0, 0, 0, 0.42));
+  pointer-events: none;
+}
+
+.bestiary-hunter-page {
+  position: absolute;
+  z-index: 1;
+  color: #2b180c;
+}
+
+.bestiary-hunter-list-page {
+  top: 8.8%;
+  left: 12.62%;
+  width: 37%;
+  height: 80%;
+}
+
+.bestiary-hunter-list-page::before {
+  display: none;
+}
+
+.bestiary-hunter-index-label {
+  position: absolute;
+  top: -13.3%;
+  left: 50%;
+  z-index: 2;
+  margin: 0;
+  width: 94%;
+  height: 16.4%;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.bestiary-hunter-index-label img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.bestiary-hunter-list {
+  position: absolute;
+  top: 17.5%;
+  left: 0;
+  right: clamp(1.6rem, 3.8vw, 4.1rem);
+  bottom: 11.7%;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.bestiary-hunter-list::-webkit-scrollbar {
+  display: none;
+}
+
+.bestiary-hunter-item {
+  --hunter-icon-column: clamp(5.95rem, 8.85vw, 8.45rem);
+  --hunter-ring-size: clamp(5.28rem, 7.6vw, 7.08rem);
+  --hunter-ring-left: calc((var(--hunter-icon-column) - var(--hunter-ring-size)) / 2 + clamp(0.16rem, 0.22vw, 0.26rem));
+  --hunter-cursor-left: clamp(-6.25rem, -6.35vw, -5.35rem);
+  --hunter-cursor-width: calc(100% + clamp(7.1rem, 8.1vw, 8.9rem));
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: var(--hunter-icon-column) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(0.4rem, 0.85vw, 0.8rem);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2a190d;
+  cursor: pointer;
+  isolation: isolate;
+  text-align: left;
+}
+
+.bestiary-hunter-item::before {
+  content: "";
+  position: absolute;
+  top: calc(50% + clamp(0.54rem, 0.74vw, 0.82rem));
+  left: var(--hunter-cursor-left);
+  z-index: 0;
+  width: var(--hunter-cursor-width);
+  aspect-ratio: 3 / 2;
+  background: url("../../assets/bestiaire/index/selection-cursor-clean.webp?v=20260609") center / contain no-repeat;
+  filter: drop-shadow(0 2px 4px rgba(54, 28, 8, 0.2));
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+}
+
+.bestiary-hunter-item.active::before {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.bestiary-hunter-item.active::after {
+  content: "";
+  position: absolute;
+  top: calc(50% + clamp(0.08rem, 0.13vw, 0.14rem));
+  left: var(--hunter-ring-left);
+  z-index: 1;
+  width: var(--hunter-ring-size);
+  aspect-ratio: 1;
+  background: url("../../assets/bestiaire/index/selection-ring.png?v=20260609") center / contain no-repeat;
+  filter: drop-shadow(0 2px 3px rgba(55, 31, 12, 0.22));
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.bestiary-hunter-medallion {
+  position: relative;
+  z-index: 3;
+  width: clamp(4.35rem, 6.65vw, 6.25rem);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  justify-self: center;
+  overflow: hidden;
+  clip-path: circle(47% at 50% 50%);
+  contain: paint;
+}
+
+.bestiary-hunter-medallion img {
+  position: relative;
+  z-index: 4;
+  width: 80%;
+  height: 80%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: 56% 50%;
+  place-self: center;
+  transform: translateX(4%);
+  filter: var(--bestiary-page-image-filter) drop-shadow(0 3px 3px rgba(55, 31, 14, 0.22));
+  mix-blend-mode: multiply;
+  opacity: var(--bestiary-page-image-opacity);
+}
+
+.bestiary-hunter-medallion[data-creature="malter"] img {
+  width: 92%;
+  height: 92%;
+  object-fit: cover;
+  object-position: 40% 100%;
+  transform: translateY(-18%);
+}
+
+.bestiary-hunter-medallion[data-creature="centoror"] img {
+  width: 68%;
+  height: 68%;
+  transform: translateX(3%);
+}
+
+.bestiary-hunter-item-copy {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 0.32rem;
+  border-bottom: 0;
+  padding: 0 0.1rem 0.18rem 0;
+}
+
+.bestiary-hunter-item-copy strong {
+  overflow: hidden;
+  color: #281509;
+  font-family: "IM Fell English", "Crimson Text", serif;
+  font-size: clamp(1.28rem, 1.65vw, 1.72rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.12;
+  text-overflow: clip;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.bestiary-hunter-leader {
+  height: 0.85em;
+  margin: 0 0.05rem 0.08rem;
+  border-bottom: 2px dotted rgba(83, 50, 22, 0.46);
+  transform: translateY(-0.05em);
+}
+
+.bestiary-hunter-page-number {
+  color: rgba(58, 34, 14, 0.82);
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.05rem, 1.28vw, 1.34rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.bestiary-hunter-item:hover .bestiary-hunter-medallion,
+.bestiary-hunter-item:focus-visible .bestiary-hunter-medallion,
+.bestiary-hunter-item.active .bestiary-hunter-medallion {
+  filter: drop-shadow(0 4px 7px rgba(62, 34, 12, 0.3));
+}
+
+.bestiary-hunter-item.active .bestiary-hunter-item-copy strong,
+.bestiary-hunter-item.active .bestiary-hunter-page-number {
+  color: #110703;
+  text-shadow: 0 1px 0 rgba(255, 236, 176, 0.48);
+}
+
+.bestiary-hunter-item.active .bestiary-hunter-leader {
+  border-bottom-color: rgba(47, 24, 8, 0.7);
+}
+
+.bestiary-hunter-item.active .bestiary-hunter-medallion {
+  filter:
+    drop-shadow(0 0 10px rgba(122, 81, 27, 0.18))
+    drop-shadow(0 4px 8px rgba(62, 34, 12, 0.34));
+}
+
+.bestiary-hunter-item:focus-visible {
+  outline: 2px solid rgba(84, 51, 22, 0.5);
+  outline-offset: 2px;
+}
+
+.bestiary-hunter-index-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 3.2%;
+  z-index: 6;
+  display: grid;
+  grid-template-columns: clamp(1.7rem, 2vw, 2.1rem) auto clamp(1.7rem, 2vw, 2.1rem);
+  align-items: center;
+  gap: clamp(0.48rem, 0.85vw, 0.8rem);
+  transform: translateX(-50%);
+  color: rgba(54, 31, 13, 0.68);
+  font-family: "Cinzel", serif;
+  font-size: clamp(0.62rem, 0.8vw, 0.84rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.bestiary-hunter-index-controls button {
+  width: clamp(2.1rem, 2.7vw, 2.7rem);
+  height: clamp(2.1rem, 2.7vw, 2.7rem);
+  display: grid;
+  place-items: center;
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: rgba(60, 35, 14, 0.72);
+  font-size: 0;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+  filter: drop-shadow(0 1px 0 rgba(255, 238, 185, 0.38));
+  transition: color 0.18s ease, filter 0.18s ease, transform 0.18s ease;
+}
+
+.bestiary-hunter-index-controls button::before,
+.bestiary-hunter-index-controls button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: clamp(0.48rem, 0.7vw, 0.68rem);
+  height: clamp(0.48rem, 0.7vw, 0.68rem);
+  border-top: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+  pointer-events: none;
+}
+
+.bestiary-hunter-index-controls button::after {
+  opacity: 0.42;
+}
+
+.bestiary-hunter-index-controls [data-bestiary-hunter-prev]::before {
+  top: 58%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.bestiary-hunter-index-controls [data-bestiary-hunter-prev]::after {
+  top: 38%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0.72);
+}
+
+.bestiary-hunter-index-controls [data-bestiary-hunter-next]::before {
+  top: 42%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.bestiary-hunter-index-controls [data-bestiary-hunter-next]::after {
+  top: 62%;
+  transform: translate(-50%, -50%) rotate(-135deg) scale(0.72);
+}
+
+.bestiary-hunter-index-controls button:hover,
+.bestiary-hunter-index-controls button:focus-visible {
+  color: rgba(98, 55, 16, 0.94);
+  filter: drop-shadow(0 0 6px rgba(116, 71, 22, 0.24));
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.bestiary-hunter-index-controls button:disabled {
+  cursor: default;
+  opacity: 0.28;
+}
+
+.bestiary-hunter-detail {
+  box-sizing: border-box;
+  top: 12.4%;
+  left: 53.6%;
+  width: 32.6%;
+  height: 72.5%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.95rem, 1.6vw, 1.35rem);
+  padding: 0.3rem clamp(0.65rem, 0.9vw, 0.9rem) 0.5rem;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.bestiary-hunter-detail::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.bestiary-hunter-selected {
+  flex: 0 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: clamp(0.35rem, 0.8vw, 0.7rem);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.bestiary-hunter-portrait {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  width: min(100%, clamp(16rem, 23vw, 25rem));
+  aspect-ratio: 3 / 2;
+  display: grid;
+  place-items: center;
+  margin: clamp(-0.85rem, -1vw, -0.35rem) auto 0;
+  border: 0;
+  isolation: isolate;
+  justify-self: center;
+  transform: none;
+}
+
+.bestiary-hunter-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("../../assets/bestiaire/index/monster-support.webp") center / contain no-repeat;
+  pointer-events: none;
+}
+
+.bestiary-hunter-portrait img {
+  position: relative;
+  z-index: 1;
+  max-width: 58%;
+  max-height: 76%;
+  object-fit: contain;
+  filter: var(--bestiary-page-image-filter) drop-shadow(0 8px 10px rgba(54, 31, 12, 0.22));
+  mix-blend-mode: multiply;
+  opacity: 0.9;
+  transform: none;
+}
+
+.bestiary-hunter-portrait img[data-creature="centoror"] {
+  max-width: 44%;
+  max-height: 58%;
+  transform: translateY(-2%);
+}
+
+.bestiary-hunter-selected-copy {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.bestiary-hunter-selected-copy p {
+  order: 3;
+  margin: 0;
+  color: rgba(65, 38, 17, 0.66);
+  font-family: "Cinzel", serif;
+  font-size: clamp(0.7rem, 0.88vw, 0.92rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.bestiary-hunter-selected-copy h2 {
+  order: 1;
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: normal;
+  word-break: normal;
+  color: #281509;
+  font-family: "Parisienne", "IM Fell English", cursive;
+  font-size: clamp(2.05rem, 3.3vw, 3.95rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.bestiary-hunter-selected-copy span {
+  order: 2;
+  display: block;
+  margin-top: 0.18rem;
+  color: rgba(65, 38, 17, 0.76);
+  font-family: "Cinzel", serif;
+  font-size: clamp(0.72rem, 0.92vw, 0.98rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.bestiary-hunter-summary {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+  margin: 0;
+  padding: 0 clamp(0.35rem, 0.65vw, 0.6rem) clamp(3.4rem, 5vw, 5rem) 0;
+  color: rgba(42, 25, 11, 0.84);
+  font-family: "IM Fell English", "Crimson Text", Georgia, serif;
+  font-size: clamp(1.08rem, 1.32vw, 1.36rem);
+  font-style: italic;
+  line-height: 1.42;
+  text-align: justify;
+}
+
+.bestiary-hunter-summary:focus-visible {
+  outline: 1px solid rgba(79, 47, 20, 0.32);
+  outline-offset: 3px;
+}
+
+.bestiary-hunter-summary p {
+  margin: 0 0 0.9rem;
+}
+
+.bestiary-hunter-summary p:last-child {
+  margin-bottom: 0;
+}
+
+.bestiary-hunter-facts {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.bestiary-hunter-facts div {
+  min-width: 0;
+  border-top: 1px solid rgba(76, 45, 19, 0.24);
+  border-bottom: 1px solid rgba(76, 45, 19, 0.16);
+  padding: 0.35rem 0;
+}
+
+.bestiary-hunter-facts dt,
+.bestiary-hunter-notes p {
+  margin: 0;
+  color: rgba(76, 45, 19, 0.66);
+  font-family: "Cinzel", serif;
+  font-size: clamp(0.58rem, 0.75vw, 0.78rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.bestiary-hunter-facts dd {
+  margin: 0.16rem 0 0;
+  color: #2a190d;
+  font-family: "IM Fell English", "Crimson Text", Georgia, serif;
+  font-size: clamp(0.95rem, 1.12vw, 1.16rem);
+  font-style: italic;
+  line-height: 1.24;
+}
+
+.bestiary-claw {
+  display: inline-block;
+  width: 0.72rem;
+  height: 1.02rem;
+  margin-right: 0.14rem;
+  border-radius: 55% 55% 65% 65%;
+  background: #3b1d0b;
+  transform: rotate(14deg);
+}
+
+.bestiary-claw.is-muted {
+  opacity: 0.25;
+}
+
+.bestiary-hunter-notes {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.3rem;
+  border-top: 1px solid rgba(76, 45, 19, 0.2);
+  padding-top: 0.45rem;
+}
+
+.bestiary-hunter-notes div {
+  min-height: 0;
+  overflow: auto;
+  color: rgba(42, 25, 11, 0.86);
+  font-family: "IM Fell English", "Crimson Text", Georgia, serif;
+  font-size: clamp(1rem, 1.2vw, 1.22rem);
+  font-style: italic;
+  line-height: 1.45;
+  text-align: justify;
+  scrollbar-width: none;
+}
+
+.bestiary-hunter-notes div::-webkit-scrollbar {
+  display: none;
+}
+
+.bestiary-hunter-open {
+  justify-self: start;
+  min-height: 38px;
+  padding: 0.48rem 0;
+  border: 0;
+  border-bottom: 1px solid rgba(74, 44, 18, 0.42);
+  background: transparent;
+  color: #2a190d;
+  font-family: "Cinzel", serif;
+  font-size: clamp(0.62rem, 0.78vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .bestiary-spread {
   position: relative;
   isolation: isolate;
-  display: grid;
+  display: none !important;
   grid-template-columns: repeat(2, minmax(0, min(44vw, 58vh)));
   gap: clamp(0.6rem, 1.6vw, 1.15rem);
   justify-content: center;
@@ -292,6 +886,10 @@ body.bestiary-index-page .krosmoz-legal-notice {
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.bestiary-spread[hidden] {
+  display: none !important;
 }
 
 .bestiary-spread::before,
@@ -403,9 +1001,9 @@ body.bestiary-index-page .krosmoz-legal-notice {
   max-width: min(92%, 172px);
   max-height: clamp(6.8rem, 14vh, 10.2rem);
   object-fit: contain;
-  filter: sepia(0.82) saturate(0.74) contrast(1.07) drop-shadow(0 12px 18px rgba(48, 28, 11, 0.24));
+  filter: var(--bestiary-page-image-filter) drop-shadow(0 12px 18px rgba(48, 28, 11, 0.22));
   mix-blend-mode: multiply;
-  opacity: 0.92;
+  opacity: 0.9;
 }
 
 .bestiary-copy {
@@ -466,10 +1064,38 @@ body.bestiary-index-page .krosmoz-legal-notice {
   line-height: 1.08;
 }
 
+.bestiary-page-milimulous .bestiary-copy h2,
+.bestiary-page-boulepique .bestiary-copy h2,
+.bestiary-page-necrotique .bestiary-copy h2 {
+  font-size: clamp(2.42rem, 3.25vw, 3.45rem);
+  line-height: 1.08;
+}
+
+.bestiary-page-brikolereux .bestiary-copy h2 {
+  font-size: clamp(2.14rem, 2.82vw, 3rem);
+  line-height: 1.06;
+}
+
+.bestiary-page-pissenlit-diabolique .bestiary-copy h2 {
+  font-size: clamp(2.08rem, 2.75vw, 2.95rem);
+  line-height: 1.05;
+}
+
 .bestiary-page-chacha .bestiary-illustration img {
   max-width: min(110%, 210px);
   max-height: clamp(8.6rem, 18vh, 12.4rem);
   transform: translateY(-0.65rem);
+}
+
+.bestiary-page-centoror .bestiary-illustration img {
+  max-width: min(66%, 120px);
+  max-height: clamp(5.2rem, 10vh, 7.4rem);
+  transform: translateY(-0.3rem);
+}
+
+.bestiary-page-roses-demoniaques .bestiary-copy h2 {
+  font-size: clamp(1.95rem, 2.55vw, 2.78rem);
+  line-height: 1.04;
 }
 
 .bestiary-rule {
@@ -698,7 +1324,130 @@ body.bestiary-index-page .krosmoz-legal-notice {
     padding: 0;
   }
 
+  .bestiary-hunter-index {
+    display: none;
+  }
+
+  .bestiary-hunter-book {
+    width: min(100%, 760px);
+    min-height: 860px;
+    margin: 0 auto;
+    aspect-ratio: auto;
+  }
+
+  .bestiary-hunter-book::before {
+    background-size: auto 100%;
+    background-position: center top;
+  }
+
+  .bestiary-hunter-list-page {
+    top: 9.8%;
+    left: 12.35%;
+    width: 37.5%;
+    height: 78%;
+  }
+
+  .bestiary-hunter-detail {
+    top: 11.4%;
+    left: 53.2%;
+    width: 33.8%;
+    height: 74%;
+    padding: 0.15rem 0.42rem 0.35rem 0.28rem;
+    gap: 1rem;
+  }
+
+  .bestiary-hunter-index-label {
+    top: -8%;
+    left: 8%;
+    right: 6%;
+    height: 12%;
+  }
+
+  .bestiary-hunter-list {
+    top: 18.1%;
+    bottom: 13%;
+  }
+
+  .bestiary-hunter-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 0.28rem;
+  }
+
+  .bestiary-hunter-medallion {
+    width: 60px;
+  }
+
+  .bestiary-hunter-medallion img {
+    transform: translateX(3%);
+  }
+
+  .bestiary-hunter-index-controls {
+    left: 50%;
+    bottom: 3%;
+    gap: 0.22rem;
+    font-size: 0.56rem;
+    transform: translateX(-50%);
+  }
+
+  .bestiary-hunter-index-controls button {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .bestiary-hunter-item-copy strong {
+    font-size: 1.12rem;
+  }
+
+  .bestiary-hunter-leader {
+    margin-bottom: 0.02rem;
+  }
+
+  .bestiary-hunter-page-number {
+    font-size: 0.95rem;
+  }
+
+  .bestiary-hunter-selected {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .bestiary-hunter-portrait {
+    grid-column: 1;
+    width: min(100%, 13.4rem);
+    aspect-ratio: 3 / 2;
+    justify-self: center;
+    transform: none;
+  }
+
+  .bestiary-hunter-selected-copy {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0.1rem;
+  }
+
+  .bestiary-hunter-selected-copy h2 {
+    font-size: clamp(2rem, 7.8vw, 2.95rem);
+  }
+
+  .bestiary-hunter-selected-copy span {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+  }
+
+  .bestiary-hunter-summary {
+    font-size: 0.98rem;
+    line-height: 1.32;
+  }
+
+  .bestiary-hunter-open {
+    min-height: 34px;
+    padding-inline: 0.52rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+  }
+
   .bestiary-spread {
+    display: grid !important;
     grid-template-columns: 1fr;
     width: 100%;
     max-width: 100vw;
@@ -736,6 +1485,20 @@ body.bestiary-index-page .krosmoz-legal-notice {
 
   .bestiary-page-craqueleur .bestiary-copy h2 {
     font-size: clamp(2.08rem, 12vw, 2.78rem);
+  }
+
+  .bestiary-page-milimulous .bestiary-copy h2,
+  .bestiary-page-boulepique .bestiary-copy h2,
+  .bestiary-page-necrotique .bestiary-copy h2 {
+    font-size: clamp(2.08rem, 10.8vw, 2.78rem);
+  }
+
+  .bestiary-page-brikolereux .bestiary-copy h2 {
+    font-size: clamp(1.8rem, 9.2vw, 2.42rem);
+  }
+
+  .bestiary-page-roses-demoniaques .bestiary-copy h2 {
+    font-size: clamp(1.68rem, 8.4vw, 2.28rem);
   }
 
   .bestiary-page-chacha .bestiary-illustration img {

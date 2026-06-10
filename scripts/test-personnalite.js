@@ -1537,6 +1537,10 @@ function getCharacterSlug(character) {
   return character.href.split('/').pop().replace(/\.html$/i, '');
 }
 
+function getCharacterPagePath(character) {
+  return `/pages/personnages/${getCharacterSlug(character)}`;
+}
+
 function getCharacterBySlug(slug) {
   return characters.find((character) => getCharacterSlug(character) === slug || character.id === slug) || null;
 }
@@ -1637,21 +1641,17 @@ function getShareDescription(character) {
 }
 
 function getTestUrl() {
-  if (!/^https:$/.test(window.location.protocol)) {
-    return new URL('jeu-personnage', window.location.href).href;
+  if (/^https?:$/.test(window.location.protocol)) {
+    return new URL('/pages/jeux/jeu-personnage', window.location.origin).href;
   }
 
-  return new URL('/pages/jeux/jeu-personnage', window.location.origin).href;
+  return new URL('jeu-personnage', window.location.href).href;
 }
 
 function getResultUrl(character) {
-  if (!/^https:$/.test(window.location.protocol)) {
-    const url = new URL('jeu-personnage', window.location.href);
-    url.searchParams.set('result', getCharacterSlug(character));
-    return url.href;
-  }
-
-  return new URL(`/result/${getCharacterSlug(character)}`, window.location.origin).href;
+  const url = new URL(getTestUrl());
+  url.searchParams.set('result', getCharacterSlug(character));
+  return url.href;
 }
 
 function getRouteResultSlug() {
@@ -1664,10 +1664,27 @@ function getRouteResultSlug() {
   return match ? decodeURIComponent(match[1]) : '';
 }
 
+function trackAnalyticsPageView(url) {
+  if (typeof window.gtag !== 'function') {
+    return;
+  }
+
+  try {
+    const pageUrl = new URL(url, window.location.href);
+    window.gtag('event', 'page_view', {
+      page_location: pageUrl.href,
+      page_path: `${pageUrl.pathname}${pageUrl.search}`,
+      page_title: document.title
+    });
+  } catch {
+  }
+}
+
 function setPageUrl(url) {
   if (window.location.href !== url) {
     try {
       window.history.replaceState({}, '', url);
+      trackAnalyticsPageView(url);
     } catch {
       // Le quiz doit rester jouable même si le navigateur bloque la mise à jour de l'URL.
     }
@@ -1733,7 +1750,7 @@ function renderResult(winner, close, shouldUpdateUrl = true) {
   resultName.textContent = winner.name;
   resultArchetype.textContent = winner.archetype;
   resultText.textContent = getSimpleResultText(winner);
-  resultLink.href = winner.href;
+  resultLink.href = getCharacterPagePath(winner);
   shareName.textContent = winner.name;
   shareArchetype.textContent = winner.archetype;
   shareImage.src = winner.image;
@@ -1752,7 +1769,7 @@ function renderResult(winner, close, shouldUpdateUrl = true) {
   nearResults.replaceChildren(...close.map((character) => {
     const link = document.createElement('a');
     link.className = 'near-card';
-    link.href = character.href;
+    link.href = getCharacterPagePath(character);
     link.setAttribute('aria-label', character.name);
     link.title = character.name;
 

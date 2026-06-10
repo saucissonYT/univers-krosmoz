@@ -12,7 +12,13 @@ import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { extname, isAbsolute, join, normalize, relative, resolve } from "node:path";
 import { createServer } from "node:http";
-import Database from "better-sqlite3";
+
+let Database = null;
+try {
+  ({ default: Database } = await import("better-sqlite3"));
+} catch {
+  // La prévisualisation locale reste navigable même si la base des réactions n'est pas installée.
+}
 
 const root = resolve(".");
 const parsedPort = Number.parseInt(process.env.PORT || "3000", 10);
@@ -82,10 +88,21 @@ const longCacheExtensions = new Set([
   ".ttf"
 ]);
 
+const shortCacheExtensions = new Set([
+  ".css",
+  ".js"
+]);
+
 function getStaticCacheHeaders(extension) {
   if (longCacheExtensions.has(extension)) {
     return {
       "cache-control": "public, max-age=31536000, immutable"
+    };
+  }
+
+  if (shortCacheExtensions.has(extension)) {
+    return {
+      "cache-control": "public, max-age=3600, stale-while-revalidate=86400"
     };
   }
 
@@ -220,6 +237,10 @@ async function importLegacyPageLikes(database) {
 }
 
 async function getPageLikesDatabase() {
+  if (!Database) {
+    throw new Error("page_likes_database_unavailable");
+  }
+
   if (pageLikesDatabase) {
     return pageLikesDatabase;
   }

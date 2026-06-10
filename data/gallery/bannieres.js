@@ -115,7 +115,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Balance Krosmique",
         "href":  "balance-krosmique",
         "slug":  "balance-krosmique",
-        "path":  "assets/personnages/balance-krosmique.webp",
+        "path":  "assets/personnages/cartes/balance-krosmique.webp",
         "category":  "personnages"
     },
     {
@@ -136,7 +136,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Bellodana",
         "href":  "bellodana",
         "slug":  "bellodana",
-        "path":  "assets/personnages/bellodana.webp",
+        "path":  "assets/personnages/cartes/bellodana.webp",
         "category":  "personnages"
     },
     {
@@ -444,7 +444,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Ereziah Melkewel",
         "href":  "ereziah-melkewel",
         "slug":  "ereziah-melkewel",
-        "path":  "assets/personnages/ereziah-melkewel.webp",
+        "path":  "assets/personnages/cartes/ereziah-melkewel.webp",
         "category":  "personnages"
     },
     {
@@ -472,7 +472,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Ganymède",
         "href":  "ganymede",
         "slug":  "ganymede",
-        "path":  "assets/personnages/ganymede.webp",
+        "path":  "assets/personnages/cartes/ganymede.webp",
         "category":  "personnages"
     },
     {
@@ -535,7 +535,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Hell Mina",
         "href":  "hell-mina",
         "slug":  "hell-mina",
-        "path":  "assets/personnages/hell-mina.webp",
+        "path":  "assets/personnages/cartes/hell-mina.webp",
         "category":  "personnages"
     },
     {
@@ -549,7 +549,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Ibago",
         "href":  "ibago",
         "slug":  "ibago",
-        "path":  "assets/personnages/ibago.webp",
+        "path":  "assets/personnages/cartes/ibago.webp",
         "category":  "personnages"
     },
     {
@@ -563,7 +563,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Imagirorukam",
         "href":  "imagirorukam",
         "slug":  "imagirorukam",
-        "path":  "assets/personnages/imagirorukam.webp",
+        "path":  "assets/personnages/cartes/imagirorukam.webp",
         "category":  "personnages"
     },
     {
@@ -654,7 +654,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Klime",
         "href":  "klime",
         "slug":  "klime",
-        "path":  "assets/personnages/klime.webp",
+        "path":  "assets/personnages/cartes/klime.webp",
         "category":  "personnages"
     },
     {
@@ -675,7 +675,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Lacrima",
         "href":  "lacrima",
         "slug":  "lacrima",
-        "path":  "assets/personnages/lacrima.webp",
+        "path":  "assets/personnages/cartes/lacrima.webp",
         "category":  "personnages"
     },
     {
@@ -689,14 +689,14 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Ladysally",
         "href":  "ladysally",
         "slug":  "ladysally",
-        "path":  "assets/personnages/ladysally.webp",
+        "path":  "assets/personnages/cartes/ladysally.webp",
         "category":  "personnages"
     },
     {
         "name":  "Lance Originelle",
         "href":  "lance-originelle",
         "slug":  "lance-originelle",
-        "path":  "assets/personnages/lance-originelle.webp",
+        "path":  "assets/personnages/cartes/lance-originelle.webp",
         "category":  "personnages"
     },
     {
@@ -724,7 +724,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Lophapharo",
         "href":  "lophapharo",
         "slug":  "lophapharo",
-        "path":  "assets/personnages/lophapharo.webp",
+        "path":  "assets/personnages/cartes/lophapharo.webp",
         "category":  "personnages"
     },
     {
@@ -759,7 +759,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Maminala",
         "href":  "maminala",
         "slug":  "maminala",
-        "path":  "assets/personnages/maminala.webp",
+        "path":  "assets/personnages/cartes/maminala.webp",
         "category":  "personnages"
     },
     {
@@ -815,7 +815,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Missiz Frizz",
         "href":  "missiz-frizz",
         "slug":  "missiz-frizz",
-        "path":  "assets/personnages/missiz-frizz.webp",
+        "path":  "assets/personnages/cartes/missiz-frizz.webp",
         "category":  "personnages"
     },
     {
@@ -857,7 +857,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Nileza",
         "href":  "nileza",
         "slug":  "nileza",
-        "path":  "assets/personnages/nileza.webp",
+        "path":  "assets/personnages/cartes/nileza.webp",
         "category":  "personnages"
     },
     {
@@ -941,7 +941,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Pepavara",
         "href":  "pepavara",
         "slug":  "pepavara",
-        "path":  "assets/personnages/pepavara.webp",
+        "path":  "assets/personnages/cartes/pepavara.webp",
         "category":  "personnages"
     },
     {
@@ -990,7 +990,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Prosperus Elementor",
         "href":  "prosperus-elementor",
         "slug":  "prosperus-elementor",
-        "path":  "assets/personnages/prosperus-elementor.webp",
+        "path":  "assets/personnages/cartes/prosperus-elementor.webp",
         "category":  "personnages"
     },
     {
@@ -1032,7 +1032,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Razeriane",
         "href":  "razeriane",
         "slug":  "razeriane",
-        "path":  "assets/personnages/razeriane.webp",
+        "path":  "assets/personnages/cartes/razeriane.webp",
         "category":  "personnages"
     },
     {
@@ -1046,7 +1046,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Reine des Voleurs",
         "href":  "reine-des-voleurs",
         "slug":  "reine-des-voleurs",
-        "path":  "assets/personnages/reine-des-voleurs.webp",
+        "path":  "assets/personnages/cartes/reine-des-voleurs.webp",
         "category":  "personnages"
     },
     {
@@ -1074,7 +1074,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Roi Nidas",
         "href":  "roi-nidas",
         "slug":  "roi-nidas",
-        "path":  "assets/personnages/roi-nidas.webp",
+        "path":  "assets/personnages/cartes/roi-nidas.webp",
         "category":  "personnages"
     },
     {
@@ -1186,7 +1186,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Sylargh",
         "href":  "sylargh",
         "slug":  "sylargh",
-        "path":  "assets/personnages/sylargh.webp",
+        "path":  "assets/personnages/cartes/sylargh.webp",
         "category":  "personnages"
     },
     {
@@ -1270,7 +1270,7 @@ window.KROSMOZ_GALLERY_IMAGES = [
         "name":  "Yôpo",
         "href":  "yopo",
         "slug":  "yopo",
-        "path":  "assets/personnages/yopo.webp",
+        "path":  "assets/personnages/cartes/yopo.webp",
         "category":  "personnages"
     },
     {

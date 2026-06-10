@@ -1,5 +1,23 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+
+10/06/2026
+
+- réduction des requêtes inutiles des likes
+- meilleur cache css & JS
+- chargement différé des images du bestiaire
+- suppresion d'images non utilisées
+- suppresion de doublons d'images
+- nettoyage de fichiers sources
+- suppresion d'anciens parchemins et variantes inutiles
+- correction de texte mal encodé
+- ajouts d'éléments visuels dans la page d'accueil
+- améliorations visuelles du bestiaire
+- assets dédiés à l'interface du bestiaire
+- mise à jour des données de recherche du site
+- ajout de nouvelles entrées au bestiaire dans l'index de recherche
+- ajout de pages dans le bestiaire : armutin, bitolder, bitouf, blero, boulepique, brikolereux, centoror, chtigre, crustorail, dopeul, dostrogo, dragodinde, dragoeuf, fennex, fricochères, gelikans, givrefoux, gloursons, glutins, gobelins, goules, lémure, léohyène, mansot, milimulous, moskito, mufafah, mulous, nécrotique, obvijevan, ondine, oni, ouroboulos, pandikaze, pichon, piou, pissenlit diabolique, porcos, porkass, prespic, ribs, roses démoniauqes, rykaon, sanglacier, sanglier, scorbute, scordion, sidoas, sinistrofu, sinistros
+
 06/06/2026
 
 - Modification de l'horloge chonologie
