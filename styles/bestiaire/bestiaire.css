@@ -5,11 +5,24 @@
   Recherche et édition : Zaki & B.
 */
 
+html:has(> body.bestiary-index-page) {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 body.bestiary-index-page {
-  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  max-height: 100vh;
+  max-height: 100dvh;
+  overflow: hidden;
   background:
     linear-gradient(180deg, rgba(8, 7, 5, 0.12), rgba(8, 7, 5, 0.38)),
-    url("../../assets/bestiaire/bestiaire-background.webp") center center / cover fixed no-repeat,
+    url("../../assets/bestiaire/bestiaire-background.webp?v=20260612-background") center center / cover fixed no-repeat,
     #090807;
   color: #2a190d;
 }
@@ -267,13 +280,51 @@ body.bestiary-index-page {
 }
 
 .bestiary-main {
-  min-height: calc(100vh - 148px);
-  padding: clamp(1rem, 2.2vw, 1.8rem);
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 86px);
+  height: calc(100dvh - 86px);
+  min-height: 0;
+  overflow: visible;
+  padding: clamp(0.15rem, 0.8vw, 0.55rem) clamp(0.35rem, 1vw, 0.8rem) clamp(0.8rem, 1.8vw, 1.4rem);
 }
 
 body.bestiary-index-page .krosmoz-legal-notice {
-  margin-top: 1.1rem !important;
-  margin-bottom: 0.8rem !important;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  right: auto;
+  bottom: 0.45rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 0.7rem;
+  width: min(760px, calc(100vw - 2rem));
+  max-height: 3rem;
+  overflow: hidden;
+  margin: 0 !important;
+  padding-top: 0.35rem !important;
+  border-top-color: rgba(201, 168, 76, 0.1) !important;
+  font-size: 0.48rem !important;
+  line-height: 1.22 !important;
+  opacity: 0.72;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+body.bestiary-index-page .krosmoz-legal-links {
+  margin-top: 0 !important;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+body.bestiary-index-page .krosmoz-about-link {
+  gap: 0.25rem;
+  font-size: 0.5rem !important;
+}
+
+body.bestiary-index-page .krosmoz-legal-notice a {
+  pointer-events: auto;
 }
 
 .bestiary-index-page {
@@ -284,9 +335,61 @@ body.bestiary-index-page .krosmoz-legal-notice {
 .bestiary-hunter-index {
   position: relative;
   z-index: 1;
-  width: min(1500px, calc(100vw - 1rem));
-  margin: 0 auto clamp(1.6rem, 3vw, 2.6rem);
-  padding: clamp(0.4rem, 1vw, 0.8rem) 0;
+  width: min(1500px, calc(100vw - 1rem), calc((100vh - 96px) * 1.5));
+  margin: -0.45rem auto 0;
+  padding: 0;
+}
+
+.bestiary-side-tabs {
+  position: absolute;
+  top: 13%;
+  right: -1.9%;
+  z-index: 2;
+  width: 16.8%;
+  height: auto;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.bestiary-side-tabs::before {
+  display: none;
+}
+
+.bestiary-side-tabs::after {
+  display: none;
+}
+
+.bestiary-side-tabs img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter:
+    drop-shadow(-4px 2px 5px rgba(28, 18, 10, 0.26))
+    drop-shadow(0 11px 13px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+}
+
+.bestiary-side-tab-link {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bestiary-side-tab-link:focus-visible {
+  outline: 2px solid rgba(255, 248, 223, 0.78);
+  outline-offset: 3px;
+}
+
+.bestiary-side-tab-family {
+  top: 0;
+  height: 44%;
+}
+
+.bestiary-side-tab-boss {
+  top: 52%;
+  height: 42%;
 }
 
 .bestiary-hunter-book {
@@ -347,6 +450,78 @@ body.bestiary-index-page .krosmoz-legal-notice {
   object-fit: contain;
 }
 
+.bestiary-book-search {
+  top: 3.8%;
+  left: 48.5%;
+  width: 88%;
+  height: 12.2%;
+  pointer-events: auto;
+}
+
+.bestiary-book-search::before {
+  content: "";
+  position: absolute;
+  inset: 8% 0;
+  z-index: -1;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.bestiary-book-search::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 27%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(75, 43, 18, 0.5), transparent);
+}
+
+.bestiary-book-search span {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: rgba(70, 39, 15, 0.82);
+  font-family: "Cinzel", serif;
+  font-size: clamp(0.54rem, 0.72vw, 0.78rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.bestiary-book-search input {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 24%;
+  width: 76%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #2d1808;
+  font-family: "IM Fell English", "Crimson Text", Georgia, serif;
+  font-size: clamp(1.28rem, 1.8vw, 2rem);
+  font-style: italic;
+  line-height: 1;
+  text-align: center;
+}
+
+.bestiary-book-search input::placeholder {
+  color: rgba(58, 34, 14, 0.56);
+}
+
+.bestiary-book-search input:focus {
+  outline: none;
+}
+
+.bestiary-book-search:focus-within::before {
+  box-shadow: none;
+}
+
 .bestiary-hunter-list {
   position: absolute;
   top: 17.5%;
@@ -368,8 +543,8 @@ body.bestiary-index-page .krosmoz-legal-notice {
 .bestiary-hunter-item {
   --hunter-icon-column: clamp(5.95rem, 8.85vw, 8.45rem);
   --hunter-ring-size: clamp(5.28rem, 7.6vw, 7.08rem);
-  --hunter-ring-left: calc((var(--hunter-icon-column) - var(--hunter-ring-size)) / 2 + clamp(0.16rem, 0.22vw, 0.26rem));
-  --hunter-cursor-left: clamp(-6.25rem, -6.35vw, -5.35rem);
+  --hunter-ring-left: calc((var(--hunter-icon-column) - var(--hunter-ring-size)) / 2 - clamp(0.1rem, 0.32vw, 0.34rem));
+  --hunter-cursor-left: clamp(-6.85rem, -6.95vw, -5.95rem);
   --hunter-cursor-width: calc(100% + clamp(7.1rem, 8.1vw, 8.9rem));
   position: relative;
   width: 100%;
@@ -434,39 +609,40 @@ body.bestiary-index-page .krosmoz-legal-notice {
   background: transparent;
   box-shadow: none;
   justify-self: center;
+  margin-left: 0;
   overflow: hidden;
-  clip-path: circle(47% at 50% 50%);
+  clip-path: circle(40.5% at 45.5% 50%);
   contain: paint;
 }
 
 .bestiary-hunter-medallion img {
   position: relative;
   z-index: 4;
-  width: 80%;
-  height: 80%;
+  width: 76%;
+  height: 76%;
   max-width: none;
   max-height: none;
   object-fit: contain;
-  object-position: 56% 50%;
+  object-position: 48% 53%;
   place-self: center;
-  transform: translateX(4%);
-  filter: var(--bestiary-page-image-filter) drop-shadow(0 3px 3px rgba(55, 31, 14, 0.22));
+  transform: translate(-1%, 2%);
+  filter: var(--bestiary-page-image-filter);
   mix-blend-mode: multiply;
   opacity: var(--bestiary-page-image-opacity);
 }
 
 .bestiary-hunter-medallion[data-creature="malter"] img {
-  width: 92%;
-  height: 92%;
+  width: 88%;
+  height: 88%;
   object-fit: cover;
   object-position: 40% 100%;
-  transform: translateY(-18%);
+  transform: translateY(-16%);
 }
 
 .bestiary-hunter-medallion[data-creature="centoror"] img {
-  width: 68%;
-  height: 68%;
-  transform: translateX(3%);
+  width: 64%;
+  height: 64%;
+  transform: translateY(2%);
 }
 
 .bestiary-hunter-item-copy {
@@ -676,7 +852,7 @@ body.bestiary-index-page .krosmoz-legal-notice {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url("../../assets/bestiaire/index/monster-support.webp") center / contain no-repeat;
+  background: url("../../assets/bestiaire/index/monster-support.webp?v=20260611-support-monstre") center / contain no-repeat;
   pointer-events: none;
 }
 

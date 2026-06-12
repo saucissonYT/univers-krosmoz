@@ -9,9 +9,10 @@
   const spread = document.querySelector("[data-bestiary-spread]");
   if (!spread) return;
 
-  const pages = Array.from(spread.querySelectorAll("[data-bestiary-page]"));
+  let pages = Array.from(spread.querySelectorAll("[data-bestiary-page]"));
   const turnButtons = Array.from(spread.querySelectorAll("[data-bestiary-turn]"));
-  const searchInput = document.querySelector("[data-bestiary-search]");
+  const searchInputs = Array.from(document.querySelectorAll("[data-bestiary-search]"));
+  const searchInput = searchInputs.find((input) => input.closest(".bestiary-book-search")) || searchInputs[0] || null;
   const filter = document.querySelector("[data-bestiary-filter]");
   const filterToggle = filter?.querySelector(".bestiary-filter-toggle");
   const filterLabel = filterToggle?.querySelector("strong");
@@ -55,11 +56,37 @@
 
   const getEntrySlug = (value) => normalize(value).replace(/\s+/g, "-");
 
+  const toRoman = (value) => {
+    const numerals = [
+      ["M", 1000],
+      ["CM", 900],
+      ["D", 500],
+      ["CD", 400],
+      ["C", 100],
+      ["XC", 90],
+      ["L", 50],
+      ["XL", 40],
+      ["X", 10],
+      ["IX", 9],
+      ["V", 5],
+      ["IV", 4],
+      ["I", 1]
+    ];
+    let remaining = value;
+    let result = "";
+    numerals.forEach(([symbol, number]) => {
+      while (remaining >= number) {
+        result += symbol;
+        remaining -= number;
+      }
+    });
+    return result;
+  };
+
   const entries = pages.map((page, index) => {
     const title = page.querySelector("h2")?.textContent?.trim() || `Fiche ${index + 1}`;
     const kicker = page.querySelector(".bestiary-kicker")?.textContent?.trim() || "";
     const image = page.querySelector(".bestiary-illustration img");
-    const number = page.querySelector(".bestiary-page-number")?.textContent?.trim() || String(index + 1);
     const paragraphs = Array.from(page.querySelectorAll(".bestiary-scroll p"))
       .map((paragraph) => paragraph.textContent?.trim())
       .filter(Boolean);
@@ -68,14 +95,22 @@
       page,
       title,
       kicker,
-      number,
+      number: "",
       imageSrc: image?.getAttribute("src") || "",
       imageAlt: image?.getAttribute("alt") || title,
       paragraphs,
       slug: getEntrySlug(title),
       search: normalize(`${title} ${kicker} ${page.textContent || ""}`)
     };
+  }).sort((a, b) => a.title.localeCompare(b.title, "fr", { sensitivity: "base" }));
+
+  entries.forEach((entry, index) => {
+    entry.index = index;
+    entry.number = toRoman(index + 1);
+    entry.page.querySelector(".bestiary-page-number")?.replaceChildren(document.createTextNode(entry.number));
   });
+
+  pages = entries.map((entry) => entry.page);
 
   const syncLayoutMode = () => {
     const isMobile = mobileMedia.matches;
@@ -206,7 +241,9 @@
   };
 
   const resetFilterState = () => {
-    if (searchInput) searchInput.value = "";
+    searchInputs.forEach((input) => {
+      input.value = "";
+    });
     setFilterLabel("Toutes");
     setActiveFilterItem("");
     updateCount("");
@@ -321,6 +358,15 @@
     updateCount(matches.length === 1 ? "1 fiche" : `${matches.length} fiches`);
   };
 
+  const syncSearchInputs = (source) => {
+    const value = source?.value || "";
+    searchInputs.forEach((input) => {
+      if (input !== source) {
+        input.value = value;
+      }
+    });
+  };
+
   turnButtons.forEach((button) => {
     button.addEventListener("click", () => {
       resetFilterState();
@@ -357,7 +403,9 @@
     if (!item) return;
 
     const value = item.dataset.value || "";
-    if (searchInput) searchInput.value = "";
+    searchInputs.forEach((input) => {
+      input.value = "";
+    });
     updateCount("");
 
     if (!value) {
@@ -397,7 +445,12 @@
     event.preventDefault();
   });
 
-  searchInput?.addEventListener("input", applySearch);
+  searchInputs.forEach((input) => {
+    input.addEventListener("input", (event) => {
+      syncSearchInputs(event.currentTarget);
+      applySearch();
+    });
+  });
 
   document.addEventListener("click", (event) => {
     if (!event.target.closest("[data-bestiary-filter]")) closeFilterMenu();

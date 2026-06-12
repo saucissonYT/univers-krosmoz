@@ -25,23 +25,35 @@
   }
 
   const sourceUrl = "../../scripts/character-page-links.js";
+  const affinitySourceUrl = "arbre-affinites";
   const characterBase = "../personnages/";
   const categoryBase = {
     personnages: "../personnages/",
     regions: "../regions/",
-    groupes: "../groupes/"
+    groupes: "../groupes/",
+    affinites: "../media/"
   };
   const categoryLabels = {
     personnages: "personnage",
     regions: "region",
-    groupes: "groupe"
+    groupes: "groupe",
+    affinites: "affinité"
   };
   const unique = new Map();
+  const renderedItems = new Set();
 
   const normalize = (value) => String(value || "")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
+
+  const fileNameToTitle = (value) => String(value || "")
+    .replace(/\.(webp|png|jpe?g|svg)$/i, "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLocaleLowerCase("fr-FR")
+    .replace(/\b\w/g, (letter) => letter.toUpperCase());
 
   const icon = (type) => {
     if (type === "download") {
@@ -139,6 +151,74 @@
       };
     });
 
+  const getAffinityImageSource = (image) => {
+    if (!image) {
+      return "";
+    }
+
+    return image.getAttribute("href")
+      || image.getAttribute("xlink:href")
+      || image.getAttributeNS("http://www.w3.org/1999/xlink", "href")
+      || "";
+  };
+
+  const normalizeGalleryPath = (value) => {
+    if (!value) {
+      return "";
+    }
+
+    return value.replace(/^(?:\.\.\/)+/, "").replace(/^\/+/, "");
+  };
+
+  const loadAffinityImages = async () => {
+    try {
+      const response = await fetch(affinitySourceUrl, { cache: "no-store" });
+      if (!response.ok) {
+        return [];
+      }
+
+      const html = await response.text();
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const svg = doc.querySelector(".affinities-svg-host svg");
+      if (!svg) {
+        return [];
+      }
+
+      const items = [];
+      svg.querySelectorAll("g").forEach((group) => {
+        const image = group.querySelector("image");
+        if (!image) {
+          return;
+        }
+
+        const source = normalizeGalleryPath(getAffinityImageSource(image));
+        if (!source.startsWith("assets/affinites/portraits/")) {
+          return;
+        }
+
+        const texts = Array.from(group.querySelectorAll("text"))
+          .map((text) => String(text.textContent || "").trim())
+          .filter(Boolean);
+        const name = fileNameToTitle(texts[0] || source.split("/").pop());
+        const fileName = source.split("/").pop();
+        const slug = fileName.replace(/\.(webp|png|jpe?g|svg)$/i, "");
+
+        items.push({
+          name,
+          category: "affinites",
+          href: `arbre-affinites?personnage=${encodeURIComponent(name)}`,
+          image: `../../${source}`,
+          download: fileName,
+          search: normalize(`${name} ${slug} ${categoryLabels.affinites} arbre affinites`)
+        });
+      });
+
+      return items.sort((a, b) => a.name.localeCompare(b.name, "fr", { sensitivity: "base" }));
+    } catch {
+      return [];
+    }
+  };
+
   const downloadImage = (item) => {
     fetch(item.image)
       .then((response) => {
@@ -233,10 +313,22 @@
 
   };
 
-  const render = (items) => {
+  const render = (items, replace = true) => {
     const fragment = document.createDocumentFragment();
-    items.forEach((item) => fragment.append(createCard(item)));
-    grid.replaceChildren(fragment);
+    items.forEach((item) => {
+      const key = `${item.image}|${item.href}`;
+      if (renderedItems.has(key)) {
+        return;
+      }
+      renderedItems.add(key);
+      fragment.append(createCard(item));
+    });
+
+    if (replace) {
+      grid.replaceChildren(fragment);
+    } else {
+      grid.append(fragment);
+    }
     syncVisibility();
   };
 
@@ -258,6 +350,12 @@
         }
       });
   }
+
+  loadAffinityImages().then((items) => {
+    if (items.length) {
+      render(items, false);
+    }
+  });
 
   if (search) {
     search.addEventListener("input", syncVisibility);

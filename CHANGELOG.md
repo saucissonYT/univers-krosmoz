@@ -1,5 +1,16 @@
 petit changelog pour expliquer les modifications du site et les corrections :
 
+12/06/2026
+
+- Refonte de la page Bestiaire avec un livre interactif et une navigation par familles.
+- Ajout d’une page dédiée aux Boss du bestiaire.
+- Ajout des assets boss : Bouftou Royal, Abraknyde Ancestral, Anérice, La Déchireuse, Le Chouque, Tofu Royal, Wa Wabbit.
+- Remplacement du background du bestiaire par une nouvelle image.
+- Ajustement des mentions légales sur le bestiaire : affichées derrière le livre, sans scroll de page.
+- Réduction et réalignement des mentions légales avec le lien À propos sur la même ligne.
+- Correction des accents dans les textes du bestiaire et des boss.
+- Mise à jour de plusieurs assets et styles de l’accueil.
+- Suppression d’anciens visuels devenus inutiles.
 
 10/06/2026
 
